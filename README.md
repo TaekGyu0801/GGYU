@@ -21,7 +21,7 @@ Contact
 - Portfolio Site — Personal website and notes. https://github.com/LEE-TAEK-GYU/portfolio
 
 ## Contact
-- Email: xorrb4798@naver.com
+- Email: xorrb4798@gmail.com
 - GitHub: https://github.com/LEE-TAEK-GYU
 ---
 

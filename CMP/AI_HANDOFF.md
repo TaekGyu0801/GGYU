@@ -76,7 +76,17 @@ Leakage 감소 / EQE 향상 / Reliability 향상
 - 주요 공정 변수 및 평가 지표 설정
 - ChatGPT ↔ Claude 공용 인수인계 파일 운용 시작
 - 의미 있는 CMP 작업은 `AI_HANDOFF.md`에 자동 기록하는 운영 규칙 적용
-- 관련 논문 조사 및 TCAD 적용 가능성 검토 진행 예정
+- P2 Mg calibration 완료
+  - Target hole concentration: `3.0e17 cm^-3`
+  - Calibrated Mg concentration: `9.59e18 cm^-3`
+  - Simulated hole concentration: `3.00033017418e17 cm^-3`
+  - Temperature: `300 K`
+  - Mg incomplete ionization: `E_0=0.2 eV`, `alpha=8e-9`, `g=4`, `Xsec=1e-14`
+- P3 baseline Micro-LED 구축 시작
+  - Synopsys `GaN_PiN_Diode` 예제를 `~/CMP_P3_BASELINE_MICROLED`로 복사함
+  - SDE node 1 정상 완료 확인
+  - Forward SDevice node 2 실행 중이며 원본 예제 재현 검증 단계
+- 서버 계정 사용 가능 기간이 이번 달 말까지일 가능성이 있어, CMP 관련 TCAD 작업물의 GitHub 백업을 최우선 과제로 둔다.
 
 ---
 
@@ -84,10 +94,14 @@ Leakage 감소 / EQE 향상 / Reliability 향상
 
 현재 우선순위:
 
-1. Sidewall damage mechanism 관련 핵심 논문 정리
-2. Wet chemical treatment 후보 공정 및 효과 비교
-3. ALD passivation material / thickness 후보군 정리
-4. 실제 평가 가능한 실험·시뮬레이션 구조 구체화
+1. `~/CMP_P3_BASELINE_MICROLED` 원본 GaN PiN Forward simulation 재현 완료 여부 확인
+2. P3 clean baseline으로 개조
+   - p-GaN Mg `9.59e18 cm^-3` 적용
+   - P2에서 사용한 Mg incomplete ionization model 반영
+   - 초기 clean baseline 단계에서는 불필요한 Nitride/interface trap 제거 여부 검토
+3. 이후 InGaN/GaN MQW baseline 추가
+4. Sidewall SRV 및 pixel size DOE로 확장
+5. 서버 계정 만료 전에 CMP TCAD 관련 프로젝트 폴더, 코드, 파라미터, 로그, 결과를 GitHub `CMP/` 아래에 백업
 
 ---
 
@@ -99,6 +113,9 @@ Leakage 감소 / EQE 향상 / Reliability 향상
 - 검증되지 않은 공정 조건이나 최적값을 확정 사실처럼 기록하지 않는다.
 - 논문 근거, 실험 결과, 추정/가설을 명확히 구분한다.
 - CMP 프로젝트 진행에 의미 있는 활동은 사용자가 매번 따로 요청하지 않아도 `AI_HANDOFF.md`에 자동 기록한다.
+- P2 Mg calibration 최종 기준값은 현재 `NMg = 9.59e18 cm^-3`로 사용한다.
+- P3는 복잡한 MQW/sidewall 구조를 한 번에 만들지 않고, 공식 GaN PiN 예제 재현 → clean baseline → MQW → sidewall 순서로 단계적으로 확장한다.
+- 서버 계정 만료 전에 재현 가능한 형태로 원본 input deck, parameter file, extraction script, 결과 요약을 GitHub에 남긴다.
 
 ---
 
@@ -183,25 +200,59 @@ ChatGPT와 Claude는 서로 직접 대화할 수 없으므로 이 파일을 공�
 
 ---
 
+### 2026-08-27 — ChatGPT
+
+작업 내용:
+- P2 p-GaN Mg incomplete-ionization calibration 수행
+- 실제 전처리 파일(`pp6_dvs.cmd`)에 Mg 농도가 반영되는지 검증하면서 calibration 진행
+- `NMg=9.75e18 cm^-3`에서 `hDensity=3.03103549868e17 cm^-3` 확인
+- 최종 `NMg=9.59e18 cm^-3`에서 `hDensity=3.00033017418e17 cm^-3` 확인
+- P3용 `CMP_P3_BASELINE_MICROLED` 프로젝트 생성 및 Synopsys `GaN_PiN_Diode` 예제 복사
+- P3 node map 확인: node 1=SDE, node 2=Forward SDevice, node 3=Forward SVisual, node 4=Reverse SDevice, node 5=Reverse SVisual
+- node 1 SDE 정상 완료 확인
+- 원본 Forward SDevice node 2 재현 실행 시작
+- 서버 계정 만료 전 GitHub 전체 백업을 우선 과제로 등록
+
+결과:
+- P2 Mg calibration 최종값을 `9.59e18 cm^-3`로 확정하여 이후 p-GaN baseline 입력값으로 사용할 수 있음
+- P3 baseline 구축의 공식 예제 출발점 확보
+
+관련 서버 경로:
+- `~/CMP_P2_MG_CALIBRATION`
+- `~/CMP_P3_BASELINE_MICROLED`
+
+생성/수정 파일:
+- `CMP/AI_HANDOFF.md`
+
+다음 작업:
+- P3 node 2 실행 완료 여부 확인
+- clean baseline 개조
+- 서버 프로젝트 파일을 GitHub `CMP/tcad/` 구조로 백업
+
+---
+
 ## 8. AI HANDOFF
 
 ### Last Worker
 ChatGPT
 
 ### What was just done
-- CMP 프로젝트용 ChatGPT ↔ Claude 공용 인수인계 파일을 생성함.
-- 프로젝트 핵심 주제, 연구 논리, 주요 변수, 평가 지표 및 협업 규칙을 초기화함.
-- 의미 있는 CMP 활동은 별도 요청 없이 `AI_HANDOFF.md`에 자동 기록하도록 운영 규칙을 추가함.
+- P2 Mg calibration을 완료하여 `NMg=9.59e18 cm^-3`에서 목표 hole density `3.0e17 cm^-3`를 사실상 재현함.
+- P3 baseline Micro-LED 구축을 시작하고 Synopsys GaN PiN 공식 예제를 복사하여 node 1 SDE 정상 실행을 확인함.
+- 서버 계정 만료 가능성 때문에 현재부터 GitHub 백업을 최우선 병행 작업으로 설정함.
 
 ### Next AI should do
-- 사용자의 다음 CMP 요청을 수행하기 전 이 파일을 먼저 읽을 것.
-- 조사, 분석, TCAD, 실험 설계, 결과 정리, 파일 수정 등 의미 있는 작업을 수행한 뒤 자동으로 WORK LOG를 갱신할 것.
-- 단순 개념 질문/잡담은 프로젝트 상태를 바꾸지 않는 한 불필요하게 기록하지 않을 것.
+- P3 node 2 Forward SDevice가 완료되었는지 먼저 확인한다.
+- 완료되면 원본 파일을 보존한 상태에서 P3 clean baseline 개조를 시작한다.
+- 동시에 `~/CMP_P2_MG_CALIBRATION`, `~/CMP_P3_BASELINE_MICROLED` 및 그 밖의 CMP 관련 TCAD 폴더를 GitHub `CMP/tcad/` 아래로 복사/백업하도록 사용자를 단계적으로 안내한다.
+- input deck과 parameter file은 반드시 보존하고, 대용량 중간 산출물은 저장 필요성을 구분한다.
 
 ### Important warnings / unresolved questions
 - ALD 최적 material 및 thickness는 아직 확정되지 않음.
 - Wet chemical treatment 최적 조건도 아직 확정되지 않음.
-- 논문 또는 실험 근거 없이 특정 조건을 최적값으로 단정하지 말 것.
+- 원본 `GaN_PiN_Diode`에는 Nitride passivation 및 `GaN/Nitride` interface trap이 포함되어 있으므로 clean baseline으로 바로 간주하지 말 것.
+- P3 Forward SDevice 원본 재현은 아직 최종 `done: exit(0)` 확인 전 상태임.
+- 서버 만료 전 백업이 필수이므로 TCAD 개발과 백업을 병행할 것.
 
 ---
 
@@ -214,6 +265,8 @@ CMP/
 ├─ docs/
 ├─ research/
 ├─ tcad/
+│  ├─ P2_MG_CALIBRATION/
+│  └─ P3_BASELINE_MICROLED/
 └─ results/
 ```
 

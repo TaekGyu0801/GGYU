@@ -18,11 +18,19 @@ The working server directory was:
 ~/CMP_P3_BASELINE_MICROLED
 ```
 
-A frozen successful copy was also preserved as:
+A frozen successful copy of the untouched reproduced example is preserved as:
 
 ```text
 ~/CMP_P3_BASELINE_MICROLED_ORIGINAL_OK
 ```
+
+A second frozen successful checkpoint containing the calibrated Mg model is preserved as:
+
+```text
+~/CMP_P3A_MG_BASELINE_OK
+```
+
+Its `n2_des.sta` records the Forward SDevice node as `done`.
 
 ## SWB node map
 

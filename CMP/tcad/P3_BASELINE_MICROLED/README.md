@@ -108,20 +108,56 @@ The n-type species was kept unchanged.
 
 This verifies that the P2 calibrated Mg concentration and incomplete-ionization model can be inserted into the reproduced GaN PiN structure without breaking the forward solution.
 
+## P3B — clean GaN PiN baseline without original Nitride/interface trap
+
+P3B removes the original example's Nitride passivation and `GaN/Nitride` interface-trap block while keeping the calibrated Mg model from P3A.
+
+To preserve the mesa-cutting geometry operation without retaining a physical Nitride region, the original cutting polygon was temporarily changed to a `Gas` region named `tmp_mesa`, then deleted immediately after the Boolean geometry operation. Nitride-specific mesh refinement and offset rules were removed.
+
+The actual preprocessed SDE deck was checked and contained:
+
+```text
+Gas "tmp_mesa"
+delete-region ... "tmp_mesa"
+pMagnesiumActiveConcentration 9.59e18
+```
+
+No `Nitride` or `Passivation` entry remained in the checked preprocessed SDE deck. The Forward SDevice deck also no longer contained `Physics(MaterialInterface="GaN/Nitride")` or its interface trap.
+
+### P3B run result
+
+- Node 1 / SDE: `done: exit(0)`.
+- Node 2 / Forward SDevice: `done: exit(0)`.
+- gsub total run time: approximately 86 s.
+- SDevice-reported wallclock: approximately 80.63 s.
+- Final sweep reached `anode = 10.0 V` and finished with `Curve trace finished.`
+- Final 10 V current reported by the log:
+  - anode electron current: `2.020e-01 A`
+  - anode hole current: `8.298e-03 A`
+  - anode total current: `2.103e-01 A`
+- Final plot `n2_des.tdr` written successfully.
+
+Compared with P3A at 10 V, the total current changed from `0.2323 A` to `0.2103 A`, a decrease of about `0.0220 A` or `9.47%`.
+
+This comparison is useful as a checkpoint, but it should not yet be interpreted as a direct physical passivation benefit/penalty because P3A and P3B differ in both the presence of the Nitride region and the GaN/Nitride interface-trap model. P3B is the intended clean electrical reference for later MQW and sidewall/SRV work.
+
 ## Important interpretation
 
-P3A is **still not the clean project baseline**. The copied structure still contains Nitride passivation and a GaN/Nitride interface-trap model. Those features must not be mistaken for the project's final sidewall/passivation condition.
+- Original example: reproduced Synopsys GaN PiN with original Nitride/interface physics.
+- P3A: calibrated Mg + original Nitride/interface physics.
+- P3B: calibrated Mg + clean bare-GaN reference without original Nitride/interface trap.
+
+P3B is now the preferred baseline for the next structure-development step.
 
 ## Next modification sequence
 
 1. Preserve the original verified reproduction state.
 2. Preserve P3A as the verified `calibrated Mg + original passivation/interface` checkpoint.
-3. Remove/exclude the original Nitride passivation and GaN/Nitride interface trap to establish a clean GaN PiN reference.
-4. Re-run SDE and Forward SDevice and compare against P3A.
-5. Add InGaN/GaN MQW.
-6. Add polarization/heterointerface refinements only after the simpler baseline is stable.
-7. Add sidewall/SRV and pixel-size DOE.
-8. Map wet-treatment / ALD healing to reduced sidewall defect activity.
+3. Preserve P3B as the verified clean GaN PiN checkpoint.
+4. Add InGaN/GaN MQW to the clean baseline.
+5. Add polarization/heterointerface refinements only after the MQW baseline is stable.
+6. Add sidewall/SRV and pixel-size DOE.
+7. Map wet-treatment / ALD healing to reduced sidewall defect activity.
 
 ## Source-code policy
 

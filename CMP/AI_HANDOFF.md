@@ -82,13 +82,20 @@ Leakage 감소 / EQE 향상 / Reliability 향상
   - Simulated hole concentration: `3.00033017418e17 cm^-3`
   - Temperature: `300 K`
   - Mg incomplete ionization: `E_0=0.2 eV`, `alpha=8e-9`, `g=4`, `Xsec=1e-14`
-- P3 baseline Micro-LED 구축 시작
+- P3 baseline Micro-LED 구축 진행 중
   - Synopsys `GaN_PiN_Diode` 예제를 `~/CMP_P3_BASELINE_MICROLED`로 복사함
-  - SDE node 1 정상 완료
-  - Forward SDevice node 2 원본 재현 정상 완료: `done: exit(0)`
-  - Forward simulation wall time: 약 176 s
-  - 공식 예제가 현재 서버 환경에서 정상 재현됨을 확인
-- 서버 계정 사용 가능 기간이 이번 달 말까지일 가능성이 있어, CMP 관련 TCAD 작업물의 GitHub 백업을 최우선 과제로 둔다.
+  - 원본 성공 상태를 `~/CMP_P3_BASELINE_MICROLED_ORIGINAL_OK`로 동결 보존함
+  - 원본 SDE node 1 정상 완료
+  - 원본 Forward SDevice node 2 정상 완료: `done: exit(0)`
+  - P3A 단계에서 p-side를 `pMagnesiumActiveConcentration=9.59e18 cm^-3`로 변경
+  - P2 Mg incomplete-ionization model을 `sdevice.par`에 반영
+  - `pp1_dvs.cmd`에서 실제 Mg 값 `9.59e18` 반영 확인
+  - P3A SDE node 1 정상 완료
+  - P3A Forward SDevice node 2 정상 완료: `done: exit(0)`
+  - P3A Forward sweep가 10 V까지 완료되고 `n2_des.tdr` 생성 확인
+- P2/P3 전체 서버 스냅샷을 `CMP_TCAD_BACKUP_20260827.tar.gz`로 생성 및 로컬 보존
+  - SHA256: `c8bc05d0bbb86415859bddd544ccf2a8b5a8f8abdebb1ee9b571ae1b2371c3dc`
+  - 공개 GitHub에는 라이선스 이슈를 피하기 위해 Synopsys 원본 전체 대신 프로젝트별 재현 기록, 사용자 작성 코드, 결과 요약을 업로드함
 
 ---
 
@@ -96,14 +103,14 @@ Leakage 감소 / EQE 향상 / Reliability 향상
 
 현재 우선순위:
 
-1. P2/P3 현재 상태를 GitHub `CMP/tcad/`에 백업
+1. P3A(`calibrated Mg + original Nitride/interface trap`) 성공 상태 보존
 2. P3 clean baseline으로 개조
-   - p-GaN Mg `9.59e18 cm^-3` 적용
-   - P2에서 사용한 Mg incomplete ionization model 반영
-   - 초기 clean baseline 단계에서는 불필요한 Nitride/interface trap 제거 여부 검토
-3. 이후 InGaN/GaN MQW baseline 추가
+   - 원본 Nitride passivation 및 GaN/Nitride interface trap을 제거/비활성화
+   - p-GaN Mg `9.59e18 cm^-3`와 P2 Mg incomplete ionization model은 유지
+   - SDE node 1 → Forward SDevice node 2 순서로 재검증
+3. clean baseline 성공 후 InGaN/GaN MQW baseline 추가
 4. Sidewall SRV 및 pixel size DOE로 확장
-5. 서버 계정 만료 전에 CMP TCAD 관련 프로젝트 폴더, 코드, 파라미터, 로그, 결과를 재현 가능한 형태로 GitHub에 백업
+5. 서버 계정 만료 전 새로 생성되는 프로젝트별 checkpoint를 계속 로컬/GitHub에 보존
 
 ---
 
@@ -116,9 +123,11 @@ Leakage 감소 / EQE 향상 / Reliability 향상
 - 논문 근거, 실험 결과, 추정/가설을 명확히 구분한다.
 - CMP 프로젝트 진행에 의미 있는 활동은 사용자가 매번 따로 요청하지 않아도 `AI_HANDOFF.md`에 자동 기록한다.
 - P2 Mg calibration 최종 기준값은 현재 `NMg = 9.59e18 cm^-3`로 사용한다.
-- P3는 복잡한 MQW/sidewall 구조를 한 번에 만들지 않고, 공식 GaN PiN 예제 재현 → clean baseline → MQW → sidewall 순서로 단계적으로 확장한다.
-- 서버 계정 만료 전에 재현 가능한 형태로 원본 input deck, parameter file, extraction script, 결과 요약을 GitHub에 남긴다.
-- P3 공식 GaN PiN Forward simulation의 원본 재현 성공 상태를 수정 전 기준점으로 보존한다.
+- P3는 복잡한 MQW/sidewall 구조를 한 번에 만들지 않고, 공식 GaN PiN 예제 재현 → P3A calibrated Mg → clean baseline → MQW → sidewall 순서로 단계적으로 확장한다.
+- 서버 계정 만료 전에 재현 가능한 형태로 input deck, parameter file, extraction script, 결과 요약을 GitHub에 남긴다.
+- Synopsys Applications Library 원본/복사본은 공개 저장소에 그대로 재배포하지 않고 private/local archive에 보존한다.
+- P3 공식 GaN PiN 원본 성공 상태는 `CMP_P3_BASELINE_MICROLED_ORIGINAL_OK`로 동결 보존한다.
+- P3A는 `calibrated Mg + original Nitride/interface trap` 상태로 정의하며, clean baseline과 구분한다.
 
 ---
 
@@ -254,27 +263,87 @@ ChatGPT와 Claude는 서로 직접 대화할 수 없으므로 이 파일을 공�
 
 ---
 
+### 2026-08-27 — ChatGPT
+
+작업 내용:
+- P2/P3 전체 프로젝트를 `CMP_TCAD_BACKUP_20260827.tar.gz`로 압축하여 로컬 백업
+- SHA256 무결성 확인
+- GitHub `CMP/tcad/`에 public-safe 재현 기록과 P2 사용자 작성 calibration artifact 업로드
+- 원본 성공 상태를 `~/CMP_P3_BASELINE_MICROLED_ORIGINAL_OK`로 복제 및 `n2_des.sta=done` 확인
+
+결과:
+- 서버 계정이 사라져도 P2/P3 현재 상태를 복구할 수 있는 full local archive 확보
+- 공개 GitHub에는 라이선스 원본을 재배포하지 않고 재현 가능한 project metadata/결과를 남김
+
+생성/수정 파일:
+- `CMP/tcad/README.md`
+- `CMP/tcad/BACKUP_MANIFEST_20260827.md`
+- `CMP/tcad/P2_MG_CALIBRATION/README.md`
+- `CMP/tcad/P2_MG_CALIBRATION/CALIBRATION_RESULTS.csv`
+- `CMP/tcad/P2_MG_CALIBRATION/equilibrium_mg_calibration_des.cmd`
+- `CMP/tcad/P2_MG_CALIBRATION/extract_hdensity.tcl`
+- `CMP/tcad/P2_MG_CALIBRATION/extract_hdensity_n62.tcl`
+- `CMP/tcad/P3_BASELINE_MICROLED/README.md`
+- `CMP/AI_HANDOFF.md`
+
+다음 작업:
+- P3A calibrated Mg 단계 진행
+
+---
+
+### 2026-08-27 — ChatGPT
+
+작업 내용:
+- P3A 단계로 p-side dopant를 generic `PDopantActiveConcentration 1e19`에서 `pMagnesiumActiveConcentration 9.59e18`로 변경
+- P2 calibration의 Mg incomplete-ionization model(`E_0=0.2`, `alpha=8e-9`, `g=4`, `Xsec=1e-14`)을 P3 `sdevice.par`에 반영
+- `pp1_dvs.cmd`를 확인하여 실제 전처리된 SDE에 `pMagnesiumActiveConcentration 9.59e18`이 들어갔음을 검증
+- P3A node 1 SDE 실행
+- P3A node 2 Forward SDevice 실행
+
+결과:
+- node 1: `done: exit(0)`
+- node 2: `done: exit(0)`
+- gsub 총 실행 시간 약 203초
+- SDevice wallclock 약 198.36초
+- 10 V까지 Forward sweep 완료 및 `Curve trace finished.` 확인
+- `n2_des.tdr` 정상 생성
+- 최종 10 V total current 약 `2.323e-01 A`
+- P2에서 보정한 Mg 농도/ionization model을 GaN PiN baseline에 이식해도 Forward solution이 정상 수렴함을 검증
+
+생성/수정 파일:
+- `CMP/tcad/P3_BASELINE_MICROLED/README.md`
+- `CMP/AI_HANDOFF.md`
+
+다음 작업:
+- P3A 성공 상태 checkpoint를 보존
+- 원본 Nitride passivation 및 GaN/Nitride interface trap을 제거한 clean baseline 구성
+
+---
+
 ## 8. AI HANDOFF
 
 ### Last Worker
 ChatGPT
 
 ### What was just done
-- P2 Mg calibration을 완료하여 `NMg=9.59e18 cm^-3`에서 목표 hole density `3.0e17 cm^-3`를 사실상 재현함.
-- P3 baseline Micro-LED 구축을 시작하고 Synopsys GaN PiN 공식 예제를 복사함.
-- P3 node 1 SDE와 node 2 Forward SDevice 모두 정상 실행 완료하여 공식 예제가 현재 서버 환경에서 재현됨을 확인함.
-- 서버 계정 만료 가능성 때문에 GitHub 백업을 다음 최우선 작업으로 설정함.
+- P2 Mg calibration 완료 후 해당 Mg 농도와 incomplete-ionization model을 P3 GaN PiN에 이식한 P3A를 성공시킴.
+- P3A에서 node 1 SDE와 node 2 Forward SDevice가 모두 `exit(0)`으로 완료되었고 10 V forward sweep까지 정상 종료됨.
+- 원본 성공본은 `CMP_P3_BASELINE_MICROLED_ORIGINAL_OK`로 별도 동결되어 있음.
+- P2/P3 전체 압축 백업과 public-safe GitHub 백업도 확보됨.
 
 ### Next AI should do
-- `~/CMP_P2_MG_CALIBRATION`, `~/CMP_P3_BASELINE_MICROLED` 및 그 밖의 CMP 관련 TCAD 폴더를 GitHub `CMP/tcad/` 아래로 복사/백업하도록 사용자를 단계적으로 안내한다.
-- input deck, parameter file, extraction script, SWB tree 파일, 핵심 로그/결과 요약은 반드시 보존한다.
-- 백업 완료 후 원본 파일을 보존한 상태에서 P3 clean baseline 개조를 시작한다.
+- P3A 현재 성공 상태를 추가 checkpoint로 복제/보존한다.
+- 작업본 `~/CMP_P3_BASELINE_MICROLED`에서 original Nitride passivation geometry와 `GaN/Nitride` interface trap을 한 단계씩 제거 또는 비활성화한다.
+- p-side `pMagnesiumActiveConcentration=9.59e18 cm^-3`와 P2 Mg incomplete-ionization parameter는 유지한다.
+- 수정 후 node 1 SDE → node 2 Forward SDevice 순으로 재검증한다.
+- clean baseline이 성공하면 P3A와 I-V/재결합 특성을 비교한 뒤 MQW 단계로 넘어간다.
 
 ### Important warnings / unresolved questions
+- P3A는 아직 clean baseline이 아니다. 원본 Nitride passivation과 `GaN/Nitride` interface trap이 남아 있다.
 - ALD 최적 material 및 thickness는 아직 확정되지 않음.
 - Wet chemical treatment 최적 조건도 아직 확정되지 않음.
-- 원본 `GaN_PiN_Diode`에는 Nitride passivation 및 `GaN/Nitride` interface trap이 포함되어 있으므로 clean baseline으로 바로 간주하지 말 것.
-- 서버 만료 전 백업이 필수이므로 TCAD 개발과 백업을 병행할 것.
+- Reverse leakage를 defect-assisted transport까지 정량적으로 맞추려면 추후 추가 물리모델/calibration이 필요할 수 있음.
+- Synopsys Applications Library 원본은 공개 GitHub에 그대로 복사하지 않는다.
 
 ---
 

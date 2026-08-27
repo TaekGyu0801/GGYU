@@ -93,6 +93,14 @@ Leakage 감소 / EQE 향상 / Reliability 향상
   - P3A SDE node 1 정상 완료
   - P3A Forward SDevice node 2 정상 완료: `done: exit(0)`
   - P3A Forward sweep가 10 V까지 완료되고 `n2_des.tdr` 생성 확인
+  - P3A 성공 상태를 `~/CMP_P3A_MG_BASELINE_OK`로 동결 보존함
+  - P3B 단계에서 원본 Nitride passivation, Nitride 전용 mesh 조건, `GaN/Nitride` interface trap을 제거
+  - mesa cut 형상은 임시 `Gas` 영역 `tmp_mesa`를 생성 후 즉시 삭제하는 방식으로 유지
+  - P3B 전처리 파일에서 `Nitride`/`Passivation`이 사라지고 Mg `9.59e18`이 유지됨을 확인
+  - P3B SDE node 1 정상 완료
+  - P3B Forward SDevice node 2 정상 완료: `done: exit(0)`
+  - P3B Forward sweep가 10 V까지 완료되고 `n2_des.tdr` 생성 확인
+  - P3B 10 V total current: `2.103e-01 A`
 - P2/P3 전체 서버 스냅샷을 `CMP_TCAD_BACKUP_20260827.tar.gz`로 생성 및 로컬 보존
   - SHA256: `c8bc05d0bbb86415859bddd544ccf2a8b5a8f8abdebb1ee9b571ae1b2371c3dc`
   - 공개 GitHub에는 라이선스 이슈를 피하기 위해 Synopsys 원본 전체 대신 프로젝트별 재현 기록, 사용자 작성 코드, 결과 요약을 업로드함
@@ -103,14 +111,12 @@ Leakage 감소 / EQE 향상 / Reliability 향상
 
 현재 우선순위:
 
-1. P3A(`calibrated Mg + original Nitride/interface trap`) 성공 상태 보존
-2. P3 clean baseline으로 개조
-   - 원본 Nitride passivation 및 GaN/Nitride interface trap을 제거/비활성화
-   - p-GaN Mg `9.59e18 cm^-3`와 P2 Mg incomplete ionization model은 유지
-   - SDE node 1 → Forward SDevice node 2 순서로 재검증
-3. clean baseline 성공 후 InGaN/GaN MQW baseline 추가
+1. P3B clean GaN PiN 성공 상태를 별도 checkpoint로 복제/보존
+2. P3B를 clean electrical reference로 사용하여 InGaN/GaN MQW baseline 추가
+3. MQW baseline 안정화 후 polarization/heterointerface 조건을 단계적으로 정리
 4. Sidewall SRV 및 pixel size DOE로 확장
-5. 서버 계정 만료 전 새로 생성되는 프로젝트별 checkpoint를 계속 로컬/GitHub에 보존
+5. Wet chemical treatment / ALD passivation을 sidewall defect activity 또는 effective SRV 감소로 연결
+6. 서버 계정 만료 전 새로 생성되는 프로젝트별 checkpoint를 계속 로컬/GitHub에 보존
 
 ---
 
@@ -123,11 +129,13 @@ Leakage 감소 / EQE 향상 / Reliability 향상
 - 논문 근거, 실험 결과, 추정/가설을 명확히 구분한다.
 - CMP 프로젝트 진행에 의미 있는 활동은 사용자가 매번 따로 요청하지 않아도 `AI_HANDOFF.md`에 자동 기록한다.
 - P2 Mg calibration 최종 기준값은 현재 `NMg = 9.59e18 cm^-3`로 사용한다.
-- P3는 복잡한 MQW/sidewall 구조를 한 번에 만들지 않고, 공식 GaN PiN 예제 재현 → P3A calibrated Mg → clean baseline → MQW → sidewall 순서로 단계적으로 확장한다.
+- P3는 복잡한 MQW/sidewall 구조를 한 번에 만들지 않고, 공식 GaN PiN 예제 재현 → P3A calibrated Mg → P3B clean baseline → MQW → sidewall 순서로 단계적으로 확장한다.
 - 서버 계정 만료 전에 재현 가능한 형태로 input deck, parameter file, extraction script, 결과 요약을 GitHub에 남긴다.
 - Synopsys Applications Library 원본/복사본은 공개 저장소에 그대로 재배포하지 않고 private/local archive에 보존한다.
 - P3 공식 GaN PiN 원본 성공 상태는 `CMP_P3_BASELINE_MICROLED_ORIGINAL_OK`로 동결 보존한다.
 - P3A는 `calibrated Mg + original Nitride/interface trap` 상태로 정의하며, clean baseline과 구분한다.
+- P3B는 `calibrated Mg + original Nitride/interface trap 제거` 상태이며 이후 MQW/sidewall 연구의 clean reference로 사용한다.
+- P3A와 P3B의 10 V total current 차이는 checkpoint 비교로만 해석하며, passivation 효과 하나로 단정하지 않는다. 두 단계는 Nitride geometry와 interface-trap physics가 동시에 다르다.
 
 ---
 
@@ -320,26 +328,60 @@ ChatGPT와 Claude는 서로 직접 대화할 수 없으므로 이 파일을 공�
 
 ---
 
+### 2026-08-27 — ChatGPT
+
+작업 내용:
+- P3A 성공 상태를 `~/CMP_P3A_MG_BASELINE_OK`로 동결 보존
+- P3B clean baseline을 위해 원본 Nitride passivation geometry와 Nitride-specific mesh 조건 제거
+- mesa 형상은 임시 `Gas` 영역 `tmp_mesa`를 생성 후 삭제하는 방식으로 유지
+- Forward deck의 `GaN/Nitride` interface trap block 제거
+- 전처리 파일에서 `Nitride`/`Passivation`이 제거되고 Mg `9.59e18`이 유지되는지 검증
+- P3B node 1 SDE와 node 2 Forward SDevice 실행
+
+결과:
+- node 1: `done: exit(0)`
+- node 2: `done: exit(0)`
+- gsub 총 실행 시간 약 86초
+- SDevice wallclock 약 80.63초
+- 10 V까지 Forward sweep 완료 및 `Curve trace finished.` 확인
+- `n2_des.tdr` 정상 생성
+- 최종 10 V total current 약 `2.103e-01 A`
+- P3A의 `2.323e-01 A` 대비 약 `0.0220 A`, `9.47%` 감소
+- 단, 이 차이는 Nitride geometry와 interface trap이 함께 제거된 결과이므로 단일 passivation 효과로 해석하지 않음
+- P3B를 이후 MQW/sidewall 개발의 clean electrical reference로 채택
+
+생성/수정 파일:
+- `CMP/tcad/P3_BASELINE_MICROLED/README.md`
+- `CMP/AI_HANDOFF.md`
+
+다음 작업:
+- P3B 성공 상태를 별도 checkpoint로 복제/보존
+- 이후 InGaN/GaN MQW baseline 추가
+
+---
+
 ## 8. AI HANDOFF
 
 ### Last Worker
 ChatGPT
 
 ### What was just done
-- P2 Mg calibration 완료 후 해당 Mg 농도와 incomplete-ionization model을 P3 GaN PiN에 이식한 P3A를 성공시킴.
-- P3A에서 node 1 SDE와 node 2 Forward SDevice가 모두 `exit(0)`으로 완료되었고 10 V forward sweep까지 정상 종료됨.
-- 원본 성공본은 `CMP_P3_BASELINE_MICROLED_ORIGINAL_OK`로 별도 동결되어 있음.
-- P2/P3 전체 압축 백업과 public-safe GitHub 백업도 확보됨.
+- P3A 성공 상태를 `CMP_P3A_MG_BASELINE_OK`로 동결 보존함.
+- 작업본에서 original Nitride passivation 및 `GaN/Nitride` interface trap을 제거하여 P3B clean GaN PiN baseline을 구성함.
+- P3B node 1 SDE와 node 2 Forward SDevice가 모두 `exit(0)`으로 완료되었고 10 V forward sweep까지 정상 종료됨.
+- P3B 10 V total current는 `2.103e-01 A`이며 P3A `2.323e-01 A`보다 약 9.47% 낮음.
+- 이 전류 차이는 passivation 단일 효과로 해석하지 않고 checkpoint 차이로만 기록함.
+- P3B를 다음 MQW 단계의 clean reference로 사용하기로 함.
 
 ### Next AI should do
-- P3A 현재 성공 상태를 추가 checkpoint로 복제/보존한다.
-- 작업본 `~/CMP_P3_BASELINE_MICROLED`에서 original Nitride passivation geometry와 `GaN/Nitride` interface trap을 한 단계씩 제거 또는 비활성화한다.
+- 현재 `~/CMP_P3_BASELINE_MICROLED` 성공 상태를 `~/CMP_P3B_CLEAN_BASELINE_OK` 같은 별도 checkpoint로 복제하고 `n2_des.sta=done`을 확인한다.
+- 그 후 작업본에서 InGaN/GaN MQW baseline을 한 단계씩 추가한다.
 - p-side `pMagnesiumActiveConcentration=9.59e18 cm^-3`와 P2 Mg incomplete-ionization parameter는 유지한다.
-- 수정 후 node 1 SDE → node 2 Forward SDevice 순으로 재검증한다.
-- clean baseline이 성공하면 P3A와 I-V/재결합 특성을 비교한 뒤 MQW 단계로 넘어간다.
+- MQW 구조 추가 시 geometry → mesh → material/physics → SDevice 순으로 단계적으로 검증한다.
+- clean baseline 이후 sidewall/SRV와 pixel-size DOE로 확장한다.
 
 ### Important warnings / unresolved questions
-- P3A는 아직 clean baseline이 아니다. 원본 Nitride passivation과 `GaN/Nitride` interface trap이 남아 있다.
+- P3A와 P3B의 전류 차이는 Nitride region과 interface trap이 동시에 달라졌기 때문에 passivation 효과 하나로 단정하면 안 된다.
 - ALD 최적 material 및 thickness는 아직 확정되지 않음.
 - Wet chemical treatment 최적 조건도 아직 확정되지 않음.
 - Reverse leakage를 defect-assisted transport까지 정량적으로 맞추려면 추후 추가 물리모델/calibration이 필요할 수 있음.

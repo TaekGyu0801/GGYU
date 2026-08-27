@@ -18,6 +18,12 @@ The working server directory was:
 ~/CMP_P3_BASELINE_MICROLED
 ```
 
+A frozen successful copy was also preserved as:
+
+```text
+~/CMP_P3_BASELINE_MICROLED_ORIGINAL_OK
+```
+
 ## SWB node map
 
 From `gtree.dat`:
@@ -30,7 +36,7 @@ node 4 = Reverse SDevice
 node 5 = Reverse SVisual
 ```
 
-## Verified run status — 2026-08-27
+## Verified original run status — 2026-08-27
 
 - Node 1 / SDE: completed successfully with `exit(0)`.
 - Node 2 / Forward SDevice: completed successfully with `exit(0)`.
@@ -39,16 +45,71 @@ node 5 = Reverse SVisual
 
 The original forward deck sweeps the anode from 0 V toward +10 V using a slow transient solution and includes III-N physics such as incomplete ionization, polarization, SRH, Auger, radiative recombination, and GaN/Nitride interface traps.
 
+## P3A — calibrated Mg inserted into the reproduced GaN PiN
+
+The first project-specific change was deliberately limited to the p-side Mg model so that failures could be isolated before removing passivation/interface-trap physics.
+
+### SDE change
+
+```text
+PDopantActiveConcentration 1e19
+→
+pMagnesiumActiveConcentration 9.59e18
+```
+
+The actual preprocessed SDE deck (`pp1_dvs.cmd`) was checked and contained:
+
+```text
+pMagnesiumActiveConcentration 9.59e18
+```
+
+Other doping remained:
+
+```text
+i-side: NDopantActiveConcentration 1e15
+n-side: NDopantActiveConcentration 1e19
+```
+
+### Mg incomplete-ionization parameters
+
+The P2 calibrated model was transferred into `sdevice.par`:
+
+```text
+Species ("pMagnesiumActiveConcentration") {
+  E_0   = 0.2
+  alpha = 8e-9
+  g     = 4.0
+  Xsec  = 1e-14
+}
+```
+
+The n-type species was kept unchanged.
+
+### P3A run result
+
+- Node 1 / SDE: `done: exit(0)`.
+- Node 2 / Forward SDevice: `done: exit(0)`.
+- gsub total run time: approximately 203 s.
+- SDevice-reported wallclock: approximately 198.36 s.
+- Final sweep reached `anode = 10.0 V` and finished with `Curve trace finished.`
+- Final 10 V current reported by the log:
+  - anode electron current: `2.239e-01 A`
+  - anode hole current: `8.354e-03 A`
+  - anode total current: `2.323e-01 A`
+- Final plot `n2_des.tdr` written successfully.
+
+This verifies that the P2 calibrated Mg concentration and incomplete-ionization model can be inserted into the reproduced GaN PiN structure without breaking the forward solution.
+
 ## Important interpretation
 
-This official example is **not yet the clean project baseline**. In particular, the copied structure already contains Nitride passivation and a GaN/Nitride interface-trap model. Those features must not be mistaken for the project's final sidewall/passivation condition.
+P3A is **still not the clean project baseline**. The copied structure still contains Nitride passivation and a GaN/Nitride interface-trap model. Those features must not be mistaken for the project's final sidewall/passivation condition.
 
 ## Next modification sequence
 
-1. Preserve this verified reproduction state.
-2. Build a clean GaN PiN baseline.
-3. Apply the P2 calibrated p-GaN Mg target (`NMg = 9.59e18 cm^-3`).
-4. Use the calibrated Mg incomplete-ionization parameters.
+1. Preserve the original verified reproduction state.
+2. Preserve P3A as the verified `calibrated Mg + original passivation/interface` checkpoint.
+3. Remove/exclude the original Nitride passivation and GaN/Nitride interface trap to establish a clean GaN PiN reference.
+4. Re-run SDE and Forward SDevice and compare against P3A.
 5. Add InGaN/GaN MQW.
 6. Add polarization/heterointerface refinements only after the simpler baseline is stable.
 7. Add sidewall/SRV and pixel-size DOE.
@@ -56,4 +117,4 @@ This official example is **not yet the clean project baseline**. In particular, 
 
 ## Source-code policy
 
-The actual Synopsys example input decks and generated outputs are retained in the user's private/local full backup and are intentionally not copied into this public repository. This file records the source location, node mapping, verified status, and project-specific next steps without redistributing licensed example material.
+The actual Synopsys example input decks and generated outputs are retained in the user's private/local full backup and are intentionally not copied into this public repository. This file records the source location, node mapping, verified status, and project-specific modifications without redistributing licensed example material.

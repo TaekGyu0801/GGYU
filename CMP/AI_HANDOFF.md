@@ -84,8 +84,10 @@ Leakage 감소 / EQE 향상 / Reliability 향상
   - Mg incomplete ionization: `E_0=0.2 eV`, `alpha=8e-9`, `g=4`, `Xsec=1e-14`
 - P3 baseline Micro-LED 구축 시작
   - Synopsys `GaN_PiN_Diode` 예제를 `~/CMP_P3_BASELINE_MICROLED`로 복사함
-  - SDE node 1 정상 완료 확인
-  - Forward SDevice node 2 실행 중이며 원본 예제 재현 검증 단계
+  - SDE node 1 정상 완료
+  - Forward SDevice node 2 원본 재현 정상 완료: `done: exit(0)`
+  - Forward simulation wall time: 약 176 s
+  - 공식 예제가 현재 서버 환경에서 정상 재현됨을 확인
 - 서버 계정 사용 가능 기간이 이번 달 말까지일 가능성이 있어, CMP 관련 TCAD 작업물의 GitHub 백업을 최우선 과제로 둔다.
 
 ---
@@ -94,14 +96,14 @@ Leakage 감소 / EQE 향상 / Reliability 향상
 
 현재 우선순위:
 
-1. `~/CMP_P3_BASELINE_MICROLED` 원본 GaN PiN Forward simulation 재현 완료 여부 확인
+1. P2/P3 현재 상태를 GitHub `CMP/tcad/`에 백업
 2. P3 clean baseline으로 개조
    - p-GaN Mg `9.59e18 cm^-3` 적용
    - P2에서 사용한 Mg incomplete ionization model 반영
    - 초기 clean baseline 단계에서는 불필요한 Nitride/interface trap 제거 여부 검토
 3. 이후 InGaN/GaN MQW baseline 추가
 4. Sidewall SRV 및 pixel size DOE로 확장
-5. 서버 계정 만료 전에 CMP TCAD 관련 프로젝트 폴더, 코드, 파라미터, 로그, 결과를 GitHub `CMP/` 아래에 백업
+5. 서버 계정 만료 전에 CMP TCAD 관련 프로젝트 폴더, 코드, 파라미터, 로그, 결과를 재현 가능한 형태로 GitHub에 백업
 
 ---
 
@@ -116,6 +118,7 @@ Leakage 감소 / EQE 향상 / Reliability 향상
 - P2 Mg calibration 최종 기준값은 현재 `NMg = 9.59e18 cm^-3`로 사용한다.
 - P3는 복잡한 MQW/sidewall 구조를 한 번에 만들지 않고, 공식 GaN PiN 예제 재현 → clean baseline → MQW → sidewall 순서로 단계적으로 확장한다.
 - 서버 계정 만료 전에 재현 가능한 형태로 원본 input deck, parameter file, extraction script, 결과 요약을 GitHub에 남긴다.
+- P3 공식 GaN PiN Forward simulation의 원본 재현 성공 상태를 수정 전 기준점으로 보존한다.
 
 ---
 
@@ -231,6 +234,26 @@ ChatGPT와 Claude는 서로 직접 대화할 수 없으므로 이 파일을 공�
 
 ---
 
+### 2026-08-27 — ChatGPT
+
+작업 내용:
+- P3 Synopsys `GaN_PiN_Diode` 원본 Forward SDevice(node 2)를 재실행하여 완료 여부 확인
+
+결과:
+- `job 2 <sdevice> done: exit(0)` 확인
+- 전체 실행 시간 약 176초
+- SDE node 1과 Forward SDevice node 2 모두 현재 서버 환경에서 정상 재현됨
+- P3 clean baseline 개조 전에 사용할 검증된 기준 상태 확보
+
+생성/수정 파일:
+- `CMP/AI_HANDOFF.md`
+
+다음 작업:
+- P2/P3 서버 파일을 먼저 GitHub에 백업
+- 이후 P3 clean baseline 개조 시작
+
+---
+
 ## 8. AI HANDOFF
 
 ### Last Worker
@@ -238,20 +261,19 @@ ChatGPT
 
 ### What was just done
 - P2 Mg calibration을 완료하여 `NMg=9.59e18 cm^-3`에서 목표 hole density `3.0e17 cm^-3`를 사실상 재현함.
-- P3 baseline Micro-LED 구축을 시작하고 Synopsys GaN PiN 공식 예제를 복사하여 node 1 SDE 정상 실행을 확인함.
-- 서버 계정 만료 가능성 때문에 현재부터 GitHub 백업을 최우선 병행 작업으로 설정함.
+- P3 baseline Micro-LED 구축을 시작하고 Synopsys GaN PiN 공식 예제를 복사함.
+- P3 node 1 SDE와 node 2 Forward SDevice 모두 정상 실행 완료하여 공식 예제가 현재 서버 환경에서 재현됨을 확인함.
+- 서버 계정 만료 가능성 때문에 GitHub 백업을 다음 최우선 작업으로 설정함.
 
 ### Next AI should do
-- P3 node 2 Forward SDevice가 완료되었는지 먼저 확인한다.
-- 완료되면 원본 파일을 보존한 상태에서 P3 clean baseline 개조를 시작한다.
-- 동시에 `~/CMP_P2_MG_CALIBRATION`, `~/CMP_P3_BASELINE_MICROLED` 및 그 밖의 CMP 관련 TCAD 폴더를 GitHub `CMP/tcad/` 아래로 복사/백업하도록 사용자를 단계적으로 안내한다.
-- input deck과 parameter file은 반드시 보존하고, 대용량 중간 산출물은 저장 필요성을 구분한다.
+- `~/CMP_P2_MG_CALIBRATION`, `~/CMP_P3_BASELINE_MICROLED` 및 그 밖의 CMP 관련 TCAD 폴더를 GitHub `CMP/tcad/` 아래로 복사/백업하도록 사용자를 단계적으로 안내한다.
+- input deck, parameter file, extraction script, SWB tree 파일, 핵심 로그/결과 요약은 반드시 보존한다.
+- 백업 완료 후 원본 파일을 보존한 상태에서 P3 clean baseline 개조를 시작한다.
 
 ### Important warnings / unresolved questions
 - ALD 최적 material 및 thickness는 아직 확정되지 않음.
 - Wet chemical treatment 최적 조건도 아직 확정되지 않음.
 - 원본 `GaN_PiN_Diode`에는 Nitride passivation 및 `GaN/Nitride` interface trap이 포함되어 있으므로 clean baseline으로 바로 간주하지 말 것.
-- P3 Forward SDevice 원본 재현은 아직 최종 `done: exit(0)` 확인 전 상태임.
 - 서버 만료 전 백업이 필수이므로 TCAD 개발과 백업을 병행할 것.
 
 ---

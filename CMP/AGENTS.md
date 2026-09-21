@@ -29,3 +29,10 @@
 ## Member timeline rule
 
 `CMP/members/<member>/` 아래 파일을 생성·수정·삭제·이동하면 **같은 작업에서 해당 member의 TIMELINE.md를 반드시 갱신한다.**
+
+
+## 자동 기록 규칙
+
+의미 있는 연구 작업이 발생하면 `AUTO_LOG_POLICY.md`를 따라 GitHub 상태를 함께 갱신한다.
+개인 작업은 해당 연구원의 TIMELINE, 팀 공통 결정은 TEAM_TIMELINE에 기록한다.
+새 blocker가 장기 작업/인수인계 대상이면 관련 GitHub Issue도 생성 또는 업데이트한다.

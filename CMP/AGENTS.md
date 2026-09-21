@@ -41,7 +41,7 @@
 ## 여러 계정/노트북 공동 기록
 
 작업 시작 시 `CHAT_TO_GITHUB_PROTOCOL.md`를 읽고,
-의미 있는 작업 후 LIVE LOG Issue #undefined에 comment를 남긴다.
+의미 있는 작업 후 LIVE LOG Issue #7에 comment를 남긴다.
 
 
 ## 세션 시작 자동 브리핑

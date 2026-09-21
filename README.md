@@ -1,3 +1,29 @@
+# GGYU Research Workspace
+
+## CMP MicroLED TCAD — ChatGPT ↔ Claude shared workspace
+
+현재 이 저장소의 `CMP/` 폴더는 **ChatGPT와 Claude가 동일한 연구 상태·코드·오류 이력을 공유하기 위한 Single Source of Truth**로 사용한다.
+
+작업 시작 시:
+1. `CMP/COMMON_BASELINE.md`
+2. `CMP/CURRENT_STATUS.md`
+3. `CMP/ERROR_LOG.md`
+4. `CMP/NEXT_ACTIONS.md`
+5. `CMP/SYNC_PROTOCOL.md`
+6. `CMP/tcad/CURRENT/`
+
+순서로 확인한다.
+
+현재 진행 중인 핵심 연구:
+- InGaN/GaN microLED sidewall defect TCAD
+- Common Baseline validation
+- Project A: Carbon-Induced High-Resistivity Edge
+- Project B: Localized AlGaN Lateral Heterobarrier
+
+자세한 내용: `CMP/README.md`
+
+---
+
 # Taek Gyu Lee (GGYU)
 
 Taek Gyu Lee | Materials Science & Engineering Portfolio
@@ -6,23 +32,6 @@ Taek Gyu Lee | Materials Science & Engineering Portfolio
 
 Contact
 - Email: xorrb4798@naver.com
-- GitHub: https://github.com/LEE-TAEK-GYU
 
-
-![avatar](https://avatars.githubusercontent.com/u/1306119250)
-
-## About me
-- Location: Seoul, South Korea
-- Interests: web development, open source, developer tooling, learning new languages
-
-## Featured projects
-- Example Project — A sample repo showcasing a small web app. https://github.com/LEE-TAEK-GYU/example-project
-- Demo Tool — CLI utility for developer productivity. https://github.com/LEE-TAEK-GYU/demo-tool
-- Portfolio Site — Personal website and notes. https://github.com/LEE-TAEK-GYU/portfolio
-
-## Contact
-- Email: xorrb4798@gmail.com
-- GitHub: https://github.com/LEE-TAEK-GYU
----
-
-Thanks for visiting — feel free to explore my repositories!
+## CMP project
+이 저장소의 `CMP/`는 공동 연구용 active workspace이며, AI 간 인수인계 문서와 TCAD current code를 함께 관리한다.

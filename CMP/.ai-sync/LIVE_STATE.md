@@ -5,6 +5,21 @@ Primary worker: 이택규
 Current phase: Phase 0 — Common Baseline validation
 Current task: SDevice2 → SVisual2 TDR output/linkage debugging
 
+## Parallel worker — 주수빈
+
+**OBSERVED from shared project conversation:** 주수빈은 Common Baseline 관련 메인 SDevice 및 관련 코드를 최종 수정했다고 보고했고, 장시간 simulation 전에 Project A/B 공통 baseline 적합성을 마지막으로 검토 중이다.
+
+Planned first runs:
+- `NtSide=0`
+- `NtSide=1e18`
+
+Reported compute cost:
+- 약 3일 / run
+
+Verification boundary:
+- 주수빈 측 최신 전체 코드와 새 simulation 결과는 이 sync 시점에 GitHub에서 직접 확인되지 않음.
+- 따라서 코드 정확성/성공 여부는 아직 CONFIRMED 아님.
+
 ## One-line handoff
 
 **SDevice2(Node 9)는 solver 종료까지 갔지만 SVisual2(Node 10)가 기대하는 `n9_des.tdr`이 Node 9 Output Files에서 보이지 않아 로드에 실패한 상태다. 다음 AI는 trap physics를 건드리지 말고 실제 preprocessed Plot filename부터 확인해야 한다.**
@@ -76,6 +91,7 @@ Read these exact files before proposing edits:
 - `CMP/tcad/CURRENT/svisual1_iv.tcl`
 
 SDE and SDevice1 latest full source are NOT yet synchronized.
+JuSubin latest modified full code is also NOT yet synchronized.
 
 ## Next diagnostic — highest priority
 

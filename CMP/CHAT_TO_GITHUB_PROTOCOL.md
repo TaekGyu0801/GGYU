@@ -34,7 +34,7 @@ ERROR_LOG
 1. `CMP/.ai-sync/LIVE_STATE.md`
 2. `CMP/CURRENT_STATUS.md`
 3. `CMP/TEAM_TIMELINE.md`
-4. GitHub Issue #undefined 최신 comments
+4. GitHub Issue #7 최신 comments
 5. 해당 연구원 `members/<name>/TIMELINE.md`
 6. 관련 현재 코드
 
@@ -76,7 +76,7 @@ ERROR_LOG
 - 최신 한 줄 상태 → `.ai-sync/LIVE_STATE.md`
 - 오류 이력 → `ERROR_LOG.md`
 - 장기 blocker/task → 별도 GitHub Issue
-- 시간순 공용 이벤트 → LIVE LOG Issue #undefined
+- 시간순 공용 이벤트 → LIVE LOG Issue #7
 
 ## 중요한 제한
 

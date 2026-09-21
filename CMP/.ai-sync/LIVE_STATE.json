@@ -5,6 +5,19 @@
   "task": "SDevice2 to SVisual2 TDR output/linkage debugging",
   "status": "UNRESOLVED",
   "blocker": "SVisual2 cannot load n9_des.tdr",
+  "parallelWork": {
+    "worker": "주수빈",
+    "status": "OBSERVED",
+    "source": "shared project conversation / user report",
+    "task": "Common Baseline final code review before long simulations",
+    "reportedCodeState": "Main SDevice and related reviewed code were reported as finally modified",
+    "plannedFirstRuns": [
+      "NtSide=0",
+      "NtSide=1e18"
+    ],
+    "reportedRuntimePerRun": "about 3 days",
+    "verificationBoundary": "Latest full modified code and new simulation results are not yet directly verified in GitHub"
+  },
   "nodes": {
     "sdevice2": 9,
     "svisual2": 10
@@ -33,7 +46,8 @@
   ],
   "missingFullSource": [
     "SDE",
-    "SDevice1"
+    "SDevice1",
+    "JuSubin latest modified full code"
   ],
   "nextAction": {
     "priority": 0,
@@ -58,6 +72,7 @@
   ],
   "warnings": [
     "Do not guess unsupported T-2022.03 Plot keywords.",
-    "Do not treat a proposed fix as confirmed until Sentaurus output verifies it."
+    "Do not treat a proposed fix as confirmed until Sentaurus output verifies it.",
+    "Do not treat JuSubin-reported code finalization as GitHub-verified code correctness until the exact latest files are synchronized."
   ]
 }

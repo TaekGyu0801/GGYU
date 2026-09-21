@@ -58,3 +58,9 @@
 을 첫 답변에서 요약한다.
 
 의미 있는 작업이 발생하면 AUTO_LOG_POLICY와 CHAT_TO_GITHUB_PROTOCOL에 따라 즉시 저장한다.
+
+
+## 공통 AI 협업 규칙
+
+이택규 GPT / 주수빈 GPT / Claude는 `AI_COLLAB_RULES.md`를 공통 규칙으로 사용한다.
+세션 시작, 자동 기록, 코드 수정, 충돌 방지, AI 인수인계는 이 규칙을 따른다.

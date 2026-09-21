@@ -1,0 +1,51 @@
+{
+  "protocolVersion": "2.0",
+  "updated": "2026-09-21",
+  "repository": "TaekGyu0801/GGYU",
+  "projectPath": "CMP",
+  "liveLogIssue": 7,
+  "dashboard": "https://taekgyu0801.github.io/GGYU/",
+  "participants": [
+    {
+      "name": "이택규",
+      "timeline": "CMP/members/LeeTaekGyu/TIMELINE.md"
+    },
+    {
+      "name": "주수빈",
+      "timeline": "CMP/members/JuSubin/TIMELINE.md",
+      "github": "soybeanmilk0514-jpg"
+    }
+  ],
+  "requiredRead": [
+    "CMP/.ai-sync/LIVE_STATE.md",
+    "CMP/.ai-sync/LIVE_STATE.json",
+    "CMP/.ai-sync/RELAY.md",
+    "CMP/CURRENT_STATUS.md",
+    "CMP/ERROR_LOG.md",
+    "CMP/NEXT_ACTIONS.md",
+    "CMP/TEAM_TIMELINE.md",
+    "current worker timeline",
+    "Issue #7 latest comments",
+    "relevant current code"
+  ],
+  "meaningfulWriteTriggers": [
+    "code_change",
+    "new_error",
+    "root_cause_found",
+    "simulation_result",
+    "research_decision",
+    "baseline_decision",
+    "blocker_change",
+    "next_action_change",
+    "handoff"
+  ],
+  "statusLabels": [
+    "PROPOSED",
+    "OBSERVED",
+    "CONFIRMED",
+    "UNRESOLVED",
+    "REJECTED"
+  ],
+  "noBackgroundSync": true,
+  "writeFailureRule": "Never claim GitHub sync completed unless the write actually succeeded."
+}

@@ -18,6 +18,19 @@ SDevice2(Node 9)의 실제 TDR output을 확인하고 SVisual2(Node 10)가 정�
 5. 실제 TDR이 존재하면 `svisual2_maps.tcl`의 `tdrfile`을 그 이름에 맞춤
 6. 실제 TDR이 없다면 SDevice2의 output 생성 조건을 별도로 진단
 
+## Parallel track — Ju Subin Common Baseline pre-run validation
+
+### Current state
+공유 프로젝트의 주수빈 채팅에서, 메인 SDevice와 관련 코드를 최종 수정했다고 사용자 보고가 있었음. 아직 최신 전체 코드 및 실행 결과는 GitHub에서 직접 검증되지 않음.
+
+### Next steps
+1. 주수빈 측 최신 전체 코드 원문을 CMP에 동기화
+2. Project A/B 공통 baseline 조건에 맞는지 정적/논리 검토
+3. 계산 비용을 고려해 우선 `NtSide=0` 실행
+4. 우선 `NtSide=1e18` 실행
+5. 두 run의 로그/결과를 비교하고 GitHub에 기록
+6. 이후에만 더 넓은 Nt sweep 여부 결정
+
 ## Priority 1 — mechanism validation
 
 TDR linkage 해결 후 SVisual2에서:

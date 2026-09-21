@@ -6,6 +6,22 @@ Last synchronized: 2026-09-21
 
 **Common Baseline v1 validation — geometry mostly validated; SVisual2 output-file linkage currently unresolved.**
 
+## Parallel work — Ju Subin
+
+**Status: OBSERVED — shared project conversation / user report**
+
+주수빈은 별도 채팅에서 Common Baseline 관련 메인 SDevice 및 앞서 검토한 관련 코드를 최종 수정했다고 보고했으며, 장시간 simulation을 시작하기 전에 Project A와 Project B 모두에 적합한 baseline인지 마지막 정적/논리 검토를 진행 중이다.
+
+현재 계획:
+- 우선 `NtSide=0`
+- 우선 `NtSide=1e18`
+
+두 조건만 먼저 실행해 baseline 동작을 확인.
+
+주수빈 보고 기준으로 한 run이 약 3일 걸릴 수 있어 전체 sweep 전에 코드 검증을 우선한다.
+
+**중요:** 이 기록 시점에는 주수빈 측 최신 전체 코드 원문 및 새 simulation 결과가 GitHub에서 직접 검증되지 않았다. 따라서 코드 정확성이나 실행 성공을 CONFIRMED로 간주하지 않는다.
+
 ## Confirmed
 
 ### Geometry / Regions
@@ -105,5 +121,6 @@ Node 9 Explorer의 Output Files 화면에서는 당시:
 아직 최신 전체 원문이 GitHub에 없는 것:
 - SDE
 - SDevice1
+- 주수빈 측 최신 수정 코드 전체 원문
 
-이 둘은 연구자가 실제 코드를 제공하기 전까지 추정 생성 금지.
+이들은 연구자가 실제 최신 코드를 동기화하기 전까지 추정 생성 금지.

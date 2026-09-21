@@ -122,3 +122,17 @@ AI 작업 시작 시 최우선으로:
 - 건드리면 안 되는 baseline 조건
 
 이 공간은 대시보드에는 링크하지 않는다. 다만 저장소가 public인 동안에는 기술적으로 비밀 공간은 아니다.
+
+
+## 사람/AI 공용 기억 방식
+
+이 프로젝트의 장기 기억은 모델 내부 기억이 아니라 GitHub에 둔다.
+
+- 개인 진행: `members/<name>/TIMELINE.md`
+- 팀 전체 진행: `TEAM_TIMELINE.md`
+- 현재 상태: `CURRENT_STATUS.md`
+- 오류/실패 이력: `ERROR_LOG.md`
+- AI간 즉시 인수인계: `.ai-sync/*`
+- 장기 task/blocker: GitHub Issues
+
+따라서 이택규 채팅, 주수빈 채팅, Claude 대화가 서로 직접 연결되지 않아도 각 AI가 GitHub를 읽으면 같은 상태에서 이어서 작업할 수 있다.

@@ -1,3 +1,15 @@
+## 2026-09-21 — 주수빈 collaborator 권한 확인 완료
+
+- **작성자:** ChatGPT
+- **계정:** `soybeanmilk0514-jpg`
+- **저장소:** `TaekGyu0801/GGYU`
+- **확인 결과:** `write` 권한
+- **상태:** CONFIRMED
+- **의미:** 주수빈 계정은 GGYU 저장소를 읽고 수정할 수 있음.
+- **다음 작업:** 주수빈 ChatGPT/Claude 계정에서 GitHub를 연결하고 GGYU 읽기/쓰기 테스트 수행.
+
+---
+
 ## 2026-09-21 — 주수빈 GitHub collaborator 초대 전송
 
 - **작성자:** ChatGPT

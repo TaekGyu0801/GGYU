@@ -36,3 +36,9 @@
 의미 있는 연구 작업이 발생하면 `AUTO_LOG_POLICY.md`를 따라 GitHub 상태를 함께 갱신한다.
 개인 작업은 해당 연구원의 TIMELINE, 팀 공통 결정은 TEAM_TIMELINE에 기록한다.
 새 blocker가 장기 작업/인수인계 대상이면 관련 GitHub Issue도 생성 또는 업데이트한다.
+
+
+## 여러 계정/노트북 공동 기록
+
+작업 시작 시 `CHAT_TO_GITHUB_PROTOCOL.md`를 읽고,
+의미 있는 작업 후 LIVE LOG Issue #undefined에 comment를 남긴다.

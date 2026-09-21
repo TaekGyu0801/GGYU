@@ -82,3 +82,22 @@ Claude에게 다음과 같이 요청:
 ## ChatGPT 시작 프롬프트
 
 > GitHub의 TaekGyu0801/GGYU/CMP를 먼저 읽고 그 최신 상태를 기준으로 이어서 작업해. COMMON_BASELINE, CURRENT_STATUS, ERROR_LOG, NEXT_ACTIONS, SYNC_PROTOCOL, tcad/CURRENT 코드를 우선 확인하고, 의미 있는 작업 후 GitHub 상태를 갱신해.
+
+
+## VCAT-style dashboard sync
+
+공동 진행 상황은 GitHub Pages dashboard와 GitHub Issues에도 반영한다.
+
+- Phase task 원본: GitHub Issues #1~#6
+- Dashboard data: `docs/data/status.json`
+- Dashboard source: `docs/index.html`, `docs/app.js`, `docs/style.css`
+
+의미 있는 작업 후 상태가 바뀌면 AI는 다음을 함께 갱신한다.
+1. `CMP/CURRENT_STATUS.md`
+2. 필요한 경우 `CMP/ERROR_LOG.md`
+3. `CMP/NEXT_ACTIONS.md`
+4. 관련 member `TIMELINE.md`
+5. `docs/data/status.json`
+6. 관련 GitHub Issue 체크리스트/설명
+
+즉 dashboard는 별도 수기 기록이 아니라 GitHub 상태를 사람이 빠르게 확인하기 위한 요약 화면으로 운용한다.

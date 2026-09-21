@@ -1,3 +1,11 @@
+
+## 2026-09-21 — ChatGPT — 대시보드 한국어화
+
+- GitHub Pages 연구 대시보드의 불필요한 영문 UI를 한국어로 변경함.
+- 기술 고유명사와 파일명(예: SDevice2, TDR, COMMON_BASELINE, ERROR_LOG)은 유지함.
+- 변경 파일: `docs/index.html`, `docs/app.js`, `docs/data/status.json`.
+- 연구 내용/물리 파라미터/TCAD 기준값에는 변경 없음.
+
 # CMP AI Handoff — LIVE
 
 > **2026-09-21 이후 이 섹션이 최신 기준이다.**

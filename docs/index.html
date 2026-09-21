@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CMP MicroLED TCAD Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div>
+    <div class="eyebrow">CMP Research Workspace</div>
+    <h1>MicroLED Sidewall TCAD Dashboard</h1>
+    <p>이택규 · 주수빈 · ChatGPT · Claude가 GitHub를 기준으로 같은 연구 상태를 공유합니다.</p>
+  </div>
+  <a class="button" href="https://github.com/TaekGyu0801/GGYU/tree/main/CMP">GitHub CMP 열기</a>
+</header>
+
+<main>
+  <section class="hero-grid">
+    <article class="card accent">
+      <div class="label">Current Stage</div>
+      <h2 id="current-stage">Loading…</h2>
+      <p id="goal"></p>
+    </article>
+    <article class="card danger">
+      <div class="label">Current Blocker</div>
+      <h2>지금 막힌 문제</h2>
+      <p id="blocker">Loading…</p>
+      <a href="https://github.com/TaekGyu0801/GGYU/blob/main/CMP/ERROR_LOG.md">ERROR_LOG 보기 →</a>
+    </article>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div><div class="eyebrow">Run Sheet</div><h2>Research Phases</h2></div>
+      <a href="https://github.com/TaekGyu0801/GGYU/blob/main/CMP/runsheet/PHASE_WORKFLOW.md">전체 workflow →</a>
+    </div>
+    <div id="phases" class="phase-grid"></div>
+  </section>
+
+  <section class="section two-col">
+    <article class="card"><div class="eyebrow">Confirmed</div><h2>확인된 상태</h2><ul id="confirmed"></ul></article>
+    <article class="card"><div class="eyebrow">Unresolved</div><h2>아직 검증할 것</h2><ul id="unresolved"></ul></article>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><div><div class="eyebrow">Team</div><h2>연구원 Workspace</h2></div></div>
+    <div id="members" class="team-grid"></div>
+  </section>
+
+  <section class="section">
+    <div class="section-head"><div><div class="eyebrow">AI Collaboration</div><h2>ChatGPT ↔ Claude 공용 기준</h2></div></div>
+    <div class="link-grid">
+      <a class="link-card" href="https://github.com/TaekGyu0801/GGYU/blob/main/CMP/COMMON_BASELINE.md"><strong>COMMON_BASELINE</strong><span>변경하면 안 되는 기준</span></a>
+      <a class="link-card" href="https://github.com/TaekGyu0801/GGYU/blob/main/CMP/CURRENT_STATUS.md"><strong>CURRENT_STATUS</strong><span>현재 실제 진행 상태</span></a>
+      <a class="link-card" href="https://github.com/TaekGyu0801/GGYU/blob/main/CMP/ERROR_LOG.md"><strong>ERROR_LOG</strong><span>오류와 해결 이력</span></a>
+      <a class="link-card" href="https://github.com/TaekGyu0801/GGYU/blob/main/CMP/NEXT_ACTIONS.md"><strong>NEXT_ACTIONS</strong><span>다음 작업</span></a>
+      <a class="link-card" href="https://github.com/TaekGyu0801/GGYU/blob/main/CMP/AI_PROJECT_GUIDE.md"><strong>AI_PROJECT_GUIDE</strong><span>AI 작업 규칙</span></a>
+      <a class="link-card" href="https://github.com/TaekGyu0801/GGYU/tree/main/CMP/tcad/CURRENT"><strong>TCAD CURRENT</strong><span>현재 코드</span></a>
+    </div>
+  </section>
+</main>
+
+<footer><span id="updated"></span><span>GitHub is the single source of truth.</span></footer>
+<script src="app.js"></script>
+</body>
+</html>

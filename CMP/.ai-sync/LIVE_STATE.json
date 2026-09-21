@@ -1,0 +1,63 @@
+{
+  "updated": "2026-09-21",
+  "primaryWorker": "이택규",
+  "phase": "Phase 0 — Common Baseline validation",
+  "task": "SDevice2 to SVisual2 TDR output/linkage debugging",
+  "status": "UNRESOLVED",
+  "blocker": "SVisual2 cannot load n9_des.tdr",
+  "nodes": {
+    "sdevice2": 9,
+    "svisual2": 10
+  },
+  "observed": {
+    "sdevice2Finished": true,
+    "terminalText": [
+      "Sentaurus Device simulation finished",
+      "Good Bye !"
+    ],
+    "visibleNode9OutputFiles": [
+      "n9_des.err",
+      "n9_des.job",
+      "n9_des.out",
+      "n9_des.sta",
+      "n9_local.err",
+      "pp9_des.cmd",
+      "pp9_des.par"
+    ],
+    "expectedTdrVisible": false
+  },
+  "currentCode": [
+    "CMP/tcad/CURRENT/sdevice2_defect_on.cmd",
+    "CMP/tcad/CURRENT/svisual2_maps.tcl",
+    "CMP/tcad/CURRENT/svisual1_iv.tcl"
+  ],
+  "missingFullSource": [
+    "SDE",
+    "SDevice1"
+  ],
+  "nextAction": {
+    "priority": 0,
+    "action": "Inspect pp9_des.cmd File block",
+    "fields": [
+      "Grid",
+      "Parameters",
+      "Plot",
+      "Current",
+      "Output"
+    ],
+    "purpose": "Determine actual preprocessed Plot/TDR filename before changing code"
+  },
+  "doNotChange": [
+    "Nt=1e18 cm^-3",
+    "Et=Ev+0.75 eV",
+    "sigma_n=sigma_p=1e-15 cm^2",
+    "damage width=5 nm",
+    "Kou vertical epitaxy",
+    "4 um representative mesa",
+    "common A/B comparison physics"
+  ],
+  "warnings": [
+    "Do not guess unsupported T-2022.03 Plot keywords.",
+    "Do not treat a proposed fix as confirmed until Sentaurus output verifies it."
+  ]
+}

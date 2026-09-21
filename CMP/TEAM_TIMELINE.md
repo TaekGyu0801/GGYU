@@ -1,3 +1,13 @@
+## 2026-09-21 — 주수빈 GitHub collaborator 초대 전송
+
+- **작성자:** ChatGPT
+- **사용자 보고:** 이택규가 주수빈 GitHub 계정을 `TaekGyu0801/GGYU` collaborator로 초대함.
+- **상태:** OBSERVED (사용자 보고 기준, 수락 여부/최종 권한은 아직 미확인)
+- **다음 확인:** 주수빈이 초대를 수락한 뒤 collaborator permission 확인.
+- **후속 작업:** 주수빈 ChatGPT/Claude 계정에서 GitHub 연결 후 `GGYU` 읽기/쓰기 테스트.
+
+---
+
 
 ## 2026-09-21 — 주수빈도 CMP 프로젝트 내 이름 확인 방식으로 작업
 

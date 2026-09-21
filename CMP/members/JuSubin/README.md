@@ -14,3 +14,13 @@ AlGaN lateral barrier
 ## Rules
 - Common Baseline defect model은 Project A와 동일하게 유지.
 - Baseline freeze 후 Project B-specific barrier variable만 변경.
+
+
+## GPT/Claude 자동 기록 설정
+
+주수빈 계정에서 GitHub 자동 기록을 사용하려면:
+- `../../SUBIN_SETUP.md`
+- `../../prompts/JUSUBIN_START_PROMPT.md`
+를 따른다.
+
+새 채팅 첫 메시지는 `주수빈`으로 시작한다.

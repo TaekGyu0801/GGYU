@@ -1,0 +1,78 @@
+{
+  "project": "CMP MicroLED Sidewall TCAD",
+  "updated": "2026-09-21",
+  "goal": "동일한 현실적 Common Baseline에서 Project A와 Project B의 carrier-confinement mechanism을 공정하게 비교",
+  "currentStage": "Phase 0 — Common Baseline validation",
+  "currentBlocker": "SVisual2가 n9_des.tdr을 찾지 못함. SDevice2의 preprocessed File/Plot output filename 확인 필요.",
+  "members": [
+    {
+      "name": "이택규",
+      "role": "Common Baseline + Project A",
+      "folder": "CMP/members/LeeTaekGyu/"
+    },
+    {
+      "name": "주수빈",
+      "role": "Common Baseline + Project B",
+      "folder": "CMP/members/JuSubin/"
+    }
+  ],
+  "phases": [
+    {
+      "id": 0,
+      "title": "Common Baseline validation",
+      "status": "in-progress",
+      "issue": 1,
+      "progress": 45
+    },
+    {
+      "id": 1,
+      "title": "Freeze Common Baseline Final",
+      "status": "blocked",
+      "issue": 2,
+      "progress": 0
+    },
+    {
+      "id": 2,
+      "title": "Project A — Carbon High-R Edge",
+      "status": "queued",
+      "issue": 3,
+      "progress": 0
+    },
+    {
+      "id": 3,
+      "title": "Project B — Localized AlGaN Barrier",
+      "status": "queued",
+      "issue": 4,
+      "progress": 0
+    },
+    {
+      "id": 4,
+      "title": "A/B fair comparison",
+      "status": "queued",
+      "issue": 5,
+      "progress": 0
+    },
+    {
+      "id": 5,
+      "title": "Final report / presentation",
+      "status": "queued",
+      "issue": 6,
+      "progress": 0
+    }
+  ],
+  "confirmed": [
+    "2D Cartesian baseline",
+    "DmgL / Clean / DmgR region partition",
+    "4 QWs + 5 barriers",
+    "p/n doping scale visually checked",
+    "SVisual1 forward I-V script runs after Tcl fixes",
+    "SDevice2 solver completion observed"
+  ],
+  "unresolved": [
+    "Actual SDevice2 TDR output filename/linkage",
+    "Defect OFF normal LED validation",
+    "Defect ON sidewall recombination validation",
+    "IQE degradation",
+    "Nt / mesa-size / mesh sensitivity"
+  ]
+}

@@ -1,3 +1,14 @@
+## 2026-09-21 — Claude용 GitHub 연동 작업 프롬프트 추가
+
+- **작성자:** ChatGPT
+- **참여자:** 이택규
+- **구분:** 공용 운영
+- **내용:** Claude가 GitHub의 현재 연구 상태를 우선 읽고, 실제 코드/로그를 기준으로 이어서 코드를 작성·디버깅하며, 의미 있는 결과를 다시 GitHub에 기록하도록 전용 시작 프롬프트를 추가.
+- **파일:** `CMP/prompts/CLAUDE_GITHUB_WORK_PROMPT.md`
+- **상태:** CONFIRMED
+
+---
+
 ## 2026-09-21 — AI Shared Memory Protocol v2 구축
 
 - **작성자:** ChatGPT

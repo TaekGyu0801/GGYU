@@ -64,3 +64,8 @@ ChatGPT와 Claude는 서로의 채팅 내용을 직접 읽지 못한다.
 
 이 프로젝트의 AI는 의미 있는 연구 작업이 발생한 경우 답변만 하고 끝내지 않는다.
 `CMP/AUTO_LOG_POLICY.md`를 읽고 개인 TIMELINE, TEAM_TIMELINE, CURRENT_STATUS, ERROR_LOG, NEXT_ACTIONS, .ai-sync, 관련 Issue 중 필요한 항목을 같은 작업에서 갱신한다.
+
+
+## 이택규 GPT / 주수빈 GPT / Claude 공통 규칙
+
+세부 협업 규칙은 `CMP/AI_COLLAB_RULES.md`를 따른다.

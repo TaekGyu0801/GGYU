@@ -38,3 +38,9 @@ AI는 같은 작업에서 다음을 갱신한다.
 
 AI는 다른 AI가 남긴 PROPOSED 내용을 CONFIRMED처럼 취급하지 않는다.
 실제 Sentaurus 로그와 현재 GitHub 코드가 가장 우선한다.
+
+
+## Protocol v2
+
+전체 AI 공용 읽기/쓰기 계약은 `../AI_SHARED_MEMORY_PROTOCOL.md`가 최상위 규칙이다.
+기계가 읽을 수 있는 운영 설정은 `SYNC_STATE.json`에 있다.

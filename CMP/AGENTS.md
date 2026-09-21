@@ -42,3 +42,19 @@
 
 작업 시작 시 `CHAT_TO_GITHUB_PROTOCOL.md`를 읽고,
 의미 있는 작업 후 LIVE LOG Issue #undefined에 comment를 남긴다.
+
+
+## 세션 시작 자동 브리핑
+
+새 채팅에서 사용자가 `이택규` 또는 `주수빈`이라고 작업자 이름을 입력하면,
+`SESSION_START_PROTOCOL.md`를 실행한다.
+
+즉, 현재 GitHub 상태를 먼저 읽고:
+- 현재 팀 진행
+- 현재 blocker
+- 해당 작업자 개인 최신 기록
+- 바로 이어서 할 다음 작업
+
+을 첫 답변에서 요약한다.
+
+의미 있는 작업이 발생하면 AUTO_LOG_POLICY와 CHAT_TO_GITHUB_PROTOCOL에 따라 즉시 저장한다.

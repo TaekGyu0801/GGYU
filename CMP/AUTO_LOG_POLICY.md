@@ -70,3 +70,10 @@ AI가 제안한 내용을 실제 연구 결과처럼 기록하지 않는다.
 ChatGPT/Claude가 작업을 끝내거나 막히면 반드시 `.ai-sync`를 최신화한다.
 
 다음 AI는 대화 기록보다 GitHub의 최신 상태를 우선한다.
+
+
+## 공용 이벤트 로그
+
+여러 계정에서 동시에 작업할 수 있으므로,
+의미 있는 사건은 파일 수정과 별도로 **LIVE LOG Issue #undefined comment**에도 남긴다.
+Issue comment는 append-only 형태라 여러 AI/사용자가 동시에 기록하기에 적합하다.

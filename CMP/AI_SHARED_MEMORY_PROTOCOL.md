@@ -254,3 +254,14 @@ AI 협업 운영 규칙이 서로 충돌할 경우:
 5. `CMP/CHAT_TO_GITHUB_PROTOCOL.md`
 
 연구 사실/파라미터의 우선순위는 별도로 실제 코드·로그·COMMON_BASELINE을 따른다.
+
+
+## 15. Sentaurus 공식 자료 우선 확인
+
+Sentaurus command/Tcl/Scheme/mesh syntax를 새로 제안하거나 오류를 진단할 때
+`CMP/references/TCAD_REFERENCE_INDEX.md`를 먼저 확인한다.
+
+사용자가 제공한 T-2022.03 공식 User Guide와 공식 example에서 확인 가능한 syntax를
+일반 기억이나 추측보다 우선한다.
+
+공식 문서와 현재 실행 결과가 다르면 실제 설치환경의 log/preprocessed file을 최종 근거로 사용한다.

@@ -1,3 +1,45 @@
+# CMP AI Handoff — LIVE
+
+> **2026-09-21 이후 이 섹션이 최신 기준이다.**
+> 기존 하단의 2026-08 기록은 historical legacy log이며 현재 Common Baseline source-of-truth가 아니다.
+
+## START HERE
+
+ChatGPT와 Claude는 작업 시작 전에 반드시 다음 파일을 순서대로 읽는다:
+
+1. `CMP/COMMON_BASELINE.md`
+2. `CMP/CURRENT_STATUS.md`
+3. `CMP/ERROR_LOG.md`
+4. `CMP/NEXT_ACTIONS.md`
+5. `CMP/SYNC_PROTOCOL.md`
+6. 관련 `CMP/tcad/CURRENT/*`
+
+## Latest handoff
+
+### Current model
+JBD application scale + Kou 2019 coherent blue InGaN/GaN epitaxy + Wu 2023 5-nm localized sidewall damaged-region physics를 결합한 representative 2D Cartesian TCAD baseline.
+
+### Confirmed today
+- Clean/DmgL/DmgR regions exist through p-GaN, EBL, Barrier0~4, QW1~4, n-GaN.
+- Doping map roughly matches p ~3e17 / n ~5e18 scale.
+- SVisual1 Tcl issues were resolved.
+- SDevice2 node 9 has an execution log ending in `Sentaurus Device simulation finished / Good Bye!`.
+
+### Current blocker
+SVisual2 expects `n9_des.tdr`, but Node 9 Output Files screenshot did not show that file. SVisual2 therefore fails with:
+`File 'n9_des.tdr' could not be loaded.`
+
+### Next AI action
+Do not change trap physics. Inspect `pp9_des.cmd` File block and actual Node 9 output filenames to determine the real Plot/TDR output.
+
+### Important
+Do not infer SDE/SDevice1 full code: their latest full source has not yet been synchronized into `tcad/CURRENT`.
+
+---
+
+
+# Legacy historical handoff below
+
 # CMP AI Handoff
 
 > ChatGPT와 Claude가 CMP 프로젝트 작업 내용을 공유하기 위한 공용 인수인계 문서.

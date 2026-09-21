@@ -1,3 +1,16 @@
+## 2026-09-21 — Sentaurus T-2022.03 공식 매뉴얼/예제 참고자료 색인
+
+- **작성자:** ChatGPT
+- **참여자:** 이택규
+- **구분:** 참고자료 / 연구 인프라
+- **내용:** 사용자가 제공한 SDevice/SDE/SMesh/SVisual T-2022.03 User Guide와 Sentaurus example 자료를 검토해 GitHub reference index와 file manifest로 기록.
+- **중요 확인:** textured solar-cell 공식 example의 SDevice File block에서 `plot=@tdrdat@`, `grid=@tdr@`, `current=@plot@`, `output=@log@`, `parameter=@parameter@` Workbench macro 패턴 확인.
+- **현재 blocker 관련 의미:** SDevice2 command macro를 임의 변경하기보다 `pp9_des.cmd`의 실제 preprocessing 결과를 우선 확인해야 한다는 기존 진단을 강화함.
+- **보안/저작권:** Synopsys 원본 User Guide에는 proprietary notice가 있어 public GGYU에는 원문 PDF/전체 예제 코드를 업로드하지 않고 색인·요약·hash만 저장.
+- **상태:** CONFIRMED
+
+---
+
 ## 2026-09-21 — Claude용 GitHub 연동 작업 프롬프트 추가
 
 - **작성자:** ChatGPT

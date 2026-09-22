@@ -45,6 +45,35 @@
       "slowdownFactorTotalApprox": 20.1,
       "interpretation": "per-step computational cost has increased substantially; prioritize old-vs-current deck/solver/physics/mesh comparison",
       "nextAction": "Compare old/current pp*_des.cmd Math/solver, Physics/Traps scope, mesh/grid/unknown statistics, and iteration details."
+    },
+    "oldThreeDayDeck": {
+      "status": "OBSERVED",
+      "trapConc": 0,
+      "trapRegions": "DmgL/R pGaN, EBL, Barrier0-4, QW1-4, nGaN",
+      "transient": {
+        "InitialStep": 0.00001,
+        "MinStep": 1e-9,
+        "MaxStep": 0.001,
+        "Increment": 1.2,
+        "goalAnodeVoltage": 5
+      },
+      "math": {
+        "threads": 4,
+        "Digits": 5,
+        "ErrRefElectron": 10000,
+        "ErrRefHole": 10000,
+        "RHSMin": 0.001,
+        "transient": "BE",
+        "extendedPrecision": 80,
+        "method": "Blocked",
+        "subMethod": "ILS(set=22)",
+        "gmres": 100,
+        "tolrel": 1e-10,
+        "tolunprec": 0.0001,
+        "maxit": 200,
+        "ilut": "1e-8,-1"
+      },
+      "keyCaution": "Old deck is NtSide=0. Verify current slow node trap Conc before direct runtime comparison."
     }
   },
   "nodes": {

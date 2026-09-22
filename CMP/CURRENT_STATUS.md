@@ -150,3 +150,8 @@ Node 9 Explorer의 Output Files 화면에서는 당시:
 ## Ju Subin runtime evidence — old run around 0.30 V
 
 과거 약 3일 내 완료된 run에서 anode 약 0.3034 V step의 Total time은 172.57 s, 약 0.3084 V step은 123.94 s였고 각각 5 Newton iterations로 수렴했다. 현재 run의 약 0.3834 V step은 Total 약 3563.68 s가 관찰됐다. bias가 완전히 같지는 않지만, **현재 run의 accepted step 비용이 과거 run보다 크게 증가한 정황이 강해졌다.** 최종 비교를 위해 과거 0.38 V 부근 로그 확인이 필요하다.
+
+
+## Ju Subin runtime root cause narrowed at identical bias
+
+Old/current를 **동일 accepted anode ≈0.3834 V**에서 직접 비교했다. old run은 Total 177.47 s (Assembly 64.84 s, Solve 108.74 s), current run은 Total 3563.68 s (Assembly 598.77 s, Solve 2928.83 s)였다. 현재 step은 old 대비 약 **20.1× 느림**. 따라서 현재 장시간 문제는 MaxStep/step 개수보다 per-step computational cost 증가가 핵심이다.

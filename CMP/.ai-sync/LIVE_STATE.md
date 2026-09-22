@@ -156,3 +156,10 @@ The original synchronized SDevice2 deck contains `SRHRecombination`; the fact th
 - Current point leaves roughly 923–924 accepted steps minimum to reach 5 V.
 - Using the latest observed ~3564 s/step as a crude extrapolation gives ~38 days remaining; actual cost can vary with bias.
 - Treat current JuSubin blocker as numerical step strategy/computational cost, not SDE/SDevice dependency failure.
+
+
+### Runtime diagnosis refinement
+- User reports the pre-final-edit version of nearly the same deck completed in ~3 days.
+- Therefore MaxStep=1e-3 explains a large step count but is not established as the new slowdown cause.
+- If old/new step-control is the same, prioritize comparing per-step solve cost and rejected/cutback steps, then mesh size, Physics/Traps application scope, and Math solver settings.
+- The prior ~38-day estimate is only a crude extrapolation from one slow step, not a reliable ETA.

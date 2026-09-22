@@ -1,3 +1,15 @@
+## 2026-09-22 — CES2027 선발 발표 구성 착수
+
+- **작성자:** ChatGPT
+- **참여자:** 주수빈
+- **구분:** 팀 발표 준비
+- **상태:** PROPOSED
+- **내용:** 15분 발표를 Common Baseline의 문헌 근거, baseline 구조 검증, Project A/B의 TCAD 구현/공정 비교 전략 중심으로 구성하기로 함.
+- **발표 원칙:** 지난 1주차의 일반 배경은 최소화하고, baseline provenance와 검증 가능성 및 fair comparison design을 핵심으로 제시.
+- **계획 파일:** `CMP/CES2027_PRESENTATION_PLAN.md`
+
+---
+
 ## 2026-09-21 — CMP 프로젝트 내 의미 있는 작업 자동 저장 범위 재확정
 
 - **작성자:** ChatGPT

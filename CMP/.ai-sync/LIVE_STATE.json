@@ -27,6 +27,22 @@
       "previousStepWallclockSeconds": 3563.68,
       "interpretation": "run appears to be progressing slowly, not proven hung",
       "nextAction": "Inspect pp6_des.cmd Solve block final target and step-control settings to estimate remaining steps/runtime"
+    },
+    "runtimeDiagnosis": {
+      "status": "CONFIRMED",
+      "transient": {
+        "InitialStep": 0.00001,
+        "MinStep": 1e-9,
+        "MaxStep": 0.001,
+        "Increment": 1.2,
+        "goalAnodeVoltage": 5
+      },
+      "evidence": "pseudo-time 0.0766738 maps to ~0.3834 V, consistent with 5*time",
+      "maxVoltageIncrementPerAcceptedStep_V": 0.005,
+      "remainingAcceptedStepsApprox": "923-924 minimum from ~0.077 to 1.0",
+      "crudeRemainingRuntimeAtLatestStepCost": "~38 days",
+      "caveat": "per-step runtime can vary with bias",
+      "nextAction": "Review original SDevice numerical stepping strategy without changing Common Baseline physics"
     }
   },
   "nodes": {

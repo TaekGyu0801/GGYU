@@ -29,20 +29,22 @@
       "nextAction": "Inspect pp6_des.cmd Solve block final target and step-control settings to estimate remaining steps/runtime"
     },
     "runtimeDiagnosis": {
-      "status": "UNRESOLVED",
-      "correctionDate": "2026-09-22",
-      "correction": "The 123-177 s logs around 0.30-0.3834 V are from the current Node 6 n6_des.out early section, not verified old-run data. Prior old-vs-current 20.1x comparison is invalid.",
-      "currentRunEarly": {
-        "step": "0.0756738 -> 0.0766738",
-        "acceptedAnodeVoltage_V": 0.3834,
+      "status": "CONFIRMED_COMPARISON",
+      "date": "2026-09-22",
+      "oldRunConfirmedByUser": true,
+      "oldRunAtApprox03834V": {
+        "assemblySeconds": 64.84,
+        "solveSeconds": 108.74,
         "totalSeconds": 177.47
       },
-      "currentRunLaterObservation": {
-        "acceptedAnodeVoltage_V": 0.3834,
+      "currentRunAtApprox03834V": {
+        "assemblySeconds": 598.77,
+        "solveSeconds": 2928.83,
         "totalSeconds": 3563.68
       },
-      "keyQuestion": "Does the current run contain multiple Transient/Solve stages that repeat the same pseudo-time/voltage ramp?",
-      "nextAction": "Search all Transient( occurrences in pp6_des.cmd and locate 3563.68 / repeated 0.0766738 in n6_des.out."
+      "slowdownFactorTotalApprox": 20.1,
+      "interpretation": "per-step computational cost has increased substantially; prioritize old-vs-current deck/solver/physics/mesh comparison",
+      "nextAction": "Compare old/current pp*_des.cmd Math/solver, Physics/Traps scope, mesh/grid/unknown statistics, and iteration details."
     }
   },
   "nodes": {

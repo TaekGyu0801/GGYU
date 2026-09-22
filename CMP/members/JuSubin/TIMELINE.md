@@ -95,3 +95,20 @@
 - **다음:** 과거 run에서 anode 0.3~0.4 V 구간의 step 로그를 찾아 동일 bias에서 Total time / Newton iteration / retry-cutback 여부를 비교.
 
 ---
+
+## 2026-09-22 — 과거 3일 run 0.30 V 부근 step 비용 확인
+
+- **작성자:** ChatGPT
+- **작업자:** 주수빈
+- **구분:** old-vs-current runtime comparison
+- **상태:** OBSERVED
+- **근거:** 과거 약 3일 내 완료된 run의 `.out`에서 anode 약 0.3034 V 및 0.3084 V 구간 로그를 확인.
+- **관찰값:**
+  - 약 0.3034 V step: Assembly 35.80 s, Solve 136.34 s, Total 172.57 s
+  - 약 0.3084 V step: Assembly 42.71 s, Solve 78.79 s, Total 123.94 s
+  - 두 step 모두 5회 Newton iteration(0~4) 후 `|RHS| < 1e-3`로 수렴
+- **비교:** 현재 run의 약 0.3834 V 부근에서 Total 약 3563.68 s/step이 관찰되어, 과거 0.30 V 부근보다 한 step 계산비용이 이미 매우 크게 증가해 있음.
+- **주의:** bias가 정확히 동일하지 않으므로 최종 정량 비교는 과거 run의 0.38 V 부근 로그를 추가 확인해야 함.
+- **다음:** 과거 run에서 anode 약 0.38 V(대략 0.375~0.390 V) 구간의 Total time / Newton iteration / retry 여부 확인.
+
+---

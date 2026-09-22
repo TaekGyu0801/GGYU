@@ -138,3 +138,17 @@
 - **다음:** `pp6_des.cmd`에서 `Transient(` 등장 횟수를 검색하고, `n6_des.out`에서 `0.0766738` 또는 `3563.68`을 검색해 느린 구간이 어느 Solve/Transient stage에 속하는지 식별.
 
 ---
+
+## 2026-09-22 — 재정정: 0.3834 V / 177.47 s 로그는 과거 3일 완료 run
+
+- **작성자:** ChatGPT
+- **작업자:** 주수빈
+- **구분:** Runtime evidence correction
+- **상태:** CONFIRMED (사용자 직접 확인)
+- **사용자 확인:** 직전 스크린샷의 `n6_des.out`은 현재 실행 중인 노드가 아니라 **예전에 약 3일 만에 완료된 노드의 파일**임.
+- **따라서 유효 비교:** old run anode ≈0.3834 V에서 Total 177.47 s (Assembly 64.84 s, Solve 108.74 s), current run 같은 anode ≈0.3834 V에서 Total 3563.68 s (Assembly 598.77 s, Solve 2928.83 s).
+- **비율:** current accepted-step wallclock은 old 대비 약 20.1× 증가.
+- **결론:** slowdown은 step count 자체보다 per-step computational cost 증가가 핵심이라는 이전 판단을 복구.
+- **주의:** 파일명 `n6_des.out`은 서로 다른 프로젝트/노드 복사본에서도 반복될 수 있으므로, 앞으로는 파일명만으로 old/current를 구분하지 않고 사용자의 노드 식별과 경로 맥락을 함께 사용.
+
+---

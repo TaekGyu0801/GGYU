@@ -138,3 +138,10 @@ Node 9 Explorer의 Output Files 화면에서는 당시:
 **CONFIRMED 2026-09-22:** Node 6의 장시간 실행은 현재 `Transient` bias ramp의 매우 작은 `MaxStep=1e-3`와 큰 per-step solve cost가 결합된 결과다. Goal은 anode 5.0 V이며, 로그의 pseudo-time 0.0766738에서 anode ≈0.3834 V가 `5×time`과 일치한다. 따라서 MaxStep 1e-3은 약 5 mV/bias step에 해당하며 5 V까지 약 1000 accepted steps 규모가 필요하다. 현재 지점에서만 최소 약 923~924 steps가 남는다.
 
 최근 약 3564 s/step을 그대로 외삽하면 남은 시간이 약 38일 수준이 될 수 있으므로, 현재 blocker는 **numerical step strategy / computational cost**로 갱신한다. 물리 baseline parameter는 이 문제 해결을 위해 변경하지 않는다.
+
+
+## Ju Subin runtime diagnosis refinement
+
+사용자가 **최종 수정 전 거의 같은 deck이 약 3일 내 완료**되었다고 보고했다. 따라서 현재 확인된 `MaxStep=1e-3`은 긴 총 step 수를 설명하지만, **이번 run이 과거보다 느려진 원인을 단독으로 설명하지는 못한다.** 이전 run과 step-control이 같았다면 핵심 차이는 per-step 계산비용 또는 step rejection/cutback 증가다.
+
+현재 우선 비교 대상은 old vs current의 mesh 규모, Physics/Trap 적용 범위, Math/linear solver 설정, 그리고 n*_des.out의 rejected/repeated step 이력이다. 최근 3564 s 한 step으로 산출한 ~38일 값은 실제 총시간 예측이 아니라 단순 외삽 참고치로 강등한다.

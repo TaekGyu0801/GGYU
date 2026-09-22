@@ -145,3 +145,8 @@ Node 9 Explorer의 Output Files 화면에서는 당시:
 사용자가 **최종 수정 전 거의 같은 deck이 약 3일 내 완료**되었다고 보고했다. 따라서 현재 확인된 `MaxStep=1e-3`은 긴 총 step 수를 설명하지만, **이번 run이 과거보다 느려진 원인을 단독으로 설명하지는 못한다.** 이전 run과 step-control이 같았다면 핵심 차이는 per-step 계산비용 또는 step rejection/cutback 증가다.
 
 현재 우선 비교 대상은 old vs current의 mesh 규모, Physics/Trap 적용 범위, Math/linear solver 설정, 그리고 n*_des.out의 rejected/repeated step 이력이다. 최근 3564 s 한 step으로 산출한 ~38일 값은 실제 총시간 예측이 아니라 단순 외삽 참고치로 강등한다.
+
+
+## Ju Subin runtime evidence — old run around 0.30 V
+
+과거 약 3일 내 완료된 run에서 anode 약 0.3034 V step의 Total time은 172.57 s, 약 0.3084 V step은 123.94 s였고 각각 5 Newton iterations로 수렴했다. 현재 run의 약 0.3834 V step은 Total 약 3563.68 s가 관찰됐다. bias가 완전히 같지는 않지만, **현재 run의 accepted step 비용이 과거 run보다 크게 증가한 정황이 강해졌다.** 최종 비교를 위해 과거 0.38 V 부근 로그 확인이 필요하다.

@@ -58,3 +58,23 @@ Total: ~15 min
 - One mechanism diagram for A
 - One mechanism diagram for B
 - One final A vs Baseline vs B comparison matrix
+
+## Week 1 deck reference — received 2026-09-22
+
+Uploaded Week 1 deck has 7 slides and the following storyline:
+1. CES 2027 / How can a smaller microLED stay efficient? + JBD target product
+2. Pixel scaling -> sidewall impact -> SRH/leakage -> efficiency/reliability loss
+3. Project evolution: F- implantation + ALD -> carrier-defect interaction control -> Carbon vs AlGaN
+4. Current CMP strategy: Project A Carbon High-R Edge vs Project B AlGaN Heterobarrier; success criterion = lower SRH + higher IQE without unacceptable Vf/crowding/Auger penalty
+5. CES 2027 validation framing: device-level result -> product constraints -> manufacturing reality
+6. What to bring back from CES: connect CMP results with AR/XR product priorities
+7. Q&A
+
+### Consequence for Week 2 deck
+- Do not repeat the generic scaling/sidewall problem in detail.
+- Keep one short recap slide that visually bridges Week 1 -> Week 2.
+- Preserve the clean blue/teal visual language and low-text style of Week 1.
+- Move the center of gravity to evidence: baseline provenance, parameter rationale, TCAD geometry validation, and A/B implementation roadmap.
+- Reuse the A/B mechanism concept from Week 1 only as a concise reference; Week 2 must add implementation detail and controlled-comparison logic.
+- Preserve CES relevance at the end rather than spending early slides on product background.
+- Do not upload/reproduce the original PPT in public GitHub because it contains student-identifying information; only presentation-planning notes are recorded here.

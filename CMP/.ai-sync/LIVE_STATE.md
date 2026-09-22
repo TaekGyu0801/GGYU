@@ -189,3 +189,11 @@ The original synchronized SDevice2 deck contains `SRHRecombination`; the fact th
   - current is ~20.1x slower per accepted step at the same anode voltage.
 - Prior "same current run repeated stage" correction is retracted.
 - Next: diff old vs current Math/solver, Physics/Traps scope, and mesh/unknown statistics.
+
+
+### 2026-09-22 old 3-day full deck captured
+- Old preprocessed `pp6_des.cmd` provided in full.
+- All DmgL/R trap blocks have `Conc=0`; this is an NtSide=0 case.
+- Old numerical stepping: InitialStep=1e-5, MinStep=1e-9, MaxStep=1e-3, Increment=1.2, Goal anode=5 V — same as the slow current Solve block already observed.
+- Old Math signature: 4 threads, Digits=5, ErrRef=1e4, RHSMin=1e-3, BE, ExtendedPrecision(80), Blocked + ILS(22), gmres(100), tolrel=1e-10, ilut(1e-8,-1).
+- Priority: verify current slow node's actual trap Conc. Only compare runtime directly if current is also NtSide=0.

@@ -112,3 +112,16 @@ Common Baseline Final 통과 후에만:
 2. old/current `pp*_des.cmd`에서 Physics/Traps와 Math/Solver block을 diff.
 3. 동일 0.3834 V step의 Newton iteration 수 및 linear iterative count/time을 비교.
 4. 차이가 확인되기 전 numerical step size를 먼저 변경하지 않음.
+
+
+## Ju Subin — identify slow stage inside current run
+
+1. `pp6_des.cmd` 하단 검색창에서 `Transient(`를 검색하고 Search Fwd를 반복해 등장 횟수를 센다.
+2. `n6_des.out`에서 `3563.68`을 검색해 느린 step 위치로 이동한다.
+3. 그 위치에서 위로 20~40줄 정도 올려 다음을 함께 확인한다:
+   - `Computing BE-step from ... to ...`
+   - 직전/다음 contact voltage
+   - 해당 solve stage 시작을 알리는 문구
+   - `NewCurrentPrefix`, `Set`, `Load`, 다른 ramp/Transient 전환 여부
+4. `0.0766738`을 검색해 같은 숫자가 output에 여러 번 등장하는지도 확인한다.
+5. 이 stage 식별 전에는 MaxStep, mesh, physics를 변경하지 않는다.

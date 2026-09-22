@@ -147,3 +147,12 @@ The original synchronized SDevice2 deck contains `SRHRecombination`; the fact th
 - 다음 BE step은 약 0.0766738 → 0.0776738, Stepsize=1e-3로 계속 진행 중.
 - 현재 증거만으로는 hang/fatal이 아니라 매우 느린 진행으로 판단.
 - 주수빈 다음 우선 확인: pp6_des.cmd Solve block의 최종 목표와 step-control 설정을 읽어 총 step 수/예상 runtime 산정.
+
+
+### 2026-09-22 runtime diagnosis confirmed
+- pp6_des.cmd Transient: InitialStep=1e-5, MinStep=1e-9, MaxStep=1e-3, Increment=1.2, Goal anode=5.0 V.
+- Log cross-check: pseudo-time ~0.0766738 corresponds to anode ~0.3834 V, matching 5*time.
+- Therefore MaxStep=1e-3 corresponds to ~5 mV maximum bias increment.
+- Current point leaves roughly 923–924 accepted steps minimum to reach 5 V.
+- Using the latest observed ~3564 s/step as a crude extrapolation gives ~38 days remaining; actual cost can vary with bias.
+- Treat current JuSubin blocker as numerical step strategy/computational cost, not SDE/SDevice dependency failure.

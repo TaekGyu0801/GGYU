@@ -155,3 +155,15 @@ Node 9 Explorer의 Output Files 화면에서는 당시:
 ## Ju Subin runtime root cause narrowed at identical bias
 
 Old/current를 **동일 accepted anode ≈0.3834 V**에서 직접 비교했다. old run은 Total 177.47 s (Assembly 64.84 s, Solve 108.74 s), current run은 Total 3563.68 s (Assembly 598.77 s, Solve 2928.83 s)였다. 현재 step은 old 대비 약 **20.1× 느림**. 따라서 현재 장시간 문제는 MaxStep/step 개수보다 per-step computational cost 증가가 핵심이다.
+
+
+## Correction — Ju Subin runtime interpretation (2026-09-22)
+
+앞서 'old run 0.3834 V = 177.47 s vs current = 3563.68 s'로 기록한 비교는 **무효**다. 177.47 s 로그도 현재 Node 6의 동일 `n6_des.out` 초기 구간임이 확인됐다.
+
+현재 확인된 사실:
+- 현재 run 초기 구간: 0.0756738→0.0766738, accepted anode ≈0.3834 V, Total 177.47 s.
+- 같은 현재 run의 더 뒤쪽 화면: accepted anode ≈0.3834 V 직후 Total 3563.68 s.
+- 따라서 현재 핵심 질문은 **한 run 안에서 같은 ramp coordinate가 왜 다시 나타나는지 / 서로 다른 Transient or Solve stage인지**이다.
+
+old-vs-current 20.1× slowdown 결론은 철회하고, stage identification 전까지 원인을 mesh/physics/solver 변화로 확정하지 않는다.

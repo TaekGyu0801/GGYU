@@ -163,3 +163,11 @@ The original synchronized SDevice2 deck contains `SRHRecombination`; the fact th
 - Therefore MaxStep=1e-3 explains a large step count but is not established as the new slowdown cause.
 - If old/new step-control is the same, prioritize comparing per-step solve cost and rejected/cutback steps, then mesh size, Physics/Traps application scope, and Math solver settings.
 - The prior ~38-day estimate is only a crude extrapolation from one slow step, not a reliable ETA.
+
+
+### 2026-09-22 identical-bias comparison
+- Old run at anode ~0.3834 V: Total 177.47 s (Assembly 64.84 s, Solve 108.74 s).
+- Current run at same accepted anode ~0.3834 V: Total 3563.68 s (Assembly 598.77 s, Solve 2928.83 s).
+- Current accepted-step cost is ~20.1x old at the same bias.
+- Root cause is therefore narrowed to per-step computational cost, not merely MaxStep/step count.
+- Next: compare mesh/grid/unknown statistics, Physics/Traps scope, and Math/solver settings old vs current.

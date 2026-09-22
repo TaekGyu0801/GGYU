@@ -92,3 +92,15 @@ Common Baseline Final 통과 후에만:
 3. `MaxStep` 확대 또는 DC용 `Quasistationary` 전환 여부는 최신 전체 deck과 원하는 I–V 해상도/수렴 안정성을 함께 검토한 뒤 결정한다.
 4. numerical stepping을 바꾸면 NtSide=0/1e18 및 이후 Project A/B 모두에 동일하게 적용하고, coarse/fine step 비교로 결과 민감도를 검증한다.
 5. Nt/Et/sigma/damage width/epitaxy/doping 등 Common Baseline physics는 runtime 때문에 변경하지 않는다.
+
+
+## Ju Subin — compare against prior 3-day run
+
+현재 코드를 바로 바꾸기 전에 과거 3일 run과 아래를 1:1 비교한다.
+1. old/new `Transient`: InitialStep / MinStep / MaxStep / Increment / Goal
+2. old/new mesh statistics: vertices/elements 또는 total grid points/unknowns
+3. old/new Physics 및 Traps: 추가 모델, 적용 region, trap density/cross section 자체가 아니라 **적용 범위와 coupling 변화**
+4. old/new Math: linear solver, Iterations, Method, damping/derivative 관련 옵션
+5. old/new `.out`: accepted step 당 Newton iteration 수와 failed/retry/cutback 횟수
+
+이 비교 전에는 MaxStep 확대를 확정 조치로 적용하지 않는다.

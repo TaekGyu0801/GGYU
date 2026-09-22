@@ -78,3 +78,38 @@ Uploaded Week 1 deck has 7 slides and the following storyline:
 - Reuse the A/B mechanism concept from Week 1 only as a concise reference; Week 2 must add implementation detail and controlled-comparison logic.
 - Preserve CES relevance at the end rather than spending early slides on product background.
 - Do not upload/reproduce the original PPT in public GitHub because it contains student-identifying information; only presentation-planning notes are recorded here.
+
+## Proposed Week 2 table of contents — 2026-09-22
+
+Recommended deck length: 11 content slides + Q&A (15 min total).
+
+### Part 1. From concept to a testable framework
+1. Title — From Concept to a Literature-Grounded TCAD Baseline
+2. Week 1 -> Week 2 — What changed this week?
+3. Why one Common Baseline? — fair A/B comparison principle
+
+### Part 2. Building and validating the Common Baseline
+4. Literature Basis — role separation of JBD / Kou / Wu / Chen
+5. Baseline Parameters — value + provenance + confidence category
+6. TCAD Baseline Structure — final geometry, epitaxy, doping, sidewall-damage region
+7. Baseline Validation — what is structurally confirmed vs electrical/optical validation still in progress
+
+### Part 3. From Baseline to Project A and Project B
+8. Project A — Carbon-Induced High-Resistivity Edge: mechanism + TCAD implementation
+9. Project B — Localized AlGaN Lateral Heterobarrier: mechanism + TCAD implementation
+10. Controlled Comparison Plan — Baseline vs A vs B; common metrics (SRH, IQE, Vf, current crowding, Auger, edge current)
+
+### Part 4. CES2027 relevance and closing
+11. Why this matters for CES2027 — connect device-level results to brightness/power/heat/reliability/yield questions already framed in Week 1
+12. Q&A / optional closing summary
+
+Recommended time allocation:
+- Slides 1–3: 2.5 min
+- Slides 4–7: 6.0 min
+- Slides 8–10: 5.0 min
+- Slide 11: 1.5 min
+- Q&A excluded from 15 min talk body if possible
+
+Rationale:
+- Week 1 already covered scaling -> sidewall loss, project evolution, A/B concept, and CES product/manufacturing framing.
+- Week 2 should therefore minimize repeated background and maximize evidence, implementation, and controlled-comparison design.

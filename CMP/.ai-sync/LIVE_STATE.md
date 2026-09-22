@@ -138,3 +138,12 @@ The original synchronized SDevice2 deck contains `SRHRecombination`; the fact th
 3. Validate sidewall-localized recombination/trap effect
 4. Compare Defect OFF vs ON
 5. Continue Nt / mesa-size / mesh convergence validation
+
+
+## 2026-09-22 parallel update — 주수빈 runtime
+
+- Node 6 SDevice NtSide split run이 18시간 이상 실행 중.
+- OBSERVED: 직전 BE step은 정상 수렴 완료, total wallclock 약 3563.68 s (~59 min/step).
+- 다음 BE step은 약 0.0766738 → 0.0776738, Stepsize=1e-3로 계속 진행 중.
+- 현재 증거만으로는 hang/fatal이 아니라 매우 느린 진행으로 판단.
+- 주수빈 다음 우선 확인: pp6_des.cmd Solve block의 최종 목표와 step-control 설정을 읽어 총 step 수/예상 runtime 산정.

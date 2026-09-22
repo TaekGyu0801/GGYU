@@ -131,3 +131,10 @@ Node 9 Explorer의 Output Files 화면에서는 당시:
 **OBSERVED 2026-09-22:** Node 6 SDevice는 18시간 이상 실행 중이지만 현재 출력상 멈춘 것이 아니라 BE stepping을 계속 수행하고 있다. 공유 화면에서 직전 step은 수렴 완료됐고 총 wallclock 약 3563.68 s(약 59분), 다음 step은 `0.0766738 → 0.0776738` with `Stepsize=1e-3`로 진행 중이다.
 
 현재 주수빈 트랙의 즉시 blocker는 **실패가 아니라 과도한 per-step runtime / 총 run time 불확실성**이다. 다음 판단에는 `pp6_des.cmd` Solve block의 최종 목표와 step-control 값 확인이 필요하다. Baseline physics parameter는 이 진단 때문에 임의 변경하지 않는다.
+
+
+## Ju Subin runtime blocker — cause identified
+
+**CONFIRMED 2026-09-22:** Node 6의 장시간 실행은 현재 `Transient` bias ramp의 매우 작은 `MaxStep=1e-3`와 큰 per-step solve cost가 결합된 결과다. Goal은 anode 5.0 V이며, 로그의 pseudo-time 0.0766738에서 anode ≈0.3834 V가 `5×time`과 일치한다. 따라서 MaxStep 1e-3은 약 5 mV/bias step에 해당하며 5 V까지 약 1000 accepted steps 규모가 필요하다. 현재 지점에서만 최소 약 923~924 steps가 남는다.
+
+최근 약 3564 s/step을 그대로 외삽하면 남은 시간이 약 38일 수준이 될 수 있으므로, 현재 blocker는 **numerical step strategy / computational cost**로 갱신한다. 물리 baseline parameter는 이 문제 해결을 위해 변경하지 않는다.

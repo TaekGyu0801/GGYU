@@ -179,3 +179,10 @@ old-vs-current 20.1× slowdown 결론은 철회하고, stage identification 전�
 - current/old Total ≈ 20.1×
 
 따라서 현재 장시간 문제는 **per-step solve cost 증가**가 핵심이며, old/current deck 차이 비교가 우선이다.
+
+
+## Ju Subin old 3-day deck captured
+
+과거 약 3일 완료된 preprocessed SDevice deck의 전체 설정을 확보했다. 이 old deck은 모든 sidewall damage trap의 `Conc=0`인 **NtSide=0 케이스**다. 또한 Transient 설정은 `1e-5 / 1e-9 / 1e-3 / Increment 1.2 / Goal 5 V`로 현재 slow run에서 확인한 step-control과 동일하다.
+
+따라서 다음 판정의 핵심은 현재 slow Node 6도 `Conc=0`인지 여부다. current가 1e18이면 old 0과 runtime을 직접 비교하면 안 된다. current도 0이면 Math/Physics/mesh 차이로 바로 좁힌다.

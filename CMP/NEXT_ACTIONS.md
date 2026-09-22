@@ -68,3 +68,18 @@ Common Baseline Final 통과 후에만:
 - Project A Carbon High-R Edge
 - Project B Localized AlGaN Lateral Heterobarrier
 로 분기.
+
+
+## Ju Subin immediate runtime diagnostic
+
+1. 현재 Node 6은 화면상 진행 중이므로 18시간 경과만으로 hang으로 판정하지 않음.
+2. `pp6_des.cmd`의 `Solve { ... }`에서 현재 BE/transient 구간의:
+   - 최종 목표 시간 또는 ramp goal
+   - `InitialStep`
+   - `MinStep`
+   - `MaxStep`
+   - `Increment`
+   - 해당 구간의 bias/ramp 설정
+   을 확인.
+3. 현재 관찰된 약 3564 s/step과 실제 남은 step 수로 예상 총 runtime 계산.
+4. 코드 최적화/step 조정은 전체 최신 deck 확인 뒤에만 제안. Nt/Et/sigma/5 nm damage width 등 Common Baseline physics는 runtime 문제 때문에 임의 변경하지 않음.

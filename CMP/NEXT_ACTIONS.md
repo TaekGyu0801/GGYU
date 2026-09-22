@@ -125,3 +125,15 @@ Common Baseline Final 통과 후에만:
    - `NewCurrentPrefix`, `Set`, `Load`, 다른 ramp/Transient 전환 여부
 4. `0.0766738`을 검색해 같은 숫자가 output에 여러 번 등장하는지도 확인한다.
 5. 이 stage 식별 전에는 MaxStep, mesh, physics를 변경하지 않는다.
+
+
+## Ju Subin — corrected next action after old/current confirmation
+
+1. 과거 3일 완료 run과 현재 run의 `pp*_des.cmd`를 1:1 비교한다.
+2. 우선순위:
+   - Math / linear solver block
+   - Physics / Traps 적용 범위
+   - mesh/grid/unknown statistics
+   - 동일 0.3834 V step의 Newton/linear iteration 세부 비용
+3. step-control 자체는 두 run에서 동일한지 확인하되, 현재 20.1× 차이는 per-step 비용 차이로 먼저 설명해야 한다.
+4. 기존 "same-run repeated Transient stage" 확인은 우선순위에서 제외.

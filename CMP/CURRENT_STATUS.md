@@ -167,3 +167,15 @@ Old/current를 **동일 accepted anode ≈0.3834 V**에서 직접 비교했다. 
 - 따라서 현재 핵심 질문은 **한 run 안에서 같은 ramp coordinate가 왜 다시 나타나는지 / 서로 다른 Transient or Solve stage인지**이다.
 
 old-vs-current 20.1× slowdown 결론은 철회하고, stage identification 전까지 원인을 mesh/physics/solver 변화로 확정하지 않는다.
+
+
+## Re-correction — old/current runtime comparison restored
+
+사용자가 직전 스크린샷이 **예전에 약 3일 만에 완료된 노드의 `n6_des.out`**이라고 명확히 확인했다. 따라서 앞서 추가한 "같은 current run 내부 초기 구간" 해석은 철회한다.
+
+유효한 동일-bias 비교:
+- old run, anode ≈0.3834 V: Assembly 64.84 s, Solve 108.74 s, Total 177.47 s
+- current run, anode ≈0.3834 V: Assembly 598.77 s, Solve 2928.83 s, Total 3563.68 s
+- current/old Total ≈ 20.1×
+
+따라서 현재 장시간 문제는 **per-step solve cost 증가**가 핵심이며, old/current deck 차이 비교가 우선이다.

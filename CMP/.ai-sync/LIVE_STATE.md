@@ -179,3 +179,13 @@ The original synchronized SDevice2 deck contains `SRHRecombination`; the fact th
 - A later screen from the same current run showed ~0.3834 V with Total 3563.68 s.
 - Therefore prior "old vs current 20.1x" conclusion is invalid.
 - Highest priority: determine whether the same pseudo-time/voltage ramp occurs in multiple Transient/Solve stages. Search all `Transient(` in pp6_des.cmd and locate `3563.68` / repeated `0.0766738` in n6_des.out.
+
+
+### 2026-09-22 re-correction — old run confirmed by user
+- User explicitly confirmed the 177.47 s / ~0.3834 V screenshot was from the older node that completed in ~3 days.
+- Restore valid comparison:
+  - old: Total 177.47 s (Assembly 64.84 s, Solve 108.74 s)
+  - current: Total 3563.68 s (Assembly 598.77 s, Solve 2928.83 s)
+  - current is ~20.1x slower per accepted step at the same anode voltage.
+- Prior "same current run repeated stage" correction is retracted.
+- Next: diff old vs current Math/solver, Physics/Traps scope, and mesh/unknown statistics.

@@ -16,7 +16,18 @@
       "NtSide=1e18"
     ],
     "reportedRuntimePerRun": "about 3 days",
-    "verificationBoundary": "Latest full modified code and new simulation results are not yet directly verified in GitHub"
+    "verificationBoundary": "Latest full modified code and new simulation results are not yet directly verified in GitHub",
+    "runtimeObservation": {
+      "date": "2026-09-22",
+      "status": "OBSERVED",
+      "node": 6,
+      "elapsedReportedByUser": ">18 hours",
+      "stepProgress": "BE step 0.0766738 -> 0.0776738",
+      "stepSize": 0.001,
+      "previousStepWallclockSeconds": 3563.68,
+      "interpretation": "run appears to be progressing slowly, not proven hung",
+      "nextAction": "Inspect pp6_des.cmd Solve block final target and step-control settings to estimate remaining steps/runtime"
+    }
   },
   "nodes": {
     "sdevice2": 9,

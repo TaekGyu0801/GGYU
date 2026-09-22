@@ -1,5 +1,18 @@
 # Ju Subin Timeline
 
+## 2026-09-22 — CES2027 선발 발표 스토리라인 설계 시작
+
+- **작성자:** ChatGPT
+- **작업자:** 주수빈
+- **구분:** 발표 / CES2027 selection
+- **상태:** PROPOSED
+- **목표:** 다음 주 월요일 15분 CES2027 선발 발표를 위해, 1주차 주제 소개 반복이 아니라 Common Baseline의 문헌 근거 → 구조적 검증 → Project A/B TCAD 구현 전략을 중심으로 발표 구조를 재설계.
+- **핵심 메시지:** JBD application scale, Kou 2019 vertical epitaxy, Wu 2023 localized sidewall damage, Chen 2024 small-size sidewall evidence를 역할별로 분리해 baseline의 출처를 설명하고, 동일 baseline 위에서 A/B를 공정 비교하는 연구 설계를 강조.
+- **주의:** 아직 완료되지 않은 장시간 SDevice 결과는 확정 결과처럼 발표하지 않으며, 구조적 검증과 전기/광학 validation 진행 상태를 구분.
+- **산출물:** `CMP/CES2027_PRESENTATION_PLAN.md`
+
+---
+
 ## 2026-09-21 — Common Baseline 코드 최종 수정 보고 / 장시간 run 전 최종 검토
 
 - **작성자:** ChatGPT (공유 프로젝트 대화 동기화)

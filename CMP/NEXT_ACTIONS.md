@@ -104,3 +104,11 @@ Common Baseline Final 통과 후에만:
 5. old/new `.out`: accepted step 당 Newton iteration 수와 failed/retry/cutback 횟수
 
 이 비교 전에는 MaxStep 확대를 확정 조치로 적용하지 않는다.
+
+
+## Ju Subin — identical-bias slowdown follow-up
+
+1. old/current `.out` 시작부의 mesh/grid/unknown statistics를 비교.
+2. old/current `pp*_des.cmd`에서 Physics/Traps와 Math/Solver block을 diff.
+3. 동일 0.3834 V step의 Newton iteration 수 및 linear iterative count/time을 비교.
+4. 차이가 확인되기 전 numerical step size를 먼저 변경하지 않음.

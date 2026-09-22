@@ -1,5 +1,20 @@
 # Ju Subin Timeline
 
+## 2026-09-22 — Project A/B TCAD 구현 계획 구체화
+
+- **작성자:** ChatGPT
+- **작업자:** 주수빈
+- **구분:** CES 발표 / Project A-B 연구설계
+- **상태:** PROPOSED
+- **배경:** 1차 발표 후 교수진이 Carbon high-resistance 영역과 AlGaN lateral barrier를 실제로 어떻게 형성/코딩하고 무엇을 볼 것인지 질문함.
+- **Project A 제안:** baseline 5 nm damage는 유지하고 그 안쪽 upper n-GaN edge에 C-doped/high-resistivity guard region을 추가. C-related deep acceptor/compensation으로 current path를 중앙으로 유도하고 sidewall SRH 감소 여부를 확인.
+- **Project B 제안:** baseline damage 안쪽 active-region edge에 localized AlGaN lateral heterobarrier를 추가. Al mole fraction/width를 parameter sweep하고 lateral band offset, carrier confinement, sidewall SRH 감소를 확인.
+- **공통 평가:** same-current 비교, integrated sidewall SRH, MQW radiative/Auger, IQE, Vf, current crowding, lateral carrier/current maps.
+- **주의:** A/B의 실제 공정 치수/농도/Al composition은 아직 freeze하지 않았으며 DOE 제안 단계.
+- **산출물:** `CMP/PROJECT_AB_TCAD_IMPLEMENTATION_PLAN.md`
+
+---
+
 ## 2026-09-22 — CES2027 선발 발표 스토리라인 설계 시작
 
 - **작성자:** ChatGPT

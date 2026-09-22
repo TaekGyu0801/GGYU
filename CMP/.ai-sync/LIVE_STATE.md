@@ -171,3 +171,11 @@ The original synchronized SDevice2 deck contains `SRHRecombination`; the fact th
 - Current accepted-step cost is ~20.1x old at the same bias.
 - Root cause is therefore narrowed to per-step computational cost, not merely MaxStep/step count.
 - Next: compare mesh/grid/unknown statistics, Physics/Traps scope, and Math/solver settings old vs current.
+
+
+### 2026-09-22 correction — same-file early vs late stage
+- The 123–177 s logs around 0.30–0.3834 V are NOT verified as an old 3-day run; they are from the current Node 6 `n6_des.out` early section.
+- Current run early: 0.0756738→0.0766738 reached ~0.3834 V in Total 177.47 s.
+- A later screen from the same current run showed ~0.3834 V with Total 3563.68 s.
+- Therefore prior "old vs current 20.1x" conclusion is invalid.
+- Highest priority: determine whether the same pseudo-time/voltage ramp occurs in multiple Transient/Solve stages. Search all `Transient(` in pp6_des.cmd and locate `3563.68` / repeated `0.0766738` in n6_des.out.

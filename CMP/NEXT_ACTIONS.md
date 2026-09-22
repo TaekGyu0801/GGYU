@@ -137,3 +137,14 @@ Common Baseline Final 통과 후에만:
    - 동일 0.3834 V step의 Newton/linear iteration 세부 비용
 3. step-control 자체는 두 run에서 동일한지 확인하되, 현재 20.1× 차이는 per-step 비용 차이로 먼저 설명해야 한다.
 4. 기존 "same-run repeated Transient stage" 확인은 우선순위에서 제외.
+
+
+## Ju Subin — immediate old/current deck comparison
+
+1. 현재 slow Node 6의 `pp6_des.cmd`에서 `Conc =`를 검색해 실제 NtSide가 0인지 1e18인지 확인.
+2. current도 Conc=0이면 old/current full `pp6_des.cmd`를 diff:
+   - Math / ILS
+   - Physics / Mobility / Recombination
+   - trap region list 및 syntax
+3. old/current `.out` 시작부의 grid/vertex/element/equation/unknown 통계를 비교해 mesh 변화 여부 확인.
+4. current가 Conc=1e18이면 old fast deck과 직접 속도 비교를 중단하고, current NtSide=0 node와 old NtSide=0을 비교.

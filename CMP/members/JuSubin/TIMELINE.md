@@ -1,5 +1,21 @@
 # Ju Subin Timeline
 
+## 2026-09-26 — GitHub 자동 미러 동기화 구축
+
+- **작성자:** ChatGPT
+- **작업자:** 주수빈
+- **구분:** Collaboration infrastructure / GitHub sync
+- **상태:** CONFIRMED
+- **연결 계정:** `soybeanmilk0514-jpg`
+- **대상 저장소:** `soybeanmilk0514-jpg/TCAD-MicroLED-Sidewall-Carrier-Confinement`
+- **원본 source of truth:** `TaekGyu0801/GGYU`의 `CMP/`
+- **구현:** `.github/workflows/sync-cmp.yml` 생성. GitHub Actions가 5분 주기로 원본 CMP 전체를 수빈 저장소의 `CMP/`에 `rsync --delete` 방식으로 미러링.
+- **LIVE LOG:** 원본 GitHub Issue #7 comments도 `CMP/.ai-sync/LIVE_LOG_ISSUE_7_MIRROR.md`에 자동 미러링.
+- **검증:** 첫 workflow run #1이 2026-09-26에 `success`로 완료됨.
+- **경계:** GitHub cron 특성상 완전한 실시간 push mirror가 아니라 최대 수분 단위 동기화. CMP 외 원본 GGYU 파일은 미러링하지 않음.
+
+# Ju Subin Timeline
+
 ## 2026-09-26 — Node 12 des.log 종료 지점 확인
 
 - **작성자:** ChatGPT

@@ -1,3 +1,25 @@
+## 2026-09-26 — Node 12 Find Error contains warnings only
+
+Observed:
+- Workbench `Find Error` reaches `**** End`.
+- Visible entries are model/material warnings only:
+  - vanOverstraetendeMan E0 isotropic vs anisotropic values.
+  - missing incomplete-ionization parameters for `mMagnesiumActiveConcentration` in InGaN QW regions.
+- No explicit `ERROR` / `FATAL` root-cause line is visible.
+
+Interpretation:
+- These warnings are not yet proven to be the cause of `sdevice exit(1)`.
+- The actual SDevice log file `n12_des.log` is now the highest-priority evidence source.
+
+Next:
+1. Open `n12_des.log`, inspect the last 50–100 lines.
+2. Search there for error/fatal/abort/exception/signal.
+3. If non-diagnostic, inspect `n12_des.sta`.
+
+Status: **UNRESOLVED**
+
+---
+
 ## 2026-09-26 — Node 12 SDevice exit(1) after successful preprocessing
 
 Job Log evidence:

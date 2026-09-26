@@ -1,5 +1,16 @@
 # Next Actions
 
+## Ju Subin — Node 12 immediate diagnostic refinement (2026-09-26)
+
+The provided `n12_des.err` view contains warnings but no explicit fatal cause, while `n12_des.out` terminates before normal completion and no TDR/PLT is visible.
+
+Immediate order:
+1. Open `n12_local.err` and capture all contents.
+2. If empty/non-diagnostic, open the Node 12 **Job Log** tab and capture the bottom section with exit status.
+3. If still unclear, open `n12_des.job` and inspect wrapper/exit code.
+4. Only after the exact exit reason is identified, modify the minimum necessary numerical/model setting.
+
+
 ## Priority 0 — Ju Subin NtSide=1e18 failure diagnosis (2026-09-26)
 
 1. Workbench에서 `NtSide=1e18` failed scenario의 SDevice node를 선택.

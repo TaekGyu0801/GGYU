@@ -1,5 +1,15 @@
 # LIVE AI STATE
 
+## 2026-09-26 — Ju Subin Node 12 failure narrowed
+
+- `NtSide=1e18` failed Node = 12.
+- `n12_des.err` visible messages are warnings; no fatal cause yet observed.
+- `n12_des.out` ends during initialization/license return, without normal SDevice completion text.
+- No TDR/PLT visible in Node 12 output list.
+- Priority next evidence: `n12_local.err`, then Workbench Job Log.
+- Status: UNRESOLVED; do not change baseline physical parameters yet.
+
+
 ## 2026-09-26 — 주수빈 baseline split-run 확인
 
 - OBSERVED: `NtSide=0` run 정상 완료.

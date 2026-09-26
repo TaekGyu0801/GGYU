@@ -1,3 +1,28 @@
+## 2026-09-26 — Node 12 SDevice exit(1) after successful preprocessing
+
+Job Log evidence:
+- Preprocessor successfully initialized.
+- `pp12_des.cmd` and `pp12_des.par` were generated.
+- Node dependency on node 1 was resolved.
+- SDevice launched as:
+  `sdevice --max_threads 4 pp12_des.cmd`
+- SDevice then terminated with:
+  `sdevice exited abnormally: exit(1)`
+
+Interpretation:
+- Workbench preprocessing/dependency failure is not the primary blocker.
+- The failure occurs inside SDevice after launch, likely during deck/model/material initialization before normal solve completion.
+- Exact root cause still requires the first explicit SDevice error/fatal message.
+
+Next:
+1. Use Node 12 Job Log **Find Error**.
+2. Search `n12_des.err` for `Error:`, `Fatal`, `Unsupported`, `not found`, `invalid`, `cannot`.
+3. If needed inspect `n12_des.sta`.
+
+Status: **UNRESOLVED**
+
+---
+
 ## 2026-09-26 — Node 12 gjob abnormal child exit
 
 Observed in `n12_local.err`:

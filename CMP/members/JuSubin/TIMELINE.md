@@ -1,5 +1,17 @@
 # Ju Subin Timeline
 
+## 2026-09-26 — Node 12 Find Error 결과: explicit fatal 없음
+
+- **작성자:** ChatGPT
+- **작업자:** 주수빈
+- **상태:** OBSERVED / UNRESOLVED
+- **근거:** Node 12 Job Log의 `Find Error` 결과 마지막 화면.
+- **관찰:** Find Error 결과는 vanOverstraetendeMan E0 anisotropy warning, InGaN QW의 Mg incomplete-ionization parameter warning들을 나열한 뒤 `**** End`로 종료.
+- **판단:** 현재 error stream / Find Error 결과에는 직접적인 ERROR/FATAL root cause가 나타나지 않음.
+- **다음:** Node Output Files의 `n12_des.log`를 열어 실제 SDevice simulation log의 마지막 부분 확인. 이후 필요 시 `n12_des.sta`.
+- **주의:** warning만으로 trap physics 또는 incomplete-ionization을 원인으로 확정하지 않음.
+
+
 ## 2026-09-26 — Node 12 Job Log 확인: preprocessing 성공, SDevice exit(1)
 
 - **작성자:** ChatGPT

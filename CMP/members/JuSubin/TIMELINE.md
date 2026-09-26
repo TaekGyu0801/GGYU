@@ -1,5 +1,17 @@
 # Ju Subin Timeline
 
+## 2026-09-26 — Node 12 local.err 확인: wrapper-level abnormal exit
+
+- **작성자:** ChatGPT
+- **작업자:** 주수빈
+- **상태:** OBSERVED / UNRESOLVED
+- **근거:** `n12_local.err` 화면.
+- **내용:** `Job failed`, `Error: Unknown error: child process exited abnormally`, `gjob exits with status 1` 확인.
+- **해석:** Workbench/gjob가 SDevice child process의 비정상 종료를 감지한 것은 확인되었지만, 이 메시지만으로 원인을 특정할 수 없음.
+- **다음:** Node 12 **Job Log** 하단의 command/exit 정보 확인. 필요 시 `n12_des.job` 및 `n12_des.sta` 확인.
+- **보호:** 원인 확인 전 Nt/Et/sigma/geometry 변경 금지.
+
+
 ## 2026-09-26 — NtSide=1e18 Node 12 로그 1차 확인
 
 - **작성자:** ChatGPT

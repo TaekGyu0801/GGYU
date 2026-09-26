@@ -1,5 +1,17 @@
 # Ju Subin Timeline
 
+## 2026-09-26 — Common Baseline split-run 결과 확인: NtSide=0 성공, NtSide=1e18 실패
+
+- **작성자:** ChatGPT
+- **작업자:** 주수빈
+- **구분:** Common Baseline / simulation result
+- **상태:** OBSERVED
+- **근거:** 사용자가 학교에서 Sentaurus Workbench split-run 상태 화면을 직접 확인해 제공.
+- **관찰:** `NtSide=0` 조건은 정상 완료되었고, `NtSide=1e18` 조건은 failed 상태로 확인됨.
+- **현재 해석 경계:** 실패 원인은 아직 확인되지 않았으므로 convergence / trap-coupling / syntax / resource 문제 중 어느 하나로 단정하지 않음.
+- **다음:** 실패한 1e18 run의 실제 SDevice `*.err` 및 `*.out` 마지막 구간을 확인해 최초 fatal/error 또는 convergence failure 지점을 식별한 뒤 최소 수정.
+
+
 ## 2026-09-22 — Project A/B TCAD 구현 계획 구체화
 
 - **작성자:** ChatGPT

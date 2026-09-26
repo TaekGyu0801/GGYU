@@ -1,15 +1,15 @@
 {
-  "updated": "2026-09-21",
-  "primaryWorker": "이택규",
+  "updated": "2026-09-26",
+  "primaryWorker": "주수빈",
   "phase": "Phase 0 — Common Baseline validation",
   "task": "SDevice2 to SVisual2 TDR output/linkage debugging",
   "status": "UNRESOLVED",
-  "blocker": "SVisual2 cannot load n9_des.tdr",
+  "blocker": "JuSubin NtSide=1e18 baseline run failed; exact log cause not yet identified",
   "parallelWork": {
     "worker": "주수빈",
     "status": "OBSERVED",
     "source": "shared project conversation / user report",
-    "task": "Common Baseline final code review before long simulations",
+    "task": "Diagnose Common Baseline NtSide=1e18 failed split-run",
     "reportedCodeState": "Main SDevice and related reviewed code were reported as finally modified",
     "plannedFirstRuns": [
       "NtSide=0",
@@ -74,6 +74,13 @@
         "ilut": "1e-8,-1"
       },
       "keyCaution": "Old deck is NtSide=0. Verify current slow node trap Conc before direct runtime comparison."
+    },
+    "splitRunResult": {
+      "date": "2026-09-26",
+      "NtSide0": "completed",
+      "NtSide1e18": "failed",
+      "cause": "UNRESOLVED",
+      "nextAction": "Inspect failed SDevice node *.err and last 50-100 lines of *.out before changing baseline parameters."
     }
   },
   "nodes": {

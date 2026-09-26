@@ -1,5 +1,14 @@
 # LIVE AI STATE
 
+## 2026-09-26 — 주수빈 baseline split-run 확인
+
+- OBSERVED: `NtSide=0` run 정상 완료.
+- OBSERVED: `NtSide=1e18` run failed.
+- Cause: 아직 UNRESOLVED.
+- Immediate next action: failed 1e18 SDevice node의 `*.err`와 `*.out` 마지막 구간을 확인해 최초 실패 원인을 식별.
+- Do not change Common Baseline physical parameters before log-based diagnosis.
+
+
 Last update: 2026-09-21
 Primary worker: 이택규
 Current phase: Phase 0 — Common Baseline validation

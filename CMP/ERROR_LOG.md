@@ -1,3 +1,22 @@
+## 2026-09-26 — Root-cause confounder identified: Node 6/12 are not NtSide-only decks
+
+Exact preprocessed diff:
+- Node 12 only: `Thermionic`
+- Node 12: `IncompleteIonization(Dopants="pMagnesiumActiveConcentration")`
+- Node 6: `IncompleteIonization`
+- Node 12 only Plot fields: `eQuasiFermiEnergy`, `hQuasiFermiEnergy`, `pMagnesiumActiveConcentration`, `pMagnesiumMinusConcentration`
+- Intended trap difference remains `Conc=0` vs `Conc=1e18`
+
+Consequence:
+The Node 12 exit(1) cannot be attributed to NtSide=1e18 alone because physics/output configuration drift is present.
+
+Proposed minimal diagnostic fix:
+Restore Node 12 source Physics/Plot to the successful Node 6 configuration and keep only NtSide=1e18 as the changed parameter. Rerun only the 1e18 branch.
+
+Status: **PROPOSED FIX / ROOT CAUSE NOT YET CONFIRMED**
+
+---
+
 ## 2026-09-26 — Node 12 deck-drift suspicion
 
 New evidence from failed Node 12 preprocessed deck:

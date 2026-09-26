@@ -1,5 +1,14 @@
 # LIVE AI STATE
 
+## 2026-09-26 — Node 12 des.log comparison needed
+
+- Failed `n12_des.log` terminates immediately after InGaN Mg incomplete-ionization parameter messages, then returns licenses.
+- No normal solver start is visible.
+- Causality is unresolved.
+- Highest-priority discriminator: compare the successful NtSide=0 node log for the exact same message.
+- Do not alter baseline physics until this comparison is done.
+
+
 ## 2026-09-26 — Node 12 Find Error exhausted
 
 - Find Error output reaches `**** End` with warnings only; no explicit fatal/root cause visible.

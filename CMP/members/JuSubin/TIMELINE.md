@@ -1,5 +1,15 @@
 # Ju Subin Timeline
 
+## 2026-09-26 — 발표 핵심 논리: 근거→모델→코드→지표를 연구자 본인이 설명
+
+- **작성자:** ChatGPT
+- **작업자:** 주수빈
+- **상태:** DECISION / PRESENTATION METHODOLOGY
+- **사용자 목표:** AI 지시를 따른 인상 대신, baseline과 Project A/B의 근거·코드 변경·검증 지표를 스스로 완전히 이해하고 설명하는 발표.
+- **발표 구조:** 각 요소를 DIRECT LITERATURE / LITERATURE-DERIVED MODELING CHOICE / CALIBRATION / PROJECT HYPOTHESIS로 구분.
+- **핵심 논리:** 논문에서 무엇을 가져왔는지 → 왜 A/B 공통 baseline에 필요한지 → Sentaurus에서 무엇을 구현하는지 → 어떤 output으로 검증할지 → 최종 A/B를 어떤 기준으로 비교할지.
+- **중요:** Carbon high-resistance edge와 localized AlGaN lateral heterobarrier 자체는 문헌 복제 구조로 주장하지 않고, 알려진 Carbon compensation 및 heterobarrier/carrier-confinement physics를 sidewall 접근 억제에 적용하는 연구 가설로 제시.
+
 ## 2026-09-26 — CES2027 선발 평가발표 준비 우선순위 전환
 
 - **작성자:** ChatGPT

@@ -1,5 +1,12 @@
 # LIVE AI STATE
 
+## 2026-09-26 — exact fix selected
+
+- Proposed minimal edit: move Mg incomplete ionization from global Physics to p-GaN regions only.
+- Do not alter Thermionic, trap parameters, Plot, Math, Solve, or geometry.
+- After edit, rerun both NtSide=0 and 1e18 from the same frozen source/PAR revision for final comparison.
+
+
 ## 2026-09-26 — fair-comparison correction
 
 - Node6 pp6_des.par and Node12 pp12_des.par are different revisions.

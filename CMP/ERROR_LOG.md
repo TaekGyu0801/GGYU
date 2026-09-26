@@ -1,3 +1,20 @@
+## 2026-09-26 — Existing Node6 vs current Node12 is not an apples-to-apples baseline comparison
+
+New evidence:
+- Node6 `pp6_des.par`: GaN Ionization uses PDopantActiveConcentration and NDopantActiveConcentration.
+- Node12 `pp12_des.par`: GaN Ionization uses pMagnesiumActiveConcentration.
+
+Thus the generated parameter files are from different model revisions.
+
+Consequence:
+- Do not use current Node12 (even if fixed) against historical Node6 for final NtSide effect quantification.
+- Node12-only fixes may be used for crash diagnosis only.
+- Final comparison must rerun NtSide=0 and NtSide=1e18 from one frozen source/PAR revision.
+
+Status: **COMPARISON INVALIDATED / ROOT CAUSE DIAGNOSIS CONTINUES**
+
+---
+
 ## 2026-09-26 — Mg incomplete-ionization parameter scope mismatch
 
 Evidence:

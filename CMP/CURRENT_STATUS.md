@@ -1,5 +1,12 @@
 # Current Status
 
+## 2026-09-26 — Presentation-ready baseline scope
+
+For today's deadline, the baseline can be considered **implementation-frozen / structurally validated** once the corrected current source preprocesses cleanly and the NtSide=1e18 branch passes initialization/early solve. It is **not yet fully electrically validated** until same-revision NtSide=0 and 1e18 full runs complete.
+
+Presentation wording should preserve this distinction.
+
+
 ## 2026-09-26 — Fair comparison requirement updated
 
 Successful Node6 and current Node12 differ in both generated command and parameter files.

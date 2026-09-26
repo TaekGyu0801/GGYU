@@ -1,5 +1,14 @@
 # Next Actions
 
+## Ju Subin — CES2027 selection presentation priority
+
+1. Build the presentation around the weakness identified in week 1: make the TCAD implementation path for Project A/B concrete and testable.
+2. Show only verified Common Baseline evidence as completed; label full same-revision NtSide=0 vs 1e18 electrical comparison as ongoing unless it actually finishes.
+3. For Project A, specify the exact structural modification, TCAD region/material/doping/trap implementation, sweep variables, and expected observables.
+4. For Project B, specify the exact localized AlGaN region, composition/width sweep, heterointerface physics, and expected band/carrier/recombination observables.
+5. Define shared evaluation metrics before claiming improvement: same-current comparison, sidewall SRH, MQW radiative/Auger, IQE, Vf, current crowding, carrier/current maps.
+6. Use the 1주차 발표 as context only; spend presentation time on progress, implementation specificity, evidence, and next-stage experiment design.
+
 ## Ju Subin — deadline-driven plan for today
 
 1. Apply the final SDevice fix and preprocess both NtSide=0 and 1e18.

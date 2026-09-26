@@ -1,5 +1,16 @@
 # Current Status
 
+## 2026-09-26 — Failed Node 12 preprocessed deck differs from synchronized baseline
+
+User supplied the failed Node 12 preprocessed Physics/Plot section. It contains:
+- `Thermionic`
+- `IncompleteIonization(Dopants="pMagnesiumActiveConcentration")`
+- sidewall trap Conc=1e18 in DmgL/R pGaN, EBL, Barrier0~4, QW1~4, nGaN
+- expanded Plot keywords for SRH subcomponents, trap fields, and Mg species
+
+The synchronized baseline deck currently in GitHub has plain `IncompleteIonization`, no `Thermionic`, and a simpler Plot list. Therefore the failed Node 12 cannot yet be treated as a proven NtSide-only split until it is directly diffed against successful Node 6.
+
+
 ## 2026-09-26 — Ju Subin baseline result strengthened
 
 **CONFIRMED:** successful `NtSide=0` Node 6 reached 5.0 V, finished the curve trace, wrote `n6_des.tdr`, and ended with normal SDevice completion text. Wallclock ≈235312 s (~65.4 h, ~2.7 days).

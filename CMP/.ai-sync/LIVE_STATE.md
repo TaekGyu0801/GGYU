@@ -1,5 +1,14 @@
 # LIVE AI STATE
 
+## 2026-09-26 — Node 12 failure reproduced
+
+- Node 12-only rerun fails again.
+- Failure is reproducible.
+- Same-source NtSide split is user-confirmed.
+- Most likely next discriminators: NtSide-dependent preprocessing vs stale/cached Node 6 preprocess from an older source revision.
+- Do not rerun or edit baseline physics until original source conditional logic/provenance is inspected.
+
+
 ## 2026-09-26 — correction: same source, NtSide-only split confirmed by user
 
 - User states Node 6 and Node 12 used the same source; only NtSide=0 vs 1e18 was split.

@@ -1,3 +1,23 @@
+## 2026-09-26 — NtSide=1e18 Node 12 early termination evidence
+
+Observed from Node 12:
+- `n12_des.err`: E0 anisotropy and incomplete-ionization parameter warnings are visible; no explicit fatal line in the provided view.
+- `n12_des.out`: output ends after material/reference-potential initialization and license check-in.
+- Missing normal terminal text: `Sentaurus Device simulation finished`, `Good Bye !`.
+- No visible `.tdr` / `.plt` output in the Node Output Files list.
+
+Interpretation: **UNRESOLVED**, but the failure appears to occur before normal solve/output completion rather than as an observed late transient convergence failure.
+
+Next evidence:
+1. `n12_local.err`
+2. Workbench Job Log
+3. `n12_des.job` if needed
+4. Search `n12_des.err` for `Error`, `Fatal`, `abort`
+
+Do not alter Nt/Et/sigma/geometry until the process exit reason is known.
+
+---
+
 ## 2026-09-26 — NtSide=1e18 baseline split-run failed
 
 Observed:

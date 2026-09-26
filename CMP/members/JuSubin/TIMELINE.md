@@ -1,5 +1,16 @@
 # Ju Subin Timeline
 
+## 2026-09-26 — Node 12 project/scheduler log interpretation
+
+- **작성자:** ChatGPT
+- **작업자:** 주수빈
+- **상태:** OBSERVED
+- **근거:** Project Log 화면.
+- **확인:** Node 12 SDevice가 실제로 시작된 뒤 약 수 초 내 `exited abnormally: exit()`로 종료하고 scheduler가 failed 처리, `gsub exits with status 1`.
+- **의미:** 이 화면은 실행 실패 사실과 시점을 확인해 주지만, root-cause message 자체는 포함하지 않음.
+- **진단 우선순위:** root cause는 `n12_des.log`/`n12_des.err` 및 `pp12_des.par` 내용으로 판단. 현재 가장 강한 후보는 InGaN에서 Mg incomplete-ionization parameter가 없는 상태에서 global Mg incomplete-ionization을 활성화한 material-scope mismatch.
+
+
 ## 2026-09-26 — 중요 정정: Node6/Node12 parameter file도 서로 다른 revision
 
 - **작성자:** ChatGPT

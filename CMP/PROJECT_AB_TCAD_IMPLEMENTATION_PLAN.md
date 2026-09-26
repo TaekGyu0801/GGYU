@@ -144,3 +144,44 @@ Say:
 A는 high-resistivity compensation mechanism, B는 lateral band-offset mechanism을 검증합니다.
 TCAD에서는 먼저 carrier redistribution과 sidewall SRH suppression을 확인하고,
 그 뒤 공정 가능한 parameter window를 좁힙니다.'
+
+## 2026-09-26 — CES 발표용 구현 방식 정밀화
+
+### Project A — Carbon High-Resistance Edge
+
+**1차 TCAD mechanism screen에서는 SProcess implantation을 사용하지 않는다.**
+현재 Common Baseline의 SDE→SDevice flow를 유지하고, SDE에서 upper n-GaN edge에 `Cedge_L/R`라는 **GaN region tag**를 추가한 뒤 SDevice에서 해당 region에만 carbon-related deep acceptor/compensation physics를 적용한다.
+
+중요:
+- `Cedge`는 별도의 "Carbon material"이 아니라 **GaN:C를 나타내는 GaN region**이다.
+- baseline의 5 nm `DmgL/R`은 그대로 유지한다.
+- Carbon physics를 QW에 직접 넣지 않는다. 첫 mechanism screen은 MQW 바로 아래 upper n-GaN edge에서 current-access blocking을 본다.
+- Stage 1: C_N-like deep acceptor (literature anchor Ev+~0.9 eV) + N_C sweep.
+- Stage 2: 필요하면 compensating donor/acceptor pair 또는 effective resistivity calibration으로 확장.
+
+**왜 implantation을 1차 모델로 쓰지 않는가:** C implantation의 high-resistivity isolation은 implantation-induced lattice damage 자체의 영향이 매우 크므로, Carbon compensation mechanism과 implantation damage mechanism이 섞일 수 있다. CES 발표에서는 "device-level effective GaN:C region"을 먼저 검증하고, 공정-realistic implantation profile은 후속 단계로 분리한다.
+
+Fabrication analogue는 selective localized GaN:C formation (예: selective-area regrowth/local C incorporation)을 우선 설명하되, exact process route는 아직 검증 전이다.
+
+### Project B — Localized AlGaN Lateral Heterobarrier
+
+**Project B는 implantation이 아니라 실제 material/geometry modification으로 구현한다.**
+SDE에서 fixed 5 nm damaged sidewall 안쪽에 `AlBarrier_L/R`라는 AlGaN region을 추가하고, Al mole fraction `xAl`과 lateral width `wAl`을 parameterize한다. 첫 mechanism screen에서는 barrier가 MQW lateral path를 가로질러 carrier가 sidewall로 bypass하지 못하도록 active-region vertical span을 커버하게 설계한다.
+
+- SDE: AlGaN region + xAl + geometry + interface mesh refinement.
+- SDevice: common Fermi/SRH/Radiative/Auger/mobility/polarization/heterojunction physics 유지; 별도의 artificial trap으로 barrier를 만들지 않는다.
+- 확인 1순위: lateral Ec/Ev profile에서 intended band offset이 실제 형성되는지.
+- 이후: edge e/h density, current map, integrated sidewall SRH, IQE, Vf/Auger/crowding penalty.
+
+Fabrication analogue는 local recess/etch 후 selective-area AlGaN regrowth이다. AlGaN selective regrowth 자체는 GaN heterostructure literature에서 demonstrated 되었지만, 이 microLED lateral-barrier integration geometry 자체는 아직 project hypothesis이며 fabrication feasibility가 검증된 구조로 주장하지 않는다.
+
+### 발표용 한 줄 구분
+
+- **A:** same GaN material + localized carbon compensation → **resistive blocking**.
+- **B:** new AlGaN material region + band offset → **heterobarrier confinement**.
+
+### Command-file split
+
+- `SDE`: geometry/region/material/mole-fraction/mesh 변경.
+- `SDevice`: region-specific traps/compensation and outputs/physics.
+- `SProcess`: 현재 1차 A/B mechanism screen에는 사용하지 않음. Implantation/regrowth process realism이 필요해질 때 별도 후속 단계로 추가.

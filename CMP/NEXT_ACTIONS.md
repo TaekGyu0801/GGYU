@@ -1,5 +1,17 @@
 # Next Actions
 
+## Ju Subin — Node 12 wrapper exit follow-up (2026-09-26)
+
+`n12_local.err` only reports a generic child-process abnormal exit with status 1.
+
+Next diagnostic order:
+1. Node 12 **Job Log** tab → capture bottom ~30–50 lines including exit status/command.
+2. If still generic, open `n12_des.job`.
+3. Check `n12_des.sta` for last stage/status.
+4. Search `n12_des.err` and `n12_des.out` for: `Fatal`, `Error`, `Segmentation`, `Killed`, `signal`, `memory`, `license`, `abort`.
+5. Do not rerun or change baseline physics until the actual process-exit reason is found.
+
+
 ## Ju Subin — Node 12 immediate diagnostic refinement (2026-09-26)
 
 The provided `n12_des.err` view contains warnings but no explicit fatal cause, while `n12_des.out` terminates before normal completion and no TDR/PLT is visible.

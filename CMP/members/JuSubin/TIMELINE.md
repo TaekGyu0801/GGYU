@@ -1,5 +1,16 @@
 # Ju Subin Timeline
 
+## 2026-09-26 — Project A/B command-level implementation strategy refined
+
+- **작성자:** ChatGPT
+- **작업자:** 주수빈
+- **상태:** RESEARCH JUDGMENT / CES PRESENTATION PLAN
+- **Project A:** 1차 mechanism screen은 implantation process simulation이 아니라 SDE에서 upper n-GaN edge를 `Cedge_L/R` GaN region으로 분리하고, SDevice에서 region-specific carbon deep acceptor/compensation을 적용. QW에 carbon trap 직접 삽입하지 않음. C implantation은 damage-induced isolation과 carbon compensation이 섞이므로 후속 process-realistic study로 분리.
+- **Project B:** implantation이 아닌 실제 AlGaN material region `AlBarrier_L/R`을 SDE에 삽입. xAl/wAl parameter sweep, lateral GaN/AlGaN interface mesh refinement, SDevice에서 band offset/polarization 기반 confinement을 검증. fabrication analogue는 recess/etch + selective-area AlGaN regrowth이며 exact microLED integration은 hypothesis.
+- **공통:** baseline 5 nm DmgL/R 및 defect model 유지. SProcess는 현재 A/B 1차 device-level comparison에는 사용하지 않음.
+
+# Ju Subin Timeline
+
 ## 2026-09-26 — CES 발표 9장 구조로 압축
 
 - **작성자:** ChatGPT

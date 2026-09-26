@@ -1,5 +1,16 @@
 # Next Actions
 
+## Ju Subin — compare failed Node 12 against successful NtSide=0 log (2026-09-26)
+
+1. Open the successful `NtSide=0` SDevice node.
+2. Open its `*_des.log`.
+3. Search for `mMagnesiumActiveConcentration`.
+4. Report whether the same incomplete-ionization messages for InGaN QW regions appear.
+5. If they do, capture the lines immediately after them showing the successful run proceeding.
+6. If they do not, compare failed/successful preprocessed parameter and command files around IncompleteIonization/material setup.
+7. Use `n12_des.sta` only if the successful-log comparison is inconclusive.
+
+
 ## Ju Subin — after Find Error shows warnings only (2026-09-26)
 
 1. Open Node 12 output file `n12_des.log`.

@@ -1,5 +1,14 @@
 # LIVE AI STATE
 
+## 2026-09-26 — Node 12 local.err result
+
+- `n12_local.err`: `Job failed` / `child process exited abnormally` / `gjob exits with status 1`.
+- This is a generic wrapper-level failure, not the root cause.
+- Root cause remains UNRESOLVED.
+- Next evidence: Node 12 Job Log bottom; then `n12_des.job` / `n12_des.sta`.
+- Do not alter Common Baseline physics yet.
+
+
 ## 2026-09-26 — Ju Subin Node 12 failure narrowed
 
 - `NtSide=1e18` failed Node = 12.

@@ -1,5 +1,17 @@
 # Next Actions
 
+## Ju Subin — freeze one baseline revision, then rerun both branches
+
+1. Keep historical Node6 as a reference result only; do not treat it as the final control for current Node12.
+2. Decide/freeze the intended final Mg incomplete-ionization formulation and parameter file.
+3. Ensure the same SDevice source and same source parameter file generate both branches.
+4. Preprocess NtSide=0 and NtSide=1e18 and diff CMD/PAR:
+   - CMD should differ only in NtSide-controlled trap Conc.
+   - PAR should be identical.
+5. Then run both full simulations for the final baseline comparison.
+6. A short Node12-only diagnostic run may still be used to test a crash fix, but it is not the final comparison dataset.
+
+
 ## Ju Subin — apply region-scoped Mg incomplete ionization
 
 In the original SDevice source:

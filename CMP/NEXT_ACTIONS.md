@@ -1,5 +1,18 @@
 # Next Actions
 
+## Ju Subin — immediate action after reproducible Node 12 failure
+
+1. Do not rerun Node 12 again yet.
+2. Open original SDevice source `sd_fdiv_des.cmd` (not `pp12_des.cmd`).
+3. Search for `NtSide`.
+4. Around every match, capture any `#if/#else/#endif`, Tcl/preprocessor expression, or conditional insertion of:
+   - `Thermionic`
+   - `IncompleteIonization(Dopants=...)`
+   - Mg Plot fields
+5. Compare Node 6/12 Job Log preprocessing timestamps/source path to determine whether Node 6 is stale from an older source revision.
+6. Once provenance is known, make the two branches truly identical except for trap `Conc`.
+
+
 ## Ju Subin — verify parameter-dependent preprocessing before any edit
 
 1. Do **not** edit the physics yet.

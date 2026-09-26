@@ -1,5 +1,16 @@
 # Current Status
 
+## 2026-09-26 — Mg incomplete-ionization scope mismatch identified
+
+Node 12 `pp12_des.par` contains incomplete-ionization parameters only for `Material="GaN"` and `Species("pMagnesiumActiveConcentration")`. It contains no InGaN ionization block.
+
+The failed Node 12 log terminates after reporting that an Mg-related active-concentration species in InGaN QW regions has no incomplete-ionization parameters. The current SDevice source activates Mg incomplete ionization globally.
+
+This establishes a strong configuration mismatch: the model is globally active where the parameter file does not provide the corresponding InGaN ionization parameters.
+
+Proposed minimal fix: scope Mg incomplete ionization to the p-GaN regions only (`Clean_pGaN`, `DmgL_pGaN`, `DmgR_pGaN`) rather than globally. Keep Thermionic, sidewall trap Nt/Et/sigma, geometry, and Plot unchanged for this diagnostic.
+
+
 ## 2026-09-26 — Full source resolves the Node 6/12 preprocessing discrepancy
 
 The current full SDevice source contains no NtSide-dependent conditional preprocessing. `@NtSide@` appears in trap concentration only. The current source always includes `Thermionic`, species-selected Mg incomplete ionization, and the expanded Mg/quasi-Fermi Plot fields.

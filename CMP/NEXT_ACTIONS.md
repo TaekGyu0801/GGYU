@@ -1,5 +1,16 @@
 # Next Actions
 
+## Ju Subin — Node 12 SDevice exit(1) next step (2026-09-26)
+
+Preprocessing succeeded and SDevice itself returned `exit(1)`.
+
+Immediate diagnostic:
+1. In Node 12 Job Log, click **Find Error**.
+2. Capture the exact file/line/message Workbench jumps to.
+3. If it does not jump to a useful line, search `n12_des.err` for: `Error:`, `Fatal`, `Unsupported`, `invalid`, `not found`, `cannot`.
+4. Only after the first explicit error line is identified should code be changed.
+
+
 ## Ju Subin — Node 12 wrapper exit follow-up (2026-09-26)
 
 `n12_local.err` only reports a generic child-process abnormal exit with status 1.

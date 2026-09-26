@@ -185,3 +185,73 @@ Fabrication analogue는 local recess/etch 후 selective-area AlGaN regrowth이�
 - `SDE`: geometry/region/material/mole-fraction/mesh 변경.
 - `SDevice`: region-specific traps/compensation and outputs/physics.
 - `SProcess`: 현재 1차 A/B mechanism screen에는 사용하지 않음. Implantation/regrowth process realism이 필요해질 때 별도 후속 단계로 추가.
+
+## 2026-09-26 — Project A/B literature evidence map for CES
+
+### Project A — Carbon High-Resistance Edge
+
+Key literature and what it directly supports:
+
+1. E. Richter et al., **Growth and Properties of Intentionally Carbon-Doped GaN Layers**, Crystal Research and Technology 55 (2020), 1900129, DOI 10.1002/crat.201900129.
+   - Experimentally carbon-doped GaN showed semi-insulating behavior.
+   - Maximum reported specific resistivity: ~2×10^10 Ω·cm at [C] = 8.8×10^18 cm^-3.
+   - C_N deep acceptor electrical activation energy ~0.94 eV.
+   - At higher carbon concentration up to 3.5×10^19 cm^-3 conductivity rose slightly, attributed to self-compensation/passivation.
+
+2. M.R. Ramdani et al., **Effect of carbon doping on crystal quality, electrical isolation and electron trapping in GaN based structures grown silicon substrates**, Solid-State Electronics 75 (2012) 86–92, DOI 10.1016/j.sse.2012.04.034.
+   - Several 10^18 cm^-3 carbon strongly increased GaN resistivity.
+   - Carbon addition also produced electron trapping and could degrade crystal quality.
+
+3. W. Cao et al., **Numerical simulation analysis of carbon defects in the buffer on vertical leakage and breakdown of GaN on silicon epitaxial layers**, Scientific Reports 13 (2023) 14820, DOI 10.1038/s41598-023-41678-1.
+   - Sentaurus TCAD explicitly modeled GaN:C.
+   - Used C_N acceptor level Ev+0.9 eV, C_Ga donor level Ec−0.11 eV, capture cross sections 1e-15 cm^2.
+   - Simulations showed carbon-defect charge can block electron conduction at the UID-GaN/GaN:C interface; effect depends on defect concentrations/occupancy.
+
+4. L. Chang et al., **Alternative Strategy to Reduce Surface Recombination for InGaN/GaN Micro-light-Emitting Diodes—Thinning the Quantum Barriers to Manage the Current Spreading**, Nanoscale Research Letters 15 (2020) 160, DOI 10.1186/s11671-020-03372-3.
+   - In microLEDs, managing current spreading so fewer carriers reach sidewall defects reduced sidewall nonradiative recombination and improved EQE.
+   - Their method was thinner QBs / reduced vertical resistance, not carbon; it supports the carrier-path principle, not our exact geometry.
+
+5. A. Taube et al., **Ion implantation for isolation of AlGaN/GaN HEMTs using C or Al**, physica status solidi (a) (2015), DOI 10.1002/pssa.201431724.
+   - C-ion implantation produced high-resistance isolation.
+   - XRD/Raman/PL evidence showed implantation-induced crystal damage is a major source of the insulating behavior.
+   - Therefore implantation is not a clean first test of 'carbon compensation only'.
+
+Project-A inference/hypothesis:
+- Literature proves GaN:C can become high-resistivity and that C_N deep acceptors/compensation can block conduction.
+- Separate microLED literature proves reducing carrier access to sidewall defects can reduce nonradiative loss.
+- **No identified paper directly demonstrates our exact localized Carbon High-R edge in an InGaN blue microLED.** That geometry is our project hypothesis.
+- Stage-1 TCAD therefore isolates the material/electrical mechanism using a GaN Cedge region + C-related traps/compensation, not SProcess implantation.
+
+### Project B — Localized AlGaN Lateral Heterobarrier
+
+1. W.J. Baek et al., **Ultra-low-current driven InGaN blue micro light-emitting diodes for electrically efficient and self-heating relaxed microdisplay**, Nature Communications 14 (2023) 1386, DOI 10.1038/s41467-023-36773-w.
+   - Quantum-barrier thickness and p-AlGaN EBL composition were engineered to control carrier confinement/injection.
+   - Thicker QBs lowered tunneling and reduced surface-current contribution; the study links excessive lateral carrier diffusion to sidewall recombination.
+   - Fabricated 10×10 µm^2 devices achieved 3.00% EQE at 0.1 A/cm^2 in the optimized epitaxial design.
+   - This supports barrier engineering / lateral diffusion control, but not our exact lateral AlGaN wall.
+
+2. F. Furtmayr et al., **Carrier confinement in GaN/Al_xGa_1−xN nanowire heterostructures (0 < x ≤ 1)**, Physical Review B 84 (2011) 205303, DOI 10.1103/PhysRevB.84.205303.
+   - HRTEM observed a lateral AlGaN shell around GaN nanodiscs.
+   - 3D numerical simulations showed the lateral AlGaN shell must be included to explain carrier confinement / optical behavior.
+   - Confinement and radial internal fields depended strongly on Al composition; very high Al content could reduce emission through large radial fields.
+   - This is direct evidence for lateral GaN/AlGaN heterobarrier physics, but in nanowires, not planar microLEDs.
+
+3. L. Chang et al. (2020), same paper above.
+   - Directly supports the microLED-level causal goal: suppress lateral carrier transport to the damaged edge to reduce surface SRH and improve efficiency.
+
+4. **Wafer-scale crack-free AlGaN on GaN through two-step selective-area growth for optically pumped stimulated emission**, Journal of Crystal Growth 445 (2016) 78–83, DOI 10.1016/j.jcrysgro.2016.04.021.
+   - Demonstrated two-step selective-area growth of crack-free Al0.2Ga0.8N on GaN over a 2-inch wafer and subsequent GaN/AlGaN MQW growth.
+   - This supports selective AlGaN-on-GaN growth as a process capability, not the exact proposed microLED edge-wall geometry.
+
+Project-B inference/hypothesis:
+- Literature shows AlGaN/GaN heterostructures can provide lateral/radial carrier confinement and microLED barrier engineering can reduce surface-related carrier loss.
+- Selective-area AlGaN growth on GaN has been demonstrated in other geometries.
+- **No identified paper directly demonstrates the exact narrow lateral AlGaN edge-wall geometry proposed here for a planar InGaN microLED.** This geometry is our project hypothesis.
+- Stage-1 TCAD therefore inserts a real AlGaN material region in SDE and verifies Ec/Ev barrier formation before evaluating sidewall SRH/IQE.
+
+### CES evidence boundary
+
+For both A and B, distinguish:
+- **Published fact:** material/defect/barrier physics demonstrated in cited literature.
+- **Published microLED principle:** controlling lateral carrier access to sidewalls reduces nonradiative loss.
+- **Our hypothesis:** localized Carbon High-R edge vs localized lateral AlGaN barrier on the same baseline.

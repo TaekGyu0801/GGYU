@@ -1,3 +1,23 @@
+## 2026-09-26 — Successful Node 6 lacks Node 12 Mg incomplete-ionization message
+
+New evidence:
+- Successful NtSide=0 Node 6 reaches 5 V and normal completion.
+- User searched successful `n6_des.log`: no `mMagnesiumActiveConcentration` message.
+- Failed Node 12 shows repeated `mMagnesiumActiveConcentration` incomplete-ionization messages in InGaN immediately before exit.
+
+Interpretation:
+- This message is now a strong failure-correlated difference.
+- However, root cause is not yet proven because Node 6 and Node 12 may have preprocessed deck/parameter differences beyond NtSide.
+
+Required next comparison:
+1. `pp6_des.cmd` vs `pp12_des.cmd`
+2. `pp6_des.par` vs `pp12_des.par`
+3. Confirm whether the only intended CMD difference is trap `Conc=0` vs `Conc=1e18`.
+
+Status: **UNRESOLVED**
+
+---
+
 ## 2026-09-26 — Node 12 log terminates after incomplete-ionization messages
 
 Observed:

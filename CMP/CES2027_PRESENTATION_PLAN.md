@@ -113,3 +113,18 @@ Recommended time allocation:
 Rationale:
 - Week 1 already covered scaling -> sidewall loss, project evolution, A/B concept, and CES product/manufacturing framing.
 - Week 2 should therefore minimize repeated background and maximize evidence, implementation, and controlled-comparison design.
+
+## 2026-09-26 — presenter-ownership / evidence taxonomy
+
+이번 발표에서는 모든 baseline/A/B 요소를 다음 네 가지 provenance class로 명시한다.
+
+- **DIRECT LITERATURE:** 논문에서 직접 가져온 구조/수치/물리.
+- **LITERATURE-DERIVED MODELING CHOICE:** 여러 논문과 application scale을 바탕으로 연구팀이 선택한 representative modeling choice.
+- **CALIBRATION / SENSITIVITY PARAMETER:** 문헌의 단일 정답값이 아니라 baseline을 보정/민감도 검증하기 위한 sweep 시작값.
+- **PROJECT HYPOTHESIS:** 문헌의 물리를 바탕으로 연구팀이 새롭게 제안하고 TCAD로 검증할 A/B 구조.
+
+핵심 발표 원칙:
+- '논문에 그대로 있어서 넣었다'와 '우리가 연구목적에 맞게 선택했다'를 구분한다.
+- JBD 4 µm pixel pitch를 mesa width로 등치하지 않는다.
+- Project A의 Carbon edge와 Project B의 localized lateral AlGaN geometry는 그대로 복제한 문헌 구조가 아니라, 문헌에서 검증된 compensation / carrier-confinement physics를 microLED sidewall 문제에 적용하는 **연구 가설**로 설명한다.
+- 교수 질문에 답할 때는 '근거 → TCAD 변수 → 관찰 지표 → 성공/실패 판정'의 순서로 설명한다.

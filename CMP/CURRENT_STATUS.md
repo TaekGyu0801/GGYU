@@ -1,5 +1,16 @@
 # Current Status
 
+## 2026-09-26 — Node 12 failure reproducible on rerun
+
+The NtSide=1e18 Node 12 was rerun alone and failed again in the same manner. This makes a transient scheduler/license glitch less likely and points to a reproducible input/configuration problem for Node 12.
+
+Because the user confirms a single source with only NtSide split, the observed pp6/pp12 differences most plausibly come from either:
+1. NtSide-dependent preprocessing in the source, or
+2. stale/cached Node 6 generated files from an earlier source revision while Node 12 was re-preprocessed from the current source.
+
+No physics change should be made until the original source conditional logic/provenance is checked.
+
+
 ## 2026-09-26 — Correction: Node 6/12 came from the same source split
 
 User explicitly confirmed that Node 6 and Node 12 were generated from the same SDevice source and only `NtSide` was split (0 vs 1e18).

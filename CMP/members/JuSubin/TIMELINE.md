@@ -1,5 +1,16 @@
 # Ju Subin Timeline
 
+## 2026-09-26 — Node12 최소 수정안 확정
+
+- **작성자:** ChatGPT
+- **작업자:** 주수빈
+- **상태:** PROPOSED FIX
+- **수정:** global `IncompleteIonization(Dopants="pMagnesiumActiveConcentration")` 제거.
+- **추가:** `Clean_pGaN`, `DmgL_pGaN`, `DmgR_pGaN`에만 동일 `IncompleteIonization(Dopants="pMagnesiumActiveConcentration")` 적용.
+- **유지:** `Thermionic`, `NtSide`, trap Et/sigma, geometry, Plot, Math, Solve 전부 유지.
+- **검증:** 수정 후 NtSide=0/1e18을 동일 final source/PAR revision에서 재실행.
+
+
 ## 2026-09-26 — Node 12 project/scheduler log interpretation
 
 - **작성자:** ChatGPT

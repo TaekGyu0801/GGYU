@@ -1,5 +1,16 @@
 # Ju Subin Timeline
 
+## 2026-09-26 — 중요 정정: 사용자 확인상 source는 동일, NtSide만 split
+
+- **작성자:** ChatGPT
+- **작업자:** 주수빈
+- **상태:** USER-CONFIRMED / UNRESOLVED
+- **사용자 확인:** Node 6과 Node 12는 원본 코드를 별도로 수정한 것이 아니라 동일한 SDevice source에서 `NtSide`만 0 / 1e18로 split하여 실행함.
+- **정정:** 직전의 "Node 12 source deck drift" 해석은 확정할 수 없음. preprocessed deck 차이는 source 자체가 달랐다는 증거가 아니라, NtSide-dependent preprocessing/conditional branch 또는 node input/version/cache 차이일 수 있음.
+- **중요:** 원인 확인 전 `Thermionic`, `IncompleteIonization`, Plot 항목을 임의 삭제/변경하지 않음.
+- **다음:** 실제 원본 `sd_fdiv_des.cmd`에서 `@NtSide@`, `Thermionic`, `IncompleteIonization`, `Dopants`, preprocessor conditional(`#if` 등) 존재 여부 확인. Node 6/12 Job Log의 source path와 preprocessing 시각도 대조.
+
+
 ## 2026-09-26 — Node 6 vs Node 12 exact Physics/Plot diff identified
 
 - **작성자:** ChatGPT

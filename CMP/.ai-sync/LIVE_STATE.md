@@ -1,5 +1,14 @@
 # LIVE AI STATE
 
+## 2026-09-26 — baseline branch comparison status
+
+- NtSide=0 Node 6: CONFIRMED normal completion to 5 V; TDR written; wallclock ~65.4 h.
+- NtSide=1e18 Node 12: SDevice exit(1) during initialization.
+- Success log has no `mMagnesiumActiveConcentration` warning; failed log does.
+- Strong correlated difference, but root cause not yet proven.
+- Next action: diff `pp6_des.cmd/par` vs `pp12_des.cmd/par` before any physics change.
+
+
 ## 2026-09-26 — Node 12 des.log comparison needed
 
 - Failed `n12_des.log` terminates immediately after InGaN Mg incomplete-ionization parameter messages, then returns licenses.

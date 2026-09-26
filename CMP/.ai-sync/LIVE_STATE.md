@@ -1,5 +1,16 @@
 # LIVE AI STATE
 
+## 2026-09-26 — Node 12 failure location narrowed further
+
+- Workbench preprocessing: successful.
+- `pp12_des.cmd` / `pp12_des.par`: generated.
+- SDevice command launched: `sdevice --max_threads 4 pp12_des.cmd`.
+- SDevice returned `exit(1)` shortly after launch.
+- Failure is therefore inside SDevice initialization/model setup, not SWB preprocessing/dependency.
+- Root cause still UNRESOLVED.
+- Next: use **Find Error** / explicit error search in `n12_des.err`.
+
+
 ## 2026-09-26 — Node 12 local.err result
 
 - `n12_local.err`: `Job failed` / `child process exited abnormally` / `gjob exits with status 1`.

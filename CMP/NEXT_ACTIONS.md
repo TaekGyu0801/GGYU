@@ -1,5 +1,42 @@
 # Next Actions
 
+## Ju Subin — apply region-scoped Mg incomplete ionization
+
+In the original SDevice source:
+
+1. Remove from global `Physics`:
+```
+IncompleteIonization(
+  Dopants = "pMagnesiumActiveConcentration"
+)
+```
+
+2. Add to `Clean_pGaN`:
+```
+Physics (Region="Clean_pGaN") {
+  IncompleteIonization(
+    Dopants = "pMagnesiumActiveConcentration"
+  )
+}
+```
+
+3. In existing `DmgL_pGaN` and `DmgR_pGaN` Physics blocks, add the same `IncompleteIonization(...)` alongside the existing Traps block.
+
+4. Do not change:
+- NtSide
+- Et=Ev+0.75 eV
+- sigma_n=sigma_p=1e-15
+- 5 nm damage geometry
+- Thermionic
+- Plot list
+
+5. Re-preprocess Node12 and verify:
+- no InGaN Mg incomplete-ionization missing-parameter messages
+- SDevice enters initial Poisson solve.
+
+6. If initialization succeeds, continue the 1e18 run. Final fair comparison still requires NtSide=0 and 1e18 from the same frozen source revision.
+
+
 ## Ju Subin — inspect Mg ionization parameter file before rerun
 
 1. Do not rerun Node 12 again yet.

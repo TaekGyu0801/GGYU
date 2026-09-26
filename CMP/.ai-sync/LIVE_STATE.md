@@ -1,5 +1,14 @@
 # LIVE AI STATE
 
+## 2026-09-26 — fair-comparison correction
+
+- Node6 pp6_des.par and Node12 pp12_des.par are different revisions.
+- Node6 uses generic P/N dopant ionization species; Node12 uses pMagnesiumActiveConcentration.
+- Existing Node6 vs current/fixed Node12 is not a valid final NtSide-only comparison.
+- Final baseline must freeze one source + parameter-file revision and rerun both NtSide=0 and 1e18.
+- Node12-only fix remains diagnostic only.
+
+
 ## 2026-09-26 — Mg incomplete-ionization mismatch found
 
 - pp12_des.par has Mg ionization parameters only under Material=GaN for pMagnesiumActiveConcentration.

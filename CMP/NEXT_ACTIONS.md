@@ -1,5 +1,15 @@
 # Next Actions
 
+## Priority 0 — Ju Subin NtSide=1e18 failure diagnosis (2026-09-26)
+
+1. Workbench에서 `NtSide=1e18` failed scenario의 SDevice node를 선택.
+2. 해당 node의 `*.err`를 열어 전체 또는 첫 error/fatal message를 확보.
+3. `*.out` 맨 아래 50~100줄을 확보.
+4. error가 convergence인지 syntax/parameter인지 resource/solver인지 분류.
+5. 실제 원인에 맞는 최소 수정만 적용.
+6. 수정 전 `NtSide=0` 성공 조건과 동일한 geometry/physics baseline은 유지.
+
+
 ## Priority 0 — 현재 blocker 해결
 
 ### Goal

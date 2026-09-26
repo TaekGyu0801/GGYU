@@ -1,5 +1,18 @@
 # Next Actions
 
+## Ju Subin — exact Node 6 vs Node 12 deck diff next
+
+After capturing failed Node 12:
+1. Obtain successful Node 6 corresponding sections from `pp6_des.cmd`.
+2. Compare line-by-line:
+   - global Physics (`Thermionic`, `IncompleteIonization` syntax)
+   - every trap block and Conc
+   - Plot block
+3. Expected fair split: only NtSide-controlled trap concentration should differ.
+4. If additional differences exist, restore a true NtSide-only split before rerunning.
+5. Do not change Nt/Et/sigma based solely on the incomplete-ionization warning.
+
+
 ## Ju Subin — highest-priority deck diff (2026-09-26)
 
 Before changing `IncompleteIonization`, trap parameters, or solver settings:

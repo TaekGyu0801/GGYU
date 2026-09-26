@@ -1,5 +1,25 @@
 # Next Actions
 
+## Ju Subin — inspect Mg ionization parameter file before rerun
+
+1. Do not rerun Node 12 again yet.
+2. Open `pp12_des.par`.
+3. Search for:
+   - `Ionization`
+   - `Magnesium`
+   - `InGaN`
+   - `GaN`
+   - `AlGaN`
+4. Capture every `Ionization { Species(...) { ... } }` block involving Mg and the material header above it.
+5. Verify whether the species name is `MagnesiumActiveConcentration`, `pMagnesiumActiveConcentration`, or another internal species.
+6. Verify whether InGaN has an Mg ionization parameter block.
+7. Only after this, choose between:
+   - correcting the selected Mg species name,
+   - restricting incomplete ionization to materials with calibrated Mg parameters,
+   - or adding a justified InGaN Mg ionization parameter if literature/source supports it.
+8. For fair baseline comparison, once the physics deck is frozen, regenerate/rerun both NtSide=0 and 1e18 from that same source revision (or explicitly use the historical Node6 deck and reproduce its source exactly).
+
+
 ## Ju Subin — immediate action after reproducible Node 12 failure
 
 1. Do not rerun Node 12 again yet.

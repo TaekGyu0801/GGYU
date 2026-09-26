@@ -153,3 +153,26 @@ Rationale:
 
 ### Presentation priority
 핵심 시간은 baseline 근거/구조/validation과 Project A/B의 실제 TCAD 수정 지점, 그리고 same-current comparison protocol에 사용한다. Week 1 한계 자체는 별도 슬라이드로 소비하지 않는다.
+
+## 2026-09-26 — Reference deck style adopted
+
+User provided a strong Week-1 reference deck: `1주차_940nm dToF를 위한 28nm FD-SOI SPAD 공동설계_유용한주상현.pptx` (43 slides) as a visual/logic benchmark, not as content to copy.
+
+Observed design principles to adopt for the 15-min CES deck:
+- one technical message per slide;
+- image/diagram-led layout with sparse text;
+- literature slide uses paper figure/cover + one explicit role per source;
+- baseline slides separate reference target, implementation, and validation evidence;
+- proposed structures are shown by direct baseline-vs-proposal visual comparison;
+- causal chains are explicit: design variable -> physical change -> electrical/optical observable -> risk/penalty;
+- plans are represented as workflow/runsheet diagrams rather than paragraphs;
+- assumptions, expected effects, and confirmed simulation results are visually distinguished;
+- source labels are small but always present near figures;
+- quantitative target values are highlighted as large callouts.
+
+Application to Subin CES deck:
+- keep the 9-slide compressed structure;
+- make Slides 2-5 baseline-heavy and visual;
+- make Slides 6-7 mirror each other visually for Project A/B;
+- use Slide 8 as a causal comparison/evaluation matrix, not a text list;
+- no separate slides for Week-1 shortcomings or generic background.

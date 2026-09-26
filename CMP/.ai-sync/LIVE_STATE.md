@@ -1,5 +1,14 @@
 # LIVE AI STATE
 
+## 2026-09-26 — failed Node 12 deck captured
+
+- Node 12 has `Thermionic` and `IncompleteIonization(Dopants="pMagnesiumActiveConcentration")`.
+- Sidewall traps are 1e18 across pGaN/EBL/barriers/QWs/nGaN.
+- Plot block is expanded with trap/SRH/Mg outputs.
+- This differs from synchronized baseline record; possible deck drift beyond NtSide.
+- Next: exact successful Node 6 pp6_des.cmd diff before any correction.
+
+
 ## 2026-09-26 — baseline branch comparison status
 
 - NtSide=0 Node 6: CONFIRMED normal completion to 5 V; TDR written; wallclock ~65.4 h.

@@ -1,3 +1,26 @@
+## 2026-09-26 — Node 12 gjob abnormal child exit
+
+Observed in `n12_local.err`:
+```text
+Job failed
+Error: Unknown error: child process exited abnormally
+gjob exits with status 1
+```
+
+Meaning:
+- Workbench wrapper confirms the SDevice child process exited abnormally.
+- This is **not yet the root cause**; it is a generic wrapper-level failure report.
+
+Next:
+1. Inspect Node 12 Job Log bottom section.
+2. Inspect `n12_des.job` if Job Log is non-diagnostic.
+3. Inspect `n12_des.sta` for the last tool stage/status.
+4. Search `n12_des.err` / `n12_des.out` for segmentation, killed, memory, fatal, abort, license, or signal text.
+
+Status: **UNRESOLVED**
+
+---
+
 ## 2026-09-26 — NtSide=1e18 Node 12 early termination evidence
 
 Observed from Node 12:

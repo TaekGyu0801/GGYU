@@ -1,3 +1,26 @@
+## 2026-09-26 — Current source has no NtSide conditional; Node 6 is stale relative to current source
+
+Confirmed from full current SDevice source:
+- `@NtSide@` is used only as trap `Conc`.
+- No `#if/#else/#endif` or other NtSide-dependent insertion controls `Thermionic`, `IncompleteIonization`, or Plot fields.
+- Current source always contains:
+  - `Thermionic`
+  - `IncompleteIonization(Dopants="pMagnesiumActiveConcentration")`
+  - Mg/quasi-Fermi extra Plot fields.
+
+Consequence:
+The successful pp6 deck lacking these items cannot have been generated from the current source revision. Node 6 is a stale/historical generated deck relative to the current source.
+
+Current Node 12 failure candidate:
+Mg incomplete ionization is selected explicitly, and Node12 log terminates after reporting missing incomplete-ionization parameters in InGaN QW regions.
+
+Required next evidence:
+Inspect `pp12_des.par` for `Ionization`, `Magnesium`, and `InGaN` parameter definitions before changing the physical model.
+
+Status: **ROOT CAUSE NARROWED / NOT YET CONFIRMED**
+
+---
+
 ## 2026-09-26 — Node 12 rerun reproduces exit failure
 
 Observed:

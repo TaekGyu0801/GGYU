@@ -1,3 +1,22 @@
+## 2026-09-26 — NtSide=1e18 baseline split-run failed
+
+Observed:
+- Sentaurus Workbench split run에서 `NtSide=0`은 완료.
+- `NtSide=1e18`은 failed 상태.
+
+Cause: **UNRESOLVED**
+
+Required evidence:
+1. failed 1e18 SDevice node의 `*.err`
+2. 해당 `*.out` 마지막 50~100줄
+3. 가능하면 failed node 번호와 preprocessed `pp*_des.cmd`
+
+Do not change baseline trap density/energy/cross section or geometry before identifying the actual first failure message.
+
+Status: **UNRESOLVED**
+
+---
+
 # Error Log
 
 ## 2026-09-21 — SVisual1 Tcl title

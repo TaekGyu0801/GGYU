@@ -1,5 +1,19 @@
 # Current Status
 
+## 2026-09-26 — Fair comparison requirement updated
+
+Successful Node6 and current Node12 differ in both generated command and parameter files.
+
+Node6 `pp6_des.par`:
+- PDopantActiveConcentration
+- NDopantActiveConcentration
+
+Node12 `pp12_des.par`:
+- pMagnesiumActiveConcentration
+
+Therefore the existing Node6 result cannot serve as the final control for a modified/current Node12. A valid baseline comparison requires both NtSide=0 and NtSide=1e18 to be regenerated from the same frozen SDevice source and same parameter-file revision, with NtSide as the only intentional difference.
+
+
 ## 2026-09-26 — Mg incomplete-ionization scope mismatch identified
 
 Node 12 `pp12_des.par` contains incomplete-ionization parameters only for `Material="GaN"` and `Species("pMagnesiumActiveConcentration")`. It contains no InGaN ionization block.

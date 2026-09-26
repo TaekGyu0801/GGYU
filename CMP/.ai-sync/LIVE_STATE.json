@@ -4,7 +4,7 @@
   "phase": "Phase 0 — Common Baseline validation",
   "task": "SDevice2 to SVisual2 TDR output/linkage debugging",
   "status": "UNRESOLVED",
-  "blocker": "Same-source NtSide split produced unexpected pp6/pp12 Physics/Plot differences; preprocessing cause unresolved",
+  "blocker": "Node 12 NtSide=1e18 failure reproducible; same-source split produced different pp decks",
   "parallelWork": {
     "worker": "주수빈",
     "status": "OBSERVED",
@@ -92,6 +92,11 @@
         "node/input version or cache behavior"
       ],
       "nextAction": "inspect original sd_fdiv_des.cmd for NtSide-dependent preprocessing before any physics edits"
+    },
+    "node12Rerun": {
+      "status": "REPRODUCIBLE_FAILURE",
+      "interpretation": "not likely a one-off runtime glitch",
+      "nextAction": "inspect original source NtSide conditionals and node preprocess provenance"
     }
   },
   "nodes": {

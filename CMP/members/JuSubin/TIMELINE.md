@@ -1,5 +1,16 @@
 # Ju Subin Timeline
 
+## 2026-09-26 — CES2027 선발 평가발표 준비 우선순위 전환
+
+- **작성자:** ChatGPT
+- **작업자:** 주수빈
+- **상태:** DECISION / PRESENTATION STRATEGY
+- **발표 맥락:** 심사위원은 '공학및지식실무' 교과목 교수 2명이며 1주차 발표를 이미 봄.
+- **1주차 약점:** 급한 주제 변경으로 TCAD simulation 결과가 없었고, Project A/B를 실제 TCAD에서 어떻게 구현·검증할지 구체적으로 설명하지 못해 낮은 평가를 받음.
+- **이번 발표 핵심 보완:** 주제 재설명보다 (1) Common Baseline 구축 근거, (2) 현재까지 실제 TCAD 구현/실행 증거, (3) Project A Carbon high-resistance edge 및 Project B localized AlGaN lateral heterobarrier의 구체적 TCAD 구현 절차, (4) 비교 지표와 성공 판정 기준을 중심으로 구성.
+- **표현 원칙:** 완료된 simulation, 진행 중 validation, 향후 A/B DOE를 명확히 구분. 미완료 결과를 완료처럼 제시하지 않음.
+- **발표 목표:** 교수진에게 '아이디어 단계'가 아니라 '실행 가능한 연구 설계와 검증 로드맵을 갖춘 프로젝트'임을 보여주는 것.
+
 ## 2026-09-26 — Today-only baseline/PPT deadline strategy
 
 - **작성자:** ChatGPT

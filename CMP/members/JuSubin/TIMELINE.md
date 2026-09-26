@@ -1,5 +1,14 @@
 # Ju Subin Timeline
 
+## 2026-09-26 — CES 발표 9장 구조로 압축
+
+- **작성자:** ChatGPT
+- **작업자:** 주수빈
+- **상태:** DECISION / PRESENTATION STRUCTURE
+- **결정:** 15분 제한을 고려해 Week 1 보완/왜 baseline인가/문헌 역할 설명을 여러 장으로 분리하지 않고 초반 1장으로 압축.
+- **새 흐름:** 주제·진행상황 요약 → baseline 문헌 근거 → 현재 baseline 구조 → parameter provenance → validation/status → Project A → Project B → fair comparison → conclusion.
+- **목표:** 발표 시간을 baseline 구축 논리, 실제 TCAD 수정 지점, A/B 비교 protocol에 집중.
+
 ## 2026-09-26 — 발표 핵심 논리: 근거→모델→코드→지표를 연구자 본인이 설명
 
 - **작성자:** ChatGPT

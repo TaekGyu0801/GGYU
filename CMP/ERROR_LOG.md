@@ -1,3 +1,22 @@
+## 2026-09-26 — Node 12 deck-drift suspicion
+
+New evidence from failed Node 12 preprocessed deck:
+- global `Thermionic` present
+- `IncompleteIonization(Dopants="pMagnesiumActiveConcentration")`
+- expanded Plot output set
+- NtSide trap Conc=1e18 throughout DmgL/R sidewall regions
+
+This differs from the synchronized baseline/old successful-deck record, which used plain `IncompleteIonization` and did not record `Thermionic`.
+
+Interpretation:
+- The failed branch may contain deck drift beyond NtSide.
+- This is not yet the proven crash cause.
+- Exact successful Node 6 pp6_des.cmd comparison is required before modifying physics.
+
+Status: **UNRESOLVED**
+
+---
+
 ## 2026-09-26 — Successful Node 6 lacks Node 12 Mg incomplete-ionization message
 
 New evidence:

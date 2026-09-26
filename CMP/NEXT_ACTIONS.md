@@ -1,5 +1,22 @@
 # Next Actions
 
+## Ju Subin — clean NtSide-only rerun (2026-09-26)
+
+1. Edit the original SDevice source (not generated `pp12_des.cmd`).
+2. Make global Physics identical to successful Node 6:
+   - remove Node12-only `Thermionic` for this diagnostic rerun
+   - replace `IncompleteIonization(Dopants="pMagnesiumActiveConcentration")` with plain `IncompleteIonization`
+3. Make Plot identical to Node 6 by removing Node12-only:
+   - `eQuasiFermiEnergy`
+   - `hQuasiFermiEnergy`
+   - `pMagnesiumActiveConcentration`
+   - `pMagnesiumMinusConcentration`
+4. Preserve trap model and keep the Workbench NtSide-controlled concentration at 1e18.
+5. Re-preprocess and confirm the new 1e18 preprocessed deck differs from Node 6 only in trap `Conc`.
+6. Rerun only the 1e18 branch.
+7. If it still fails, then diagnose the nonzero trap interaction itself.
+
+
 ## Ju Subin — exact Node 6 vs Node 12 deck diff next
 
 After capturing failed Node 12:

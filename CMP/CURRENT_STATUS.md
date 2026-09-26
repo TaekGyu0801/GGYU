@@ -1,5 +1,18 @@
 # Current Status
 
+## 2026-09-26 — Ju Subin baseline result strengthened
+
+**CONFIRMED:** successful `NtSide=0` Node 6 reached 5.0 V, finished the curve trace, wrote `n6_des.tdr`, and ended with normal SDevice completion text. Wallclock ≈235312 s (~65.4 h, ~2.7 days).
+
+**FAILED:** `NtSide=1e18` Node 12 exits during initialization with SDevice `exit(1)`, before normal solve/output completion.
+
+Key branch difference observed in logs:
+- Node 6 success: no `mMagnesiumActiveConcentration` message found by user search.
+- Node 12 fail: repeated InGaN incomplete-ionization parameter messages immediately before termination.
+
+This is a strong diagnostic difference but not yet sufficient to change physics. First verify preprocessed CMD/PAR files differ only by intended NtSide trap concentration.
+
+
 ## 2026-09-26 — Ju Subin baseline split-run result
 
 **OBSERVED:** 주수빈이 학교에서 이전에 실행해 둔 Common Baseline split run을 확인함.

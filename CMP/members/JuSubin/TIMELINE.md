@@ -1,5 +1,17 @@
 # Ju Subin Timeline
 
+## 2026-09-26 — Today-only baseline/PPT deadline strategy
+
+- **작성자:** ChatGPT
+- **작업자:** 주수빈
+- **상태:** DECISION / PRESENTATION PLAN
+- **사용자 제약:** 오늘 안에 Common Baseline을 정리하고 PPT 제작까지 완료해야 함.
+- **판단:** full 5 V NtSide=1e18 SDevice run은 과거 runtime 기준 수일이 필요하므로 오늘 완료를 기다리는 것은 현실적이지 않음.
+- **오늘 목표 재정의:** final source freeze + structural/code validation + NtSide=1e18 initialization/early-solve sanity check + historical NtSide=0 completed reference를 확보하고 PPT에는 full trap-on electrical validation을 ongoing으로 명확히 구분.
+- **금지:** 미완료 NtSide=1e18을 완료 결과처럼 제시하지 않음.
+- **다음:** 수정 SDevice로 Node12 early initialization 확인 → pp cmd/par sanity check → PPT baseline evidence 정리.
+
+
 ## 2026-09-26 — Node12 최소 수정안 확정
 
 - **작성자:** ChatGPT

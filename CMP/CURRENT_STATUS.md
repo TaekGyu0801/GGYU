@@ -1,5 +1,14 @@
 # Current Status
 
+## 2026-09-26 — Full source resolves the Node 6/12 preprocessing discrepancy
+
+The current full SDevice source contains no NtSide-dependent conditional preprocessing. `@NtSide@` appears in trap concentration only. The current source always includes `Thermionic`, species-selected Mg incomplete ionization, and the expanded Mg/quasi-Fermi Plot fields.
+
+Therefore the successful Node 6 generated deck (which lacked these lines) is almost certainly from an earlier source revision and was not regenerated when Node 12 was rerun. Existing Node 6 output remains a valid result for its historical deck, but it is not a clean same-source control for the current Node 12.
+
+The current Node 12 initialization failure remains strongly correlated with Mg incomplete-ionization setup in InGaN. Next evidence required: `pp12_des.par` Ionization/Magnesium/InGaN definitions.
+
+
 ## 2026-09-26 — Node 12 failure reproducible on rerun
 
 The NtSide=1e18 Node 12 was rerun alone and failed again in the same manner. This makes a transient scheduler/license glitch less likely and points to a reproducible input/configuration problem for Node 12.

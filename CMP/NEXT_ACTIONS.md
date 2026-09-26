@@ -1,5 +1,22 @@
 # Next Actions
 
+## Ju Subin — verify parameter-dependent preprocessing before any edit
+
+1. Do **not** edit the physics yet.
+2. Open the original SDevice source `sd_fdiv_des.cmd`.
+3. Search for:
+   - `NtSide`
+   - `Thermionic`
+   - `IncompleteIonization`
+   - `Dopants`
+   - `eQuasiFermiEnergy`
+   - `pMagnesiumActiveConcentration`
+   - `#if`, `#else`, `#endif` or other Workbench preprocessing expressions
+4. Capture the relevant source block(s).
+5. Confirm Node 6 and Node 12 Job Logs both preprocess the same source path and compare timestamps.
+6. Only after identifying why NtSide changes unrelated preprocessed lines should a minimal fix be considered.
+
+
 ## Ju Subin — clean NtSide-only rerun (2026-09-26)
 
 1. Edit the original SDevice source (not generated `pp12_des.cmd`).

@@ -1,5 +1,18 @@
 # Ju Subin Timeline
 
+## 2026-09-26 — NtSide=0 성공 run 최종 확인 및 Node 12 차이점 강화
+
+- **작성자:** ChatGPT
+- **작업자:** 주수빈
+- **상태:** CONFIRMED (NtSide=0 completion) / UNRESOLVED (NtSide=1e18 failure)
+- **근거:** 성공 Node 6 `n6_des.log` 마지막 화면.
+- **NtSide=0 성공:** anode 5.000 V까지 도달, curve trace finished, `n6_des.tdr` 저장 완료, `Sentaurus Device simulation finished`, `Good Bye !` 확인.
+- **wallclock:** 약 235312.35 s ≈ 65.4 h ≈ 2.7 days.
+- **비교:** 성공 Node 6 log에는 `mMagnesiumActiveConcentration` 검색 결과가 없다고 사용자 확인. 실패 Node 12는 해당 InGaN incomplete-ionization 메시지 반복 직후 종료.
+- **해석:** 해당 메시지는 강한 차이점/원인 후보가 되었으나, split deck이 NtSide 외에 달라졌을 가능성을 먼저 배제해야 함.
+- **다음:** `pp6_des.cmd` vs `pp12_des.cmd`, 그리고 `pp6_des.par` vs `pp12_des.par` 비교. 의도된 차이가 trap Conc 0 ↔ 1e18뿐인지 확인.
+
+
 ## 2026-09-26 — GitHub 자동 미러 동기화 구축
 
 - **작성자:** ChatGPT

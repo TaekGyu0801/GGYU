@@ -1,5 +1,21 @@
 # Next Actions
 
+## Ju Subin — deadline-driven plan for today
+
+1. Apply the final SDevice fix and preprocess both NtSide=0 and 1e18.
+2. Verify generated PAR files are identical and CMD differs only in NtSide-controlled trap Conc.
+3. Run NtSide=1e18 only long enough to verify initialization/initial Poisson-Coupled solve proceeds without the prior immediate exit.
+4. Preserve historical completed NtSide=0 as reference evidence, but do not use it as final quantitative control against the new revision.
+5. Build PPT today around:
+   - baseline structure/parameter provenance
+   - verified geometry/doping
+   - finalized common SDevice model
+   - historical successful 5 V control as implementation reference
+   - current-revision NtSide=1e18 startup validation
+   - full same-revision NtSide=0 vs 1e18 transient comparison marked ongoing.
+6. Schedule full same-revision 0/1e18 runs after the presentation deadline.
+
+
 ## Ju Subin — exact code edit for Mg incomplete ionization
 
 - Delete global:

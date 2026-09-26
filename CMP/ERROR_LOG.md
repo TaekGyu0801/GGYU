@@ -1,3 +1,23 @@
+## 2026-09-26 — Mg incomplete-ionization parameter scope mismatch
+
+Evidence:
+- `pp12_des.par` defines:
+  - `Material="GaN"`
+  - `Ionization { Species("pMagnesiumActiveConcentration") { E_0=0.2, alpha=8e-9, g=4.0, Xsec=1e-14 } }`
+- No InGaN Ionization block is present.
+- Failed Node 12 log reports missing incomplete-ionization parameters for an Mg-related species in InGaN QW regions immediately before SDevice exits.
+- Current source activates `IncompleteIonization(Dopants="pMagnesiumActiveConcentration")` globally.
+
+Most likely cause:
+Incomplete ionization is being invoked in InGaN regions without material/species ionization parameters.
+
+Proposed fix:
+Remove the global incomplete-ionization activation and enable it only in p-GaN regions where the GaN Mg ionization parameters apply.
+
+Status: **CAUSE STRONGLY IDENTIFIED / FIX PROPOSED; requires rerun confirmation**
+
+---
+
 ## 2026-09-26 — Current source has no NtSide conditional; Node 6 is stale relative to current source
 
 Confirmed from full current SDevice source:

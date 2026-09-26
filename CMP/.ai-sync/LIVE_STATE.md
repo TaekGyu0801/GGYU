@@ -1,5 +1,15 @@
 # LIVE AI STATE
 
+## 2026-09-26 — Node 6/12 exact diff found
+
+- Successful Node 6 and failed Node 12 are not NtSide-only decks.
+- Extra Node12-only changes: `Thermionic`, species-selected `IncompleteIonization`, and four extra Plot fields.
+- Intended difference: trap Conc 0 vs 1e18.
+- Current failure therefore cannot yet be blamed on NtSide=1e18 alone.
+- Proposed next: restore Node 6 Physics/Plot in original SDevice source, keep only NtSide=1e18, verify preprocessed diff, rerun.
+- Status: PROPOSED FIX / UNCONFIRMED until rerun.
+
+
 ## 2026-09-26 — failed Node 12 deck captured
 
 - Node 12 has `Thermionic` and `IncompleteIonization(Dopants="pMagnesiumActiveConcentration")`.

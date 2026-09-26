@@ -1,5 +1,17 @@
 # Ju Subin Timeline
 
+## 2026-09-26 — Node 12 des.log 종료 지점 확인
+
+- **작성자:** ChatGPT
+- **작업자:** 주수빈
+- **상태:** OBSERVED / UNRESOLVED
+- **근거:** `n12_des.log` 마지막 구간.
+- **관찰:** 로그는 InGaN QW region의 `mMagnesiumActiveConcentration` incomplete-ionization parameter 메시지 반복 직후 license check-in으로 끝남. 정상 solve 시작/완료 로그는 없음.
+- **해석:** 해당 메시지가 단순 warning인지 SDevice initialization을 중단시킨 configuration error인지 아직 확정 불가.
+- **가장 강한 판별법:** 성공한 `NtSide=0` node의 대응 `*_des.log`에서 같은 메시지가 존재하는지 비교. 성공 node에도 동일하면 원인 가능성 낮음; failed node에만 있으면 핵심 원인 후보.
+- **다음:** 성공 node log 비교 후 필요 시 `n12_des.sta` 확인.
+
+
 ## 2026-09-26 — Node 12 Find Error 결과: explicit fatal 없음
 
 - **작성자:** ChatGPT

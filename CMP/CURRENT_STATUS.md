@@ -1,5 +1,17 @@
 # Current Status
 
+## 2026-09-26 — Correction: Node 6/12 came from the same source split
+
+User explicitly confirmed that Node 6 and Node 12 were generated from the same SDevice source and only `NtSide` was split (0 vs 1e18).
+
+Therefore the observed pp6/pp12 differences must not be interpreted as proven manual/source-deck drift. Plausible mechanisms now include:
+- NtSide-dependent preprocessor conditionals in the source,
+- parameter-dependent macro expansion,
+- or node/input version/cache differences.
+
+No physics/model line should be removed yet. The next diagnostic is to inspect the original `sd_fdiv_des.cmd` around NtSide and any conditional preprocessing.
+
+
 ## 2026-09-26 — Ju Subin Node 6/12 deck diff resolved a major confounder
 
 Direct comparison of the successful Node 6 and failed Node 12 preprocessed Physics/Plot blocks confirms that the two runs differ by more than NtSide:

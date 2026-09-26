@@ -1,3 +1,22 @@
+## 2026-09-26 — Node 12 rerun reproduces exit failure
+
+Observed:
+- Node 12 rerun alone.
+- Failure reproduced.
+
+Interpretation:
+- Reproducible, not obviously a one-off execution glitch.
+- Given same-source NtSide split, focus shifts to parameter-dependent preprocessing or stale generated-node provenance.
+- pp6 vs pp12 differences remain diagnostic evidence but not proof of manual source differences.
+
+Next:
+- Inspect original source conditionals around NtSide.
+- Verify whether Node 6 was preprocessed from the same current source revision as Node 12.
+
+Status: **REPRODUCIBLE / ROOT CAUSE UNRESOLVED**
+
+---
+
 ## 2026-09-26 — Correction to Node 6/12 deck-drift interpretation
 
 User confirmed:

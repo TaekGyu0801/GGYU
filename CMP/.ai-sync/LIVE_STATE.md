@@ -1,5 +1,13 @@
 # LIVE AI STATE
 
+## 2026-09-26 — deadline mode
+
+- User needs baseline + PPT today.
+- Full 5 V NtSide=1e18 completion is not expected today based on historical multi-day runtime.
+- Today deliverable: source/parameter freeze, clean preprocess comparison, successful trap-on initialization/early solve, and presentation-ready baseline evidence.
+- Full same-revision NtSide=0 vs 1e18 electrical comparison remains pending and must not be presented as completed.
+
+
 ## 2026-09-26 — exact fix selected
 
 - Proposed minimal edit: move Mg incomplete ionization from global Physics to p-GaN regions only.

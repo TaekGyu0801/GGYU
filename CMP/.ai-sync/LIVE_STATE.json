@@ -4,7 +4,7 @@
   "phase": "Phase 0 — Common Baseline validation",
   "task": "SDevice2 to SVisual2 TDR output/linkage debugging",
   "status": "UNRESOLVED",
-  "blocker": "Node 12 failed, but Node 6/12 preprocessed decks differ beyond NtSide; clean NtSide-only rerun required",
+  "blocker": "Same-source NtSide split produced unexpected pp6/pp12 Physics/Plot differences; preprocessing cause unresolved",
   "parallelWork": {
     "worker": "주수빈",
     "status": "OBSERVED",
@@ -83,11 +83,15 @@
       "nextAction": "Diff pp6_des.cmd/par vs pp12_des.cmd/par; verify only intended trap Conc differs before modifying physics"
     },
     "node6Node12Diff": {
-      "status": "OBSERVED",
-      "node6": "no Thermionic; plain IncompleteIonization; no Mg-specific/quasi-Fermi-energy Plot extras; Conc=0",
-      "node12": "Thermionic; IncompleteIonization(Dopants=pMagnesiumActiveConcentration); extra e/hQuasiFermiEnergy and Mg Plot fields; Conc=1e18",
-      "conclusion": "not a true NtSide-only split",
-      "proposedFix": "restore Node6 Physics/Plot in original SDevice source, keep only NtSide=1e18, re-preprocess and rerun"
+      "status": "USER_CONFIRMED_SAME_SOURCE",
+      "sourceRelationship": "same SDevice source; only NtSide split 0 vs 1e18",
+      "correction": "prior source-deck-drift conclusion retracted",
+      "possibleMechanisms": [
+        "NtSide-dependent preprocessor conditionals",
+        "parameter-dependent macro expansion",
+        "node/input version or cache behavior"
+      ],
+      "nextAction": "inspect original sd_fdiv_des.cmd for NtSide-dependent preprocessing before any physics edits"
     }
   },
   "nodes": {

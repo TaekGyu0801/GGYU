@@ -1,5 +1,18 @@
 # Ju Subin Timeline
 
+## 2026-09-26 — pp12_des.par confirms Mg incomplete-ionization material-scope mismatch
+
+- **작성자:** ChatGPT
+- **작업자:** 주수빈
+- **상태:** OBSERVED / PROPOSED FIX
+- **근거:** 사용자가 Node 12의 전체 `pp12_des.par` 화면 제공.
+- **parameter file 내용:** `Material="GaN"`의 `Ionization` block에 `Species("pMagnesiumActiveConcentration")`만 정의됨 (E_0=0.2, alpha=8e-9, g=4.0, Xsec=1e-14). InGaN/AlGaN Ionization block은 없음.
+- **실패 log와 결합한 판단:** current source의 global `IncompleteIonization(Dopants="pMagnesiumActiveConcentration")`가 전체 device에 활성화된 상태에서 InGaN QW에서 Mg-related species의 ionization parameter가 없다는 메시지 직후 SDevice가 종료됨. material scope mismatch가 가장 강한 root-cause 후보.
+- **최소 수정안:** global IncompleteIonization을 제거하고 Mg가 실제 p-GaN에 필요한 `Clean_pGaN`, `DmgL_pGaN`, `DmgR_pGaN`에만 region-specific으로 적용. Thermionic/trap Et/sigma/NtSide/Plot은 건드리지 않음.
+- **검증:** 수정 후 Node12 재-preprocess → 초기화 통과/Poisson solve 진입 여부 확인. 통과 시 원인 확인 강화.
+- **공정 비교 주의:** 최종 baseline freeze 후 NtSide=0과 1e18은 동일 final source revision으로 다시 비교해야 함.
+
+
 ## 2026-09-26 — Current full SDevice source inspected; stale Node 6 provenance identified
 
 - **작성자:** ChatGPT

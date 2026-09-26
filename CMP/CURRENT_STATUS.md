@@ -1,5 +1,16 @@
 # Current Status
 
+## 2026-09-26 — Ju Subin Node 6/12 deck diff resolved a major confounder
+
+Direct comparison of the successful Node 6 and failed Node 12 preprocessed Physics/Plot blocks confirms that the two runs differ by more than NtSide:
+
+- Node 6: no `Thermionic`; plain `IncompleteIonization`; no Mg-specific/quasi-Fermi-energy Plot fields.
+- Node 12: `Thermionic`; `IncompleteIonization(Dopants="pMagnesiumActiveConcentration")`; extra `eQuasiFermiEnergy`, `hQuasiFermiEnergy`, `pMagnesiumActiveConcentration`, `pMagnesiumMinusConcentration` Plot fields.
+- Trap concentration: 0 vs 1e18 as intended.
+
+Therefore the failed Node 12 is **not a clean NtSide-only comparison**. The immediate recovery plan is to restore the successful Node 6 Physics/Plot configuration in the original SDevice source and vary only the trap concentration for the 1e18 rerun. No claim is made yet that Thermionic or species-selected incomplete ionization is intrinsically invalid.
+
+
 ## 2026-09-26 — Failed Node 12 preprocessed deck differs from synchronized baseline
 
 User supplied the failed Node 12 preprocessed Physics/Plot section. It contains:

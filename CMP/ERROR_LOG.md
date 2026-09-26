@@ -1,3 +1,20 @@
+## 2026-09-26 — Node 12 log terminates after incomplete-ionization messages
+
+Observed:
+- `n12_des.log` ends immediately after repeated messages that `mMagnesiumActiveConcentration` has no incomplete-ionization parameters in InGaN QW regions.
+- The tool then checks licenses back in.
+- No normal solver start/completion sequence is visible.
+
+Interpretation: **UNRESOLVED**.
+This message can no longer be assumed harmless solely from formatting; its causal role must be tested against the successful NtSide=0 branch.
+
+Highest-value comparison:
+- Search the successful NtSide=0 node's `*_des.log` for `mMagnesiumActiveConcentration`.
+- If identical messages occur and the successful run proceeds, they are not the failure root cause.
+- If absent in the successful branch, investigate parameter/material setup differences in the failed branch.
+
+---
+
 ## 2026-09-26 — Node 12 Find Error contains warnings only
 
 Observed:

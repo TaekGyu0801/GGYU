@@ -1,5 +1,14 @@
 # LIVE AI STATE
 
+## 2026-09-26 — Node 12 Find Error exhausted
+
+- Find Error output reaches `**** End` with warnings only; no explicit fatal/root cause visible.
+- The warnings concern E0 anisotropy and missing Mg incomplete-ionization parameters in InGaN.
+- Their causal role is unproven.
+- Highest-priority next evidence: `n12_des.log` bottom, then `n12_des.sta`.
+- Status remains UNRESOLVED.
+
+
 ## 2026-09-26 — Node 12 failure location narrowed further
 
 - Workbench preprocessing: successful.

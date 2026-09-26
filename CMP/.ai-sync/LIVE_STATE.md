@@ -1,5 +1,16 @@
 # LIVE AI STATE
 
+## 2026-09-26 — Mg incomplete-ionization mismatch found
+
+- pp12_des.par has Mg ionization parameters only under Material=GaN for pMagnesiumActiveConcentration.
+- No InGaN ionization parameters are present.
+- Node12 fails immediately after missing Mg incomplete-ionization parameter messages in InGaN QWs.
+- Current source activates Mg incomplete ionization globally.
+- Strong root-cause candidate: model/parameter material-scope mismatch.
+- Proposed minimal fix: region-scope IncompleteIonization to Clean/DmgL/DmgR pGaN only; keep traps/Thermionic/Plot unchanged.
+- Confirmation requires Node12 re-preprocess + initialization rerun.
+
+
 ## 2026-09-26 — full source inspection result
 
 - Current SDevice source has no NtSide-dependent conditional preprocessing.

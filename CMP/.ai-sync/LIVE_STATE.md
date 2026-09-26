@@ -1,5 +1,16 @@
 # LIVE AI STATE
 
+## 2026-09-26 — full source inspection result
+
+- Current SDevice source has no NtSide-dependent conditional preprocessing.
+- NtSide only controls trap Conc.
+- Current source always includes Thermionic + species-selected Mg IncompleteIonization + expanded Plot.
+- Successful Node6 pp6 lacks those items, so Node6 is historical/stale relative to current source revision.
+- Existing Node6 and current Node12 are not a clean same-source NtSide-only comparison.
+- Node12 failure remains strongly tied to Mg incomplete-ionization initialization in InGaN.
+- Next: inspect pp12_des.par Ionization/Magnesium/InGaN blocks before editing or rerunning.
+
+
 ## 2026-09-26 — Node 12 failure reproduced
 
 - Node 12-only rerun fails again.

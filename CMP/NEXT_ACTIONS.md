@@ -1,5 +1,22 @@
 # Next Actions
 
+## Ju Subin — highest-priority deck diff (2026-09-26)
+
+Before changing `IncompleteIonization`, trap parameters, or solver settings:
+
+1. Compare `pp6_des.cmd` and `pp12_des.cmd`.
+2. Compare `pp6_des.par` and `pp12_des.par`.
+3. Expected fair-split difference: only `NtSide`-controlled trap `Conc` values (0 vs 1e18).
+4. Pay special attention to:
+   - global `IncompleteIonization`
+   - QW/InGaN region-specific Physics blocks
+   - Mg doping species references
+   - parameter-file includes/overrides
+   - trap blocks for DmgL/R_QW1~QW4
+5. If CMD/PAR are otherwise identical, investigate why nonzero traps activate the InGaN incomplete-ionization failure path.
+6. If additional differences exist, fix deck drift first.
+
+
 ## Ju Subin — compare failed Node 12 against successful NtSide=0 log (2026-09-26)
 
 1. Open the successful `NtSide=0` SDevice node.

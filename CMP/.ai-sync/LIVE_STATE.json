@@ -4,7 +4,7 @@
   "phase": "Phase 0 — Common Baseline validation",
   "task": "SDevice2 to SVisual2 TDR output/linkage debugging",
   "status": "UNRESOLVED",
-  "blocker": "Node 12 NtSide=1e18 failure reproducible; same-source split produced different pp decks",
+  "blocker": "Current Node12 fails during Mg incomplete-ionization initialization; successful Node6 is from an older generated source revision",
   "parallelWork": {
     "worker": "주수빈",
     "status": "OBSERVED",
@@ -97,6 +97,17 @@
       "status": "REPRODUCIBLE_FAILURE",
       "interpretation": "not likely a one-off runtime glitch",
       "nextAction": "inspect original source NtSide conditionals and node preprocess provenance"
+    },
+    "fullSourceInspection": {
+      "status": "OBSERVED",
+      "ntSideUsage": "trap Conc only; no NtSide conditional preprocessing",
+      "currentSourceFeatures": [
+        "Thermionic",
+        "IncompleteIonization(Dopants=pMagnesiumActiveConcentration)",
+        "expanded Mg/quasi-Fermi Plot fields"
+      ],
+      "node6Provenance": "historical/stale generated deck relative to current source",
+      "nextAction": "inspect pp12_des.par Ionization/Magnesium/InGaN definitions"
     }
   },
   "nodes": {

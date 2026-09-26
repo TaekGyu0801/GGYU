@@ -1,3 +1,17 @@
+## 2026-09-26 — Project Log does not expose root cause
+
+Project Log shows:
+- Node 12 SDevice starts normally.
+- It exits abnormally shortly afterward.
+- Scheduler marks node failed.
+- `gsub exits with status 1`.
+
+This is a wrapper/scheduler-level symptom, not the internal SDevice root-cause message.
+
+Combined with prior evidence, the strongest current root-cause candidate remains the Mg incomplete-ionization parameter/material-scope mismatch in InGaN, but this Project Log alone does not prove it.
+
+---
+
 ## 2026-09-26 — Existing Node6 vs current Node12 is not an apples-to-apples baseline comparison
 
 New evidence:

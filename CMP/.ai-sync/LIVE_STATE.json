@@ -4,7 +4,7 @@
   "phase": "Phase 0 — Common Baseline validation",
   "task": "SDevice2 to SVisual2 TDR output/linkage debugging",
   "status": "UNRESOLVED",
-  "blocker": "JuSubin NtSide=1e18 baseline run failed; exact log cause not yet identified",
+  "blocker": "NtSide=1e18 Node 12 exits during SDevice initialization; success Node 6 lacks Mg incomplete-ionization messages",
   "parallelWork": {
     "worker": "주수빈",
     "status": "OBSERVED",
@@ -77,10 +77,10 @@
     },
     "splitRunResult": {
       "date": "2026-09-26",
-      "NtSide0": "completed",
-      "NtSide1e18": "failed",
-      "cause": "UNRESOLVED",
-      "nextAction": "Inspect failed SDevice node *.err and last 50-100 lines of *.out before changing baseline parameters."
+      "NtSide0": "CONFIRMED completed to 5 V; n6_des.tdr written; wallclock ~235312 s (~65.4 h)",
+      "NtSide1e18": "failed with SDevice exit(1) during initialization",
+      "keyDifference": "mMagnesiumActiveConcentration incomplete-ionization messages appear in failed Node 12 but not in successful Node 6",
+      "nextAction": "Diff pp6_des.cmd/par vs pp12_des.cmd/par; verify only intended trap Conc differs before modifying physics"
     }
   },
   "nodes": {

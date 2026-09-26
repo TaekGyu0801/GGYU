@@ -1,5 +1,14 @@
 # Next Actions
 
+## Ju Subin — after Find Error shows warnings only (2026-09-26)
+
+1. Open Node 12 output file `n12_des.log`.
+2. Go to the very bottom and capture the final 50–100 lines.
+3. Search for `Error`, `Fatal`, `abort`, `exception`, `signal`, `trap`, `memory`.
+4. If `n12_des.log` also ends without a clear cause, open `n12_des.sta`.
+5. Keep Nt/Et/sigma/geometry unchanged until the first actual failure message is identified.
+
+
 ## Ju Subin — Node 12 SDevice exit(1) next step (2026-09-26)
 
 Preprocessing succeeded and SDevice itself returned `exit(1)`.

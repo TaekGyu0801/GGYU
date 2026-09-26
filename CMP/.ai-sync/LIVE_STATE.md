@@ -1,5 +1,14 @@
 # LIVE AI STATE
 
+## 2026-09-26 — correction: same source, NtSide-only split confirmed by user
+
+- User states Node 6 and Node 12 used the same source; only NtSide=0 vs 1e18 was split.
+- Prior proposed physics cleanup is retracted pending source inspection.
+- pp6/pp12 differences may come from NtSide-dependent preprocessing or node/input version behavior.
+- Do not edit Thermionic/IncompleteIonization/Plot yet.
+- Next: inspect original sd_fdiv_des.cmd for parameter-dependent conditionals and source provenance.
+
+
 ## 2026-09-26 — Node 6/12 exact diff found
 
 - Successful Node 6 and failed Node 12 are not NtSide-only decks.

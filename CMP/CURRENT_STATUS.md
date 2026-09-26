@@ -1,5 +1,17 @@
 # Current Status
 
+## 2026-09-26 — Ju Subin baseline split-run result
+
+**OBSERVED:** 주수빈이 학교에서 이전에 실행해 둔 Common Baseline split run을 확인함.
+
+- `NtSide=0`: 정상 완료
+- `NtSide=1e18`: failed
+
+현재는 1e18 실패 원인이 아직 식별되지 않았다. 0 조건이 완료됐다는 사실은 동일 flow가 최소한 trap-off 조건에서 실행 가능함을 보여주지만, 이것만으로 1e18 실패가 trap physics 자체 때문이라고 확정할 수는 없다.
+
+**Immediate diagnostic:** 실패한 1e18 node의 `*.err` 전체와 `*.out` 마지막 50~100줄에서 최초 error/fatal/convergence failure를 확인한다. 원인 확인 전 Common Baseline의 Nt/Et/sigma/5 nm damage width/epitaxy를 변경하지 않는다.
+
+
 Last synchronized: 2026-09-21
 
 ## Current stage

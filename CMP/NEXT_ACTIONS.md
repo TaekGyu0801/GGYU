@@ -1,5 +1,17 @@
 # Next Actions
 
+## Ju Subin — exact code edit for Mg incomplete ionization
+
+- Delete global:
+```
+IncompleteIonization(
+  Dopants = "pMagnesiumActiveConcentration"
+)
+```
+- Add region-scoped activation to `Clean_pGaN`, `DmgL_pGaN`, `DmgR_pGaN` only.
+- Change nothing else before rerun.
+
+
 ## Ju Subin — freeze one baseline revision, then rerun both branches
 
 1. Keep historical Node6 as a reference result only; do not treat it as the final control for current Node12.

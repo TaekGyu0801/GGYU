@@ -1,5 +1,16 @@
 # LIVE AI STATE
 
+## 2026-09-28 — CRITICAL SOURCE SYNC GAP FOUND
+
+- GitHub Issue #7 and JuSubin timeline contain Final SDevice v1.2 progress.
+- Actual `CMP/tcad/CURRENT/sdevice2_defect_on.cmd` is still an older stale deck and does NOT contain the v1.2 intermediate TDR save workflow.
+- Gmail notifications are GitHub Issue #7 notifications and are consistent with the logged progress; they do not prove the actual code file was synchronized.
+- Do NOT overwrite CURRENT from snippets or memory.
+- Blocker: recover exact full user-provided Final SDevice v1.1/v1.2 source, then synchronize it.
+- Current final-code provenance is therefore UNRESOLVED until that exact source is committed.
+
+
+
 ## 2026-09-26 — deadline mode
 
 - User needs baseline + PPT today.

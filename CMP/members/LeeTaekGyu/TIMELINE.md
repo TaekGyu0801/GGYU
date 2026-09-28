@@ -1,5 +1,18 @@
 # Lee Taek Gyu Timeline
 
+## 2026-09-28 — NtSide=1e18 근거 수준 재검증 / 발표용 연구노트
+
+- **작성자:** ChatGPT
+- **작업자:** 이택규
+- **구분:** literature evidence / baseline parameter provenance
+- **상태:** CONFIRMED BOUNDARY
+- **확인:** Wu et al. (Micro and Nanostructures 177, 207542, 2023)는 양쪽 sidewall edge 5 nm 이내 acceptor-like trap 및 trap-density/energy-level sweep 방법을 직접 지지.
+- **중요 경계:** 현재 확인 가능한 근거만으로 Wu 논문이 NtSide=1e18 cm^-3를 보편적/직접 측정 정답값으로 확정했다고 주장하면 안 됨.
+- **해석:** CMP의 NtSide=1e18 cm^-3는 nominal Defect-ON calibration/sensitivity starting value로 유지. 다른 III-nitride MicroLED 수치 모델에서 1e18 cm^-3 규모 sidewall trap 사용 사례가 있어 order-of-magnitude plausibility는 있음.
+- **발표 표현:** "문헌 기반 plausible nominal calibration value이며 최종 결론은 NtSide sweep으로 검증한다."
+- **산출물:** 발표/Q&A용 paper-style PDF 연구노트 생성.
+
+
 ## 2026-09-28 — JuSubin/GitHub/Gmail sync audit
 
 - **작성자:** ChatGPT

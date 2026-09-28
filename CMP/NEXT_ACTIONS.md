@@ -1,5 +1,17 @@
 # Next Actions
 
+## 2026-09-28 — Highest priority sync repair
+
+1. Recover the exact full Final SDevice v1.1/v1.2 source from JuSubin's actual user-provided file/chat.
+2. Re-read `CMP/tcad/CURRENT/sdevice2_defect_on.cmd` immediately before write.
+3. Replace/update CURRENT only from that exact source; do not reconstruct from Issue summaries.
+4. Verify v1.2 contains intermediate visualization TDR saves near 4.0–4.975 V while leaving physics/trap/solver/0→5 V ramp unchanged relative to v1.1.
+5. Then preprocess both NtSide branches and confirm fair-comparison provenance.
+6. Until step 3 is complete, treat `tcad/CURRENT/sdevice2_defect_on.cmd` as stale and not authoritative for the latest JuSubin run.
+
+---
+
+
 ## Ju Subin — CES2027 selection presentation priority
 
 1. Build the presentation around the weakness identified in week 1: make the TCAD implementation path for Project A/B concrete and testable.

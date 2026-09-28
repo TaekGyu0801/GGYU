@@ -491,3 +491,19 @@
   - ΔV ≈ +0.051 V for NtSide=1e18 at the same raw 2D current
 - **해석:** sidewall trap 활성화 케이스가 같은 current를 만들기 위해 더 높은 anode voltage를 요구함. 이 결과는 1차 수정버전의 preliminary electrical effect이며 Final Baseline 검증 완료를 의미하지 않음.
 - **다음:** 동일 injected current 상태의 2D SRH/Radiative 비교가 필요. 현재 저장된 TDR이 5 V 상태만 포함한다면 해당 bias에서 별도 Plot/Save 또는 재실행 필요.
+
+
+---
+
+## 2026-09-28 — Final SDevice v1.2: intermediate TDR 저장 추가
+
+- **작성자:** ChatGPT
+- **작업자:** 주수빈
+- **구분:** TCAD code update / output-save control
+- **상태:** CONFIRMED (user-provided Final SDevice v1.1 기반 수정)
+- **변경 범위:** Physics / trap / solver / 0→5 V ramp는 그대로 유지하고, Transient 내부에 visualization-only `Plot(-Loadable ... NoOverWrite Time=(...))`만 추가.
+- **목적:** I–V에서 동일 injected current에 해당하는 각 case의 voltage를 추출한 뒤, 해당 bias에 가까운 2D SRH / Radiative / carrier / band map을 비교할 수 있도록 중간 spatial state 저장.
+- **저장 t 값:** 0.80, 0.84, 0.88, 0.92, 0.94, 0.96, 0.97, 0.98, 0.985, 0.99, 0.995.
+- **0→5 V linear goal 기준 대응 전압:** 4.0, 4.2, 4.4, 4.6, 4.7, 4.8, 4.85, 4.9, 4.925, 4.95, 4.975 V.
+- **5.0 V:** 기존 `Plot="@tdrdat@"` 최종 TDR을 사용하므로 중복 intermediate 5 V 저장은 생략.
+- **중요:** 현재 이미 약 2일째 실행 중인 Final run은 중단하지 않음. v1.2는 다음 NtSide/A-B run부터 적용.

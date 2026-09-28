@@ -173,5 +173,12 @@
     "Do not guess unsupported T-2022.03 Plot keywords.",
     "Do not treat a proposed fix as confirmed until Sentaurus output verifies it.",
     "Do not treat JuSubin-reported code finalization as GitHub-verified code correctness until the exact latest files are synchronized."
-  ]
+  ],
+  "source_sync_alert": {
+    "date": "2026-09-28",
+    "status": "UNRESOLVED",
+    "path": "CMP/tcad/CURRENT/sdevice2_defect_on.cmd",
+    "finding": "Issue #7 and JuSubin timeline record Final SDevice v1.2, but tcad/CURRENT still contains an older stale deck without v1.2 intermediate TDR saves.",
+    "next_action": "Recover exact full user-provided Final SDevice v1.1/v1.2 source and sync it; do not reconstruct from summaries."
+  }
 }

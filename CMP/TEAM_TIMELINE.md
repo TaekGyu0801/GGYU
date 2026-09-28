@@ -1,3 +1,15 @@
+## 2026-09-28 — Final SDevice v1.2 source-sync gap 발견
+
+- **작성자:** ChatGPT
+- **참여자:** 이택규 / 주수빈
+- **구분:** 공용 동기화 점검
+- **상태:** OBSERVED + UNRESOLVED
+- **내용:** JuSubin의 Issue #7 및 개인 타임라인에는 Final SDevice v1.2 수정 이력이 기록되어 있으나, 실제 `CMP/tcad/CURRENT/sdevice2_defect_on.cmd`는 오래된 버전으로 남아 있어 최신 실행 코드와 GitHub source-of-truth가 불일치함.
+- **주의:** Gmail에 도착한 내용은 Issue #7 알림이므로 연구 진행 로그 반영 여부는 확인할 수 있지만 실제 코드 파일 업로드 여부를 대신하지 않음.
+- **다음:** exact Final SDevice 전체 원문을 회수하여 CURRENT에 동기화하고 provenance를 재검증.
+
+---
+
 ## 2026-09-22 — CES2027 선발 발표 구성 착수
 
 - **작성자:** ChatGPT

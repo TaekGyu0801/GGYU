@@ -1,5 +1,22 @@
 # Current Status
 
+## 2026-09-28 — CRITICAL SYNC GAP: Ju Subin Final SDevice v1.2 is NOT in tcad/CURRENT
+
+**OBSERVED by Lee Taek Gyu session:** GitHub Issue #7 and JuSubin timeline record that Final SDevice v1.2 was prepared with intermediate visualization TDR saves, while preserving physics/traps/solver/0→5 V ramp.
+
+However, the actual source-of-truth file `CMP/tcad/CURRENT/sdevice2_defect_on.cmd` is still an older deck:
+- sidewall trap concentration is hard-coded as `Conc = 1e18`
+- global `IncompleteIonization` is still present
+- no v1.2 intermediate `Plot(... Time=(...))` saves are present
+- therefore this file is not the recorded Final SDevice v1.2 and should not be treated as current final code
+
+**BLOCKER:** the exact full user-provided Final SDevice v1.1/v1.2 source is not present in GitHub CURRENT. Do not reconstruct or overwrite it from Issue snippets. The exact full source must be recovered from the JuSubin chat/user file or re-uploaded, then synchronized verbatim/minimally patched.
+
+**Data status:** Issue #7 / Gmail notifications correctly reflect JuSubin's progress, but the executable CURRENT source file is stale.
+
+---
+
+
 ## 2026-09-26 — Presentation-ready baseline scope
 
 For today's deadline, the baseline can be considered **implementation-frozen / structurally validated** once the corrected current source preprocesses cleanly and the NtSide=1e18 branch passes initialization/early solve. It is **not yet fully electrically validated** until same-revision NtSide=0 and 1e18 full runs complete.

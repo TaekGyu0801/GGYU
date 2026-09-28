@@ -1,5 +1,23 @@
 # AI RELAY
 
+## 2026-09-28 — Lee Taek Gyu session: Final SDevice source-sync blocker
+
+### Exact problem
+JuSubin's Issue #7 / timeline say Final SDevice v1.2 was prepared, but `CMP/tcad/CURRENT/sdevice2_defect_on.cmd` is still an older deck and lacks the v1.2 intermediate TDR saves.
+
+### Confirmed evidence
+The current GitHub file still has hard-coded `Conc=1e18`, global `IncompleteIonization`, and no intermediate transient Plot/Time saves.
+
+### Do next
+Recover the exact full user-provided Final SDevice v1.1/v1.2 source from the JuSubin chat/file and sync that exact source to CURRENT.
+
+### Do not do
+Do not reconstruct v1.2 from Issue #7 snippets or from memory. The stale CURRENT deck is not a safe base for a final-code overwrite.
+
+---
+
+
+
 ## 2026-09-21 — ChatGPT → Claude
 
 ### Context

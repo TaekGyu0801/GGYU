@@ -472,3 +472,22 @@
 - **그 다음:** current full `pp6_des.cmd`의 Physics/Math와 old deck을 diff하고, old/current mesh statistics 비교.
 
 ---
+
+
+---
+
+## 2026-09-28 — 1차 수정 Baseline NtSide I–V 비교 및 동일-current 기준 전압 추출
+
+- **작성자:** ChatGPT
+- **작업자:** 주수빈
+- **구분:** Preliminary baseline validation / same-current comparison
+- **상태:** CONFIRMED (SVisual curve + Tcl extraction)
+- **대상:** 1차 수정버전 Baseline, NtSide=0 (dataset n6) vs NtSide=1e18 cm^-3 (dataset n12)
+- **관찰:** 동일 applied voltage에서 NtSide=1e18의 forward current가 NtSide=0보다 낮음. 따라서 5 V SRH map을 단순 비교하면 injection-level 차이가 섞임.
+- **동일 current 기준 선택:** I = 2e-11 (Sentaurus raw 2D TotalCurrent)
+- **Tcl ExtractVti 결과:**
+  - NtSide=0: V = 4.928 V
+  - NtSide=1e18: V = 4.979 V
+  - ΔV ≈ +0.051 V for NtSide=1e18 at the same raw 2D current
+- **해석:** sidewall trap 활성화 케이스가 같은 current를 만들기 위해 더 높은 anode voltage를 요구함. 이 결과는 1차 수정버전의 preliminary electrical effect이며 Final Baseline 검증 완료를 의미하지 않음.
+- **다음:** 동일 injected current 상태의 2D SRH/Radiative 비교가 필요. 현재 저장된 TDR이 5 V 상태만 포함한다면 해당 bias에서 별도 Plot/Save 또는 재실행 필요.

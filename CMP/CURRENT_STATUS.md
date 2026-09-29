@@ -1,3 +1,11 @@
+## 2026-09-29 — Ju Subin current run: one branch waiting, active branch progress unverified
+
+**OBSERVED from user screenshot:** the selected upper SDevice branch shows `Status: waiting` in Workbench Properties, so that branch has not begun SDevice computation. The lower branch's Node 19 visually appears active/running, but the graph view alone does not prove that SDevice is still advancing after three days.
+
+**Current blocker:** determine whether Node 19 is actively advancing or stalled, and why the other branch remains queued. Highest-value evidence is Node 19 Job Log bottom plus the last 30–50 lines and modification time of `n19_des.out`.
+
+Do not restart the run or change Nt/Et/sigma/geometry/solver physics until that evidence is checked.
+
 # Current Status
 
 ## 2026-09-28 — CRITICAL SYNC GAP: Ju Subin Final SDevice v1.2 is NOT in tcad/CURRENT

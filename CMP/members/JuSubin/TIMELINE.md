@@ -1,3 +1,13 @@
+## 2026-09-29 — Node 6 end-of-ramp failure risk assessment
+
+- **작업자:** 주수빈
+- **상태:** RESEARCH JUDGMENT / RUNNING
+- 현재 Node 6은 pseudo-time 약 0.93254(약 4.66 V)까지 진행했고, Newton 50회 초과 후 timestep cutback으로 재시도 중.
+- 이 상태는 즉시 fatal error를 의미하지 않으며, 캡처 시점에는 solver가 정상적으로 adaptive retry를 수행하고 있음.
+- 다만 마지막 고전압 구간에서 반복 비수렴이 지속되어 timestep이 `MinStep`까지 축소되거나 accepted progress가 사라지면 최종적으로 nonconvergence failure가 발생할 가능성은 남아 있음.
+- 현재 근거만으로 마지막까지 반드시 성공한다고 보장할 수는 없지만, 이미 high-bias 구간까지 진입했고 자동 cutback이 작동 중이므로 즉각적인 오류 징후로 보지는 않음.
+- 판별 기준: pseudo-time이 계속 증가하고 successful step이 간헐적으로라도 나오면 계속 진행; 동일 위치에서 장시간 정지하며 timestep이 계속 축소되면 failure risk 상승.
+
 ## 2026-09-29 — Active Node 6 output confirms ongoing solve with severe cutback
 
 - **작업자:** 주수빈

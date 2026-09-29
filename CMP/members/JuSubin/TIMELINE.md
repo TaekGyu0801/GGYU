@@ -1,3 +1,16 @@
+## 2026-09-29 — Active Node 6 output confirms ongoing solve with severe cutback
+
+- **작업자:** 주수빈
+- **상태:** OBSERVED / RUNNING BUT SLOW
+- **근거:** 사용자 제공 `Node 'n6' Output` / `n6_des.out` 화면.
+- pseudo-time 약 0.93254까지 진행했으며, 0→5 V ramp 기준 약 4.66 V 구간에 해당.
+- 한 BE step이 Newton iteration 50회를 넘겨 수렴하지 못해 reject됨.
+- SDevice가 자동으로 timestep을 약 8.67e-06으로 줄여 재시도 시작.
+- 해당 실패 step의 wallclock은 약 1244 s(약 20.7분), solve time 약 999 s.
+- 캡처 시점에는 hang이 아니라 adaptive timestep cutback 중이나, high-bias 수렴성이 나빠 전체 runtime이 크게 늘고 있음.
+- 직전 topology 화면만으로 active node를 Node 19로 추정했던 내용은 direct output 증거에 따라 Node 6으로 정정.
+- **다음:** `n6_des.out`에서 pseudo-time이 0.93255 이후 계속 증가하는지와 timestep 회복 여부 확인. 장시간 같은 위치 정지 또는 MinStep까지 지속 cutback일 때만 solver intervention 검토.
+
 ## 2026-09-29 — 3-day run status screenshot checked
 
 - **작업자:** 주수빈

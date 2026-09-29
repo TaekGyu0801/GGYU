@@ -1,3 +1,13 @@
+## 2026-09-29 — 3-day run status screenshot checked
+
+- **작업자:** 주수빈
+- **상태:** OBSERVED / RUNTIME BLOCKER
+- **근거:** 사용자 제공 Sentaurus Workbench 화면.
+- 선택된 상단 SDevice branch는 오른쪽 Properties에서 `Status: waiting` 확인. 즉 해당 branch는 아직 계산 시작 전 대기 상태.
+- 하단 branch의 Node 19는 Workbench topology상 실행 중 표시로 보이지만, 이 화면만으로 실제 solver가 계속 전진 중인지/hang인지 확정할 수 없음.
+- 따라서 현재 상태는 "두 branch 모두 3일 동안 계산 중"으로 해석하지 않음. 최소 한 branch는 scheduler/resource 대기 상태이며, 실행 중 branch의 실제 진행 여부는 Node 19 Job Log와 `n19_des.out` 마지막 timestamp/BE-step으로 확인해야 함.
+- **다음:** Node 19 선택 → Job Log bottom 및 `n19_des.out` 마지막 30~50줄 확인. 마지막 로그 시간이 현재에 가깝고 BE-step이 증가하면 정상 장시간 계산; 오래 멈춰 있으면 resource/hang 진단.
+
 # Ju Subin Timeline
 
 ## 2026-09-26 — Project A/B command-level implementation strategy refined

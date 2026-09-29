@@ -1,3 +1,11 @@
+## 2026-09-29 — Active baseline run confirmed alive; severe Newton cutback near 4.66 V
+
+**OBSERVED:** direct `n6_des.out` output shows the active job is Node 6. It has reached pseudo-time ≈0.93254, corresponding to ≈4.66 V for the 0→5 V linear transient ramp.
+
+A BE step exceeded 50 Newton iterations, was rejected, and SDevice immediately retried with a smaller timestep of about 8.67e-06. The failed attempt consumed about 1244 s wallclock (~20.7 min), including about 999 s solve time.
+
+Therefore the job is not hung at the captured moment. The current blocker is poor high-bias convergence causing repeated timestep cutbacks and potentially very long completion time. Do not abort or change baseline physics based on this screenshot alone.
+
 ## 2026-09-29 — Ju Subin current run: one branch waiting, active branch progress unverified
 
 **OBSERVED from user screenshot:** the selected upper SDevice branch shows `Status: waiting` in Workbench Properties, so that branch has not begun SDevice computation. The lower branch's Node 19 visually appears active/running, but the graph view alone does not prove that SDevice is still advancing after three days.

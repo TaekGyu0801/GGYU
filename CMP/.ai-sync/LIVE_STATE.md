@@ -1,3 +1,11 @@
+## 2026-09-29 — JuSubin 3-day Workbench status screenshot
+
+- OBSERVED: selected upper SDevice node reports `Status: waiting`; it has not started solving.
+- Lower branch Node 19 appears running in Workbench, but actual solver progress is not proven from topology alone.
+- Runtime blocker is now split into (1) scheduler/resource waiting for one branch and (2) unknown progress/hang status for the active branch.
+- Next evidence: Node 19 Job Log + last lines/timestamps of `n19_des.out`.
+- Do not abort/restart or modify baseline physics solely from this screenshot.
+
 # LIVE AI STATE
 
 ## 2026-09-28 — CRITICAL SOURCE SYNC GAP FOUND

@@ -1,3 +1,12 @@
+## 2026-09-29 — Ju Subin next check for active Node 6
+
+1. Leave Node 6 running for now.
+2. Reopen `n6_des.out` after additional runtime and confirm pseudo-time advances beyond ~0.93255.
+3. Check whether timestep recovers after successful steps or continues shrinking toward `MinStep`.
+4. If pseudo-time continues increasing, keep the run; this is slow convergence, not a hang.
+5. If the same pseudo-time persists for many hours or timestep repeatedly collapses without accepted progress, then diagnose solver settings/resource state before restarting.
+6. Do not change NtSide, Et, sigma, geometry, or other Common Baseline physics for this runtime symptom alone.
+
 ## 2026-09-29 — Ju Subin immediate run-status check
 
 1. Select Node 19 (the branch that appears active) in Workbench.

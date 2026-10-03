@@ -1,3 +1,37 @@
+## 2026-10-03 — Baseline freeze + runtime acceleration plan
+
+### Goal
+Create a baseline that is both scientifically defensible and fast enough for repeated DOE/sweeps.
+
+### Baseline reference
+- Use Copy x8 as the preferred latest reference.
+- Preserve its exact running source/preprocessed input before any edits.
+- Keep geometry, epitaxy, contacts, trap model, Nt/Et/sigma, recombination models, Mg incomplete-ionization setup, heterojunction physics, and output definitions frozen during runtime optimization.
+
+### Immediate actions
+1. Stop/retire Copy x7 after preserving provenance, because x6/x7 are semantically duplicate active calculations.
+2. Keep one v1.1 historical reference if desired (x6) and keep x8 as the latest v1.2 reference.
+3. Build a separate FAST_BASELINE branch cloned from x8; never edit the live x8 directory.
+4. Optimize numerics in controlled short benchmarks, one group at a time:
+   A. Newton iteration/cutback policy
+   B. bias-step strategy and staged ramp
+   C. ErrRef / convergence tolerance sensitivity
+   D. mesh reduction only outside MQW, 5 nm sidewall damage, and heterointerfaces
+5. For each candidate, compare against x8 at the same bias/current:
+   - I-V / Vf
+   - total current
+   - integrated sidewall SRH
+   - MQW radiative recombination / IQE proxy
+   - spatial carrier/current distribution
+   - convergence failures / cutbacks
+   - wallclock per accepted step
+6. Accept a faster deck only if electrical/physical outputs remain within a predefined tolerance versus the reference.
+7. Once accepted, run the frozen FAST_BASELINE independently on JuSubin and LeeTaekGyu accounts before Project A/B divergence.
+
+### Current observed runtime bottleneck
+- High-bias Newton stagnation near RHS ~1e-3 causes 40–50 iteration failures, >1000 s wasted per rejected step, followed by timestep cutback.
+- This is the first optimization target; output TDR saving is secondary.
+
 ## 2026-10-03 — next actions after identifying Copy x8 as latest useful baseline revision
 
 1. Preserve the exact Copy x8 active-run bundle before any edits:

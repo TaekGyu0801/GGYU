@@ -1,3 +1,14 @@
+## 2026-10-03 — Copy x6 vs x7 semantic mesh identity confirmed
+
+- 작업자: 이택규
+- 상태: CONFIRMED
+- Copy x6 and x7 use identical pp1_dvs.cmd, identical pp6_des.cmd, and identical pp6_des.par.
+- Mesh logs show the same 138137 vertices, 274946 elements, and max connectivity 9.
+- n1_msh.log differences are limited to process ID and mesh-generation timing/rate.
+- Therefore x6 and x7 are semantically the same device/mesh/solver input for the active SDevice run; differing TDR binary hashes are non-physical serialization/metadata differences.
+- Operational conclusion: x6 and x7 are duplicate active computations. Since x6 is farther progressed, keep x6 if one v1.1 reference is desired and stop x7 after preserving provenance.
+- x8 remains the preferred latest v1.2 reference with intermediate TDR snapshots.
+
 ## 2026-10-03 — correction: Copy x6 vs x7 SDE inputs are identical
 
 - 작업자: 이택규

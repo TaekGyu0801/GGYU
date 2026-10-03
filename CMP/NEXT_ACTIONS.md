@@ -1,3 +1,18 @@
+## 2026-10-03 — next actions after identifying Copy x8 as latest useful baseline revision
+
+1. Preserve the exact Copy x8 active-run bundle before any edits:
+   - sd_fdiv_des.cmd
+   - pp6_des.cmd / pp6_des.par
+   - n1_msh.tdr hash
+   - n6_des.out/log/sta/err
+   - intermediate n6_inter_*.tdr inventory
+2. Confirm Copy x6 vs Copy x7 source differences to document prior-revision changes.
+3. Treat Copy x8 as the preferred latest reference because x7/x8 have identical source/grid/par and x8 differs only by intermediate TDR saves.
+4. Copy x7 is numerically redundant with x8 for device physics; after preserving provenance, consider stopping x7 to free compute/license resources while keeping x8 running.
+5. Do not stop Copy x6 until its source/grid differences vs x7 are documented and its value as historical reference is decided.
+6. Create a separate numerical-optimization branch from Copy x8 exact source; do not edit the running directory in place.
+7. Benchmark runtime changes with frozen physics/geometry/traps before launching another multi-day full run.
+
 ## Lee Taek Gyu — runtime optimization before another full-week baseline run (2026-10-03)
 
 1. Recover the exact SDevice source currently/routinely used by JuSubin (Final v1.1/v1.2); do not optimize the stale GitHub CURRENT deck.

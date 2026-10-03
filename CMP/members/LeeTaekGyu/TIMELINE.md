@@ -1,3 +1,15 @@
+## 2026-10-03 — active run comparison from terminal
+
+- 작업자: 이택규
+- 상태: OBSERVED
+- semi437의 세 SDevice run을 직접 비교함.
+- 첫 번째와 두 번째 run은 pp6_des.cmd와 pp6_des.par SHA-256이 각각 동일하여 preprocessed SDevice command/parameter가 동일함.
+- 첫 번째 진행: pseudo-time 약 0.94147, anode 약 4.707 V.
+- 두 번째 진행: pseudo-time 약 0.92964, anode 약 4.648 V.
+- 세 번째 run은 pp6_des.par은 동일하지만 pp6_des.cmd 해시가 다르고 intermediate TDR 파일들이 존재함. 진행은 pseudo-time 약 0.92647, anode 약 4.632 V.
+- 세 run 모두 고전압 구간에서 Newton iteration 정체와 timestep cutback이 runtime 병목으로 관찰됨.
+- 다음: 첫 번째와 세 번째 pp6_des.cmd exact diff, grid input hash 확인.
+
 ## 2026-10-03 — semi437 3 active baseline runs: exact pp6 hash/progress comparison
 
 - **작성자:** ChatGPT

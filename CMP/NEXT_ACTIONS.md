@@ -1,3 +1,35 @@
+## 2026-10-03 — ABSTRACT-DEADLINE FAST TRACK
+
+### Deadline context
+논문 초록을 2026-10 내 제출해야 하므로 validation scope를 단계화한다.
+
+### Phase 1 — Minimum defensible baseline (immediate priority)
+Goal: scientific baseline + runtime reduction sufficient to start Project A/B.
+Required before A/B:
+- Copy x8 exact source bundle frozen.
+- Duplicate x7 retired to free resources.
+- One FAST numerical candidate benchmarked against Copy x8.
+- Defect OFF vs nominal Defect ON trend confirmed.
+- Same-current I-V / sidewall-SRH / MQW-radiative comparison available at representative bias/current.
+Not required before abstract:
+- full NtSide sweep 0/1e17/1e18/1e19
+- mesa 4/10/20 um sweep
+- full mesh-convergence campaign
+- exhaustive A/B DOE
+
+### Phase 2 — Abstract-supporting preliminary A/B
+After FAST baseline freeze:
+- Run one nominal Project A condition and one nominal Project B condition.
+- Compare against Defect-ON baseline at same injected current.
+- Minimum evidence: Vf, integrated sidewall SRH, MQW radiative/IQE proxy, spatial current/carrier redistribution.
+- If one project is delayed, abstract can be framed around baseline + one demonstrated edge-access mechanism and the second as ongoing comparative extension only if wording is accurate.
+
+### Phase 3 — Full paper validation after abstract
+Perform NtSide, mesa scaling, A/B DOE, mesh convergence, robustness, dual-account reproduction.
+
+### Operational principle
+Do not spend the abstract window on exhaustive validation. Freeze a defensible baseline quickly, collect one clear mechanism result per project, then expand after abstract submission.
+
 ## 2026-10-03 — PROPOSED fast-baseline acceptance protocol
 
 Runtime optimization must not be accepted solely because it is faster. Compare each candidate against the Copy x8 reference with frozen physics.

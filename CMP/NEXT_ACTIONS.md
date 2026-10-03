@@ -1,3 +1,30 @@
+## 2026-10-03 — CORRECTION: abstract deadline does NOT reduce baseline validation scope
+
+- 작업자: 이택규
+- 상태: DECISION
+- 사용자 결정: 초록 마감이 있어도 Common Baseline 자체의 검증 강도는 낮추지 않는다.
+- 따라서 abstract fast-track은 validation 항목 삭제가 아니라 runtime 최적화, 중복 run 제거, dual-account 병렬화로 시간을 줄이는 전략으로 수정한다.
+
+### Baseline must-have before Project A/B main sweep
+1. Exact baseline source freeze and provenance.
+2. FAST numerical deck validated against Copy x8 reference.
+3. Defect OFF vs nominal Defect ON physical trend.
+4. NtSide sensitivity: 0 / 1e17 / 1e18 / 1e19.
+5. Mesa-size sensitivity: 4 / 10 / 20 um.
+6. Same-current comparison for I-V/Vf, sidewall SRH, MQW radiative/IQE proxy, spatial carrier/current distribution.
+7. Mesh-convergence check around the chosen production mesh.
+8. Reproducibility on JuSubin and LeeTaekGyu accounts using the same frozen baseline.
+
+### Time compression strategy
+- Stop duplicate runs.
+- Optimize numerics without changing physics.
+- Run short convergence benchmarks before full sweeps.
+- Split independent validation cases across two accounts in parallel.
+- Reuse already-completed trustworthy reference outputs where provenance is exact.
+
+### Abstract strategy
+Do not claim Project A/B final optimization until baseline gate is passed. If needed, submit an abstract centered on the validated baseline + initial mechanism results while full DOE continues, but baseline itself remains fully validated.
+
 ## 2026-10-03 — ABSTRACT-DEADLINE FAST TRACK
 
 ### Deadline context

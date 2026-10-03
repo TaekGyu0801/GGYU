@@ -1,3 +1,16 @@
+## 2026-10-03 — active run identity correction after grid/source hashes
+
+- 작업자: 이택규
+- 상태: OBSERVED / CORRECTION
+- 추가 터미널 검증 결과:
+  - Copy x6 path: n1_msh.tdr SHA256 = 716df696..., sd_fdiv_des.cmd SHA256 = ee13bea5...
+  - Copy x7 path: n1_msh.tdr SHA256 = 762d2d57..., sd_fdiv_des.cmd SHA256 = 56a8be69...
+  - Copy x8 path: n1_msh.tdr SHA256 = 762d2d57..., sd_fdiv_des.cmd SHA256 = 56a8be69...
+- 따라서 Copy x7과 Copy x8은 source + generated mesh가 byte-identical.
+- Copy x6과 Copy x7은 pp6_des.cmd/par은 동일했지만 source/grid가 다르므로 전체 simulation input이 동일하다고 볼 수 없음.
+- Copy x8은 Copy x7과 same source/grid/par이지만 pp6_des.cmd hash가 다르며 intermediate TDR files가 존재. Exact diff로 output-save-only revision인지 확인 필요.
+- 다음: Copy x7 vs x8 pp6_des.cmd diff, Copy x6 vs x7 source diff 확인.
+
 ## 2026-10-03 — active run comparison from terminal
 
 - 작업자: 이택규

@@ -1,3 +1,27 @@
+## 2026-10-03 — Claude handoff: active baseline runtime source needed
+
+작업자: 이택규
+상태: PROPOSED
+
+현재 약 7일간 실행 중인 baseline run의 runtime 최적화 전에 주수빈 측에서 실제 실행 자료를 GitHub에 동기화해야 한다.
+
+필요 자료:
+- 실제 실행에 사용한 원본 SDevice 전체
+- active node의 pp*_des.cmd
+- active node의 pp*_des.par
+- 최신 *_des.out 마지막 구간
+- 가능하면 node 번호, NtSide 조건, pseudo-time, timestep, elapsed time, log/sta
+
+Claude 작업 원칙:
+- GitHub CURRENT의 기존 sdevice2_defect_on.cmd를 현재 active run과 동일하다고 가정하지 않는다.
+- 실제 실행 원문을 기준으로 lineage를 확인한다.
+- Common Baseline geometry/physics/Nt/Et/sigma는 유지한다.
+- runtime 최적화는 numerical-only branch에서 수행한다.
+- MaxStep/staged bias, Newton iteration, ErrRef, high-bias cutback, far-field mesh를 우선 검토한다.
+- full multi-day run 전에 short benchmark로 기존 설정과 비교한다.
+
+---
+
 # AI RELAY
 
 ## 2026-09-28 — Lee Taek Gyu session: Final SDevice source-sync blocker

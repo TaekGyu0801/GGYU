@@ -1,3 +1,16 @@
+## 2026-10-03 — active baseline lineage clarified by timestamps and diff
+
+- 작업자: 이택규
+- 상태: CONFIRMED / IMPORTANT PROVENANCE
+- Copy x6 current source header = Final SDevice v1.1.
+- Copy x7 current source header = Final SDevice v1.2 and differs from x6 source only by intermediate Plot snapshots block.
+- However Copy x7 active pp6_des.cmd timestamp is 2026-09-28 10:31, while its sd_fdiv_des.cmd was edited later at 12:17. Therefore the already-running Copy x7 job did NOT preprocess from the later v1.2 source revision.
+- Copy x8 pp6_des.cmd timestamp is 18:43 and exact diff vs Copy x7 active pp6 shows only the intermediate Plot block. Thus Copy x8 is the actual v1.2-running deck; Copy x7 active run is effectively v1.1 numerics/output behavior despite the folder's source file later being edited to v1.2.
+- Copy x6 and Copy x7 active pp6_des.cmd/par hashes are identical, but their n1_msh.tdr hashes differ; therefore their active simulations are not identical because the grid input differs.
+- Copy x7 and Copy x8 share identical grid hash and parameter hash, with pp6 difference only intermediate output save block.
+- Preferred exact running reference: Copy x8.
+- Remaining provenance task: determine why Copy x6 and x7 mesh hashes differ by comparing SDE/preprocessed mesh-generation inputs.
+
 ## 2026-10-03 — Copy x7 vs Copy x8 exact command diff confirmed
 
 - 작업자: 이택규

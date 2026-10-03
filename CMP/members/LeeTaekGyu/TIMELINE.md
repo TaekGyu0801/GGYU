@@ -1,3 +1,28 @@
+## 2026-10-03 — semi437 3 active baseline runs: exact pp6 hash/progress comparison
+
+- **작성자:** ChatGPT
+- **작업자:** 이택규
+- **상태:** OBSERVED
+- **근거:** semi437 터미널에서 세 active project directory의 file list, SHA-256, n6_des.out tail 직접 확인.
+- **Run A:** `...Copy_Copy_Copy_Copy_Copy_Copy` (Sep26 start)
+  - pp6_des.cmd SHA256 = `928613d261c0265b8ac44acb97ed6d80867557dd2910f2648abcc477f60440c3`
+  - pp6_des.par SHA256 = `60405755de61500d9815a8e9ecca6a7a465783d77eb8e5dadf1db515aeb10039`
+  - latest visible pseudo-time ≈0.94147, anode ≈4.707 V
+  - repeated high-bias Newton stalls; a failed step exceeded 50 iterations and cost ~1073 s before timestep cutback.
+- **Run B:** `...Copy_Copy_Copy_Copy_Copy_Copy_Copy` (Sep28 start)
+  - pp6_des.cmd SHA256 identical to Run A
+  - pp6_des.par SHA256 identical to Run A
+  - latest visible pseudo-time ≈0.92964, anode ≈4.648 V
+  - same high-bias convergence pattern.
+  - Therefore SDevice preprocessed command/parameter are byte-identical to Run A.
+- **Run C:** `...Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy` (Sep28 start)
+  - pp6_des.cmd SHA256 = `2dfcc98effe145ec944fb8ee5d6914f5f098e54d1bf2319c69acc76afe1692e6` (different)
+  - pp6_des.par SHA256 identical to A/B
+  - latest visible pseudo-time ≈0.92647, anode ≈4.632 V
+  - intermediate TDRs `n6_inter_0000..0003_des.tdr` exist, consistent with a revised output-save workflow.
+- **Interpretation:** A and B are duplicate SDevice decks at cmd/par level; C is a different command revision with the same parameter file. Exact command-line differences between A/B and C are not yet inspected.
+- **Next:** run `diff -u` between A and C pp6_des.cmd, hash the grid input(s), and inspect Solve/Math blocks before deciding whether any duplicate run should be stopped.
+
 ## 2026-10-03 — semi437 active TCAD process inventory 확인
 
 - **작성자:** ChatGPT

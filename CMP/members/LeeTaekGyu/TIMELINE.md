@@ -1,3 +1,14 @@
+## 2026-10-03 — Copy x7 vs Copy x8 exact command diff confirmed
+
+- 작업자: 이택규
+- 상태: CONFIRMED
+- Copy x7 and Copy x8 have identical source hash, grid hash, and pp6_des.par hash.
+- Exact `diff -u pp6_des.cmd` shows the only command-file difference is an added intermediate `Plot(-Loadable FilePrefix="n6_inter" NoOverWrite Time=(0.80 ... 0.995))` block in Copy x8.
+- No Physics, Math, Solve, trap, bias-ramp, or parameter differences were shown by the exact diff.
+- Therefore Copy x7 and Copy x8 are the same device/physics/numerics; Copy x8 is an output-save revision only.
+- Runtime implication: the multi-day slowdown is not caused by a changed physical model between x7 and x8. Intermediate TDR writes may add I/O overhead at specified save points, but the dominant observed bottleneck remains high-bias Newton nonconvergence and timestep cutback.
+- Preferred future reference for analysis/manuscript workflow: Copy x8, because it preserves intermediate spatial states while retaining the same underlying device model.
+
 ## 2026-10-03 — active run identity correction after grid/source hashes
 
 - 작업자: 이택규

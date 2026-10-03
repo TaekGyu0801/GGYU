@@ -1,3 +1,21 @@
+## 2026-10-03 — PROPOSED fast-baseline acceptance protocol
+
+Runtime optimization must not be accepted solely because it is faster. Compare each candidate against the Copy x8 reference with frozen physics.
+
+Proposed numerical-equivalence checks:
+- same I-V / total current trend at matched bias/current
+- target-current Vf difference preferably within ~10 mV
+- integrated sidewall SRH difference preferably within ~2%
+- MQW radiative/IQE-proxy difference preferably within ~2%
+- no qualitative change in carrier/current spatial distribution
+- identical conclusions for Defect OFF vs nominal Defect ON
+
+These are project acceptance targets, not literature-standard universal tolerances, and may be tightened after the first benchmark.
+
+First runtime target:
+- reduce week-scale runs to <=24 h if possible without losing numerical equivalence.
+- observed normal accepted steps are often ~25 s while rejected high-bias steps can exceed 1000 s, so Newton-failure handling is the highest-priority lever.
+
 ## 2026-10-03 — Baseline freeze + runtime acceleration plan
 
 ### Goal

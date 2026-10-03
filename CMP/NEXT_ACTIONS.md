@@ -1,3 +1,16 @@
+## Lee Taek Gyu — runtime optimization before another full-week baseline run (2026-10-03)
+
+1. Recover the exact SDevice source currently/routinely used by JuSubin (Final v1.1/v1.2); do not optimize the stale GitHub CURRENT deck.
+2. Capture the latest active solver output: pseudo-time, accepted/rejected steps, Newton iteration counts, timestep and wallclock per step.
+3. Keep physics/geometry/trap parameters frozen.
+4. Make a numerical-only benchmark branch and test, one change group at a time:
+   - bias step strategy / MaxStep and staged high-bias refinement,
+   - Newton iteration limit around the documented 15–20 range where applicable,
+   - III-nitride ErrRef sensitivity (current stale deck 1e4 vs Synopsys example scale 1e8),
+   - mesh node-count reduction only away from MQW / 5 nm sidewall / heterointerfaces.
+5. Use transient as the robustness reference; test Quasistationary as an acceleration branch and accept it only if final DC observables agree within a predefined tolerance.
+6. Before committing to a multi-day full run, benchmark to an intermediate bias and compare wallclock/accepted-step/convergence behavior.
+
 ## 2026-09-29 — Ju Subin next check for active Node 6
 
 1. Leave Node 6 running for now.

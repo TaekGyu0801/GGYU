@@ -1,3 +1,14 @@
+## 2026-10-03 — 논문화 전략 / novelty framing 제안
+
+- **작성자:** ChatGPT
+- **작업자:** 이택규
+- **구분:** manuscript strategy / research framing
+- **상태:** PROPOSED
+- **핵심:** 동일한 5 nm damaged-sidewall Common Baseline에서 Project A(GaN:C resistive blocking)와 Project B(localized AlGaN heterobarrier blocking)를 같은 injected current 기준으로 직접 비교하는 논문 구조를 제안.
+- **노벨티 경계:** generic current confinement 자체가 아니라, 동일 defect physics를 보존한 채 resistive vs band-offset edge engineering을 mechanism-resolved 비교하는 것이 핵심. Carbon-localized edge는 잠재적으로 강한 차별점, AlGaN은 기존 lateral-confinement 문헌이 있어 geometry/use-case/comparison level로 claim 제한.
+- **필수 결과:** edge carrier access 감소 → integrated sidewall SRH 감소 → MQW radiative/IQE 보존/증가의 causal chain과, Vf/current-crowding/Auger tradeoff 및 optimum design window를 제시.
+- **산출물:** `CMP/PAPER_MANUSCRIPT_STRATEGY_PROPOSED.md`
+
 # Lee Taek Gyu Timeline
 
 ## 2026-09-28 — NtSide=1e18 근거 수준 재검증 / 발표용 연구노트

@@ -1,3 +1,11 @@
+## 2026-10-03 — baseline execution split plan
+
+- 최종 baseline 구현 단계에서는 동일한 검증 baseline을 주수빈 계정 1개, 이택규 계정 1개에 각각 실행할 계획.
+- 두 계정에서 동일 조건을 재현한 뒤, 각자 맡은 후속 작업을 병렬로 진행.
+- 향후 실행/코드 인수인계 시 이 병렬 운용 계획을 전제로 한다.
+
+---
+
 ## 2026-10-03 — Claude handoff: active baseline runtime source needed
 
 작업자: 이택규

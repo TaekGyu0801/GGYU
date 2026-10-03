@@ -1,3 +1,20 @@
+## 2026-10-03 — overnight execution plan
+
+### Tonight
+- Keep Copy x6 running as the historical v1.1 reference because it is currently the farthest progressed.
+- Keep Copy x8 running as the preferred v1.2 reference with intermediate spatial TDR saves.
+- Stop/retire Copy x7 through Workbench because it is semantically duplicate with x6 for the active v1.1 calculation and less progressed.
+- Do not start a new full FAST baseline tonight before the exact x8 bundle is reviewed.
+- Preserve/upload `CMP_Copy8_active_20261003.tgz` for tomorrow's code audit.
+
+### Tomorrow
+1. Review exact x8 source/preprocessed cmd/par/log.
+2. Create a separate FAST_BASELINE branch/copy; never edit x8 live directory.
+3. First benchmark only the highest-value numerical change: Newton iteration/cutback policy.
+4. Then test staged bias/MaxStep and ErrRef one at a time.
+5. Only after short benchmark equivalence is confirmed, launch full 0→5 V FAST baseline.
+6. Split subsequent validated runs across JuSubin and LeeTaekGyu accounts.
+
 ## 2026-10-03 — CORRECTION: abstract deadline does NOT reduce baseline validation scope
 
 - 작업자: 이택규

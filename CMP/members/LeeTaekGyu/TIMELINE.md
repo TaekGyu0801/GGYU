@@ -1,3 +1,13 @@
+## 2026-10-03 — correction: Copy x6 vs x7 SDE inputs are identical
+
+- 작업자: 이택규
+- 상태: OBSERVED / CORRECTION
+- Copy x6 and Copy x7 `pp1_dvs.cmd` SHA-256 are identical: `5685528bc3ec338ce104040b0503be43ef032094976d69995529eb5d6fb4e658`.
+- `diff -u pp1_dvs.cmd` produced no differences.
+- Therefore the SDE geometry/mesh-generation command input is byte-identical between x6 and x7.
+- Previous interpretation that differing `n1_msh.tdr` hashes prove a different mesh is withdrawn. Binary TDR hash differences can reflect metadata/order/output serialization and must be verified semantically.
+- Next verification: compare TDR sizes plus SDE/mesh logs and node/element statistics before declaring the meshes different.
+
 ## 2026-10-03 — active baseline lineage clarified by timestamps and diff
 
 - 작업자: 이택규

@@ -1,3 +1,13 @@
+## 2026-10-04 — semi437 shell syntax mismatch during B0 log copy
+
+- 작업자: 이택규
+- 상태: OBSERVED / RESOLVED
+- command `cp n6_des.out ~/CMP_B0/x8_n6_des_$(date +%Y%m%d_%H%M).out` returned `Illegal variable name.`
+- interpretation: login shell behaves as csh/tcsh, where bash-style `$(...)` command substitution is invalid.
+- correction: use backticks for command substitution, e.g. `x8_n6_des_`date +%Y%m%d_%H%M`.out`.
+- no simulation/source files were modified; only the attempted copy command failed.
+- next B0 commands should use csh/tcsh-compatible syntax.
+
 ## 2026-09-26 — Project Log does not expose root cause
 
 Project Log shows:

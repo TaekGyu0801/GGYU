@@ -1,3 +1,17 @@
+## 2026-10-04 — Decision: leave legacy runs untouched and build a new clean FAST baseline
+
+- 작업자: 이택규
+- 상태: DECISION
+- 기존 Copy x6/x7/x8 active runs은 당장 중단하지 않고 reference/history 확보용으로 그대로 둔다.
+- 새 baseline은 기존 live project를 수정하지 않고, exact Copy x8 golden pair를 기준으로 새 Workbench project에서 cleanly 재구성한다.
+- 새 baseline 목표:
+  1. Node6 NtSide=0 / Node12 NtSide=1e18 pair 유지
+  2. 동일 geometry/physics/parameter/mesh intent 유지
+  3. generated/stale/cached files에 의존하지 않는 clean reproduction
+  4. numerical-only runtime optimization
+  5. short preprocess/init benchmark 통과 후 full run
+- Claude는 이 clean FAST_BASELINE branch/project만 수정 대상으로 삼고, 기존 Copy x6/x7/x8 live directories는 건드리지 않는다.
+
 ## 2026-10-03 — overnight execution plan
 
 ### Tonight

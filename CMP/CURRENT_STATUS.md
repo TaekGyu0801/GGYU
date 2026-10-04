@@ -1,3 +1,16 @@
+## 2026-10-04 — FAST_C1 exact source installation PASS
+
+- 작업자: 이택규
+- 상태: OBSERVED / SOURCE-INSTALL PASS
+- separate project: `/user/semi/semi437/tmp/myproject/GaN_PiN_Diode_FAST_C1`
+- exact patch applied successfully to `sd_fdiv_des.cmd`.
+- resulting SHA-256:
+  `f62eab51816ba21a9fba6f9d26ef39606ea76b17c2a522153d4b45ed8cf27f93`
+- this matches the canonical Claude C1 source hash exactly.
+- golden backup remains `sd_fdiv_des.cmd.golden_x8`.
+- live x6/x7/x8 untouched.
+- next: inspect copied Workbench node/status metadata before preprocess; do not launch SDevice yet.
+
 ## 2026-10-04 — FAST_C1 patch dry-run PASS
 
 - 작업자: 이택규

@@ -1,3 +1,12 @@
+## 2026-10-04 — Stop accidental FAST_C1 solve and audit generated deck
+
+1. In Workbench, stop only FAST_C1 Node 6 (NtSide=0) that launched at 15:46.
+2. Do not kill/modify unrelated processes.
+3. After stop, confirm no FAST_C1 `sdevice` remains.
+4. Preserve generated `pp6_des.cmd` and `pp6_des.par`; they are the preprocess products needed for the gate.
+5. Run read-only preprocess equivalence checks against Copy x8.
+6. Restart NtSide=0 B1 only after gate PASS.
+
 ## 2026-10-04 — FAST_C1 preprocess-only next
 
 1. 원래 Copy x8 live process PID 78941은 건드리지 않는다.

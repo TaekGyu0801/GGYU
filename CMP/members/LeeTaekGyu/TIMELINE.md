@@ -1,3 +1,13 @@
+## 2026-10-04 — Separate FAST C1 directory created
+
+- 작업자: 이택규
+- 상태: OBSERVED
+- separate directory exists:
+  `/user/semi/semi437/tmp/myproject/GaN_PiN_Diode_FAST_C1`
+- live Copy x8 remains untouched.
+- directory existence alone does not yet prove the Workbench project contents were fully copied.
+- next: read-only listing of the FAST_C1 directory before any cleanup/source replacement/preprocess.
+
 ## 2026-10-04 — B0 cutback-rule validation CLOSED
 
 - 작업자: 이택규

@@ -1,3 +1,16 @@
+# 2026-10-04 — B0-1 passed: no explicit transient Iterations in x8 pp6
+
+- observed x8 pp6_des.cmd:
+  - RHSMin=1e-3
+  - CheckRhsAfterUpdate
+  - Iterations=500 (initial Poisson)
+  - Iterations=100 (equilibrium)
+  - no transient Iterations
+  - no NotDamped
+- remaining blocker: interpret raw x8 n6_des.out and accepted/rejected Newton iteration distribution before confirming C1 Iterations=15.
+
+---
+
 # 2026-10-04 — FAST C1 reviewed; B0 audit required
 
 - Claude C1 SHA: `f62eab51816ba21a9fba6f9d26ef39606ea76b17c2a522153d4b45ed8cf27f93`

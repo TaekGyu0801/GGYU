@@ -1,3 +1,16 @@
+## 2026-10-04 — FAST C1 immediate next action: B0 read-only audit
+
+1. Do **not** launch FAST C1 yet.
+2. Copy the active/reference x8 `pp6_des.cmd` and `n6_des.out` to a safe analysis location.
+3. Inspect preprocessed settings:
+   `grep -n -i "Iterations\\|RHSMin\\|CheckRhsAfterUpdate\\|NotDamped" pp6_des.cmd`
+4. Run Claude `sdevice_newton_audit.py` on the copied x8 log with `--raw 1`.
+5. Manually verify parser output against the raw Newton table before trusting any statistics.
+6. Resolve why project records show ~50 Newton iterations while Synopsys 2022 training documents a default cap of 20 for ramped solves.
+7. Confirm that no accepted x8 step requires >15 iterations.
+8. Only after B0 passes: create/preprocess separate `GaN_PiN_Diode_FAST_C1`; keep live x6/x7/x8 untouched.
+9. Acceptance targets remain provisional until baseline repeatability / actual A-B effect scale is known.
+
 ## 2026-10-04 — Immediate: hand golden source to Claude
 
 1. Claude project에서 작업자 `이택규`로 시작.

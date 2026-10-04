@@ -2,7 +2,7 @@
 
 이 CMP 프로젝트에서 작업하는 모든 AI(ChatGPT / Claude)는 **가장 먼저 `AI_SHARED_MEMORY_PROTOCOL.md`를 읽고 따른다.**
 
-그 다음 현재 상태를 아래 순서로 읽는다.
+그 다음 Claude를 포함한 구현 AI는 `CLAUDE_PROJECT_INSTRUCTIONS.md`에서 연구 목적·baseline 보호·재현성·코딩 역할을 확인하고, 현재 상태를 아래 순서로 읽는다.
 
 1. `.ai-sync/LIVE_STATE.md`
 2. `.ai-sync/LIVE_STATE.json`

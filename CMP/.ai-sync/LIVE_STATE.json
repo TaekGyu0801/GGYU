@@ -2,9 +2,9 @@
   "updated": "2026-10-04",
   "primaryWorker": "이택규",
   "phase": "Phase 0 — Common Baseline FAST numerical optimization",
-  "task": "Audit raw Copy x8 n6_des.out before FAST C1 execution",
-  "status": "FAST_C1_B0_RAW_LOG_REQUIRED",
-  "blocker": "Transient Iterations is unset in pp6_des.cmd; resolve meaning of recorded ~50 failed Newton rows and accepted-step max iteration from raw n6_des.out.",
+  "task": "Preprocess and benchmark FAST C1 in a separate Workbench project",
+  "status": "FAST_C1_B0_PASSED_READY_FOR_PREPROCESS_BENCHMARK",
+  "blocker": "No B0 blocker. Remaining gate is separate-project preprocess equivalence before C1 NtSide=0 solve.",
   "parallelWork": {
     "worker": "주수빈",
     "status": "OBSERVED",
@@ -182,18 +182,19 @@
     "next_action": "Recover exact full user-provided Final SDevice v1.1/v1.2 source and sync it; do not reconstruct from summaries."
   },
   "fastBaseline": {
-    "status": "FAST_C1_REVIEWED_B0_REQUIRED",
+    "status": "FAST_C1_B0_PASSED_READY_FOR_PREPROCESS_BENCHMARK",
     "goldenReference": "semi437 Copy x8",
     "localPackage": "~/CMP_REFERENCE_20261004.tgz",
     "protocol": "CMP/FAST_BASELINE_REPRO_PROTOCOL.md",
     "captureHelper": "CMP/tcad/capture_reference_snapshot.sh",
     "nextAction": [
-      "Copy raw x8 n6_des.out to safe location",
-      "Run sdevice_newton_audit.py --selftest",
-      "Run parser with --raw 1 and CSV",
-      "Manually validate parsed fields against raw log",
-      "Determine accepted-step max iteration and false_rej for N=15",
-      "Send B0 output to Claude before C1 execution"
+      "Send B0 summary to Claude for independent review",
+      "Create separate FAST C1 Workbench project",
+      "Verify C1 source SHA",
+      "Run preprocess gate",
+      "Run NtSide=0 C1 benchmark",
+      "Compare I-V, Vf, timestep, convergence and runtime against x8",
+      "Keep live x6/x7/x8 untouched"
     ],
     "snapshot": "~/CMP_REFERENCE_SNAPSHOTS/Copy_x8_20261004_124024",
     "hashes": {
@@ -228,15 +229,32 @@
       "guide": "CMP/FAST_BASELINE_C1.md"
     },
     "b0": {
-      "preprocessedObservation": {
-        "status": "OBSERVED",
-        "RHSMin": "1e-3",
-        "CheckRhsAfterUpdate": true,
-        "initialPoissonIterations": 500,
-        "equilibriumCoupledIterations": 100,
-        "transientInnerCoupledIterations": "unset",
-        "NotDamped": "not present"
-      }
+      "status": "OBSERVED_PASS_TO_4P643V",
+      "log": "~/CMP_B0/x8_n6_des_20261004_1335.out",
+      "attempts": 2236,
+      "accepted": 1950,
+      "rejected": 285,
+      "acceptedNewtonHistogram": {
+        "2": 1019,
+        "3": 778,
+        "4": 153
+      },
+      "acceptedNewtonMax": 4,
+      "rejectedAt50": 285,
+      "cap15FalseReject": 0,
+      "firstPredictedDivergenceV": 4.33,
+      "observedMaxV": 4.64301,
+      "totalAttemptWallclockSeconds": 495106,
+      "acceptedAttemptWallclockSeconds": 123464,
+      "rejectedAttemptWallclockSeconds": 371643,
+      "rejectedWallclockFraction": 0.7506,
+      "idealizedSavedSecondsAt15": 260150,
+      "idealizedSpeedupAt15": 2.107,
+      "limitations": [
+        "x8 evidence only through ~4.643 V",
+        "real-log error column not parsed yet",
+        "cutback recovery metric from current script is not used"
+      ]
     }
   }
 }

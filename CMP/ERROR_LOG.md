@@ -1,3 +1,16 @@
+## 2026-10-04 — B0 audit script missing locally
+
+- 작업자: 이택규
+- 상태: OBSERVED / RESOLVED PATH ISSUE
+- x8 log copy succeeded:
+  - `~/CMP_B0/x8_n6_des_20261004_1335.out`
+  - size ≈ 3.4M
+- csh/tcsh `LOG` variable setup succeeded.
+- audit command failed only because `~/CMP_B0/sdevice_newton_audit.py` was not present:
+  - `python3: can't open file ... [Errno 2] No such file or directory`
+- no simulation/source modification occurred.
+- next: download the GitHub tool to `~/CMP_B0/`, run `--selftest`, then execute B0 audit.
+
 ## 2026-10-04 — semi437 shell syntax mismatch during B0 log copy
 
 - 작업자: 이택규

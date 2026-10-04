@@ -1,3 +1,19 @@
+## 2026-10-04 — FAST C1 next action after B0 PASS
+
+1. Send B0 summary to Claude for independent review; no code change is required unless Claude identifies a concrete issue.
+2. Create a **separate** Workbench project/copy for FAST C1. Do not modify/stop live x6/x7/x8.
+3. Install the exact Claude C1 source locally and verify SHA-256 `f62eab51816ba21a9fba6f9d26ef39606ea76b17c2a522153d4b45ed8cf27f93`.
+4. Preprocess only and run `fast_preprocess_check.py`.
+5. Require: golden SDE/parameter equivalence + exactly one intended executable change (`Iterations=15`).
+6. Run NtSide=0 C1 first.
+7. Compare against Copy x8:
+   - first divergence should occur only when the reference attempt exceeds 15 iterations (~4.33 V on current evidence)
+   - I-V / matched-current Vf
+   - accepted/rejected attempts
+   - timestep trajectory
+   - wallclock / mV-per-hour in the high-bias bottleneck
+8. Do not declare FAST baseline CONFIRMED until numerical/physical equivalence and runtime criteria pass.
+
 ## 2026-10-04 — Rerun B0 with patched real-log parser
 
 1. Re-download `CMP/tcad/tools/sdevice_newton_audit.py` from GitHub to `~/CMP_B0/`.

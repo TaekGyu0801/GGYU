@@ -1,3 +1,12 @@
+## 2026-10-04 — FAST_C1 preprocess-only next
+
+1. 원래 Copy x8 live process PID 78941은 건드리지 않는다.
+2. Workbench에서 FAST_C1 프로젝트를 별도로 열고 Node 6 (NtSide=0)만 Preprocess한다.
+3. Run/Solve는 누르지 않는다.
+4. preprocess 완료 후 `pp6_des.cmd`, `pp6_des.par` timestamp/hash를 확인한다.
+5. `fast_preprocess_check.py`로 golden-vs-C1 gate 수행.
+6. PASS 후에만 NtSide=0 B1 solve를 시작한다.
+
 ## 2026-10-04 — FAST_C1 source installed; inspect Workbench status before preprocess
 
 1. Read `.status` and `gtree.dat` in FAST_C1.

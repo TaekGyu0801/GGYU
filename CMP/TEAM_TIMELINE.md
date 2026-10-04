@@ -1,3 +1,14 @@
+## 2026-10-04 — FAST C1 B0 review strengthened acceptance criteria
+
+- **작업자:** 이택규
+- **구현/검토:** Claude B0 review + ChatGPT verification
+- **상태:** PROPOSED / READY FOR SEPARATE PREPROCESS
+- C1 source remains `Iterations=15`; no physics/source change beyond the already-reviewed numerical cap.
+- ~4.33 V interpretation corrected: first rejected attempt with changed Newton count, not trajectory divergence.
+- A1'/A1'' added: preserve accepted/rejection trajectory over overlap and require C1 rejection message to show 15-cap.
+- full CSV cutback-ratio constancy remains pending; observed examples are ~0.5.
+- live x6/x7/x8 remain untouched.
+
 ## 2026-10-04 — FAST_BASELINE C1 selected as first numerical candidate (PROPOSED)
 
 - **작업자:** 이택규

@@ -2,9 +2,9 @@
   "updated": "2026-10-04",
   "primaryWorker": "이택규",
   "phase": "Phase 0 — Common Baseline FAST numerical optimization",
-  "task": "B0 audit of Copy x8 before FAST C1 execution",
-  "status": "FAST_C1_REVIEWED_B0_REQUIRED",
-  "blocker": "Resolve documented ramp Iterations default=20 versus project-recorded ~50-iteration failures using exact x8 pp6_des.cmd + raw n6_des.out; validate parser and ensure no accepted x8 step needs >15.",
+  "task": "Audit raw Copy x8 n6_des.out before FAST C1 execution",
+  "status": "FAST_C1_B0_RAW_LOG_REQUIRED",
+  "blocker": "Transient Iterations is unset in pp6_des.cmd; resolve meaning of recorded ~50 failed Newton rows and accepted-step max iteration from raw n6_des.out.",
   "parallelWork": {
     "worker": "주수빈",
     "status": "OBSERVED",
@@ -188,12 +188,12 @@
     "protocol": "CMP/FAST_BASELINE_REPRO_PROTOCOL.md",
     "captureHelper": "CMP/tcad/capture_reference_snapshot.sh",
     "nextAction": [
-      "Copy/read exact x8 pp6_des.cmd and raw n6_des.out",
-      "Verify actual/effective Iterations and raw Newton row semantics",
-      "Run sdevice_newton_audit.py with raw verification",
-      "Confirm no accepted x8 step requires >15",
-      "Only then preprocess separate FAST C1 project",
-      "Keep live x6/x7/x8 untouched"
+      "Copy raw x8 n6_des.out to safe location",
+      "Run sdevice_newton_audit.py --selftest",
+      "Run parser with --raw 1 and CSV",
+      "Manually validate parsed fields against raw log",
+      "Determine accepted-step max iteration and false_rej for N=15",
+      "Send B0 output to Claude before C1 execution"
     ],
     "snapshot": "~/CMP_REFERENCE_SNAPSHOTS/Copy_x8_20261004_124024",
     "hashes": {
@@ -226,6 +226,17 @@
       "toolsValidation": "Python syntax + synthetic selftests only; actual Sentaurus formats pending",
       "acceptanceStatus": "PROVISIONAL",
       "guide": "CMP/FAST_BASELINE_C1.md"
+    },
+    "b0": {
+      "preprocessedObservation": {
+        "status": "OBSERVED",
+        "RHSMin": "1e-3",
+        "CheckRhsAfterUpdate": true,
+        "initialPoissonIterations": 500,
+        "equilibriumCoupledIterations": 100,
+        "transientInnerCoupledIterations": "unset",
+        "NotDamped": "not present"
+      }
     }
   }
 }

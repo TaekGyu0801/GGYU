@@ -1,3 +1,28 @@
+## 2026-10-04 — Copy x8 Node12 current preprocess is NtSide-only pair; visible Node12 failure logs are stale
+
+- 작업자: 이택규
+- 상태: CONFIRMED
+- Evidence from current Copy x8 directory:
+  - pp6_des.cmd timestamp: 2026-09-28 18:43
+  - pp12_des.cmd / pp12_des.par timestamp: 2026-09-28 18:43
+  - n12_des.out / log / err timestamp: 2026-09-26 14:24
+  - n12_des.sta: pending, local -1
+- Exact diff pp6_des.cmd vs pp12_des.cmd shows:
+  - node-specific Parameters/Plot/Current/Output filenames
+  - trap Conc 0 -> 1e18 in all intended sidewall regions
+  - intermediate FilePrefix n6_inter -> n12_inter
+  - no shown Physics/Math/Solve differences in the captured diff
+- Therefore the current Copy x8 Node6/Node12 command pair is consistent with an NtSide-only validation pair at cmd level.
+- Critical provenance correction:
+  - the visible Node12 Mg-incomplete-ionization failure logs are from Sep26 and do NOT correspond to the current Sep28 pp12_des.cmd/par.
+  - current Node12 has not yet executed; status is pending.
+- Do not use stale n12 logs to judge the current v1.2 Node12 deck.
+- Next discriminator:
+  1. exact SHA/diff pp6_des.par vs pp12_des.par
+  2. if identical, current Node12 should be launched in a clean execution context and initialization checked before full run.
+  3. clean-account reproduction must avoid inheriting stale outputs from copied Workbench directories.
+
+
 ## 2026-10-04 — Copy x8 exact reference package audited: active Node 6 is NtSide=0 control, not nominal damaged baseline
 
 - 작업자: 이택규

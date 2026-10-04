@@ -1,3 +1,11 @@
+## 2026-10-04 — FAST_C1 preprocess appears stalled >3 h
+
+- 작업자: 이택규
+- 상태: USER-REPORTED / BLOCKER
+- 사용자가 FAST_C1 단계가 약 3시간째 완료되지 않았다고 보고함.
+- preprocess-only라면 비정상적으로 긴 시간이며, 실제 SDevice solve가 시작되었거나 Workbench 상태/queue 문제일 가능성 확인 필요.
+- 아직 원인 확정 전. 임의 종료하지 말고 프로세스와 최근 로그를 먼저 확인한다.
+
 ## 2026-10-04 — FAST_C1 copied .status ownership resolved
 
 - 작업자: 이택규

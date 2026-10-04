@@ -1,3 +1,16 @@
+## 2026-10-04 — overnight active-run progress confirms severe high-bias runtime bottleneck
+
+- 작업자: 이택규
+- 상태: OBSERVED
+- 2026-10-04 11:52 KST 터미널 확인:
+  - Copy x6: still running; latest visible pseudo-time ~0.942317, anode ~4.712 V.
+  - Copy x8: still running; latest visible pseudo-time ~0.928460, anode ~4.642 V.
+  - Copy x7 is also still running despite being previously identified as a duplicate v1.1 active calculation.
+- Compared with the 2026-10-03 evening captures, overnight progress is only a few to ~10 mV while repeated Newton stagnation persists near RHS ~1e-3.
+- Copy x6 again shows a step spending >1000 s while residual stalls around 1.42–1.43e-3.
+- Copy x8 is entering the same pattern.
+- Conclusion: do not wait for current decks to reach 5 V before starting runtime optimization. Preserve x8 as reference, retire duplicate x7, and begin a separate FAST_BASELINE benchmark today.
+
 ## 2026-09-29 — Active baseline run confirmed alive; severe Newton cutback near 4.66 V
 
 **OBSERVED:** direct `n6_des.out` output shows the active job is Node 6. It has reached pseudo-time ≈0.93254, corresponding to ≈4.66 V for the 0→5 V linear transient ramp.

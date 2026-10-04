@@ -1,3 +1,15 @@
+## 2026-10-04 — Root cause of failed BE-step parser patch: regex escaping error
+
+- 작업자: 이택규
+- 상태: FIXED / B0 PENDING
+- commit `c9e5804...` still failed its real-line regression selftest.
+- direct source inspection found the regex contained raw-string tokens like `\\\\s` instead of `\\s`, so it searched for a literal backslash+s rather than whitespace.
+- actual fix committed as:
+  - `a0ff43f2aff4b76ed390dcd6831e3ebeba6cb366`
+- GitHub source was reread after the write and now contains single-backslash regex tokens such as `Computing\\s+BE-step`.
+- next: download commit-pinned script, run selftest, then rerun B0.
+- no TCAD simulation/source deck modified.
+
 ## 2026-10-04 — Correction: previous BE-step parser patch had not changed RE_STEP; fixed at commit c9e5804
 
 - 작업자: 이택규

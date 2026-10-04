@@ -1,3 +1,15 @@
+## 2026-10-04 — FAST_BASELINE v0.1 Iter15 candidate created
+
+- 작업자: 이택규
+- 상태: PROPOSED / READY FOR SHORT BENCHMARK
+- 업로드된 exact Copy x8 source SHA-256가 golden hash `56a8be698321e5056e33bf22d4b873063728013e8a2383f4e264a42662c4aa2c`와 일치함을 확인.
+- FAST v0.1은 원본 대비 numerical-only 1개 변경:
+  - Transient 내부 `Coupled`에 `Iterations = 15` 명시.
+- FAST v0.1 SHA-256: `6ccf386cd8959b5953c2c1b241f2c868916bf222814a03f9f774edbc82011040`
+- Physics/Traps/Nt/Et/sigma/mesh intent/bias goal/step controls/ILS는 변경하지 않음.
+- 목적: high-bias에서 장시간 소모 후 reject되는 Newton step을 더 일찍 cutback하도록 유도.
+- 다음: live x8은 보존하고 별도 Workbench copy에서 short benchmark; accepted/rejected iteration, timestep, wallclock, I-V 및 matched-bias 결과 비교.
+
 ## 2026-10-04 — FAST workflow sequence corrected to original plan
 
 - 작업자: 이택규

@@ -1,3 +1,25 @@
+## 2026-10-04 — Runtime strategy re-evaluation: do not brute-force full 0–5 V for every A/B case
+
+- 작업자: 이택규
+- 상태: DECISION / PROPOSED IMPLEMENTATION
+- 냉정한 재평가 결과, 모든 baseline/A/B parameter case를 동일한 0→5 V full sweep으로 순차 실행하는 방식은 총 연구시간 관점에서 비효율적임.
+- validation scope는 유지하되 계산 전략을 staged 방식으로 변경한다.
+- 즉시 수정:
+  - 현재 FAST_C1 Node 6은 이미 실제 SDevice solve 중이고 generated pp6_des.cmd/par가 존재함.
+  - 먼저 running 상태에서 read-only preprocess equivalence gate를 수행한다.
+  - gate PASS이면 현재 진행분을 버리지 않고 B1 run으로 계속 인정한다.
+  - gate FAIL일 때만 FAST_C1 Node 6을 중지한다.
+- production 전략:
+  1. numerical FAST validation용 full reference sweep는 소수의 대표 case에만 수행.
+  2. Project A/B parameter screening은 실제 연구 지표가 필요한 operating-current/bias window를 먼저 정의한 후 그 구간 중심으로 수행.
+  3. screening winner/representative/worst case만 full 0→5 V sweep으로 최종 검증.
+  4. independent parameter points는 가능한 자원 범위에서 병렬화.
+  5. future long runs에는 loadable Save checkpoint를 별도 검토하여 crash/restart 손실을 줄인다. 현재 x8 intermediate Plot은 `-Loadable`이라 restart checkpoint가 아님.
+- 근거:
+  - x8 B0에서 rejected attempts가 관측 attempt wallclock의 약 75%를 차지했고, high-bias가 주요 병목.
+  - Sentaurus 공식 training은 ramped solve에서 Newton 15–20회 이후에는 timestep을 줄이는 편이 더 효율적일 수 있다고 설명함.
+- 이 전략은 physics/validation을 생략하는 것이 아니라, screening과 final validation을 분리하는 방식임.
+
 ## 2026-10-04 — Runtime planning implication for Project A/B
 
 - 작업자: 이택규

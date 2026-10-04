@@ -1,3 +1,16 @@
+## 2026-10-04 — Copy x8 core files verified
+
+- 작업자: 이택규
+- 상태: OBSERVED
+- active Copy x8 directory에서 핵심 파일 존재를 사용자 터미널로 확인:
+  - `sd_fdiv_des.cmd`
+  - `pp1_dvs.cmd`
+  - `pp6_des.cmd`
+  - `pp6_des.par`
+  - `n1_msh.tdr`
+- 기존 reference-package blocker였던 exact editable SDevice source 부재는 active x8 directory 기준으로 해소 가능.
+- 다음: snapshot helper 실행 → local golden snapshot + SHA-256 manifest 생성.
+
 ## 2026-10-04 — Copy x8 exact core files verified in active directory
 
 - 작업자: 이택규

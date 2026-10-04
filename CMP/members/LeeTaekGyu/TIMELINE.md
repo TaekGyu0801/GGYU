@@ -1,3 +1,13 @@
+## 2026-10-04 — FAST_C1 Workbench copy contents confirmed
+
+- 작업자: 이택규
+- 상태: OBSERVED
+- `/user/semi/semi437/tmp/myproject/GaN_PiN_Diode_FAST_C1` contains the copied Copy x8 Workbench project contents (~145 MB).
+- Key copied inputs are present: `sd_fdiv_des.cmd`, `n1_msh.tdr`, `pp1_dvs.cmd`, `pp6_des.cmd`, `pp6_des.par`.
+- Legacy/stale execution outputs were also copied (`n6_des.out/log/plt/tdr`, intermediate TDRs, old n12 artifacts); these are not FAST C1 results and must not be interpreted as such.
+- no C1 source edit or preprocess has been performed yet.
+- next: read-only SHA-256 check of copied golden inputs before any cleanup/edit.
+
 ## 2026-10-04 — Separate FAST C1 directory created
 
 - 작업자: 이택규

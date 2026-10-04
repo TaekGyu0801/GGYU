@@ -1,3 +1,13 @@
+## 2026-10-04 — B0 next: raw x8 n6_des.out audit
+
+1. Copy live x8 `n6_des.out` to a safe home/bench location.
+2. Download/run `CMP/tcad/tools/sdevice_newton_audit.py`.
+3. First run `--selftest`.
+4. Run x8 audit with `--raw 1` and CSV output.
+5. Manually compare parser output with the raw Newton table.
+6. Determine accepted-step max iteration and whether N=15 would create false rejections.
+7. Send B0 output to Claude for independent interpretation before C1 execution.
+
 ## 2026-10-04 — FAST C1 immediate next action: B0 read-only audit
 
 1. Do **not** launch FAST C1 yet.

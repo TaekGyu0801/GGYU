@@ -1,3 +1,17 @@
+## 2026-10-04 — Correction: previous BE-step parser patch had not changed RE_STEP; fixed at commit c9e5804
+
+- 작업자: 이택규
+- 상태: FIXED / PROPOSED TOOL
+- user reran the supposed patched parser and still got attempts=0.
+- direct GitHub inspection showed `RE_STEP` was still the old `Computing step from t=...` regex.
+- prior statement that the BE-step parser patch was applied was incorrect.
+- actual fix now committed:
+  - commit `c9e5804ba0d84e424fcde6f4fd83bb4a04cd686a`
+  - recognizes observed `Computing BE-step from <t0> s to <t1> s (Stepsize: <dt> s)` syntax
+  - adds a regression selftest using the exact observed x8 line.
+- next: download the commit-pinned script, rerun selftest and B0 audit.
+- no simulation/source deck was modified.
+
 ## 2026-10-04 — Real T-2022.03 BE-step syntax identified; B0 parser patched
 
 - 작업자: 이택규

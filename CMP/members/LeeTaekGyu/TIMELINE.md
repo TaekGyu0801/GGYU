@@ -1,3 +1,23 @@
+## 2026-10-04 — Claude FAST implementation prompt committed
+
+- 작업자: 이택규
+- 상태: READY FOR CLAUDE
+- Claude가 GitHub만 읽어도 FAST_BASELINE 구현 맥락을 이해할 수 있도록 종합 prompt/handoff를 생성:
+  - `CMP/prompts/CLAUDE_FAST_BASELINE_IMPLEMENTATION.md`
+- 내용:
+  - exact Copy x8 golden source filename/hash
+  - generated-input hashes
+  - 연구 목적 / Project A-B framing
+  - 변경 금지 Common Baseline physics
+  - exact current numerical settings
+  - 실제 high-bias runtime bottleneck
+  - historical provenance traps
+  - Claude가 제출해야 할 complete code/diff/Workbench/benchmark 산출물
+  - public GitHub에 proprietary source를 올리지 않는 규칙
+- FAST Sentaurus 코드 작성은 Claude가 전담.
+- 이전 ChatGPT `Iterations=15` 아이디어는 확정 patch가 아니라 PROPOSED 참고 후보로만 취급.
+- 사용자는 Claude 채팅에 `Copy_x8_sd_fdiv_des.cmd`를 별도 첨부해야 함.
+
 ## 2026-10-04 — FAST_BASELINE v0.1 Iter15 candidate created
 
 - 작업자: 이택규

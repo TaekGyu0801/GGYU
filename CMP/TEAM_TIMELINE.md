@@ -1,3 +1,14 @@
+## 2026-10-04 — FAST_BASELINE C1 selected as first numerical candidate (PROPOSED)
+
+- **작업자:** 이택규
+- **구현:** Claude / **검토:** ChatGPT
+- **상태:** PROPOSED / REVIEWED / NOT EXECUTED
+- Copy x8 golden 대비 유일한 executable change는 forward Transient inner Coupled `Iterations=15`.
+- Common Baseline physics/traps/geometry/step controls는 유지.
+- Synopsys 2022 training의 15–20 iteration 권고와 방향은 일치하지만, 프로젝트의 ~50-iteration failure 기록과 documented default 20 사이 불일치가 있어 B0 raw-log audit이 선행되어야 함.
+- 최종 FAST 채택 전에는 numerical/physical equivalence + runtime 모두 검증.
+- live x6/x7/x8은 보존.
+
 ## 2026-09-28 — Final SDevice v1.2 source-sync gap 발견
 
 - **작성자:** ChatGPT

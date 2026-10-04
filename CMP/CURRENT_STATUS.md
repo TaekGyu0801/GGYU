@@ -1,3 +1,23 @@
+## 2026-10-04 — Golden baseline pair confirmed at preprocess level
+
+- 작업자: 이택규
+- 상태: CONFIRMED
+- Copy x8 current preprocess:
+  - Node 6 = NtSide 0 control
+  - Node 12 = NtSide 1e18 damaged branch
+- pp6_des.par SHA256 = 60405755de61500d9815a8e9ecca6a7a465783d77eb8e5dadf1db515aeb10039
+- pp12_des.par SHA256 = 60405755de61500d9815a8e9ecca6a7a465783d77eb8e5dadf1db515aeb10039
+- diff pp6_des.par vs pp12_des.par = no differences.
+- Current pp6_des.cmd vs pp12_des.cmd differences are node-specific filenames/intermediate-output prefix plus trap Conc 0 -> 1e18 in the intended sidewall trap regions; no parameter-file difference.
+- Therefore the current Copy x8 Node6/Node12 pair is a valid NtSide-only validation pair at preprocess/parameter level.
+- Important: current Node12 remains pending; current Sep28 pp12 has not yet been executed. Sep26 Node12 failure logs are stale and must not be used to judge this pair.
+- Next:
+  1. re-upload the refreshed CMP_REFERENCE_20261004.tgz containing pp12 files/diffs/timestamps;
+  2. sync exact reference bundle metadata and safe source files to GitHub;
+  3. generate Claude FAST_BASELINE prompt against this exact pair;
+  4. require clean-account preprocess/hash equivalence before any multi-day full run.
+
+
 ## 2026-10-04 — Copy x8 Node12 current preprocess is NtSide-only pair; visible Node12 failure logs are stale
 
 - 작업자: 이택규

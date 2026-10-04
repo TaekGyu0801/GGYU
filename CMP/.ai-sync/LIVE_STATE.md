@@ -1,3 +1,12 @@
+# 2026-10-04 — FAST_C1 exact source install PASS
+
+- exact C1 source SHA-256 f62eab51816ba21a9fba6f9d26ef39606ea76b17c2a522153d4b45ed8cf27f93 confirmed in separate FAST_C1 project.
+- golden backup preserved.
+- next: inspect copied Workbench status metadata, then preprocess only.
+- no SDevice solve yet; live x6/x7/x8 untouched.
+
+---
+
 # 2026-10-04 — B0 COMPLETE; FAST C1 ready for preprocess
 
 - updated Stepsize-based x8 CSV verified all 285 retry/rejection pairs.

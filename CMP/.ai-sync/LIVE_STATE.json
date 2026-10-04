@@ -2,9 +2,9 @@
   "updated": "2026-10-04",
   "primaryWorker": "이택규",
   "phase": "Phase 0 — Common Baseline FAST numerical optimization",
-  "task": "Create and preprocess separate FAST C1 project, then run NtSide=0 B1 benchmark",
-  "status": "FAST_C1_CLAUDE_REVIEWED_READY_FOR_PREPROCESS",
-  "blocker": "No blocker to separate-project preprocess. Full B0 CSV cutback-ratio constancy across all 285 rejections remains a validation item before/alongside B1.",
+  "task": "Create separate FAST C1 Workbench project and pass preprocess gate",
+  "status": "FAST_C1_B0_COMPLETE_READY_FOR_PREPROCESS",
+  "blocker": "None for preprocess; live x6/x7/x8 must remain untouched.",
   "parallelWork": {
     "worker": "주수빈",
     "status": "OBSERVED",
@@ -182,18 +182,16 @@
     "next_action": "Recover exact full user-provided Final SDevice v1.1/v1.2 source and sync it; do not reconstruct from summaries."
   },
   "fastBaseline": {
-    "status": "FAST_C1_CLAUDE_REVIEWED_READY_FOR_PREPROCESS",
+    "status": "FAST_C1_B0_COMPLETE_READY_FOR_PREPROCESS",
     "goldenReference": "semi437 Copy x8",
     "localPackage": "~/CMP_REFERENCE_20261004.tgz",
     "protocol": "CMP/FAST_BASELINE_REPRO_PROTOCOL.md",
     "captureHelper": "CMP/tcad/capture_reference_snapshot.sh",
     "nextAction": [
-      "Verify full B0 CSV retry_dt/rejected_dt ratio across all rejection pairs",
-      "Create separate FAST C1 Workbench project; keep live x6/x7/x8 untouched",
-      "Verify exact C1 source SHA-256",
-      "Run preprocess gate and require exactly one executable change: Iterations=15",
-      "Run NtSide=0 B1 benchmark",
-      "Apply A1'/A1'' trajectory/cap checks plus I-V/spatial/runtime equivalence"
+      "Create separate FAST C1 Workbench project/copy",
+      "Install exact C1 source and verify SHA-256 f62eab51816ba21a9fba6f9d26ef39606ea76b17c2a522153d4b45ed8cf27f93",
+      "Preprocess only and run preprocess equivalence gate",
+      "Run NtSide=0 B1 only after preprocess PASS"
     ],
     "snapshot": "~/CMP_REFERENCE_SNAPSHOTS/Copy_x8_20261004_124024",
     "hashes": {
@@ -264,13 +262,12 @@
       "firstRejectedNewtonCountChangeV": 4.33,
       "trajectoryInterpretation": "~4.33 V is not a trajectory divergence; it is the first rejected attempt where Newton count is expected to change from 50 to 15.",
       "cutbackRatio": {
-        "status": "PARTIALLY_OBSERVED_FULL_CSV_PENDING",
-        "observedExamples": [
-          "1.1484e-05 / 2.2968e-05 ~= 0.5",
-          "1.1907e-05 / 2.3813e-05 ~= 0.5",
-          "1.2345e-05 / 2.4690e-05 = 0.5"
-        ],
-        "full285EventVerification": "pending; CSV not included in Claude review ZIP"
+        "status": "CONFIRMED_FIXED_HALF",
+        "pairs": 285,
+        "min": 0.499975805,
+        "max": 0.500023337,
+        "mean": 0.499999621,
+        "interpretation": "retry timestep is 0.5 of rejected timestep to printed Stepsize precision"
       },
       "speedupInterpretation": "~2.11x is a prediction under approximately uniform per-iteration cost and the observed fixed cutback rule, not a claim of measured C1 speedup."
     }

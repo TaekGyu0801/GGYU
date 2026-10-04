@@ -1,3 +1,17 @@
+## 2026-10-04 — Copy x8 exact core files verified in active directory
+
+- 작업자: 이택규
+- 상태: OBSERVED
+- 사용자 터미널에서 active Copy x8 directory `/user/semi/semi437/tmp/myproject/GaN_PiN_Diode_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy` 확인.
+- 핵심 파일 존재 확인:
+  - `sd_fdiv_des.cmd` 18K, Sep 28 12:17
+  - `pp1_dvs.cmd` 18K, Sep 28 10:31
+  - `pp6_des.cmd` 7.5K, Sep 28 18:43
+  - `pp6_des.par` 283B, Sep 28 18:43
+  - `n1_msh.tdr` 2.9M, Sep 28 10:31
+- 따라서 기존 reference-package blocker였던 exact editable SDevice source 부재는 active x8 directory 기준으로 해소 가능.
+- 다음: snapshot helper를 x8 directory에서 실행해 local golden package와 SHA-256 manifest 생성.
+
 ## 2026-10-04 — FAST baseline reproducibility gate and capture helper added
 
 - 작업자: 이택규

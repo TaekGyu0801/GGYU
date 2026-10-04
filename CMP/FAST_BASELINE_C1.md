@@ -1,6 +1,6 @@
 # FAST_BASELINE C1 — reviewed implementation record
 
-Status: **PROPOSED / REVIEWED / NOT EXECUTED**  
+Status: **PROPOSED / REVIEWED / B0-PASSED / NOT EXECUTED**  
 Worker: Lee Taek Gyu  
 Implementation author: Claude  
 Review: ChatGPT, 2026-10-04
@@ -166,3 +166,15 @@ The full proposed tools are not treated as verified production tools until actua
 4. Resolve the documented default-20 versus recorded ~50-iteration discrepancy.
 5. Confirm or revise `Iterations=15`.
 6. Only then create/preprocess the separate `GaN_PiN_Diode_FAST_C1` project and run NtSide=0 first.
+
+## 2026-10-04 B0 observed result
+
+- 2236 attempts parsed: 1950 accepted / 285 rejected.
+- accepted Newton iterations are exclusively 2–4; maximum = 4.
+- all 285 rejected attempts reached 50 iterations; raw log reports `#iterations larger than 50.`.
+- N=15 false rejection = 0 on the observed x8 path.
+- observed x8 log reaches ~4.643 V; this does not cover 4.643→5.0 V.
+- attempt wallclock: total ~137.5 h, accepted ~34.3 h, rejected ~103.2 h (~75.1%).
+- simple uniform-per-iteration estimate: cap 15 could save ~72.3 h over the observed trajectory, an idealized ~2.11x speedup before additional cutback/recovery overhead.
+- current parser's real-log `error` field and cutback-recovery metric are not used for acceptance.
+- decision: `Iterations=15` is cleared for the first separate-project C1 benchmark; C1 remains PROPOSED until actual runtime/equivalence validation passes.

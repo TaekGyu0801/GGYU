@@ -1,3 +1,11 @@
+## 2026-10-04 — B0 CSV ratio check command quoting error under csh/tcsh
+
+- 작업자: 이택규
+- 상태: OBSERVED / RESOLVED COMMAND SYNTAX
+- multiline `python3 -c '...'` command was pasted into csh/tcsh and split across prompts, causing `Unmatched '`, `Badly placed ()'s`, and globbing errors.
+- no file/simulation change occurred.
+- correction: use a single-line awk command for the CSV retry-dt/rejected-dt ratio check.
+
 ## 2026-10-04 — Root cause of failed BE-step parser patch: regex escaping error
 
 - 작업자: 이택규

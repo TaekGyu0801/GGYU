@@ -1,3 +1,13 @@
+## 2026-10-04 — Claude GitHub permission clarification
+
+- 작업자: 이택규
+- 이택규의 Claude는 GitHub READ 가능, WRITE/EDIT 불가.
+- Claude는 구현/분석 결과를 채팅에 반환하고 GitHub 저장 성공을 주장하지 않는다.
+- 실제 GitHub 기록/수정은 ChatGPT가 Claude 결과를 검토한 뒤 수행한다.
+- `CMP/prompts/CLAUDE_FAST_BASELINE_IMPLEMENTATION.md`도 이 권한 구조로 정정됨.
+
+---
+
 ## 2026-10-04 — Claude implementation package is ready
 
 - 구현 담당: Claude

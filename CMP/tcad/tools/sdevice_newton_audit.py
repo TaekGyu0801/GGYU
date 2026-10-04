@@ -56,12 +56,13 @@ RE_STEP = re.compile(
 RE_ROW = re.compile(r'^\s*(\d+)\s*(?:\|)?\s*(' + FLOAT + r')')
 RE_TOTAL = re.compile(r'\bTotal\b[^0-9\n]*(' + FLOAT + r')', re.I)
 RE_WALL = re.compile(r'wall\s*-?clock[^0-9\n]*(' + FLOAT + r')', re.I)
+RE_CAP = re.compile(r'#\s*iterations\s+larger\s+than\s+(\d+)', re.I)
 RE_FINISHED = re.compile(r'Finished,?\s*because', re.I)
 
 
 class Attempt:
     __slots__ = ('idx', 't0', 't1', 'rows', 'reason', 'raw', 'tot', 'wall',
-                 'status', 'cols', 'time_s')
+                 'status', 'cols', 'time_s', 'dt_log', 'cap_msg', 'ws_cols')
 
     def __init__(self, idx, t0, t1):
         self.idx, self.t0, self.t1 = idx, t0, t1
@@ -73,10 +74,13 @@ class Attempt:
         self.status = 'unknown'
         self.cols = None
         self.time_s = None
+        self.dt_log = None      # "(Stepsize: ... s)" value when printed (t0/t1 are printed with ~6 digits)
+        self.cap_msg = None     # N from "#iterations larger than N."
+        self.ws_cols = None     # whitespace column names of the T-2022.03 Newton header
 
     @property
     def dt(self):
-        return self.t1 - self.t0
+        return self.dt_log if self.dt_log is not None else self.t1 - self.t0
 
     @property
     def iters(self):
@@ -98,14 +102,17 @@ def _floats(s):
 
 
 def parse(path, keep_raw=60):
-    atts, cur, cols = [], None, None
+    atts, cur, cols, ws_cols = [], None, None, None
     reason_pending = 0
     with open(path, errors='replace') as fh:
         for line in fh:
             m = RE_STEP.search(line)
             if m:
                 cur = Attempt(len(atts), float(m.group(1)), float(m.group(2)))
+                if m.lastindex and m.lastindex >= 3 and m.group(3):
+                    cur.dt_log = float(m.group(3))
                 cur.cols = cols
+                cur.ws_cols = ws_cols
                 atts.append(cur)
                 cur.raw.append(line.rstrip('\n'))
                 reason_pending = 0
@@ -114,9 +121,19 @@ def parse(path, keep_raw=60):
                 continue
             if len(cur.raw) < keep_raw:
                 cur.raw.append(line.rstrip('\n'))
+            mc = RE_CAP.search(line)
+            if mc:
+                cur.cap_msg = int(mc.group(1))
+                continue
             if 'Rhs' in line and '|' in line:
-                cols = [c.strip().lower() for c in line.split('|')]
-                cur.cols = cols
+                toks = [t.strip('|').lower() for t in line.split()]
+                if toks and toks[0].startswith('iteration') and 'error' in toks:
+                    # T-2022.03 header: "Iteration |Rhs| factor |step| error #inner #iterative time"
+                    ws_cols, cols = toks, None
+                    cur.ws_cols, cur.cols = ws_cols, None
+                else:
+                    cols = [c.strip().lower() for c in line.split('|')]
+                    cur.cols = cols
                 continue
             if reason_pending and line.strip():
                 reason_pending -= 1
@@ -147,9 +164,19 @@ def parse(path, keep_raw=60):
                         v = _floats(cells[1]) if len(cells) > 1 else []
                         rhs = v[0] if v else None
                 else:
+                    toks = line.split()
                     v = _floats(line)
                     rhs = v[1] if len(v) > 1 else None
                     tcol = v[-1] if len(v) > 2 else None
+                    # full rows (k >= 1) align 1:1 with the whitespace header; row 0 has blanks
+                    if cur.ws_cols and len(toks) == len(cur.ws_cols):
+                        named = dict(zip(cur.ws_cols, toks))
+                        try:
+                            rhs = float(named.get('rhs', rhs))
+                            err = float(named['error']) if 'error' in named else None
+                            tcol = float(named['time']) if 'time' in named else tcol
+                        except ValueError:
+                            err = None
                 if rhs is None:
                     continue
                 if cur.rows and k <= cur.rows[-1]['k']:
@@ -321,24 +348,44 @@ def report(atts, mode, args, label='REF'):
 
 def compare(ref, cand, args):
     vs = args.vscale
-    print('\n=== REF vs CAND step-sequence identity check ===')
+    print('\n=== REF vs CAND trajectory identity check ===')
+    print('  Rationale: if every REF attempt either converged in <= cap iterations or failed')
+    print('  at the REF limit, CAND must take exactly the same accepted steps and reject at the')
+    print('  same (t0, dt); only the Newton count of rejected attempts may differ (REF limit -> cap).')
     n = min(len(ref), len(cand))
     div = None
     for i in range(n):
         r, c = ref[i], cand[i]
-        if not (_same(r.t0, c.t0) and _same(r.t1, c.t1) and r.iters == c.iters):
+        same_step = _same(r.t0, c.t0) and _same(r.t1, c.t1) and r.status == c.status
+        if r.status == 'accepted' or c.status == 'accepted':
+            same_step = same_step and r.iters == c.iters
+        if not same_step:
             div = i
             break
+    ok_upto = n if div is None else div
+    acc_same = sum(1 for a in ref[:ok_upto] if a.status == 'accepted')
+    rej_same = sum(1 for a in ref[:ok_upto] if a.status == 'rejected')
+    vmax = max([vs * a.t1 for a in ref[:ok_upto] if a.status == 'accepted'] or [0.0])
     if div is None:
-        print(f'first {n} attempts identical in (t0, t1, Newton iterations).')
+        print(f'  IDENTICAL over {n} attempts ({acc_same} accepted, {rej_same} rejected), up to V~{vmax:.5f}')
     else:
         r, c = ref[div], cand[div]
-        print(f'first divergence at attempt #{div}: REF t0={r.t0:.8g} dt={r.dt:.3g} it={r.iters} ({r.status}) | '
-              f'CAND t0={c.t0:.8g} dt={c.dt:.3g} it={c.iters} ({c.status})  V~{vs*r.t0:.5f}')
-        expected = r.iters > args.cap
-        print('  -> EXPECTED (REF attempt exceeded the cap)' if expected else
-              '  -> UNEXPECTED: REF attempt did not exceed the cap. Stop and investigate '
-              '(input diff, mesh, threads/nondeterminism).')
+        print(f'  identical for {div} attempts ({acc_same} acc / {rej_same} rej, up to V~{vmax:.5f})')
+        print(f'  FIRST DIFFERENCE at attempt #{div}, V~{vs*r.t0:.5f}:')
+        print(f'    REF  t0={r.t0:.8g} t1={r.t1:.8g} dt={r.dt:.4g} it={r.iters} {r.status}')
+        print(f'    CAND t0={c.t0:.8g} t1={c.t1:.8g} dt={c.dt:.4g} it={c.iters} {c.status}')
+        if r.status == 'accepted' and r.iters > args.cap:
+            print('  -> EXPLAINED: REF accepted this step with more than cap iterations (false rejection in CAND).')
+        else:
+            print('  -> UNEXPECTED for an Iterations-cap-only change. Stop and check inputs, mesh,')
+            print('     thread nondeterminism (compare final |Rhs| of the two attempts), and dt rule.')
+    caps_r = sorted({a.cap_msg for a in ref if a.cap_msg is not None})
+    caps_c = sorted({a.cap_msg for a in cand if a.cap_msg is not None})
+    rej_c = [a for a in cand if a.status == 'rejected']
+    print(f'  "#iterations larger than N" seen: REF {caps_r or "-"} | CAND {caps_c or "-"} (CAND must show only {args.cap})')
+    if rej_c:
+        mx = max(a.iters for a in rej_c)
+        print(f'  CAND rejected attempts: {len(rej_c)}, max Newton count {mx} (expect <= {args.cap}; a value near the REF limit means the cap did NOT take effect)')
 
     print('\n=== wallclock to reach anode voltage (accepted steps, cumulative attempt time) ===')
     def milestones(atts):

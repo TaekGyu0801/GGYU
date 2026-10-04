@@ -178,3 +178,24 @@ The full proposed tools are not treated as verified production tools until actua
 - simple uniform-per-iteration estimate: cap 15 could save ~72.3 h over the observed trajectory, an idealized ~2.11x speedup before additional cutback/recovery overhead.
 - current parser's real-log `error` field and cutback-recovery metric are not used for acceptance.
 - decision: `Iterations=15` is cleared for the first separate-project C1 benchmark; C1 remains PROPOSED until actual runtime/equivalence validation passes.
+
+## 2026-10-04 Claude review of B0 (PROPOSED)
+
+Decision: **no change to the C1 SDevice source.** C1 stays `f62eab51816ba21a9fba6f9d26ef39606ea76b17c2a522153d4b45ed8cf27f93` with `Iterations = 15`.
+
+Why the B0 numbers make C1 stronger than first stated:
+- On the observed x8 path, every accepted attempt converged in 2–4 iterations and every rejected attempt ran to the 50-iteration limit (`#iterations larger than 50.`).
+- An attempt that did not converge within 50 iterations also cannot converge within 15; an attempt that converged in ≤4 converges identically under a cap of 15. Iterations 1–15 of each Newton solve are the same in both decks.
+- Therefore C1 should take **exactly the same accepted steps and the same rejection points (t0, dt)** as x8 over the whole observed range (0 → ~4.643 V), not only up to ~4.33 V. ~4.33 V is the first point where the *Newton count of a rejected attempt* differs (50 → 15); it is not a trajectory divergence.
+- Consequently no extra cutbacks are expected on the observed path, and the ~2.11x estimate is a prediction for that path (assuming roughly uniform cost per Newton iteration), not an upper bound "before extra cutback overhead".
+- Assumptions to verify in B1: (a) the timestep reduction after a failed attempt does not depend on how many iterations were spent (check from B0 CSV: dt of the retry / dt of the rejected attempt is a constant factor); (b) the `Iterations` option of the transient `Coupled` actually overrides the effective 50 limit.
+
+Updated B1 / acceptance (replaces A1, tightens A3/A4 for the observed range):
+- A1': C1 vs x8 accepted-step sequence (t0, t1, Newton count) and rejection points (t0, dt) **identical over the entire overlap**. Any difference not explained by an accepted x8 step needing >15 iterations is UNEXPECTED (check inputs, mesh, 4-thread nondeterminism).
+- A1'': every C1 rejected attempt must print `#iterations larger than 15.` If C1 prints `larger than 50`, the cap did not take effect → stop; do not proceed to a Math-level change without UG confirmation.
+- A3/A4: on the observed range, I–V and snapshot quantities are expected to be identical to printed precision. The 1e-3 / 1 mV tolerances stay as outer limits; any difference above last-digit noise is investigated, not silently accepted.
+- Beyond ~4.643 V and for NtSide=1e18 there is no x8 reference. There, check rejected attempts' last-iteration |Rhs| trend: steadily decreasing at iteration 15 (instead of a flat ~1e-3 floor) flags a possible false rejection.
+
+Cap value: smaller caps would save more on the observed path (uniform-cost estimate: N=15 → ~2.11x, N=10 → ~2.50x, N=8 → ~2.71x). C1 keeps 15 for margin in the unobserved 4.643–5.0 V range, the never-run NtSide=1e18 branch, and later sweep/A-B decks. A tighter cap is a separate later candidate (C1b) only after C1 shows the full-range accepted-iteration distribution for both NtSide branches.
+
+Tool update (`sdevice_newton_audit.py`, PROPOSED): uses the printed `Stepsize` for dt (t0/t1 are printed with ~6 digits), parses the `error` column from the T-2022.03 whitespace header, records `#iterations larger than N`, and the REF-vs-CAND check now tests trajectory identity (accepted steps + rejection points) instead of flagging the first rejected attempt.

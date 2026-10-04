@@ -1,3 +1,28 @@
+## 2026-10-04 — clean-account reproducibility requirement before FAST baseline freeze
+
+- 작업자: 이택규
+- 사용자 목표: 최종 baseline은 주수빈 계정과 이택규 계정에서 동일 source로 독립 재현되어야 함.
+- 과거 경험: 동일 코드/파라미터를 다른 계정에 복사했을 때 실행되지 않은 사례가 있었음. 원인을 단순한 "계정에 축적된 상태"로 확정하지 않음.
+- Claude/ChatGPT는 working account의 exact source뿐 아니라 preprocessed outputs와 project/runtime context를 함께 비교해야 함.
+- 필수 비교 대상:
+  - original SDE/SDevice source
+  - pp1_dvs.cmd
+  - pp6_des.cmd / pp6_des.par
+  - mesh statistics and reference n1_msh.tdr hash
+  - Workbench variables/tree/scenario files where relevant
+  - n6_des.job/sta/err/out/log
+  - Sentaurus version/path and thread settings
+- 재현 절차:
+  1. working semi437 Copy x8를 immutable reference로 보존.
+  2. new account에서 source를 새 project로 import.
+  3. full solve 전에 preprocess only / early initialization 단계까지 실행.
+  4. pp1_dvs.cmd, pp6_des.cmd, pp6_des.par를 working account와 exact diff.
+  5. mesh vertex/element statistics 비교.
+  6. 차이가 있으면 full multi-day solve를 시작하지 않고 먼저 원인을 해결.
+- FAST_BASELINE은 이 clean-account reproducibility gate를 통과할 수 있게 설계한다.
+
+---
+
 ## 2026-10-03 — baseline execution split plan
 
 - 최종 baseline 구현 단계에서는 동일한 검증 baseline을 주수빈 계정 1개, 이택규 계정 1개에 각각 실행할 계획.

@@ -1,3 +1,21 @@
+## 2026-10-04 — B0 cutback-rule validation CLOSED
+
+- 작업자: 이택규
+- 상태: OBSERVED / B0 COMPLETE
+- regenerated x8 CSV with the updated audit tool using explicit `Stepsize`.
+- all 285 rejection/retry pairs were checked.
+- `retry_dt / rejected_dt`:
+  - pairs = 285
+  - min = 0.499975805
+  - max = 0.500023337
+  - mean = 0.499999621
+- interpretation: the retry timestep is effectively exactly 0.5 of the rejected timestep; remaining spread is consistent with printed Stepsize precision.
+- this closes the B0 assumption that the transient cutback factor is independent of whether the rejected Newton attempt ran to 50 or is capped at 15.
+- therefore C1 should preserve the x8 rejection points/accepted-step trajectory over the observed overlap; only the rejected-attempt Newton count changes 50 -> 15.
+- C1 source remains unchanged: SHA-256 `f62eab51816ba21a9fba6f9d26ef39606ea76b17c2a522153d4b45ed8cf27f93`, `Iterations=15`.
+- next: separate FAST C1 Workbench project/copy -> source hash -> preprocess gate.
+- live x6/x7/x8 untouched.
+
 ## 2026-10-04 — Old B0 CSV cutback-ratio spread identified as dt-rounding artifact
 
 - 작업자: 이택규

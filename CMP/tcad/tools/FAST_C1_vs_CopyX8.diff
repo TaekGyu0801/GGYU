@@ -1,0 +1,17 @@
+--- Copy_x8_sd_fdiv_des.cmd
++++ FAST_C1_sd_fdiv_des.cmd
+@@
+-Coupled {
++Coupled (
++Iterations = 15
++) {
+ Poisson
+ Electron
+ Hole
+
+# Review
+# Golden SHA-256:
+# 56a8be698321e5056e33bf22d4b873063728013e8a2383f4e264a42662c4aa2c
+# FAST C1 SHA-256:
+# f62eab51816ba21a9fba6f9d26ef39606ea76b17c2a522153d4b45ed8cf27f93
+# This public diff intentionally omits the proprietary full source.

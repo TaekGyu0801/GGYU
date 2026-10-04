@@ -1,3 +1,16 @@
+## 2026-10-04 — FAST v0.1 short benchmark
+
+- Copy x8 live directory는 수정하지 않는다.
+- 별도 Workbench copy/project에서 FAST v0.1을 시험한다.
+- 첫 후보의 유일한 solver change는 transient inner Coupled `Iterations=15`.
+- full DOE 전에 short benchmark로 다음을 비교:
+  1. accepted/rejected Newton iterations
+  2. high-bias timestep cutback pattern
+  3. wallclock per accepted/rejected step
+  4. I-V/current at matched bias
+  5. spatial result availability
+- 결과가 numerical tolerance 내에서 reference와 일치하면서 runtime이 개선될 때만 다음 후보로 채택.
+
 ## 2026-10-04 — CORRECTION: begin FAST code now; clean-account reproduction is a later freeze gate
 
 - 작업자: 이택규

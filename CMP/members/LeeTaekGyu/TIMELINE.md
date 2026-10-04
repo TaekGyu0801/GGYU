@@ -1,3 +1,13 @@
+## 2026-10-04 — User reports other runs stopped for FAST_C1 work
+
+- 작업자: 이택규
+- 상태: USER-REPORTED / VERIFY NEEDED
+- 사용자가 FAST_C1 작업을 위해 "나머지 다 멈춰놨어"라고 보고함.
+- 어떤 기존 run들이 실제로 중지되었는지는 아직 프로세스 확인 전이므로 확정하지 않음.
+- FAST_C1의 현재 단계는 solve가 아니라 Node 6 (NtSide=0) preprocess-only gate임.
+- preprocess 자체는 계산 solve가 아니므로 기존 장시간 run을 멈출 필요가 없음.
+- 다음: FAST_C1 Node 6 preprocess-only 수행, 필요 시 기존 run 프로세스 상태 재확인.
+
 ## 2026-10-04 — FAST_C1 copied .status ownership resolved
 
 - 작업자: 이택규

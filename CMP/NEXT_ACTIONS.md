@@ -1,3 +1,16 @@
+## 2026-10-04 — B0 CLOSED; begin separate FAST C1 preprocess
+
+1. Keep live x6/x7/x8 untouched.
+2. Create a separate FAST C1 Workbench project/copy.
+3. Generate/install the exact C1 source from the frozen x8 source with only the transient inner Coupled `Iterations=15` change.
+4. Verify C1 source SHA-256 = `f62eab51816ba21a9fba6f9d26ef39606ea76b17c2a522153d4b45ed8cf27f93`.
+5. Preprocess only.
+6. Run the preprocess gate:
+   - golden mesh/parameter provenance preserved
+   - exactly one intended executable change in SDevice: `Iterations=15`
+   - no physics/trap/geometry/step-control drift
+7. Only after preprocess PASS: run NtSide=0 B1 benchmark with A1'/A1''.
+
 ## 2026-10-04 — Regenerate B0 CSV using explicit Stepsize
 
 1. Download current `sdevice_newton_audit.py` from GitHub main.

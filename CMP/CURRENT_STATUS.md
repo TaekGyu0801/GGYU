@@ -1,3 +1,17 @@
+## 2026-10-04 — B0-1: Copy x8 preprocessed Iterations check
+
+- 작업자: 이택규
+- 상태: OBSERVED
+- active Copy x8 `pp6_des.cmd`에서:
+  - `RHSMin = 1e-3`
+  - `CheckRhsAfterUpdate`
+  - `Iterations = 500` (initial Poisson)
+  - `Iterations = 100` (equilibrium Coupled)
+  - transient inner Coupled에 explicit `Iterations` 없음
+  - `NotDamped` 없음
+- 따라서 프로젝트 기록의 ~50-row/iteration failure는 preprocessed deck에 명시된 `Iterations=50` 때문이 아님.
+- 다음: exact x8 `n6_des.out` raw audit으로 50의 의미를 확인하고 accepted-step iteration 분포를 측정.
+
 ## 2026-10-04 — FAST_BASELINE C1 reviewed; B0 required before execution
 
 - 작업자: 이택규

@@ -1,3 +1,12 @@
+## 2026-10-04 — FAST_C1 source installed; inspect Workbench status before preprocess
+
+1. Read `.status` and `gtree.dat` in FAST_C1.
+2. Confirm Node 6 is NtSide=0 and Node 12 is NtSide=1e18.
+3. Confirm copied execution state will not accidentally launch/resume a solve.
+4. Then preprocess Node 6 only; do not run SDevice.
+5. Run `fast_preprocess_check.py`.
+6. Only after gate PASS start NtSide=0 B1.
+
 ## 2026-10-04 — B0 CLOSED; begin separate FAST C1 preprocess
 
 1. Keep live x6/x7/x8 untouched.

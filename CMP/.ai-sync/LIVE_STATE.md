@@ -1,3 +1,17 @@
+# 2026-10-04 — FAST C1 reviewed; B0 audit required
+
+- Claude C1 SHA: `f62eab51816ba21a9fba6f9d26ef39606ea76b17c2a522153d4b45ed8cf27f93`
+- golden Copy x8 SHA: `56a8be698321e5056e33bf22d4b873063728013e8a2383f4e264a42662c4aa2c`
+- executable change: transient inner Coupled `Iterations=15` only
+- C1 and prior ChatGPT v0.1 are executable-statement equivalent
+- status: PROPOSED / REVIEWED / NOT EXECUTED
+- blocker: B0 must resolve documented default 20 vs project-recorded ~50-iteration failures and verify no accepted x8 step needs >15
+- Claude tools are synthetic-tested only; actual x8 format validation pending
+- live x6/x7/x8 remain untouched
+- guide: `CMP/FAST_BASELINE_C1.md`
+
+---
+
 # 2026-10-04 sequence correction — FAST coding starts now
 
 Copy x8 golden reference has been frozen. The next task is to build a separate numerical-only FAST_BASELINE and benchmark the first solver change against Copy x8.

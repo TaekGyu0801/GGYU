@@ -1,3 +1,15 @@
+## 2026-10-04 — Claude project instructions rebuilt for paper-grade TCAD implementation
+
+- 작업자: 이택규
+- 상태: CONFIRMED
+- 새 파일 `CMP/CLAUDE_PROJECT_INSTRUCTIONS.md` 생성.
+- 목적: Claude가 단순 코드 생성기가 아니라 CMP 연구 목적, Common Baseline, Project A/B mechanism, 과거 오류/provenance, runtime 병목, clean-account reproducibility, GitHub 기록 규칙을 모두 이해한 상태에서 구현하도록 함.
+- 역할 분담을 명시:
+  - ChatGPT: 연구 방향/검증/provenance/판단 중심
+  - Claude: Sentaurus 코드 구현/디버깅/copy-paste-ready 산출물 중심
+- `CMP/AGENTS.md`에도 Claude project instruction 문서 읽기 지침 추가.
+- 최종 FAST_BASELINE 작업 프롬프트는 아직 작성하지 않음. 사용자 추가 요구조건을 받은 뒤 작성 예정.
+
 ## 2026-10-04 — Copy x8 reference package capture
 
 - 작업자: 이택규

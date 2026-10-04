@@ -1,3 +1,22 @@
+## 2026-10-04 — Current Copy x8 Node12 pending location narrowed to Workbench/gsub dispatch queue
+
+- 작업자: 이택규
+- 상태: OBSERVED / NARROWED
+- Current Copy x8 gexec.cmd:
+  - Node6: `job 6 -d "1" ... sdevice pp6_des.cmd`
+  - Node12: `job 12 -d "1" ... sdevice pp12_des.cmd`
+  - therefore both depend on Node1 and Node12 does not depend on Node6 at graph level.
+- Current Node12 status: `pending`, `local:-1`.
+- No current `n12_des.job` exists.
+- No current Node12 `gjob` or `sdevice` process exists.
+- Sep26 n12 out/log/err/local.err are stale historical artifacts.
+- Current x8 gsub0 process was launched with `-q local:default -e remaining`, while only Node6 has been dispatched to gjob/sdevice.
+- Three separate project copies currently each have one active Node6 SDevice process.
+- Therefore current Node12 is waiting before SDevice launch, inside Workbench/gsub scheduling/dispatch, not failing inside the current SDevice deck.
+- Most plausible explanation is local queue/resource/concurrency serialization while three SDevice jobs are already active, but exact queue limit is not yet proven.
+- If immediate Node12 execution is desired, first retire one duplicate active run (prefer x7), then observe whether x8 gsub dispatches Node12 automatically. If not, inspect Workbench local queue/concurrency settings before manually relaunching.
+
+
 ## 2026-10-04 — Why Node12 is not running: separate old solver failure from current pending state
 
 - 작업자: 이택규

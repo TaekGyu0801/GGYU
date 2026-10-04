@@ -1,3 +1,20 @@
+## 2026-10-04 — CORRECTION: begin FAST code now; clean-account reproduction is a later freeze gate
+
+- 작업자: 이택규
+- 상태: DECISION / CORRECTION
+- Copy x8 golden reference source/hash freeze가 완료되었으므로 numerical-only FAST_BASELINE 코드 작성과 short benchmark를 지금 시작한다.
+- clean-account reproduction을 FAST 코드 작성 전 blocker로 두지 않는다.
+- 올바른 순서:
+  1. Copy x8 exact source/reference freeze
+  2. separate FAST_BASELINE code/project 생성
+  3. Newton iteration/cutback policy를 첫 numerical-only change로 short benchmark
+  4. Copy x8과 결과 등가성 확인
+  5. 필요 시 staged bias/MaxStep, ErrRef, far-field mesh를 하나씩 추가 benchmark
+  6. 최종 FAST deck 후보가 확정되면 JuSubin/LeeTaekGyu clean-account reproduction gate 수행
+  7. 그 뒤 Project A/B production runs 시작
+- 기존 x6/x7/x8 live directories는 수정하지 않는다.
+- Common Baseline physics/Nt/Et/sigma/5 nm damage width는 변경하지 않는다.
+
 ## 2026-10-04 — Next: clean-account reproduction gate
 
 - Copy x8 golden snapshot/hash freeze 완료.

@@ -1,3 +1,12 @@
+## 2026-10-04 — Old B0 CSV cutback-ratio spread identified as dt-rounding artifact
+
+- 작업자: 이택규
+- 상태: OBSERVED
+- full old-CSV check over 285 rejection/retry pairs: min=0.47826087, max=0.52173913, mean=0.499405569.
+- old CSV used dt=t1-t0 from rounded printed endpoints, so high-bias small timesteps are distorted.
+- this spread is not accepted as evidence of a variable cutback factor.
+- updated Claude audit tool reads explicit Stepsize from the log; regenerate CSV before judging cutback-ratio constancy.
+- existing raw log examples using Stepsize are approximately 0.5.
 ## 2026-10-04 — Full CSV cutback-ratio check exposed old-dt rounding artifact
 
 - 작업자: 이택규

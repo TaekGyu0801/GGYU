@@ -1,3 +1,17 @@
+## 2026-10-04 — FAST C1 baseline acceptance sequence clarified
+
+- 작업자: 이택규
+- 연구 판단: FAST_C1은 단순히 Node 6/12가 완주했다는 이유만으로 baseline으로 확정하지 않는다.
+- 최종 공통 baseline은 두 조건을 포함한다:
+  - NtSide=0: defect-free control
+  - NtSide=1e18: nominal sidewall-defect baseline
+- acceptance sequence:
+  1. FAST_C1 preprocess equivalence gate PASS.
+  2. NtSide=0 B1 run: golden x8 overlap에서 accepted/rejected trajectory, Iterations=15 적용, I-V/Vf/출력 등가성 검증.
+  3. NtSide=1e18 run: 동일한 C1 source/mesh/physics 유지, trap concentration만 1e18로 변경되었는지 확인하고 완주/물리 sanity 검증.
+  4. 두 조건이 모두 통과하면 FAST_C1을 Project A/B 공통 baseline numerical implementation으로 freeze.
+- Project A/B는 이후 이 frozen common baseline 위에서 각각 GaN:C high-resistance 영역과 AlGaN barrier를 추가한다.
+
 ## 2026-10-04 — FAST_C1 Node 6 solve accidentally launched before preprocess gate
 
 - 작업자: 이택규

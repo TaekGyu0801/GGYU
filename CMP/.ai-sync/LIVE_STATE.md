@@ -1,3 +1,17 @@
+# 2026-10-04 — Claude B0 review: C1 unchanged, A1'/A1'' added
+
+- C1 source unchanged: SHA-256 `f62eab51816ba21a9fba6f9d26ef39606ea76b17c2a522153d4b45ed8cf27f93`; `Iterations=15`.
+- correction: ~4.33 V is the first rejected attempt where Newton count changes 50->15, not a trajectory divergence.
+- A1': accepted-step sequence + rejection points should match over the observed overlap; unexplained mismatch = UNEXPECTED.
+- A1'': every C1 rejection must show `#iterations larger than 15.`; 50 means cap not applied -> stop.
+- A3/A4: printed-precision identity expected on observed overlap; 1e-3 / 1 mV are outer limits.
+- new audit tool SHA-256 `9a935633e92bc55fa86849b6988b60a8a8ee55f637387ced62721d9f6267d281`; synthetic selftest passed.
+- observed raw retry/rejected dt examples are ~0.5; full 285-event CSV ratio verification remains pending because the CSV was not included in the review package.
+- patch-equivalent commit: `ace056fcb01d2e6e785dbee08a213e1148d6be35`.
+- next: separate FAST C1 preprocess gate, then NtSide=0 B1 benchmark; live x6/x7/x8 untouched.
+
+---
+
 # 2026-10-04 — B0 PASS for C1 Iterations=15
 
 - 1950 accepted x8 attempts, accepted max Newton=4.

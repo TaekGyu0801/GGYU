@@ -1,3 +1,32 @@
+## 2026-10-04 — B0 raw x8 audit PASS for C1 Iterations=15
+
+- 작업자: 이택규
+- 상태: OBSERVED / B0 PASS TO CURRENT X8 PROGRESS
+- source log: `~/CMP_B0/x8_n6_des_20261004_1335.out`
+- parsed attempts: 2236
+  - accepted: 1950
+  - rejected: 285
+  - unknown: 0
+- accepted-step Newton iterations:
+  - 2 iter: 1019
+  - 3 iter: 778
+  - 4 iter: 153
+  - **accepted max = 4**
+- rejected attempts: **285/285 reached 50 iterations**
+- parser/raw excerpt directly confirms a rejected attempt finishing with `#iterations larger than 50.`
+- `Iterations=15` predicted false rejections over the observed x8 trajectory: **0**
+- first trajectory divergence under a 15-cap is predicted near anode **4.33 V**
+- observed attempt wallclock sum:
+  - total ≈ 495106 s = 137.5 h
+  - accepted ≈ 123464 s
+  - rejected ≈ 371643 s (~75.1% of attempt wallclock)
+- simple uniform-per-iteration estimate for N=15: saved rejected-attempt time ≈ 260150 s (~72.3 h), corresponding to an idealized ~2.11x speedup over the observed trajectory if no additional recovery cost is introduced.
+- important limitation: x8 log copy only reaches ~4.643 V; B0 does not prove behavior from 4.643→5.0 V.
+- tool caveats:
+  - real log `error` column is not yet parsed, so `err<1?` output is not used.
+  - cutback recovery median/max from the current script is not used for acceptance because the metric is misleading under repeated ramp failures.
+- decision: C1 `Iterations=15` is approved as the first PROPOSED numerical candidate for separate-project preprocess + NtSide=0 benchmark. It is not yet a CONFIRMED FAST baseline.
+
 ## 2026-10-04 — Corrected B0 parser selftest passed
 
 - 작업자: 이택규

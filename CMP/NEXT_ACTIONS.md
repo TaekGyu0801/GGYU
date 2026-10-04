@@ -1,3 +1,11 @@
+## 2026-10-04 — Immediate B0 action: identify real x8 log syntax
+
+1. Do not use the current audit statistics; parser matched zero attempts.
+2. Inspect the raw x8 log for the exact transient step-start wording.
+3. Patch `sdevice_newton_audit.py` to the actual T-2022.03 format.
+4. Validate the patched parser by comparing parsed fields against raw log rows.
+5. Only then evaluate accepted-step max iterations / false rejection for N=15.
+
 ## 2026-10-04 — B0 next: raw x8 n6_des.out audit
 
 1. Copy live x8 `n6_des.out` to a safe home/bench location.

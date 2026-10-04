@@ -1,3 +1,26 @@
+# 2026-10-04 FAST baseline handoff
+
+**Current task:** freeze Copy x8 as the golden local reference, then reproduce preprocessing in Lee Taek Gyu's clean account before any full FAST solve.
+
+**Newest confirmed repository action:**
+- `CMP/FAST_BASELINE_REPRO_PROTOCOL.md` added.
+- `CMP/tcad/capture_reference_snapshot.sh` added.
+- Public GitHub `CMP/tcad/CURRENT` is still not the authoritative Copy x8 running source.
+
+**Immediate blocker:**
+Existing local reference package `~/CMP_REFERENCE_20261004.tgz` is recorded as missing the exact editable SDevice source `sd_fdiv_des.cmd`. This source must be added locally and hashed before clean-account reproduction.
+
+**Next:**
+1. Complete Copy x8 local snapshot with exact source.
+2. Generate SHA-256 manifest.
+3. In clean account, preprocess only / early initialization.
+4. Diff `pp1_dvs.cmd`, `pp6_des.cmd`, `pp6_des.par`; compare mesh hash/statistics.
+5. Only after reproducibility gate passes, create numerical-only FAST branch.
+
+**Do not change:** Common Baseline geometry, Nt/Et/sigma, 5 nm sidewall damage width, common A/B physics.
+
+---
+
 ## 2026-09-29 — JuSubin active run direct evidence: Node 6 alive, high-bias convergence slowdown
 
 - Direct file evidence: active output is `n6_des.out` (Node 6), superseding the earlier Node-19 inference.

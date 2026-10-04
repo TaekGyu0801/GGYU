@@ -1,3 +1,13 @@
+## 2026-10-04 — Immediate: hand golden source to Claude
+
+1. Claude project에서 작업자 `이택규`로 시작.
+2. exact file `Copy_x8_sd_fdiv_des.cmd` 첨부.
+3. Claude에게 `CMP/prompts/CLAUDE_FAST_BASELINE_IMPLEMENTATION.md`를 읽고 그대로 구현 업무를 수행하도록 지시.
+4. Claude는 attached source hash를 golden SHA-256과 확인.
+5. Claude가 complete FAST_BASELINE source + diff + Workbench 적용법 + short benchmark plan을 작성.
+6. live Copy x8은 수정하지 않음.
+7. full proprietary source는 public GitHub에 commit하지 않음.
+
 ## 2026-10-04 — FAST v0.1 short benchmark
 
 - Copy x8 live directory는 수정하지 않는다.

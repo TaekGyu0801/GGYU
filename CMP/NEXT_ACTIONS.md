@@ -1,3 +1,11 @@
+## 2026-10-04 — Regenerate B0 CSV using explicit Stepsize
+
+1. Download current `sdevice_newton_audit.py` from GitHub main.
+2. Run `--selftest`.
+3. Rerun the copied x8 log audit to regenerate `~/CMP_B0/x8_attempts.csv`.
+4. Recompute `retry_dt / rejected_dt` across all 285 rejection/retry pairs.
+5. Treat a tight cluster around 0.5 as confirmation of the fixed cutback rule; do not use the old 0.478–0.522 spread.
+
 ## 2026-10-04 — FAST C1 next action after B0 PASS
 
 1. Claude B0 review complete: C1 source unchanged; `Iterations=15` retained.

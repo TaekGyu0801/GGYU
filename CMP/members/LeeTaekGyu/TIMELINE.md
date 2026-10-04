@@ -1,3 +1,13 @@
+## 2026-10-04 — Corrected B0 parser selftest passed
+
+- 작업자: 이택규
+- 상태: OBSERVED / TOOL SELFTEST PASS
+- commit-pinned parser `a0ff43f2aff4b76ed390dcd6831e3ebeba6cb366` downloaded successfully.
+- `python3 ~/CMP_B0/sdevice_newton_audit.py --selftest` returned `selftest OK`.
+- This version contains the regression probe for the observed x8 T-2022.03 BE-step syntax.
+- next: rerun the real x8 copied-log audit and inspect accepted/rejected iteration distribution.
+- C1 `Iterations=15` remains unconfirmed until the real-log audit passes.
+
 ## 2026-10-04 — Root cause of failed BE-step parser patch: regex escaping error
 
 - 작업자: 이택규

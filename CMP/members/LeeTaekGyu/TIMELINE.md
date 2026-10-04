@@ -1,3 +1,13 @@
+## 2026-10-04 — B0 local audit setup
+
+- 작업자: 이택규
+- 상태: OBSERVED
+- x8 n6_des.out copy succeeded to ~/CMP_B0/x8_n6_des_20261004_1335.out.
+- LOG variable setup succeeded under csh/tcsh.
+- audit did not start because sdevice_newton_audit.py was not yet present in ~/CMP_B0.
+- no simulation/source change occurred.
+- next: place the audit script in ~/CMP_B0, run selftest, then audit the copied x8 log.
+
 ## 2026-10-04 — B0 audit script missing locally
 
 - 작업자: 이택규

@@ -1,3 +1,24 @@
+## 2026-10-04 — Claude FAST C1 package reviewed by ChatGPT
+
+- 작업자: 이택규
+- 상태: PROPOSED / REVIEWED / NOT EXECUTED
+- Claude package `FAST_BASELINE_C1_for_GPT.zip` 검토 완료.
+- golden source SHA-256 재검증:
+  - `56a8be698321e5056e33bf22d4b873063728013e8a2383f4e264a42662c4aa2c`
+- FAST C1 source SHA-256 재검증:
+  - `f62eab51816ba21a9fba6f9d26ef39606ea76b17c2a522153d4b45ed8cf27f93`
+- golden 대비 executable statement 변경은 transient inner Coupled의 `Iterations=15` 한 group뿐.
+- 기존 ChatGPT FAST v0.1(SHA `6ccf386c...`)과 Claude C1은 executable statement 기준 동일. 차이는 comments/formatting뿐이며 앞으로 C1을 canonical candidate로 사용.
+- Claude Python tools 3개는 ChatGPT sandbox에서 `py_compile` 통과; Newton audit/PLT compare synthetic selftest 통과. 실제 semi437 SDevice log/PLT에서는 아직 미검증.
+- 중요 correction:
+  - Synopsys 2022 training은 Quasistationary/Transient Newton `Iterations` default=20, 보통 15–20회 제한을 권장.
+  - CMP 기록의 약 50-iteration failure와 충돌하므로 effective x8 cap은 아직 UNRESOLVED.
+  - B0에서 exact `pp6_des.cmd` + raw `n6_des.out`을 교차검증한 뒤 15를 확정.
+- raw Claude patch의 “x7 먼저 정리” 권고는 최신 운영 결정과 충돌하여 반영하지 않음. live x6/x7/x8은 보존.
+- acceptance thresholds는 PROVISIONAL engineering criteria로 기록.
+- public record: `CMP/FAST_BASELINE_C1.md`
+- sanitized diff: `CMP/tcad/tools/FAST_C1_vs_CopyX8.diff`
+
 ## 2026-10-04 — Claude FAST implementation prompt committed
 
 - 작업자: 이택규

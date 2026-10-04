@@ -468,28 +468,22 @@ clean-account reproduction은 필수지만,
 
 ## 16. GitHub 기록 규칙
 
-Claude가 구현을 완료하면 GitHub에 즉시 기록한다.
+이택규의 Claude는 GitHub를 READ할 수 있지만 WRITE/EDIT 권한이 없다.
 
-최소:
-
-- `CMP/members/LeeTaekGyu/TIMELINE.md`
-- `CMP/NEXT_ACTIONS.md`
-- 필요 시 `CMP/.ai-sync/LIVE_STATE.md`
-- 필요 시 `CMP/.ai-sync/LIVE_STATE.json`
-- 필요 시 `CMP/.ai-sync/RELAY.md`
-- Issue #7
-
-public repository에는 proprietary full Sentaurus source를 commit하지 않는다.
-
-대신 기록:
+따라서 Claude는 GitHub에 직접 기록했다고 주장하면 안 된다. 구현이 끝나면 아래 내용을 채팅 답변에 명확히 정리해 사용자/ChatGPT가 기록할 수 있게 한다.
 
 - source hash
 - FAST candidate hash
 - numerical diff summary
 - exact numerical settings
 - benchmark plan
-- benchmark result
+- benchmark result(실행한 경우만)
 - status label
+- 어떤 GitHub 파일에 어떤 내용을 기록해야 하는지 제안
+
+실제 GitHub WRITE는 ChatGPT가 검토 후 수행한다.
+
+public repository에는 proprietary full Sentaurus source를 commit하지 않는다.
 
 ---
 

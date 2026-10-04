@@ -1,3 +1,18 @@
+## 2026-10-04 — B0 result: C1 Iterations=15 cleared for first benchmark
+
+- worker: 이택규
+- x8 raw audit parsed 2236 attempts: 1950 accepted / 285 rejected.
+- accepted Newton iterations: 2–4 only; max=4.
+- all 285 rejected attempts reached 50 iterations; raw log explicitly says `#iterations larger than 50.`
+- predicted N=15 false rejection = 0 on observed path through ~4.643 V.
+- rejected attempts consume ~75% of observed attempt wallclock.
+- idealized saved time for cap 15 ≈72.3 h over the copied trajectory; simple idealized speedup ≈2.11x, before extra recovery overhead.
+- C1 is therefore cleared as PROPOSED first numerical candidate for separate-project preprocess + NtSide=0 benchmark.
+- limitations: no evidence yet for 4.643→5.0 V; parser does not yet parse real-log `error` column; current recovery-step metric should be ignored.
+- do not modify live x6/x7/x8.
+
+---
+
 ## 2026-10-04 — B0 preprocessed check result
 
 - active Copy x8 `pp6_des.cmd`: transient inner Coupled has no explicit `Iterations`; only initial 500 and equilibrium 100 are present.

@@ -1,3 +1,14 @@
+## 2026-10-04 — FAST baseline reproducibility gate and capture helper added
+
+- 작업자: 이택규
+- 상태: PROPOSED / TOOLING READY
+- GitHub public repository의 CURRENT TCAD deck이 active Copy x8의 authoritative source가 아니라는 점을 재확인.
+- 새 문서 `CMP/FAST_BASELINE_REPRO_PROTOCOL.md` 추가: Copy x8 local freeze → clean-account preprocess/hash/diff → reproducibility gate → numerical-only FAST branch 순서를 명문화.
+- 새 도구 `CMP/tcad/capture_reference_snapshot.sh` 추가: project directory에서 source/preprocessed/grid/log/runtime context를 local snapshot으로 수집하고 SHA-256 manifest를 생성.
+- public GitHub에는 licensed/example-derived source/output 원문을 업로드하지 않고, snapshot은 로컬에만 보존하도록 명시.
+- 기존 이택규 기록상 `~/CMP_REFERENCE_20261004.tgz` 패키지는 생성되었으나 `sd_fdiv_des.cmd`가 누락된 상태이므로, 우선 exact Copy x8 source를 local reference package에 추가한 뒤 clean-account preprocess 비교로 진행.
+- baseline physics/Nt/Et/sigma/5 nm damage width는 변경하지 않음.
+
 ## 2026-10-04 — Claude project instructions rebuilt for paper-grade TCAD implementation
 
 - 작업자: 이택규

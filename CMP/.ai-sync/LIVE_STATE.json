@@ -2,9 +2,9 @@
   "updated": "2026-10-04",
   "primaryWorker": "이택규",
   "phase": "Phase 0 — Common Baseline FAST numerical optimization",
-  "task": "Build separate FAST_BASELINE from frozen Copy x8 reference",
-  "status": "READY_TO_CODE",
-  "blocker": "Exact editable Copy x8 source content must be available to the coding AI; hashes are frozen, but public CURRENT is stale.",
+  "task": "B0 audit of Copy x8 before FAST C1 execution",
+  "status": "FAST_C1_REVIEWED_B0_REQUIRED",
+  "blocker": "Resolve documented ramp Iterations default=20 versus project-recorded ~50-iteration failures using exact x8 pp6_des.cmd + raw n6_des.out; validate parser and ensure no accepted x8 step needs >15.",
   "parallelWork": {
     "worker": "주수빈",
     "status": "OBSERVED",
@@ -182,17 +182,18 @@
     "next_action": "Recover exact full user-provided Final SDevice v1.1/v1.2 source and sync it; do not reconstruct from summaries."
   },
   "fastBaseline": {
-    "status": "READY_TO_CODE",
+    "status": "FAST_C1_REVIEWED_B0_REQUIRED",
     "goldenReference": "semi437 Copy x8",
     "localPackage": "~/CMP_REFERENCE_20261004.tgz",
-    "localPackageKnownGap": "sd_fdiv_des.cmd missing according to latest LeeTaekGyu timeline",
     "protocol": "CMP/FAST_BASELINE_REPRO_PROTOCOL.md",
     "captureHelper": "CMP/tcad/capture_reference_snapshot.sh",
     "nextAction": [
-      "Create clean-account Workbench project from frozen source",
-      "Run preprocess/early initialization only",
-      "Compare pp1_dvs.cmd, pp6_des.cmd, pp6_des.par and mesh hash/statistics against golden reference",
-      "Start numerical-only FAST branch only after equivalence is established"
+      "Copy/read exact x8 pp6_des.cmd and raw n6_des.out",
+      "Verify actual/effective Iterations and raw Newton row semantics",
+      "Run sdevice_newton_audit.py with raw verification",
+      "Confirm no accepted x8 step requires >15",
+      "Only then preprocess separate FAST C1 project",
+      "Keep live x6/x7/x8 untouched"
     ],
     "snapshot": "~/CMP_REFERENCE_SNAPSHOTS/Copy_x8_20261004_124024",
     "hashes": {
@@ -209,6 +210,22 @@
       "Validate equivalence against Copy x8",
       "Benchmark further numerical changes one at a time if needed",
       "Run clean-account reproduction before final FAST freeze and Project A/B production"
-    ]
+    ],
+    "referenceFreeze": "CONFIRMED",
+    "candidateC1": {
+      "status": "PROPOSED_REVIEWED_NOT_EXECUTED",
+      "author": "Claude",
+      "reviewedBy": "ChatGPT",
+      "goldenSourceSha256": "56a8be698321e5056e33bf22d4b873063728013e8a2383f4e264a42662c4aa2c",
+      "sourceSha256": "f62eab51816ba21a9fba6f9d26ef39606ea76b17c2a522153d4b45ed8cf27f93",
+      "change": "forward Transient inner Coupled: Iterations=15 only",
+      "executableEquivalentToChatGPTV01": true,
+      "documentedRampDefaultIterations": 20,
+      "documentedGuidance": "Usually 3-6 iterations; 15-20 is a reasonable cap before reducing step size.",
+      "unresolved": "CMP records show some failed attempts near ~50 iterations; reconcile with pp6_des.cmd/raw n6_des.out before run.",
+      "toolsValidation": "Python syntax + synthetic selftests only; actual Sentaurus formats pending",
+      "acceptanceStatus": "PROVISIONAL",
+      "guide": "CMP/FAST_BASELINE_C1.md"
+    }
   }
 }

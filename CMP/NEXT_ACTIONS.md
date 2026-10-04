@@ -1,18 +1,19 @@
 ## 2026-10-04 — FAST C1 next action after B0 PASS
 
-1. Send B0 summary to Claude for independent review; no code change is required unless Claude identifies a concrete issue.
-2. Create a **separate** Workbench project/copy for FAST C1. Do not modify/stop live x6/x7/x8.
-3. Install the exact Claude C1 source locally and verify SHA-256 `f62eab51816ba21a9fba6f9d26ef39606ea76b17c2a522153d4b45ed8cf27f93`.
-4. Preprocess only and run `fast_preprocess_check.py`.
-5. Require: golden SDE/parameter equivalence + exactly one intended executable change (`Iterations=15`).
-6. Run NtSide=0 C1 first.
-7. Compare against Copy x8:
-   - first divergence should occur only when the reference attempt exceeds 15 iterations (~4.33 V on current evidence)
-   - I-V / matched-current Vf
-   - accepted/rejected attempts
-   - timestep trajectory
+1. Claude B0 review complete: C1 source unchanged; `Iterations=15` retained.
+2. Before/alongside B1, verify the full B0 CSV cutback ratio `retry dt / rejected dt` across all rejection pairs. Existing raw excerpts show ~0.5, but full-CSV constancy is still pending.
+3. Create a **separate** Workbench project/copy for FAST C1. Do not modify/stop live x6/x7/x8.
+4. Install the exact Claude C1 source locally and verify SHA-256 `f62eab51816ba21a9fba6f9d26ef39606ea76b17c2a522153d4b45ed8cf27f93`.
+5. Preprocess only and run `fast_preprocess_check.py`.
+6. Require: golden SDE/parameter equivalence + exactly one intended executable change (`Iterations=15`).
+7. Run NtSide=0 C1 first.
+8. Compare against Copy x8 using A1'/A1'':
+   - accepted steps `(t0,t1,Newton count)` and rejection points `(t0,dt)` should match over the overlap
+   - ~4.33 V is the first rejected attempt where Newton count is expected to change 50 -> 15, **not** a trajectory divergence
+   - every C1 rejection must report `#iterations larger than 15.`; a 50-cap message means stop
+   - I-V / matched-current Vf and available snapshots should match printed precision on the observed overlap; 1e-3 / 1 mV are outer limits
    - wallclock / mV-per-hour in the high-bias bottleneck
-8. Do not declare FAST baseline CONFIRMED until numerical/physical equivalence and runtime criteria pass.
+9. Do not declare FAST baseline CONFIRMED until numerical/physical equivalence and runtime criteria pass.
 
 ## 2026-10-04 — Rerun B0 with patched real-log parser
 

@@ -1,3 +1,10 @@
+# 2026-10-04 — B0 parser patched for actual BE-step log format
+
+- real T-2022.03 x8 step syntax identified and parser patched.
+- next: re-download tool and rerun B0 audit; Iterations=15 remains unconfirmed until real accepted-step distribution is parsed.
+
+---
+
 # 2026-10-04 — B0-1 passed: no explicit transient Iterations in x8 pp6
 
 - observed x8 pp6_des.cmd:

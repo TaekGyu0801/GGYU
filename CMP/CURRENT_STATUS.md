@@ -1,3 +1,12 @@
+## 2026-10-04 — FAST_C1 patch dry-run PASS
+
+- 작업자: 이택규
+- 상태: OBSERVED
+- separate FAST_C1 directory에서 `patch --dry-run -p0 < ~/CMP_B0/FAST_C1_exact_source.patch` 실행.
+- 출력: `checking file sd_fdiv_des.cmd`; reject/error 없음.
+- 아직 실제 patch 적용 전.
+- 다음: actual patch apply 후 `sd_fdiv_des.cmd` SHA-256이 exact C1 hash와 일치하는지 확인.
+
 ## 2026-10-04 — B0 cutback-rule validation CLOSED
 
 - 작업자: 이택규

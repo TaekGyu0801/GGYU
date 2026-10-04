@@ -1,3 +1,17 @@
+## 2026-10-04 — Next: clean-account reproduction gate
+
+- Copy x8 golden snapshot/hash freeze 완료.
+- 이제 이택규 clean account에서 새 Workbench project를 생성하고 exact frozen source를 가져온다.
+- full multi-day solve는 아직 시작하지 않는다.
+- preprocess / early initialization까지만 실행 후 golden reference와 비교:
+  - sd_fdiv_des.cmd revision
+  - pp1_dvs.cmd
+  - pp6_des.cmd
+  - pp6_des.par
+  - n1_msh.tdr hash + mesh statistics
+- unexplained difference가 하나라도 있으면 long run 시작 금지.
+- 모두 일치/설명 가능할 때 numerical-only FAST baseline branch로 이동.
+
 ## 2026-10-04 — Immediate next action: finish Copy x8 golden reference package
 
 - 작업자: 이택규

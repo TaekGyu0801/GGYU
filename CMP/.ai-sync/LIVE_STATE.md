@@ -1,3 +1,15 @@
+# 2026-10-04 — B0 COMPLETE; FAST C1 ready for preprocess
+
+- updated Stepsize-based x8 CSV verified all 285 retry/rejection pairs.
+- retry_dt / rejected_dt: min 0.499975805, max 0.500023337, mean 0.499999621.
+- cutback factor = 0.5 to log-print precision.
+- B0 is closed.
+- C1 unchanged: Iterations=15, source SHA-256 f62eab51816ba21a9fba6f9d26ef39606ea76b17c2a522153d4b45ed8cf27f93.
+- next: separate FAST C1 project/copy -> source hash -> preprocess gate -> NtSide=0 B1.
+- live x6/x7/x8 untouched.
+
+---
+
 # 2026-10-04 — Claude B0 review: C1 unchanged, A1'/A1'' added
 
 - C1 source unchanged: SHA-256 `f62eab51816ba21a9fba6f9d26ef39606ea76b17c2a522153d4b45ed8cf27f93`; `Iterations=15`.

@@ -1,3 +1,28 @@
+## 2026-10-04 — Claude B0 review accepted; C1 source unchanged
+
+- 작업자: 이택규
+- 상태: PROPOSED / CLAUDE-REVIEWED / READY FOR SEPARATE PREPROCESS
+- Claude review package verified:
+  - C1 source unchanged
+  - C1 SHA-256 = `f62eab51816ba21a9fba6f9d26ef39606ea76b17c2a522153d4b45ed8cf27f93`
+  - `Iterations = 15` retained
+- B0 interpretation correction accepted:
+  - ~4.33 V is **not** a trajectory divergence.
+  - It is the first observed rejected attempt where the Newton count is expected to differ: x8 50 -> C1 15.
+  - Over the overlapping observed path, C1 is expected to preserve the accepted-step sequence and rejection points; any unexplained mismatch is UNEXPECTED and must be investigated.
+- Acceptance additions:
+  - A1': accepted steps (t0,t1,Newton count) + rejection points (t0,dt) should match over the overlap.
+  - A1'': every C1 rejected attempt must report `#iterations larger than 15.`; seeing 50 means the cap did not apply and the run must stop.
+  - A3/A4: identical-to-printed-precision is the expectation on the observed overlap; 1e-3 / 1 mV remain outer limits, not automatic acceptance bands.
+- Updated audit tool package SHA-256:
+  - `9a935633e92bc55fa86849b6988b60a8a8ee55f637387ced62721d9f6267d281`
+  - package selftest independently rerun by ChatGPT and passed.
+- Cutback-ratio evidence:
+  - actual x8 excerpts already observed show retry/rejected dt ratios approximately 0.5 (e.g. 2.2968e-05->1.1484e-05, 2.3813e-05->1.1907e-05, 2.4690e-05->1.2345e-05).
+  - the full B0 CSV itself was not included in the Claude review ZIP, so constancy across all 285 rejections is still **PENDING FULL-CSV VERIFICATION**.
+- Patch-equivalent review changes applied at commit `ace056fcb01d2e6e785dbee08a213e1148d6be35`.
+- live x6/x7/x8 remain untouched.
+
 ## 2026-10-04 — FAST C1 cleared by B0 for separate-project benchmark
 
 - 작업자: 이택규
@@ -5,7 +30,7 @@
 - raw Copy x8 audit: 1950 accepted steps, max accepted Newton iterations = 4; 285 rejected attempts, each reaching 50 iterations.
 - N=15 false rejection count on observed x8 trajectory = 0.
 - raw log confirms effective failed-attempt cap behavior of >50 iterations even though transient inner Coupled has no explicit Iterations in pp6_des.cmd.
-- rejected attempts account for ~75% of observed attempt wallclock; idealized N=15 estimate suggests ~2.1x speedup potential, before extra cutback/recovery overhead.
+- rejected attempts account for ~75% of observed attempt wallclock; under the observed fixed-cutback pattern and approximately uniform per-iteration cost, N=15 predicts ~2.1x speedup over the observed path.
 - B0 evidence currently covers x8 only to ~4.643 V.
 - next: create/preprocess separate FAST C1 project, run preprocess gate, then NtSide=0 benchmark. Keep live x6/x7/x8 untouched.
 - C1 remains PROPOSED until execution/equivalence checks pass.

@@ -1,3 +1,15 @@
+## 2026-10-04 — FAST C1 cleared by B0 for separate-project benchmark
+
+- 작업자: 이택규
+- 상태: PROPOSED / B0-PASSED / NOT YET EXECUTED
+- raw Copy x8 audit: 1950 accepted steps, max accepted Newton iterations = 4; 285 rejected attempts, each reaching 50 iterations.
+- N=15 false rejection count on observed x8 trajectory = 0.
+- raw log confirms effective failed-attempt cap behavior of >50 iterations even though transient inner Coupled has no explicit Iterations in pp6_des.cmd.
+- rejected attempts account for ~75% of observed attempt wallclock; idealized N=15 estimate suggests ~2.1x speedup potential, before extra cutback/recovery overhead.
+- B0 evidence currently covers x8 only to ~4.643 V.
+- next: create/preprocess separate FAST C1 project, run preprocess gate, then NtSide=0 benchmark. Keep live x6/x7/x8 untouched.
+- C1 remains PROPOSED until execution/equivalence checks pass.
+
 ## 2026-10-04 — Real T-2022.03 BE-step syntax identified; B0 parser patched
 
 - 작업자: 이택규

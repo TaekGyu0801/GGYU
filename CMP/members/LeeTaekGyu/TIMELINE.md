@@ -1,3 +1,18 @@
+## 2026-10-04 — Copy x8 golden reference freeze completed
+
+- 작업자: 이택규
+- 상태: CONFIRMED
+- local snapshot: `~/CMP_REFERENCE_SNAPSHOTS/Copy_x8_20261004_124024`
+- exact core files and hashes:
+  - `n1_msh.tdr` = `762d2d57a352a00bb030b968985cbf3b71d53118c68e5c53b7586e613f392ea3`
+  - `pp1_dvs.cmd` = `5685528bc3ec338ce104040b0503be43ef032094976d69995529eb5d6fb4e658`
+  - `pp6_des.cmd` = `2dfcc98effe145ec944fb8ee5d6914f5f098e54d1bf2319c69acc76afe1692e6`
+  - `pp6_des.par` = `60405755de61500d9815a8e9ecca6a7a465783d77eb8e5dadf1db515aeb10039`
+  - `sd_fdiv_des.cmd` = `56a8be698321e5056e33bf22d4b873063728013e8a2383f4e264a42662c4aa2c`
+- 기존 blocker였던 editable SDevice source 누락은 해결됨.
+- 이 snapshot/hash set을 clean-account reproduction의 golden reference로 사용.
+- 다음: 이택규 clean account 새 Workbench project에서 preprocess/early-init까지만 실행 후 exact diff/hash 비교.
+
 ## 2026-10-04 — Copy x8 core files verified
 
 - 작업자: 이택규

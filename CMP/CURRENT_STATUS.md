@@ -1,3 +1,13 @@
+## 2026-10-04 — Old B0 CSV ratio spread is a rounding artifact, not a physics/cutback result
+
+- 작업자: 이택규
+- 상태: OBSERVED / VALIDATION PENDING
+- old CSV ratio check over all 285 rejection/retry pairs: min 0.47826087, max 0.52173913, mean 0.499405569.
+- old audit CSV computed dt from rounded t0/t1, so these values cannot be used to test whether the cutback factor is constant.
+- updated Claude audit tool reads the explicit `Stepsize` field and must regenerate the CSV before the cutback-ratio assumption is closed.
+- existing raw log examples using printed Stepsize are ~0.5.
+- C1 `Iterations=15` decision is unchanged; this affects only the auxiliary validation of the timestep-reduction rule.
+
 ## 2026-10-04 — Full CSV cutback-ratio check exposed old-dt rounding artifact
 
 - 작업자: 이택규

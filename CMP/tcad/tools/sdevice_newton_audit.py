@@ -26,7 +26,7 @@ Usage
   python3 sdevice_newton_audit.py --selftest
 
 Parsing rules (format-tolerant, verify with --raw):
-  * an attempt starts at a line "Computing step from t=<a> to t=<b>"
+  * an attempt starts at either "Computing BE-step from <a> s to <b> s" (T-2022.03 observed format)\n    or "Computing step from t=<a> to t=<b>"
   * Newton rows are lines starting with an integer index followed by numbers
     (with or without '|' separators); the column header line containing
     "Rhs" is used to locate the Rhs / error / time columns when present
@@ -222,7 +222,7 @@ def report(atts, mode, args, label='REF'):
     print(f'attempts={len(atts)} accepted={len(acc)} rejected={len(rej)} '
           f'unknown={sum(a.status == "unknown" for a in atts)}  time source: {mode}')
     if not atts:
-        print('NO "Computing step from t=... to t=..." lines found -- check the file / send a raw excerpt.')
+        print('NO supported step-start lines found -- check the file / send a raw excerpt.')
         return
     last = atts[-1]
     print(f'last attempt: t0={last.t0:.8g} (V~{vol(last, vs):.5f}) dt={last.dt:.3g} iters={last.iters} '

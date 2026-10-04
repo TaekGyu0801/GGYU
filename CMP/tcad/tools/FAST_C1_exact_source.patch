@@ -1,0 +1,79 @@
+--- sd_fdiv_des.cmd
++++ sd_fdiv_des.cmd
+@@ -1,5 +1,6 @@
+ #==============================================================================
+-# CMP COMMON BASELINE - FINAL MAIN SDEVICE v1.2
++# CMP COMMON BASELINE - FAST_BASELINE C1 (numerical-only)
++#   derived from FINAL MAIN SDEVICE v1.2 (Copy x8 golden source)
+ #
+ # Common baseline:
+ #
+@@ -22,6 +23,39 @@
+ 
+ 
+ #==============================================================================
++# FAST_BASELINE C1 - PROVENANCE AND CHANGE RECORD
++#
++# Status : PROPOSED (not yet executed)
++# Author : Claude, for worker Lee Taek Gyu, 2026-10-04
++#
++# Golden parent : Copy x8 sd_fdiv_des.cmd
++#   SHA-256 56a8be698321e5056e33bf22d4b873063728013e8a2383f4e264a42662c4aa2c
++#
++# Exactly ONE numerical change group versus the golden parent:
++#
++#   [N1] Section 7, forward Transient, inner Coupled:
++#        Iterations = 15   (golden: not set -> effective default limit;
++#                           50-iteration rejected attempts are recorded
++#                           in the high-bias Node 6 logs of this deck
++#                           family, Copy x6 / Copy x8)
++#
++# Everything else is byte-identical to the golden parent:
++#   File, Electrode, all Physics (global and region), all 24 sidewall
++#   trap blocks, Plot, Math (incl. Digits, ErrRef, RHSMin,
++#   CheckRhsAfterUpdate, ILS set 22), initial Poisson / equilibrium
++#   Coupled solves, Transient step controls, Goal = 5.0 V, and the
++#   intermediate spatial snapshots.
++#
++# Why this does not change the accepted physical solution:
++#   The per-step convergence test is unchanged, so every accepted step
++#   satisfies the same Digits / ErrRef / RHSMin criteria as Copy x8.
++#   The change only makes a stagnating Newton attempt give up earlier
++#   (after 15 instead of 50 iterations) so that the existing automatic
++#   timestep cutback starts sooner.
++#==============================================================================
++
++
++#==============================================================================
+ # 1. FILE
+ #==============================================================================
+ 
+@@ -1031,7 +1065,27 @@
+ 
+   ) {
+ 
+-    Coupled {
++    #------------------------------------------------------------------------
++    # [N1] FAST_BASELINE C1 - the only numerical change vs Copy x8.
++    #
++    # Golden Copy x8: "Coupled {" with no Iterations option, i.e. the
++    # default Newton limit (50-iteration rejected attempts recorded in
++    # the high-bias Node 6 logs of this deck family).
++    #
++    # Here: Iterations = 15.
++    #   - accepted steps in this deck family are reported to converge
++    #     in about 2-5 Newton iterations, so 15 leaves a wide margin
++    #     (verify with sdevice_newton_audit.py on the x8 n6_des.out);
++    #   - stagnating attempts near 4.6-4.7 V (|Rhs| stuck around
++    #     1.4e-3 vs RHSMin = 1e-3) are abandoned after 15 instead of 50
++    #     iterations and are retried by the existing cutback logic.
++    #
++    # Convergence criteria (Math section) are NOT relaxed.
++    #------------------------------------------------------------------------
++
++    Coupled (
++      Iterations = 15
++    ) {
+ 
+       Poisson
+ 

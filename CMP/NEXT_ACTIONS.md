@@ -1,3 +1,22 @@
+## 2026-10-04 — Immediate next action: finish Copy x8 golden reference package
+
+- 작업자: 이택규
+- 상태: ACTION READY
+- 기존 local package `~/CMP_REFERENCE_20261004.tgz`에는 핵심 editable SDevice source `sd_fdiv_des.cmd`가 빠져 있음.
+- 먼저 Copy x8 active directory에서 exact `sd_fdiv_des.cmd`를 reference snapshot에 포함하고 SHA-256 manifest를 다시 생성한다.
+- 이후에만 이택규 clean account에서 새 Workbench project를 만들고 preprocess/init 단계까지만 실행한다.
+- full multi-day solve 시작 전 필수 비교:
+  - original editable source revision
+  - `pp1_dvs.cmd`
+  - `pp6_des.cmd`
+  - `pp6_des.par`
+  - `n1_msh.tdr` hash + mesh statistics
+  - Workbench variables/tree/scenario context
+  - Sentaurus executable path / 4-thread setting
+- helper: `CMP/tcad/capture_reference_snapshot.sh`
+- protocol: `CMP/FAST_BASELINE_REPRO_PROTOCOL.md`
+- physics baseline은 이 단계에서 수정하지 않는다.
+
 ## 2026-10-04 — Decision: leave legacy runs untouched and build a new clean FAST baseline
 
 - 작업자: 이택규

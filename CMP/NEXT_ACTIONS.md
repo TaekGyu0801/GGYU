@@ -1,3 +1,13 @@
+## 2026-10-04 — Revised immediate action and staged production plan
+
+1. Do NOT discard the currently running FAST_C1 Node 6 yet.
+2. While it runs, execute read-only preprocess equivalence gate on existing pp6_des.cmd/par.
+3. PASS -> continue current Node 6 as B1; FAIL -> stop and correct.
+4. After one full/validated FAST reference, define the matched-current operating window used for A/B scientific comparison.
+5. Use reduced-window screening for broad A/B parameter exploration.
+6. Full 0→5 V runs are reserved for baseline/final representative cases and any case needed to establish I–V/Vf limits.
+7. Evaluate adding true `Save` checkpoints for long runs; current `Plot(-Loadable)` snapshots cannot be used as restart checkpoints.
+
 ## 2026-10-04 — Runtime-aware A/B rollout after baseline freeze
 
 1. Freeze FAST C1 common baseline only after NtSide=0 and NtSide=1e18 validation.

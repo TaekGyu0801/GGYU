@@ -44,7 +44,15 @@ import statistics
 import sys
 
 FLOAT = r'[-+]?(?:\d+\.\d*|\.\d+|\d+)(?:[eE][-+]?\d+)?'
-RE_STEP = re.compile(r'Computing\s+step\s+from\s+t\s*=\s*(' + FLOAT + r')\s*to\s+t\s*=\s*(' + FLOAT + r')', re.I)
+RE_STEP = re.compile(
+    r'(?:Computing\\s+BE-step\\s+from\\s+|Computing\\s+step\\s+from\\s+t\\s*=\\s*)'
+    + '(' + FLOAT + ')'
+    + r'(?:\\s*s)?\\s+to\\s+(?:t\\s*=\\s*)?'
+    + '(' + FLOAT + ')'
+    + r'(?:\\s*s)?'
+    + r'(?:\\s*\\(Stepsize:\\s*(' + FLOAT + r')\\s*s\\))?',
+    re.I
+)
 RE_ROW = re.compile(r'^\s*(\d+)\s*(?:\|)?\s*(' + FLOAT + r')')
 RE_TOTAL = re.compile(r'\bTotal\b[^0-9\n]*(' + FLOAT + r')', re.I)
 RE_WALL = re.compile(r'wall\s*-?clock[^0-9\n]*(' + FLOAT + r')', re.I)
@@ -406,6 +414,13 @@ Computing step from t=1.6000E-05 to t=2.3200E-05 (stepsize 7.2000E-06) :
 def selftest():
     import os
     import tempfile
+    # Regression test for the actual Copy x8 T-2022.03 log syntax.
+    probe = "Computing BE-step from 0.928243 s to 0.928266 s (Stepsize: 2.2968e-05 s)"
+    m = RE_STEP.search(probe)
+    assert m is not None, "RE_STEP does not match real T-2022.03 BE-step syntax"
+    assert abs(float(m.group(1)) - 0.928243) < 1e-12
+    assert abs(float(m.group(2)) - 0.928266) < 1e-12
+    assert abs(float(m.group(3)) - 2.2968e-05) < 1e-12
     fd, p = tempfile.mkstemp(suffix='.out')
     with os.fdopen(fd, 'w') as fh:
         fh.write(SYNTH)

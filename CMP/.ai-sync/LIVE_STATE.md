@@ -1,3 +1,19 @@
+# 2026-10-04 sequence correction — FAST coding starts now
+
+Copy x8 golden reference has been frozen. The next task is to build a separate numerical-only FAST_BASELINE and benchmark the first solver change against Copy x8.
+
+Clean-account reproduction remains mandatory before final FAST baseline freeze / Project A-B production, but it is not a blocker for writing and short-benchmarking the FAST code.
+
+Priority:
+1. obtain/use exact Copy x8 editable source
+2. create separate FAST_BASELINE
+3. first candidate = Newton iteration/cutback policy only
+4. short benchmark against Copy x8
+5. accept/reject by runtime + physical/numerical equivalence
+6. reproduce the accepted FAST deck on both accounts before production
+
+---
+
 # 2026-10-04 Copy x8 golden reference frozen
 
 Golden local snapshot completed and core hashes fixed.

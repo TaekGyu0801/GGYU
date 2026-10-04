@@ -44,7 +44,7 @@ Required evidence:
 - SHA-256 manifest
 - executable paths / runtime context
 
-## Gate B — clean-account preprocess comparison
+## Gate B — clean-account preprocess comparison before final FAST freeze
 
 In the clean account:
 
@@ -81,9 +81,11 @@ If any unexplained difference exists, stop before a long run and resolve the dif
 
 ## Gate D — FAST branch
 
-Only after Gate C passes:
+FAST numerical candidates may be created and short-benchmarked immediately after the Copy x8 golden reference is frozen. Before a candidate becomes the final production FAST baseline, Gate C must pass.
 
-- clone the verified baseline into a separate numerical-only FAST branch
+After/while benchmarking:
+
+- keep the verified baseline and FAST branch separate
 - change one numerical factor at a time
 - compare against the reference at matched bias/current
 - reject any speedup that changes the physical result beyond the agreed tolerance

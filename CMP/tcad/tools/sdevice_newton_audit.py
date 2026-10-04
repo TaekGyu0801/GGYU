@@ -45,12 +45,12 @@ import sys
 
 FLOAT = r'[-+]?(?:\d+\.\d*|\.\d+|\d+)(?:[eE][-+]?\d+)?'
 RE_STEP = re.compile(
-    r'(?:Computing\\s+BE-step\\s+from\\s+|Computing\\s+step\\s+from\\s+t\\s*=\\s*)'
+    r'(?:Computing\s+BE-step\s+from\s+|Computing\s+step\s+from\s+t\s*=\s*)'
     + '(' + FLOAT + ')'
-    + r'(?:\\s*s)?\\s+to\\s+(?:t\\s*=\\s*)?'
+    + r'(?:\s+s)?\s+to\s+(?:t\s*=\s*)?'
     + '(' + FLOAT + ')'
-    + r'(?:\\s*s)?'
-    + r'(?:\\s*\\(Stepsize:\\s*(' + FLOAT + r')\\s*s\\))?',
+    + r'(?:\s+s)?'
+    + r'(?:\s+\(Stepsize:\s*(' + FLOAT + r')\s+s\))?',
     re.I
 )
 RE_ROW = re.compile(r'^\s*(\d+)\s*(?:\|)?\s*(' + FLOAT + r')')

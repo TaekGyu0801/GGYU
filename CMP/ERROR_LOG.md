@@ -1,3 +1,16 @@
+## 2026-10-04 — B0 parser mismatch on real x8 SDevice log
+
+- 작업자: 이택규
+- 상태: OBSERVED / UNRESOLVED TOOLING
+- `sdevice_newton_audit.py --selftest` passed on synthetic data.
+- Real Copy x8 log audit returned:
+  - attempts=0
+  - no wallclock found
+  - `NO "Computing step from t=... to t=..." lines found`
+- Interpretation: actual T-2022.03 `n6_des.out` format does not match the parser's assumed step-start regex.
+- B0 scientific conclusion is therefore still pending; no claim about accepted/rejected iteration distribution or Iterations=15 is valid yet.
+- Next: inspect raw x8 log wording around "Computing", "Rhs", "step", and transient time, then patch the parser to the actual format and rerun B0.
+
 ## 2026-10-04 — B0 audit script missing locally
 
 - 작업자: 이택규

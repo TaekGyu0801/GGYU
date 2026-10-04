@@ -1,10 +1,10 @@
 {
-  "updated": "2026-09-26",
-  "primaryWorker": "주수빈",
-  "phase": "Phase 0 — Common Baseline validation",
-  "task": "SDevice2 to SVisual2 TDR output/linkage debugging",
-  "status": "UNRESOLVED",
-  "blocker": "Node12 Mg incomplete-ionization applied globally but pp12_des.par provides Mg ionization parameters only for GaN, not InGaN",
+  "updated": "2026-10-04",
+  "primaryWorker": "이택규",
+  "phase": "Phase 0 — Common Baseline validation / reproducibility gate",
+  "task": "Freeze Copy x8 golden reference and reproduce preprocess in clean account",
+  "status": "IN_PROGRESS",
+  "blocker": "Existing local Copy x8 reference package is recorded as missing exact editable SDevice source sd_fdiv_des.cmd; public CURRENT deck is not authoritative.",
   "parallelWork": {
     "worker": "주수빈",
     "status": "OBSERVED",
@@ -180,5 +180,20 @@
     "path": "CMP/tcad/CURRENT/sdevice2_defect_on.cmd",
     "finding": "Issue #7 and JuSubin timeline record Final SDevice v1.2, but tcad/CURRENT still contains an older stale deck without v1.2 intermediate TDR saves.",
     "next_action": "Recover exact full user-provided Final SDevice v1.1/v1.2 source and sync it; do not reconstruct from summaries."
+  },
+  "fastBaseline": {
+    "status": "TOOLING_READY_EXECUTION_PENDING",
+    "goldenReference": "semi437 Copy x8",
+    "localPackage": "~/CMP_REFERENCE_20261004.tgz",
+    "localPackageKnownGap": "sd_fdiv_des.cmd missing according to latest LeeTaekGyu timeline",
+    "protocol": "CMP/FAST_BASELINE_REPRO_PROTOCOL.md",
+    "captureHelper": "CMP/tcad/capture_reference_snapshot.sh",
+    "nextAction": [
+      "Add exact Copy x8 sd_fdiv_des.cmd to local reference snapshot and regenerate SHA-256 manifest",
+      "Create clean-account Workbench project from frozen source",
+      "Run preprocess/early initialization only",
+      "Diff pp1_dvs.cmd, pp6_des.cmd, pp6_des.par and compare n1_msh.tdr hash plus mesh statistics",
+      "Create numerical-only FAST branch only after reproducibility gate passes"
+    ]
   }
 }

@@ -1,3 +1,19 @@
+## 2026-10-04 — Claude B0 review accepted: C1 unchanged
+
+- 작업자: 이택규
+- C1 source unchanged; SHA `f62eab51816ba21a9fba6f9d26ef39606ea76b17c2a522153d4b45ed8cf27f93`; `Iterations=15`.
+- correction: ~4.33 V is not trajectory divergence; it is the first rejected attempt where x8/C1 Newton count is expected to differ 50->15.
+- A1': accepted-step sequence and rejection points should match over overlap; unexplained mismatch = UNEXPECTED.
+- A1'': all C1 rejections must show `#iterations larger than 15.`; 50 => cap not applied, stop.
+- new audit tool SHA-256: `9a935633e92bc55fa86849b6988b60a8a8ee55f637387ced62721d9f6267d281`.
+- package selftest independently passed by ChatGPT.
+- raw observed cutback ratios are ~0.5; full 285-rejection CSV constancy is pending because CSV was not included in package.
+- patch-equivalent commit: `ace056fcb01d2e6e785dbee08a213e1148d6be35`.
+- next: separate-project preprocess -> NtSide=0 B1 benchmark.
+- live x6/x7/x8 untouched.
+
+---
+
 ## 2026-10-04 — B0 result: C1 Iterations=15 cleared for first benchmark
 
 - worker: 이택규

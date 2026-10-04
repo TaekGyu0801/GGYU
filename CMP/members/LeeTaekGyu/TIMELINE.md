@@ -1,3 +1,12 @@
+## 2026-10-04 — FAST workflow sequence corrected to original plan
+
+- 작업자: 이택규
+- 상태: DECISION / CORRECTION
+- 사용자 지적에 따라 GitHub 기록을 재검토했고, 2026-10-03 원래 계획은 Copy x8 reference 확보 후 별도 FAST_BASELINE 코드를 바로 작성하고 Newton/cutback policy부터 short benchmark하는 순서였음을 확인.
+- clean-account reproduction은 FAST 코드 작성 전 blocker가 아니라, 최종 FAST deck freeze 및 Project A/B production 전 필수 검증 gate로 위치를 복원.
+- 현재 상태: Copy x8 golden hashes frozen; separate FAST code 작성 준비 완료.
+- 남은 직접 blocker: 코딩 AI가 exact Copy x8 editable source 본문을 받아야 함. public CURRENT 파일은 stale이므로 사용 금지.
+
 ## 2026-10-04 — Copy x8 golden reference freeze completed
 
 - 작업자: 이택규

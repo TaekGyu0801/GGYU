@@ -1,3 +1,11 @@
+## 2026-10-04 — Rerun B0 with patched real-log parser
+
+1. Re-download `CMP/tcad/tools/sdevice_newton_audit.py` from GitHub to `~/CMP_B0/`.
+2. Run `--selftest`.
+3. Re-run the x8 copied-log audit with `--raw 1` and CSV output.
+4. Verify parsed first rejected/accepted attempt against raw log text.
+5. Use the real accepted-step iteration distribution to decide whether C1 `Iterations=15` is safe.
+
 ## 2026-10-04 — Immediate B0 action: identify real x8 log syntax
 
 1. Do not use the current audit statistics; parser matched zero attempts.

@@ -1,3 +1,17 @@
+## 2026-10-04 — Claude implementation package is ready
+
+- 구현 담당: Claude
+- GitHub handoff/prompt: `CMP/prompts/CLAUDE_FAST_BASELINE_IMPLEMENTATION.md`
+- user must attach exact source: `Copy_x8_sd_fdiv_des.cmd`
+- expected source SHA-256: `56a8be698321e5056e33bf22d4b873063728013e8a2383f4e264a42662c4aa2c`
+- Claude must read project instructions/state before coding.
+- public `CMP/tcad/CURRENT` SDevice is stale and must not be used as the base.
+- previous ChatGPT `Iterations=15` is PROPOSED only, not a required patch.
+- Claude must produce complete code, unified diff, Workbench steps, preprocess checks, short benchmark, acceptance and rollback criteria.
+- do not commit proprietary full source to public GitHub.
+
+---
+
 ## 2026-10-04 — sequence correction: FAST coding precedes final clean-account freeze gate
 
 - 작업자: 이택규

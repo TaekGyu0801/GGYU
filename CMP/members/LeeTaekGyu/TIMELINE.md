@@ -1,3 +1,19 @@
+## 2026-10-04 — Full CSV cutback-ratio check exposed old-dt rounding artifact
+
+- 작업자: 이택규
+- 상태: OBSERVED / TOOLING INTERPRETATION
+- old B0 CSV ratio check across all 285 rejection/retry pairs returned:
+  - pairs = 285
+  - min = 0.47826087
+  - max = 0.52173913
+  - mean = 0.499405569
+- This CSV was produced by the older audit parser whose `dt` was computed from printed `t1-t0`.
+- T-2022.03 prints t0/t1 with limited decimal precision, so small high-bias timesteps are distorted when subtracting the rounded endpoints.
+- Therefore the 0.478–0.522 spread is **not valid evidence that the cutback factor varies**.
+- Claude's updated audit tool specifically fixes this by reading the explicit `(Stepsize: ... s)` value from each log line.
+- Existing raw examples using printed Stepsize show exact/near-exact 0.5 cutback.
+- Next: regenerate x8_attempts.csv with the updated audit tool and repeat the 285-pair ratio check using the explicit Stepsize-derived dt.
+
 ## 2026-10-04 — B0 CSV ratio check command quoting error under csh/tcsh
 
 - 작업자: 이택규

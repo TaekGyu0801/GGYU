@@ -1,10 +1,10 @@
 {
   "updated": "2026-10-04",
   "primaryWorker": "이택규",
-  "phase": "Phase 0 — Common Baseline validation / reproducibility gate",
-  "task": "Freeze Copy x8 golden reference and reproduce preprocess in clean account",
-  "status": "IN_PROGRESS",
-  "blocker": "Existing local Copy x8 reference package is recorded as missing exact editable SDevice source sd_fdiv_des.cmd; public CURRENT deck is not authoritative.",
+  "phase": "Phase 0 — Common Baseline clean-account reproducibility gate",
+  "task": "Reproduce Copy x8 preprocessing in clean account",
+  "status": "GOLDEN_REFERENCE_FROZEN",
+  "blocker": "None for reference freeze; next gate is clean-account preprocess equivalence.",
   "parallelWork": {
     "worker": "주수빈",
     "status": "OBSERVED",
@@ -182,18 +182,25 @@
     "next_action": "Recover exact full user-provided Final SDevice v1.1/v1.2 source and sync it; do not reconstruct from summaries."
   },
   "fastBaseline": {
-    "status": "TOOLING_READY_EXECUTION_PENDING",
+    "status": "GOLDEN_REFERENCE_FROZEN",
     "goldenReference": "semi437 Copy x8",
     "localPackage": "~/CMP_REFERENCE_20261004.tgz",
     "localPackageKnownGap": "sd_fdiv_des.cmd missing according to latest LeeTaekGyu timeline",
     "protocol": "CMP/FAST_BASELINE_REPRO_PROTOCOL.md",
     "captureHelper": "CMP/tcad/capture_reference_snapshot.sh",
     "nextAction": [
-      "Add exact Copy x8 sd_fdiv_des.cmd to local reference snapshot and regenerate SHA-256 manifest",
       "Create clean-account Workbench project from frozen source",
       "Run preprocess/early initialization only",
-      "Diff pp1_dvs.cmd, pp6_des.cmd, pp6_des.par and compare n1_msh.tdr hash plus mesh statistics",
-      "Create numerical-only FAST branch only after reproducibility gate passes"
-    ]
+      "Compare pp1_dvs.cmd, pp6_des.cmd, pp6_des.par and mesh hash/statistics against golden reference",
+      "Start numerical-only FAST branch only after equivalence is established"
+    ],
+    "snapshot": "~/CMP_REFERENCE_SNAPSHOTS/Copy_x8_20261004_124024",
+    "hashes": {
+      "n1_msh.tdr": "762d2d57a352a00bb030b968985cbf3b71d53118c68e5c53b7586e613f392ea3",
+      "pp1_dvs.cmd": "5685528bc3ec338ce104040b0503be43ef032094976d69995529eb5d6fb4e658",
+      "pp6_des.cmd": "2dfcc98effe145ec944fb8ee5d6914f5f098e54d1bf2319c69acc76afe1692e6",
+      "pp6_des.par": "60405755de61500d9815a8e9ecca6a7a465783d77eb8e5dadf1db515aeb10039",
+      "sd_fdiv_des.cmd": "56a8be698321e5056e33bf22d4b873063728013e8a2383f4e264a42662c4aa2c"
+    }
   }
 }

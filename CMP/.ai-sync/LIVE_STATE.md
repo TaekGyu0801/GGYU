@@ -1,3 +1,14 @@
+# 2026-10-04 — B0 PASS for C1 Iterations=15
+
+- 1950 accepted x8 attempts, accepted max Newton=4.
+- 285 rejected attempts, all 50 iterations.
+- N=15 false_rej=0 through observed x8 progress (~4.643 V).
+- rejected attempt wallclock fraction ~75%; idealized observed-path speedup estimate ~2.11x.
+- next: separate FAST C1 preprocess gate -> NtSide=0 benchmark.
+- live x6/x7/x8 untouched.
+
+---
+
 # 2026-10-04 — B0 parser patched for actual BE-step log format
 
 - real T-2022.03 x8 step syntax identified and parser patched.

@@ -2,9 +2,9 @@
   "updated": "2026-10-04",
   "primaryWorker": "이택규",
   "phase": "Phase 0 — Common Baseline FAST numerical optimization",
-  "task": "Create separate FAST C1 Workbench project and pass preprocess gate",
-  "status": "FAST_C1_B0_COMPLETE_READY_FOR_PREPROCESS",
-  "blocker": "None for preprocess; live x6/x7/x8 must remain untouched.",
+  "task": "Inspect copied Workbench node/status metadata, then preprocess Node 6 only",
+  "status": "FAST_C1_SOURCE_INSTALLED_READY_FOR_STATUS_CHECK",
+  "blocker": "None; must avoid accidental solve/resume from copied x8 state.",
   "parallelWork": {
     "worker": "주수빈",
     "status": "OBSERVED",
@@ -270,6 +270,10 @@
         "interpretation": "retry timestep is 0.5 of rejected timestep to printed Stepsize precision"
       },
       "speedupInterpretation": "~2.11x is a prediction under approximately uniform per-iteration cost and the observed fixed cutback rule, not a claim of measured C1 speedup."
+    },
+    "preprocess": {
+      "c1SourceInstall": "PASS",
+      "c1SourceSha256": "f62eab51816ba21a9fba6f9d26ef39606ea76b17c2a522153d4b45ed8cf27f93"
     }
   }
 }

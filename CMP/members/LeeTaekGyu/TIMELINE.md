@@ -1,3 +1,19 @@
+## 2026-10-04 — Claude B0 review package integrated
+
+- 작업자: 이택규
+- 상태: PROPOSED / REVIEWED / READY FOR PREPROCESS
+- reviewed `C1_B0_review_for_GPT.zip`.
+- C1 source unchanged; `Iterations=15` retained; SHA `f62eab51816ba21a9fba6f9d26ef39606ea76b17c2a522153d4b45ed8cf27f93`.
+- corrected interpretation:
+  - ~4.33 V = first rejected attempt where Newton count changes 50->15, not trajectory divergence.
+  - expected observed-overlap trajectory is same accepted steps + same rejection points.
+- A1'/A1'' added; printed-precision identity expectation tightens A3/A4 on observed overlap.
+- updated audit tool package SHA `9a935633e92bc55fa86849b6988b60a8a8ee55f637387ced62721d9f6267d281`; ChatGPT reran `--selftest` successfully.
+- patch base `30f9d947...` matched current main and patch-equivalent content was committed as `ace056fcb01d2e6e785dbee08a213e1148d6be35`.
+- x8 raw excerpt supports ~0.5 timestep cutback on several observed rejection/retry pairs; full CSV-wide ratio verification remains pending because the CSV was not attached to the review package.
+- next: separate FAST C1 project preprocess gate, then NtSide=0 B1.
+- live x6/x7/x8 untouched.
+
 ## 2026-10-04 — B0 raw x8 audit PASS for C1 Iterations=15
 
 - 작업자: 이택규

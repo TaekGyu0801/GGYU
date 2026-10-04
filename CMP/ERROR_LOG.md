@@ -1,3 +1,16 @@
+## 2026-10-04 — Real T-2022.03 BE-step syntax identified; B0 parser patched
+
+- 작업자: 이택규
+- 상태: OBSERVED / TOOL FIXED
+- real x8 log uses:
+  - `Computing BE-step from <t0> s to <t1> s (Stepsize: <dt> s)`
+  - `Iteration |Rhs| factor |step| error #inner #iterative time`
+  - rejected attempt message: `Newton didn't converge, trying again with smaller timestep...`
+  - accepted attempt message: `|RHS| less than 1.0000E-03.`
+- repeated retry at the same t0 with a smaller dt is directly visible, validating the high-level accepted/rejected classification rule.
+- `CMP/tcad/tools/sdevice_newton_audit.py` patched to recognize the actual T-2022.03 BE-step start format while preserving the previous synthetic format.
+- B0 statistics must be rerun with the updated parser before any Iterations=15 decision.
+
 ## 2026-10-04 — B0 parser mismatch on real x8 SDevice log
 
 - 작업자: 이택규

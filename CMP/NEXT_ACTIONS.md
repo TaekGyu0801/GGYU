@@ -1,3 +1,11 @@
+## 2026-10-04 — Runtime-aware A/B rollout after baseline freeze
+
+1. Freeze FAST C1 common baseline only after NtSide=0 and NtSide=1e18 validation.
+2. Project A: run one representative GaN:C case first; measure runtime, cutbacks, convergence, I-V/Vf/SRH behavior before launching a parameter sweep.
+3. Project B: same approach with one representative AlGaN barrier case.
+4. Only after pilot runtime is known, launch independent parameter points in parallel where resources permit.
+5. Do not reduce physical validation scope solely to meet runtime; optimize numerics and scheduling instead.
+
 ## 2026-10-04 — Baseline freeze criteria
 
 1. Stop/hold any pre-gate FAST_C1 solve.

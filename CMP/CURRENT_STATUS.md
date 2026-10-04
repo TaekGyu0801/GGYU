@@ -1,3 +1,16 @@
+## 2026-10-04 — FAST_BASELINE C1 reviewed; B0 required before execution
+
+- 작업자: 이택규
+- 상태: PROPOSED / REVIEWED / NOT EXECUTED
+- Claude C1 golden/FAST hashes verified.
+- executable change vs Copy x8: transient inner `Coupled` only → `Iterations=15`.
+- C1 and prior ChatGPT FAST v0.1 are executable-statement equivalent; C1 is now the canonical provenance candidate.
+- Synopsys 2022 training documents default 20 Newton iterations for ramped solves and recommends roughly 15–20 before timestep reduction. This supports 15 as a first candidate but conflicts with the project record of ~50-iteration failed attempts.
+- Current blocker: B0 read-only audit of exact x8 `pp6_des.cmd` and raw `n6_des.out` to resolve the 20-vs-50 discrepancy, verify parser correctness, and ensure no accepted x8 step needs >15.
+- Do not launch C1 until B0 passes.
+- live Copy x6/x7/x8 remain untouched.
+- reviewed record: `CMP/FAST_BASELINE_C1.md`.
+
 ## 2026-10-04 — Current Copy x8 Node12 pending location narrowed to Workbench/gsub dispatch queue
 
 - 작업자: 이택규

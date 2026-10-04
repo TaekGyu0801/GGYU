@@ -1,3 +1,20 @@
+## 2026-10-04 — ChatGPT review of Claude FAST C1
+
+- 작업자: 이택규
+- Claude C1 status: PROPOSED / REVIEWED / NOT EXECUTED.
+- golden SHA: `56a8be698321e5056e33bf22d4b873063728013e8a2383f4e264a42662c4aa2c`.
+- C1 SHA: `f62eab51816ba21a9fba6f9d26ef39606ea76b17c2a522153d4b45ed8cf27f93`.
+- only executable change: transient inner Coupled `Iterations=15`.
+- C1 and ChatGPT v0.1 are executable-statement equivalent.
+- first-candidate logic is supported by Synopsys 2022 training (default 20; 15–20 recommended before timestep reduction).
+- blocker: project record of ~50-iteration failures conflicts with documented default 20. B0 must inspect exact x8 `pp6_des.cmd` + raw `n6_des.out` and validate the parser.
+- Claude tools passed syntax/synthetic selftests only; actual Sentaurus log/PLT formats unverified.
+- raw patch was not applied verbatim: stale `sd_fdiv_des.cmd missing` state and “stop x7” recommendation were rejected/corrected.
+- live x6/x7/x8 remain untouched.
+- canonical reviewed record: `CMP/FAST_BASELINE_C1.md`.
+
+---
+
 ## 2026-10-04 — Claude GitHub permission clarification
 
 - 작업자: 이택규

@@ -1,3 +1,12 @@
+## 2026-10-04 — Baseline freeze criteria
+
+1. Stop/hold any pre-gate FAST_C1 solve.
+2. Run preprocess equivalence gate.
+3. Run and validate NtSide=0 B1.
+4. Then run NtSide=1e18 with the same frozen C1 setup.
+5. Freeze FAST_C1 as common baseline only after both cases pass.
+6. Use NtSide=0 as defect-free control and NtSide=1e18 as nominal defect baseline for subsequent Project A/B comparisons.
+
 ## 2026-10-04 — Stop accidental FAST_C1 solve and audit generated deck
 
 1. In Workbench, stop only FAST_C1 Node 6 (NtSide=0) that launched at 15:46.

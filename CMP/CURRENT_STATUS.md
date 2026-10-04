@@ -1,3 +1,31 @@
+## 2026-10-04 — Copy x8 exact reference package audited: active Node 6 is NtSide=0 control, not nominal damaged baseline
+
+- 작업자: 이택규
+- 상태: CONFIRMED FROM UPLOADED ACTIVE PACKAGE
+- 근거: user-uploaded `CMP_REFERENCE_20261004.tgz` extracted and inspected.
+- Exact hashes:
+  - sd_fdiv_des.cmd: `56a8be698321e5056e33bf22d4b873063728013e8a2383f4e264a42662c4aa2c`
+  - pp1_dvs.cmd: `5685528bc3ec338ce104040b0503be43ef032094976d69995529eb5d6fb4e658`
+  - pp6_des.cmd: `2dfcc98effe145ec944fb8ee5d6914f5f098e54d1bf2319c69acc76afe1692e6`
+  - pp6_des.par: `60405755de61500d9815a8e9ecca6a7a465783d77eb8e5dadf1db515aeb10039`
+  - n1_msh.tdr reference hash: `762d2d57a352a00bb030b968985cbf3b71d53118c68e5c53b7586e613f392ea3`
+- Critical correction:
+  - gtree.dat maps Node 6 to NtSide=0 and Node 12 to NtSide=1e18.
+  - pp6_des.cmd contains `Conc = 0` in all sidewall trap regions.
+  - Therefore the currently inspected/running Copy x8 Node 6 is the pristine validation control, NOT the nominal NtSide=1e18 damaged baseline.
+  - The Workbench tree currently contains only NtSide={0,1e18}; the source comments list 1e17/1e19 but those sweep points are not in the captured tree.
+- Runtime:
+  - Math: Digits=5, ErrRef(e/h)=1e4, RHSMin=1e-3, Transient=BE, ExtendedPrecision(80), Blocked + ILS(set=22).
+  - Transient: InitialStep=1e-5, MinStep=1e-9, MaxStep=1e-3, Increment=1.2; transient Coupled has no explicit Iterations setting.
+  - Logs show repeated high-bias residual stagnation slightly above RHSMin with long rejected steps.
+- External runtime event:
+  - n6_des.err records license-server outage/suspension from 2026-09-30 23:02 to 2026-10-01 13:02, roughly 14 hours, so calendar runtime is inflated by infrastructure downtime in addition to solver convergence cost.
+- Mesh:
+  - 138137 vertices, 274946 elements, 41 regions, max connectivity 9.
+- Immediate consequence:
+  - FAST optimization should first benchmark against this exact NtSide=0 control for numerical equivalence, but a scientifically valid Common Baseline still requires the NtSide=1e18 branch (Node 12) to be independently recovered/run from the same frozen source and parameter revision.
+
+
 ## 2026-10-04 — overnight active-run progress confirms severe high-bias runtime bottleneck
 
 - 작업자: 이택규

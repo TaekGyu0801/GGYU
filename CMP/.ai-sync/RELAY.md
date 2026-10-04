@@ -1,3 +1,13 @@
+## 2026-10-04 — B0 preprocessed check result
+
+- active Copy x8 `pp6_des.cmd`: transient inner Coupled has no explicit `Iterations`; only initial 500 and equilibrium 100 are present.
+- `RHSMin=1e-3`, `CheckRhsAfterUpdate`; no `NotDamped`.
+- The recorded ~50 failed Newton rows therefore cannot be attributed to an explicit `Iterations=50` in pp6_des.cmd.
+- Next evidence needed: raw x8 `n6_des.out` + parser-verified B0 audit.
+- Claude should receive this observation and the B0 output before C1 is executed.
+
+---
+
 ## 2026-10-04 — ChatGPT review of Claude FAST C1
 
 - 작업자: 이택규

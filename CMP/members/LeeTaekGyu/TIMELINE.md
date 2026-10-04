@@ -1,3 +1,18 @@
+## 2026-10-04 — FAST_C1 Node 6 solve accidentally launched before preprocess gate
+
+- 작업자: 이택규
+- 상태: OBSERVED / BLOCKER
+- process check shows FAST_C1 Node 6 was actually launched, not preprocess-only:
+  - gsub PID 69166: `-e 6 .../GaN_PiN_Diode_FAST_C1`
+  - gjob PID 69396
+  - sdevice PID 69457: `sdevice --max_threads 4 pp6_des.cmd`
+  - start time 15:46, active at ~99% CPU.
+- therefore the ~3 h delay is real SDevice solve runtime, not preprocess delay.
+- since SDevice is running from `pp6_des.cmd`, preprocessing has already produced the generated deck.
+- this run began before the mandatory preprocess equivalence gate, so it must not be accepted as B1 evidence unless the generated deck is validated.
+- immediate action: stop only the FAST_C1 Node 6 job via Workbench (do not kill unrelated jobs), then audit `pp6_des.cmd/par` before any restart.
+- the current process list showed no other user-owned x8 gsub/sdevice process; user had reported stopping other runs.
+
 ## 2026-10-04 — User reports other runs stopped for FAST_C1 work
 
 - 작업자: 이택규

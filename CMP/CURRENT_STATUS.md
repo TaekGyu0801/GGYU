@@ -1,3 +1,15 @@
+## 2026-10-04 — FAST_C1 copied .status ownership resolved
+
+- 작업자: 이택규
+- 상태: OBSERVED / RESOLVED
+- FAST_C1 `.status`에 남아 있던 PID 78941을 `/proc/78941/cwd`와 cmdline으로 확인함.
+- PID 78941의 실제 cwd와 gsub 대상은 원래 live Copy x8:
+  `/user/semi/semi437/tmp/myproject/GaN_PiN_Diode_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy`
+- 따라서 FAST_C1의 `.status`는 Save As 과정에서 복사된 stale metadata이고, live process ownership은 x8에 있음.
+- PID 78941은 절대 종료/수정하지 않음.
+- FAST_C1 source는 exact C1 SHA-256 `f62eab51816ba21a9fba6f9d26ef39606ea76b17c2a522153d4b45ed8cf27f93`.
+- 다음: Workbench에서 FAST_C1 프로젝트만 열고 Node 6(NtSide=0)을 preprocess-only. SDevice solve는 시작하지 않음.
+
 ## 2026-10-04 — FAST_C1 exact source installation PASS
 
 - 작업자: 이택규

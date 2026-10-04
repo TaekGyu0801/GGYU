@@ -1,3 +1,12 @@
+## 2026-10-04 — FAST_C1 copied .status points to live gsub PID
+
+- 작업자: 이택규
+- 상태: OBSERVED / CAUTION
+- FAST_C1 `.status` contains PID 78941 on host ssudisu3.
+- `ps -fp 78941` confirms PID 78941 is an active Synopsys `gsub0` process started Sep 28.
+- do NOT kill or modify this process; it may belong to the live Copy x8 run.
+- next: read-only inspect `/proc/78941/cwd` and cmdline to identify which project owns the process before touching FAST_C1 status metadata.
+
 ## 2026-10-04 — FAST_C1 node mapping confirmed
 
 - 작업자: 이택규

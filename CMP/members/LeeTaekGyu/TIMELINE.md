@@ -1,3 +1,14 @@
+## 2026-10-04 — FAST_C1 node mapping confirmed
+
+- 작업자: 이택규
+- 상태: OBSERVED
+- FAST_C1 `gtree.dat` confirms SDevice split:
+  - Node 6: `NtSide=0`
+  - Node 12: `NtSide=1e18`
+- source remains exact C1 SHA-256 `f62eab51816ba21a9fba6f9d26ef39606ea76b17c2a522153d4b45ed8cf27f93`.
+- `.status` currently contains host `ssudisu3` and PID `78941`; its meaning/liveness must be checked before preprocess.
+- next: read-only `ps -fp 78941`; then preprocess Node 6 only if safe.
+
 ## 2026-10-04 — FAST_C1 exact source installation PASS
 
 - 작업자: 이택규

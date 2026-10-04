@@ -1,3 +1,14 @@
+## 2026-10-04 — sequence correction: FAST coding precedes final clean-account freeze gate
+
+- 작업자: 이택규
+- Copy x8 golden reference freeze는 완료.
+- 지금부터 separate numerical-only FAST_BASELINE 코드를 작성하고 short benchmark한다.
+- clean-account reproduction은 최종 FAST deck freeze 및 Project A/B production 전에 반드시 수행하되, FAST 코드 작성 자체의 선행 blocker로 두지 않는다.
+- 첫 benchmark 변수는 Newton iteration/cutback policy.
+- x8 live directory는 수정 금지.
+
+---
+
 ## 2026-10-04 — clean-account reproducibility requirement before FAST baseline freeze
 
 - 작업자: 이택규

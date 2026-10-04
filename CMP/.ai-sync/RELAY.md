@@ -1,3 +1,13 @@
+## 2026-10-04 — B0 COMPLETE; handoff to FAST C1 preprocess
+
+- 285/285 rejection/retry pairs checked with explicit Stepsize-derived dt.
+- ratio min=0.499975805, max=0.500023337, mean=0.499999621 -> fixed 0.5 cutback confirmed.
+- C1 source unchanged, Iterations=15.
+- next: separate project/copy -> exact C1 source SHA -> preprocess gate.
+- live x6/x7/x8 untouched.
+
+---
+
 ## 2026-10-04 — Claude B0 review accepted: C1 unchanged
 
 - 작업자: 이택규

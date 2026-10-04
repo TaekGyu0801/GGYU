@@ -1,3 +1,13 @@
+## 2026-10-04 — Copy x8 reference package capture
+
+- 작업자: 이택규
+- 상태: IN PROGRESS
+- Copy x8 active directory에서 reproducibility/reference package를 생성함.
+- 포함: pp1_dvs.cmd, pp6_des.cmd, pp6_des.par, n1_dvs.out, n1_msh.log, n6 job/status/error, Workbench gexec/gtree/gvars/gscens, solver log snapshots, mesh hash, environment/process snapshot.
+- 패키지: ~/CMP_REFERENCE_20261004.tgz
+- 현재 누락: sd_fdiv_des.cmd. 터미널에서 cd 명령과 cp 명령이 붙어 실행되어 source 복사가 실패함.
+- 다음: active Copy x8 directory에서 sd_fdiv_des.cmd를 추가 복사하고 SHA256SUMS 재생성 후 tgz 재패키징.
+
 ## 2026-10-03 — Copy x6 vs x7 semantic mesh identity confirmed
 
 - 작업자: 이택규

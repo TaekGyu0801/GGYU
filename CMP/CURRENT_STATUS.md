@@ -1,3 +1,23 @@
+## 2026-10-04 — Why Node12 is not running: separate old solver failure from current pending state
+
+- 작업자: 이택규
+- 상태: CONFIRMED BOUNDARY
+- Two different events must not be conflated.
+1. OLD Sep26 Node12 execution:
+   - actually launched and terminated during SDevice initialization.
+   - logs show Mg incomplete-ionization parameter mismatch in InGaN while global/species ionization handling was active.
+   - this is the historical solver-initialization failure.
+2. CURRENT Sep28 Copy x8 Node12:
+   - pp12_des.cmd/par were freshly preprocessed at Sep28 18:43.
+   - n12_des.sta = pending, local:-1.
+   - there is no current n12 gjob/sdevice process and no current Sep28 n12 output/log.
+   - gexec.cmd shows Node12 depends only on Node1, not on Node6.
+   - therefore the current Node12 has not failed in SDevice; it has not been launched yet.
+- Current cause of pending is outside the SDevice numerical solve. Possible causes include Workbench launch selection / project execution policy / job concurrency-resource scheduling, but the exact scheduler reason is not proven by the captured package.
+- Three separate project copies currently consume active SDevice jobs on the same account/host, so resource/concurrency pressure is plausible, but not yet proven as the exact pending cause.
+- Do not attribute current Node12 pending to the stale Sep26 Mg error.
+
+
 ## 2026-10-04 — Golden baseline pair confirmed at preprocess level
 
 - 작업자: 이택규

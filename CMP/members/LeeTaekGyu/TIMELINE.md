@@ -1,3 +1,11 @@
+## 2026-10-06 — D2 complete: universal C2 cap 8/10 rejected
+
+- Node 6: 3311 accepted / 645 rejected; accepted max Newton=4; cap 8 false_rej=0; rejected wallclock fraction ~54.2%.
+- Node 12: 1223 accepted / 101 rejected; accepted max Newton=15; accepted histogram includes 13 iters x1 and 15 iters x1.
+- Node 12 cap 8 false_rej=2; cap 10 false_rej=2; first predicted divergence ~4.195 V.
+- Decision: first common C2 keeps Iterations=15 and tests high-bias Increment=1.05. Original cap-8 C2 deck is not approved for execution as-is.
+- Next: inspect the two Node 12 accepted attempts >8 iterations, then D3 current-normalization/J-window gate.
+
 ## 2026-10-06 — D1 complete: high-bias failure is not a GMRES-maxit stall
 
 - 작업자: 이택규

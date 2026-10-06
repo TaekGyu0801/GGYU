@@ -1,3 +1,12 @@
+## 2026-10-06 — D2 complete: cap 8/10 not safe for common C2
+
+- Node 6 accepted max Newton=4; cap 8 false_rej=0.
+- Node 12 accepted max Newton=15; accepted 13-iteration and 15-iteration steps exist.
+- Node 12 cap 8/10 each predict 2 false rejections; first divergence ~4.195 V.
+- Decision: first common C2 keeps Iterations=15; test Increment=1.05 first.
+- Original cap-8 C2 deck is provenance only and must not be executed as-is.
+- Next: inspect Node 12 >8 accepted exceptions, then D3 current normalization/J-window.
+
 ## 2026-10-06 — D1 complete: high-bias failure is not a GMRES-maxit stall
 
 - 작업자: 이택규

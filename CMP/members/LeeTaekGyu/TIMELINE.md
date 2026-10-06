@@ -1,3 +1,15 @@
+## 2026-10-06 — Node 12 appears to be running normally by Workbench F7 check
+
+- 작업자: 이택규
+- 상태: USER-REPORTED / OBSERVED VIA WORKBENCH
+- 사용자가 Workbench에서 F7로 확인했을 때 별도 Node 12 run이 정상적으로 돌아가는 것으로 보인다고 보고함.
+- 현재 계획:
+  - Node 6 (NtSide=0): 기존 FAST_C1 run 계속 유지
+  - Node 12 (NtSide=1e18): 별도 병렬 run 계속 유지
+- 아직 Node 12의 solver log/process output은 직접 검증하지 않았으므로 CONFIRMED running으로 승격하지 않음.
+- baseline 두 run이 진행 중인 동안 physics/numerical settings를 추가 변경하지 않음.
+- 다음 검증 시점: Node 12 n12_des.out/process 확인 또는 어느 한 node 완료 시점.
+
 ## 2026-10-06 — Priority reset: finish and validate Common Baseline before Project A/B
 
 - 작업자: 이택규

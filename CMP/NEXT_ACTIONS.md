@@ -1,3 +1,17 @@
+## 2026-10-06 — FAST_C2 immediate validation sequence (PROPOSED)
+
+1. Keep current FAST_C1 Node 6 and FAST_C1_Copy Node 12 running; do not stop for C2.
+2. D1: inspect failed/success Newton table columns to diagnose dt* mechanism.
+3. D2: audit current Node 6/12 accepted-iteration distribution; Iterations=8 is allowed as a candidate only if the observed accepted-step margin remains sufficient.
+4. D3: inspect .plt update and verify AreaFactor/2D normalization before using current-density values.
+5. D4: measure Node 6/12 progress over fixed 1–2 h windows.
+6. D5: verify CPU/license headroom before launching smoke/C2 parallel work.
+7. D6: test whether existing intermediate TDR can be loaded; Option 3 is blocked unless this passes.
+8. Run C2 smoke test to verify segmented global time/Goal and Save/Load syntax.
+9. Only after smoke/preprocess gates pass: launch NtSide=1e18 C2 first, then NtSide=0 if resources allow.
+10. Validate C2 against C1 at matched bias/current including I-V/Vf, trap charge/occupancy, sidewall SRH, QW radiative/Auger and carrier distributions.
+11. Decision 0 remains TEAM DECISION PENDING: J-window analysis endpoint. Do not change the protected 5 V baseline endpoint yet.
+
 ## 2026-10-06 — Immediate runtime-first branch: half + coarse mesh
 
 1. Keep existing FAST_C1 full Node 6/12 untouched as reference evidence.

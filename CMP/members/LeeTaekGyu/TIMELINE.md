@@ -768,3 +768,21 @@
 - **작업 내용:** Common Baseline v1의 source philosophy, 현재 TCAD 상태, 오류 이력, ChatGPT↔Claude 공유 구조를 GitHub에 정리.
 - **결과 및 검증:** DmgL/Clean/DmgR region family와 p/n doping scale을 Sentaurus Visual에서 확인. SDevice2→SVisual2 TDR linkage는 미해결.
 - **남은 일:** pp9_des.cmd File block과 실제 Node 9 TDR filename 확인.
+
+
+## 2026-10-06 — Half-domain + localized mesh acceleration proposed
+
+- 작업자: 이택규
+- 상태: PROPOSED / NOT YET VALIDATED
+- Sentaurus Visual screenshot of current n1_msh shows 290,814 elements and 137,831 points.
+- Research intent: preserve publication-grade sidewall-defect physics while reducing runtime.
+- Proposed numerical geometry strategy:
+  - if the baseline is mirror-symmetric in geometry, doping, contacts, material stack, sidewall traps, and boundary conditions, replace the reflected full cross-section with a half-domain bounded by the device centerline symmetry plane;
+  - retain only one physical sidewall in the half-domain and impose the proper symmetry/no-normal-flux condition at the centerline;
+  - do not use half-domain for cases that intentionally break left-right symmetry.
+- Proposed mesh strategy:
+  - keep fine mesh at the 5 nm sidewall-damage region, heterointerfaces/MQW or active junctions, strong-field/depletion regions, and contact/edge locations relevant to the solution;
+  - coarsen homogeneous bulk regions away from those locations;
+  - validate against the existing full/fine reference before publication use.
+- Important caveat: the currently observed high-bias runtime blocker also includes timestep collapse near ~4.7 V, so mesh reduction should reduce cost per Newton solve but cannot be assumed to eliminate the tiny-step bottleneck.
+- Next: inspect the actual SDE source/coordinates and boundary setup before implementing; then benchmark full/fine vs half/localized-mesh at identical bias/physics.

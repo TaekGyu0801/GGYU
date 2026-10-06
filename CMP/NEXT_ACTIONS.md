@@ -1,3 +1,17 @@
+## 2026-10-06 — Quantify FAST_C1 high-bias progress rate
+
+1. Keep FAST_C1 Node 6 running for now; it is confirmed alive at ~4.682 V and C1 Iterations=15 is active.
+2. Do not infer completion ETA from the 0→4.682 V average.
+3. Use a fixed recent log window to measure:
+   - pseudo-time / anode-voltage advance,
+   - accepted attempts,
+   - rejected attempts,
+   - average accepted-step wallclock,
+   - average rejected-step wallclock.
+4. Recalculate mV/hour from that recent high-bias window.
+5. Decide whether to continue to 5 V or redesign the numerical schedule based on the measured tail rate.
+6. Preserve the current run and logs; no physics changes.
+
 ## 2026-10-06 — Immediate runtime check before waiting longer
 
 1. FAST_C1 Node 6 has been running ~41 h 48 min without a completed node by user report.

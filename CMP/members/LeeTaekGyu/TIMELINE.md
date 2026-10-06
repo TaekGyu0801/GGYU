@@ -815,3 +815,17 @@
 - 특히 Project B의 성공 지표에 center current redistribution, radiative recombination, current crowding이 포함되므로 center MQW는 과도하게 coarsen하면 안 됨.
 - coarsening 우선 후보: MQW/sidewall/barrier/interface에서 떨어진 homogeneous n-GaN bulk와 기타 완만한 영역.
 - validation: full/fine vs half/selective-mesh에서 lateral Ec/Ev barrier, I-V/current normalization, sidewall SRH, MQW radiative, crowding metric 동등성 확인 후 채택.
+
+
+## 2026-10-06 — Formal review: half-domain + selective-mesh strategy for Project A/B
+
+- 작업자: 이택규
+- 상태: REVIEWED / RECOMMENDED CANDIDATE / VALIDATION REQUIRED
+- 결론: Common Baseline, Project A, Project B 모두에서 좌우 geometry/doping/contact/trap/BC가 대칭인 경우 centerline half-domain을 사용하는 전략은 연구 목적과 양립 가능하며, runtime 절감 후보로 권장.
+- 단, 계산 domain 내부의 mesh를 '제거'하지 않는다. retained domain에는 mesh가 필요하며, 중요도가 낮은 homogeneous bulk만 단계적으로 coarsen한다.
+- 공통 fine zones: 5 nm sidewall damage, MQW/active-region stack, heterointerfaces/junctions, high-field/depletion zones, relevant contact edges.
+- Project A 추가 fine zone: Cedge / GaN:C high-resistance edge 및 그 경계. Center bulk n-GaN은 coarsening 우선 후보지만 center MQW는 radiative/current-crowding 평가 때문에 유지.
+- Project B 추가 fine zone: lateral AlGaN barrier, GaN/AlGaN interfaces, barrier-MQW intersections. B는 band-offset/field gradient가 생기므로 A보다 interface mesh 요구가 더 엄격함.
+- half-domain 금지/재검토 조건: one-sided treatment, asymmetric contact, unequal sidewall traps, asymmetric barrier/Cedge geometry, external lateral field 등 left-right symmetry 파괴.
+- publication gate: full/fine reference 대비 half/selective-mesh에서 I-V/Vf, current normalization, sidewall SRH, MQW radiative/Auger, e/h density, current crowding, 그리고 B의 lateral Ec/Ev barrier를 비교. 동등성 확인 전에는 final baseline으로 freeze하지 않음.
+- 예상 runtime 절감률은 현재 확정할 수 없음. domain halving과 element reduction이 solve cost를 낮출 가능성은 높지만 현재 high-bias timestep collapse는 별도 병목이므로 실제 benchmark 필요.

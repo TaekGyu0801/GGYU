@@ -1,3 +1,15 @@
+## 2026-10-06 — Deadline-driven FAST half + coarse-mesh branch chosen
+
+- 작업자: 이택규
+- 상태: DECISION / PROPOSED IMPLEMENTATION
+- 목표를 publication-final mesh보다 2026-10-23 전 결과 확보에 우선하도록 재확인.
+- 기존 FAST_C1 full runs는 reference evidence로 보존하고 건드리지 않음.
+- 별도 branch에서 half-domain + bulk/global mesh coarsening을 동시에 적용하는 runtime-first candidate를 만들기로 결정.
+- 보호할 해상도: MQW vertical/interface, EBL vertical/interface, 5 nm damaged sidewall은 현 수준에 가깝게 유지.
+- 우선 줄일 부분: center symmetry로 full width의 절반 제거 + remote homogeneous n-GaN/base/global lateral/vertical bulk mesh 완화.
+- 이 branch는 preliminary/screening 용도이며, final publication adoption은 full-reference equivalence/mesh-convergence 확인 후에만 가능.
+- 실행 전 첫 gate는 SDE mesh 생성 후 element/point count와 active-region/sidewall mesh 시각 점검.
+
 ## 2026-10-06 — FAST_C1/Common Baseline exact SDE mesh rules supplied by user
 
 - 작업자: 이택규

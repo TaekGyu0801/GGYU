@@ -1,3 +1,17 @@
+## 2026-10-06 — FAST_C1 Node 6 still unfinished after ~41 h 48 min
+
+- 작업자: 이택규
+- 상태: USER-REPORTED / RUNTIME BLOCKER
+- FAST_C1 Node 6 recorded start: 2026-10-04 15:46 KST.
+- Current checked time: 2026-10-06 09:34 KST.
+- Elapsed since recorded start: approximately 41 h 48 min.
+- User reports that no node has completed yet.
+- For comparison, the historical NtSide=0 run completed in ~65.4 h; current elapsed time is already ~64% of that historical full-run wallclock.
+- The prior ~2.11x C1 speedup number was an idealized estimate from the observed x8 path, not a completion-time prediction; the current run has not yet demonstrated that speedup.
+- This observation alone does not distinguish slow progress from a stall. Do not infer hang/failure without current n6_des.out/process evidence.
+- Next: read current FAST_C1 n6_des.out tail + process state, determine latest pseudo-time/anode voltage, confirm rejected attempts cap at 15, and measure progress rate before deciding whether to continue/stop.
+- Research strategy remains staged: do not plan brute-force full 0→5 V for every Project A/B parameter point.
+
 # 2026-10-04 — FAST_C1 exact source install PASS
 
 - exact C1 source SHA-256 f62eab51816ba21a9fba6f9d26ef39606ea76b17c2a522153d4b45ed8cf27f93 confirmed in separate FAST_C1 project.

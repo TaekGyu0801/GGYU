@@ -829,3 +829,14 @@
 - half-domain 금지/재검토 조건: one-sided treatment, asymmetric contact, unequal sidewall traps, asymmetric barrier/Cedge geometry, external lateral field 등 left-right symmetry 파괴.
 - publication gate: full/fine reference 대비 half/selective-mesh에서 I-V/Vf, current normalization, sidewall SRH, MQW radiative/Auger, e/h density, current crowding, 그리고 B의 lateral Ec/Ev barrier를 비교. 동등성 확인 전에는 final baseline으로 freeze하지 않음.
 - 예상 runtime 절감률은 현재 확정할 수 없음. domain halving과 element reduction이 solve cost를 낮출 가능성은 높지만 현재 high-bias timestep collapse는 별도 병목이므로 실제 benchmark 필요.
+
+
+## 2026-10-06 — IQE compatibility of half-domain model clarified
+
+- 작업자: 이택규
+- 상태: REVIEWED / ANALYTICAL RESULT
+- 현재 프로젝트의 IQE 정의는 identical integration region에서 integrated Rrad / (Rrad + RSRH + RAuger).
+- mirror-symmetric device를 centerline에서 half-domain으로 자르면, full-device의 각 integrated recombination term이 half-domain 값의 정확히 2배가 되는 조건에서 IQE ratio는 동일함: 2Rrad_h / [2(Rrad_h+RSRH_h+RAuger_h)] = IQE_half.
+- 따라서 symmetric Baseline/A/B에서는 half-domain으로도 IQE 비교가 가능.
+- 주의: absolute integrated recombination/current/optical power는 full-device 총량으로 보고할 때 symmetry factor 또는 2D normalization을 별도로 확인해야 하며, IQE ratio 자체에 임의로 x2를 적용하면 안 됨.
+- integration region은 baseline/A/B와 full/half 사이에서 동일한 물리 영역 정의를 사용해야 함. one-sided/asymmetric structure에는 적용 불가.

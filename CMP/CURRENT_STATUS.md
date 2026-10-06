@@ -1,3 +1,24 @@
+## 2026-10-06 — Node 6 / Node 12 actual runtime paths confirmed
+
+- 작업자: 이택규
+- 상태: OBSERVED / DIRECT PROCESS EVIDENCE
+- ps -fu semi437에서 두 SDevice run의 실제 경로와 process chain을 직접 확인.
+- Node 6 (NtSide=0):
+  - project: /user/semi/semi437/tmp/myproject/GaN_PiN_Diode_FAST_C1
+  - gsub PID 69166
+  - gjob PID 69396
+  - sdevice PID 69457
+  - command: sdevice --max_threads 4 pp6_des.cmd
+- Node 12 (NtSide=1e18):
+  - project: /user/semi/semi437/tmp/myproject/GaN_PiN_Diode_FAST_C1_Copy
+  - gsub PID 93737
+  - gjob PID 93864
+  - sdevice PID 93915
+  - command: sdevice --max_threads 4 pp12_des.cmd
+- 두 SDevice process 모두 CPU 99%로 active.
+- Node 12 exact project path가 이제 확인되었으므로 기존 VERIFY NEEDED path blocker는 해소.
+- 다음: 각 project에서 source/preprocessed cmd/par/mesh/log provenance를 실제 파일 기준으로 확인.
+
 ## 2026-10-06 — CRITICAL DEADLINE: abstract due Oct 23; runtime is now primary blocker
 
 - 작업자: 이택규

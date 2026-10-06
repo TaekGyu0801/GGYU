@@ -798,3 +798,20 @@
 - coarsening 후보: sidewall/active region에서 충분히 떨어진 homogeneous bulk.
 - half-domain 금지 조건: geometry/contact/trap/boundary가 좌우 비대칭인 case.
 - 다음: 실제 running SDE source를 확보해 reflect/좌표/refinement 정의를 확인하고 별도 FAST_C2 branch에서 구현 및 short benchmark.
+
+
+## 2026-10-06 — Project B mesh/symmetry applicability reviewed
+
+- 작업자: 이택규
+- 상태: DECISION / IMPLEMENTATION CANDIDATE
+- Project B의 현재 개념은 양쪽 sidewall 안쪽에 symmetric AlBarrier_L/R를 두는 구조이므로, 실제 SDE에서 좌우 geometry/contact/BC가 대칭이면 half-domain 접근을 적용할 수 있음.
+- 단, center region의 mesh를 '제거'하면 안 됨. 계산 domain에 남아 있는 물리 영역은 mesh가 필요하며, homogeneous bulk는 coarsening만 가능.
+- B에서 반드시 fine mesh 유지/추가 대상:
+  - fixed 5 nm sidewall damaged region
+  - 새 GaN/AlGaN lateral heterointerface
+  - MQW/active-region vertical stack 전반
+  - barrier가 MQW lateral path와 만나는 corner
+  - high-field/depletion/contact-edge regions
+- 특히 Project B의 성공 지표에 center current redistribution, radiative recombination, current crowding이 포함되므로 center MQW는 과도하게 coarsen하면 안 됨.
+- coarsening 우선 후보: MQW/sidewall/barrier/interface에서 떨어진 homogeneous n-GaN bulk와 기타 완만한 영역.
+- validation: full/fine vs half/selective-mesh에서 lateral Ec/Ev barrier, I-V/current normalization, sidewall SRH, MQW radiative, crowding metric 동등성 확인 후 채택.

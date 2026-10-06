@@ -1,3 +1,11 @@
+## 2026-10-06 — D1 complete; D2 is next
+
+1. D1 CLOSED: current Node 6 failure is not a GMRES maxit stall; keep linear solver unchanged for first C2 candidate.
+2. D2 NOW: audit full current Node 6 and Node 12 logs for accepted Newton-iteration distribution and cap-8 false rejection risk.
+3. Keep both live C1 reference runs running during the audit.
+4. Only if D2 shows sufficient accepted-iteration margin may FAST_C2 retain high-bias Iterations=8; otherwise use 10 or keep 15.
+5. After D2 proceed to D3 current-density normalization/window check.
+
 ## 2026-10-06 — FAST_C2 immediate validation sequence (PROPOSED)
 
 1. Keep current FAST_C1 Node 6 and FAST_C1_Copy Node 12 running; do not stop for C2.

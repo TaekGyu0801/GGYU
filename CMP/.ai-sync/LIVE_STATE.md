@@ -1,3 +1,15 @@
+## 2026-10-06 — Oct 23 abstract deadline: runtime-first triage
+
+- 작업자: 이택규
+- 상태: CRITICAL DEADLINE / DECISION
+- 논문 초록 마감: 2026-10-23.
+- primary blocker: FAST_C1 Node 6/12가 multi-day runtime을 요구하고 Node 6은 ~4.68 V 부근 high-bias timestep collapse가 관찰됨.
+- current full-reference runs는 가능하면 유지하되, 이들의 완주를 기다리는 것을 critical path에서 제거.
+- immediate parallel task: same physics/mesh의 numerical-only accelerated branch short benchmark.
+- first methods to audit: Quasistationary DC sweep vs current Transient ramp, staged continuation, Save/Load/restart, bias segmentation, thread/output overhead.
+- publication constraint: physics/trap/geometry를 runtime 때문에 완화하지 않으며 acceleration은 reference-equivalence validation을 통과해야 함.
+- abstract strategy: 10/23 전 모든 sweep 완료가 아니라 defensible baseline + 최소 mechanism-relevant preliminary result를 확보.
+
 ## 2026-10-06 — Priority reset: finish and validate Common Baseline before Project A/B
 
 - 작업자: 이택규

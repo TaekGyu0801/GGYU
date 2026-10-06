@@ -1,3 +1,13 @@
+## 2026-10-06 — Oct 23 abstract deadline forces runtime-first triage
+
+- 작업자: 이택규
+- 상태: DECISION / DEADLINE
+- 사용자 명시 마감: 2026-10-23 논문 초록 제출.
+- 현재 가장 큰 blocker: Common Baseline SDevice node가 수십 시간 이상 걸리며 high-bias timestep collapse 때문에 전체 연구 일정이 simulation completion에 묶여 있음.
+- 결정: 현재 FAST_C1 Node 6/병렬 Node 12는 가능한 경우 reference evidence로 유지하되, 두 node 완주를 기다리는 것을 연구 일정의 critical path로 두지 않는다.
+- 즉시 병행 과제: same physics/mesh 기반 numerical-only accelerated branch를 짧은 benchmark로 검증. 우선 검토 대상은 DC 목적에 맞는 Quasistationary/staged continuation, checkpoint/restart, step recovery 및 output overhead이며 physics/trap/geometry 완화는 금지.
+- 초록 전 최소 목표: defensible baseline evidence + 최소 1개의 mechanism-relevant A/B preliminary result 또는 검증된 direction을 확보하고, full sweep는 이후 manuscript stage에서 확장.
+
 ## 2026-10-06 — Node 12 appears to be running normally by Workbench F7 check
 
 - 작업자: 이택규

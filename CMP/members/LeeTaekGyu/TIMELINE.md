@@ -786,3 +786,15 @@
   - validate against the existing full/fine reference before publication use.
 - Important caveat: the currently observed high-bias runtime blocker also includes timestep collapse near ~4.7 V, so mesh reduction should reduce cost per Newton solve but cannot be assumed to eliminate the tiny-step bottleneck.
 - Next: inspect the actual SDE source/coordinates and boundary setup before implementing; then benchmark full/fine vs half/localized-mesh at identical bias/physics.
+
+
+## 2026-10-06 — User accepted half-domain / selective-mesh optimization direction
+
+- 작업자: 이택규
+- 상태: DECISION / IMPLEMENTATION CANDIDATE
+- 사용자가 현재 full reflected device 대신 좌우 대칭이 성립하는 경우 half-domain으로 계산하고, sidewall defect 및 물리적으로 중요한 영역만 fine mesh를 유지하며 나머지 homogeneous bulk는 coarser mesh로 가져가는 방향에 동의함.
+- publication-grade 조건: 기존 full/fine reference run은 유지하고, half/selective-mesh 결과가 동일 physics/bias에서 전류 및 핵심 spatial metrics와 동등한지 검증한 뒤 baseline/final branch에 채택.
+- fine mesh 유지 대상: 5 nm damaged sidewall, active/heterointerface/junction, depletion/high-field zone, relevant contact/edge.
+- coarsening 후보: sidewall/active region에서 충분히 떨어진 homogeneous bulk.
+- half-domain 금지 조건: geometry/contact/trap/boundary가 좌우 비대칭인 case.
+- 다음: 실제 running SDE source를 확보해 reflect/좌표/refinement 정의를 확인하고 별도 FAST_C2 branch에서 구현 및 short benchmark.

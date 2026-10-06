@@ -633,3 +633,15 @@ The original synchronized SDevice2 deck contains `SRHRecombination`; the fact th
 - do not remove mesh from the retained center domain; only coarsen remote homogeneous bulk.
 - Project B requires additional refinement at GaN/AlGaN lateral interfaces and barrier/MQW intersections, while the center MQW must remain adequately resolved for radiative/current-crowding metrics.
 - adoption still gated by full/fine equivalence validation.
+
+
+## 2026-10-06 — A/B half-domain + selective mesh formally recommended as validated candidate
+
+- 작업자: 이택규
+- 상태: REVIEWED / RECOMMENDED CANDIDATE
+- A/B 모두 mirror symmetry가 actual SDE/contact/BC에서 확인되면 half-domain 적용 가능.
+- retained center domain의 mesh는 제거하지 않고 remote homogeneous bulk만 graded coarsening.
+- common fine zones: 5 nm sidewall damage, MQW, junction/heterointerfaces, high-field/depletion/contact edges.
+- A-specific: refine Cedge/GaN:C boundary.
+- B-specific: refine lateral AlGaN/GaN interface and barrier-MQW intersections; B has stricter interface-mesh need because band offsets/fields are primary mechanism.
+- final adoption requires full/fine equivalence validation; current Node 6/12 reference runs remain preserved.

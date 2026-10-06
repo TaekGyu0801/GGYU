@@ -1,3 +1,16 @@
+## 2026-10-06 — D6 complete: current C1 intermediate restart rejected
+
+- 작업자: 이택규
+- 상태: OBSERVED / D6 COMPLETE / OPTION 3 REJECTED
+- scratch Load test used Node 6 `n6_inter_0004_des.tdr` (~4.7 V) with copied mesh/pp files and a check-only restart deck.
+- SDevice parsed `Load(FilePrefix="n6_inter_0004")`, found and read `n6_inter_0004_des.tdr`, then terminated with `contains no SLP information !` and exit code 5.
+- conclusion: the existing C1 `Plot(-Loadable)` intermediate is not a restart checkpoint. Option 3 is closed for the current Node 6 run.
+- live Node 6/12 reference runs were not stopped and were unaffected.
+- the D6 job successfully checked out SDevice/hetero/parallel/trap licenses before the load failure, so the test was not blocked by license availability at that moment.
+- next strategy: Option 2 only — keep C1 references running and validate a new C2 smoke that prospectively creates a real `Save` checkpoint, then tests `Load` from that Save-generated file.
+- D2 policy remains: first common C2 keeps `Iterations=15`; `Increment=1.05` is the first high-bias runtime lever.
+- new public helper added: `CMP/tcad/tools/make_c2_smoke_deck.py` (PROPOSED; Python syntax/synthetic text transformation tested). Full proprietary deck remains off GitHub.
+
 ## 2026-10-06 — D3 IV extraction and D5 CPU headroom check
 
 - 작업자: 이택규

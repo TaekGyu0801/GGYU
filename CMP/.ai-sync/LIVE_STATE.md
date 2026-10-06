@@ -1,3 +1,23 @@
+## 2026-10-06 — D2 exception check confirmed; D3 structural gate passed
+
+- 작업자: 이택규
+- 상태: OBSERVED / VALIDATION
+- Node 12 accepted >8-iteration exceptions are real accepted transient steps, not parser artifacts:
+  - idx 1103: V0=4.233805 V -> V1=4.233915 V, dt=2.1351e-5, 15 iterations, final RHS=9.98e-4, wallclock=121.55 s.
+  - idx 1165: V0=4.237610 V -> V1=4.237710 V, dt=1.9766e-5, 13 iterations, final RHS=9.98e-4, wallclock=104.02 s.
+- both barely satisfy RHSMin=1e-3, confirming that universal C2 caps 8/10 would create genuine false rejections.
+- common C2 Iterations=15 decision is strengthened.
+
+### D3 structural checks
+- Node 6 current file: n6_des.plt, 1.4 MB, mtime 2026-10-06 21:45.
+- Node 12 current file: n12_des.plt, 496 KB, mtime 2026-10-06 21:46.
+- both preprocessed File blocks point Current to the corresponding .plt.
+- both .plt datasets include time, anode OuterVoltage/InnerVoltage, eCurrent, hCurrent, TotalCurrent, Charge.
+- no explicit AreaFactor string found in pp6_des.cmd/par or pp12_des.cmd/par.
+- therefore .plt files are suitable for I(V) extraction.
+- absolute current-density normalization remains provisional until exact T-2022.03 default 2D current/AreaFactor semantics are verified; older Sentaurus documentation indicates default 2D current units A/um when no AreaFactor is specified.
+- next: run iv_window.py on copied live .plt files to obtain I(V) and provisional J(V), while keeping Decision 0 pending.
+
 ## 2026-10-06 — D2 complete: cap 8/10 not safe for common C2
 
 - Node 6 accepted max Newton=4; cap 8 false_rej=0.

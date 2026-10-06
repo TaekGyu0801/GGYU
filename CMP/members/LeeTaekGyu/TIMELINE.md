@@ -1,3 +1,25 @@
+## 2026-10-06 — Deadline-aware publication-grade simulation strategy
+
+- 작업자: 이택규
+- 상태: DECISION / RESEARCH STRATEGY
+- 사용자 요구: 결과는 논문에 사용할 수 있을 정도로 수치적으로 타당해야 하지만, 전체 연구 일정도 맞춰야 함.
+- 결정:
+  1. publication-grade reference/final cases와 screening cases를 분리한다.
+  2. Common Baseline 및 최종 대표 A/B case는 full validation(0–5 V, same physics, mesh/convergence checks)으로 유지한다.
+  3. broad parameter exploration은 operating-current/bias window 중심의 reduced-window screening으로 수행한다.
+  4. screening winner/representative/worst case만 full 0–5 V로 최종 검증한다.
+  5. C1 Iterations=15은 numerical-only candidate로 유지; full-range equivalence validation 후에만 baseline freeze.
+  6. RHSMin 완화 같은 convergence-criterion 변경은 publication baseline에 바로 적용하지 않는다. 별도 sensitivity/convergence study로 결과 불변성이 입증될 때만 고려한다.
+  7. 우선순위 높은 시간 단축 수단: parallel independent runs, staged bias schedule, thread benchmark, checkpoint/restart, mesh coarsening only after mesh-convergence evidence.
+- 논문 방어 원칙:
+  - physics/geometry/trap model을 runtime 때문에 임의 완화하지 않는다.
+  - numerical acceleration은 reference와 I–V/Vf/spatial metrics equivalence를 검증한다.
+  - 최종 논문 figures/tables는 validated runs에서만 생성한다.
+- 현재 실행:
+  - FAST_C1 Node 6은 C1 full-reference evidence로 유지.
+  - Node 12는 자원 확인 후 separate clean project에서 병렬 실행 고려.
+  - A/B full brute-force sweep은 하지 않는다.
+
 ## 2026-10-06 — FAST_C1 Node 6 confirmed progressing after 41 h 05 min wall time
 
 - 작업자: 이택규

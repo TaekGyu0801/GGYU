@@ -1,3 +1,13 @@
+## 2026-10-06 — Immediate runtime check before waiting longer
+
+1. FAST_C1 Node 6 has been running ~41 h 48 min without a completed node by user report.
+2. Before simply waiting longer, inspect current process state and the tail of FAST_C1 n6_des.out.
+3. Record latest pseudo-time/anode voltage and compare with the last known point to prove forward progress.
+4. Confirm C1 rejected attempts report the 15-iteration cap; if 50 still appears, stop because the intended C1 cap is not active.
+5. If progress is real, estimate mV/hour from recent log intervals rather than extrapolating from the old 65.4 h run.
+6. If progress has stopped or repeated cutbacks dominate with no meaningful voltage advance, reassess numerics before investing another multi-day run.
+7. Keep staged A/B screening strategy; do not brute-force every parameter case over full 0→5 V.
+
 ## 2026-10-04 — Revised immediate action and staged production plan
 
 1. Do NOT discard the currently running FAST_C1 Node 6 yet.

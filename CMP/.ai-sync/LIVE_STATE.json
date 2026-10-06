@@ -2,8 +2,8 @@
   "updated": "2026-10-06",
   "primaryWorker": "이택규",
   "phase": "Phase 0 — Common Baseline runtime acceleration validation",
-  "task": "Validate FAST_C2 proposal with D1–D6 and smoke gate while keeping Node 6/12 references running",
-  "status": "FAST_C2_PROPOSED_REVIEWED_NOT_EXECUTED",
+  "task": "Inspect Node 12 accepted >8-iteration exceptions, then D3 current-normalization/J-window gate",
+  "status": "D2_COMPLETE_CAP8_10_REJECTED",
   "blocker": "High-bias timestep rejection/cutback runtime; C2 segmented-time/Save-Load semantics and current normalization are not yet validated.",
   "parallelWork": {
     "worker": "주수빈",
@@ -324,8 +324,7 @@
     "smokeDeckSha256": "dd261ee4fb45b65cf2f5ae8b1a2d707b39b74e2bced61f4e1fac02de6bc414a4",
     "proposedHighBiasPolicy": {
       "increment": 1.05,
-      "iterations": 8,
-      "condition": "D2 audit must show sufficient accepted-iteration margin"
+      "iterations": 15
     },
     "currentRuns": "KEEP_RUNNING_AS_REFERENCE",
     "validation": [
@@ -338,7 +337,26 @@
       "C2 smoke syntax/Save gate",
       "matched-bias transient/trap equivalence"
     ],
-    "caveat": "Changing transient step sequence can change trap state; same RHSMin does not guarantee identical NtSide=1e18 transient solution."
+    "caveat": "Changing transient step sequence can change trap state; same RHSMin does not guarantee identical NtSide=1e18 transient solution.",
+    "d2": {
+      "status": "COMPLETE",
+      "node6": {
+        "accepted": 3311,
+        "rejected": 645,
+        "maxAcceptedIterations": 4,
+        "falseRejCap8": 0,
+        "rejectedWallclockFraction": 0.542
+      },
+      "node12": {
+        "accepted": 1223,
+        "rejected": 101,
+        "maxAcceptedIterations": 15,
+        "falseRejCap8": 2,
+        "falseRejCap10": 2,
+        "rejectedWallclockFraction": 0.276
+      },
+      "decision": "First common C2 keeps Iterations=15 and tests high-bias Increment=1.05. Original cap-8 deck not approved as-is."
+    }
   },
   "decision0": {
     "topic": "Use validated current-density analysis window as production endpoint instead of requiring every A/B run to 5 V",

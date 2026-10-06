@@ -1,3 +1,17 @@
+## 2026-10-06 — Priority reset: finish and validate Common Baseline before Project A/B
+
+- 작업자: 이택규
+- 상태: DECISION / PRIORITY
+- 사용자가 연구 우선순위를 Common Baseline 완성으로 재확정.
+- 즉시 우선순위:
+  1. FAST_C1 Node 6 (NtSide=0) 현재 run 유지 및 완주.
+  2. 별도 프로젝트로 시작한 Node 12 (NtSide=1e18)의 실제 정상 실행 여부를 process/log로 확인.
+  3. 두 run의 source/mesh/parameter/numerical provenance를 확인.
+  4. 완주 후 I-V, convergence, key output sanity를 검증.
+  5. 두 조건이 모두 통과한 뒤에만 FAST_C1 Common Baseline을 freeze.
+- Project A/B 설계 및 sweep은 baseline freeze 이후로 보류.
+- publication-grade 기준 유지: physics/trap/geometry/convergence criterion을 일정 때문에 임의 완화하지 않음.
+
 ## 2026-10-06 — Deadline-aware publication plan
 
 1. Keep FAST_C1 Node 6 running as the full-reference NtSide=0 case.

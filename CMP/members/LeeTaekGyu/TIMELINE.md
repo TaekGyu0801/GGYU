@@ -1,3 +1,19 @@
+## 2026-10-06 — FAST_C1/Common Baseline exact SDE mesh rules supplied by user
+
+- 작업자: 이택규
+- 상태: OBSERVED / SOURCE CODE
+- 사용자 제공 SDE v1.0 header explicitly identifies a 2D Cartesian planar InGaN/GaN microLED.
+- Mesh rules in the supplied source:
+  - Global: max (x,y) = (0.050, 0.100) um; min = (0.005, 0.005) um.
+  - EBL window: max = (0.002, 0.020) um; min = (0.001, 0.002) um.
+  - MQW window: max = (0.0010, 0.020) um; min = (0.0005, 0.002) um.
+  - 5 nm damaged-sidewall windows: max = (0.005, 0.001) um; min = (0.001, 0.0005) um.
+  - MaxLenInt: GaN/Nitride 0.002 um, GaN/AlGaN 0.001 um, GaN/InGaN 0.0005 um, factor 1.2.
+- Coordinate definition in source: x = vertical growth direction; y = lateral direction.
+- Interpretation: finest explicitly requested spacing is 0.0005 um = 0.5 nm, at MQW/interface and damaged-edge refinement.
+- Existing observed generated mesh statistics remain Elements=290,814 / Points=137,831.
+- Exact element count through a 5 nm strip is mesh-generator dependent; do not state a fixed count from the refinement-size parameters alone.
+
 ## 2026-10-06 — Oct 23 abstract deadline forces runtime-first triage
 
 - 작업자: 이택규

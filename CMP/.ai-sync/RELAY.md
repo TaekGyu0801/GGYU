@@ -1,3 +1,19 @@
+## 2026-10-06 — FAST_C2 handoff after Claude runtime analysis review
+
+- 작업자: 이택규
+- 사용 AI: Claude analysis reviewed by ChatGPT
+- 상태: PROPOSED / NOT EXECUTED
+- exact problem: Node 6/12 are alive but high-bias runtime is dominated by repeated timestep growth/rejection/cutback cycles.
+- evidence: Node 6 dt=1.1842e-5 rejects after RHS ~1.41e-3 stagnation to Iteration 15; half-step retry 5.9211e-6 converges in 2 iterations. Node 12 shows repeated near-half cutbacks too.
+- reviewed strategy: `CMP/FAST_BASELINE_C2.md`.
+- proposed tools: `CMP/tcad/tools/make_restart_deck.py`, `CMP/tcad/tools/iv_window.py`; synthetic-only tested.
+- do not change: current running Node 6/12, Common Baseline physics/geometry/traps/RHSMin, protected 5 V endpoint.
+- unresolved: InitialTime/FinalTime+Goal segmented semantics, Save/Load syntax, existing -Loadable TDR restartability, actual J normalization.
+- important validation caveat: changing transient timestep sequence can alter trap state; NtSide=1e18 C2 equivalence must include trap/SRH/radiative/carrier metrics, not only I-V.
+- next first action: D1–D6; then C2 smoke gate. Decision 0 (J-window endpoint) requires team approval.
+
+---
+
 ## 2026-10-04 — B0 COMPLETE; handoff to FAST C1 preprocess
 
 - 285/285 rejection/retry pairs checked with explicit Stepsize-derived dt.

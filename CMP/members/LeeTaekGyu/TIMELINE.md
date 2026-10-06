@@ -1,3 +1,13 @@
+## 2026-10-06 — Node 12 separate parallel run started by user
+
+- 작업자: 이택규
+- 상태: USER-REPORTED / VERIFY NEEDED
+- User reports that a separate copied project/file for Node 12 (NtSide=1e18) has been started in parallel while FAST_C1 Node 6 continues.
+- Exact new project path, source hash, pp12_des.cmd/par provenance, and initialization success are not yet directly verified.
+- Do not mark Node 12 as CONFIRMED running until process/log evidence is checked.
+- Intended purpose: reduce wall-clock schedule by parallelizing the two Common Baseline branches.
+- Publication-grade baseline conditions remain unchanged; no physics/convergence relaxation is authorized by this action.
+
 ## 2026-10-06 — Deadline-aware publication-grade simulation strategy
 
 - 작업자: 이택규

@@ -1,3 +1,19 @@
+## 2026-10-06 — D1 complete: high-bias failure is not a GMRES-maxit stall
+
+- 작업자: 이택규
+- 상태: OBSERVED / DIAGNOSIS
+- Node 6 representative failed step (0.942217 -> 0.942229, dt=1.1842e-5):
+  - nonlinear factor remains 1.00e+00.
+  - |step| remains about 1.33e-2 to 1.34e-2 instead of collapsing toward zero.
+  - #iterative is typically ~48-54, far below configured linear-solver maxit=200.
+  - RHS drops rapidly to ~1.41e-3 by Newton iteration 2 and then remains essentially flat through iteration 15.
+- half-step retry (dt=5.9211e-6):
+  - #iterative remains similar (~50-52), yet RHS reaches 4.58e-4 at Newton iteration 2 and converges.
+- therefore the observed failure is NOT explained by the inner GMRES reaching maxit, and the linear-solver iteration count itself does not distinguish failure from success.
+- the logged error column alternates between values similar to those also seen on the successful retry, so its semantic meaning must not be over-interpreted without the T-2022.03 manual.
+- working interpretation: a timestep-dependent nonlinear residual floor just above RHSMin is the immediate bottleneck; this supports testing safer high-bias timestep growth before changing the linear solver.
+- implication for FAST_C2: keep linear solver unchanged for the first C2 candidate. Proceed to D2 accepted-iteration audit before approving Iterations=8.
+
 ## 2026-10-06 — Claude high-bias runtime analysis reviewed; FAST_C2 proposed
 
 - 작업자: 이택규

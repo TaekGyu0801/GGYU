@@ -1,3 +1,30 @@
+## 2026-10-06 — Node 6/12 logs confirm forward progress with repeated timestep cutback, not a hard stall
+
+- 작업자: 이택규
+- 상태: OBSERVED / RUNTIME DIAGNOSIS
+- user-provided logs show both SDevice runs are advancing in accepted pseudo-time.
+- Node 6 (FAST_C1):
+  - recent BE-step attempts progress through ~0.942147 -> 0.942238.
+  - representative failed attempt: 0.942217 -> 0.942229, dt=1.1842e-05, reaches Iteration 15 with RHS ~1.41e-3 and is rejected.
+  - automatic retry halves the step to 5.9211e-06 and converges in 2 iterations with RHS 4.58e-4.
+  - subsequent accepted steps increase again (7.1054e-06, then 8.5265e-06).
+  - mapped bias is ~4.711 V at pseudo-time ~0.9422 for the known 0->5 V ramp.
+  - diagnosis: not hung; local nonlinear convergence causes periodic reject -> ~0.5 cutback -> quick recovery.
+- Node 12 (FAST_C1_Copy):
+  - recent BE-step attempts progress through ~0.848534 -> 0.848697.
+  - repeated pattern visible: larger attempt rejected, then step approximately halved (e.g. 2.1922e-05 -> 1.0961e-05; 1.8941e-05 -> 9.4703e-06; 1.9638e-05 -> 9.8188e-06), followed by renewed growth.
+  - accepted steps generally converge in 2 iterations around 18-19 s in the provided tail.
+  - mapped bias is ~4.243 V around pseudo-time ~0.8486 for the known 0->5 V ramp.
+  - current last shown attempt at dt=2.0360e-05 had RHS ~1.17e-3 by iteration 3, so its eventual accept/reject outcome is not yet shown.
+- conclusion:
+  - no evidence of syntax error or frozen solver in these logs.
+  - dominant runtime cost is repeated high-bias step rejection/cutback, especially Node 6.
+  - do not terminate current runs solely on suspicion of a stall.
+- next:
+  - keep current runs as reference evidence.
+  - accelerated branch should target numerical continuation / sweep strategy and/or reduced mesh, while preserving physics.
+  - any solver-policy change must be validated against these reference trajectories.
+
 ## 2026-10-06 — Node 6 and Node 12 SDevice processes confirmed alive at evening check
 
 - 작업자: 이택규

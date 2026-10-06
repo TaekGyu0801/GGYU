@@ -1,3 +1,13 @@
+## 2026-10-06 — Next: D6 Node 6 4.7 V Load gate
+
+1. Keep Node 6/12 running.
+2. CPU headroom PASS; license headroom still unknown.
+3. Run D6 only in a separate scratch directory using copies of n1_msh.tdr, pp6_des.par/cmd and n6_inter_0004_des.tdr.
+4. Generate a check-only restart deck; do not continue bias yet.
+5. Launch as a third short SDevice job and inspect immediately for license wait or Load syntax/data error.
+6. If Load succeeds, compare steady re-solve anode current at 4.7 V with the reference current around 4.7 V before allowing Option 3.
+7. Decision 0 J-window remains pending; current provisional J values are far below 0.1 A/cm2.
+
 ## 2026-10-06 — D3 next: extract I(V) / provisional J(V)
 
 1. D2 exception check CLOSED: Node 12 13/15-iteration accepted steps are real and barely meet RHSMin.

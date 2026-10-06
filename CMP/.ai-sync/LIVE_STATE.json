@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-04",
+  "updated": "2026-10-06",
   "primaryWorker": "이택규",
   "phase": "Phase 0 — Common Baseline FAST numerical optimization",
   "task": "Inspect copied Workbench node/status metadata, then preprocess Node 6 only",
@@ -275,5 +275,29 @@
       "c1SourceInstall": "PASS",
       "c1SourceSha256": "f62eab51816ba21a9fba6f9d26ef39606ea76b17c2a522153d4b45ed8cf27f93"
     }
+  },
+  "runtimeCheck20261006_2143": {
+    "worker": "이택규",
+    "status": "OBSERVED",
+    "node6": {
+      "project": "GaN_PiN_Diode_FAST_C1",
+      "pid": 69457,
+      "process": "sdevice --max_threads 4 pp6_des.cmd",
+      "alive": true
+    },
+    "node12": {
+      "project": "GaN_PiN_Diode_FAST_C1_Copy",
+      "pid": 93915,
+      "process": "sdevice --max_threads 4 pp12_des.cmd",
+      "alive": true
+    },
+    "providedBeStep": {
+      "from": 0.845455,
+      "to": 0.845473,
+      "stepsize": 0.000017909,
+      "originNode": "UNRESOLVED"
+    },
+    "note": "ls n6_des.out was run from ~, so file-not-found does not indicate missing project log",
+    "nextAction": "Read n6_des.out and n12_des.out timestamps/tails from each project directory and verify accepted pseudo-time progress versus retry loop."
   }
 }

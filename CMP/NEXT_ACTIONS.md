@@ -878,3 +878,14 @@ Common Baseline Final 통과 후에만:
 - B 전용 fine zones: GaN/AlGaN lateral interfaces, MQW stack, sidewall 5 nm damage, barrier/MQW corner, high-field/contact edges.
 - center MQW는 radiative recombination/current crowding 평가 때문에 fine/adequate resolution 유지.
 - full/fine reference 대비 lateral Ec/Ev, I-V, SRH, Rrad, Jmax/Javg equivalence 검증 필수.
+
+
+## Baseline half-domain validation path (2026-10-06)
+
+1. Physical baseline definition remains W_mesa = 4.0 µm.
+2. Recover actual running SDE source and confirm mirror symmetry of geometry, doping, contacts, sidewall traps, BCs, and reflect/centerline handling.
+3. Build a separate half-domain candidate representing 2.0 µm of the 4.0 µm physical mesa.
+4. First keep mesh philosophy as close as possible to the full reference; validate symmetry-only change.
+5. Then apply selective coarsening only to remote homogeneous bulk.
+6. Compare full/fine vs half candidate: I-V/Vf, IQE, integrated SRH/Radiative/Auger, current normalization, e/h density, current density, E-field; Project B additionally lateral Ec/Ev barrier.
+7. If equivalent, use the half-domain model as the common production baseline for Baseline/A/B. Keep one full/fine model as publication/reference validation evidence.

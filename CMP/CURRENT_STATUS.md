@@ -1,3 +1,18 @@
+## 2026-10-06 — Node 6 reached 4.703 V; 4.7 V intermediate TDR confirmed
+
+- 작업자: 이택규
+- 상태: OBSERVED / RUNTIME EVIDENCE
+- direct terminal evidence from active FAST_C1 Node 6:
+  - intermediate snapshots written successfully at pseudo-times 0.80, 0.84, 0.88, 0.92, 0.94, corresponding to 4.0, 4.2, 4.4, 4.6, 4.7 V.
+  - newest confirmed snapshot: n6_inter_0004_des.tdr at 4.700 V.
+  - current log tail advanced to pseudo-time 0.940668 = 4.70334 V.
+  - recent accepted steps: 7.2336e-06 and 8.6804e-06 pseudo-time, equivalent to about 36.2 and 43.4 microvolts per accepted voltage step.
+  - each accepted solve converged in 2 Newton iterations after the initial row and took about 22.6 s wallclock.
+  - RHS converged below 1e-3; the run is not stalled.
+- important provenance: n6_des.tdr has timestamp 2026-09-24 and is stale relative to the current FAST_C1 run; current spatial evidence is in n6_inter_*.tdr.
+- interpretation: dominant blocker remains timestep collapse / poor timestep recovery, not per-step Newton cost.
+- if the current 7.2e-6 to 8.7e-6 step scale never recovers, a no-rejection constant-step extrapolation alone would require roughly 43-52 additional hours to 5 V; this is not a completion ETA, only a bottleneck-scale estimate.
+
 ## 2026-10-06 — Node 6 / Node 12 actual runtime paths confirmed
 
 - 작업자: 이택규

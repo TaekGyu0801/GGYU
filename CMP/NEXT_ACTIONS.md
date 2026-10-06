@@ -858,3 +858,14 @@ Common Baseline Final 통과 후에만:
    - trap region list 및 syntax
 3. old/current `.out` 시작부의 grid/vertex/element/equation/unknown 통계를 비교해 mesh 변화 여부 확인.
 4. current가 Conc=1e18이면 old fast deck과 직접 속도 비교를 중단하고, current NtSide=0 node와 old NtSide=0을 비교.
+
+
+## Lee Taek Gyu — FAST_C2 geometry/mesh acceleration candidate (2026-10-06)
+
+1. 현재 Node 6/12 full-reference run은 중단하지 않는다.
+2. 실제 실행 중인 SDE source를 확보하여 reflect 사용 여부, centerline 좌표, contacts, trap 적용 sidewall, refinement windows를 확인한다.
+3. 좌우 대칭이 확인되면 별도 FAST_C2 branch에서 half-domain을 구성한다.
+4. 5 nm sidewall damage, active/heterointerface/junction, depletion/high-field 및 relevant contact edge는 fine mesh를 유지한다.
+5. 이 영역에서 충분히 떨어진 homogeneous bulk만 단계적으로 coarsen한다. abrupt mesh jump는 피한다.
+6. short benchmark에서 full/fine vs half/selective mesh의 element/point count, wallclock/step, I-V/current normalization, SRH/radiative/carrier/field spatial metrics를 동일 bias/physics로 비교한다.
+7. equivalence를 확인하기 전에는 Common Baseline final mesh로 교체하지 않는다.

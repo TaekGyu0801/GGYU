@@ -1,3 +1,15 @@
+## 2026-10-06 — Node 6 and Node 12 SDevice processes confirmed alive at evening check
+
+- 작업자: 이택규
+- 상태: OBSERVED / RUNTIME
+- user-provided process listing at ~2026-10-06 21:43 KST shows both baseline runs have live SDevice processes:
+  - FAST_C1 Node 6: PID 69457, command `sdevice --max_threads 4 pp6_des.cmd`
+  - FAST_C1_Copy Node 12: PID 93915, command `sdevice --max_threads 4 pp12_des.cmd`
+- both processes showed active CPU usage in the provided `ps` output.
+- a solver line `Computing BE-step from 0.845455 s to 0.845473 s (Stepsize: 1.7909e-05 s)` was also provided, but the originating project/node is not yet attributable from the pasted context alone.
+- `ls n6_des.out` failed only because it was run from the home directory (`~`), not from the FAST_C1 project directory; this is not evidence that the log file is missing.
+- next: inspect timestamp and tail of `n6_des.out` and `n12_des.out` from their respective project directories to determine whether accepted pseudo-time is still advancing or a convergence retry loop is occurring.
+
 ## 2026-10-06 — Node 6 reached 4.703 V; 4.7 V intermediate TDR confirmed
 
 - 작업자: 이택규

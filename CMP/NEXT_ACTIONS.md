@@ -869,3 +869,12 @@ Common Baseline Final 통과 후에만:
 5. 이 영역에서 충분히 떨어진 homogeneous bulk만 단계적으로 coarsen한다. abrupt mesh jump는 피한다.
 6. short benchmark에서 full/fine vs half/selective mesh의 element/point count, wallclock/step, I-V/current normalization, SRH/radiative/carrier/field spatial metrics를 동일 bias/physics로 비교한다.
 7. equivalence를 확인하기 전에는 Common Baseline final mesh로 교체하지 않는다.
+
+
+## Project B — half-domain/selective mesh constraint (2026-10-06)
+
+- symmetric AlBarrier_L/R 구조가 유지되면 B에도 half-domain 적용 가능.
+- 계산 영역 가운데 mesh를 없애지 말고, remote homogeneous bulk만 coarsen.
+- B 전용 fine zones: GaN/AlGaN lateral interfaces, MQW stack, sidewall 5 nm damage, barrier/MQW corner, high-field/contact edges.
+- center MQW는 radiative recombination/current crowding 평가 때문에 fine/adequate resolution 유지.
+- full/fine reference 대비 lateral Ec/Ev, I-V, SRH, Rrad, Jmax/Javg equivalence 검증 필수.

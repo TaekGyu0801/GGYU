@@ -1,3 +1,10 @@
+## 2026-10-06 — C2 smoke immediate handling
+
+1. Check whether premature restart PIDs 14179/14180 are still alive; terminate them if so.
+2. Keep smoke PID 13881 running.
+3. Do not run Load test until smoke reaches the 0.2 V Save point and `c2smk_ckpt_0p2V*` exists.
+4. Then launch exactly one check-only Load test and inspect its log.
+
 ## 2026-10-06 — D6 이후 다음 단계
 
 1. 기존 C1 intermediate TDR restart 시도는 종료.

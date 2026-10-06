@@ -653,3 +653,12 @@ The original synchronized SDevice2 deck contains `SRHRecombination`; the fact th
 - for an exactly mirror-symmetric device, each full-domain integrated recombination term is twice the half-domain term, so the factor of 2 cancels in IQE.
 - half-domain is therefore valid for IQE comparison, provided symmetry and identical integration-region definitions hold.
 - do not multiply IQE by 2; only absolute total current/recombination/power may require full-device symmetry scaling/2D normalization checks.
+
+
+## 2026-10-06 — Recommended baseline strategy: physical 4 µm device, validated half-domain production model
+
+- physical Common Baseline remains a 4.0 µm mesa.
+- recommended computational representation, after validation: simulate only the 2.0 µm half-domain with centerline symmetry.
+- retain full/fine runs as reference evidence; do not delete the full model from the methodology.
+- validate symmetry-only change before mesh coarsening, then use the same validated half-domain mesh policy for Baseline/A/B production comparisons.
+- IQE is compatible with the half-domain under exact symmetry; absolute totals still need normalization/symmetry scaling checks.

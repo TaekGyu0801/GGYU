@@ -1,3 +1,41 @@
+## 2026-10-06 — D3 IV extraction and D5 CPU headroom check
+
+- 작업자: 이택규
+- 상태: OBSERVED / VALIDATION
+
+### D3 I(V) extraction
+- copied live current files parsed successfully with proposed `iv_window.py`.
+- Node 6: 3323 points, V range 0 -> 4.7128 V, I_max = 2.8954e-12 A/um (under standard 2D no-AreaFactor interpretation).
+- Node 12: 1236 points, V range 0 -> 4.2474 V, I_max = 7.9816e-14 A/um.
+- selected same-voltage Node12/Node6 total-current ratios:
+  - 3.0 V: 0.9566
+  - 3.5 V: 0.9562
+  - 4.0 V: 0.9252
+  - 4.1 V: 0.8150
+  - 4.2 V: 0.5829
+  - 4.23 V: 0.5276
+  - 4.24 V: 0.5125
+- provisional current-density conversion with 4 um mesa gives values only ~1.5e-6 to 3.8e-6 A/cm2 in the shared 3.0-4.24 V range; default target list 0.1-1000 A/cm2 is not reached.
+- therefore Decision 0 (truncate production range based on already-reached J window) is NOT supported by current data and remains pending.
+- explicit AreaFactor is absent in pp6/pp12 cmd/par. Older Sentaurus documentation states default 2D width 1 um / current unit A/um, but exact T-2022.03 manual confirmation is still pending before publication use of J.
+- the extremely low extracted current density should be treated as a model/result sanity-check item, not automatically as a valid LED operating-current range.
+
+### D4 current snapshot
+- 21:52 KST:
+  - Node 6 latest attempt t0=0.942564 -> ~4.71282 V.
+  - Node 12 latest attempt t0=0.849478 -> ~4.24739 V.
+- both runs remain live and progressing.
+- fixed 1-2 h progress-rate measurement is not yet complete from this snapshot alone.
+
+### D5 CPU resource
+- nproc=128.
+- load average ~7.46 / 7.70 / 7.81.
+- active SDevice CPU: Node6 ~280%, Node12 ~268%.
+- CPU headroom is ample for a short third smoke/load test.
+- Sentaurus license headroom remains unverified.
+
+- next: D6 scratch Load test using Node 6 4.7 V intermediate TDR without stopping Node 6/12; if license unavailable, the test must not disturb reference runs.
+
 ## 2026-10-06 — D2 exception check confirmed; D3 structural gate passed
 
 - 작업자: 이택규

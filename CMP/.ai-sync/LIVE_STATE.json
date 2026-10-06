@@ -1,10 +1,10 @@
 {
   "updated": "2026-10-06",
   "primaryWorker": "이택규",
-  "phase": "Phase 0 — Common Baseline FAST numerical optimization",
-  "task": "Inspect copied Workbench node/status metadata, then preprocess Node 6 only",
-  "status": "FAST_C1_SOURCE_INSTALLED_READY_FOR_STATUS_CHECK",
-  "blocker": "None; must avoid accidental solve/resume from copied x8 state.",
+  "phase": "Phase 0 — Common Baseline runtime acceleration validation",
+  "task": "Validate FAST_C2 proposal with D1–D6 and smoke gate while keeping Node 6/12 references running",
+  "status": "FAST_C2_PROPOSED_REVIEWED_NOT_EXECUTED",
+  "blocker": "High-bias timestep rejection/cutback runtime; C2 segmented-time/Save-Load semantics and current normalization are not yet validated.",
   "parallelWork": {
     "worker": "주수빈",
     "status": "OBSERVED",
@@ -316,5 +316,34 @@
       "hardStall": false
     },
     "conclusion": "No evidence of syntax error or frozen solver in supplied tails; high-bias nonlinear convergence and timestep cutback dominate runtime."
+  },
+  "fastC2": {
+    "status": "PROPOSED_NOT_EXECUTED",
+    "strategyPath": "CMP/FAST_BASELINE_C2.md",
+    "productionDeckSha256": "b876f614424202e6deaf0655411d7bc15733095da297c1df9ca5ebaacbb578d1",
+    "smokeDeckSha256": "dd261ee4fb45b65cf2f5ae8b1a2d707b39b74e2bced61f4e1fac02de6bc414a4",
+    "proposedHighBiasPolicy": {
+      "increment": 1.05,
+      "iterations": 8,
+      "condition": "D2 audit must show sufficient accepted-iteration margin"
+    },
+    "currentRuns": "KEEP_RUNNING_AS_REFERENCE",
+    "validation": [
+      "D1 Newton table diagnosis",
+      "D2 accepted-iteration audit",
+      "D3 J normalization/window",
+      "D4 measured progress",
+      "D5 resource headroom",
+      "D6 restart/load gate",
+      "C2 smoke syntax/Save gate",
+      "matched-bias transient/trap equivalence"
+    ],
+    "caveat": "Changing transient step sequence can change trap state; same RHSMin does not guarantee identical NtSide=1e18 transient solution."
+  },
+  "decision0": {
+    "topic": "Use validated current-density analysis window as production endpoint instead of requiring every A/B run to 5 V",
+    "status": "TEAM_DECISION_PENDING",
+    "baseline5VEndpointChanged": false,
+    "requirement": "Verify AreaFactor/2D current normalization and inspect actual J(V) first."
   }
 }

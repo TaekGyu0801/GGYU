@@ -1,3 +1,15 @@
+## 2026-10-06 — Deadline-aware publication plan
+
+1. Keep FAST_C1 Node 6 running as the full-reference NtSide=0 case.
+2. Check server capacity; if sufficient, launch NtSide=1e18 in a separate clean FAST_C1 project in parallel.
+3. Do not loosen RHSMin for the publication baseline without a dedicated sensitivity study.
+4. Build the next acceleration test around safer numerical levers first: staged step-growth policy / thread count / checkpointing.
+5. Define the scientific operating-current window from the validated baseline.
+6. Use that reduced window for broad Project A/B screening.
+7. Full 0–5 V validation only for baseline, best/representative/worst A/B cases, and cases needed to establish Vf/I–V limits.
+8. Perform mesh-convergence on a small representative set, not every sweep point.
+9. Final paper plots/tables must come only from validated full or explicitly convergence-checked runs.
+
 ## 2026-10-06 — Quantify FAST_C1 high-bias progress rate
 
 1. Keep FAST_C1 Node 6 running for now; it is confirmed alive at ~4.682 V and C1 Iterations=15 is active.

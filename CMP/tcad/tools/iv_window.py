@@ -31,7 +31,7 @@ def read_plt(path):
     if not m:
         sys.exit(f'{path}: no datasets block')
     names = re.findall(r'"([^"]*)"', m.group(1))
-    d = re.search(r'\bData\s*\{(.*)', txt, re.S)
+    d = re.search(r'\bData\s*\{(.*)', txt, re.S)          # tolerate a file still being written
     if not d:
         sys.exit(f'{path}: no Data block')
     body = d.group(1).split('}')[0]

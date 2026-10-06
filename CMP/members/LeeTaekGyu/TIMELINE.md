@@ -1,3 +1,11 @@
+## 2026-10-06 — D6 complete
+
+- 기존 Node 6 4.7 V intermediate TDR은 SDevice가 읽었지만 restart state 정보가 없어 Load restart에 사용할 수 없었음.
+- 현재 C1에서 Option 3은 폐기.
+- Node 6/12 reference run은 계속 유지.
+- 다음: 새 C2 smoke에서 Save checkpoint를 직접 만든 뒤 그 Save 파일로 Load 시험.
+- 공통 C2 첫 후보는 Iterations=15 유지, Increment=1.05 시험.
+
 ## 2026-10-06 — D3 IV extraction and D5 CPU headroom check
 
 - 작업자: 이택규

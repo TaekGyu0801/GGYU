@@ -1,3 +1,14 @@
+## 2026-10-06 — Revised C2 smoke started; premature duplicate Load tests detected
+
+- 작업자: 이택규
+- 상태: OBSERVED / SMOKE RUNNING
+- revised C2 smoke generator hash matched expected `c39925d5...030c`.
+- generated smoke deck shows D2-approved policy: segment1 Iterations=15, Increment=1.2; Save at 0.2 V; segment2 Iterations=15, Increment=1.05.
+- smoke SDevice PID 13881 started successfully and was still in the initial Poisson solve at the captured log; no checkpoint file had yet been created in the shown listing.
+- before smoke completion/checkpoint creation, two restart-check jobs were accidentally launched from the shell: PIDs 14179 and 14180.
+- these duplicate Load tests must not be used as evidence; stop/ignore them if still alive, then wait for smoke Save checkpoint creation before performing a single Load check.
+- next: verify only c2smk_des process remains, monitor c2smk.out, confirm c2smk_ckpt_0p2V* exists, then launch exactly one restart check.
+
 ## 2026-10-06 — D6 complete: current C1 intermediate restart rejected
 
 - 작업자: 이택규

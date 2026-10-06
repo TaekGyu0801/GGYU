@@ -1,3 +1,14 @@
+## D2 update — 2026-10-06
+
+The live-log audit invalidates the original universal high-bias `Iterations=8` candidate.
+
+- Node 6 accepted max Newton iteration = 4; cap 8 gives 0 false rejections in the observed snapshot.
+- Node 12 accepted max = 15, with accepted steps at 13 and 15 iterations.
+- cap 8 and cap 10 each predict 2 false rejections, first divergence around 4.195 V.
+- Therefore the original full C2 deck SHA `b876f614424202e6deaf0655411d7bc15733095da297c1df9ca5ebaacbb578d1` is not approved for execution as-is.
+- First common-baseline C2 revision: keep `Iterations=15`; test `Increment=1.05` / segmentation / checkpoints first.
+- Optional NtSide=0-only cap-8 testing may be done later as a separate numerical experiment.
+
 # FAST_BASELINE C2 — high-bias runtime strategy
 
 - 작업자: 이택규

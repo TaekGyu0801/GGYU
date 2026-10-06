@@ -299,5 +299,22 @@
     },
     "note": "ls n6_des.out was run from ~, so file-not-found does not indicate missing project log",
     "nextAction": "Read n6_des.out and n12_des.out timestamps/tails from each project directory and verify accepted pseudo-time progress versus retry loop."
+  },
+  "runtimeDiagnosis20261006Evening": {
+    "worker": "이택규",
+    "status": "OBSERVED",
+    "node6": {
+      "progressPseudoTime": "~0.942147 to ~0.942238",
+      "mappedBiasV": "~4.711",
+      "behavior": "periodic reject at Iterations=15, ~0.5 timestep cutback, then 2-iteration convergence and regrowth",
+      "hardStall": false
+    },
+    "node12": {
+      "progressPseudoTime": "~0.848534 to ~0.848697",
+      "mappedBiasV": "~4.243",
+      "behavior": "repeated larger-step rejection/cutback with continued accepted-step progress",
+      "hardStall": false
+    },
+    "conclusion": "No evidence of syntax error or frozen solver in supplied tails; high-bias nonlinear convergence and timestep cutback dominate runtime."
   }
 }

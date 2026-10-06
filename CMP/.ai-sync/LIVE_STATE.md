@@ -1,3 +1,11 @@
+## 2026-10-06 — D6 complete; Save-based C2 smoke next
+
+- 기존 C1 `Plot(-Loadable)` intermediate는 restart state 정보가 없어 current Node 6 restart에 사용 불가.
+- Option 3 폐기, Option 2만 유지.
+- Node 6/12 reference run 계속.
+- 다음: revised C2 smoke에서 `Save` checkpoint를 생성하고, 그 Save 파일에 대한 `Load` check 수행.
+- 첫 common C2 정책: Iterations=15 유지, Increment=1.05 시험.
+
 ## 2026-10-06 — D3 IV extraction and D5 CPU headroom check
 
 - 작업자: 이택규

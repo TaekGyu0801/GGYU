@@ -1,3 +1,12 @@
+## 2026-10-06 — Deadline triage for Oct 23 abstract
+
+1. 현재 FAST_C1 Node 6/Node 12는 자원 충돌이 없으면 계속 유지하여 full-reference evidence를 확보한다.
+2. 동시에 별도 copy에서 numerical-only accelerated C2 pilot를 만든다. 기존 physics/mesh/trap/contacts는 고정한다.
+3. 첫 benchmark는 full 0→5 V가 아니라 동일 초기상태/대표 bias 구간에서 Transient C1 vs DC-oriented Quasistationary/staged sweep의 convergence/runtime/I-V equivalence를 비교한다.
+4. PASS 기준을 먼저 정의: matched-bias I-V, Vf, carrier distribution, SRH/radiative/Auger 및 spatial profile이 reference와 허용오차 내 일치해야 한다.
+5. accelerated method가 PASS하면 Common Baseline과 A/B screening에 사용하고, 최종 대표 case만 full validation한다.
+6. 초록 제출 전 목표는 모든 parameter sweep 완료가 아니라, 검증된 Common Baseline + mechanism을 보여줄 최소 preliminary A/B evidence 확보로 설정한다.
+
 ## 2026-10-06 — Priority reset: finish and validate Common Baseline before Project A/B
 
 - 작업자: 이택규

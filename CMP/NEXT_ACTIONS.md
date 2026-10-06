@@ -1,3 +1,12 @@
+## 2026-10-06 — D3 next: extract I(V) / provisional J(V)
+
+1. D2 exception check CLOSED: Node 12 13/15-iteration accepted steps are real and barely meet RHSMin.
+2. D3 structural gate PASS: live .plt files exist, are current, contain anode TotalCurrent, and no explicit AreaFactor is present in pp cmd/par.
+3. Copy live .plt files and run iv_window.py read-only.
+4. Treat J values as provisional until exact T-2022.03 2D current normalization is verified; I(V) itself is directly usable.
+5. Keep Decision 0 pending until I(V)/J(V) window is inspected.
+6. In parallel, perform D4 progress snapshot and D5 resource check.
+
 ## 2026-10-06 — D2 complete; inspect Node 12 exceptions, then D3
 
 1. D2 CLOSED: cap 8 and cap 10 are not safe universal C2 settings because Node 12 has accepted 13- and 15-iteration steps.

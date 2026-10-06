@@ -1,3 +1,11 @@
+## 2026-10-06 — D2 complete; inspect Node 12 exceptions, then D3
+
+1. D2 CLOSED: cap 8 and cap 10 are not safe universal C2 settings because Node 12 has accepted 13- and 15-iteration steps.
+2. Extract the exact Node 12 accepted attempts with iterations >8 from the audit CSV and confirm their bias/time/final RHS.
+3. First common C2 candidate: Iterations=15 retained; Increment=1.05 is the first runtime lever.
+4. Do not execute the original cap-8 C2 deck as-is.
+5. Then D3: verify .plt update plus AreaFactor/2D current normalization before using current-density windows.
+
 ## 2026-10-06 — D1 complete; D2 is next
 
 1. D1 CLOSED: current Node 6 failure is not a GMRES maxit stall; keep linear solver unchanged for first C2 candidate.

@@ -1,3 +1,28 @@
+## 2026-10-06 — FAST_C1 Node 6 confirmed alive at ~4.682 V; Iterations=15 active
+
+- 작업자: 이택규
+- 상태: OBSERVED / RUNTIME EVIDENCE
+- process evidence:
+  - gsub PID 69166
+  - gjob PID 69396
+  - sdevice PID 69457 at ~99% CPU
+  - FAST_C1 project path confirmed
+- `n6_des.out` timestamp observed: 2026-10-06 08:49 KST, size ~3.5 MB.
+- latest accepted pseudo-time observed: approximately 0.936405.
+- 0→5 V ramp mapping gives latest accepted anode target ≈ 4.682025 V; current attempted step to 0.936419 corresponds ≈ 4.682095 V.
+- solver output directly shows anode voltage 4.682E+00 V on recent accepted steps.
+- C1 cap is definitely active: repeated `#iterations larger than 15.` followed by timestep retry.
+- recent accepted steps converge in 2–3 Newton iterations and ~21–22 s wallclock.
+- current difficult attempt at 0.936405→0.936419 reached iteration 14 with RHS ~1.03e-3, just above RHSMin=1e-3; likely near rejection unless the next iteration converges.
+- recent timestep scale is ~7.8e-6 to 1.6e-5 pseudo-time, showing severe high-bias timestep contraction.
+- interpretation:
+  - run is NOT hung at the captured time.
+  - C1 successfully removes the old 50-iteration cap behavior, but the dominant remaining bottleneck is now very small high-bias timesteps and repeated 15-iteration rejections.
+  - latest accepted bias exceeds the prior copied x8 audit endpoint (~4.643 V) by ~39 mV.
+- remaining voltage from 4.682025 V to 5.0 V is ~0.317975 V.
+- do not estimate finish time from full-run average; high-bias tail is strongly nonlinear.
+- next: quantify recent progress rate over a longer fixed window (e.g. 30–60 min of log) and count accepted/rejected attempts to estimate remaining runtime more defensibly.
+
 ## 2026-10-06 — FAST_C1 Node 6 still unfinished after ~41 h 48 min
 
 - 작업자: 이택규

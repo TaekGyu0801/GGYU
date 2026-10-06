@@ -1,3 +1,14 @@
+## 2026-10-06 — Immediate runtime-first branch: half + coarse mesh
+
+1. Keep existing FAST_C1 full Node 6/12 untouched as reference evidence.
+2. Create a separate half-domain candidate centered at the mirror plane; retain one physical sidewall and matching one-sided SDevice region references.
+3. Coarsen only remote/global homogeneous bulk first; preserve MQW/EBL/heterointerface/5 nm damage refinement near current resolution.
+4. Build SDE mesh before any long SDevice solve and record Elements/Points plus mesh screenshots around MQW, EBL, sidewall damage, and n-GaN bulk.
+5. Runtime-oriented engineering target: reduce mesh substantially from 290,814 elements; do not claim a fixed target as validated physics.
+6. If only one accelerated electrical case is launched first, prioritize the nominal damaged baseline NtSide=1e18 for mechanism-relevant preliminary A/B comparisons; keep NtSide=0 as control/reference when resources allow.
+7. For half-domain comparison, compare 2×half terminal current with full current (or current density); IQE itself should not be multiplied by 2.
+8. Treat this branch as preliminary/screening until full-vs-half/coarse equivalence is checked at matched bias/current.
+
 ## 2026-10-06 — Deadline triage for Oct 23 abstract
 
 1. 현재 FAST_C1 Node 6/Node 12는 자원 충돌이 없으면 계속 유지하여 full-reference evidence를 확보한다.

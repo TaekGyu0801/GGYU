@@ -625,3 +625,11 @@ The original synchronized SDevice2 deck contains `SRHRecombination`; the fact th
 - preserve fine resolution at the 5 nm sidewall-damage region and other solution-critical interfaces/high-field zones; coarsen only remote homogeneous bulk with graded transitions.
 - publication gate: compare against full/fine reference at identical physics/bias, including current normalization and key spatial metrics, before adopting.
 - immediate next step: recover/inspect exact running SDE source, then create separate FAST_C2 short benchmark.
+
+
+## 2026-10-06 — Project B compatible with half-domain, but center active region remains mesh-critical
+
+- Project B symmetric AlBarrier_L/R concept is compatible with half-domain if the actual SDE/contact/BC setup is mirror-symmetric.
+- do not remove mesh from the retained center domain; only coarsen remote homogeneous bulk.
+- Project B requires additional refinement at GaN/AlGaN lateral interfaces and barrier/MQW intersections, while the center MQW must remain adequately resolved for radiative/current-crowding metrics.
+- adoption still gated by full/fine equivalence validation.

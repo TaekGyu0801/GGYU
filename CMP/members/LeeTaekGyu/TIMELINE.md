@@ -1,3 +1,22 @@
+## 2026-10-06 — FAST_C1 Node 6 confirmed progressing after 41 h 05 min wall time
+
+- 작업자: 이택규
+- 상태: OBSERVED / RUNTIME
+- direct process evidence at 2026-10-06 08:51 KST:
+  - sdevice PID 69457
+  - ELAPSED = 1-17:05:26 (~41 h 05 min wall time)
+  - CPU = 280%, consistent with multithreaded activity
+  - process state SNl
+- n6_des.out modification time = 2026-10-06 08:51:49 KST, proving the log was actively updating.
+- recent accepted pseudo-time advanced to at least ~0.936443; current attempted endpoint ~0.936458.
+- mapped anode bias remains ~4.682 V.
+- C1 cap is active: repeated '#iterations larger than 15.'
+- recent successful attempts still converge in ~21 s with 2–3 Newton iterations, but occasional attempts sit just above RHSMin and run toward the 15-iteration cap.
+- high-bias timestep remains ~7e-6 to 1.45e-5 pseudo-time, so the remaining ~0.318 V can still take a long time.
+- conclusion: Node 6 is not hung; current blocker is high-bias timestep collapse, not process death.
+- planning implication: two-node sequential completion can plausibly take multiple additional days; Node 12 runtime cannot be assumed equal without evidence and may be similar or worse.
+- do not launch broad A/B full-sweep brute force from this runtime pattern.
+
 ## 2026-10-06 — FAST_C1 Node 6 confirmed alive at ~4.682 V; Iterations=15 active
 
 - 작업자: 이택규

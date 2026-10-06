@@ -1,3 +1,14 @@
+## 2026-10-06 — Runtime-first half + coarse-mesh candidate prioritized
+
+- 작업자: 이택규
+- 상태: DECISION / DEADLINE ACCELERATION
+- 기존 FAST_C1 full Node 6/12는 reference로 유지.
+- 새 accelerated branch는 half-domain + coarse remote/global bulk mesh를 동시에 적용하여 10/23 전 preliminary result 확보를 우선.
+- active physics/critical mesh는 유지: MQW, EBL, GaN/InGaN and GaN/AlGaN interfaces, 5 nm sidewall damage.
+- first gate before long solve: SDE mesh build only -> element/point count + visual mesh sanity.
+- half-domain current normalization: full-device total current 비교 시 2×I_half 또는 current density 사용; IQE ratio 자체는 ×2 하지 않음.
+- branch classification: preliminary/screening until full-reference equivalence/mesh-convergence is demonstrated.
+
 ## 2026-10-06 — Oct 23 abstract deadline: runtime-first triage
 
 - 작업자: 이택규

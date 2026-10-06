@@ -1,3 +1,35 @@
+## 2026-10-06 — Claude high-bias runtime analysis reviewed; FAST_C2 proposed
+
+- 작업자: 이택규
+- 상태: REVIEWED / PROPOSED / NOT EXECUTED
+- Claude package `FAST_C2_strategy_for_GPT.zip` reviewed by ChatGPT.
+- central diagnosis accepted as a working numerical model:
+  - high-bias runtime is dominated by a local convergent-timestep ceiling (`dt*`) plus `Increment=1.2` growth -> expensive rejection -> ~0.5 cutback cycling.
+  - Node 6 representative failure: dt=1.1842e-5, RHS ~1.41e-3 stagnates through Iteration 15; retry dt=5.9211e-6 converges in 2 iterations.
+  - idealized cycle model reproduces current Node 6 speed (~2.24 mV/h model vs ~2.2 mV/h observed).
+  - under the same idealized assumptions, Increment=1.05 + Iterations=8 gives ~5.24 mV/h; this is a model prediction, not measured C2 performance.
+- FAST_C2 remains numerical-only PROPOSED:
+  - staged global-time Transient
+  - 4 V+ Increment 1.05
+  - candidate Iterations 8 subject to D2 accepted-iteration audit
+  - checkpoints at 4.0/4.4/4.6/4.8 V
+  - RHSMin/physics/mesh/5 V endpoint unchanged
+- important ChatGPT caveat:
+  - changing iteration cap/timestep growth changes the transient step sequence; identical convergence criteria do not by themselves guarantee identical trap/transient state.
+  - NtSide=1e18 C2 validation must include trap charge/occupancy, SRH, radiative/Auger and carrier distributions, not I-V alone.
+  - Claude trap-emission estimate uses generic GaN assumptions and is not a confirmed active-deck timescale.
+- current Node 6/12 runs MUST continue as reference evidence.
+- syntax/manual gates remain unresolved: segmented InitialTime/FinalTime+Goal semantics, Save/Load syntax, and whether existing Plot(-Loadable) TDR can be loaded.
+- Decision 0 is separate and pending team approval: whether production analysis endpoint may be defined by a validated current-density window instead of always requiring 5 V. Baseline 5 V endpoint is not changed.
+- `iv_window.py` J values are provisional until AreaFactor/2D current normalization is verified.
+- public files added:
+  - `CMP/FAST_BASELINE_C2.md`
+  - `CMP/tcad/tools/make_restart_deck.py`
+  - `CMP/tcad/tools/iv_window.py`
+- proprietary full C2 deck was NOT uploaded; recorded production deck SHA-256 = `b876f614424202e6deaf0655411d7bc15733095da297c1df9ca5ebaacbb578d1`.
+- helper scripts passed Python syntax and synthetic-only tests; no live Sentaurus test yet.
+- next: D1–D6 in order, then C2 smoke gate before any production C2 run.
+
 ## 2026-10-04 — B0 cutback-rule validation CLOSED
 
 - 작업자: 이택규

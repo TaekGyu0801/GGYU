@@ -1,3 +1,57 @@
+## 2026-10-06 — D2 complete: Iterations=8/10 rejected as a universal C2 cap
+
+- 작업자: 이택규
+- 상태: OBSERVED / DECISION
+- current log snapshots audited with `sdevice_newton_audit.py`.
+
+### Node 6 (NtSide=0)
+- attempts=3957, accepted=3311, rejected=645.
+- accepted Newton histogram:
+  - 2 iters: 2378
+  - 3 iters: 778
+  - 4 iters: 155
+- accepted max = 4.
+- predicted false rejections:
+  - N=5/6/8/10: 0
+  - N=15: 0
+- measured attempt wallclock in parsed snapshot:
+  - total 190868 s
+  - accepted 87377 s
+  - rejected 103491 s
+  - rejected fraction ≈54.2%.
+
+### Node 12 (NtSide=1e18)
+- attempts=1325, accepted=1223, rejected=101.
+- accepted Newton histogram:
+  - 2: 329
+  - 3: 815
+  - 4: 60
+  - 5: 13
+  - 7: 4
+  - 13: 1
+  - 15: 1
+- accepted max = 15.
+- predicted false rejections:
+  - N=5: 6
+  - N=6: 6
+  - N=8: 2
+  - N=10: 2
+  - N=15: 0
+- first cap-induced trajectory divergence for N<=10 appears around 4.195 V.
+- parsed attempt wallclock:
+  - total 44143 s
+  - accepted 31939 s
+  - rejected 12204 s
+  - rejected fraction ≈27.6%.
+
+### Decision
+- Claude C2 proposal `Iterations=8` is NOT accepted as a universal/common-baseline high-bias cap.
+- `Iterations=10` is also not evidence-safe for Node 12.
+- first publication-oriented C2 candidate should keep `Iterations=15` for both NtSide=0 and NtSide=1e18, while testing `Increment=1.05` as the first high-bias runtime lever.
+- the previously recorded full C2 deck SHA-256 `b876f614424202e6deaf0655411d7bc15733095da297c1df9ca5ebaacbb578d1` contains Iterations=8 in high-bias segments and is therefore **REJECTED FOR EXECUTION AS-IS**; retain only as provenance.
+- optional later optimization: NtSide=0-specific cap=8 branch may be benchmarked separately, but it must not be treated as the common C2 numerical policy without separate validation.
+- next: inspect the two Node 12 accepted attempts requiring >8 iterations, then proceed to D3 current normalization / J-window gate.
+
 ## 2026-10-06 — D1 complete: high-bias failure is not a GMRES-maxit stall
 
 - 작업자: 이택규

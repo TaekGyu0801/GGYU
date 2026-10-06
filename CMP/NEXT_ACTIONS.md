@@ -1,3 +1,13 @@
+## 2026-10-06 — D6 이후 다음 단계
+
+1. 기존 C1 intermediate TDR restart 시도는 종료.
+2. Node 6/12 reference run 유지.
+3. `make_c2_smoke_deck.py`로 copied `pp6_des.cmd`에서 short smoke deck 생성.
+4. smoke 조건: segment1 0→0.2 V, Increment=1.2, Iterations=15; Save checkpoint 생성; segment2 0.2→0.3 V, Increment=1.05, Iterations=15.
+5. smoke 완료 후 Save-generated checkpoint 파일 존재 확인.
+6. 그 checkpoint를 `make_restart_deck.py --mode check`로 Load-test.
+7. Save/Load smoke가 통과한 뒤에만 production C2 preprocess/launch.
+
 ## 2026-10-06 — Next: D6 Node 6 4.7 V Load gate
 
 1. Keep Node 6/12 running.

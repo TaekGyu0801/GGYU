@@ -613,3 +613,15 @@ The original synchronized SDevice2 deck contains `SRHRecombination`; the fact th
 - Old numerical stepping: InitialStep=1e-5, MinStep=1e-9, MaxStep=1e-3, Increment=1.2, Goal anode=5 V — same as the slow current Solve block already observed.
 - Old Math signature: 4 threads, Digits=5, ErrRef=1e4, RHSMin=1e-3, BE, ExtendedPrecision(80), Blocked + ILS(22), gmres(100), tolrel=1e-10, ilut(1e-8,-1).
 - Priority: verify current slow node's actual trap Conc. Only compare runtime directly if current is also NtSide=0.
+
+
+## 2026-10-06 — FAST_C2 half-domain / selective-mesh direction accepted
+
+- 작업자: 이택규
+- 상태: DECISION / IMPLEMENTATION CANDIDATE
+- user accepted a runtime-optimization branch using half-domain symmetry plus localized fine mesh.
+- keep current Node 6/12 full-device runs as reference evidence.
+- candidate only: half-domain is allowed only after confirming left-right symmetry of geometry, doping, contacts, traps and BCs in the actual SDE source.
+- preserve fine resolution at the 5 nm sidewall-damage region and other solution-critical interfaces/high-field zones; coarsen only remote homogeneous bulk with graded transitions.
+- publication gate: compare against full/fine reference at identical physics/bias, including current normalization and key spatial metrics, before adopting.
+- immediate next step: recover/inspect exact running SDE source, then create separate FAST_C2 short benchmark.

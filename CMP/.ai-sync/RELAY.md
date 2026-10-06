@@ -1,3 +1,11 @@
+## 2026-10-06 — 이택규 → 주수빈/다음 작업자 인수인계
+
+오늘은 FAST_C1 Node 6(NtSide=0)·Node 12(NtSide=1e18)가 실제로 멈춘 게 아니라 high-bias에서 timestep을 키웠다가 Newton 실패 → 약 1/2 cutback → 다시 수렴하는 패턴 때문에 매우 느리다는 것을 로그로 확인했다. D1에서 linear solver maxit 문제가 아니라 RHS가 1e-3 바로 위에서 정체되는 timestep-dependent nonlinear bottleneck임을 확인했고, D2에서 Node 6은 accepted Newton max=4였지만 Node 12는 13·15 iteration에서 실제 accepted된 step이 있어 Claude가 제안했던 공통 C2 Iterations=8/10은 폐기했다. 따라서 첫 공통 FAST_C2는 Iterations=15를 유지하고, high-bias Increment만 1.2→1.05로 낮추는 방향으로 간다. D3에서 live .plt로 I(V)를 뽑았고, provisional J는 아직 너무 낮아 '5 V 대신 current-density window에서 분석 종료' 결정은 보류했다. D6에서는 기존 n6_inter_0004_des.tdr을 Load해보았지만 'contains no SLP information'으로 실패해, 현재 C1 intermediate TDR로 restart하는 Option 3은 폐기했다. Node 6/12 기존 run은 reference로 계속 유지하는 것이 원칙이다.
+
+현재는 Option 2만 남겨서 새 C2 smoke를 별도 scratch에서 검증 중이다. 새 smoke deck은 segment1 0→0.2 V에서 Increment=1.2/Iterations=15, 0.2 V에서 Save checkpoint, segment2 0.2→0.3 V에서 Increment=1.05/Iterations=15로 구성했고 syntax/preprocess 없이 실제 sdevice가 초기 Poisson solve까지 정상 진입했다. 다만 checkpoint가 생기기 전에 restart test를 실수로 두 번 실행해 PID 14179/14180이 생겼으므로, 내일 시작하면 먼저 `ps -u semi437 -o pid,etime,pcpu,args | grep -E '13881|14179|14180|c2smk|sdevice'`로 확인하고 14179/14180이 살아 있으면 그 둘만 종료한다. smoke PID 13881은 계속 두고 `tail -n 80 ~/CMP_C2_SMOKE/c2smk.out`와 `ls -lh ~/CMP_C2_SMOKE/c2smk_ckpt_0p2V*`로 0.2 V Save checkpoint 생성 여부를 확인한다. checkpoint가 실제 생성된 뒤에만 `c2smk_ld02_des.cmd`를 딱 한 번 실행해 Save-generated checkpoint가 Load되는지 검증하면 된다. 이 Load가 성공하면 그 다음이 production C2 preprocess/launch 단계다.
+
+---
+
 ## 2026-10-06 — FAST_C2 handoff after Claude runtime analysis review
 
 - 작업자: 이택규

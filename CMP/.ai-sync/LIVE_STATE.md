@@ -645,3 +645,11 @@ The original synchronized SDevice2 deck contains `SRHRecombination`; the fact th
 - A-specific: refine Cedge/GaN:C boundary.
 - B-specific: refine lateral AlGaN/GaN interface and barrier-MQW intersections; B has stricter interface-mesh need because band offsets/fields are primary mechanism.
 - final adoption requires full/fine equivalence validation; current Node 6/12 reference runs remain preserved.
+
+
+## 2026-10-06 — Half-domain preserves IQE ratio under mirror symmetry
+
+- current CMP IQE metric: integrated Rrad / (Rrad + RSRH + RAuger) over an identical physical integration region.
+- for an exactly mirror-symmetric device, each full-domain integrated recombination term is twice the half-domain term, so the factor of 2 cancels in IQE.
+- half-domain is therefore valid for IQE comparison, provided symmetry and identical integration-region definitions hold.
+- do not multiply IQE by 2; only absolute total current/recombination/power may require full-device symmetry scaling/2D normalization checks.

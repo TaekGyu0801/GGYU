@@ -1,3 +1,16 @@
+## 2026-10-07 — Cross-account FAST_C1 input identity confirmed
+
+- 작업자: 이택규
+- 상태: CONFIRMED / ACCOUNT-COMPARISON GATE PASS
+- 기존 계정 `semi437@ssudisu3`의 FAST_C1 원본과 새 계정 `cmp216@ssudisu2`로 Windows/MobaXterm을 통해 옮긴 테스트 입력을 SHA-256으로 비교함.
+- 세 핵심 입력이 byte-identical:
+  - `pp6_des.cmd` = `48d8de1a0d596e9c3b308498efda653486d6df839ae2bb8826f83ff569e3ac22`
+  - `pp6_des.par` = `60405755de61500d9815a8e9ecca6a7a465783d77eb8e5dadf1db515aeb10039`
+  - `n1_msh.tdr` = `762d2d57a352a00bb030b968985cbf3b71d53118c68e5c53b7586e613f392ea3`
+- 새 계정의 `sdevice`도 T-2022.03 경로로 확인됨.
+- 따라서 이후 새 계정 실행은 동일 mesh/cmd/par를 사용한 cross-account numerical/runtime 비교로 해석 가능.
+- 다음: 실행 전 `pp6_des.cmd/par` 내 기존 계정 절대경로가 없는지 최종 확인하고, 새 계정에서 Node 6 SDevice를 시작해 step walltime/accepted-rejected timestep/Newton pattern을 기존 계정과 비교.
+
 ## 2026-10-06 — D6 complete
 
 - 기존 Node 6 4.7 V intermediate TDR은 SDevice가 읽었지만 restart state 정보가 없어 Load restart에 사용할 수 없었음.

@@ -1,3 +1,14 @@
+## 2026-10-07 — Project A/B production pre-run GO/NO-GO audit
+
+- 작업자: 주수빈
+- 상태: REVIEWED / TEAM GATE
+- FAST_C1/Common Baseline은 Project A/B의 parent로 사용 가능하며 physical baseline을 다시 만드는 것은 불필요.
+- 하지만 multi-day A/B production sweep은 즉시 시작하지 않기로 함.
+- 시작 전 필수: 실제 active preprocessed deck 확인, 모든 spatial output 및 region-integral extraction 선검증, 2D current-density normalization, A/B parameterized geometry+mesh+null controls, Save/Load smoke, 대표 pilot.
+- A는 same-material GaN Cedge 내부 경계에 명시적 mesh refinement가 필요.
+- B는 AlBarrier의 exact vertical span을 먼저 확정해야 하며, QW edge를 치환하는 경우 active QW volume 변화가 comparison metric에 반영되어야 함.
+- 상세 기준: `CMP/PROJECT_AB_PRE_RUN_AUDIT.md`.
+
 ## 2026-10-06 — Claude high-bias runtime analysis reviewed; FAST_C2 proposed
 
 - 작업자: 이택규

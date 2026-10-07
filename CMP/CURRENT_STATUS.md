@@ -1,3 +1,18 @@
+## 2026-10-07 — Project A/B production pre-run audit: Baseline parent OK, broad A/B run NO-GO
+
+- 작업자: 주수빈
+- 상태: REVIEWED / PRE-RUN GATE
+- FAST_C1/Common Baseline은 Project A/B parent로 유지 가능. physical baseline 재구축 사유 없음.
+- 다만 broad multi-day A/B run은 다음이 끝날 때까지 NO-GO:
+  - actual active preprocessed deck/output dataset audit
+  - tested spatial integration/extraction workflow
+  - current-density normalization
+  - A Cedge parameterized geometry/mesh/physics/null-control
+  - B vertical-span decision + parameterized AlBarrier/mesh/null-control
+  - Save/Load smoke
+  - one representative pilot per project
+- detailed audit: `CMP/PROJECT_AB_PRE_RUN_AUDIT.md`.
+
 ## 2026-10-06 — Revised C2 smoke started; premature duplicate Load tests detected
 
 - 작업자: 이택규

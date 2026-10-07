@@ -1,3 +1,16 @@
+## 2026-10-07 — Before any Project A/B multi-day production run
+
+1. Finish/freeze the FAST_C1 Common Baseline reference evidence.
+2. Audit the exact active `pp1_dvs.cmd`, `ppN_des.cmd`, `ppN_des.par` that will be inherited by A/B; do not use stale public CURRENT as proof.
+3. On an existing intermediate TDR, prove all required datasets and extraction: sidewall SRH, MQW Rrad/RAuger/IQE, carrier/current, crowding, lateral Ec/Ev, trap/polarization.
+4. Confirm 2D current -> current-density normalization and freeze full-mesa area convention.
+5. Project A: implement parameterized `Cedge_L/R`, explicit Cedge mesh, carbon parameters (with optional compensation slot), and a carbon-off null control.
+6. Project B: decide exact AlBarrier vertical span first; then implement parameterized `AlBarrier_L/R`, xAl/wAl, lateral-interface mesh, and a clean null control.
+7. Complete Save/Load smoke before relying on checkpoints.
+8. Preprocess-only + short smoke for A and B.
+9. Run exactly one representative pilot A and one representative pilot B; verify runtime, convergence, V(I), saved-state coverage and postprocessing.
+10. Only then launch the broader DOE. See `CMP/PROJECT_AB_PRE_RUN_AUDIT.md`.
+
 ## 2026-10-06 — C2 smoke immediate handling
 
 1. Check whether premature restart PIDs 14179/14180 are still alive; terminate them if so.

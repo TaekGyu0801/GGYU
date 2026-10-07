@@ -1,3 +1,17 @@
+## 2026-10-07 — FAST_C1 same-current output audit for Project A/B
+
+- **작성자:** ChatGPT
+- **작업자:** 주수빈
+- **상태:** REVIEWED / PARTIALLY CONFIRMED
+- FAST_C1 public implementation record confirms the only executable change vs Copy x8 golden source is forward-Transient inner `Coupled`에 `Iterations=15` 추가이며, physics/traps/Math tolerances/ILS/Transient step control/5 V Goal/**spatial Plot schedule**은 유지됨.
+- 2026-09-28 Final SDevice v1.2에서 same-current spatial comparison을 위해 Transient 내부에 visualization-only intermediate `Plot(-Loadable ... NoOverWrite Time=(...))` 저장을 추가했음. 저장점은 t=0.80,0.84,0.88,0.92,0.94,0.96,0.97,0.98,0.985,0.99,0.995 → 4.0,4.2,4.4,4.6,4.7,4.8,4.85,4.9,4.925,4.95,4.975 V.
+- 실제 FAST_C1 Node 6에서 4.0/4.2/4.4/4.6/4.7 V intermediate TDR 생성이 관찰되어 Plot schedule이 실행 deck에서 작동하는 근거가 있음.
+- 따라서 사용자가 기억한 “same-current 비교용 Transient 추가”는 **전류를 Goal로 직접 구동하는 코드가 아니라**, voltage sweep I-V에서 target current에 해당하는 V를 찾은 뒤 그 V 근처의 saved TDR spatial state를 비교하기 위한 output/save-control임.
+- Project A/B 공정 비교의 핵심 output(SRH/Radiative/Auger, IQE용 적분, carrier/current maps, band profile, Vf)은 golden v1.2 계열 기록상 의도된 diagnostics에 포함되어 있음. 다만 public GitHub에는 proprietary full active source가 없어 field keyword 전체를 현재 실행 pp deck 기준으로 100% 재감사할 수는 없음.
+- **남은 gate 1:** absolute Current Density [A/cm2]는 T-2022.03 2D current/AreaFactor normalization 확인 전 provisional. same raw injected current 비교는 동일 geometry/2D-depth 조건에서 가능하지만 publication J 표기는 확정 전 사용 금지.
+- **남은 gate 2:** fixed-voltage TDR grid는 4.925/4.95/4.975 V처럼 5 V 근처가 촘촘하지만, A/B가 더 큰 Vf shift를 만들거나 여러 J operating point를 요구하면 target V에 충분히 가까운 snapshot이 없을 수 있음. A/B production 전에 operating-current window를 정한 뒤 Plot schedule density 또는 exact matched-current state extraction을 재검토해야 함.
+- **판정:** 현재 FAST_C1을 다시 버릴 이유는 없음. same-current 비교 기반은 들어가 있으나, “모든 Project A/B current-density comparison이 완성됐다”고 freeze하기 전에 J normalization + snapshot coverage를 최종 확인해야 함.
+
 ## 2026-09-29 — Node 6 end-of-ramp failure risk assessment
 
 - **작업자:** 주수빈

@@ -1,3 +1,24 @@
+## 2026-10-07 — Project A/B multi-day pre-run completeness audit
+
+- **작성자:** ChatGPT
+- **작업자:** 주수빈
+- **상태:** REVIEWED / PRODUCTION A-B NO-GO UNTIL GATES PASS
+- FAST_C1/Common Baseline은 A/B의 parent로 사용할 수 있으며 물리 baseline을 다시 구축할 필요는 없다고 판정.
+- same-current I-V extraction 및 v1.2 intermediate spatial TDR schedule은 FAST_C1 lineage에 유지되고 실제 Node 6에서 intermediate TDR 생성이 관찰됨.
+- 하지만 광범위 A/B multi-day production sweep은 아직 시작하면 안 됨.
+- 필수 사전 항목:
+  1. 실제 active pp1_dvs/ppN_des.cmd/par audit (stale public CURRENT 사용 금지)
+  2. existing TDR에서 SRH/Radiative/Auger/carrier/current/band/trap/polarization dataset 실제 존재 확인
+  3. sidewall SRH/MQW Rrad/RAuger/IQE/current crowding/band cutline extraction workflow 선검증
+  4. 2D current -> J normalization 확정
+  5. Project A: parameterized Cedge_L/R + explicit same-material region mesh + carbon physics + null control
+  6. Project B: AlBarrier vertical span 확정 + parameterized xAl/wAl + lateral heterointerface mesh + null control
+  7. C2 Save/Load checkpoint smoke 통과
+  8. 대표 A/B pilot 후 broad DOE
+- Project B가 QW edge를 AlGaN으로 치환하는 geometry라면 active QW volume이 변하므로 total Rrad/IQE만으로 confinement 효과를 해석하지 말고 QW volume normalization 및 injection/leakage metric을 함께 보고해야 함.
+- Project A는 GaN:C self-compensation 가능성을 고려해 Stage-1 acceptor 외 optional donor/compensation parameter를 production code 구조에 미리 예약하는 것이 권고됨.
+- 상세 GO/NO-GO 문서: `CMP/PROJECT_AB_PRE_RUN_AUDIT.md`.
+
 ## 2026-10-07 — FAST_C1 same-current output audit for Project A/B
 
 - **작성자:** ChatGPT

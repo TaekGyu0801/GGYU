@@ -1,10 +1,10 @@
 {
-  "updated": "2026-10-06",
-  "primaryWorker": "이택규",
-  "phase": "Phase 0 — Common Baseline runtime acceleration validation",
-  "task": "Inspect Node 12 accepted >8-iteration exceptions, then D3 current-normalization/J-window gate",
-  "status": "D2_COMPLETE_CAP8_10_REJECTED",
-  "blocker": "High-bias timestep rejection/cutback runtime; C2 segmented-time/Save-Load semantics and current normalization are not yet validated.",
+  "updated": "2026-10-07",
+  "primaryWorker": "주수빈",
+  "phase": "Phase 0 — Common Baseline completion + Project A/B pre-run implementation gate",
+  "task": "Complete mandatory A/B pre-run gates before any multi-day production sweep",
+  "status": "BASELINE_PARENT_OK_AB_PRODUCTION_NO_GO",
+  "blocker": "A/B production requires active pp-deck/output audit, tested extraction workflow, current-density normalization, parameterized A/B geometry/mesh/null-controls, Save/Load smoke, and representative pilots.",
   "parallelWork": {
     "worker": "주수빈",
     "status": "OBSERVED",
@@ -363,5 +363,25 @@
     "status": "TEAM_DECISION_PENDING",
     "baseline5VEndpointChanged": false,
     "requirement": "Verify AreaFactor/2D current normalization and inspect actual J(V) first."
+  },
+  "projectABPreRunAudit": {
+    "status": "NO_GO_UNTIL_GATES_PASS",
+    "document": "CMP/PROJECT_AB_PRE_RUN_AUDIT.md",
+    "confirmed": [
+      "FAST_C1/Common Baseline can be retained as Project A/B parent",
+      "same-current I-V extraction available",
+      "intermediate spatial Plot schedule preserved in FAST_C1 lineage",
+      "FAST_C1 Node 6 produced intermediate TDR snapshots"
+    ],
+    "mandatoryGates": [
+      "audit actual active pp1_dvs.cmd / ppN_des.cmd / ppN_des.par",
+      "verify required datasets on an existing TDR",
+      "test sidewall SRH / MQW Rrad-RAuger-IQE / current crowding / band-profile extraction",
+      "confirm 2D current-density normalization",
+      "implement Project A Cedge geometry, mesh, carbon physics, null control",
+      "freeze Project B vertical span and implement AlBarrier geometry, mesh, null control",
+      "pass Save/Load smoke",
+      "run one representative Project A pilot and one Project B pilot"
+    ]
   }
 }

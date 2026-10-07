@@ -1,3 +1,14 @@
+## 2026-10-07 — Project A/B pre-run audit: Baseline parent OK; production A/B NO-GO until gates pass
+
+- 작업자: 주수빈
+- 상태: REVIEWED / PRE-RUN GATE
+- FAST_C1/Common Baseline은 A/B parent로 유지 가능; physical baseline 재구축 필요 없음.
+- same-current I-V + intermediate spatial TDR 기반은 유지되고 실제 FAST_C1 Node 6에서 intermediate TDR 생성 확인.
+- broad multi-day A/B production은 아직 NO-GO.
+- 필수 gate: active pp-deck audit, dataset/extraction test, J normalization, A Cedge geometry/mesh/physics/null control, B exact vertical span + AlBarrier geometry/mesh/null control, Save/Load smoke, representative A/B pilots.
+- Project B가 QW edge를 AlGaN으로 치환하면 active QW volume이 달라질 수 있으므로 total recombination뿐 아니라 QW-volume normalization 및 injection/leakage metric을 함께 사용.
+- 상세: `CMP/PROJECT_AB_PRE_RUN_AUDIT.md`.
+
 ## 2026-10-06 — D6 complete; Save-based C2 smoke next
 
 - 기존 C1 `Plot(-Loadable)` intermediate는 restart state 정보가 없어 current Node 6 restart에 사용 불가.

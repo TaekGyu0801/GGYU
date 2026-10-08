@@ -172,3 +172,18 @@ ChatGPT / Claude가 Sentaurus syntax 또는 지원 keyword를 확신하지 못�
 **현재 T-2022.03 실행 로그와 preprocessed file을 최종 근거로 우선**한다.
 
 특히 이미 실패한 임의 keyword 추가를 반복하지 않는다.
+
+
+## 5. 2026-10-08 — User re-supplied TCAD_GUIDELINE.zip (이택규)
+
+- 상태: OBSERVED — uploaded ZIP and its five PDF titles, versions, page counts and SHA-256 verified locally. This is a reference registration, **not** a validation of every command described in the books.
+- ZIP: `TCAD_GUIDELINE.zip` (SHA-256 `aef60650ced452d3efdfa70b4a98695a2d8cc9e513c38dd6dcb453036528d68c`).
+- Contents:
+  - `sdevice_ug.pdf`: T-2022.03, 1739 PDF pages; SHA-256 `f33068f5040c1c8c7993bdc1c86a0d777925792780ab4405752accd682706e88`
+  - `sde_ug.pdf`: T-2022.03, 861 PDF pages; SHA-256 `29b188cd8a53f3426744fdcd2e6cd9196158cad7bc05b79d0651b2f75c008ae4`
+  - `smesh_ug.pdf`: T-2022.03, 164 PDF pages; SHA-256 `7c359c2e2f501c9479ad9f3b504c4101cfa2e32811614a3a8b8c03e6807ca569`
+  - `sprocess_ug.pdf`: T-2022.03, 1316 PDF pages; SHA-256 `a0dd009e3fe8ac72c1517256b775b1f0884709508c4d0059eb3c58701d24567f`
+  - `svisual_ug.pdf`: T-2022.03, 583 PDF pages; SHA-256 `ed94bc9fb85566d37c01256c17eec5cd76826d84e9c6fa5ec1bf2e30a853e416`
+- Future TCAD code-writing/checking workflow: read this index → consult relevant version-matched manual section (SDE/SMesh/SDevice/SProcess/SVisual) → compare with active preprocessed `pp*.cmd/par`, actual runtime log and existing deck → make only verified, minimal code edits; untested interpretations labelled PROPOSED.
+- **Availability caveat**: ZIP/PDF source files are uploaded in the originating chat session, not committed to the public repo. New chats or external AI sessions might require their own authorized copy/attachment before consulting the actual PDF pages. Do not claim the full manuals are persistent GitHub assets.
+- **Licensing**: official Synopsys PDFs are proprietary. Do not upload complete manuals or substantial excerpts to the public repository without permission.

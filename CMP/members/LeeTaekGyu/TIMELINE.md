@@ -1,3 +1,10 @@
+## 2026-10-08 — Claude half-domain/low-current review (PROPOSED)
+
+- Claude correctly flags very low provisional J near 4.71 V and recommends non-solver TDR/PLT diagnostics before further multi-day runs. This is a high-priority sanity check, NOT confirmed LED failure.
+- Half-domain conditionally promising; source-based contact/doping/domain symmetry, full-vs-half extraction, and mesh/solver equivalence must pass before production.
+- RHS L2 scaling by sqrt(2) is heuristic; do not change RhsMin in production without an explicit tolerance/equivalence study.
+- Also separate anode electron/hole/displacement currents and inspect integrated QW recombination before diagnosing injection physics. See LIVE LOG Issue #7, 2026-10-08 ChatGPT review.
+
 ## 2026-10-08 — TCAD official guides registered for future coding
 
 - 작업자: 이택규

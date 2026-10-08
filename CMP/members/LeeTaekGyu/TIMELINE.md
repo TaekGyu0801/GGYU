@@ -1,3 +1,13 @@
+## 2026-10-08 — cmp216 cross-account FAST_C1 Node 6 run stopped writing near 0.9534 V (OBSERVED / CAUSE UNRESOLVED)
+
+- 작업자: 이택규; 근거: 직접 제공된 `cmp216@ssudisu2` terminal listing and `tail -n 80 n6_des.log`.
+- Project directory: `/user2/cmp/cmp216/FAST_C1_ACCOUNT_TEST`; files: `pp6_des.par` (283 B), `pp6_des.cmd` (7.5 K), `n1_msh.tdr` (2.9 M), `n6_des.plt` (87 K; Oct 7 17:45), `n6_des.log` (345 K; Oct 7 17:47).
+- Last clearly **accepted** transient step: simulation time `0.189674→0.190674 s`, anode voltage `9.534E-01 V` (0.9534 V); cathode current `-1.215E-14`; RHS `6.15e-05 < 1e-3`; wallclock `23.65 s`.
+- Next step `0.190674→0.191674 s` begins, but the supplied file tail ends at the Newton-table header; no accepted next step nor normal end marker shown. Progress after 0.9534 V **not evidenced**.
+- Local `cmp216` `sdevice` process absent on `ssudisu2` in earlier `ps`; log/plt timestamps remain Oct 7, while inspection Oct 8. No `n*_des.tdr` was found. Suggests this local run is **not active**, but another host / cause and SWB job state not yet checked.
+- This was a cross-account same-input benchmark; cannot claim numerical speedup from low-bias step time or determine why it stopped.
+- NEXT: inspect end of log/other output files, SWB execution host/status, investigate process exit before deciding on restart. Preserve files; do not alter original `semi437` runs.
+
 ## 2026-10-08 — Node 6 4.7 V QW1–QW4 local recombination Probe screenshots
 
 - 작업자: 이택규; 상태: OBSERVED / FIELD LABEL NEEDS FULL CONFIRMATION.

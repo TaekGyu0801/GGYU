@@ -1,3 +1,13 @@
+## 2026-10-08 — Claude FAST_HALF_BULK_R15 package static audit by ChatGPT
+
+- 작업자: 이택규; 상태: REVIEWED / STATIC TEST PASS / SENTAURUS NOT RUN.
+- User supplied `FAST_HALF_BULK_R15_for_GPT_20261008.zip` (14 files; source SDE, standalone SDevice decks, scripts and README). `sha256sum -c SHA256SUMS` all PASS, Python syntax 4 scripts PASS, POSIX shell `sh -n` PASS; SDE Scheme parentheses/strings statically balanced.
+- SDE cuts at proposed yC=2.5 um with one DmgL physical sidewall and clean artificial symmetry face; `BulkFac=1.5` is restricted by protection windows. Actual SDE mesh and source-vs-input exact diff not verified here (original active SDE/pp6 archive not in this review session).
+- Node6 retains 12 DmgL trap regions at Conc=0; Node12 retains 12 DmgL trap regions at Conc=1e18; 0 DmgR region Physics in both. Main deck Iterations=15, RHSMin=1e-3, Increment=1.2, 5V target. Smoke normalized transient scaling appears consistent with T-2022.03 UG p.144-145, requires log validation.
+- **Safety finding:** supplied `tdr_region_integrals.py` not tested on result TDR; its potential-ordering check can skip when `ElectrostaticPotential` unavailable yet continue printing metrics, and missing SRH gets default 0 in q*SRH print. Do NOT use those integrals as validated scientific results until corrected/tested.
+- Current decision: **GO for separate SDE-only mesh Gate a**, not yet GO for full 5V run. Gate b Poisson and Gate c 0–1V detached smoke must complete PASS before Node6 trial. Historical FAST_C1 reference runs remain untouched. No sentaurus job launched from ChatGPT environment.
+- Review note delivered to user as `FAST_HALF_R15H_GPT_REVIEW_20261008.md`. Do not publicly commit full vendor input/decks.
+
 ## 2026-10-08 — FAST_C1 실제 SDE 소스 파일 위치 확인; FAST_HALF Claude 전달 패키지 준비
 
 - 작업자: 이택규; 상태: OBSERVED (터미널 파일명) / PROPOSED (구현·실행).

@@ -1,3 +1,10 @@
+## 2026-10-08 — How to establish LED emission in TCAD (manual-verified gate)
+
+- 작업자: 이택규; 상태: REFERENCE VERIFIED / ACTIVE COEFFICIENT UNRESOLVED.
+- Sentaurus Device T-2022.03 UG §16 pp.488–489: RadiativeRecombination dataset creation is not evidence of positive luminescence; inspect numeric QW Rrad and actual material-specific Radiative coefficient C. Manual states default C=0 for materials other than GaAs unless overridden; current active InGaN/GaN material/parameter setting remains unverified.
+- §34 pp.1040–1043: separate LED optical simulation can report spontaneous photon/power generation and escaped photon/power. Do not conflate radiative recombination with measured/extracted external light output.
+- Next: active pp cmd/par and material parameters → QW Rrad area-integration smoke → .plt e/h/displacement and injection sanity → same-J IQE workflow. Keep baseline unchanged until diagnosis. See Issue #7 2026-10-08.
+
 ## 2026-10-08 — Claude half-domain/low-current review (PROPOSED)
 
 - Claude correctly flags very low provisional J near 4.71 V and recommends non-solver TDR/PLT diagnostics before further multi-day runs. This is a high-priority sanity check, NOT confirmed LED failure.

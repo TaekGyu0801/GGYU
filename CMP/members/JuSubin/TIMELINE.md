@@ -1,3 +1,15 @@
+## 2026-10-08 — 주수빈 QS 0→0.3 V 성능 시험 SDevice 작성
+
+- 작업자: 주수빈; 상태: PROPOSED / STATIC PASS / SENTARUS NOT RUN.
+- 목적: Half+coarse (138,194 elements / 65,513 points)에서도 0→0.3V Transient smoke의 단일 accepted step이 약 109.74s 걸리는 bottleneck 완화. 그중 linear solve 약 90.20s, assembly 18.46s.
+- 사용자의 실제 FAST_C1 pp6_des.cmd에서 생성한 SWB Smoke SDevice를 기준으로, File/Electrode/Physics/Plot/Math 전체를 byte-identical 유지하고 Solve sweep만 QS로 변환함.
+- 신규 user-delivered private artifact: `sdevice_des_JUSUBIN_HALF_COARSE_QS_SMOKE.cmd` (GitHub 공개 full deck 미업로드), SHA256 `a7281c79e7e440c6192726f4ce6edefb58f8d76ed30ec921900fee5ff5a5ec01`.
+- Quasistationary anode 0→0.3 V: InitialStep=0.03, MinStep=1e-6, MaxStep=0.15, Increment=1.5, Decrement=2.0; virtual t 0→1.
+- Initial Poisson 500 + coupled 100 유지, within QS Coupled Iterations=15, RHSMin=1e-3, ExtendedPrecision(80), NumberOfThreads=4, Blocked/ILS(set=22) 및 trap physics 불변.
+- DmgL Physics 12개, DmgR 0개, `@NtSide@` 12개, `Grid=@tdr@`, parameter file `FASTC1_pp6_des.par` 유지.
+- Static audit PASS: braces/parentheses balanced; non-Solve active input completely identical to previous smoke deck; QS syntax based on Sentaurus training example. Actual T-2022.03 preprocess/numerical solve not yet tested.
+- Next: preserve current old transient logs and stop only new half+coarse Node2 smoke if user elects replacement; swap SDevice source in JUSUBIN_FAST_HALF_SWB only; preprocess -> verify pp2_des.cmd QS -> run quick 0.3V QS smoke. Compare accepted wallclock, volt/current, convergence; no full 5 V until verified.
+
 ## 2026-10-08 — 주수빈 가속 Baseline 전략 수정: Half + selective mesh coarsening
 
 - **작업자:** 주수빈

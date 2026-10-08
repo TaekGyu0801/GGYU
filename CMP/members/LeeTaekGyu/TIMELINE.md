@@ -1098,3 +1098,14 @@
 - `ps -fu $USER | grep -E 'sdevice|216' | grep -v grep`에서 SWB GUI 프로세스(pid 75755)는 확인됨. 숫자 216은 현재 사용자 계정명 `cmp216`을 가리키며 Node 216을 뜻하지 않음.
 - 변경: 코드/시뮬레이션 실행 중단/재시작 없음.
 - 다음: `echo $HOME`, `ls -ld ~/tmp/myproject`, `find ~ -maxdepth 6 -type f \( -name 'n*_des.log' -o -name 'n*_des.out' \) -print 2>/dev/null | head -n 30`로 cmp216 프로젝트/로그 확인; 필요시 SWB 노드 상태와 원격 실행 호스트 조사.
+
+
+## 2026-10-08 — cmp216 작업 경로/셸 후속 확인
+- 작업자: 이택규
+- 상태: OBSERVED (사용자 터미널 출력) / UNRESOLVED (SDevice 실제 실행 상태)
+- `echo $HOME` → `/user2/cmp/cmp216`.
+- `ls -lh ~/tmp/myproject` → 해당 경로 없음. 따라서 이전 semi437의 `tmp/myproject` 경로 레이아웃을 cmp216에 적용할 수 없음.
+- `find ~ -maxdepth 6 -type f ... -print 2>/dev/null | head -n 30` → `Ambiguous output redirect.`. cmp216 로그인 셸이 `-csh`인 상황에서 Bourne-style stderr redirect `2>/dev/null`가 해석되지 않은 것으로 판정. **find 검색은 실행되지 않은 것으로 보고 파일 부재/실패를 단정하지 않음.**
+- 다음 확인: `ls -la ~`; `find ~ -maxdepth 6 -type f -name 'n*_des.log' -print |& head -n 30` (C-shell 호환); 필요 시 SWB GUI에서 열린 프로젝트 경로와 계산 호스트 확인.
+- 코드 수정, 실행 중지/재시작 없음.
+

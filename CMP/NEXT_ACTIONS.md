@@ -1,3 +1,9 @@
+## 2026-10-08 — cmp216 Node6 terminal/runtime diagnosis (READ ONLY)
+
+1. Verify process on current host (`ps -ef | grep '[s]device'`) and inspect relevant login history (`last -n 10 cmp216`); if SWB spawned remotely check its host/job details separately.
+2. Inspect how the separate `FAST_C1_ACCOUNT_TEST` SDevice test was launched (`history | tail -n 25` where available) and logs for non-standard exit. Avoid asserting interruption cause without exit code/system evidence.
+3. Do not overwrite existing log/PLT; do not stop semi437 reference runs. Decide on detached batch run only after root cause/provenance analysis.
+
 ## 2026-10-08 — 이택규 urgent optional half+bulk-coarse pilot (PROPOSED, parallel branch)
 
 1. Without disturbing full/fine FAST_C1 references, obtain exact active SDE source (or pp1_dvs.cmd) plus copied active SDevice source / pp6_des.cmd and pp6_des.par from Workbench. Public CURRENT source may be stale.

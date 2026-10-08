@@ -1,3 +1,13 @@
+## 2026-10-08 — FAST_HALF_BULK_R15 SWB manual implementation package prepared
+
+- 작업자: 이택규; 상태: PROPOSED / STATIC CHECKED / NOT RUN.
+- User specifically chose to create new SWB project, tools, parameters and source manually rather than use Claude standalone run_r15h.sh.
+- From Claude ZIP made a **separate chat-delivered** SWB-ready four-file package `CMP_FAST_HALF_SWB_READY_20261008.zip` (not committed because it contains full TCAD source): `sde_dvs.cmd`, `sdevice_des.cmd`, `sdevice.par`, `SWB_README_KO.md`.
+- SDE change vs Claude half code: `sde:build-mesh "" "n@node@"`; half y=0..2.5um, physical damaged DmgL 5nm and bulk mesh factor 1.5 preserved.
+- SDevice changes vs Claude Node6 standalone: `Grid=@tdr@`, `Parameters=@parameter@`, `Plot=@tdrdat@`, `Current=@plot@`, `Output=@log@`, intermediate FilePrefix=`n@node@_inter`; 12 left-side trap concentrations `@NtSide@` for SWB split `0` / `1e18`. Original physics/Math/RHSMin=1e-3, Iterations=15, Increment=1.2, endpoint=5 V retained.
+- par `sdevice.par` has SHA256 `60405755de61500d9815a8e9ecca6a7a465783d77eb8e5dadf1db515aeb10039`, same as recorded FAST_C1 parameter file.
+- Static substitutions/counts passed; **no SWB preprocess, SDE mesh, SDevice or comparison run yet**. Need actual Workbench mesh/preprocess check; do not call this confirmed numeric equivalent; preserve original full/fine reference.
+
 ## 2026-10-08 — Claude FAST_HALF_BULK_R15 package static audit by ChatGPT
 
 - 작업자: 이택규; 상태: REVIEWED / STATIC TEST PASS / SENTAURUS NOT RUN.

@@ -1,3 +1,11 @@
+## 2026-10-08 — Half-domain / injection sanity review (not an approved baseline change)
+
+- 작업자: 이택규 / Claude proposal reviewed by ChatGPT; 상태: REVIEWED / PROPOSED.
+- Baseline Node6 at 4.7128 V has I=2.8954e-12 A/um; under nominal 4 um lateral area, J≈7.24e-5 A/cm2. Arithmetic matches SDevice T-2022.03 2D-current convention, but low injection and high-bias IV require physical sanity check; no assertion of LED failure until terminal current composition, live input/contacts and existing TDR band/current/recombination are verified.
+- Half-domain has conditional symmetry rationale and may reduce degrees of freedom, but is NOT yet implemented or validated; current full/fine FAST_C1 remains reference. Do not co-change mesh and domain without isolating effects.
+- RhsMin L2 sqrt(2) argument is a model-dependent hypothesis; changing convergence threshold needs separate validation, not automatic adoption.
+- Existing A/B GO/NO-GO gates remain. Reference: LIVE LOG Issue #7 review dated 2026-10-08.
+
 ## 2026-10-07 — Project A/B production pre-run GO/NO-GO audit
 
 - 작업자: 주수빈

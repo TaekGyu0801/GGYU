@@ -1,3 +1,12 @@
+## 2026-10-08 — 주수빈 accelerated Half+coarse QS smoke deck prepared (PROPOSED)
+
+- Half+coarse SDE mesh actually built successfully; 138,194 elements, 65,513 points.
+- Current 0→0.3 V transient smoke is accepted but slow (~109.74s/step with ~90.20s linear solve).
+- Private SWB SDevice alternative generated: `sdevice_des_JUSUBIN_HALF_COARSE_QS_SMOKE.cmd`, SHA256 `a7281c79e7e440c6192726f4ce6edefb58f8d76ed30ec921900fee5ff5a5ec01`.
+- Steady QS anode 0→0.3 V; InitialStep=.03, MaxStep=.15, Increment=1.5, MinStep=1e-6, Decrement=2; original full device physics/traps and Math/ILS preserved.
+- Static syntax/region checks PASS, actual QS preprocess/run NOT DONE. Original full FAST_C1 reference untouched.
+- NEXT: user installs file in SWB after stopping only old Node2 smoke if desired; preprocess `pp2_des.cmd` and run QS 0.3V test.
+
 ## 2026-10-08 — cmp216 FAST_C1 test: apparent interruption, cause unresolved
 
 - OBSERVED (user shell outputs): separate `cmp216@ssudisu2` run in `~/FAST_C1_ACCOUNT_TEST`. Last accepted Node6 0.9534 V; next BE-step logged header only. Log last modified Oct 7 17:47; PLT Oct 7 17:45; no `n*_des.tdr` found; no active `cmp216` SDevice process on checked host.

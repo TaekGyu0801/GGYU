@@ -1109,3 +1109,11 @@
 - 다음 확인: `ls -la ~`; `find ~ -maxdepth 6 -type f -name 'n*_des.log' -print |& head -n 30` (C-shell 호환); 필요 시 SWB GUI에서 열린 프로젝트 경로와 계산 호스트 확인.
 - 코드 수정, 실행 중지/재시작 없음.
 
+
+
+## 2026-10-08 cmp216 FAST_C1_ACCOUNT_TEST log check
+- OBSERVED (user terminal): directory FAST_C1_ACCOUNT_TEST exists in cmp216 home.
+- OBSERVED: n6_des.log found at FAST_C1_ACCOUNT_TEST/n6_des.log.
+- OBSERVED: no n*_des.tdr found with find from HOME to depth 6.
+- UNRESOLVED: node 6 run status; need tail of log and directory listing.
+- NEXT: ls -lhtr and tail -n 80 n6_des.log; do not restart yet.

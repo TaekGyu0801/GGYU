@@ -1,3 +1,11 @@
+## 2026-10-08 — Baseline uniform-layer doping physical validity review (PROPOSED VALIDATION)
+
+- 작업자: 주수빈; 사용자 제기: SVisual n1_msh screenshot에서 각 에피층의 DopingConcentration이 균일/step-like로 나타나 실제 MOCVD 성장 도핑 분포와 차이가 있는지 검증 필요.
+- OBSERVED: half+coarse mesh 화면 138,194 elements / 65,513 points, signed DopingConcentration color scale 약 -9.59e18~+5.00e18 cm^-3. 이미지 하나만으로 각 material/region의 정확한 입력 donor/acceptor concentration 및 depth profile을 확정할 수 없음.
+- REVIEW: piecewise constant intentional doping is a defensible idealized first-order epitaxial TCAD baseline; it is NOT a process-calibrated SIMS-like doping profile. Mg-doped p-GaN/EBL can exhibit memory/back-diffusion/transition profiles (see Bakhtiary-Noodeh et al., Journal of Crystal Growth 602 (2023) 126962, DOI 10.1016/j.jcrysgro.2022.126962; Gutt et al., Phys. Status Solidi C 8 (2011), DOI 10.1002/pssc.201001039).
+- UNRESOLVED: active local pp1_dvs.cmd / actual SDE doping placements and composition, region-level active dopants, p-Mg ionization/compensation, and depth cutline have not yet been directly audited in this chat. SVisual screenshot is not evidence of physical doping validation.
+- NEXT: read-only grep for sdedr:define-constant-profile/placement and analytic/erf doping directives in active SDE, compare NDonorActive/PDonorActive/MgActive with net DopingConcentration on depth cutline; verify baseline model assumptions/literature; then separate zero-change-reference sensitivity pilot only for plausible Mg transition at p-GaN/EBL/MQW boundaries. Do not change frozen Common Baseline or launch A/B DOE before pilot passes.
+
 ## 2026-10-08 — 주수빈 QS 0→0.3 V 성능 시험 SDevice 작성
 
 - 작업자: 주수빈; 상태: PROPOSED / STATIC PASS / SENTARUS NOT RUN.

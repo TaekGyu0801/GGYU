@@ -400,5 +400,34 @@
     "final_tdr_found": false,
     "status_note": "No basis yet to conclude interruption cause, remote job state, or high-bias speed gain",
     "next": "check launch mode, host process, login/session/job history; preserve files and semi437 reference run"
+  },
+  "acceleratedJuSubin": {
+    "status": "PROPOSED_QS_CODE_STATIC_PASS_SOLVER_NOT_RUN",
+    "worker": "주수빈",
+    "project": "/user/semi/semi437/tmp/myproject/JUSUBIN_FAST_HALF_SWB",
+    "halfMesh": {
+      "elements": 138194,
+      "points": 65513,
+      "status": "SDE_DONE"
+    },
+    "oldTransientSmoke": {
+      "node": 2,
+      "lastObservedAnodeV": 0.008302,
+      "acceptedStepWallclockS": 109.74,
+      "linearSolveS": 90.2,
+      "status": "RUNNING_AT_LAST_OBSERVATION"
+    },
+    "newQuasistationarySmoke": {
+      "anodeStartV": 0,
+      "anodeGoalV": 0.3,
+      "initialStep": 0.03,
+      "maxStep": 0.15,
+      "minStep": 0.000001,
+      "increment": 1.5,
+      "decrement": 2,
+      "codeSha256": "a7281c79e7e440c6192726f4ce6edefb58f8d76ed30ec921900fee5ff5a5ec01",
+      "status": "CODE_STATIC_PASS_UNTESTED"
+    },
+    "next": "Stop only old half transient Node2 if switching, back up source/output, install QS deck, SWB preprocess, run 0.3V QS smoke, compare wallclock and I-V"
   }
 }

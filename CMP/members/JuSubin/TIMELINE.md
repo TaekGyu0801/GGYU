@@ -1,3 +1,24 @@
+## 2026-10-08 — 주수빈 독립 Half-domain branch 병렬 검증 결정
+
+- **작업자:** 주수빈
+- **상태:** DECISION / PROPOSED IMPLEMENTATION
+- 이택규의 `FAST_HALF_BULK_R15`은 half-domain + remote bulk mesh relaxation(BulkFac=1.5)을 동시에 적용한 가속 branch.
+- 주수빈은 중복 구현 대신 **pure half-domain branch**를 별도로 만들어 half-domain 효과만 분리 검증하기로 결정.
+- 주수빈 branch 원칙:
+  - full FAST_C1 물리/contacts/traps/vertical epitaxy 유지
+  - centerline symmetry cut만 적용
+  - physical sidewall 1개 + 5 nm damage 유지
+  - centerline에는 damage/trap 없음
+  - MQW/EBL/heterointerface/sidewall mesh는 원본과 동일
+  - remote bulk mesh도 첫 비교에서는 원본 유지
+  - Iterations=15, RHSMin=1e-3 유지
+  - 첫 비교에서는 numerical sweep policy도 C1과 동일하게 유지하여 half-domain 효과를 격리
+- 비교 후:
+  - pure half vs full reference equivalence 확인
+  - 이택규 half+bulk-coarse branch와 runtime/accuracy 비교
+  - 필요 시 validated pure half에 C2 Increment=1.05/checkpoint strategy를 추가한 통합 후보 생성
+- 최종 baseline은 정확도와 runtime이 모두 우수한 branch 하나로 freeze.
+
 ## 2026-10-07 — Project A/B multi-day pre-run completeness audit
 
 - **작성자:** ChatGPT

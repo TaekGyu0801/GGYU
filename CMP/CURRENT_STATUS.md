@@ -1,3 +1,10 @@
+## 2026-10-08 — 주수빈 Half+coarse QS performance test ready (PROPOSED)
+
+- Existing accelerated SDE half+selective-coarse mesh PASS: 138,194 elements / 65,513 points; SWB SDE done.
+- Half+coarse 0→0.3 V *Transient* smoke actually running/accepted at about 0.0083 V; one step wallclock 109.74 s (solve 90.20 s), so runtime blocker persists despite smaller mesh.
+- Separate `Quasistationary` 0→0.3 V test deck generated and statically audited PASS (SHA256 `a7281c79e7e440c6192726f4ce6edefb58f8d76ed30ec921900fee5ff5a5ec01`). Solver execution not started; correctness/runtime unverified.
+- New branch only; original full FAST_C1 reference protected. Next: old half-transient smoke clean stop/backup if switching → QS preprocess → QS short run → compare time/convergence/current.
+
 ## 2026-10-08 — cmp216 FAST_C1_ACCOUNT_TEST n6 logging stopped during new BE-step (OBSERVED / TERMINATION CAUSE UNRESOLVED)
 
 - cmp216 ssudisu2 cross-account Node6 test shows successful step at 0.9534V then `n6_des.log` ends after next BE-step iteration header; no normal termination/fatal/killed signature found in log. Log/PLT last modified Oct 7 ~17:47/17:45; current date Oct 8. Local `sdevice` process absent as separately observed. Status: **not currently progressing on checked host**, reason **UNRESOLVED** (session hangup/job termination/remote host etc not evidenced).

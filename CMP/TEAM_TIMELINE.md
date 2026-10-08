@@ -1,3 +1,10 @@
+## 2026-10-08 — 주수빈 Half+coarse SDevice QS 가속 시험 후보
+
+- 작업자: 주수빈; 상태: PROPOSED / CODE STATIC PASS; 런타임 미검증.
+- Half+coarse mesh (138,194 elements) 생성/visual gate 통과 후, SDevice Transient 0→0.3V smoke 한 step 약 109.74s 중 solve 약 90.20s를 관찰.
+- steady-state I-V/IQE 목적에 더 적합하고 adaptive step 수를 줄일 수 있는 Quasistationary 0→0.3V 별도 시험 deck 작성. 원래 Physics/Trap/Math/ILS 및 initial Poisson/Coupled 유지, QS ramp 설정만 신규.
+- 원본 full FAST_C1/Project A/B 기준 모델은 변경하지 않음. 짧은 smoke와 full-reference 동등성 시험 전 production 채택 금지.
+
 ## 2026-10-08 — Fast pilot direction: half-domain + relaxed remote bulk mesh
 
 - 작업자: 이택규; 상태: PROPOSED / NOT IMPLEMENTED.

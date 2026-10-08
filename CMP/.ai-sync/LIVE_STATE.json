@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-07",
+  "updated": "2026-10-08",
   "primaryWorker": "주수빈",
   "phase": "Phase 0 — Common Baseline completion + Project A/B pre-run implementation gate",
   "task": "Complete mandatory A/B pre-run gates before any multi-day production sweep",
@@ -383,5 +383,22 @@
       "pass Save/Load smoke",
       "run one representative Project A pilot and one Project B pilot"
     ]
+  },
+  "cmp216_account_test": {
+    "worker": "이택규",
+    "status": "OBSERVED_INTERRUPTED_ON_CHECKED_HOST_CAUSE_UNRESOLVED",
+    "source": "2026-10-08 user-shared shell output",
+    "host": "ssudisu2",
+    "home": "/user2/cmp/cmp216",
+    "dir": "FAST_C1_ACCOUNT_TEST",
+    "node": 6,
+    "last_accepted_anode_V": 0.9534,
+    "next_step_started_s": 0.190674,
+    "log_mtime": "2026-10-07 17:47 KST",
+    "run_end_signature": "none observed in supplied grep and tail",
+    "sdevice_on_checked_host": "not found in earlier cmp216 ps",
+    "final_tdr_found": false,
+    "status_note": "No basis yet to conclude interruption cause, remote job state, or high-bias speed gain",
+    "next": "check launch mode, host process, login/session/job history; preserve files and semi437 reference run"
   }
 }

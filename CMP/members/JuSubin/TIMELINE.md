@@ -1,3 +1,18 @@
+## 2026-10-08 — 주수빈 가속 Baseline 전략 수정: Half + selective mesh coarsening
+
+- **작업자:** 주수빈
+- **상태:** DECISION / SUPERSEDES PURE-HALF-ONLY PLAN
+- 목표를 순수 half-domain 효과 분리 실험이 아니라 **오늘 안에 최대한 빠르게 돌아가는 실용 accelerated Baseline 구축**으로 재정의.
+- 주수빈 branch도 독립적으로 **half-domain + selective mesh coarsening**을 동시에 적용.
+- centerline mirror half-domain, physical sidewall 1개 및 5 nm damaged region 유지, centerline에는 damage/trap/passivation 없음.
+- MQW, EBL, QW/barrier interfaces, 5 nm damage, depletion/high-field/contact-edge는 fine mesh 유지.
+- homogeneous remote n-GaN bulk와 numerical n-GaN base를 우선 coarsen.
+- 첫 후보: remote homogeneous n-GaN bulk 기존 spacing 대비 약 1.5~2x, numerical n-GaN base 약 2x. graded transition으로 급격한 mesh-size jump 방지.
+- physics/traps/materials/contacts/RHSMin=1e-3/Iterations=15 유지.
+- full reference 290,814 elements / 137,831 points 대비 mesh 감소와 runtime 측정.
+- short smoke equivalence 통과 후 C2 Increment=1.05 + true Save checkpoint 전략 결합.
+- publication/final adoption 전 full-vs-accelerated I/Vf/IQE/SRH/Rrad/RAuger/current-field equivalence 검증 필수.
+
 ## 2026-10-08 — 주수빈 독립 Half-domain branch 병렬 검증 결정
 
 - **작업자:** 주수빈

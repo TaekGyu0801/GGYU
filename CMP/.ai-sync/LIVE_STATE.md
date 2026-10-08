@@ -1,3 +1,10 @@
+## 2026-10-08 — cmp216 FAST_C1 test: apparent interruption, cause unresolved
+
+- OBSERVED (user shell outputs): separate `cmp216@ssudisu2` run in `~/FAST_C1_ACCOUNT_TEST`. Last accepted Node6 0.9534 V; next BE-step logged header only. Log last modified Oct 7 17:47; PLT Oct 7 17:45; no `n*_des.tdr` found; no active `cmp216` SDevice process on checked host.
+- `grep` search found license checkouts but no explicit fatal/killed/aborted/normal-completion marker.
+- UNRESOLVED: why the run stopped producing output, including login/session termination or process failure. Cross-account performance effect beyond low bias unverified.
+- NEXT: read-only process/session/job/launch history check; retain files and ongoing `semi437` references untouched.
+
 ## 2026-10-07 — Project A/B pre-run audit: Baseline parent OK; production A/B NO-GO until gates pass
 
 - 작업자: 주수빈

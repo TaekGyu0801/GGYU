@@ -1,3 +1,11 @@
+## 2026-10-08 — cmp216 FAST_C1 cross-account benchmark: local run apparently inactive near 0.9534 V
+
+- 작업자: 이택규; 상태: OBSERVED / TERMINATION CAUSE UNRESOLVED.
+- `cmp216@ssudisu2` in `~/FAST_C1_ACCOUNT_TEST`: last accepted Node6 anode voltage 0.9534 V at 2026-10-07 file mtime; next BE-step starts in `n6_des.log` but no completion shown in terminal tail.
+- `n6_des.log` last modified 2026-10-07 17:47, `n6_des.plt` 17:45; no local cmp216 `sdevice` process observed on ssudisu2 on Oct 8; no `n*_des.tdr` found.
+- Cannot identify interruption cause or conclude cross-account performance. Do not restart until output/status review; original `semi437` reference run is separate and must not be stopped.
+- Evidence: user supplied `ls -lhtr`, `tail -n 80 n6_des.log`, earlier `ps` output.
+
 ## 2026-10-07 — Project A/B production pre-run audit: Baseline parent OK, broad A/B run NO-GO
 
 - 작업자: 주수빈

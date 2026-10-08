@@ -1,3 +1,8 @@
+## 2026-10-08 — cmp216 FAST_C1_ACCOUNT_TEST n6 logging stopped during new BE-step (OBSERVED / TERMINATION CAUSE UNRESOLVED)
+
+- cmp216 ssudisu2 cross-account Node6 test shows successful step at 0.9534V then `n6_des.log` ends after next BE-step iteration header; no normal termination/fatal/killed signature found in log. Log/PLT last modified Oct 7 ~17:47/17:45; current date Oct 8. Local `sdevice` process absent as separately observed. Status: **not currently progressing on checked host**, reason **UNRESOLVED** (session hangup/job termination/remote host etc not evidenced).
+- No final TDR; cross-account runtime improvement cannot be confirmed at <1V. Verify process/session/job history before rerun.
+
 ## 2026-10-08 — cmp216 FAST_C1 cross-account benchmark: local run apparently inactive near 0.9534 V
 
 - 작업자: 이택규; 상태: OBSERVED / TERMINATION CAUSE UNRESOLVED.

@@ -1,3 +1,9 @@
+## 2026-10-08 — cmp216 FAST_C1_ACCOUNT_TEST n6 logging stopped during new BE-step (OBSERVED / TERMINATION CAUSE UNRESOLVED)
+
+- OBSERVED incomplete log, **not a confirmed software error**: next BE-step printed iteration header but no iterations; subsequent grep found no `fatal`, `killed`, `aborted`, `signal`, `good bye`, or `simulation finished` report. Earlier grep `license` shows successful checkout Oct 7 16:22.
+- Status UNRESOLVED: possible OS/session termination or other interruption requires evidence; do not assign root cause without exit code/system logs.
+- Next: review login history and launch method/job state on ssudisu2; preserve existing simulation files.
+
 ## 2026-10-04 — B0 CSV ratio check command quoting error under csh/tcsh
 
 - 작업자: 이택규

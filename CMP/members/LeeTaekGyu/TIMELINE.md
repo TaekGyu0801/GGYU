@@ -1,3 +1,12 @@
+## 2026-10-08 — TCAD official guides registered for future coding
+
+- 작업자: 이택규
+- 상태: OBSERVED / REFERENCE INDEX UPDATED
+- Uploaded `TCAD_GUIDELINE.zip` inspected: five Synopsys Sentaurus T-2022.03 User Guides (Device, Structure Editor, Mesh, Process, Visual).
+- ZIP and PDF SHA-256 identifiers, page counts, workflow, licensing/access constraints recorded in `CMP/references/TCAD_REFERENCE_INDEX.md`.
+- Future code work must consult the relevant original guide and verify against active preprocessed files and actual log; do not assume PDF bytes are accessible from a new chat just because the index exists.
+- No TCAD source or baseline physics modified; no simulation result asserted.
+
 ## 2026-10-07 — Cross-account FAST_C1 input identity confirmed
 
 - 작업자: 이택규

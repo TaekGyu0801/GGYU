@@ -1,3 +1,11 @@
+## 2026-10-08 — Fast pilot direction: half-domain + relaxed remote bulk mesh
+
+- 작업자: 이택규; 상태: PROPOSED / NOT IMPLEMENTED.
+- Time-constrained request: run a **separate experimental branch** applying both half-domain symmetry and modest remote bulk/numerical n-GaN coarsening to investigate runtime, without stopping existing FAST_C1 or changing frozen physical baseline parameters.
+- Must verify exact active SDE contacts/doping/geometry symmetry and retained-side 5nm physical damage; preserve MQW, EBL, heterointerfaces and damage/edge refinement; avoid changing tolerance/traps/polarization simultaneously.
+- One combined pilot provides feasibility data, not independent attribution of speedup. Requires SDE mesh review + actual preprocessed region/physics scope review + short solver smoke before longer run.
+- Exact active SDE/SDevice code is not publicly synced, so implementation pending obtaining originals. No simulation result yet.
+
 ## 2026-10-08 — First Node 6 QW local Probe observations (not emission validation complete)
 
 - 이택규 SVisual screenshots from `n6_inter_0004_des`: `Clean_QW1`–`Clean_QW4` are confirmed InGaN zones. Selected field is horizontally clipped (`...bination`); tentatively `RadiativeRecombination`, pending fully visible name confirmation.

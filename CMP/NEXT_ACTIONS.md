@@ -1,3 +1,11 @@
+## 2026-10-08 — 주수빈 accelerated Baseline QS smoke (PROPOSED)
+
+1. Keep original full FAST_C1 reference runs untouched. For JUSUBIN_FAST_HALF_SWB, capture current n2 transient smoke output and if switching, stop **only** the old Node2 job in SWB.
+2. Install private `sdevice_des_JUSUBIN_HALF_COARSE_QS_SMOKE.cmd` as `sdevice_des.cmd` after backup (QS anode 0→0.3 V; source SHA256 `a7281c79e7e440c6192726f4ce6edefb58f8d76ed30ec921900fee5ff5a5ec01`).
+3. SWB preprocess only; verify pp2_des.cmd has `Quasistationary(`, Goal=0.3, Grid=n1_msh.tdr, NtSide=0, no executable DmgR, RHSMin=1e-3, Iterations=15.
+4. Run QS 0.3V smoke; report normal completion, current consistency and wallclock. Source/static test does NOT guarantee convergence.
+5. Only if QS speed/convergence are favorable, design validated staged 0→5V QS candidate and compare against full transient reference at identical bias/current including sidewall/QW recombination and trap state. Do not presume QS/transient numerical equivalence for non-equilibrium effects.
+
 ## 2026-10-08 — cmp216 Node6 terminal/runtime diagnosis (READ ONLY)
 
 1. Verify process on current host (`ps -ef | grep '[s]device'`) and inspect relevant login history (`last -n 10 cmp216`); if SWB spawned remotely check its host/job details separately.

@@ -1,3 +1,9 @@
+## 2026-10-09 — CAL v1.2.0 private 9-file review archive created on server (OBSERVED)
+
+- Worker 이택규 ran shell in completed `JUSUBIN_FAST_HALF_5V_TEST`: `tar -czf ~/CMP_BASELINE_1.2.0_CAL_AUDIT.tar.gz sde_dvs.cmd sdevice_des.cmd FASTC1_pp6_des.par pp1_dvs.cmd pp2_des.cmd n1_msh.tdr n2_des.log n2_des.plt n2_des.tdr` and `ls -lh ~/CMP_BASELINE_1.2.0_CAL_AUDIT.tar.gz` returned 11 MB regular file dated Oct 9 23:05 at `/user/semi/semi437/CMP_BASELINE_1.2.0_CAL_AUDIT.tar.gz`.
+- OBSERVED: archive exists at reported server path; contents/integrity/hash and private bytes are not yet available to ChatGPT in this session. User needs to transfer archive securely and upload it in chat for actual code/results review. Tar operation did not edit existing source/output or launch simulation.
+- NEXT: review uploaded archive, verify actual material and current normalization, then plan independent `CMP_BASELINE_1.2.0_CAL` candidate and smoke tests. No new SWB project has been created.
+
 ## 2026-10-09 — Confirmed CMP semantic-version project naming; input inventory PASS (OBSERVED / DECISION)
 
 - Worker 이택규 explicitly adopted `CMP_<TYPE>_<MAJOR.MINOR.PATCH>_<TAG>` (no extra v/V1). Next proposal is `CMP_BASELINE_1.2.0_CAL`. Independent future types include PROJECTA/PROJECTB, each with own version lineage; NtSide is a run variable. Exact rules: `CMP/PROJECT_NAMING_CONVENTION.md`. This supersedes the earlier proposed `CMP_BASELINE_CAL_V1` name.

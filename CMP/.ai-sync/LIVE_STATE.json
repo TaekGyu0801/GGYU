@@ -846,7 +846,7 @@
       "mqwIntegratedRadiativeObserved": false,
       "iqeVerified": false,
       "modelCoefficientVerified": false,
-      "next": "Measure SRHRecombination and AugerRecombination in QW4 at same x/y and each other QW; validated full-region Rrad/SRH/Auger integrals required for IQE_rec; preserve original source.",
+      "next": "GUI test: uncheck Show Only Active Field in QW4 Probe and look for Rrad/SRH/Auger at same current point; fallback round x=0.24509 y=0.58322 and measure all fields anew with same returned coordinate and Clean_QW4 region",
       "cleanQw1ToQw4RegionLabelsObserved": true,
       "localQwProbes20261009": [
         {
@@ -894,14 +894,21 @@
         "coLocated": false,
         "ratioOrIQEValid": false,
         "next": "Probe SRH at exact earlier QW4 radiative x/y, then Auger at same point."
+      },
+      "probeAtPrecisionLimit20261009": {
+        "status": "USER_REPORTED",
+        "decimalPlacesApproximately": 5,
+        "preferredWorkaround": "Test Show Only Active Field unchecked in Probe panel at same point",
+        "fallback": "Re-probe Radiative, SRH, Auger all at x=0.24509 y=0.58322 z=0 and verify identical actual position and Clean_QW4 zone",
+        "uiChangeTested": false
       }
     }
   },
   "latestObservedEvent": {
     "date": "2026-10-09",
     "worker": "이택규",
-    "status": "OBSERVED_QW4_SRH_LOCAL_NON_COLOCATED_WITH_RRAD",
-    "source": "user uploaded SVisual Probe screenshot",
-    "event": "Clean_QW4(InGaN) srhRecombination 1.681637512936e22 at x=0.244864017914 y=0.599783903626; prior Rrad at different x/y; do not calculate local IQE/loss ratio."
+    "status": "OBSERVED_PROBE_AT_DECIMAL_PRECISION_LIMIT",
+    "source": "user statement that SVisual Probe At accepts at most 5 digits past decimal point",
+    "event": "Cannot type full QW4 12-decimal probe coordinate into Probe At; proposed test of Show Only Active Field unchecked or re-probe all fields at identical rounded coordinates."
   }
 }

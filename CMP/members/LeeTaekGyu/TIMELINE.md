@@ -1,3 +1,9 @@
+## 2026-10-09 — Semantic-version-style baseline project naming proposed (PROPOSED)
+
+- Worker 이택규 proposed software-style three-component versions (major.minor.patch) for CMP project names such as `CMP_BASELINE_1.2.1_CAL_V1` to make relative recency/change scale clear.
+- ChatGPT recommended a single version source `CMP_BASELINE_v<major>.<minor>.<patch>_<purpose>` instead of duplicate version fields (`1.2.1` plus `V1`). Examples only, not actual assigned release numbers: `CMP_BASELINE_v1.0.0_REF`, `CMP_BASELINE_v1.1.0_CAL`, `CMP_BASELINE_v1.1.1_CAL`; geometry/core physics changes -> major, validated new calibration/capability -> minor, nonphysical small correction -> patch. Any small code edit with scientifically significant result change must not be hidden under patch. NtSide0/1e18 denotes experiment configuration, not separate code version.
+- IMPORTANT: naming convention remains a proposal pending user confirmation; the existing golden v1.2 lineage should be mapped explicitly before assigning an actual next number. No SWB project renamed, no TCAD code changed, no solver launched.
+
 ## 2026-10-09 — New near-final CMP_BASELINE_CAL_V1 preparation selected (PROPOSED)
 
 - Worker: 이택규. User opted to keep the 12 MB pre5V backup unchanged and asked to prepare a new near-final baseline; permission granted to seek Claude review if helpful, but no Claude direct communication has occurred.

@@ -1,3 +1,8 @@
+## 2026-10-10 — CAL project SDE editor reports successful meshing (OBSERVED; SWB node/file gate pending)
+
+- Worker 이택규 supplied SDE GUI screenshot titled `n1_dvs.cmd - Sentaurus Structure Editor@ssudisu3 T-2022.03` for `CMP_BASELINE_1.2.0_CAL`. Scheme Commands pane visibly displays `Meshing successful`, `End Time: Sat Oct 10 00:11:50 2026` (Start 00:11:28), with half-device cross-sectional geometry displayed. This is direct evidence the SDE mesh-generation command returned success inside the editor, NOT proof that the SWB node status has turned DONE, exact `n1_msh.tdr` was emitted in intended project, or SDEVICE calculated 5V.
+- Next READ ONLY: `ls -lh /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/n1_msh.tdr` to check on-disk mesh and timestamp, then check SWB SDE node Done and preprocess SDEVICE, confirming effective 100ns InGaN from custom .par before the 5V run. Keep completed parent unchanged.
+
 ## 2026-10-10 — User defers SWB-native parameter migration; run current CAL pilot first (DECISION)
 
 - Worker 이택규 explicitly decided: for the **current** `CMP_BASELINE_1.2.0_CAL` candidate, keep its existing working input route `sdevice_des.cmd` File `Parameters="FASTC1_pp6_des.par"` and material-specific InGaN Scharfetter tau_max=1e-7s both carriers already added to that custom .par; **do not migrate now** to `sdevice.par` or `Parameters="@parameter@"`. The SWB-native standard copy/paste method is planned for the **next new device/project**.

@@ -1,3 +1,9 @@
+
+
+## 2026-10-09 — Filesystem copy exists; SWB open not yet checked
+- 이택규 executed `cp -a JUSUBIN_FAST_HALF_SWB JUSUBIN_FAST_HALF_5V_TEST`, subsequent ls confirmed target directory and `cmp` between original/copied SDevice source produced no differences.
+- Bash-style conditional produced `if: Expression Syntax.` in current C-shell-like terminal; standalone copy command worked.
+- Next verify original/copied hidden `.project` file and project directory content, then open copied project in SWB Projects browser; preserve original, do not run simulations or edit high-bias deck yet.
 ## 2026-10-09 Original Transient endpoint verified
 - 이택규 verified executable original Node2 Transient: FinalTime 0.06, Goal anode 0.3V, Inner Coupled Iterations 15. Header 0–4/4–5 V comments are stale for the smoke.
 - Original Transient 0.3V smoke complete; QS Copy failed at 0.019304636V. Neither proves the 3–5V LED baseline or full/fine equivalence.

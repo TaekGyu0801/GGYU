@@ -559,7 +559,12 @@
     "copied": "/user/semi/semi437/tmp/myproject/JUSUBIN_FAST_HALF_5V_TEST",
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
-    "swbRecognition": "PENDING_.project_HIDDEN_FILE_CHECK",
-    "next": "Check .project in original and copy; open copied project in SWB Projects browser before any new 5V simulation edits"
+    "swbRecognition": "PENDING_GUI_OPEN",
+    "next": "Open test copied project in existing SWB, verify project flow and working directory visually; no Run/F7 or source edits",
+    "projectMarkers": {
+      "original": ".project present, 0 bytes, Oct 8 16:58",
+      "testCopy": ".project present, 0 bytes, Oct 8 16:58",
+      "evidence": "User terminal ls -la on both project marker files"
+    }
   }
 }

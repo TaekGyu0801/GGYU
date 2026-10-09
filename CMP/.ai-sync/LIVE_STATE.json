@@ -560,7 +560,7 @@
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "Read sed -n '112,175p' pp2_des.cmd and sed -n '505,615p' pp2_des.cmd, then validate trap concentrations/all-region scope and bias ramp/hold. No code edits or rerun.",
+    "next": "CANCEL input-generation dialog in original SWB. Read-only compare active project file/parameter references and confirm preexisting custom FASTC1 .par, doping/mesh, effective materials and 2D J. New independent calibration clone only; short NtSide0 pilot, trap on, half-full checks after gates.",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
@@ -1317,9 +1317,9 @@
   "latestObservedEvent": {
     "date": "2026-10-09",
     "worker": "이택규",
-    "status": "OBSERVED_LIVE_PP2_REGION_IONIZATION_TRAPS_BE_TRANSIENT_DECLARATIONS",
-    "source": "user terminal sed pp2 lines 55-110 and grep for ionization/traps/BE/AreaFactor in pp2 and FASTC1 parameter file",
-    "event": "pp2 region-specific IncompleteIonization at lines 128/137, Traps at lines 141-361, Transient=BE at 515 and Transient( at 585. No AreaFactor or Quasistationary matched. Region trap concentration and incomplete ionization actual scope not yet checked; 5V transient finish is not steady-state proof."
+    "status": "OBSERVED_SWB_MISSING_PROJECT_SDEVICE_PAR_DIALOG_DISTINCT_FROM_FINISHED_5V_TEST",
+    "source": "SWB screenshot of original JUSUBIN_FAST_HALF_SWB and Synopsys Workbench manual; previous user n2_des.log and GitHub timeline",
+    "event": "Create Parameter File in original JUSUBIN_FAST_HALF_SWB shows missing sdevice.par and Silicon default, which is not proof 5V_TEST used Silicon. Choose Materials can generate copies from MaterialDB; must not overwrite custom FASTC1 parameters or regard GaN-only as sufficient for InGaN/AlGaN LED. Cancel original dialog; clone finished 5V_TEST for calibration."
   },
   "projectAFabricationFeasibility20261009": {
     "status": "PROPOSED_RESEARCH_ROUTE_COMPARISON_NOT_APPROVED",
@@ -1352,5 +1352,41 @@
       "https://doi.org/10.1016/j.jallcom.2021.163519"
     ],
     "next": "Research choice of chemical compensation vs implantation-damage isolation; compare post-mesa and pre-MQW process masks/thermal risks, then process-profile and controls. No change to current Baseline validation priority."
+  },
+  "swbParameterDialog20261009": {
+    "status": "OBSERVED_GUI_NO_FILE_CREATED_BY_ASSISTANT",
+    "project": "JUSUBIN_FAST_HALF_SWB",
+    "distinctFromCompleted": "JUSUBIN_FAST_HALF_5V_TEST",
+    "missingFile": "sdevice.par",
+    "defaultRadio": "Silicon",
+    "options": [
+      "Silicon",
+      "Choose Materials",
+      "Create Empty File"
+    ],
+    "critical": "Silicon selected is only parameter template default, not demonstrated Si applied to finished 5V_TEST",
+    "documentation": "Sentaurus Workbench User Guide N-2017.09 pages 65-68",
+    "materialCandidatesForNewSeparateCopy": [
+      "GaN",
+      "InGaN",
+      "AlGaN",
+      "Nitride"
+    ],
+    "donot": "Do not click OK with Silicon in original SWB, do not modify running/reference baseline",
+    "workNeeded": "Determine source File Parameters, custom FASTC1_pp6_des.par, exact mesh material names, sdevice.par precedence; only then generate/merge chosen materials in independent clone."
+  },
+  "juSubinPendingValidationAsOf20261009": {
+    "source": "2026-10-08 JuSubin TIMELINE + 2026-10-09 TaekGyu subsequent runs",
+    "doping": "UNVERIFIED Mg p-GaN and n-GaN profiles",
+    "halfCoarse": {
+      "elements": 138194,
+      "points": 65513,
+      "fullReferenceElements": 290814,
+      "equivalence": "UNVERIFIED"
+    },
+    "qs0p3V": "FAILED_at_0.019304636V_on_2026-10-09",
+    "sidewallTrapOn": "NtSide1e18_UNVERIFIED_IN_HALF_COARSE",
+    "sidewallTrapOff": "NtSide0_5V_NORMAL_FINISH_AND_4QW_RECOMB_INTEGRALS_COMPLETED",
+    "C2SaveLoad": "PENDING_SMOKE_VALIDATION"
   }
 }

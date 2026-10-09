@@ -875,3 +875,9 @@ The original synchronized SDevice2 deck contains `SRHRecombination`; the fact th
 2. Extract total wallclock/runtime and I-V points from the completed half+coarse transient.
 3. Check the `JUSUBIN_FAST_HALF_SWB_Copy` QS smoke status/result separately.
 4. Compare Half+coarse transient vs QS Copy, then against full FAST_C1 reference before adopting the fast branch for production A/B.
+
+
+## 2026-10-09 — QS Copy early termination verified; original transient complete
+- Original `JUSUBIN_FAST_HALF_SWB` transient: CONFIRMED 0.300 V trace completion, 25019.43 s, 412K PLT / 15M TDR / 3.1M SAV. 0.3 V I-V examined but physically validated baseline not yet established.
+- Separate `JUSUBIN_FAST_HALF_SWB_Copy` QS: UNRESOLVED — SDevice `Step-size less than MinStep (step-size = 8.3986e-07)`; 18417.09 s and `Good Bye`, SAV/TDR written. Goal 0.3 V NOT confirmed. No comparable QS speedup conclusion.
+- Next: QS n2_des.plt last accepted anode bias + last log step/retries/err; do not modify baseline or solver yet.

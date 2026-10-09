@@ -1184,3 +1184,9 @@
 - 이 보고로 Half+coarse transient branch는 "running"에서 "completion reported" 상태로 이동.
 - 단, 최종 bias 도달, fatal/error 부재, 산출물 존재, elapsed time, I-V/IQE 유효성은 아직 로그로 재확인하지 않았으므로 CONFIRMED로 승격하지 않음.
 - 다음: project terminal에서 n2_des.log/out/err와 최종 .plt/.tdr 존재를 확인하고, final 0.3 V 도달/normal termination/accepted final step을 검증. 그 후 QS Copy 결과와 runtime·I-V를 비교하고 full FAST_C1 reference 대비 half+coarse validation을 진행.
+
+
+## 2026-10-09 — JuSubin Half transient completion verified; QS Copy early stop
+- 이택규가 `JUSUBIN_FAST_HALF_SWB` n2의 0.3 V 정상 종료, wallclock 25019.43 s, PLT/TDR/SAV 생성 및 0.3 V 전류 성분을 확인함.
+- 주수빈의 별도 `JUSUBIN_FAST_HALF_SWB_Copy` QS n2 로그: `Step-size less than MinStep (step-size = 8.3986e-07)`로 수렴 중단; 18417.09 s; SAV/TDR 저장과 SDevice 종료는 확인되나 0.3 V 도달 미확인.
+- QS가 더 빨랐다는 성능 해석 불가. 다음: QS PLT의 최종 수렴 전압과 로그 cutback/solver 오류 파악, Common Baseline 변경 보류.

@@ -1,3 +1,11 @@
+## 2026-10-10 — CAL 1.2.0 parent 5V run independently audited (OBSERVED/DERIVED)
+
+- Source: private user-uploaded 9-file archive; detailed nonproprietary results in `CMP/reviews/BASELINE_1_2_0_CAL_AUDIT_20261010.md`. 5V_TEST NtSide0 reached 5V, normal SDevice finish 10596.76s; new CAL 1.2.0 project NOT CREATED or run.
+- **Physical fields**: Clean/DmgL QW1-4 TDR Rrad/(np)=2e-10 cm3/s, Auger/[np(n+p)]=1e-30 cm6/s, SRH(n+p)/(np)=1e9 s-1 (tau=1ns), exact up to floating-point precision. Prior four-QW radiative 0.1094748% = simulated recombination share, not calibrated IQE. Mg effective -DopingConcentration is 9.59e18*ionization occupancy (max occupancy ~3.1286%) despite raw-looking MgMinus field, verifying numerical region incomplete ionization.
+- **Execution discrepancy:** comments claim 4/4.5/4.8V checkpoints and 1.05 high-V increment; actual Source/pp2 only 5V Save and a single 1.2 Increment ramp, with no intermediate spatial Plot schedule. Next long CAL branch must correct documentation/output plan before launch.
+- Last raw 5V anode I=1.4480164608e-11; 2D width normalization, injection, alloy model calibration, 5V steady-state check and Full/Half equivalence remain open. A/B production remains NO-GO.
+- NEXT: exact InGaN.par Scharfetter / material override syntax -> independent evidence-backed SRH-lifetime sensitivity branch (100ns from published distinct device is a trial, not experimentally validated fit) -> short smoke -> NtSide0 then 1e18 comparisons.
+
 ## 2026-10-08 — 주수빈 Half+coarse QS performance test ready (PROPOSED)
 
 - Existing accelerated SDE half+selective-coarse mesh PASS: 138,194 elements / 65,513 points; SWB SDE done.

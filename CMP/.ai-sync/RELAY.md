@@ -1,3 +1,11 @@
+## 2026-10-09 — User temporarily shifts from TCAD operations to conceptual Project A study (이택규)
+- User says interactive TCAD unavailable; asks if 5V Half/Coarse Test is Baseline and whether Project A Carbon is implanted. **Do not assume existing SWB Node2 5V process stopped**; no fresh log.
+- Answer: 5V completion necessary but not sufficient. NtSide=0 is pristine/trap-off control; nominal damaged baseline NtSide=1e18 required, plus full-vs-half/coarse equivalence, matched-current I-V/SRH/Rrad/RAuger/IQE/current-crowding, current normalization.
+- Verified protocol: CMP/PROJECT_AB_PRE_RUN_AUDIT.md section 4 defines `Cedge_L/R` GaN immediately inside 5nm damage, first location upper nGaN beneath MQW, with carbon deep acceptor/compensation and carbon-off null control. Stage1 is **device-level carbon mechanism screen**, not SProcess implantation. Physical C implantation is only potential later process path; may add damage and activation issues, not yet chosen. Hypothesized reduced sidewall recombination/IQE benefit remains unproven.
+- Next: explain mechanism and implantation/profile distinctions; when TCAD accessible, inspect live 5V Node2 log and preserve the running project.
+
+---
+
 ## 2026-10-09 11:33 KST — Copied Half 5V Node2 submitted/running in SWB
 - OBSERVED SWB Project Log screenshot for `JUSUBIN_FAST_HALF_5V_TEST`: preprocess initialized; Node2 submitted for local execution; ready -> pending -> running; SDevice job 2 started 11:33:14 Oct9 2026. This confirms startup only, not solver convergence, ongoing process, or 5V reached.
 - Preflight copy+readable archive, pp2 Goal5.0V/FinalTime1.0 and Grid/NtSide=0 previously passed. Other pp6 and pp12 running concurrently on same account.

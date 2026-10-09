@@ -1,3 +1,7 @@
+## 2026-10-10 — CAL SDevice user says Run pressed (REPORTED / NOT YET VERIFIED)
+
+- 이택규 reports SWB SDEVICE Run launched for separate `CMP_BASELINE_1.2.0_CAL` NtSide0; original parent 5V run ~2h56m36s, but new InGaN SRH Scharfetter tau_max=100ns trial may change convergence and time. No live solver log or job PID from this new run reviewed yet, so cannot assert active computation, actual 100ns applied or finish. Next: request new project's actual `n2_des.log` tail and SWB node running/failed status, then diagnose/monitor and extract 5V I(V), QW SRH/radiative/Auger. Scientifically CAL remains a parameter sensitivity trial, not physical final baseline.
+
 ## 2026-10-10 — CAL 1.2.0 InGaN 100ns .par edit observed on server; preprocess NOT done
 
 - 이택규 live `tail` confirms `CMP_BASELINE_1.2.0_CAL/FASTC1_pp6_des.par` now includes material-specific InGaN Scharfetter `taumax=1e-7,1e-7 s` plus other vendor default fields. This resolves the prior missing-override file-edit gate only.

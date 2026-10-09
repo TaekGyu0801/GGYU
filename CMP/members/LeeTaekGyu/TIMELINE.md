@@ -1255,3 +1255,9 @@
 - Both `.project` files exist, zero bytes, each mode `-rw-r--r--`, timestamp Oct 8 16:58; the 5V test is an actual copy with SDevice source previously compared identical.
 - This supports SWB project marker preservation, but SWB GUI successful open, flow nodes, and project paths are NOT yet confirmed.
 - Next: in existing SWB GUI locate/open `JUSUBIN_FAST_HALF_5V_TEST`, screenshot the project flow and verify independent folder before any source edits, preprocessing or Run/F7. Original smoke project remains preserved.
+
+
+## 2026-10-09 — New half 5V test project opened in SWB (user report)
+- 작업자: 이택규. OBSERVED from user statement: after `swb /user/semi/semi437/tmp/myproject/JUSUBIN_FAST_HALF_5V_TEST &`, user reports the copied project was created/opened.
+- GUI screenshot/node flow/path independent verification still pending. Original `JUSUBIN_FAST_HALF_SWB` left unchanged. No 5V code edit, preprocess or SDevice run confirmed.
+- Next: user sends full SWB screenshot showing copied project and SDE/SDevice nodes, then review code/step settings before launch.

@@ -1,3 +1,10 @@
+## 2026-10-10 — 이택규 decides current CAL run before SWB-native parameter migration
+
+- User instruction: first run the present separate `CMP_BASELINE_1.2.0_CAL` as configured: cloned SDE and SDevice; `sdevice_des.cmd:22 Parameters="FASTC1_pp6_des.par"` and the saved cloned custom .par already has `Material="InGaN" Scharfetter taumax=1e-7,1e-7`. Do not change to standard `sdevice.par/@parameter@` for this device; adopt professor-facing copy/paste layout for **subsequent** newly created devices. The immediate priority is testing present candidate.
+- No CAL SDE/SDEVICE job or preprocess completed on record. Next: run SDE mesh, verify its success, preprocess SDevice and prove actual material parameter input and solver recognition, then user can launch current 5V NtSide0 Transient-BE and provide log/results. Preserve original completed 5V_TEST and Full reference. CAL 100ns is a sensitivity run, not experimental fit.
+
+---
+
 ## 2026-10-10 — User requires professor reproducibility through SWB-native code+parameter editors
 
 이택규 live `grep` on cloned CAL SDEVICE: line22 `Parameters = "FASTC1_pp6_des.par"`, line68 `DefaultParametersFromFile`. This nonstandard direct filename means professors copying only SWB SDE/SDevice code would not necessarily have required GaN Mg and InGaN SRH overrides. Official Sentaurus SWB docs endorse common `sdevice.par` / `@parameter@` expansion with preprocessing. Plan **not yet executed**: first inspect any existing cloned `sdevice.par` (possibly default Silicon), then move actual custom blocks into it preserving originals and alter cloned SDevice File line to `Parameters="@parameter@"`; preprocess and verify `ppN_des.par` and effective log before any solver run. Presentation handoff requires three text inputs + NtSide and validation, not two files. Preserve finished reference, custom .par backup and parent result.

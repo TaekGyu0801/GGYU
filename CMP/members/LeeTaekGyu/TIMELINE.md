@@ -1,3 +1,8 @@
+## 2026-10-09 — Pre-5V backup archive exists, content not yet verified (OBSERVED)
+
+- 이택규 actual server shell `ls -lh /user/semi/semi437/tmp/myproject/JUSUBIN_FAST_HALF_5V_TEST_pre5V_20261009.tar*` returned `JUSUBIN_FAST_HALF_5V_TEST_pre5V_20261009.tar.gz`, 12 MB, Oct 9 11:25; this is outside the main project directory, not a SWB simulation node. Exact contents and independent recovery copy remain UNVERIFIED.
+- Before any deletion user should inspect safely with `tar -tzf ... | head -n 30` and decide whether archived pre-5V input is redundant; preserve completed 5V_TEST inputs/outputs and Full reference. No file deleted, modified or simulation launched.
+
 ## 2026-10-09 — User asks to clean pre5V archive and choose near-final next run (PROPOSED)
 
 - 이택규 screenshot shows SWB project `JUSUBIN_FAST_HALF_5V_TEST` and second entry text truncated `JUSUBIN_FAST_HALF_5V_TEST_pre5V_20261009.tar.g...`, likely a pre-5V `.tar.gz` backup archive, not another simulation node. Filename suffix, archive contents, storage redundancy not yet checked. Recommendation: do NOT delete until listing and a recovery copy are independently verified; use read-only `ls -lh .../JUSUBIN_FAST_HALF_5V_TEST_pre5V_20261009.tar*` first.

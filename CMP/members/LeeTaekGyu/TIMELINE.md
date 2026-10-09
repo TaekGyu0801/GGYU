@@ -1334,3 +1334,9 @@
 - Correct project title/path visible and scenario NtSide=0. This establishes SWB submitted/launched Node2 at the recorded instant, but DOES NOT establish process still alive, solver convergence, 5V reached, I-V or IQE. No new `n2_des.log` contents received since launch.
 - Preflight had verified pp2 Transient FinalTime=1.0 Goal anode=5.0V, Grid=n1_msh.tdr, 12 displayed Conc=0, RHSMin=1e-3, inner Coupled Iterations=15, and readable 12MB pre5V archive. Existing unrelated pp6 and pp12 SDevice jobs observed on the same account immediately prior.
 - NEXT: do not Clean Up Node or press F7 again. In copied test directory check `ps -fu semi437 | grep '[s]device'`, `ls -lh --full-time n2_des.log`, `tail -n 20 n2_des.log` to confirm fresh process/log and whether simulation is progressing. Avoid interrupting unrelated pp6/pp12 and original smoke/QS projects.
+
+
+## 2026-10-09 16:40 KST — 5V SDevice runtime estimate (INFERENCE; not a measured 5V duration)
+- 이택규 asked expected completion time for running `JUSUBIN_FAST_HALF_5V_TEST` 5V Transient, SWB Node2 launched at 11:33:14 on Oct9.
+- Earlier 0.3V smoke: FinalTime=0.06, MaxStep=1e-3, actual wallclock 25019.43s (6h56m59s). Copied 5V test: FinalTime=1.0, same MaxStep=1e-3; the ratio of minimum accepted steps is about 16.7x (60 -> 1000). Pure linear extrapolation yields ~116h = ~4.8-4.9 days, **NOT** a confirmed or reliable ETA. Offered rough multi-day planning range 3–7+ days with possibility of early convergence failure, and higher runtime given nonlinearity and concurrent pp6/pp12.
+- At 16:40 KST about 5h07m elapsed since SWB launch. Current actual 5V solver progress and ongoing job liveness UNVERIFIED; must inspect `tail -n 30 n2_des.log` in copied test before updating ETA, and confirm fresh log timestamp/current voltage. Do not invent completion date or claim guaranteed success.

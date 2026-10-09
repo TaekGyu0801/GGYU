@@ -1,3 +1,11 @@
+## 2026-10-09 — Full QW3 2D recombination integral completed; very low recombination share (이택규)
+
+- OBSERVED SVisual Clean_QW3 2D: SRH=5.841611e5, Auger=12.65704, earlier Radiative=265.711; DmgL_QW3 2D SRH=1655.249, Auger=0.05774334, Rad=0.526818; all s^-1 um^-1. Sum QW3 half-domain Rrad=266.237818; SRH=585816.349; Auger=12.71478334. Derived local-to-QW spatial-integrated recombination ratio Rrad/all = 0.0454256871% at 5V, NtSide=0. This is **QW3 only; device IQE unverified**.
+- Clean holds 99.717% of QW3 integrated SRH, so don't claim sidewall-specific trap caused low fraction; ordinary SRH physics is active and material parameter/current injection audit is pending.
+- NEXT: same verified 2D separate-region integrations for Clean/DmgL_QW1,2,4; verify materials radiative, SRH lifetimes and current unit. Keep baseline/code/results unchanged.
+
+---
+
 ## 2026-10-09 — QW3 full radiative 2D integration gate passed
 
 - 이택규 5V_TEST SVisual: Clean_QW3 integral 265.711, DmgL_QW3 integral 0.526818, sum 266.237818 [s^-1 um^-1]; respective domains 0.005985012 and 0.00001500002 um², summed 0.00600001202 um². Both verified as separate dimension-2 regions.

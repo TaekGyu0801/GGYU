@@ -1216,3 +1216,9 @@ Evidence: user Oct9 awk output and `sed -n '1,65p' pp2_des.cmd` plus `find . -ma
 4. Resolve 2D current units, effective AreaFactor, and appropriate full-mesa vs half-domain normalization before absolute J and matched-current comparison. Then nominal NtSide=1e18 baseline separate controlled branch; A/B production still NO-GO.
 
 Evidence: user's last-row DF-ISE awk and `cat FASTC1_pp6_des.par`, grep of executable `pp2_des.cmd`.
+
+## 2026-10-09 — Immediate QW-location gate after 5V SVisual Radiative map
+
+1. OBSERVED on `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`: `RadiativeRecombination` scalar colorbar max=7.483e19 and min≈-7.512e-34 cm^-3 s^-1, top thin layers colored and lower bulk near zero. This proves nonzero values exist in spatial output **somewhere**; not yet tied to any named InGaN Clean_QW region.
+2. SVisual GUI next (no computation change): keep scalar checked; use Data Selection `Regions` to locate `Clean_QW1`–`Clean_QW4`, zoom the upper active stack, and Probe one or more points per clean QW with region and full Radiative field label visible. Screenshot for reproducible source evidence.
+3. Subsequently compare SRHRecombination/AugerRecombination and carrier densities and integrate per-QW regions; confirm optical radiative coefficient source and full/half current normalization before quoting IQE or electroluminescence. Maintain NtSide=0 pristine status; A/B NO-GO.

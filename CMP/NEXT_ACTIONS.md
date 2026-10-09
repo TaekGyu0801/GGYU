@@ -1002,3 +1002,10 @@ Common Baseline Final 통과 후에만:
 5. Then apply selective coarsening only to remote homogeneous bulk.
 6. Compare full/fine vs half candidate: I-V/Vf, IQE, integrated SRH/Radiative/Auger, current normalization, e/h density, current density, E-field; Project B additionally lateral Ec/Ev barrier.
 7. If equivalent, use the half-domain model as the common production baseline for Baseline/A/B. Keep one full/fine model as publication/reference validation evidence.
+
+
+## 2026-10-09 11:30 KST priority
+1. Verify completed `JUSUBIN_FAST_HALF_SWB` terminal/log evidence: final 0.3 V, normal completion, no fatal/error, output files.
+2. Extract total wallclock/runtime and I-V points from the completed half+coarse transient.
+3. Check the `JUSUBIN_FAST_HALF_SWB_Copy` QS smoke status/result separately.
+4. Compare Half+coarse transient vs QS Copy, then against full FAST_C1 reference before adopting the fast branch for production A/B.

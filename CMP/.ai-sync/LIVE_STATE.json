@@ -1050,14 +1050,36 @@
         "augerSharePercent": 0.0037074571422995896
       },
       "note": "Only region-integrated QW4 recombination share, not whole-MQW IQE or EQE; physical injection/material audit still pending."
+    },
+    "qw2Integrals20261009": {
+      "clean": {
+        "rad": 83.3149,
+        "srh": 54645.76,
+        "auger": 1.736316,
+        "domainUm2": 0.005984982
+      },
+      "dmgL": {
+        "rad": 0.1672872,
+        "srh": 141.6049,
+        "auger": 0.003800247,
+        "domainUm2": 0.00001499994
+      },
+      "sum": {
+        "rad": 83.4821872,
+        "srh": 54787.3649,
+        "auger": 1.740116247,
+        "sharePct": 0.1521382378
+      },
+      "units": "s^-1 um^-1",
+      "status": "OBSERVED",
+      "next": "QW1 six standalone integrals, then four QW sum; inspect effective materials lifetimes and radiative coefficients."
     }
   },
   "latestObservedEvent": {
     "date": "2026-10-09",
     "worker": "이택규",
-    "source": "user Sentaurus Visual Field Integration screenshots for 5V_TEST clean and DmgL QW4",
-    "status": "OBSERVED_QW4_COMPLETE_2D_INTEGRAL_QW1_QW2_PENDING",
-    "event": "6 independent QW4 2D Clean and DmgL Rrad/SRH/Auger values, derived QW4-only radiative recombination share 0.1082525242%, not total MQW IQE."
+    "status": "OBSERVED_QW2_REGION_INTEGRALS_PHYSICS_GREP",
+    "event": "QW2 5V half clean+DmgL integrated Rrad 83.4821872, SRH 54787.3649, Auger 1.740116247 s^-1 um^-1. Derived QW2-only ratio 0.15213824%. DefaultParametersFromFile present; effective lifetime/material coefficients unverified. QW1 still needed."
   },
   "projectAFabricationFeasibility20261009": {
     "status": "PROPOSED_RESEARCH_ROUTE_COMPARISON_NOT_APPROVED",

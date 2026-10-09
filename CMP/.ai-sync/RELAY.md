@@ -1,3 +1,11 @@
+## 2026-10-09 — QW2 recombination integrals complete / default-parameters audit ongoing (LeeTaekGyu)
+
+- 5V_TEST NtSide=0 Half, SVisual Clean_QW2 Rad=83.3149, SRH=54645.76, Auger=1.736316 [s^-1 um^-1]; DmgL_QW2 Rad=0.1672872, SRH=141.6049, Auger=0.003800247. Sum QW2 Rrad=83.4821872, SRH=54787.3649, Auger=1.740116247, QW-only recombination radiative fraction 0.1521382378%. QW1 still missing; QW3 0.0454256871% and QW4 0.1082525242% known.
+- Read-only grep live pp2_des.cmd and FASTC1_pp6_des.par finds DefaultParametersFromFile and SRH/Auger/Radiative model declarations, but no explicit lifetime/radiative material coefficients or AreaFactor in these two files; verify effective material database and current units, no cause assigned.
+- NEXT: QW1 6 independent Clean/DmgL 2D integrations, full 4-QW summation; inspect physical effective parameters. Do not edit/rerun TCAD or call QW-only numbers device IQE.
+
+---
+
 ## 2026-10-09 — QW4 2D radiative/SRH/Auger integrals complete (이택규)
 
 - QW4 final 5V_TEST NtSide0 Half: independently integrated Clean (Rrad=38746.96, SRH=35617690, Auger=1327.983; area=0.005985012 um²) and DmgL (Rrad=98.768, SRH=226496.2, Auger=2.414354; area=0.00001500002 um²). SVisual integral units s^-1 um^-1.

@@ -1,3 +1,9 @@
+## 2026-10-10 — User priority: run current CAL first; defer native SWB parameter portability
+
+- Decision by 이택규: **do not change** current CAL `Parameters="FASTC1_pp6_des.par"` to `@parameter@` yet. Perform this migration in the next new device/project for professor-facing copy/paste reproducibility. Keep already saved cloned InGaN Scharfetter 100ns custom .par.
+- Immediate execute gate: in `CMP_BASELINE_1.2.0_CAL` single NtSide0 SWB experiment, run SDE to build mesh first (clone currently showed -- for tools); inspect SDE mesh/geometry success. Preprocess SDEVICE and confirm correct custom .par / InGaN lifetime override. Then run existing successful-style 0–5V Transient-BE (not failed QS), monitor convergence and verify actual log model coefficients. Existing 5V clone source is a FULL run, not a short smoke. No CAL run confirmed yet.
+- Next model versions may use standard SWB SDEVICE `sdevice.par` and `@parameter@` after checking its contents. Keep current completed parent and results unchanged, check very low 2D current/J & QW recombination, eventually same-current sidewall/Full-Half validation.
+
 ## 2026-10-10 — CAL parameter integration into standard SWB editors (PROPOSED)
 
 - For professor copy/paste reproducibility, migrate CAL cloned custom par into native `sdevice.par`, and cloned SDEVICE File entry to `Parameters="@parameter@"` only after inspecting any existing sdevice.par contents.

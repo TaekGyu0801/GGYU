@@ -1,3 +1,13 @@
+## 2026-10-09 — QS Copy MinStep blocker (Lee Taekgyu; ChatGPT)
+- Project: `/user/semi/semi437/tmp/myproject/JUSUBIN_FAST_HALF_SWB_Copy`; distinct from completed transient original.
+- User-shared `n2_des.log`: `Finished, because... Step-size less than MinStep (step-size = 8.3986e-07)`; SDevice final `Good Bye !`, save + plot written, 18417.09 s (5:06:57), max memory 2.96 GB.
+- Failure: QS goal 0.3 V NOT verified. Saved checkpoint is not convergence evidence.
+- Already tried: SWB Copy QS source and pp2 preprocess validated on Oct 8; QS SDevice actually ran. Original transient reached 0.3 V normally in 25019.43 s.
+- First next: extract final accepted anode bias from QS `n2_des.plt` tail, cutback/step attempts in `n2_des.log`, and relevant `.err`; diagnose before changing solver settings.
+- Preserve: Common Baseline geometry/physics/traps, original transient & full reference results. Do not blindly reduce MinStep or claim QS speed gain.
+
+---
+
 ## 2026-10-06 — 이택규 → 주수빈/다음 작업자 인수인계
 
 오늘은 FAST_C1 Node 6(NtSide=0)·Node 12(NtSide=1e18)가 실제로 멈춘 게 아니라 high-bias에서 timestep을 키웠다가 Newton 실패 → 약 1/2 cutback → 다시 수렴하는 패턴 때문에 매우 느리다는 것을 로그로 확인했다. D1에서 linear solver maxit 문제가 아니라 RHS가 1e-3 바로 위에서 정체되는 timestep-dependent nonlinear bottleneck임을 확인했고, D2에서 Node 6은 accepted Newton max=4였지만 Node 12는 13·15 iteration에서 실제 accepted된 step이 있어 Claude가 제안했던 공통 C2 Iterations=8/10은 폐기했다. 따라서 첫 공통 FAST_C2는 Iterations=15를 유지하고, high-bias Increment만 1.2→1.05로 낮추는 방향으로 간다. D3에서 live .plt로 I(V)를 뽑았고, provisional J는 아직 너무 낮아 '5 V 대신 current-density window에서 분석 종료' 결정은 보류했다. D6에서는 기존 n6_inter_0004_des.tdr을 Load해보았지만 'contains no SLP information'으로 실패해, 현재 C1 intermediate TDR로 restart하는 Option 3은 폐기했다. Node 6/12 기존 run은 reference로 계속 유지하는 것이 원칙이다.

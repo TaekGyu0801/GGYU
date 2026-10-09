@@ -1,3 +1,8 @@
+## 2026-10-10 — User closes session and applies version policy to both researchers (DECISION)
+
+- 이택규 ended today's work and explicitly requested that **주수빈 also use the CMP semver naming convention for all newly created projects and versioned released files** in future. Confirmed `CMP_<TYPE>_<MAJOR.MINOR.PATCH>_<TAG>` and made shared policy mandatory in PROJECT_NAMING_CONVENTION.md/AGENTS.md, plus RELAY and team timeline. Existing project names and SWB native filenames stay intact.
+- Current CAL SDevice 5V was user-reported launched; no new progress/log/completion checked. No school-server or SDevice changes made during this request.
+
 ## 2026-10-10 — Worker authorizes direct 5V CAL sensitivity run, skipping additional short smoke (DECISION / NOT YET LAUNCHED)
 
 - Worker 이택규 explicitly requests starting the already prepared `CMP_BASELINE_1.2.0_CAL` at 5 V now rather than further serial verification. Assistant agrees it is defensible as an **exploratory 100ns InGaN SRH sensitivity trial**, NOT publication-grade certified baseline.

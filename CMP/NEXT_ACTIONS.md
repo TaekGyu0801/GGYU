@@ -1312,3 +1312,9 @@ Evidence: user's last-row DF-ISE awk and `cat FASTC1_pp6_des.par`, grep of execu
 - OBSERVED from 6 distinct 2D field-region values: Clean_QW4 Rad=38746.96, SRH=35617690, Auger=1327.983; DmgL_QW4 Rad=98.768, SRH=226496.2, Auger=2.414354 [s^-1 um^-1]. Combined QW4 Rad=38845.728, SRH=35844186.2, Auger=1330.397354, fraction IQE_rec,QW4=0.1082525242% **QW4 only**. QW3 previously 0.0454256871%.
 - NEXT: QW1 and QW2 six standalone-region (Clean and DmgL) 2D integrals each; then sum all 4 wells and calculate whole-MQW recombination ratio. Keep separate field Domain verification; do not use plus-named interfaces as 2D regions.
 - Critical before final Baseline: effective SRH/radiative parameters, current-density normalization, physical injection/transient state, half/coarse vs full/fine and nominal NtSide1e18 damaged sidewall comparison. Preserve existing SDevice files and results.
+
+## 2026-10-09 — After QW2 clean/edge full 2D integrations and pp2 model grep
+
+- QW2 full 2D Half-domain: Clean [Rad=83.3149, SRH=54645.76, Auger=1.736316] + DmgL [Rad=0.1672872, SRH=141.6049, Auger=0.003800247], [s^-1 um^-1]. QW2 sum: Rrad 83.4821872; SRH 54787.3649; Auger 1.740116247; `IQE_rec,QW2 = 0.1521382378%`. Together with QW3 0.0454256871%, QW4 0.1082525242% these are independent *QW-only* ratios; QW1 missing.
+- Immediate read-only next: SVisual `n2_des` standalone 2D `Clean_QW1` and `DmgL_QW1` Rrad, SRH, Auger integrals; record six values and Domains, then full four-well recombination-based IQE as ratio of summed integrals. Do not average QW efficiencies.
+- Active physics grep: pp2:68 DefaultParametersFromFile; pp2:80 SRH(), :82 Auger(), :84 Radiative; no explicit Tau/Lifetime/coeff/AreaFactor in pp2_des.cmd and FASTC1_pp6_des.par. Material database and effective parameter sources need checking; 2D terminal current normalization and injection must be verified *before* final baseline / IQE interpretation. No edit/restart needed.

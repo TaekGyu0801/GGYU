@@ -503,7 +503,7 @@
   },
   "qsTransientComparison20261009": {
     "worker": "이택규",
-    "status": "OBSERVED_PARTIAL_CONFIGURATION_COMPARE",
+    "status": "OBSERVED_ORIGINAL_GOAL_CONFIRMED",
     "sharedControls": {
       "ErrRefElectron": 10000,
       "ErrRefHole": 10000,
@@ -536,7 +536,20 @@
       "Step controls expressed in different virtual/physical parameterization are not directly comparable",
       "Full physical model equivalence, precise original Goal block and Decrement not yet audited"
     ],
-    "commentDiscrepancy": "Original preprocessed header comments mention 0-4V and 4-5V but runtime was confirmed at 0.3V; inspect original executable Goal lines rather than trust comments",
-    "nextAction": "Read original transient pp2_des.cmd lines 583-615 and verify Goal and step configuration; no edits yet"
+    "commentDiscrepancy": "RESOLVED",
+    "nextAction": "Read original transient pp2_des.cmd lines 583-615 and verify Goal and step configuration; no edits yet",
+    "originalTransientExecutableBlock": {
+      "InitialTime": 0,
+      "FinalTime": 0.06,
+      "InitialStep": 0.00001,
+      "MinStep": 1e-9,
+      "MaxStep": 0.001,
+      "Increment": 1.2,
+      "GoalAnodeV": 0.3,
+      "CoupledIterations": 15,
+      "postSolveSavePrefix": "n2_smoke_ckpt_0p3V"
+    },
+    "originalHeaderComments": "Stale for n2 smoke: header describes 0–4/4–5 V but actual executable Goal=0.3 V",
+    "recommendedNext": "Preserve original smoke/QS Copy; audit source and prepare separate forward-bias 3–5 V transient candidate with preflight and comparison gates, not automatic launch."
   }
 }

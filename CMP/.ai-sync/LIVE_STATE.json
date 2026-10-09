@@ -1462,7 +1462,7 @@
     "date": "2026-10-09",
     "worker": "이택규",
     "name": "CMP_BASELINE_1.2.0_CAL",
-    "status": "PROPOSED_NOT_CREATED",
+    "status": "PARENT_AUDITED_CANDIDATE_NOT_RUN",
     "parent": "JUSUBIN_FAST_HALF_5V_TEST",
     "preserve": [
       "original 5V completed NtSide0 source and results",
@@ -1481,6 +1481,10 @@
     "noSolverRunYet": true,
     "namingConvention": "CMP/PROJECT_NAMING_CONVENTION.md",
     "namingConfirmedDate": "2026-10-09",
-    "fileInventory": "OBSERVED: all 9 candidate source/parameter/pp mesh/result files present in user shell; bytes not yet provided"
+    "fileInventory": "OBSERVED: all 9 candidate source/parameter/pp mesh/result files present in user shell; bytes not yet provided",
+    "sourceAudit": "CMP/reviews/BASELINE_1_2_0_CAL_AUDIT_20261010.md",
+    "recombinationFinding": "Effective 5V QW B=2e-10, Auger=1e-30, SRH lifetime=1ns validated from private TDR",
+    "mgFinding": "DopingConcentration tracks MgActive*occupation; numerical ionization verified",
+    "nextAction": "Inspect InGaN material SRH override syntax, then separate SRH-only sensitivity smoke"
   }
 }

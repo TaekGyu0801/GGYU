@@ -1,3 +1,11 @@
+## 2026-10-09 — 5V copied Half+Coarse SDevice finished; postprocessing/validation now first (이택규 / ChatGPT)
+
+- OBSERVED: user terminal `JUSUBIN_FAST_HALF_5V_TEST/n2_des.log` shows final anode 5.000 V, total current 1.448E-11 in output units, `Curve trace finished`, `Sentaurus Device simulation finished`, `Good Bye !` 2026-10-09 14:29:52 KST. Wallclock 10596.76 s, peak memory 2.97 GB. `n2_5V_ckpt_des.sav`, circuit checkpoint, `n2_des.tdr` written. No active pp2 in `ps`; pp6/pp12 references still observed.
+- This resolves the uncertainty about whether copied NtSide=0 Half/Coarse Node2 reached 5V. It does not validate emission/IQE, current normalization, NtSide=1e18 damaged baseline or full/fine equivalence; treat 5V test only as solver endpoint success.
+- NEXT FIRST: preserve Node2 outputs/checkpoints; review full `n2_des.plt` 0–5V trajectory and units, physical current/recombination; compare Full vs Half at equivalent bias and same current. Evaluate baseline gates before launching NtSide=1e18; A/B production NO-GO.
+- Do not: cleanup/rerun successful Node2, interrupt pp6/pp12, conclude physical speedup from old estimated ETA (measured runtime supersedes it), modify baseline geometry/trap/physics without review.
+
+---
 ## 2026-10-09 — User temporarily shifts from TCAD operations to conceptual Project A study (이택규)
 - User says interactive TCAD unavailable; asks if 5V Half/Coarse Test is Baseline and whether Project A Carbon is implanted. **Do not assume existing SWB Node2 5V process stopped**; no fresh log.
 - Answer: 5V completion necessary but not sufficient. NtSide=0 is pristine/trap-off control; nominal damaged baseline NtSide=1e18 required, plus full-vs-half/coarse equivalence, matched-current I-V/SRH/Rrad/RAuger/IQE/current-crowding, current normalization.

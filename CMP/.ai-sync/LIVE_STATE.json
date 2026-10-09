@@ -560,7 +560,7 @@
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "SVisual QW1/2/4 separate region Rrad/SRH/Auger integrations; establish full 4-QW ratio, audit SRH lifetimes and nonzero optical coefficients, matched-current full/fine and NtSide=1e18.",
+    "next": "First physical model/current-density audit (live pp2, material parameters and log) to explain low QW3 radiative share, in parallel remaining QW integrations. No code changes.",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
@@ -1008,14 +1008,29 @@
       },
       "wholeQw3IqeVerified": "recombination-based integrated QW3 ratio only; physical model validation and full-device IQE still pending",
       "fullDeviceIQEVerified": false
+    },
+    "physicalPlausibilityReview20261009": {
+      "status": "PENDING_CAUSAL_AUDIT",
+      "established": "At 5V NtSide0 half/coarse QW3-only recombination rate integral ratio 0.0454256871%; direct model shows positive local Rrad in all four QWs; no total-device IQE established.",
+      "cleanQw3IntegratedSrhSharePctApprox": 99.7174457,
+      "cleanQw3AreaSharePctApprox": 99.75,
+      "notDiagnosed": [
+        "low carrier injection/J normalization",
+        "QW hole/electron mismatch",
+        "effective GaN/InGaN SRH lifetime and radiative coefficient",
+        "polarization/QCSE and EBL confinement",
+        "transient versus steady-state",
+        "sidewall and vertical QW interface defects"
+      ],
+      "next": "Read actual pp2 SDevice Physics/Solve, material parameters, n2_des.log first; verify 2D current normalization, QW e/h distributions, then integrate all four wells. No source modifications."
     }
   },
   "latestObservedEvent": {
     "date": "2026-10-09",
     "worker": "이택규",
-    "source": "user two SVisual Field Integration screenshots for Clean_QW3 SRH and Auger plus previously recorded independent QW3 region integrals",
-    "status": "OBSERVED_QW3_ALL_RADIATIVE_SRH_AUGER_INTEGRALS_DERIVED_QW3_ONLY_RATIO",
-    "event": "Clean_QW3 SRH 584161.1 and Auger 12.65704 s^-1 um^-1, with known Rad 265.711; DmgL_QW3 known Rad 0.526818 SRH 1655.249 Auger 0.05774334. Full 2D Half QW3 rad 266.237818, SRH 585816.349, Auger 12.71478334. Derived QW3 0.0454256871% recombination-based fraction, not full-device IQE."
+    "source": "user discussion and previously recorded QW3 5V_TEST 2D integration + published sources",
+    "status": "PROPOSED_MODEL_PLAUSIBILITY_AUDIT_WITH_VERIFIED_QW3_INTEGRALS",
+    "event": "QW3 recombination-based radiative share 0.0454257% is very low but not device IQE or evidence of an invalid LED. NtSide0, Clean accounts ~99.717% of integrated QW3 SRH and ~99.75% of area. Need effective SRH/radiative physics and electrical injection verification before diagnosis."
   },
   "projectAFabricationFeasibility20261009": {
     "status": "PROPOSED_RESEARCH_ROUTE_COMPARISON_NOT_APPROVED",

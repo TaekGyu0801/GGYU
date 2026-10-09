@@ -1,3 +1,9 @@
+## 2026-10-10 — CAL clone parent-input SHA256 exact match (OBSERVED)
+
+- User terminal SHA256 in `CMP_BASELINE_1.2.0_CAL`: `sde_dvs.cmd` 4a30e922aade3c9ed576889598a0f6b7ef164d675f284470388f21d1f35458d5, `sdevice_des.cmd` 1a89149505d4556bfb7bed81bd5326a36dd173c8b7d298f83584c5b4921fae91, `FASTC1_pp6_des.par` 60405755de61500d9815a8e9ecca6a7a465783d77eb8e5dadf1db515aeb10039. GPT independently compared against exact private nine-file successful 5V parent archive and verified **all three hashes identical**. Clone input provenance PASS; no new 100ns CAL parameter has yet been installed, preprocessed or simulated.
+- Private candidate ZIP re-inspected: `sde_dvs.cmd` unchanged, `sdevice_des.cmd` only comments updated, candidate `FASTC1_pp6_des.par` 981 bytes (SHA256 adfe81ab03b8f0ca84b09b9a4373fdc8e71f7a5faa00ce01a7c0b82b7fb2f1ad) adds InGaN Scharfetter tau_max 1e-7s for both carriers without changing GaN Mg/Lattice/Thermionic. Installing **only candidate .par in the new clone** is sufficient for the intended physics-only sensitivity; original zip file must be transferred from private chat to school server before this can happen.
+- Next: worker downloads ZIP from chat, transfers via secure SFTP to /user/semi/semi437/ and confirms the exact remote path and filename. Subsequently preserve original 283B cloned par as backup, extract only candidate par to cloned project, hash-check, preprocess, check material parameter application, and conduct short transient smoke before 5V. Do not overwrite completed JUSUBIN_FAST_HALF_5V_TEST or vendor MaterialDB.
+
 ## 2026-10-10 — New CAL SWB clone source files exist, candidate override not installed (OBSERVED)
 
 - 이택규 terminal `ls -lh` in new `/user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/`: sde_dvs.cmd 20K, sdevice_des.cmd 5.9K, FASTC1_pp6_des.par 283B, all timestamp Oct 9 23:35.

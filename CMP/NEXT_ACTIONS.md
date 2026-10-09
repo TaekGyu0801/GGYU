@@ -1274,3 +1274,10 @@ Evidence: user's last-row DF-ISE awk and `cat FASTC1_pp6_des.par`, grep of execu
 2. **Do NOT rely on `Clean_QW3+DmgL_QW3` as a combined 2D volume/area; likely a lower-dimensional interface label.** Locate independent `DmgL_QW3` row in Regions list, select only this, press Start Integration. Verify output lists `DmgL_QW3` under Regions of Dimension 2, capture Integral and Domain. Add independent integrals from Clean_QW3 and DmgL_QW3 after confirming nonoverlap, rather than double-counting or trusting selection highlight.
 3. For each QW1..4 integrate exact bulk Clean_QW + separate DmgL_QW (in full model add DmgR_QW), for Rrad, SRH, Auger, then compute IQE_rec from sums of like-normalized integrals. Record SVisual units per um depth; verify 2D thickness and current normalization for physical optical totals.
 4. No SDE/SDevice rerun or cleanup. Correct prior log saying '+' item represented combined region; label remains UNRESOLVED pending dimensional confirmation.
+
+## 2026-10-09 — After full QW3 Half-domain Radiative integral (OBSERVED)
+
+1. User verified standalone 2D `DmgL_QW3` Rrad Integral=0.526818 [s^-1 um^-1], domain 0.00001500002 um²; prior standalone `Clean_QW3`=265.711 [s^-1 um^-1], domain 0.005985012 um². **Sum full QW3 half-domain Rrad=266.237818 [s^-1 um^-1]**, area=0.00600001202 um². This is integrated radiative only, not IQE.
+2. Next read-only SVisual integration: field `srhRecombination`; integrate both *standalone* `Clean_QW3` and `DmgL_QW3` as two separate 2D regions, confirm each output line and Total Integral/Domain. Same process with `AugerRecombination`.
+3. Repeat all three rates for QW1/QW2/QW4 using standalone Clean and DmgL. Compute `IQE_rec = ΣRrad_integral/(ΣRrad+ΣRSRH+ΣRAuger)` from consistent 2D normalized integrals; do NOT average probe ratios. Then validate absolute out-of-plane normalization, NtSide=1e18 and full/fine comparison.
+4. Preserve finished Node2 results and original simulations. Avoid selecting plus-named interface instead of 2D Dmg region.

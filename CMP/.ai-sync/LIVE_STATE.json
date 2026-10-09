@@ -560,7 +560,7 @@
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "Back up copied SDevice source, apply only to independent 5V_TEST if user approves, SWB preprocess and inspect generated pp2 before any 5V run",
+    "next": "In copied SWB select SDevice Node 2, Ctrl+P only, then grep preprocessed pp2_des.cmd for Transient, FinalTime, Voltage and FilePrefix. Do not F7 yet.",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
@@ -594,6 +594,19 @@
       "FinalTime": 1,
       "SaveFilePrefix": "n@node@_5V_ckpt",
       "purpose": "Preserve old ramp voltage/time=5 in same Transient source"
-    }
+    },
+    "sourceEditedOnRemote": "OBSERVED_USER_TERMINAL_GREP",
+    "remoteSourcePath": "/user/semi/semi437/tmp/myproject/JUSUBIN_FAST_HALF_5V_TEST/sdevice_des.cmd",
+    "backupCommandExecuted": true,
+    "backupFilename": "sdevice_des_0p3V_backup.cmd",
+    "observedEditedParameters": {
+      "FinalTime": 1,
+      "GoalAnodeV": 5,
+      "SaveFilePrefix": "n@node@_5V_ckpt",
+      "InitialAnodeAndCathodeVoltage": 0
+    },
+    "sourceSyncedToGitHub": false,
+    "preprocessStatus": "PENDING",
+    "simulationRunStatus": "NOT_LAUNCHED"
   }
 }

@@ -1,3 +1,11 @@
+## 2026-10-09 — 5V Half SWB preflight done, archive integrity pending (이택규)
+- OBSERVED user terminal: copied `JUSUBIN_FAST_HALF_5V_TEST` 12M snapshot archive `../JUSUBIN_FAST_HALF_5V_TEST_pre5V_20261009.tar.gz` exists (Oct9 11:25); `tar -tzf` integrity test not yet run.
+- Executable pp2: `Grid=n1_msh.tdr`, 12 printed `Conc=0` entries, RHSMin=1e-3, Coupled iterations startup=500/100, sweep=15. Prior pp2 confirmed Transient FinalTime=1.0 Goal anode=5.0 Save=n2_5V_ckpt. No 5V run observed yet.
+- First next: `tar -tzf ../JUSUBIN_FAST_HALF_5V_TEST_pre5V_20261009.tar.gz > /dev/null` and C-shell `echo $status` expecting 0; launch only copied SWB SDevice Node2 after that; inspect fresh n2 log/error. Never claim completed simulation until 5V trace and physical outputs are checked.
+- Keep original 0.3V project/outputs and separate failed QS Copy unchanged. Do not use inherited copied n2 files as evidence for 5V.
+
+---
+
 ## 2026-10-09 — 5V copied half SDevice source edited (이택규 / ChatGPT)
 - OBSERVED user terminal in `JUSUBIN_FAST_HALF_5V_TEST`: original source backup command executed, then sed replaced Transient FinalTime 0.06->1.0, Goal anode 0.3->5.0, Save prefix from smoke 0p3V to 5V. Grep returned edited lines 587, 597, 608 and untouched initial electrodes 0V at 38/43.
 - Actual changed source is on remote semi437, NOT uploaded as full GitHub source. New 5V run not started. Existing original 0.3V smoke and separate QS Copy remain protected.

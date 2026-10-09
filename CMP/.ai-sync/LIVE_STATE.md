@@ -1,3 +1,9 @@
+## 2026-10-10 — CAL 1.2.0 InGaN 100ns .par edit observed on server; preprocess NOT done
+
+- 이택규 live `tail` confirms `CMP_BASELINE_1.2.0_CAL/FASTC1_pp6_des.par` now includes material-specific InGaN Scharfetter `taumax=1e-7,1e-7 s` plus other vendor default fields. This resolves the prior missing-override file-edit gate only.
+- Input provenance: SDE/SDevice remain cloned from successful NtSide0 5V parent (previous SHA256 match). The SDevice source explicitly points to custom `FASTC1_pp6_des.par`, not auto-generated `sdevice.par`. No cloned SDE mesh, SDevice preprocess, or CAL numerical run has been verified.
+- NEXT: read-only verify parameter path in cloned SDevice source; SWB preprocess and inspect model parse/effective 100ns override; build separate true short Transient BE smoke before 5V candidate. Preserve original 5V parent.
+
 ## 2026-10-10 — CAL clone source parity confirmed (OBSERVED)
 
 - User checked three SHA256 hashes in new CMP_BASELINE_1.2.0_CAL. Each exactly matches independently audited successful 5V_TEST parent: SDE, SDevice, custom .par.

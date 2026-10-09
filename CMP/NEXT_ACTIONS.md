@@ -1,3 +1,9 @@
+## 2026-10-10 — CAL parameter integration into standard SWB editors (PROPOSED)
+
+- For professor copy/paste reproducibility, migrate CAL cloned custom par into native `sdevice.par`, and cloned SDEVICE File entry to `Parameters="@parameter@"` only after inspecting any existing sdevice.par contents.
+- Keep all custom GaN Mg, Thermionic, lattice and InGaN SRH blocks. Verify SWB preprocess ppN_des.par and effective models before short smoke; leave finished 5V parent untouched.
+- Presentation handoff must contain SDE, SDEVICE, parameter inputs plus NtSide run conditions. Nothing migrated yet.
+
 ## 2026-10-10 — Separate CAL candidate ZIP created; next SWB clone and smoke (ACTIVE)
 
 1. Download locally prepared private `CMP_BASELINE_1.2.0_CAL_INPUT_CANDIDATE.zip` via chat (only source + README; not on public GitHub). Static checked: SDE bytes identical to 5V_TEST parent; executable SDevice lines identical; GaN Mg/Lattice/Thermionic preserved; material InGaN Scharfetter tau_max electrons/holes changed to literature sensitivity 100ns. This zip is NOT an SWB importable project and is NOT Sentaurus-tested.

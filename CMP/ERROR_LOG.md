@@ -474,3 +474,13 @@ Next diagnostic:
 4. 필요 시 SVisual2를 실제 output filename에 맞춤
 
 Do not change baseline physics parameters while diagnosing this.
+
+
+## 2026-10-09 — QS Copy sweep stopped below minimum step (UNRESOLVED)
+
+- Work session: 이택규, inspecting JuSubin's separate `JUSUBIN_FAST_HALF_SWB_Copy` QS smoke.
+- Evidence (`n2_des.log` tail, user-provided): `Finished, because... Step-size less than MinStep (step-size = 8.3986e-07)`.
+- SDevice wrote `n2_qs0p3_ckpt_des.sav`, circuit `.sav`, and `n2_des.tdr`, then `Good Bye !` at 2026-10-09 00:28:10 KST; wallclock 18417.09 s (5:06:57), peak 2.96 GB.
+- Interpretation: QS sweep did not complete normally at goal; `Good Bye` and saves are not proof of reaching 0.3 V. Last accepted voltage/underlying Newton or cutback failure is **not yet verified**.
+- Contrast: original half+coarse transient reached 0.3 V, wallclock 25019.43 s. Run durations are NOT a valid speed benchmark with different end conditions.
+- Next: inspect QS last accepted anode bias in final `n2_des.plt` record, repeated rejected steps in `n2_des.log`, and the full `.err` output. Preserve both branches and Common Baseline before proposing solver changes.

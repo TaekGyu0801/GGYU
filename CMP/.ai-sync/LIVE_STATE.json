@@ -560,7 +560,7 @@
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "Check FASTC1_pp6_des.par and actual pp2_des.cmd Physics/Plot/AreaFactor; then analyze n2_des.tdr physical recombination and 2D current normalization",
+    "next": "Inspect 5V n2_des.tdr QW RadiativeRecombination numeric field and material radiative coefficient; no code changes or rerun.",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
@@ -799,13 +799,46 @@
       "parameterContentsInspected": false,
       "derivedConclusion": "Numerically complete sampled IV only; normal LED operation and IQE unverified",
       "next": "Inspect active parameter contents and Physics/Plot settings; confirm radiative coefficient and 2D current semantics before physical inference."
+    },
+    "postRunPhysicalGate20261009": {
+      "status": "OBSERVED_CURRENTS_AND_RECOMBINATION_CODE_ONLY",
+      "lastPlt": {
+        "time": 1,
+        "anodeVoltageV": 5,
+        "anodeDisplacementCurrentRaw": 3.29132361382365e-18,
+        "anodeElectronCurrentRaw": 2.78143237811134e-13,
+        "anodeHoleCurrentRaw": 1.42020180788235e-11,
+        "anodeTotalCurrentRaw": 1.44801646079583e-11
+      },
+      "declaredRecombination": [
+        "SRH",
+        "Auger",
+        "Radiative"
+      ],
+      "declaredPlot": [
+        "SRHRecombination",
+        "RadiativeRecombination",
+        "AugerRecombination",
+        "TotalRecombination"
+      ],
+      "parameterFile": "FASTC1_pp6_des.par",
+      "parameterContents": "LatticeParameters; Thermionic Formula=1; GaN pMagnesiumActiveConcentration Ionization; no explicit Radiative coefficient",
+      "effectiveMaterialRadiativeCoeffVerified": false,
+      "actualQwRradMeasured": false,
+      "areaFactorCheckedInFiles": [
+        "pp2_des.cmd",
+        "FASTC1_pp6_des.par"
+      ],
+      "areaFactorMatchFound": false,
+      "interpretation": "Terminal displacement minor at endpoint, anode hole dominated; does not establish MQW carrier injection or emitted light; zero/default/override material radiative coefficient unresolved",
+      "next": "Inspect final n2_des.tdr RadiativeRecombination values in Clean_QW regions and actual effective GaN/InGaN radiative parameters. Preserve outputs."
     }
   },
   "latestObservedEvent": {
     "date": "2026-10-09",
     "worker": "이택규",
-    "source": "user awk 17-field n2_des.plt, pp2_des.cmd and par listing",
-    "status": "OBSERVED_5V_IV_EXTRACTED_CURRENT_PHYSICS_PENDING",
-    "event": "Parsed 1023 full rows, 0-5V, raw anode final TotalCurrent 1.44801646079583E-11, located FASTC1_pp6_des.par parameter target. Emission and current normalization unresolved."
+    "source": "user n2_des.plt awk terminal + FASTC1_pp6_des.par full text + grep pp2_des.cmd",
+    "status": "OBSERVED_5V_CARRIER_CURRENT_AND_RECOMBINATION_DECLARATIONS",
+    "event": "Anode final total current 1.44801646079583e-11 raw, hole current 1.42020180788235e-11, eCurrent 2.78143237811134e-13, displacement 3.29132361382365e-18. Global SRH/Auger/Radiative declared and output fields requested; effective InGaN radiative parameter and QW recombination not yet measured."
   }
 }

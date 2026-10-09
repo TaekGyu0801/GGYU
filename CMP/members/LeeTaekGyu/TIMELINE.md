@@ -1,3 +1,9 @@
+## 2026-10-09 — Confirmed CMP semantic-version project naming; input inventory PASS (OBSERVED / DECISION)
+
+- Worker 이택규 explicitly adopted `CMP_<TYPE>_<MAJOR.MINOR.PATCH>_<TAG>` (no extra v/V1). Next proposal is `CMP_BASELINE_1.2.0_CAL`. Independent future types include PROJECTA/PROJECTB, each with own version lineage; NtSide is a run variable. Exact rules: `CMP/PROJECT_NAMING_CONVENTION.md`. This supersedes the earlier proposed `CMP_BASELINE_CAL_V1` name.
+- Actual user shell `ls -lh` in finished `JUSUBIN_FAST_HALF_5V_TEST` confirms all nine expected review artifacts exist: `sde_dvs.cmd` 20K, `sdevice_des.cmd` 5.9K, `FASTC1_pp6_des.par` 283B, `pp1_dvs.cmd` 20K, `pp2_des.cmd` 5.8K, `n1_msh.tdr` 1.6M, `n2_des.log` 1.2M, `n2_des.plt` 412K, `n2_des.tdr` 16M. File existence only; contents / exact revisions still require private package review.
+- Next: user privately transfers these files for inspection and comparison; no source edits, no SWB project creation/renaming and no TCAD jobs performed here. Original 5V project, pre5V archive and Full reference remain untouched.
+
 ## 2026-10-09 — Semantic-version-style baseline project naming proposed (PROPOSED)
 
 - Worker 이택규 proposed software-style three-component versions (major.minor.patch) for CMP project names such as `CMP_BASELINE_1.2.1_CAL_V1` to make relative recency/change scale clear.

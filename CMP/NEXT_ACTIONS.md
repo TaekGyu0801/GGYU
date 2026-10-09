@@ -1,3 +1,12 @@
+## 2026-10-09 — CMP_BASELINE_CAL_V1 near-final candidate preparation (이택규, PROPOSED)
+
+1. Do not delete or move the pre5V archive; user elected to retain it where it is. Preserve completed `JUSUBIN_FAST_HALF_5V_TEST` and full/fine FAST_C1 references.
+2. Obtain the actual `JUSUBIN_FAST_HALF_5V_TEST` private SDE/SDevice input, effective parameter files, preprocessed decks, completed `n2_des.log` and mesh using a private chat attachment (do not upload vendor decks to public GitHub). Verify filenames/existence before archiving.
+3. Read exact active physics/material mixing; verify effective InGaN SRH/Radiative/Auger parameters, current/AreaFactor convention, injection/QW carrier balance and 5V state. Continue MgMinus interpretation as an unresolved issue, not automatic proof of model failure.
+4. Design `CMP_BASELINE_CAL_V1` as a distinct branch, keeping the known 5V-convergent Half+Coarse geometry, existing Mg/EBL/nGaN and trap-off references; propose only evidence-backed minimum recombination/injection-related changes. Literature sensitivity results are not experimental calibration.
+5. Perform preprocess and short Transient-BE NtSide0 smoke, inspect current/recombination/numerical behavior, then run to 5V if passed. Repeat NtSide1e18 with identical calibrated physics and current conditions after trap-ON gate, maintaining same-current comparisons.
+6. Before publication-grade freeze, verify Full/Half+Coarse and mesh-convergence errors, 2D current normalization, extraction robustness and steady-state adequacy. Broad Project A/B production remains NO-GO until additional gates pass.
+
 ## 2026-10-08 — 주수빈 accelerated Baseline QS smoke (PROPOSED)
 
 1. Keep original full FAST_C1 reference runs untouched. For JUSUBIN_FAST_HALF_SWB, capture current n2 transient smoke output and if switching, stop **only** the old Node2 job in SWB.

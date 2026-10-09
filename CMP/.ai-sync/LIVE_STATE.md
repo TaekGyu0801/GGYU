@@ -1,3 +1,11 @@
+## 2026-10-10 — 5V parent code/HDF5 audit results (OBSERVED/DERIVED), CAL 1.2.0 NOT RUN
+
+- Worker 이택규 uploaded 9-file private archive; independent source/log/PLT/HDF5 review documented in `CMP/reviews/BASELINE_1_2_0_CAL_AUDIT_20261010.md`. 5V Transient finished normally (~2h56m36s), mesh 65513 vertices. Actual Solve was single 0–5 V Increment1.2, Save only at 5V; contrary to source comments about staged 1.05 and intermediate saves.
+- **Resolved computational Mg model check:** -DopingConcentration = MgActive*TrapOccupation_Mg per point across Clean/Dmg pGaN, max Mg occupancy ~3.1286% corresponding ~3.00033e17 effective acceptor. MgMinus raw-looking plot field should not be used alone to infer 100% ionization. This is numerical consistency, not physical calibration.
+- **New decisive recombination finding:** all 8 Clean/Dmg InGaN QW regions of n2_des.tdr obey Rrad/(np)=2e-10, RAuger/[np(n+p)]=1e-30, RSRH(n+p)/(np)=1e9/s (effective tau=1ns). The uncalibrated recombination physics is ACTIVE in actual solved result, not just parsed; four-well radiation fraction 0.10947% modeled only.
+- 5V anode I=1.44801646079583e-11 raw 2D current, provisional J≈7.24e-4 A/cm2 under A/um & 2um width (needs local manual validation); transient steady state/full-half not proven. CAL 1.2.0 still only PROPOSED, no source edit or simulation.
+- NEXT: local InGaN.par exact Scharfetter/param override review -> distinct 1ns vs proposed literature 100ns sensitivity without other physics change -> short Transient smoke -> NtSide0/1e18 5V comparisons, same-current and mesh/Full gates. A/B production NO-GO.
+
 ## 2026-10-09 — CMP naming confirmed, next candidate CMP_BASELINE_1.2.0_CAL (DECISION / PROPOSED RUN)
 
 - User confirmed naming standard `CMP_<TYPE>_<MAJOR.MINOR.PATCH>_<TAG>`, canonical policy `CMP/PROJECT_NAMING_CONVENTION.md`, replacing preliminary name `CMP_BASELINE_CAL_V1`. Version histories are independent per family; `CAL` denotes intended calibration scope, not completed validation.

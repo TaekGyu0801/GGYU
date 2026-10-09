@@ -1174,3 +1174,13 @@
 - OBSERVED: no n*_des.tdr found with find from HOME to depth 6.
 - UNRESOLVED: node 6 run status; need tail of log and directory listing.
 - NEXT: ls -lhtr and tail -n 80 n6_des.log; do not restart yet.
+
+
+## 2026-10-09 11:30 KST — JUSUBIN_FAST_HALF_SWB completion reported
+
+- 작업자: 이택규
+- 상태: OBSERVED (user report; terminal/log not yet re-verified in this session)
+- 이택규가 주수빈이 전날 실행한 `JUSUBIN_FAST_HALF_SWB`가 모두 완료되었다고 보고함.
+- 이 보고로 Half+coarse transient branch는 "running"에서 "completion reported" 상태로 이동.
+- 단, 최종 bias 도달, fatal/error 부재, 산출물 존재, elapsed time, I-V/IQE 유효성은 아직 로그로 재확인하지 않았으므로 CONFIRMED로 승격하지 않음.
+- 다음: project terminal에서 n2_des.log/out/err와 최종 .plt/.tdr 존재를 확인하고, final 0.3 V 도달/normal termination/accepted final step을 검증. 그 후 QS Copy 결과와 runtime·I-V를 비교하고 full FAST_C1 reference 대비 half+coarse validation을 진행.

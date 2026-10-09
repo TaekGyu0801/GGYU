@@ -1,3 +1,9 @@
+## 2026-10-09 — Mg calibration source comment
+
+이택규 observed in actual 5V_TEST pp1_dvs.cmd: comment says N_Mg_p=9.59e18 was previously tuned for 300 K p-GaN hDensity near 3e17 with incomplete ionization. This is a historical comment, NOT present measured hole density. Next probe existing n2_des.tdr hDensity in Clean_pGaN using SVisual; do not change Mg input or rerun.
+
+---
+
 ## 2026-10-09 — Active SDE 5V_TEST dopant numeric values; Mg concentration vs effective ionization (이택규)
 
 - OBSERVED `pp1_dvs.cmd` constants: `N_Mg_p=9.59e18`, `N_A_EBL=3e17`, `N_D_n=5e18`, `N_D_bar=1e15` [cm^-3]; `x_In=x_Al_EBL=0.15`. Actual species placements from prior 501–615 inspection pMg in Clean/DmgL pGaN, effective p EBL, n donor Clean/DmgL/base. All 12 NtSide0 trap Conc=0.

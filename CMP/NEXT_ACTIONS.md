@@ -1189,3 +1189,12 @@ Common Baseline Final 통과 후에만:
 5. Next separate **nominal damage** `NtSide=1e18` branch with exact physics/source verification and short preprocess/solver gates; compare same-current I(V), sidewall SRH, MQW recombination and IQE. Project A/B production remains blocked until pre-run audit gates pass.
 
 Evidence: user-provided Oct9 completed `n2_des.log` (anode 5.000E+00; Curve trace finished; final TDR/checkpoints saved; normal completion at 14:29:52 KST). Previous instruction to simply check if Node2 is running has been superseded.
+
+## 2026-10-09 — Next diagnostic after verified 5V file listing (이택규)
+
+1. In copied `JUSUBIN_FAST_HALF_5V_TEST`, preserve all `n2_*` output and checkpoint files. No re-run or cleanup.
+2. Read-only parse of `n2_des.plt` 17 datasets: count complete rows, first/last anode OuterVoltage and TotalCurrent, full 0–5V curve and numerical trends. File timestamp confirms write near successful finish but full data content is unparsed.
+3. Investigate missing `pp2_des.par`: in `pp2_des.cmd`, inspect preprocessed File/Parameters linkage; list actual `*.par`. `grep AreaFactor` produced no `pp2_des.cmd` match; 2D current and mesa-width normalization remain NOT CONFIRMED.
+4. After IV/units sanity gate, check `n2_des.tdr` radiative/SRH/Auger fields and integrate QW, then compare full/fine vs half/coarse NtSide=0 at same current and initiate controlled nominal damaged NtSide=1e18 branch. Publication-grade A/B remains NO-GO.
+
+Evidence: user-provided Oct9 `ls -lh --full-time`, `head -n 30 n2_des.plt`, `grep -ni 'AreaFactor' pp2_des.cmd pp2_des.par`.

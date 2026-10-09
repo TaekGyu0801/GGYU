@@ -1214,14 +1214,35 @@
       "numericRadCoefficientVerified": false,
       "numericAugerVerified": false,
       "next": "sed -n '855,925p' /user/tools/synopsys/sentaurus/T-2022.03/tcad/current/lib/sdevice/MaterialDB/InGaN.par (read-only csh-safe); inspect effective interpolation/overrides if needed."
+    },
+    "inganMaterialParametersObserved20261009": {
+      "status": "OBSERVED_FILE_NUMERICAL_VALUES_NOT_VERIFIED_EFFECTIVE_IN_QWS",
+      "comment": "Vendor file says parameters for recombination models below came from GaAs and require calibration",
+      "srh": {
+        "tauminSeconds": 0,
+        "taumaxSeconds": 1e-9,
+        "NrefPerCm3": 10000000000000000,
+        "gamma": 1
+      },
+      "auger": {
+        "AelectronCm6PerS": 1e-30,
+        "AholeCm6PerS": 1e-30
+      },
+      "radiative": {
+        "Ccm3PerS": 2e-10
+      },
+      "QWEffectiveModelValidated": false,
+      "fourQwRecombinationRatioPercent": 0.10947475662698732,
+      "source": "Sentaurus MaterialDB/InGaN.par, directly displayed by user",
+      "next": "Confirm n2_des.log InGaN parameter loading/priority 945-970 and 270-310; effective material parameters/2D J injection; no physics edits."
     }
   },
   "latestObservedEvent": {
     "date": "2026-10-09",
     "worker": "이택규",
-    "source": "user terminal grep output on Sentaurus T-2022.03 MaterialDB/InGaN.par",
-    "status": "OBSERVED_INGAN_MATERIALDB_RECOMBINATION_SECTION_HEADERS_ONLY",
-    "event": "InGaN.par lines 870 Scharfetter SRH, 883 Auger, 893 RadiativeRecombination (plus formula comment lines). No numeric coefficients/lifetimes yet; csh-safe read-only sed lines 855–925 requested."
+    "source": "user direct output from installed T-2022.03 MaterialDB/InGaN.par lines 855-925",
+    "status": "OBSERVED_GAAS_DERIVED_INGAN_RECOMBINATION_PARAMETERS_REQUIRE_CALIBRATION",
+    "event": "Explicit GaAs-origin calibration warning. InGaN.par Scharfetter taumin 0, taumax 1e-9 s, Nref 1e16 cm^-3, gamma 1; Auger A 1e-30 cm6/s, Radiative C 2e-10 cm3/s. Actual effective MQW values depend on mixing/overrides not yet inspected."
   },
   "projectAFabricationFeasibility20261009": {
     "status": "PROPOSED_RESEARCH_ROUTE_COMPARISON_NOT_APPROVED",

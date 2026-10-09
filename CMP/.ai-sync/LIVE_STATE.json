@@ -606,7 +606,19 @@
       "InitialAnodeAndCathodeVoltage": 0
     },
     "sourceSyncedToGitHub": false,
-    "preprocessStatus": "PENDING",
-    "simulationRunStatus": "NOT_LAUNCHED"
+    "preprocessStatus": "OBSERVED_PP2_5V_SETTINGS",
+    "simulationRunStatus": "NOT_CONFIRMED_LAUNCHED",
+    "preprocessedVerified": {
+      "SolveMode": "Transient",
+      "FinalTime": 1,
+      "GoalAnodeV": 5,
+      "SaveFilePrefix": "n2_5V_ckpt",
+      "initialContactVoltagesV": 0
+    },
+    "remainingPreRunChecks": [
+      "Verify Grid and parameter/trap substitutions",
+      "Preserve copied n2 output files from prior 0.3V run",
+      "Validate no stale/cross-project output pointers"
+    ]
   }
 }

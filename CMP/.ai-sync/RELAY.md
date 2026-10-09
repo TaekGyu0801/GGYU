@@ -1,3 +1,11 @@
+## 2026-10-09 — 5V copied half SDevice source edited (이택규 / ChatGPT)
+- OBSERVED user terminal in `JUSUBIN_FAST_HALF_5V_TEST`: original source backup command executed, then sed replaced Transient FinalTime 0.06->1.0, Goal anode 0.3->5.0, Save prefix from smoke 0p3V to 5V. Grep returned edited lines 587, 597, 608 and untouched initial electrodes 0V at 38/43.
+- Actual changed source is on remote semi437, NOT uploaded as full GitHub source. New 5V run not started. Existing original 0.3V smoke and separate QS Copy remain protected.
+- NEXT: SWB copied project SDevice node 2 Ctrl+P preprocess ONLY, then verify `pp2_des.cmd` has FinalTime 1.0, Goal anode 5.0 and intended save; confirm correct grid/NtSide and no stale output. Do not F7 until reviewed. Original 0.3V smoke comment may still be in source.
+- WARNING: 5V at FinalTime 1.0 preserves previous voltage ramp ratio, not proof of high-voltage convergence or steady-state LED validity.
+
+---
+
 ## 2026-10-09 — Half 5V test copy marker check passed (이택규 / ChatGPT)
 - OBSERVED `JUSUBIN_FAST_HALF_SWB/.project` and `JUSUBIN_FAST_HALF_5V_TEST/.project` both exist as zero-byte files (Oct 8 16:58) per user terminal. Copy's SDevice source previously matched original with `cmp`.
 - SWB GUI open, tool-flow nodes, and independent project path remain UNVERIFIED; marker alone is not full recognition proof.

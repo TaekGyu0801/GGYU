@@ -560,7 +560,7 @@
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "Integrate standalone DmgL_QW3 Radiative as 2D region and add to 265.711 s^-1/um Clean QW3 only; later SRH/Auger, per QW, full IQE. Keep existing output.",
+    "next": "SVisual Clean_QW3+DmgL_QW3 2D region-scope SRH and Auger field integrals; then QW1,QW2,QW4 and full IQE_rec. Preserve data.",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
@@ -934,7 +934,7 @@
       "iqeDeviceVerified": false
     },
     "qwIntegration20261009": {
-      "status": "OBSERVED_FIRST_CLEAN_REGION_INTEGRAL_FULL_QW_PENDING",
+      "status": "OBSERVED_CLEAN_AND_DMG_QW3_RADIATIVE_2D_INTEGRALS",
       "basis": "PROJECT_AB_PRE_RUN_AUDIT.md G5 and metric definition, older/newer Sentaurus Visual User Guide Field Integration",
       "firstAction": "SVisual Tools > Integrate or right ∫dr icon, select RadiativeRecombination and Region/Material Clean_QW3 only, Complete Domain, Start Integration; screenshot integral and domain units",
       "after": "integrate SRH, Auger for each QW and physical Dmg edge QW as needed, sum recombination integrals; 2D unit and area-factor validation mandatory",
@@ -949,15 +949,36 @@
       "wholeQw3Integrated": false,
       "screenshotSelectionWarning": "Both Clean_QW3 and Clean_QW3+DmgL_QW3 are highlighted, but right output shows only dimension-2 Clean_QW3. Plus item likely interface not combined area, exact region metadata not checked.",
       "correctedPreviousAdvice": true,
-      "firstNextAction": "Select standalone DmgL_QW3, not plus-labeled interface, press Start Integration and confirm right 2D region and Integral/Domain. Then sum Clean and DmgL integrals."
+      "firstNextAction": "Select standalone DmgL_QW3, not plus-labeled interface, press Start Integration and confirm right 2D region and Integral/Domain. Then sum Clean and DmgL integrals.",
+      "cleanQw3Radiative": {
+        "region": "Clean_QW3(InGaN)",
+        "dimension": 2,
+        "integral": 265.711,
+        "domainUm2": 0.005985012
+      },
+      "dmgLQw3Radiative": {
+        "region": "DmgL_QW3(InGaN)",
+        "dimension": 2,
+        "integral": 0.526818,
+        "domainUm2": 0.00001500002
+      },
+      "fullQw3HalfRadiativeDerived": {
+        "integral": 266.237818,
+        "unit": "s^-1 um^-1",
+        "totalDomainUm2": 0.00600001202
+      },
+      "fullQw3SrhMeasured": false,
+      "fullQw3AugerMeasured": false,
+      "iqeVerified": false,
+      "next": "In SVisual integrate srhRecombination in standalone 2D Clean_QW3 and DmgL_QW3, then Auger for same 2D regions; extend to all QWs."
     }
   },
   "latestObservedEvent": {
     "date": "2026-10-09",
     "worker": "이택규",
-    "source": "SVisual Field Integration screenshot n2_des, RadiativeRecombination",
-    "status": "OBSERVED_CLEAN_QW3_ONLY_AREA_INTEGRAL_AND_PREVIOUS_GROUPING_GUIDANCE_CORRECTED",
-    "event": "2D Clean_QW3 only Integral=2.657110e+02 s^-1 um^-1 and Domain=5.985012e-03 um^2. Plus-labelled Clean_QW3+DmgL_QW3 is NOT demonstrated as merged region and likely interface; standalone DmgL_QW3 integration needed for full QW3."
+    "source": "user screenshot of SVisual Field Integration for standalone DmgL_QW3; earlier Clean_QW3 screenshot",
+    "status": "OBSERVED_2D_FULL_QW3_RAD_INTEGRAL_SUM_AVAILABLE",
+    "event": "DmgL_QW3 Radiative Integral=0.526818 s^-1 um^-1, Domain=1.500002e-05 um2; Clean_QW3=265.711 s^-1 um^-1, Domain=0.005985012 um2; independent sum 266.237818 s^-1 um^-1 over area 0.00600001202 um2. SRH/Auger not integrated."
   },
   "projectAFabricationFeasibility20261009": {
     "status": "PROPOSED_RESEARCH_ROUTE_COMPARISON_NOT_APPROVED",

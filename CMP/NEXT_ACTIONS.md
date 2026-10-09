@@ -1009,3 +1009,10 @@ Common Baseline Final 통과 후에만:
 2. Extract total wallclock/runtime and I-V points from the completed half+coarse transient.
 3. Check the `JUSUBIN_FAST_HALF_SWB_Copy` QS smoke status/result separately.
 4. Compare Half+coarse transient vs QS Copy, then against full FAST_C1 reference before adopting the fast branch for production A/B.
+
+
+## 2026-10-09 — QS Copy failed sweep verification first
+1. In `JUSUBIN_FAST_HALF_SWB_Copy`, inspect `tail -n 20 n2_des.plt` to establish LAST accepted anode voltage; note goal 0.3V remains UNVERIFIED after MinStep stop.
+2. Inspect `grep -nE 'Step-size less|Computing step from|Finished, because' n2_des.log | tail -n 15` and QS `.err` for step cutbacks, Newton failures and underlying cause.
+3. Do not infer speedup from QS 5:06:57 vs original transient 6:56:59: QS did not complete a comparable 0.3V curve.
+4. Preserve Common Baseline, original transient result and QS Copy, and avoid unverified solver edits.

@@ -1,3 +1,9 @@
+## 2026-10-10 — CAL SDE node now reports DONE in SWB (USER-OBSERVED)
+
+- 이택규 explicitly confirms yellow `done` status for the SDE node in `CMP_BASELINE_1.2.0_CAL` after prior SDE GUI `Meshing successful` at 00:11:50 KST. Thus SWB SDE workflow step is reported completed, not merely internal mesh command.
+- This is NOT proof SDevice has run nor material 100ns parameter has been parsed by SDevice. Next action: in SWB open Project > Operations > Preprocess (Ctrl+P) **only**, do NOT Run. Check preprocessor success and generated CAL `pp2_des.cmd` parameter reference plus on-disk custom `FASTC1_pp6_des.par`; actual effective tau_max must be confirmed via SDevice log on short smoke before 5V production.
+- Preserve SDE DONE node, original 5V_TEST, project inputs. Source: user statement, not independently fetched SWB log.
+
 ## 2026-10-10 — CAL project SDE editor reports successful meshing (OBSERVED; SWB node/file gate pending)
 
 - Worker 이택규 supplied SDE GUI screenshot titled `n1_dvs.cmd - Sentaurus Structure Editor@ssudisu3 T-2022.03` for `CMP_BASELINE_1.2.0_CAL`. Scheme Commands pane visibly displays `Meshing successful`, `End Time: Sat Oct 10 00:11:50 2026` (Start 00:11:28), with half-device cross-sectional geometry displayed. This is direct evidence the SDE mesh-generation command returned success inside the editor, NOT proof that the SWB node status has turned DONE, exact `n1_msh.tdr` was emitted in intended project, or SDEVICE calculated 5V.

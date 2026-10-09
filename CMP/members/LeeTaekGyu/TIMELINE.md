@@ -1,3 +1,9 @@
+## 2026-10-10 — CMP_BASELINE_1.2.0_CAL project visible in SWB (OBSERVED)
+
+- Worker 이택규 supplied actual Sentaurus Workbench screenshot. In project tree under `/user/semi/semi437/tmp/myproject/`, the separate `CMP_BASELINE_1.2.0_CAL` project is selected, and the tool flow shows SDE → SDEVICE, single visible NtSide=0 experiment. Existing successful `JUSUBIN_FAST_HALF_5V_TEST` is still separately listed in tree.
+- No completed jobs are indicated in shown SDE/SDEVICE result cells (`--`). Screenshot is evidence the project exists in Workbench, NOT evidence that source files/custom InGaN Scharfetter parameter override copied, preprocessed, simulated, or physically validated.
+- Next non-destructive check: `ls -lh /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/sde_dvs.cmd /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/sdevice_des.cmd /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/FASTC1_pp6_des.par`. Then inspect contents and *only in clone* install private input candidate ZIP if needed. Do not run/preprocess yet or alter original.
+
 ## 2026-10-10 — CAL 1.2.0 independent SRH-only input candidate package prepared (PROPOSED / LOCAL STATIC PASS)
 
 - Worker 이택규 shared actual T-2022.03 MaterialDB/InGaN.par excerpt 855–925. This confirms GaAs-derived, calibration-needed SRH `Scharfetter` taumin=0/taumax=1e-9 both carriers/Nref=1e16/gamma=1, Auger A=1e-30, Radiative C=2e-10. Existing 5V TDR audit independently confirmed these active effective QW rates.

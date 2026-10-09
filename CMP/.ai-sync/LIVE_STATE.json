@@ -560,7 +560,7 @@
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "Read active pp1_dvs.cmd SDE doping profile definitions/placements for Magnesium and n donors, then verify n1_msh.tdr doping spatial maps and 2D electrical current normalization; preserve 5V_TEST.",
+    "next": "Read-only SDE 105–128 to inspect documented Mg concentration rationale, then examine 5V Clean_pGaN free-hole density and ionized Mg profile in n2_des.tdr. Keep current source intact.",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
@@ -1352,14 +1352,34 @@
       "dopingPlacementValidated": false,
       "bulkSrhStillOn": true,
       "damagedNtSide1e18RunVerified": false
+    },
+    "sdeNumericalDopingConstants20261009": {
+      "status": "OBSERVED_INPUT_VALUES_ONLY",
+      "source": "pp1_dvs.cmd lines 100-125",
+      "N_Mg_p_cm3": 9590000000000000000,
+      "N_A_EBL_cm3": 300000000000000000,
+      "N_D_n_cm3": 5000000000000000000,
+      "N_D_bar_cm3": 1000000000000000,
+      "x_In": 0.15,
+      "x_Al_EBL": 0.15,
+      "comparisonToDocumentedP": {
+        "documented": "effective active acceptor 3e17 cm^-3",
+        "input": "pMagnesiumActiveConcentration=9.59e18 cm^-3",
+        "samePhysicalQuantity": false,
+        "reason": "ionization and mobile holes differ from nominal Mg dopant input",
+        "measuredIonizedMg": false,
+        "measuredHoleDensity": false
+      },
+      "priorJuSubinMeshDopingScreen": "Signed DopingConcentration color approx -9.59e18..+5e18 cm^-3 (not a carrier density cutline)",
+      "next": "Read sed -n '105,128p' pp1_dvs.cmd for Mg concentration rationale; then probe Clean_pGaN hDensity and pMagnesiumMinusConcentration in n2_des.tdr."
     }
   },
   "latestObservedEvent": {
     "date": "2026-10-09",
     "worker": "이택규",
-    "status": "VERIFIED_ALL_12_ACTIVE_DECK_NTSIDE0_SIDEWALL_TRAP_CONCENTRATIONS_ZERO",
-    "source": "user grep of completed JUSUBIN_FAST_HALF_5V_TEST/pp2_des.cmd",
-    "event": "All twelve preprocessed DmgL sidewall regions (pGaN EBL Barrier0..4 QW1..4 nGaN) have Trap Conc=0 at NtSide=0; Mg IncompleteIonization declared in Clean_pGaN and DmgL_pGaN. Generic bulk SRH remains active. Next SDE Mg/donor doping placement."
+    "status": "OBSERVED_SDE_NUMERIC_DOPING_CONSTANTS_AND_MG_IONIZATION_SEMANTIC_GAP",
+    "source": "user actual pp1_dvs.cmd grep, and JuSubin TIMELINE mesh visualization note",
+    "event": "In 5V_TEST pp1_dvs.cmd: N_Mg_p=9.59e18 cm^-3, N_A_EBL=3e17, N_D_n=5e18, N_D_bar=1e15, x_In=0.15, x_Al_EBL=0.15. Mg input 9.59e18 is NOT the free-hole or ionized acceptor density; COMMON_BASELINE documented effective 3e17 must be checked with output pMagnesiumMinusConcentration/hDensity. No evidence of input error yet."
   },
   "projectAFabricationFeasibility20261009": {
     "status": "PROPOSED_RESEARCH_ROUTE_COMPARISON_NOT_APPROVED",

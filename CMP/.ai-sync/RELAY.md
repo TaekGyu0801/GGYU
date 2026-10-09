@@ -1,3 +1,10 @@
+## 2026-10-09 — QW3 full radiative 2D integration gate passed
+
+- 이택규 5V_TEST SVisual: Clean_QW3 integral 265.711, DmgL_QW3 integral 0.526818, sum 266.237818 [s^-1 um^-1]; respective domains 0.005985012 and 0.00001500002 um², summed 0.00600001202 um². Both verified as separate dimension-2 regions.
+- This is not device IQE. Next integrate SRH and Auger over the same standalone regions, then all four QWs. Do not choose plus-named interface as union, modify code, or rerun.
+
+---
+
 ## 2026-10-09 — Correction: '+' region labels in SVisual integration (이택규)
 
 - Observed screenshot output clean QW3-only radiative 2D integral 2.657110e+02 [s^-1 um^-1] and domain 5.985012e-03 um². Left `Clean_QW3+DmgL_QW3` selection did not show as separate 2D integrated region.

@@ -1,3 +1,10 @@
+## 2026-10-09 — New near-final CMP_BASELINE_CAL_V1 preparation selected (PROPOSED)
+
+- Worker: 이택규. User opted to keep the 12 MB pre5V backup unchanged and asked to prepare a new near-final baseline; permission granted to seek Claude review if helpful, but no Claude direct communication has occurred.
+- PROPOSED separate branch `CMP_BASELINE_CAL_V1` from the completed `JUSUBIN_FAST_HALF_5V_TEST`. Preserve original 5V results, backup, and full FAST_C1 baseline. Keep Half+Coarse geometry, 4-QW Kou epitaxy, 5nm physical damaged sidewall, Mg/EBL/nGaN doping, and known working Transient-BE scheme; do not repeat failed QS without separate validation.
+- First gate: secure the actual private SDE/SDevice/custom .par, pp-decks, mesh and finished log into a user-shared archive, confirm the effective InGaN SRH/Radiative/Auger model, current density/AreaFactor, carriers/injection, and output coverage before choosing scientifically motivated minimum parameter-only calibration. Do not tune merely to obtain higher IQE.
+- Next: create separate clone after source review, perform short `NtSide=0` smoke and 5V candidate, then `NtSide=1e18` matched-physics comparison. Full-versus-Half/Coarse numerical validation and scientific plausibility remain final publication gates. No TCAD files edited and no new solver jobs started by AI.
+
 ## 2026-10-09 — pre5V archive contents observed
 
 - 이택규 terminal `tar -tzf ...pre5V_20261009.tar.gz | head -n 30` confirmed project metadata, SDE cmd, pp1_dvs.cmd, n1_msh.tdr, FASTC1_pp6_des.cmd in archive. Only first 30 entries viewed; full integrity not verified.

@@ -1,3 +1,8 @@
+## 2026-10-09 — pre5V archive contents observed
+
+- 이택규 terminal `tar -tzf ...pre5V_20261009.tar.gz | head -n 30` confirmed project metadata, SDE cmd, pp1_dvs.cmd, n1_msh.tdr, FASTC1_pp6_des.cmd in archive. Only first 30 entries viewed; full integrity not verified.
+- Recommendation: keep the 12 MB backup and relocate outside myproject if cluttered; preserve successful 5V_TEST. No files deleted or new run executed.
+
 ## 2026-10-09 — Pre-5V backup archive exists, content not yet verified (OBSERVED)
 
 - 이택규 actual server shell `ls -lh /user/semi/semi437/tmp/myproject/JUSUBIN_FAST_HALF_5V_TEST_pre5V_20261009.tar*` returned `JUSUBIN_FAST_HALF_5V_TEST_pre5V_20261009.tar.gz`, 12 MB, Oct 9 11:25; this is outside the main project directory, not a SWB simulation node. Exact contents and independent recovery copy remain UNVERIFIED.

@@ -286,3 +286,9 @@
 - 이 보고로 Half+coarse transient branch는 "running"에서 "completion reported" 상태로 이동.
 - 단, 최종 bias 도달, fatal/error 부재, 산출물 존재, elapsed time, I-V/IQE 유효성은 아직 로그로 재확인하지 않았으므로 CONFIRMED로 승격하지 않음.
 - 다음: project terminal에서 n2_des.log/out/err와 최종 .plt/.tdr 존재를 확인하고, final 0.3 V 도달/normal termination/accepted final step을 검증. 그 후 QS Copy 결과와 runtime·I-V를 비교하고 full FAST_C1 reference 대비 half+coarse validation을 진행.
+
+
+## 2026-10-09 — Transient pass, QS Copy MinStep stop
+- User-provided logs: JuSubin half+coarse original transient completed to anode 0.3V (25019.43 s), I-V file exists.
+- Distinct QS Copy ended because `Step-size less than MinStep (8.3986e-07)` after 18417.09 s; result save/normal program exit does not prove sweep completion. Final accepted voltage and failure mechanism pending.
+- Team action: diagnose QS plot/log before solver alterations; full/fine reference equivalence pending.

@@ -1,3 +1,9 @@
+## 2026-10-10 — New CAL SWB clone source files exist, candidate override not installed (OBSERVED)
+
+- 이택규 terminal `ls -lh` in new `/user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/`: sde_dvs.cmd 20K, sdevice_des.cmd 5.9K, FASTC1_pp6_des.par 283B, all timestamp Oct 9 23:35.
+- OBSERVED only file existence and lengths, not hash equality. Compared to privately prepared candidate ZIP, which contains an approximately 981B modified custom .par with proposed InGaN Scharfetter 100ns, the new project's 283B .par suggests proposed override has NOT been installed. No preprocess/run evidence.
+- Next safest READ ONLY step: sha256sum these three NEW project files and compare with privately audited parent input SHA256 in private README. If identical, upload ZIP to server via SFTP, preserve originals in new folder before installing candidate, verify new parameter hash and then preprocess/short Transient smoke. Keep finished JUSUBIN_FAST_HALF_5V_TEST unchanged.
+
 ## 2026-10-10 — CMP_BASELINE_1.2.0_CAL project visible in SWB (OBSERVED)
 
 - Worker 이택규 supplied actual Sentaurus Workbench screenshot. In project tree under `/user/semi/semi437/tmp/myproject/`, the separate `CMP_BASELINE_1.2.0_CAL` project is selected, and the tool flow shows SDE → SDEVICE, single visible NtSide=0 experiment. Existing successful `JUSUBIN_FAST_HALF_5V_TEST` is still separately listed in tree.

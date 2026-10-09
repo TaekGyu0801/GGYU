@@ -1,3 +1,11 @@
+## 2026-10-09 — QW4 2D radiative/SRH/Auger integrals complete (이택규)
+
+- QW4 final 5V_TEST NtSide0 Half: independently integrated Clean (Rrad=38746.96, SRH=35617690, Auger=1327.983; area=0.005985012 um²) and DmgL (Rrad=98.768, SRH=226496.2, Auger=2.414354; area=0.00001500002 um²). SVisual integral units s^-1 um^-1.
+- Summed QW4 Rrad=38845.728, SRH=35844186.2, Auger=1330.397354, total 35884362.325354. Derived QW4-only recombination radiative fraction 0.1082525242%; QW3-only earlier 0.0454256871%. Device-wide IQE pending QW1/2, along with physics plausibility audit. No code changes.
+- NEXT: six standalone 2D region integrals each QW1 and QW2, then 4-QW IQE_rec from integrals, effective SRH/material/injection audit before baseline acceptance.
+
+---
+
 ## 2026-10-09 — Full QW3 2D recombination integral completed; very low recombination share (이택규)
 
 - OBSERVED SVisual Clean_QW3 2D: SRH=5.841611e5, Auger=12.65704, earlier Radiative=265.711; DmgL_QW3 2D SRH=1655.249, Auger=0.05774334, Rad=0.526818; all s^-1 um^-1. Sum QW3 half-domain Rrad=266.237818; SRH=585816.349; Auger=12.71478334. Derived local-to-QW spatial-integrated recombination ratio Rrad/all = 0.0454256871% at 5V, NtSide=0. This is **QW3 only; device IQE unverified**.

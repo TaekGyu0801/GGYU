@@ -560,7 +560,7 @@
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "Four QW integration is complete. Next audit actual material SRH lifetime/Radiative coefficient from effective parameters and n2_des.log; verify 2D current normalization/J-V, carrier injection and steady-state. No code edit or rerun.",
+    "next": "Read n2_des.log line 264-355 for use-Si default context and actual T-2022.03 GaN/InGaN/InN MaterialDB recombination parameter sections. Verify live pp1_dvs.cmd layer and Half geometry against COMMON_BASELINE before exact-paper-copy claim; do not change model.",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
@@ -1140,14 +1140,73 @@
       "experimentalEQE": false,
       "halfVsFullValidated": false,
       "next": "Audit effective InGaN SRH carrier lifetimes and Radiative coefficients actually loaded, 2D current normalization and J-V, carrier injection/polarization, and mesh/full comparison before baseline gate."
+    },
+    "materialDbLoadEvidence20261009": {
+      "status": "OBSERVED_LOG_FILE_PATHS_NO_EFFECTIVE_COEFFICIENTS",
+      "parsedMaterialDB": [
+        "GaN.par",
+        "InGaN.par",
+        "InN.par",
+        "Silicon.par"
+      ],
+      "activeRecombinationModels": [
+        "SRH",
+        "Auger",
+        "Radiative"
+      ],
+      "defaultParametersFromFile": true,
+      "note": "Log line Use Si parameters appears, but context not checked; do not infer active InGaN is using Si, nor that missing coefficients/lifetimes imply zero values.",
+      "next": "Read sed -n '264,355p' n2_des.log and inspect GaN.par/InGaN.par/InN.par effective SRH/Radiative/Auger section values, including any interpolation and overrides; additionally inspect live pp1_dvs.cmd real geometry."
+    },
+    "geometryPaperProvenance20261009": {
+      "source": "CMP/COMMON_BASELINE.md plus primary literature",
+      "kou2019": {
+        "doi": "10.1364/OE.27.00A643",
+        "inqw": 4,
+        "inFraction": 0.15,
+        "thicknessQwNm": 3,
+        "barriers": 5,
+        "barrierNm": 22,
+        "nganUm": 4,
+        "eblNm": 26,
+        "pGanNm": 120,
+        "reportedHeavilyDopedPContactNm": 20
+      },
+      "wu2023": {
+        "doi": "10.1016/j.micrna.2023.207542",
+        "sidewallDamageNm": 5,
+        "originalWuBarrierNm": 8,
+        "originalWuInFraction": 0.08
+      },
+      "chen2024": {
+        "doi": "10.1021/acsaelm.4c01540",
+        "reportedMesaUm": [
+          4,
+          4
+        ]
+      },
+      "JBD": {
+        "url": "https://www.jb-display.com/product_des/3.html",
+        "pixelPitchUm": 4,
+        "actualMesaWidthUnknown": true
+      },
+      "modelOnly": {
+        "representativeMesaUm": 4,
+        "domainUm": 5,
+        "nBaseUm": 0.3,
+        "nitrideUm": 0.1,
+        "calibrationTrapValues": true
+      },
+      "currentFiveVHalfCoarseGeometryVerifiedAgainstLivePp1": false,
+      "status": "DOCUMENTED_BASELINE_AND_PRIMARY_SOURCE_REVIEW_NOT_LIVE_CODE_AUDIT"
     }
   },
   "latestObservedEvent": {
     "date": "2026-10-09",
     "worker": "이택규",
-    "source": "six user screenshots Field Integration Clean_QW1/DmgL_QW1 plus previously verified QW2/3/4 results",
-    "status": "OBSERVED_FOUR_QW_RECOMB_INTEGRALS_COMPLETE_PHYSICS_AUDIT_PENDING",
-    "event": "5V NtSide=0 Half+Coarse SVisual independent 2D clean/dmg field integrals all four QWs, combined Rrad=40072.8158452, SRH=36562944.9075, Auger=1599.706168587 s^-1 um^-1. Derived MQW recombination radiative fraction 0.1094747566%; NOT actual LED IQE/EQE or validated baseline."
+    "status": "OBSERVED_MATERIALDB_GAN_INGAN_LOADED_AND_LITERATURE_PROVENANCE_AUDITED",
+    "source": "user n2_des.log read-only grep; CMP/COMMON_BASELINE.md vs primary Kou 2019/Wu 2023/Chen 2024 and JBD official specs",
+    "event": "Documented 4µm mesa is representative choice, JBD 4µm is pixel pitch. 4 QWs×3nm In0.15Ga0.85N, 5 GaN 22nm barriers and epitaxy Kou-based; Wu 5nm sidewall trap concept; numerical base and doping assumptions not direct measurement. n2_des.log shows DefaultParametersFromFile loaded MaterialDB GaN.par and InGaN.par; SRH/Auger/Rad enabled, effective parameter values NOT confirmed; Use Si parameters context unresolved."
   },
   "projectAFabricationFeasibility20261009": {
     "status": "PROPOSED_RESEARCH_ROUTE_COMPARISON_NOT_APPROVED",

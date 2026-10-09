@@ -560,7 +560,7 @@
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "Archive copied 5V test project before F7 to protect old n2 outputs; verify archive and inspect Grid/Parameter/Conc/solver preprocess. No run yet.",
+    "next": "Verify tar gzip readability; then copied SWB select SDevice Node2 Run only; inspect fresh log for startup and status.",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
@@ -607,7 +607,7 @@
     },
     "sourceSyncedToGitHub": false,
     "preprocessStatus": "OBSERVED_PP2_5V_SETTINGS",
-    "simulationRunStatus": "NOT_CONFIRMED_LAUNCHED",
+    "simulationRunStatus": "NOT_YET_OBSERVED",
     "preprocessedVerified": {
       "SolveMode": "Transient",
       "FinalTime": 1,
@@ -632,7 +632,22 @@
       "mesh": "2026-10-08 18:08 KST"
     },
     "fiveVNewResults": "NOT_RUN",
-    "preRunBackupStatus": "PENDING_USER_COMMAND",
-    "preprocessedGridTrapAudit": "PENDING_USER_GREP"
+    "preRunBackupStatus": "OBSERVED_ARCHIVE_CREATED_INTEGRITY_PENDING",
+    "preprocessedGridTrapAudit": "OBSERVED_GREP_PASS",
+    "backupArchive": {
+      "path": "/user/semi/semi437/tmp/myproject/JUSUBIN_FAST_HALF_5V_TEST_pre5V_20261009.tar.gz",
+      "reportedSize": "12M",
+      "reportedTimestamp": "2026-10-09 11:25 KST",
+      "integrity": "PENDING_tar_-tzf"
+    },
+    "preprocessedGrid": "n1_msh.tdr",
+    "observedConcAllZero": true,
+    "observedConcEntries": 12,
+    "preprocessedRHSMin": 0.001,
+    "preprocessedCoupledIterationLimits": [
+      500,
+      100,
+      15
+    ]
   }
 }

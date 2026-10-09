@@ -986,3 +986,10 @@ The original synchronized SDevice2 deck contains `SRHRecombination`; the fact th
 ### 2026-10-09 archive check
 - 이택규 verified tar listing of JUSUBIN_FAST_HALF_5V_TEST_pre5V_20261009.tar.gz: C-shell status 0.
 - 5V SDevice Node2 startup is now next; F7 launch not yet observed. Original projects preserved.
+
+
+## 2026-10-09 — SWB copied 5V project GUI state ambiguous; do NOT clean node yet
+- 작업자 이택규. OBSERVED screenshot: SWB title/path `/user/semi/semi437/tmp/myproject/JUSUBIN_FAST_HALF_5V_TEST` (T-2022.03), copied project selected in tree, SDE and SDEVICE stages present, NtSide=0, SDE/SDEVICE cells show `--` (no unambiguous running/completed status).
+- User asks whether a job is already running and whether to Clean Up Node. No actual SDevice active-process, new log, or scheduler run evidence supplied. Inherited n2_des.* files are old 0.3V smoke results copied earlier.
+- Guidance: hold Clean Up Node and F7 until check; cleanup can remove copied node outputs, possibly mesh/dependency and confuse active jobs. Ask user to run `ps -fu semi437 | grep '[s]device'`, `ls -lh --full-time n2_des.log`, `tail -n 12 n2_des.log` in 5V_TEST, then decide. Also if no sdevice process, SWB Scheduler could still have queued job; inspect scheduler status before cleanup.
+- Archive tar integrity was confirmed (`tar -tzf`, status 0) and 5V preprocessed source verified, but run status currently UNKNOWN, not started claim.

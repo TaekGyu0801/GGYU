@@ -1,3 +1,8 @@
+## 2026-10-10 — CMP_BASELINE_1.2.0_CAL new SWB project visible (OBSERVED)
+
+- 이택규 SWB screenshot shows project `CMP_BASELINE_1.2.0_CAL` exists under `/user/semi/semi437/tmp/myproject/`, SDE→SDEVICE topology and one `NtSide=0` experiment. Both tool result cells are `--`, so no successful preprocess, mesh or SDevice runs evidenced. Completed parent JUSUBIN_FAST_HALF_5V_TEST remains listed.
+- Next read-only verify new project's sde_dvs.cmd, sdevice_des.cmd and FASTC1_pp6_des.par exist; then apply private 100ns candidate files ONLY to the clone, inspect correct parameter path and conduct preprocess + truly short Transient smoke. No run started in this screenshot.
+
 ## 2026-10-10 — CMP_BASELINE_1.2.0_CAL input package prepared locally, not yet executed (PROPOSED / STATIC PASS)
 
 - Worker 이택규 supplied live T-2022.03 MaterialDB/InGaN.par 855–925: explicit GaAs-origin warning, Scharfetter taumin=0/taumax=1e-9 both electrons/holes, Nref=1e16, gamma=1, Auger A=1e-30, Radiative C=2e-10. Consistent with private completed 5V TDR audit.

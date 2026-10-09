@@ -1,3 +1,9 @@
+## 2026-10-09 — Baseline CAL 1.2.0 audit archive integrity check PASS
+
+- OBSERVED: 이택규 executed tar -tzf on the prepared audit tar.gz; shell printed ARCHIVE OK, confirming gzip/tar listing succeeded without error.
+- The private archive still needs to be uploaded in this chat. No simulation or code modification occurred.
+- Next: inspect all nine inputs/results before preparing a separate CAL candidate.
+
 ## 2026-10-09 — CAL v1.2.0 private 9-file review archive created on server (OBSERVED)
 
 - Worker 이택규 ran shell in completed `JUSUBIN_FAST_HALF_5V_TEST`: `tar -czf ~/CMP_BASELINE_1.2.0_CAL_AUDIT.tar.gz sde_dvs.cmd sdevice_des.cmd FASTC1_pp6_des.par pp1_dvs.cmd pp2_des.cmd n1_msh.tdr n2_des.log n2_des.plt n2_des.tdr` and `ls -lh ~/CMP_BASELINE_1.2.0_CAL_AUDIT.tar.gz` returned 11 MB regular file dated Oct 9 23:05 at `/user/semi/semi437/CMP_BASELINE_1.2.0_CAL_AUDIT.tar.gz`.

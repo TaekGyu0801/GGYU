@@ -1207,3 +1207,12 @@ Evidence: user-provided Oct9 `ls -lh --full-time`, `head -n 30 n2_des.plt`, `gre
 4. Only after current/physics/mesh checks, test separate nominal NtSide=1e18 damage reference then freeze common baseline. A/B production remains NO-GO.
 
 Evidence: user Oct9 awk output and `sed -n '1,65p' pp2_des.cmd` plus `find . -maxdepth 1 -type f -name '*.par'`.
+
+## 2026-10-09 — Next after 5V Anode currents and recombination declarations (LeeTaekGyu)
+
+1. Preserve all `JUSUBIN_FAST_HALF_5V_TEST` files/checkpoints. Last PLT record: time=1.0 V=5.0; raw anode I_disp=3.29132361382365E-18, I_e=2.78143237811134E-13, I_h=1.42020180788235E-11, I_total=1.44801646079583E-11. Displacement minor, hole-dominated **at anode**; MQW injection still unverified.
+2. Global Physics includes SRH/Auger/Radiative and Plot lists associated fields. `FASTC1_pp6_des.par` has Mg ionization, Thermionic, lattice but no explicit Radiative coefficient. Confirm effective GaN/InGaN radiative material parameters via actual SDevice log/material database or official T-2022.03 docs; a field declared in Plot does not prove emission.
+3. Inspect final `n2_des.tdr` directly in SVisual: look for positive, physically located `RadiativeRecombination` in each clean InGaN QW; validate units, SRH/Auger/density, regional integration; separate LED luminescence from electrical I-V. Do not claim valid IQE until rates integrated/physical checks pass.
+4. Resolve 2D current units, effective AreaFactor, and appropriate full-mesa vs half-domain normalization before absolute J and matched-current comparison. Then nominal NtSide=1e18 baseline separate controlled branch; A/B production still NO-GO.
+
+Evidence: user's last-row DF-ISE awk and `cat FASTC1_pp6_des.par`, grep of executable `pp2_des.cmd`.

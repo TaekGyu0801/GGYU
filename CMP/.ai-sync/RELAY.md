@@ -1,3 +1,9 @@
+## 2026-10-10 — CAL 5V Run pressed by 이택규 (USER REPORTED)
+
+- Worker reports starting CMP_BASELINE_1.2.0_CAL NtSide0 5V SDevice in SWB. No new solver log or completion checked yet.
+- Relative to prior finished NtSide0 Half+Coarse 4-QW trial, new InGaN Scharfetter tau_max=100ns replaces 1ns. Same geometry/doping/Transient BE intended. Old SDevice 5V walltime ~2h56m, new duration uncertain; a 3-6h figure is a non-validated planning estimate only.
+- Next: read cloned n2_des.log progress/effective model and check SWB node status. Preserve prior results.
+
 ## 2026-10-10 — 이택규 decides current CAL run before SWB-native parameter migration
 
 - User instruction: first run the present separate `CMP_BASELINE_1.2.0_CAL` as configured: cloned SDE and SDevice; `sdevice_des.cmd:22 Parameters="FASTC1_pp6_des.par"` and the saved cloned custom .par already has `Material="InGaN" Scharfetter taumax=1e-7,1e-7`. Do not change to standard `sdevice.par/@parameter@` for this device; adopt professor-facing copy/paste layout for **subsequent** newly created devices. The immediate priority is testing present candidate.

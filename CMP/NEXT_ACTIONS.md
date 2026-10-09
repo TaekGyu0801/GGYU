@@ -1229,3 +1229,9 @@ Evidence: user's last-row DF-ISE awk and `cat FASTC1_pp6_des.par`, grep of execu
 2. First next GUI test (read-only): switch SVisual scalar to `SRHRecombination` and probe `Clean_QW4` at previous x=0.245093340874, y=0.58321731303, then `AugerRecombination` at the same coordinate, preserving the Rrad reference; repeat QW1–QW3 when workflow validated. Beware selection point may shift; verify Probe zone each time.
 3. Then integrate Rrad/RSRH/RAuger over each full active QW using validated units/mesh, compute clearly labelled recombination-based `IQE_rec`, and cross-check electrical injection, 2D current/AreaFactor and full-vs-half mesh equivalence. Do not infer IQE from one point or claim QW4 dominates total photon production.
 4. Preserve completed NtSide=0 5V_TEST results; nominal damaged NtSide=1e18 baseline and A/B production gates remain pending. No rerun, no file cleanup or code change.
+
+## 2026-10-09 — 5V_TEST local SRH Probe in Clean_QW4 (OBSERVED; not co-located with earlier Rrad)
+
+- 이택규 supplied SVisual Probe screenshot for `n2_des` 5V test: Zone `Clean_QW4(InGaN)`; selected field `srhRecombination`; (x,y,z)=(0.244864017914, 0.599783903626, 0); SRH = `1.681637512936e+22` cm^-3 s^-1 (field units refer to same SVisual recombination output convention).
+- The previous QW4 local `RadiativeRecombination=7.094266327897e+18` was probed at (x,y,z)=(0.245093340874, 0.58321731303, 0). They are in the same named region but have **different coordinates**, especially lateral y. It is invalid to form a local loss ratio or IQE from the two values without co-locating them. The high SRH number is a measured point, not evidence of whole-QW dominance.
+- NEXT: in SVisual use Probe At or coordinate entry to probe `SRHRecombination` at the exact earlier QW4 Rrad coordinates and verify zone. Then measure Auger at that same point; subsequently validate spatial integrals for IQE. Preserve outputs; no solver/source modifications.

@@ -862,3 +862,16 @@ The original synchronized SDevice2 deck contains `SRHRecombination`; the fact th
 - retain full/fine runs as reference evidence; do not delete the full model from the methodology.
 - validate symmetry-only change before mesh coarsening, then use the same validated half-domain mesh policy for Baseline/A/B production comparisons.
 - IQE is compatible with the half-domain under exact symmetry; absolute totals still need normalization/symmetry scaling checks.
+
+
+## 2026-10-09 11:30 KST update
+- OBSERVED (user report): `JUSUBIN_FAST_HALF_SWB` run completed overnight.
+- Previous blocker "half+coarse transient still running" is cleared at report level.
+- Verification gate remains: confirm final 0.3 V, no fatal termination, output artifacts, and extract runtime/I-V before treating the run as a validated result.
+
+
+## 2026-10-09 11:30 KST priority
+1. Verify completed `JUSUBIN_FAST_HALF_SWB` terminal/log evidence: final 0.3 V, normal completion, no fatal/error, output files.
+2. Extract total wallclock/runtime and I-V points from the completed half+coarse transient.
+3. Check the `JUSUBIN_FAST_HALF_SWB_Copy` QS smoke status/result separately.
+4. Compare Half+coarse transient vs QS Copy, then against full FAST_C1 reference before adopting the fast branch for production A/B.

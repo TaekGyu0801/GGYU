@@ -1,3 +1,8 @@
+## 2026-10-10 — Joint researcher naming convention applies to future JuSubin work (DECISION)
+
+- Worker 이택규 requests all **future new CMP** projects created by either researcher (이택규 or 주수빈) follow `CMP_<TYPE>_<MAJOR.MINOR.PATCH>_<TAG>` (e.g. BASELINE/PROJECTA/PROJECTB). Current naming guide and AGENTS.md updated so any AI/Claude session reading the repo can follow it.
+- Scope is new projects/user-authored releases; preserve Sentaurus native tool-input/output file names and preexisting archives/projects to avoid breaking SWB links. No claim that 주수빈 has acknowledged or already renamed projects. No solver edits/runs in this policy update.
+
 ## 2026-10-10 — 이택규 CAL input candidate created off-server, no simulator run (PROPOSED / STATIC CHECKED)
 
 - User provided installed T-2022.03 InGaN.par SRH/Auger/Radiative section proving vendor's GaAs-derived 1ns lifetime warning and default coefficients. Private ChatGPT downloadable `CMP_BASELINE_1.2.0_CAL_INPUT_CANDIDATE.zip` generated from validated 5V_TEST input files: same SDE, same executed SDevice sweep/model (comments corrected only), GaN Mg and crystal orientation intact, InGaN SRH Scharfetter tau_max set to 100ns both carriers in custom .par. This is a *literature sensitivity proposal*, not calibrated or run. New SWB clone pending.

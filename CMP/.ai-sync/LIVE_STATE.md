@@ -889,3 +889,7 @@ The original synchronized SDevice2 deck contains `SRHRecombination`; the fact th
 - Last log attempts at t=0.0643488 to 0.0643505 then terminated `Step-size less than MinStep (step-size = 8.3986e-07)`.
 - QS runtime 18417.09 s but did NOT reach goal. Cannot compare as speedup to original transient that reached 0.3 V in 25019.43 s.
 - Root numerical/physics trigger not yet established. Next: inspect QS log around lines 6900-7000 and `n2_des.err`; no blind MinStep or baseline modification.
+
+
+## 2026-10-09 — QS Newton failure isolated
+- Final attempted QS step `t=0.0643488→0.0643505`, Newton Poisson+electron+hole Bank/Rose hit Coupled limit 15, residual oscillated to ~1.26e8, final ~1.85e6; retry step 8.3986e-7 below MinStep 1e-6. Root numerical/physical trigger unresolved. Preserve completed transient and baseline. Next inspect actual active QS Math/Solve deck before any numerical-only pilot.

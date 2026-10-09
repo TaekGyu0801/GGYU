@@ -560,7 +560,7 @@
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "SVisual Regions tab: isolate Clean_QW1..4, measure RadiativeRecombination numeric rates, compare SRH/Auger and integrate. Keep original results unchanged.",
+    "next": "SVisual read-only SRH and Auger point-probe for QW4 and QW1..3; then integrated rates, current sanity, NtSide 1e18 and full-vs-half comparison.",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
@@ -842,19 +842,50 @@
       "visualNote": "Upper thin layers have varied higher rates; deep bulk near zero; individual named QW regions cannot be identified from screenshot.",
       "meshElements": 138194,
       "meshPoints": 65513,
-      "cleanQw1ToQw4NumericValuesObserved": false,
+      "cleanQw1ToQw4NumericValuesObserved": true,
       "mqwIntegratedRadiativeObserved": false,
       "iqeVerified": false,
       "modelCoefficientVerified": false,
-      "next": "Zoom upper active stack and inspect/probe RadiativeRecombination in each named clean QW. No simulation edits.",
-      "cleanQw1ToQw4RegionLabelsObserved": true
+      "next": "Measure SRHRecombination and AugerRecombination in QW4 at same x/y and each other QW; validated full-region Rrad/SRH/Auger integrals required for IQE_rec; preserve original source.",
+      "cleanQw1ToQw4RegionLabelsObserved": true,
+      "localQwProbes20261009": [
+        {
+          "region": "Clean_QW1(InGaN)",
+          "x": 0.169818746552,
+          "y": 0.560459877538,
+          "z": 0,
+          "RradiativePerCm3S": 18360101649960
+        },
+        {
+          "region": "Clean_QW2(InGaN)",
+          "x": 0.194326754006,
+          "y": 0.556958733616,
+          "z": 0,
+          "RradiativePerCm3S": 3558921779790
+        },
+        {
+          "region": "Clean_QW3(InGaN)",
+          "x": 0.22058533342,
+          "y": 0.56571159342,
+          "z": 0,
+          "RradiativePerCm3S": 839571357305000
+        },
+        {
+          "region": "Clean_QW4(InGaN)",
+          "x": 0.245093340874,
+          "y": 0.58321731303,
+          "z": 0,
+          "RradiativePerCm3S": 7094266327897000000
+        }
+      ],
+      "localSampleOnly": true
     }
   },
   "latestObservedEvent": {
     "date": "2026-10-09",
     "worker": "이택규",
-    "status": "OBSERVED_SVISUAL_QW_REGION_NAMES_PRESENT",
-    "source": "SVisual Regions screenshot",
-    "event": "Clean_QW1, Clean_QW2, Clean_QW3, Clean_QW4 region tags visible in completed 5V_TEST; per-QW radiative rates remain unmeasured"
+    "source": "four user-supplied SVisual Probe screenshots in 5V_TEST n2_des.tdr",
+    "status": "OBSERVED_POSITIVE_LOCAL_RADIATIVE_RECOMBINATION_ALL_FOUR_QWS",
+    "event": "All Clean_QW1..QW4(InGaN) single-point RadiativeRecombination Probes positive; do not equate with integrated emission or IQE."
   }
 }

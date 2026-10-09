@@ -1241,3 +1241,10 @@ Evidence: user's last-row DF-ISE awk and `cat FASTC1_pp6_des.par`, grep of execu
 - 작업자: 이택규 reports SVisual `Probe At...` input accepts only about five decimal places; exact earlier QW4 Radiative coordinate entry is impractical. This is a GUI limitation reported by user, not a solver/data failure. No new physics measurements or code edits.
 - Preferred **test**: at existing QW4 probe position uncheck `Show Only Active Field` in Probe panel to see whether `RadiativeRecombination`, `srhRecombination`, and `AugerRecombination` appear at the same Probe point; verify screenshot before claiming UI successfully exposes all fields.
 - Fallback: use rounded coordinates (x=0.24509, y=0.58322, z=0) consistently for *new* Radiative, SRH, Auger probes; inspect returned coordinates and zone each time. Cannot reuse prior 12-decimal Radiative value directly with a new rounded-coordinate SRH value as a fully co-located comparison. No IQE from point probes; eventual QW integration still required.
+
+## 2026-10-09 — QW4 co-located radiative/SRH/Auger diagnostic: local nonradiative loss dominant
+
+1. Preserve final 5V_TEST outputs. All co-located at Clean_QW4 x=0.244864017914, y=0.651958341615, z=0: Rrad=7.103015017104e18, SRH=1.681575471039e22, Auger=1.238545872618e15, Total=1.682285896396e22 cm^-3 s^-1. Pointwise Rrad fraction ≈0.0422%: **LOCAL ONLY, NOT DEVICE IQE**.
+2. Do not claim caused by sidewall traps: NtSide=0 disables defined damaged-edge traps but SRH() remains active. Inspect spatial QW and Dmg rates, actual lifetime/material physics, electron/hole density and any band/profile artifacts before parameter changes.
+3. Determine total and per-QW integrated Rrad/SRH/RAuger via validated SVisual integration, then recombination IQE, V(I), current normalization and half/full equivalence; QW1–QW3 local nonradiative probes may help establish spatial trends. Publication-ready baseline and Project A/B production still pending.
+4. Keep copies/reference Node6/12 processes and checkpoints untouched. See LeeTaekGyu/TIMELINE and Issue #7 for evidence.

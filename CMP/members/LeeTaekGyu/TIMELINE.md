@@ -1,3 +1,9 @@
+## 2026-10-10 — User defers SWB-native parameter migration; run current CAL pilot first (DECISION)
+
+- Worker 이택규 explicitly decided: for the **current** `CMP_BASELINE_1.2.0_CAL` candidate, keep its existing working input route `sdevice_des.cmd` File `Parameters="FASTC1_pp6_des.par"` and material-specific InGaN Scharfetter tau_max=1e-7s both carriers already added to that custom .par; **do not migrate now** to `sdevice.par` or `Parameters="@parameter@"`. The SWB-native standard copy/paste method is planned for the **next new device/project**.
+- User wants to run current trial promptly. In clone SWB screen SDE and SDEVICE had `--`; no local SDE mesh has been proven generated, and no CAL SDevice preprocess/run log yet. Recommendation: run cloned SDE first and verify mesh, preprocess SDevice and inspect actual new custom par and effective Scharfetter 100ns in pp files/log, then allow existing unchanged NtSide=0 0–5V Transient-BE candidate (no unvalidated QS). Save and audit actual output. This is the user's decision to start work, NOT an observed simulation completion or launch; ChatGPT has no school server execution access.
+- Keep completed `JUSUBIN_FAST_HALF_5V_TEST`, original backup and Full/Fine reference untouched. New solver results must be evaluated for the previously observed very-low current and 2D J uncertainty; do not claim physical calibration from 100ns trial.
+
 ## 2026-10-10 — Professor-facing SWB reproducibility requirement; migrate custom par to native SWB input (DECISION / PROPOSED MIGRATION)
 
 - Worker 이택규 wants code/parameter copy-paste **within SWB** for CMP presentation/professor to reproduce; professor may inspect/run inputs. Observed cloned CAL `sdevice_des.cmd:22 Parameters = "FASTC1_pp6_des.par"`, `line 68 DefaultParametersFromFile` (live user grep). Current solver depends on custom external file, so copying only SDE and SDEVICE command inputs into another project is NOT self-contained and risks a missing/wrong file.

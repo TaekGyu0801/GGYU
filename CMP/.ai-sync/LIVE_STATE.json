@@ -560,7 +560,7 @@
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "Read n2_des.log line 264-355 for use-Si default context and actual T-2022.03 GaN/InGaN/InN MaterialDB recombination parameter sections. Verify live pp1_dvs.cmd layer and Half geometry against COMMON_BASELINE before exact-paper-copy claim; do not change model.",
+    "next": "Inspect InGaN.par lines 855-925 for numeric SRH, Auger, Radiative parameters and defaults, then GaN/InN and effective logging as required; preserve simulation.",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
@@ -1199,14 +1199,29 @@
       },
       "currentFiveVHalfCoarseGeometryVerifiedAgainstLivePp1": false,
       "status": "DOCUMENTED_BASELINE_AND_PRIMARY_SOURCE_REVIEW_NOT_LIVE_CODE_AUDIT"
+    },
+    "inganParGrep20261009": {
+      "status": "OBSERVED_ONLY_COMMENT_OR_SECTION_LOCATIONS",
+      "file": "/user/tools/synopsys/sentaurus/T-2022.03/tcad/current/lib/sdevice/MaterialDB/InGaN.par",
+      "matches": [
+        "870 Scharfetter - relation and trap level for SRH recombination",
+        "883 Auger - coefficients",
+        "884 formula comment",
+        "893 RadiativeRecombination - coefficients",
+        "894 formula comment"
+      ],
+      "numericSrhLifetimeVerified": false,
+      "numericRadCoefficientVerified": false,
+      "numericAugerVerified": false,
+      "next": "sed -n '855,925p' /user/tools/synopsys/sentaurus/T-2022.03/tcad/current/lib/sdevice/MaterialDB/InGaN.par (read-only csh-safe); inspect effective interpolation/overrides if needed."
     }
   },
   "latestObservedEvent": {
     "date": "2026-10-09",
     "worker": "이택규",
-    "status": "OBSERVED_MATERIALDB_GAN_INGAN_LOADED_AND_LITERATURE_PROVENANCE_AUDITED",
-    "source": "user n2_des.log read-only grep; CMP/COMMON_BASELINE.md vs primary Kou 2019/Wu 2023/Chen 2024 and JBD official specs",
-    "event": "Documented 4µm mesa is representative choice, JBD 4µm is pixel pitch. 4 QWs×3nm In0.15Ga0.85N, 5 GaN 22nm barriers and epitaxy Kou-based; Wu 5nm sidewall trap concept; numerical base and doping assumptions not direct measurement. n2_des.log shows DefaultParametersFromFile loaded MaterialDB GaN.par and InGaN.par; SRH/Auger/Rad enabled, effective parameter values NOT confirmed; Use Si parameters context unresolved."
+    "source": "user terminal grep output on Sentaurus T-2022.03 MaterialDB/InGaN.par",
+    "status": "OBSERVED_INGAN_MATERIALDB_RECOMBINATION_SECTION_HEADERS_ONLY",
+    "event": "InGaN.par lines 870 Scharfetter SRH, 883 Auger, 893 RadiativeRecombination (plus formula comment lines). No numeric coefficients/lifetimes yet; csh-safe read-only sed lines 855–925 requested."
   },
   "projectAFabricationFeasibility20261009": {
     "status": "PROPOSED_RESEARCH_ROUTE_COMPARISON_NOT_APPROVED",

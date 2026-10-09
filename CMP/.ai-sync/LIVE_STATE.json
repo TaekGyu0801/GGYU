@@ -1462,7 +1462,7 @@
     "date": "2026-10-09",
     "worker": "이택규",
     "name": "CMP_BASELINE_1.2.0_CAL",
-    "status": "PARENT_AUDITED_CANDIDATE_NOT_RUN",
+    "status": "OFFLINE_INPUT_ZIP_PREPARED_NOT_SIMULATED",
     "parent": "JUSUBIN_FAST_HALF_5V_TEST",
     "preserve": [
       "original 5V completed NtSide0 source and results",
@@ -1485,6 +1485,10 @@
     "sourceAudit": "CMP/reviews/BASELINE_1_2_0_CAL_AUDIT_20261010.md",
     "recombinationFinding": "Effective 5V QW B=2e-10, Auger=1e-30, SRH lifetime=1ns validated from private TDR",
     "mgFinding": "DopingConcentration tracks MgActive*occupation; numerical ionization verified",
-    "nextAction": "Inspect InGaN material SRH override syntax, then separate SRH-only sensitivity smoke"
+    "nextAction": "SWB Project > Save As > Clean Project to new name; install private zip files only in clone; preprocess and short smoke before any 5V",
+    "privateInputZip": "CMP_BASELINE_1.2.0_CAL_INPUT_CANDIDATE.zip (provided privately in conversation)",
+    "candidateParSha256": "adfe81ab03b8f0ca84b09b9a4373fdc8e71f7a5faa00ce01a7c0b82b7fb2f1ad",
+    "parentPhysicalChanges": "Proposed InGaN Scharfetter tau_max from 1ns to 100ns only; SDE unchanged, SDevice executable unchanged",
+    "newSolverRun": false
   }
 }

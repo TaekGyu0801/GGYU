@@ -1,3 +1,11 @@
+## 2026-10-09 — 5V_TEST Clean_pGaN SVisual Probe: hole density target matched (OBSERVED)
+
+- Worker: 이택규. User supplied screenshot of existing `JUSUBIN_FAST_HALF_5V_TEST/n2_des` SVisual Probe in region `Clean_pGaN(GaN)`, coordinate (x,y,z)=(0.0741335366319,1.00590269042,0) displayed in the viewer (coordinate units not independently confirmed).
+- Measured `hDensity=3.001343052563e17 cm^-3`, `eDensity=9.691983460557e7 cm^-3`, `pMagnesiumActiveConcentration=9.59e18 cm^-3`, `pMagnesiumMinusConcentration=9.59e18 cm^-3`. Relative difference from historical target 3e17 is +0.0447684% at this single point. Snapshot's actual bias/temperature and steady-state status not independently confirmed.
+- The target free-hole concentration is numerically matched **at one sample location**; this does not establish whole-pGaN spatial uniformity, equilibrium calibration, valid Mg physics, or publication-grade baseline.
+- Notable unresolved: `pMagnesiumMinusConcentration` equals total active Mg as displayed, seemingly inconsistent with an incomplete-ionization interpretation, even though free-hole concentration is ~3.0e17. Need inspect definition of exported Minus field, doping model activation and charge compensation, SDevice region model and active parameters before inferring ionization fraction. Do not change Mg or rerun yet.
+- NEXT: inspect existing `n2_des` probe at another interior Clean_pGaN point, verify output bias/temperature and 0V baseline if available, read active `pp2_des.cmd` incomplete-ionization and models. No TCAD code changed or new jobs started.
+
 ## 2026-10-08 — FAST_HALF_BULK_R15 SWB manual implementation package prepared
 
 - 작업자: 이택규; 상태: PROPOSED / STATIC CHECKED / NOT RUN.

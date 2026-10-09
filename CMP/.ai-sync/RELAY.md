@@ -1,3 +1,11 @@
+## 2026-10-09 — Claude / next AI review request: CMP_BASELINE_CAL_V1 proposal (PROPOSED, NOT SENT DIRECTLY)
+
+Worker 이택규 chose to keep `JUSUBIN_FAST_HALF_5V_TEST_pre5V_20261009.tar.gz` in place and prepare a separate near-final candidate `CMP_BASELINE_CAL_V1`. Existing 5V NtSide0 Half+Coarse transient result (138194 elements; modeled 4QW radiative fraction ~0.10947%; low provisional J) must be preserved and not treated as a calibrated IQE. Region-specific Mg IncompleteIonization runs with E0=0.2eV/g=4; local hDensity matched historical target, yet MgMinus interpretation unresolved. The installed MaterialDB InGaN recombination defaults are annotated GaAs-derived and require validation of effective alloy mixing/overrides. QS branch previously failed near 0.0193V; use proven Transient-BE for first candidate.
+
+For Claude or another AI reading this *later*: independently review actual private 5V_TEST input and log when made available, check applied InGaN SRH/Radiative/Auger, current units and injection, and recommend minimal literature-supported parameter-sensitivity tests with exact model precedence and reproducible comparisons. Do NOT claim direct Claude consultation, edit protected full baseline, change arbitrary values for a target efficiency, or run 5V production before private source review and short smoke. Full/Half+Coarse and same-current NtSide0/1e18 remain gates before final freeze.
+
+---
+
 ## 2026-10-09 — Mg calibration source comment
 
 이택규 observed in actual 5V_TEST pp1_dvs.cmd: comment says N_Mg_p=9.59e18 was previously tuned for 300 K p-GaN hDensity near 3e17 with incomplete ionization. This is a historical comment, NOT present measured hole density. Next probe existing n2_des.tdr hDensity in Clean_pGaN using SVisual; do not change Mg input or rerun.

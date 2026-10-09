@@ -1198,3 +1198,12 @@ Evidence: user-provided Oct9 completed `n2_des.log` (anode 5.000E+00; Curve trac
 4. After IV/units sanity gate, check `n2_des.tdr` radiative/SRH/Auger fields and integrate QW, then compare full/fine vs half/coarse NtSide=0 at same current and initiate controlled nominal damaged NtSide=1e18 branch. Publication-grade A/B remains NO-GO.
 
 Evidence: user-provided Oct9 `ls -lh --full-time`, `head -n 30 n2_des.plt`, `grep -ni 'AreaFactor' pp2_des.cmd pp2_des.par`.
+
+## 2026-10-09 — After 1023-point Half 5V I–V output (LeeTaekGyu)
+
+1. Preserve `JUSUBIN_FAST_HALF_5V_TEST` final PLT/TDR/checkpoint. Parsed 1023 complete 17-column DF-ISE rows, V=0 to 5V, final raw anode TotalCurrent 1.44801646079583E-11; sample shows rise after ~4V. Do not infer absolute ampere/current density or normal LED behavior yet.
+2. Actual `pp2_des.cmd` Parameters target is `FASTC1_pp6_des.par` and that file exists. Read full contents plus active Physics/Plot blocks and all AreaFactor references; investigate whether radiative recombination coefficient is nonzero for GaN/InGaN and output plots have required field data.
+3. Resolve effective 2D depth/mesa width and contact vs carrier/displacement current; compare physical injection/recombination and full/fine pristine counterpart at matched V/J; follow G1–G5 of `PROJECT_AB_PRE_RUN_AUDIT.md`.
+4. Only after current/physics/mesh checks, test separate nominal NtSide=1e18 damage reference then freeze common baseline. A/B production remains NO-GO.
+
+Evidence: user Oct9 awk output and `sed -n '1,65p' pp2_des.cmd` plus `find . -maxdepth 1 -type f -name '*.par'`.

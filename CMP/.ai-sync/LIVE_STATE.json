@@ -444,7 +444,7 @@
     "goal0p3VReached": "NOT_VERIFIED",
     "lastAcceptedVoltage": "PENDING_PLT_CHECK",
     "comparison": "Do not infer QS speedup against original half transient 25019.43s, which reached 0.3V",
-    "next": "Read actual QS pp2_des.cmd Math/Solve and compare original transient; do not blindly lower MinStep",
+    "next": "Compare QS Copy actual preprocessed numeric/physics settings to original transient pp2_des.cmd. Do not edit sources until that comparison.",
     "lastAcceptedVoltageV": 0.0193046362893992,
     "lastRecordedPseudoTime": 0.0643487876313307,
     "goalVoltageV": 0.3,
@@ -461,7 +461,39 @@
     "finalObservedRhs": 1850000,
     "maxObservedRhs": 126000000,
     "fundamentalCause": "UNRESOLVED",
-    "physicsWarning": "vanOverstraetendeMan E0 isotropic/anisotropic mismatch; direct causality unverified"
+    "physicsWarning": "vanOverstraetendeMan E0 isotropic/anisotropic mismatch; direct causality unverified",
+    "preprocessedSettingsVerified": {
+      "math": {
+        "RHSMin": 0.001,
+        "ErrRefElectron": 10000,
+        "ErrRefHole": 10000,
+        "CheckRhsAfterUpdate": true,
+        "Transient": "BE",
+        "ExtendedPrecision": 80,
+        "Method": "Blocked",
+        "SubMethod": "ILS(set=22)"
+      },
+      "initialPoissonCoupled": {
+        "Iterations": 500,
+        "LineSearchDamping": 0.01
+      },
+      "initialCarrierCoupled": {
+        "Iterations": 100
+      },
+      "qs": {
+        "InitialStep": 0.03,
+        "MinStep": 0.000001,
+        "MaxStep": 0.15,
+        "Increment": 1.5,
+        "Decrement": 2,
+        "GoalAnodeV": 0.3,
+        "Iterations": 15,
+        "explicitLineSearchDamping": false
+      }
+    },
+    "checkpoint0p3VLabelValid": false,
+    "checkpointStatus": "Save executed after QS failure around 0.019304636 V; not a verified 0.3V checkpoint",
+    "rootCause": "UNRESOLVED"
   },
   "halfTransientRun20261009": {
     "project": "JUSUBIN_FAST_HALF_SWB",

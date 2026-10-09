@@ -1,3 +1,12 @@
+## 2026-10-10 — Actual 5V TDR physical model audit completed
+
+- User-uploaded private 9-file CAL audit archive inspected: source, preprocessed source, log, PLT and HDF5 final TDR. See CMP/reviews/BASELINE_1_2_0_CAL_AUDIT_20261010.md for detailed nonproprietary findings.
+- OBSERVED: SDevice finished 5V, 10596.76 s; actual Transient is single 0-to-5V Increment=1.2 and 5V Save only, despite misleading comments claiming staged ramp/checkpoints.
+- DERIVED across all 8 Clean/DmgL InGaN QW field arrays: B=2e-10 cm3/s, Auger=1e-30 cm6/s, SRH tau=1ns, exactly within numerical rounding. Main modeled 4QW 0.1094747566 percent radiative fraction not yet physically calibrated.
+- DERIVED across all pGaN fields: ionized net acceptor equals MgActive times Mg trap occupation; occupation maximum 3.1286%, net ~3.00033e17 cm-3. Displayed MgMinus raw input is not sufficient to conclude Mg fully ionized.
+- Current at 5V 1.44801646079583e-11 in raw 2D terminal conventions. J normalization and actual device validity need testing. No new TCAD project created or simulations launched.
+- Next: inspect local InGaN.par exact parameter syntax, isolated SRH-only literature sensitivity CAL candidate followed by short Transient-BE smoke and NtSide 0/1e18 comparison.
+
 ## 2026-10-09 — Baseline CAL 1.2.0 audit archive integrity check PASS
 
 - OBSERVED: 이택규 executed tar -tzf on the prepared audit tar.gz; shell printed ARCHIVE OK, confirming gzip/tar listing succeeded without error.

@@ -1,3 +1,12 @@
+## 2026-10-09 — Active SDE 5V_TEST dopant numeric values; Mg concentration vs effective ionization (이택규)
+
+- OBSERVED `pp1_dvs.cmd` constants: `N_Mg_p=9.59e18`, `N_A_EBL=3e17`, `N_D_n=5e18`, `N_D_bar=1e15` [cm^-3]; `x_In=x_Al_EBL=0.15`. Actual species placements from prior 501–615 inspection pMg in Clean/DmgL pGaN, effective p EBL, n donor Clean/DmgL/base. All 12 NtSide0 trap Conc=0.
+- `CMP/COMMON_BASELINE.md` calls p-GaN **effective active acceptor≈3e17 cm^-3**, not explicitly a raw input Mg atom density. Don't incorrectly substitute 3e17 for current `N_Mg_p=9.59e18` which is fed into incomplete-ionization model. Whether ionized Mg density/mobile holes meet 3e17 benchmark remains UNRESOLVED (must inspect 5V `n2_des.tdr` `pMagnesiumMinusConcentration` and `hDensity` in Clean_pGaN). No proof physical Mg model calibrated or invalid based solely on input.
+- Prior JuSubin TIMELINE records Half+Coarse signed `DopingConcentration` color scale near -9.59e18 to +5e18 in mesh; supports gross sign/magnitude but NOT actual ionized/carrier concentrations, nor doping transition validation.
+- NEXT read-only `sed -n '105,128p' /user/semi/semi437/tmp/myproject/JUSUBIN_FAST_HALF_5V_TEST/pp1_dvs.cmd` for inline rationale (then verify actual TDR carrier/ionized Mg data and spatial cutline). Baseline untouched.
+
+---
+
 ## 2026-10-09 — Handoff: SWB missing sdevice.par dialog, safe GaN MaterialDB strategy, Subin validation gates (이택규 / ChatGPT)
 
 - OBSERVED screenshot original **JUSUBIN_FAST_HALF_SWB**, separate from successfully completed **JUSUBIN_FAST_HALF_5V_TEST**. In SWB SDevice `Tool > Edit Input > Parameter` prompts `Create Parameter File: sdevice.par does not exist` with `Silicon` default, `Choose Materials`, `Create Empty File`. This is an authoring step, NOT a solver result or evidence of a silicon LED simulation. User requested plan to build a physically credible GaN baseline and summarize JuSubin's October 8 handoff.

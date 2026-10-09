@@ -662,6 +662,17 @@
       "n2LogPeakMemoryGiB": 2.61
     },
     "concurrencyConcern": "TWO_OTHER_RUNNING_PP6_PP12_JOBS_99PERCENT_CPU",
-    "runConvergence": "UNVERIFIED"
+    "runConvergence": "UNVERIFIED",
+    "runtimeEstimate20261009": {
+      "kind": "INFERENCE_NOT_MEASURED",
+      "baseline0p3VWallclockHours": 6.95,
+      "baselineFinalTime": 0.06,
+      "trial5VFinalTime": 1,
+      "maxStep": 0.001,
+      "linearExtrapolationHours": 116,
+      "planningRange": "approximately 3-7 days or longer; early failure possible",
+      "launch": "2026-10-09 11:33:14 KST",
+      "observedActualProgress": "UNKNOWN_PENDING_n2_des_log"
+    }
   }
 }

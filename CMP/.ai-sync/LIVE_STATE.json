@@ -560,7 +560,7 @@
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "First physical model/current-density audit (live pp2, material parameters and log) to explain low QW3 radiative share, in parallel remaining QW integrations. No code changes.",
+    "next": "QW1 and QW2 independent Clean/DmgL 2D integral Rrad/SRH/Auger, then 4-QW summation; audit active SRH/radiative params and current injection.",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
@@ -970,7 +970,7 @@
       "fullQw3SrhMeasured": false,
       "fullQw3AugerMeasured": false,
       "iqeVerified": false,
-      "next": "Do standalone Clean and DmgL Rrad/SRH/Auger 2D integrals for QW1, QW2, QW4; then full 4-well recombination IQE from summed integrals. Audit material parameters and 2D normalization.",
+      "next": "QW1 and QW2 independent Clean/DmgL 2D integral Rrad/SRH/Auger, then 4-QW summation; audit active SRH/radiative params and current injection.",
       "dmgLQw3Auger": {
         "region": "DmgL_QW3(InGaN)",
         "dimension": 2,
@@ -1023,14 +1023,41 @@
         "sidewall and vertical QW interface defects"
       ],
       "next": "Read actual pp2 SDevice Physics/Solve, material parameters, n2_des.log first; verify 2D current normalization, QW e/h distributions, then integrate all four wells. No source modifications."
+    },
+    "qw4Integrals20261009": {
+      "status": "OBSERVED_SIX_REGION_FIELD_INTEGRALS",
+      "unit": "s^-1 um^-1",
+      "condition": "5V, NtSide=0, Half+Coarse",
+      "clean": {
+        "domainUm2": 0.005985012,
+        "rad": 38746.96,
+        "srh": 35617690,
+        "auger": 1327.983
+      },
+      "dmgL": {
+        "domainUm2": 0.00001500002,
+        "rad": 98.768,
+        "srh": 226496.2,
+        "auger": 2.414354
+      },
+      "total": {
+        "rad": 38845.728,
+        "srh": 35844186.2,
+        "auger": 1330.397354,
+        "all": 35884362.325354,
+        "radiativeSharePercent": 0.10825252417138159,
+        "srhSharePercent": 99.88804001868633,
+        "augerSharePercent": 0.0037074571422995896
+      },
+      "note": "Only region-integrated QW4 recombination share, not whole-MQW IQE or EQE; physical injection/material audit still pending."
     }
   },
   "latestObservedEvent": {
     "date": "2026-10-09",
     "worker": "이택규",
-    "source": "user discussion and previously recorded QW3 5V_TEST 2D integration + published sources",
-    "status": "PROPOSED_MODEL_PLAUSIBILITY_AUDIT_WITH_VERIFIED_QW3_INTEGRALS",
-    "event": "QW3 recombination-based radiative share 0.0454257% is very low but not device IQE or evidence of an invalid LED. NtSide0, Clean accounts ~99.717% of integrated QW3 SRH and ~99.75% of area. Need effective SRH/radiative physics and electrical injection verification before diagnosis."
+    "source": "user Sentaurus Visual Field Integration screenshots for 5V_TEST clean and DmgL QW4",
+    "status": "OBSERVED_QW4_COMPLETE_2D_INTEGRAL_QW1_QW2_PENDING",
+    "event": "6 independent QW4 2D Clean and DmgL Rrad/SRH/Auger values, derived QW4-only radiative recombination share 0.1082525242%, not total MQW IQE."
   },
   "projectAFabricationFeasibility20261009": {
     "status": "PROPOSED_RESEARCH_ROUTE_COMPARISON_NOT_APPROVED",

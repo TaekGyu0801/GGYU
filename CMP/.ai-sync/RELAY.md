@@ -1,3 +1,5 @@
+## 2026-10-09 이택규 handoff: 5V_TEST at Clean_QW4 same (x,y)=(0.244864017914,0.651958341615): Rrad=7.103015017104e18, SRH=1.681575471039e22, Auger=1.238545872618e15 cm^-3 s^-1. Pointwise radiative share ~0.0422%, not device IQE. Check spatial integrated MQW rates and effective SRH/material parameters next. NtSide=0 does not disable all SRH. Preserve outputs; no solver edits.
+
 ## 2026-10-09 — 5V copied Half+Coarse SDevice finished; postprocessing/validation now first (이택규 / ChatGPT)
 
 - OBSERVED: user terminal `JUSUBIN_FAST_HALF_5V_TEST/n2_des.log` shows final anode 5.000 V, total current 1.448E-11 in output units, `Curve trace finished`, `Sentaurus Device simulation finished`, `Good Bye !` 2026-10-09 14:29:52 KST. Wallclock 10596.76 s, peak memory 2.97 GB. `n2_5V_ckpt_des.sav`, circuit checkpoint, `n2_des.tdr` written. No active pp2 in `ps`; pp6/pp12 references still observed.

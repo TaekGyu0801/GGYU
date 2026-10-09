@@ -560,7 +560,7 @@
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "Read-only SDE 105–128 to inspect documented Mg concentration rationale, then examine 5V Clean_pGaN free-hole density and ionized Mg profile in n2_des.tdr. Keep current source intact.",
+    "next": "Inspect SVisual n2_des.tdr hDensity in central Clean_pGaN at known final 5V, then pMagnesiumMinusConcentration/0V comparator for original 300K calibration; do not alter Mg input or rerun.",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
@@ -1372,14 +1372,23 @@
       },
       "priorJuSubinMeshDopingScreen": "Signed DopingConcentration color approx -9.59e18..+5e18 cm^-3 (not a carrier density cutline)",
       "next": "Read sed -n '105,128p' pp1_dvs.cmd for Mg concentration rationale; then probe Clean_pGaN hDensity and pMagnesiumMinusConcentration in n2_des.tdr."
+    },
+    "mgCalibrationSourceComment20261009": {
+      "status": "OBSERVED_SOURCE_COMMENT_NOT_REVERIFIED",
+      "comment": "Mg concentration calibrated previously in this project so that hDensity ~ 3e17 cm^-3 at 300 K with incomplete ionization",
+      "N_Mg_p_cm3": 9590000000000000000,
+      "intendedHoleDensityCm3": 300000000000000000,
+      "actualHoleDensityMeasured": false,
+      "exactHistoricalCalibrationBiasUnknown": true,
+      "next": "Use existing n2_des.tdr SVisual hDensity to probe Clean_pGaN away from interfaces, confirm bias/units and optional ionized Mg; for target equilibrium inspect 0V data if available."
     }
   },
   "latestObservedEvent": {
     "date": "2026-10-09",
     "worker": "이택규",
-    "status": "OBSERVED_SDE_NUMERIC_DOPING_CONSTANTS_AND_MG_IONIZATION_SEMANTIC_GAP",
-    "source": "user actual pp1_dvs.cmd grep, and JuSubin TIMELINE mesh visualization note",
-    "event": "In 5V_TEST pp1_dvs.cmd: N_Mg_p=9.59e18 cm^-3, N_A_EBL=3e17, N_D_n=5e18, N_D_bar=1e15, x_In=0.15, x_Al_EBL=0.15. Mg input 9.59e18 is NOT the free-hole or ionized acceptor density; COMMON_BASELINE documented effective 3e17 must be checked with output pMagnesiumMinusConcentration/hDensity. No evidence of input error yet."
+    "status": "OBSERVED_SDE_COMMENT_PRIOR_MG_CALIBRATION_TARGET_NOT_MEASURED",
+    "source": "user terminal sed pp1_dvs.cmd lines 105-128",
+    "event": "Actual SDE comment says Mg input N_Mg_p=9.59e18 was previously calibrated so hDensity~3e17 cm-3 at 300K with incomplete ionization; this is code comment rather than currently verified hole-density measurement."
   },
   "projectAFabricationFeasibility20261009": {
     "status": "PROPOSED_RESEARCH_ROUTE_COMPARISON_NOT_APPROVED",

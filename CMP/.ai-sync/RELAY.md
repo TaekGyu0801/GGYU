@@ -1,3 +1,10 @@
+## 2026-10-09 11:33 KST — Copied Half 5V Node2 submitted/running in SWB
+- OBSERVED SWB Project Log screenshot for `JUSUBIN_FAST_HALF_5V_TEST`: preprocess initialized; Node2 submitted for local execution; ready -> pending -> running; SDevice job 2 started 11:33:14 Oct9 2026. This confirms startup only, not solver convergence, ongoing process, or 5V reached.
+- Preflight copy+readable archive, pp2 Goal5.0V/FinalTime1.0 and Grid/NtSide=0 previously passed. Other pp6 and pp12 running concurrently on same account.
+- NEXT: in copied folder check `ps -fu semi437 | grep '[s]device'`, `ls -lh --full-time n2_des.log`, `tail -n 20 n2_des.log`; do NOT Clean Up Node, rerun F7, or disturb original/other jobs.
+
+---
+
 ## 2026-10-09 — pp2 5V not running; other jobs active (이택규)
 - OBSERVED `ps` on semi437: PID 69457 pp6_des.cmd since Oct04, PID 93915 pp12_des.cmd since Oct06; no pp2_des.cmd. Copied 5V_TEST `n2_des.log` is original completed 0.3V smoke (mtime Oct9 01:39:13, wallclock 25019.43s, peak 2.61GB, Good Bye); **NOT** a 5V result.
 - SWB screenshot showed 5V_TEST open with SDE→SDEVICE, NtSide=0; no active node2 run in process evidence. Clean Up Node not needed, risks clearing inherited results. Tested pre5V tar archive readable and pp2 preprocessed FinalTime1.0 Goal5V Grid n1_msh NtSide0 verified.

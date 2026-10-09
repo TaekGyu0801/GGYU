@@ -1,3 +1,8 @@
+## 2026-10-09 — CMP naming/version policy confirmed by 이택규 (DECISION)
+
+- Use `CMP_<TYPE>_<MAJOR.MINOR.PATCH>_<TAG>` for new project candidates; see `CMP/PROJECT_NAMING_CONVENTION.md`. New proposed Baseline candidate: `CMP_BASELINE_1.2.0_CAL`, not yet an existing simulation. PROJECTA/B have independent version histories; preserve parent Baseline provenance and NtSide run metadata.
+- Existing 5V_TEST private artifact filenames and sizes confirmed in server shell; no new code or simulation generated. Retain the previous completed 5 V NtSide0 run and pre5V archive.
+
 ## 2026-10-08 — 주수빈 Half+coarse SDevice QS 가속 시험 후보
 
 - 작업자: 주수빈; 상태: PROPOSED / CODE STATIC PASS; 런타임 미검증.

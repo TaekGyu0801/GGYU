@@ -1,3 +1,10 @@
+## 2026-10-09 — Half 5V test copy marker check passed (이택규 / ChatGPT)
+- OBSERVED `JUSUBIN_FAST_HALF_SWB/.project` and `JUSUBIN_FAST_HALF_5V_TEST/.project` both exist as zero-byte files (Oct 8 16:58) per user terminal. Copy's SDevice source previously matched original with `cmp`.
+- SWB GUI open, tool-flow nodes, and independent project path remain UNVERIFIED; marker alone is not full recognition proof.
+- NEXT: open `JUSUBIN_FAST_HALF_5V_TEST` from SWB Projects list or project open menu, check screenshot. No Run/F7 or code edits. Preserve original.
+
+---
+
 
 
 ## 2026-10-09 — Filesystem copy exists; SWB open not yet checked

@@ -1118,3 +1118,7 @@ old-vs-current 20.1× slowdown 결론은 철회하고, stage identification 전�
 - Last log attempts at t=0.0643488 to 0.0643505 then terminated `Step-size less than MinStep (step-size = 8.3986e-07)`.
 - QS runtime 18417.09 s but did NOT reach goal. Cannot compare as speedup to original transient that reached 0.3 V in 25019.43 s.
 - Root numerical/physics trigger not yet established. Next: inspect QS log around lines 6900-7000 and `n2_des.err`; no blind MinStep or baseline modification.
+
+
+## 2026-10-09 — QS Copy nonlinear convergence failure mechanism
+- OBSERVED: last QS Copy step failed after 15 iterations, with large oscillating Newton residuals (RHS up to ~1.26e8); following cutback 8.3986e-7 below min 1e-6. Hence QS stopped near 0.0193046363V; this is not a valid 0.3V runtime result. Underlying numeric/physical cause UNRESOLVED. E0 material model mismatch warning appears but direct causal connection unproven. Original half transient completed 0.3V; baseline equivalence not validated.

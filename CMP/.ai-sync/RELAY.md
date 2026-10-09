@@ -1,3 +1,9 @@
+## 2026-10-10 — User requires professor reproducibility through SWB-native code+parameter editors
+
+이택규 live `grep` on cloned CAL SDEVICE: line22 `Parameters = "FASTC1_pp6_des.par"`, line68 `DefaultParametersFromFile`. This nonstandard direct filename means professors copying only SWB SDE/SDevice code would not necessarily have required GaN Mg and InGaN SRH overrides. Official Sentaurus SWB docs endorse common `sdevice.par` / `@parameter@` expansion with preprocessing. Plan **not yet executed**: first inspect any existing cloned `sdevice.par` (possibly default Silicon), then move actual custom blocks into it preserving originals and alter cloned SDevice File line to `Parameters="@parameter@"`; preprocess and verify `ppN_des.par` and effective log before any solver run. Presentation handoff requires three text inputs + NtSide and validation, not two files. Preserve finished reference, custom .par backup and parent result.
+
+---
+
 ## 2026-10-10 — Separate CAL project cloned in SWB (OBSERVED / NOT RUN)
 
 Worker 이택규 provided screenshot showing `CMP_BASELINE_1.2.0_CAL` in SWB, SDE→SDEVICE and NtSide=0, with `--` tool results; parent project still listed separately. Actual new source and parameter contents remain unchecked. Next verify new project file inventory, then install private candidate .par only in new clone and preprocess/short smoke. Do not claim CAL simulation has run or lifetime override is active.

@@ -1240,3 +1240,11 @@
 - OBSERVED only: these four files exist. Content/provenance and suitability for high-bias 5V have not yet been fully reviewed. Background SVisual job reported Done (no simulation failure implied).
 - PROPOSED (not yet executed by user): safely copy directory with guard to `JUSUBIN_FAST_HALF_5V_TEST`, check copied SDevice source with `cmp`; next verify actual SWB project association before changing any deck or launching.
 - Do not assume filesystem copy automatically creates an independently recognized SWB project; original full reference and 0.3V smoke remain protected. Never blindly replace Goal without checking FinalTime/step controls and high-bias stability.
+
+
+## 2026-10-09 — Half 5V test directory copied; SWB recognition pending
+- 작업자: 이택규 / 상태: OBSERVED (terminal), UNRESOLVED (SWB project opened)
+- User running shell appears C-shell-like: earlier provided Bash `if [ ! -e ... ]; then` led to `if: Expression Syntax.` and `then/fi: Command not found.` No basis to treat those syntax errors as file copy failure.
+- A standalone `cp -a JUSUBIN_FAST_HALF_SWB JUSUBIN_FAST_HALF_5V_TEST` was issued. `ls -ld JUSUBIN_FAST_HALF_5V_TEST` confirms copied folder exists. `cmp JUSUBIN_FAST_HALF_SWB/sdevice_des.cmd JUSUBIN_FAST_HALF_5V_TEST/sdevice_des.cmd` produced no output, verifying those two files are byte-identical.
+- This is NOT yet verified as a SWB-opened project. SWB project recognition depends on copy of hidden `.project` metadata (described in Sentaurus Workbench User Guide, N-2017.09); check `ls -la` and `.project` in original/copy. If project metadata present, use SWB Projects browser to open or `swb /path/to/project &` for a separate view; no simulation launch.
+- Preserve original smoke and QS Copy; copied test must remain separate and unmodified until SWB registration and inputs validated.

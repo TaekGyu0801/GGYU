@@ -560,7 +560,7 @@
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "Read-only PLT I-V parser/parameter reference check, then recombination fields and full-vs-half equivalence. Preserve saved 5V results.",
+    "next": "Check FASTC1_pp6_des.par and actual pp2_des.cmd Physics/Plot/AreaFactor; then analyze n2_des.tdr physical recombination and 2D current normalization",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
@@ -737,14 +737,75 @@
       "areaFactorSearch": "grep on pp2_des.cmd printed no matching AreaFactor; pp2_des.par file does not exist",
       "currentNormalizationVerified": false,
       "next": "Read-only parse n2_des.plt voltage/current rows and inspect actual Parameters reference/*.par before assigning A/cm2; protect files"
+    },
+    "postRunIVExtraction20261009": {
+      "status": "OBSERVED_1023_PLT_ROWS",
+      "rowCount": 1023,
+      "rowWidth": 17,
+      "remainder": 0,
+      "firstAnodeVoltageV": 0,
+      "lastAnodeVoltageV": 5,
+      "finalAnodeTotalCurrentRaw": 1.44801646079583e-11,
+      "sampledPairsRaw": [
+        [
+          0,
+          -9.34556980161972e-27
+        ],
+        [
+          0.503368864993221,
+          5.81275673304787e-15
+        ],
+        [
+          1.00336886499322,
+          6.13100514338505e-15
+        ],
+        [
+          1.50336886499322,
+          7.84214693612489e-15
+        ],
+        [
+          2.00336886499322,
+          1.31567117783539e-14
+        ],
+        [
+          2.50336886499322,
+          2.84645414227297e-14
+        ],
+        [
+          3.00336886499322,
+          3.17582117791696e-14
+        ],
+        [
+          3.50336886499322,
+          3.28516927136479e-14
+        ],
+        [
+          4.00336886499322,
+          3.50552134304176e-14
+        ],
+        [
+          4.50336886499322,
+          3.69335070901735e-13
+        ],
+        [
+          5,
+          1.44801646079583e-11
+        ]
+      ],
+      "fullSeriesMonotonicityChecked": false,
+      "currentUnitAndAreaFactorVerified": false,
+      "parameterReferenceFromPreprocessedCmd": "FASTC1_pp6_des.par",
+      "parameterFileFound": true,
+      "parameterContentsInspected": false,
+      "derivedConclusion": "Numerically complete sampled IV only; normal LED operation and IQE unverified",
+      "next": "Inspect active parameter contents and Physics/Plot settings; confirm radiative coefficient and 2D current semantics before physical inference."
     }
   },
   "latestObservedEvent": {
     "date": "2026-10-09",
     "worker": "이택규",
-    "source": "user shell ls -lh --full-time, head n2_des.plt, grep AreaFactor",
-    "event": "Confirmed fresh 5V output files and DF-ISE PLT voltage/current dataset schema. pp2_des.par absent, no AreaFactor match in pp2_des.cmd",
-    "status": "OBSERVED_OUTPUTS_PRESENT_IV_AUDIT_PENDING",
-    "physicalBaselineValidated": false
+    "source": "user awk 17-field n2_des.plt, pp2_des.cmd and par listing",
+    "status": "OBSERVED_5V_IV_EXTRACTED_CURRENT_PHYSICS_PENDING",
+    "event": "Parsed 1023 full rows, 0-5V, raw anode final TotalCurrent 1.44801646079583E-11, located FASTC1_pp6_des.par parameter target. Emission and current normalization unresolved."
   }
 }

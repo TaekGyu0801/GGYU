@@ -1286,3 +1286,9 @@ Evidence: user's last-row DF-ISE awk and `cat FASTC1_pp6_des.par`, grep of execu
 
 - New 2D SVisual `DmgL_QW3` SRH Integral=1.655249e3 [s^-1 um^-1], Domain=1.500002e-05 um²; compare same Dmg region Rrad=0.526818. NtSide=0 trap-off condition, generic SRH() active; no causal attribution. `Clean_QW3` SRH pending.
 - **Next**: Field `srhRecombination` standalone `Clean_QW3` and Start Integration; send Region of Dimension 2, Integral, Domain. Then Auger for same standalone Clean and DmgL and sum; verify normalized 2D ratio before broader 4-QW IQE. Keep current data intact.
+
+## 2026-10-09 — QW3 DmgL Auger spatial integral measured (OBSERVED)
+
+- 이택규 supplied direct SVisual Field Integration screenshot for completed `JUSUBIN_FAST_HALF_5V_TEST/n2_des`: `AugerRecombination` `Regions of Dimension 2: DmgL_QW3 (InGaN)`; `Integral=5.774334e-02 [s^-1*um^-1]`, `Domain=1.500002e-05 [um^2]`.
+- Prior directly observed same-region 2D Radiative `0.526818`, SRH `1655.249` [s^-1 um^-1] and same Domain. Therefore DmgL_QW3 has all 3 regional integrals and SRH dominates *this segment*. At `NtSide=0`, generic SRH remains active; do NOT attribute to parameterized edge traps or infer full QW/device IQE.
+- The earlier request was `Clean_QW3` SRH; user instead measured DmgL_QW3 Auger, which is useful and preserved. Still missing standalone `Clean_QW3` SRH and Auger for full QW3 radiative-vs-nonradiative integration. Clean_QW3 Radiative=265.711 [s^-1 um^-1]. NEXT: switch field `srhRecombination` + select only standalone `Clean_QW3` + Start Integration, screenshot. Then `AugerRecombination` + standalone `Clean_QW3`, repeat. No code edits or rerun.

@@ -1,3 +1,12 @@
+## 2026-10-09 — Transient versus QS settings checked (이택규 / ChatGPT)
+- OBSERVED original `JUSUBIN_FAST_HALF_SWB/pp2_des.cmd` and QS Copy pp2: both startup Poisson Coupled 500 with LineSearchDamping=1e-2, initial carriers Coupled 100, sweep inner Coupled Iterations=15; ErrRef e/h 1e4, RHSMin=1e-3. So lack of QS sweep damping is NOT a unique QS-vs-original difference.
+- Original Transient controls InitialStep 1e-5, MinStep 1e-9, MaxStep 1e-3, Increment 1.2; QS InitialStep .03, MinStep 1e-6, MaxStep .15, Increment 1.5, Decrement 2.0. Different time semantics; direct numerical comparison invalid.
+- QS stopped Newton nonconvergence near 0.019304636V; original transient completed 0.3V. No change applied to TCAD sources.
+- Noted discrepancy: header comments in original preprocessed deck mention 0–4.0V and 4.0–5.0V; actual completed smoke log was 0.3V. Inspect executable original Goal and full Solve in pp2 lines 583–615 instead of extrapolating from comments.
+- Underlying root cause still unresolved; preserve baseline and both branches. Next: verify original Goal/step block, then design an isolated QS stability test only if justified.
+
+---
+
 ## 2026-10-09 — QS Copy actual Math/Solve controls inspected (이택규 / ChatGPT)
 - Exact preprocessed QS deck (user terminal): `ErrRef(e/h)=1e4, RHSMin=1e-3, CheckRhsAfterUpdate, Transient=BE, ExtendedPrecision(80), Blocked/ILS(set=22)`; initialization Poisson 500 iterations + `LineSearchDamping=1e-2`, startup carrier coupled 100 iterations; QS Goal 0.3V, `InitialStep=.03, MinStep=1e-6, MaxStep=.15, Increment=1.5, Decrement=2`, inner coupled Poisson/Electron/Hole `Iterations=15` (no explicit damping).
 - Observed failure: Newton 15 iter, nonconvergent RHS at 0.019304636V; step cutback below MinStep. Underlying root cause UNRESOLVED. Damping within QS is a **proposal**, not yet verified fix.

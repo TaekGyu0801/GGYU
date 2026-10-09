@@ -1261,3 +1261,9 @@ Evidence: user's last-row DF-ISE awk and `cat FASTC1_pp6_des.par`, grep of execu
 2. First verified operation: keep final `n2_des.tdr` open; choose RadiativeRecombination; SVisual Tools > Integrate (∫dr), Region/Material tab choose Clean_QW3 only, Full/Complete Domain, Start Integration; screenshot Integral AND Domain units. No code edit, cleanup or rerun.
 3. After confirming SVisual's exact 2D output and region selector, integrate `srhRecombination` and `AugerRecombination` in the same QW, then QW1..4 and associated `DmgL_QW*` portions as intended by full-QW physical region definition. Check sign convention and physical current normalization.
 4. Compute IQE_rec as sum of *integrals* of Rrad divided by sum of all three types of integrals; local point percentages, averaging local fractions and selecting only pristine Clean wells are not device IQE. Compare NtSide=0 and nominal damaged NtSide=1e18 at matched current after model validation.
+
+## 2026-10-09 — SVisual Field Integration QW region scope clarified (PROPOSED, pending output)
+
+- 이택규 screenshot shows choices `Clean_QW3` and `Clean_QW3+DmgL_QW3` in Field Integration selector. For full physical QW3 recombination accounting in current Half model, select `Clean_QW3+DmgL_QW3` as a single combined group, not both it and `Clean_QW3` (would double count).
+- `Clean_QW3` alone excludes the QW3 damaged sidewall; still useful later for separate core-vs-edge attribution. `NtSide=0` deactivates parameterized sidewall traps but the DmgL_QW3 geometric region still exists.
+- This is a selection decision, NOT an executed/verified integral. Next capture chosen field `RadiativeRecombination`, selected group, numerical Integral/Domain and actual 2D units; verify group region membership before claiming whole-well total. Repeat same group for SRH/Auger, and other QWs before IQE computation. Keep comparison scope consistent for full/fine and damaged NtSide=1e18 branches.

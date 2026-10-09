@@ -1,3 +1,10 @@
+## 2026-10-10 — CMP_BASELINE_1.2.0_CAL input package prepared locally, not yet executed (PROPOSED / STATIC PASS)
+
+- Worker 이택규 supplied live T-2022.03 MaterialDB/InGaN.par 855–925: explicit GaAs-origin warning, Scharfetter taumin=0/taumax=1e-9 both electrons/holes, Nref=1e16, gamma=1, Auger A=1e-30, Radiative C=2e-10. Consistent with private completed 5V TDR audit.
+- AI locally created **private** downloadable `CMP_BASELINE_1.2.0_CAL_INPUT_CANDIDATE.zip` containing unchanged parent `sde_dvs.cmd`, only-comment-corrected parent `sdevice_des.cmd`, appended `Material="InGaN" { Scharfetter { taumin=0; taumax=1e-7 electron/hole; Nref=1e16; gamma=1; ... }}` custom `FASTC1_pp6_des.par` preserving lattice, thermionic, GaN Mg, and README. SDevice executable lines identical. ZIP verification PASS. Private candidate .par SHA256 adfe81ab03b8f0ca84b09b9a4373fdc8e71f7a5faa00ce01a7c0b82b7fb2f1ad. No new solver run or SWB preprocessing/clone yet.
+- Material Scharfetter override syntax supported by Sentaurus training, but effectiveness with user's local T-2022.03 is UNTESTED. Do not write vendor MaterialDB or original parent; next recommended SWB `Project > Save As > Clean Project` into CMP_BASELINE_1.2.0_CAL, then copy candidate sources in cloned project only, preprocess, and create truly SHORT Transient-BE smoke by changing sweep Goal to <=0.3V in a second experimental copy; the distributed sdevice_des.cmd is a FULL 5V source, NOT a smoke.
+- 100ns is literature-motivated sensitivity, not measured GaN/InGaN lifetime. Publication full/half, J normalization and injection gates remain open.
+
 ## 2026-10-10 — 5V parent code/HDF5 audit results (OBSERVED/DERIVED), CAL 1.2.0 NOT RUN
 
 - Worker 이택규 uploaded 9-file private archive; independent source/log/PLT/HDF5 review documented in `CMP/reviews/BASELINE_1_2_0_CAL_AUDIT_20261010.md`. 5V Transient finished normally (~2h56m36s), mesh 65513 vertices. Actual Solve was single 0–5 V Increment1.2, Save only at 5V; contrary to source comments about staged 1.05 and intermediate saves.

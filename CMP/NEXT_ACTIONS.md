@@ -1030,3 +1030,9 @@ Common Baseline Final 통과 후에만:
 - QS Copy: confirmed Newton failure after 15 iterations and repeated step reduction near 19.3 mV, stopping at MinStep. Do not change common physics/mesh or rerun without numerical cause review.
 - Inspect actual QS `pp2_des.cmd` Math / Solve (`RHSMin`, `Digits`, `NotDamped`, `LineSearchDamping`, `Extrapolate`, `Coupled`, QS step settings) and original transient deck for controlled diff.
 - Decide whether to prioritize original successful transient reference and higher-bias/physics checks versus separate numerical-only QS solver sensitivity pilot. No speedup claim allowed.
+
+
+## 2026-10-09 — QS Copy active preprocess settings checked
+- OBSERVED from semi437 `JUSUBIN_FAST_HALF_SWB_Copy/pp2_des.cmd` grep supplied by Lee Taekgyu: Quasistationary begins line 589 (InitialStep=0.03, MinStep=1e-6, MaxStep=0.15). QS Coupled has `Iterations=15` line 601; Math `RHSMin=1e-3` line 510. Earlier `Coupled(Iterations=500, LineSearchDamping=1e-2)` around 570-572 appears in initial solve, another initial Coupled Iterations=100 at line 578.
+- OBSERVED final QS failed Newton after 15 iterations and rejected halved step below MinStep; 0.0193046363 V last accepted. Specific nonlinear divergence trigger remains UNRESOLVED.
+- Need inspect full surrounding Math/Solve 505-610 before attributing nonconvergence to damping, iteration cap, or other solver options. Avoid changing frozen Common Baseline, preserved transient results, or rerunning blindly.

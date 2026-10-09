@@ -484,3 +484,11 @@ Do not change baseline physics parameters while diagnosing this.
 - Interpretation: QS sweep did not complete normally at goal; `Good Bye` and saves are not proof of reaching 0.3 V. Last accepted voltage/underlying Newton or cutback failure is **not yet verified**.
 - Contrast: original half+coarse transient reached 0.3 V, wallclock 25019.43 s. Run durations are NOT a valid speed benchmark with different end conditions.
 - Next: inspect QS last accepted anode bias in final `n2_des.plt` record, repeated rejected steps in `n2_des.log`, and the full `.err` output. Preserve both branches and Common Baseline before proposing solver changes.
+
+
+## 2026-10-09 — QS Copy last accepted bias determined
+- 작업자: 이택규. OBSERVED from user-provided `JUSUBIN_FAST_HALF_SWB_Copy/n2_des.plt` tail and `n2_des.log` grep.
+- Last recorded QS pseudo-time: 6.43487876313307E-02; last anode OuterVoltage: 1.93046362893992E-02 V (0.0193046363 V; 19.3 mV, only ~6.435% of requested 0.3 V).
+- Last log attempts at t=0.0643488 to 0.0643505 then terminated `Step-size less than MinStep (step-size = 8.3986e-07)`.
+- QS runtime 18417.09 s but did NOT reach goal. Cannot compare as speedup to original transient that reached 0.3 V in 25019.43 s.
+- Root numerical/physics trigger not yet established. Next: inspect QS log around lines 6900-7000 and `n2_des.err`; no blind MinStep or baseline modification.

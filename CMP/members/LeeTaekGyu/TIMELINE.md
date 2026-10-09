@@ -1,3 +1,9 @@
+## 2026-10-10 — CAL par backup made, 100ns InGaN override still absent (OBSERVED)
+
+- 이택규 server shell executed `cp -p /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/FASTC1_pp6_des.par /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/FASTC1_pp6_des.par.bak_1ns` without error (copy command returned to shell; backup existence not independently listed).
+- Subsequent `grep -n -A 10 'Material = "InGaN"' /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/FASTC1_pp6_des.par` returned no matching lines: no literal material override exists in cloned .par at inspection time. Thus the manual 100ns SRH override has **NOT** yet been applied; previous successful 5V parent remains separate.
+- Next: append only `Material="InGaN"/Scharfetter` block to cloned .par, `taumax=1e-7s` both carriers with other defaults unchanged; keep existing GaN Mg/Thermionic/Lattice definitions; save, recheck grep then SWB preprocessing/short smoke before full run. No simulation result or parameter effect confirmed.
+
 ## 2026-10-10 — User opted for manual CAL parameter copy/paste instead of ZIP transfer (PROPOSED / NOT YET APPLIED)
 
 - User shell found `~/CMP_BASELINE_1.2.0_CAL_INPUT_CANDIDATE.zip` missing on school server. This is only a transfer gap, not a TCAD error.

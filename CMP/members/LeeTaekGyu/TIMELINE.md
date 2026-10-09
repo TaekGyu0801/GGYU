@@ -1,3 +1,9 @@
+## 2026-10-10 — CAL InGaN override STILL absent from server .par (OBSERVED)
+
+- Worker 이택규 executed read-only absolute path `tail -n 18 /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/FASTC1_pp6_des.par`. Output showed end of existing GaN Mg Ionization Species block and final closing braces only. No appended `Material = "InGaN"` / Scharfetter override appears at EOF.
+- Prior errors in home directory resulted from wrong current directory and accidentally pasting terminal prompt/output; no TCAD syntax error or simulation failure evidenced.
+- Assistant asked worker to return to MobaTextEditor editing live candidate par, Ctrl+End, append the InGaN Scharfetter tau_max=1e-7s both-carrier block, Ctrl+S and approve upload, then repeat read-only absolute-path tail. There is no evidence edit/save occurred yet. Keep original completed 5V_TEST and clone backup untouched; do not preprocess/run until file verified.
+
 ## 2026-10-10 — Windows archive viewer mistaken for active CAL source path (OBSERVED / CORRECTED)
 
 - Worker 이택규 shared screenshot of Windows File Explorer within MobaXterm RemoteFiles temporary view of `CMP_BASELINE_1.2.0_CAL_AUDIT.tar`, displaying archived `FASTC1_pp6_des.par` and other old 5V files. This is **not** the editable live SWB candidate directory. No manual edit of the live 100ns parameter was evidenced by this screenshot.

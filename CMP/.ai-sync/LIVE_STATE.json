@@ -560,7 +560,7 @@
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "SVisual Clean_QW3+DmgL_QW3 2D region-scope SRH and Auger field integrals; then QW1,QW2,QW4 and full IQE_rec. Preserve data.",
+    "next": "Use SVisual field srhRecombination with standalone 2D Clean_QW3 region and Start Integration. Then AugerRecombination in same Clean_QW3. DmgL_QW3 three measured integrals available.",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
@@ -970,15 +970,24 @@
       "fullQw3SrhMeasured": false,
       "fullQw3AugerMeasured": false,
       "iqeVerified": false,
-      "next": "In SVisual integrate srhRecombination in standalone 2D Clean_QW3 and DmgL_QW3, then Auger for same 2D regions; extend to all QWs."
+      "next": "Use SVisual field srhRecombination with standalone 2D Clean_QW3 region and Start Integration. Then AugerRecombination in same Clean_QW3. DmgL_QW3 three measured integrals available.",
+      "dmgLQw3Auger": {
+        "region": "DmgL_QW3(InGaN)",
+        "dimension": 2,
+        "integral": 0.05774334,
+        "unit": "s^-1 um^-1",
+        "domainUm2": 0.00001500002
+      },
+      "cleanQw3SrhMeasured": false,
+      "cleanQw3AugerMeasured": false
     }
   },
   "latestObservedEvent": {
     "date": "2026-10-09",
     "worker": "이택규",
-    "source": "user screenshot of SVisual Field Integration for standalone DmgL_QW3; earlier Clean_QW3 screenshot",
-    "status": "OBSERVED_2D_FULL_QW3_RAD_INTEGRAL_SUM_AVAILABLE",
-    "event": "DmgL_QW3 Radiative Integral=0.526818 s^-1 um^-1, Domain=1.500002e-05 um2; Clean_QW3=265.711 s^-1 um^-1, Domain=0.005985012 um2; independent sum 266.237818 s^-1 um^-1 over area 0.00600001202 um2. SRH/Auger not integrated."
+    "source": "user SVisual Field Integration screenshot for AugerRecombination DmgL_QW3",
+    "status": "OBSERVED_DmgL_QW3_ALL_THREE_RATE_INTEGRALS",
+    "event": "DmgL_QW3 Auger 5.774334e-02 s^-1 um^-1, Domain 1.500002e-05 um2; same-region Rrad 0.526818, SRH 1655.249, so SRH dominates there. Clean_QW3 SRH and Auger still missing."
   },
   "projectAFabricationFeasibility20261009": {
     "status": "PROPOSED_RESEARCH_ROUTE_COMPARISON_NOT_APPROVED",

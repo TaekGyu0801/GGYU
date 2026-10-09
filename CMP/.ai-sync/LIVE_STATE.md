@@ -1,3 +1,9 @@
+## 2026-10-09 — CMP naming confirmed, next candidate CMP_BASELINE_1.2.0_CAL (DECISION / PROPOSED RUN)
+
+- User confirmed naming standard `CMP_<TYPE>_<MAJOR.MINOR.PATCH>_<TAG>`, canonical policy `CMP/PROJECT_NAMING_CONVENTION.md`, replacing preliminary name `CMP_BASELINE_CAL_V1`. Version histories are independent per family; `CAL` denotes intended calibration scope, not completed validation.
+- In live `JUSUBIN_FAST_HALF_5V_TEST`, user `ls -lh` confirmed presence of 9 private source/input/mesh/log/TDR/PLT files needed to inspect the completed 5V NtSide0 run, but original contents were not uploaded to this chat. No new project or simulation launched.
+- Next: private input archive → active physics/material/current review → separated parameter-only pilot → short Transient BE smoke → NtSide0/1e18 5 V comparison; keep Full/Half+mesh equivalence and scientific calibration gates before baseline freeze.
+
 ## 2026-10-09 — 이택규 CMP_BASELINE_CAL_V1 preparation chosen (PROPOSED; NOT RUN)
 
 - Keep 12 MB pre5V tar.gz backup in place per user decision. Preserve completed JUSUBIN_FAST_HALF_5V_TEST NtSide0 5V transient result and original full/fine reference.

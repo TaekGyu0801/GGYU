@@ -560,7 +560,7 @@
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "Use SVisual field srhRecombination with standalone 2D Clean_QW3 region and Start Integration. Then AugerRecombination in same Clean_QW3. DmgL_QW3 three measured integrals available.",
+    "next": "SVisual QW1/2/4 separate region Rrad/SRH/Auger integrations; establish full 4-QW ratio, audit SRH lifetimes and nonzero optical coefficients, matched-current full/fine and NtSide=1e18.",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
@@ -934,7 +934,7 @@
       "iqeDeviceVerified": false
     },
     "qwIntegration20261009": {
-      "status": "OBSERVED_CLEAN_AND_DMG_QW3_RADIATIVE_2D_INTEGRALS",
+      "status": "OBSERVED_ALL_QW3_RRAD_SRH_AUGER_2D_INTEGRALS",
       "basis": "PROJECT_AB_PRE_RUN_AUDIT.md G5 and metric definition, older/newer Sentaurus Visual User Guide Field Integration",
       "firstAction": "SVisual Tools > Integrate or right ∫dr icon, select RadiativeRecombination and Region/Material Clean_QW3 only, Complete Domain, Start Integration; screenshot integral and domain units",
       "after": "integrate SRH, Auger for each QW and physical Dmg edge QW as needed, sum recombination integrals; 2D unit and area-factor validation mandatory",
@@ -970,7 +970,7 @@
       "fullQw3SrhMeasured": false,
       "fullQw3AugerMeasured": false,
       "iqeVerified": false,
-      "next": "Use SVisual field srhRecombination with standalone 2D Clean_QW3 region and Start Integration. Then AugerRecombination in same Clean_QW3. DmgL_QW3 three measured integrals available.",
+      "next": "Do standalone Clean and DmgL Rrad/SRH/Auger 2D integrals for QW1, QW2, QW4; then full 4-well recombination IQE from summed integrals. Audit material parameters and 2D normalization.",
       "dmgLQw3Auger": {
         "region": "DmgL_QW3(InGaN)",
         "dimension": 2,
@@ -978,16 +978,44 @@
         "unit": "s^-1 um^-1",
         "domainUm2": 0.00001500002
       },
-      "cleanQw3SrhMeasured": false,
-      "cleanQw3AugerMeasured": false
+      "cleanQw3SrhMeasured": true,
+      "cleanQw3AugerMeasured": true,
+      "cleanQw3Srh": {
+        "region": "Clean_QW3(InGaN)",
+        "integral": 584161.1,
+        "unit": "s^-1 um^-1",
+        "domainUm2": 0.005985012,
+        "dimension": 2
+      },
+      "cleanQw3Auger": {
+        "region": "Clean_QW3(InGaN)",
+        "integral": 12.65704,
+        "unit": "s^-1 um^-1",
+        "domainUm2": 0.005985012,
+        "dimension": 2
+      },
+      "fullQw3HalfSum": {
+        "radiative": 266.237818,
+        "srh": 585816.349,
+        "auger": 12.71478334,
+        "sum": 586095.30160134,
+        "unit": "s^-1 um^-1",
+        "radiativeSharePercent": 0.045425687131867516,
+        "srhSharePercent": 99.95240490743095,
+        "augerSharePercent": 0.0021694054371806846,
+        "cleanSrhSharePercent": 99.71744574851392,
+        "scope": "5 V, NtSide=0, QW3 Clean plus DmgL only; not whole MQW/device IQE"
+      },
+      "wholeQw3IqeVerified": "recombination-based integrated QW3 ratio only; physical model validation and full-device IQE still pending",
+      "fullDeviceIQEVerified": false
     }
   },
   "latestObservedEvent": {
     "date": "2026-10-09",
     "worker": "이택규",
-    "source": "user SVisual Field Integration screenshot for AugerRecombination DmgL_QW3",
-    "status": "OBSERVED_DmgL_QW3_ALL_THREE_RATE_INTEGRALS",
-    "event": "DmgL_QW3 Auger 5.774334e-02 s^-1 um^-1, Domain 1.500002e-05 um2; same-region Rrad 0.526818, SRH 1655.249, so SRH dominates there. Clean_QW3 SRH and Auger still missing."
+    "source": "user two SVisual Field Integration screenshots for Clean_QW3 SRH and Auger plus previously recorded independent QW3 region integrals",
+    "status": "OBSERVED_QW3_ALL_RADIATIVE_SRH_AUGER_INTEGRALS_DERIVED_QW3_ONLY_RATIO",
+    "event": "Clean_QW3 SRH 584161.1 and Auger 12.65704 s^-1 um^-1, with known Rad 265.711; DmgL_QW3 known Rad 0.526818 SRH 1655.249 Auger 0.05774334. Full 2D Half QW3 rad 266.237818, SRH 585816.349, Auger 12.71478334. Derived QW3 0.0454256871% recombination-based fraction, not full-device IQE."
   },
   "projectAFabricationFeasibility20261009": {
     "status": "PROPOSED_RESEARCH_ROUTE_COMPARISON_NOT_APPROVED",

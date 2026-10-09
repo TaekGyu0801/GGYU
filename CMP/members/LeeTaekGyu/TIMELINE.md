@@ -1399,3 +1399,8 @@
 
 - 이택규 provided screenshot from Sentaurus Visual `JUSUBIN_FAST_HALF_5V_TEST` with widened Regions Name column. Visible named regions: `Clean_EBL`, `Clean_QW1`, `Clean_QW2`, `Clean_QW3`, `Clean_QW4`, `Clean_nGaN`. This confirms the four clean QW **region labels are present in SVisual**, not that radiative rate within each is positive. Prior screenshot displayed a positive spatial `RadiativeRecombination` field (legend max 7.483e19 cm^-3 s^-1) without mapping it to individual named QWs.
 - NEXT: keep RadiativeRecombination selected; zoom thin upper active stack in SVisual, probe local numeric values with explicit Clean_QW1..4 region identification, then review SRH/Auger and QW integration. Do not clean/re-run Node2, claim IQE, or modify original full baseline.
+
+## 2026-10-09 — 5V_TEST SVisual active-stack zoom; point sampling next (OBSERVED)
+
+- 이택규 screenshot: `n2_des` final SVisual `RadiativeRecombination` selected; left Regions table visibly lists `Clean_EBL`, `Clean_QW1`, `Clean_QW2`, `Clean_QW3`, `Clean_QW4`, `Clean_nGaN`, with Clean_QW3 row highlighted. Zoomed upper multilayer active stack shows horizontally layered nonuniform radiative colors; legend global max 7.483e19 cm^-3 s^-1, min near zero. The selected row alone does not assign each colored band to a known QW; no individual QW numeric Probe value measured yet.
+- Read-only NEXT: use SVisual Probe toolbar to click inside a thin QW layer. Probe pane Var Values contains RadiativeRecombination point value and Cell Info can identify containing region, allowing QW1..4 assignment; continue to SRH/Auger and integrated rates after sampling. No solver/code change and no assertion of IQE.

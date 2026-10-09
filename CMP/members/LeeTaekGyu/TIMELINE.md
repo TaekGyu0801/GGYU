@@ -1,3 +1,9 @@
+## 2026-10-09 — Actual Mg ionization log confirmed; exploratory Half test vs Full gate discussed (OBSERVED / PROPOSED)
+
+- Worker 이택규 provided real `JUSUBIN_FAST_HALF_5V_TEST/n2_des.log` excerpt lines 818-842: effective GaN Mg acceptor species `pMagnesiumActiveConcentration` has `E_0=0.2 eV`, `alpha=8e-9 eV cm`, `beta=0`, `gamma=1`, `g=4`, `Xsec=1e-14 cm^2`, `Xsec_formula=1`, `highdop_formula=1`, `b_Nref=6e18 cm^-3`, `b_pow=2`, `E_Nref=2e18 cm^-3`, `E_pow=2`. Separate `vanOverstraetendeMan impact ionization E0` message concerns a different process, not Mg incomplete ionization.
+- Earlier user excerpt of actual log confirms `With incomplete ionization` on `Clean_pGaN` and `DmgL_pGaN` and automatic net doping recalculation. MgMinus field's equality with raw Mg in one SVisual Probe is still unexplained; physical calibration not frozen.
+- User asks whether to skip full vs half comparison and proceed with next runs. Recommendation (PROPOSED, not user-approved execution): exploratory NtSide=1e18 Half+Coarse pilot may proceed in a separate copy after preprocess/short smoke with same physics, without waiting for comprehensive Full/Half equivalence; however publication-grade final baseline/A/B production MUST check full-vs-half current normalization, spatial QW/edge quantities and separate mesh-convergence because Half+Coarse changes two variables. Keep finished NtSide=0 and full/fine reference untouched. No TCAD run/source edits occurred in this chat.
+
 ## 2026-10-09 — Full GaN Mg ionization parameter block from active 5V_TEST (OBSERVED)
 
 - Worker 이택규 supplied `sed -n '20,55p' FASTC1_pp6_des.par`: `Material="GaN" / Ionization / Species("pMagnesiumActiveConcentration")` has `E_0=0.2`, `alpha=8e-9`, `g=4.0`, `Xsec=1.0e-14`. All four declared coefficients are present in actual referenced parameter file.

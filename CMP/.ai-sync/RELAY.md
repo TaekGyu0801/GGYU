@@ -1,3 +1,13 @@
+## 2026-10-10 — Crucial CAL audit evidence and recommended experiment for Claude/next AI
+
+Actual privately uploaded successful JUSUBIN_FAST_HALF_5V_TEST 5V archive has been inspected. See public-safe `CMP/reviews/BASELINE_1_2_0_CAL_AUDIT_20261010.md` before suggesting any new code. Key computational evidence: eight 5V InGaN QW Clean/Dmg regions show exactly Rrad=Bnp with B=2e-10, Auger=A np(n+p) with A=1e-30, and SRH=np/[tau(n+p)] with tau=1ns, computed from HDF5 fields. The 0.10947% four-well model radiative share is not calibrated LED IQE. pGaN occupation*MgActive equals ionized -DopingConcentration (effective ~3e17 at some locations), so previous MgMinus raw field did NOT prove incomplete ionization inactive. Last 5V raw current 1.448e-11 with provisional J much lower than 0.1A/cm2; scaling unverified.
+
+Actual SDevice code has SINGLE 0–5V Transient Increment=1.2 and single 5V Save; header claims 4,4.5,4.8 saves and highbias Increment1.05 but source does not implement them. 5V save was written on server but omitted from private upload. Need fix code/header consistency and verify same-current spatial snapshot availability before long reruns.
+
+Proposed SRH material sensitivity is **NOT** a physically fitted baseline. Literature Baek et al Nat Comm 2023 DOI 10.1038/s41467-023-36773-w chose 100ns, B=1e-10, Auger=1e-31 in a DIFFERENT Silvaco six-well epitaxy. First read actual installed T-2022.03 InGaN.par Scharfetter section and official material override syntax, preserve GaN Mg/LatticeParameters/Thermionic. Then isolated copy `CMP_BASELINE_1.2.0_CAL` with SRH-only sensitivity, short Transient smoke -> 5V NtSide0 -> NtSide1e18 with same physics and current comparison. Full-vs-Half numerical equivalence + J normalization remain final gates. Do not claim Claude was contacted directly; use this handoff for any later AI. No new TCAD solver run or code modifications.
+
+---
+
 ## 2026-10-09 — Canonical naming adopted and 5V_TEST file inventory verified (DECISION/OBSERVED)
 
 - Worker 이택규: new future Baseline candidate is **`CMP_BASELINE_1.2.0_CAL`**, not `CMP_BASELINE_CAL_V1`. Official policy `CMP/PROJECT_NAMING_CONVENTION.md`: `CMP_<TYPE>_<MAJOR.MINOR.PATCH>_<TAG>`, independent A/B lineages, NtSide is a run variable.

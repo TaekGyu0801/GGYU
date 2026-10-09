@@ -1,3 +1,11 @@
+## 2026-10-09 — InGaN.par actually uses GaAs-derived uncalibrated recombination model parameters (이택규)
+
+- **OBSERVED** live file line ~868 warning `Parameters for the recombination models below were taken from GaAs and require calibration for accurate simulations`. Scharfetter taumin=0, taumax=1e-9 s, Nref=1e16 cm^-3, gamma=1; Auger A=1e-30 cm6/s; Radiative C=2e-10 cm3/s. MaterialDB InGaN.par has been parsed according to earlier `n2_des.log`, but effective alloy parameters and overrides remain unverified.
+- 5V_TEST Half+Coarse NtSide0 four-QW `IQE_rec=0.1094747566%` from 2D integrals is not a validated InGaN LED physical IQE, and GaAs-borrowed coefficients are an explicit **physical calibration blocker**, not the established only root cause. SRH remains on, 2D current injection very low/unverified.
+- NEXT read-only `sed -n '945,970p' n2_des.log`, `sed -n '270,310p' n2_des.log`, audit alloy/material mixing/effective coefficients, J normalization, then literature calibration BEFORE any new physics branch. Protect baseline and outputs.
+
+---
+
 ## 2026-10-09 — All four InGaN QW integrated Rrad/SRH/Auger complete (이택규)
 
 - Latest user SVisual Clean_QW1 (Rrad=857.9041, SRH=77658.39, Auger=252.5448) and DmgL_QW1 (Rrad=19.46374, SRH=496.6036, Auger=2.309115) [s^-1 um^-1] confirm last missing well. Derived QW1 total Rrad=877.36784, SRH=78154.9936, Auger=254.853915, well ratio=1.1065691%.

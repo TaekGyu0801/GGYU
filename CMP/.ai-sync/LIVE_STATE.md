@@ -1163,3 +1163,16 @@ The original synchronized SDevice2 deck contains `SRHRecombination`; the fact th
 - 이택규 observed `n2_des.log` physical model block around lines 330–350: SRH/Auger/Radiative active; SRH has no field/doping/temperature lifetime dependence, Surface-Recombination off; line `Use Si parameters` has **unresolved** material/device-scope meaning.
 - Assistant provided Bash `DB=...` and `for ...; do` but user terminal is C-shell family (likely csh/tcsh); all those MaterialDB grep attempts failed with Command not found/Undefined variable, no parameter numbers obtained. This is a command-syntax guidance error, not Sentaurus failure; no files changed.
 - NEXT: run `grep -niE 'SRH|Radiative|Auger|taun0|taup0|Scharfetter' /user/tools/synopsys/sentaurus/T-2022.03/tcad/current/lib/sdevice/MaterialDB/InGaN.par | head -n 70`; review actual values/sections and context, compare GaN/InN only as necessary; do not modify model until effective parameter check.
+
+## 2026-10-09 — Read-only InGaN.par recombination section located (OBSERVED, values not yet inspected)
+
+- Worker 이택규 ran csh/tcsh-compatible command in the 5V_TEST directory:
+  `grep -niE 'SRH|Radiative|Auger|taun0|taup0|Scharfetter' /user/tools/synopsys/sentaurus/T-2022.03/tcad/current/lib/sdevice/MaterialDB/InGaN.par | head -n 70`
+- Actual output:
+  `870:Scharfetter * relation and trap level for SRH recombination:`
+  `883:Auger * coefficients:`
+  `884:{ * R_Auger = ( C_n n + C_p p ) ( n p - ni_eff^2)`
+  `893:RadiativeRecombination * coefficients:`
+  `894:{ * R_Radiative = C (n p - ni_eff^2)`
+- This confirms only the **section/comment locations** in InGaN.par, **not** any numerical SRH lifetimes or Auger/Radiative coefficients. No effective QW parameter values or physical cause of low MQW radiative ratio established. Avoid claiming that parameters are absent, zero or correct merely from these comment matches.
+- NEXT READ-ONLY csh/tcsh-compatible command: `sed -n '855,925p' /user/tools/synopsys/sentaurus/T-2022.03/tcad/current/lib/sdevice/MaterialDB/InGaN.par`. Inspect comments, actual material coefficients, and presence of interpolation or inherited defaults. If material file is only a ternary placeholder, inspect InN.par and GaN.par plus effective SDevice log; compare bias/carrier injection before any correction. No code changes or rerun.

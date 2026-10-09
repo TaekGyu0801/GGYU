@@ -444,7 +444,14 @@
     "goal0p3VReached": "NOT_VERIFIED",
     "lastAcceptedVoltage": "PENDING_PLT_CHECK",
     "comparison": "Do not infer QS speedup against original half transient 25019.43s, which reached 0.3V",
-    "next": "Extract final accepted voltage from n2_des.plt; examine final accepted/rejected QS steps and n2_des.err before adjusting solver settings"
+    "next": "Extract final accepted voltage from n2_des.plt; examine final accepted/rejected QS steps and n2_des.err before adjusting solver settings",
+    "lastAcceptedVoltageV": 0.0193046362893992,
+    "lastRecordedPseudoTime": 0.0643487876313307,
+    "goalVoltageV": 0.3,
+    "completionFraction": 0.0643487876313307,
+    "lastAttemptedStepSize": 8.3986e-7,
+    "diagnosticNext": "Inspect n2_des.log 6900-7010 and n2_des.err for convergence failure mechanism",
+    "reportedOutcome": "0.3 V QS goal NOT reached"
   },
   "halfTransientRun20261009": {
     "project": "JUSUBIN_FAST_HALF_SWB",

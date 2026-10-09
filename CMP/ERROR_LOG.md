@@ -492,3 +492,9 @@ Do not change baseline physics parameters while diagnosing this.
 - Last log attempts at t=0.0643488 to 0.0643505 then terminated `Step-size less than MinStep (step-size = 8.3986e-07)`.
 - QS runtime 18417.09 s but did NOT reach goal. Cannot compare as speedup to original transient that reached 0.3 V in 25019.43 s.
 - Root numerical/physics trigger not yet established. Next: inspect QS log around lines 6900-7000 and `n2_des.err`; no blind MinStep or baseline modification.
+
+
+### 2026-10-09 confirmed failure mechanism (OBSERVED) — QS Copy
+- Final failed QS step t=0.0643488 to 0.0643505 (1.6797e-6): Newton Bank/Rose `Coupled` Poisson+electron+hole factor=1, |Rhs| nonmonotonic (from 3.80e1, peaks to 1.26e8, last 1.85e6); `#iterations larger than 15` after 208.16 s (assembly 41.26, solve 161.58). Then half-step retry proposed at 8.3986e-7, smaller than MinStep 1e-6; QS stops.
+- `.err` contains `vanOverstraetendeMan` E0 isotropic 1 vs anisotropic 4e5 mismatch; only isotropic value used. No basis to attribute QS Newton failure to this warning. Also InGaN region DOS mass material interpolation lines.
+- CONFIRMED immediate cause: Newton not converged at iteration limit and next cutback below MinStep. UNRESOLVED root cause of poor conditioning/divergence. No evidence that blindly lowering MinStep fixes issue.

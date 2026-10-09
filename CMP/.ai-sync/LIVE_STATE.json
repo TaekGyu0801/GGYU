@@ -560,7 +560,7 @@
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "Read actual pp2 region/global Physics and log context; verify 2D units and In0.15 effective coefficients; short pilot only after physics audit. No solver/source edit today.",
+    "next": "Read sed -n '112,175p' pp2_des.cmd and sed -n '505,615p' pp2_des.cmd, then validate trap concentrations/all-region scope and bias ramp/hold. No code edits or rerun.",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
@@ -1283,14 +1283,43 @@
       ],
       "decision": "No original geometry rewrite; pause long production, read-only audit, then controlled calibrated short-run separate branch before final baseline.",
       "next": "Read actual pp2 region/global Physics and log context; verify 2D units and In0.15 effective coefficients; short pilot only after physics audit. No solver/source edit today."
+    },
+    "livePp2PhysicsGrep20261009": {
+      "status": "OBSERVED_DECLARATIONS_PENDING_SCOPE_VALUES",
+      "incompleteIonizationLines": [
+        128,
+        137
+      ],
+      "trapRegionDeclarationStartLines": [
+        141,
+        161,
+        181,
+        201,
+        221,
+        241,
+        261,
+        281,
+        301,
+        321,
+        341,
+        361
+      ],
+      "transientBELine": 515,
+      "transientSolveLine": 585,
+      "areaFactorStringFound": false,
+      "quasistationaryStringFound": false,
+      "activeNtSide0TrapConcentrationVerified": false,
+      "incompleteIonizationRegionVerified": false,
+      "steadyState5VVerified": false,
+      "next": "Read sed -n '112,175p' pp2_des.cmd and sed -n '505,615p' pp2_des.cmd, then validate trap concentrations/all-region scope and bias ramp/hold. No code edits or rerun."
     }
   },
   "latestObservedEvent": {
     "date": "2026-10-09",
     "worker": "이택규",
-    "status": "REVIEWED_LITERATURE_BASELINE_PHYSICS_CALIBRATION_AND_RERUN_GATES",
-    "source": "User n2_des.log 945-970 and 270-310 plus vendor InGaN.par and peer-reviewed Kou 2019/Nature Communications 2023",
-    "event": "Existing InGaN MaterialDB GaAs-derived carrier lifetime 1ns vs independent microLED papers using 100ns, with exact effective alloy params and 2D J unverified. No geometry rebuild supported. Need calibrate separate branch only after physics/current audit; full MQW 5V recombination ratio 0.1094747566% not final physical baseline."
+    "status": "OBSERVED_LIVE_PP2_REGION_IONIZATION_TRAPS_BE_TRANSIENT_DECLARATIONS",
+    "source": "user terminal sed pp2 lines 55-110 and grep for ionization/traps/BE/AreaFactor in pp2 and FASTC1 parameter file",
+    "event": "pp2 region-specific IncompleteIonization at lines 128/137, Traps at lines 141-361, Transient=BE at 515 and Transient( at 585. No AreaFactor or Quasistationary matched. Region trap concentration and incomplete ionization actual scope not yet checked; 5V transient finish is not steady-state proof."
   },
   "projectAFabricationFeasibility20261009": {
     "status": "PROPOSED_RESEARCH_ROUTE_COMPARISON_NOT_APPROVED",

@@ -1,3 +1,9 @@
+## 2026-10-10 — Windows archive viewer mistaken for active CAL source path (OBSERVED / CORRECTED)
+
+- Worker 이택규 shared screenshot of Windows File Explorer within MobaXterm RemoteFiles temporary view of `CMP_BASELINE_1.2.0_CAL_AUDIT.tar`, displaying archived `FASTC1_pp6_des.par` and other old 5V files. This is **not** the editable live SWB candidate directory. No manual edit of the live 100ns parameter was evidenced by this screenshot.
+- Corrected workflow: use MobaXterm live SFTP navigator to `/user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/`, open `FASTC1_pp6_des.par` there; preserve existing GaN Mg and append InGaN Scharfetter 100ns only in cloned candidate. Do not edit prior 5V audit tar contents or original completed project.
+- Next: screenshot SFTP live folder/editor, verify target path before change; later grep/SWB preprocess and short transient smoke. No run started.
+
 ## 2026-10-10 — Exact cloned CAL .par current contents read before edit (OBSERVED)
 
 - Worker 이택규 used cd to the cloned SWB project `/user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL` and ran `cat FASTC1_pp6_des.par` on live server. File contains only `LatticeParameters { X=(0,0,-1); Y=(1,0,0) }`, `Thermionic { Formula=1 }`, and `Material="GaN" { Ionization { Species("pMagnesiumActiveConcentration") { E_0=0.2; alpha=8e-9; g=4; Xsec=1e-14 } } }`.

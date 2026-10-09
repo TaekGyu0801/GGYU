@@ -1,3 +1,9 @@
+## 2026-10-10 — CAL clone InGaN Scharfetter 100ns saved on school server (OBSERVED)
+
+- Worker 이택규 ran `tail -n 15 /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/FASTC1_pp6_des.par`; actual output now includes newly appended `Material = "InGaN" { Scharfetter { taumin = 0,0; taumax = 1e-7,1e-7; Nref = 1e16,1e16; gamma = 1,1; Talpha = 0,0; Tcoeff = 0,0; Etrap = 0; } }` after existing GaN block.
+- Therefore **remote cloned .par file modification is observed**, not merely proposed. Original successful 5V_TEST, new cloned SDE/SDevice source and central MaterialDB remain untouched as far as visible. No SWB preprocessing, runtime log confirmation of material-specific override, pilot or 5V CAL run yet. Trailing '}' with no newline is minor formatting, not automatically a syntax error.
+- Independent archived successful parent `sdevice_des.cmd` references `Parameters = "FASTC1_pp6_des.par"` and `Grid="@tdr@"`; new cloned copy previously matched parent hash. Need validate exact new active deck with read-only grep then SWB preprocess of cloned project, correct physics recognition, and separate truly short Transient-BE smoke before full 5V.
+
 ## 2026-10-10 — CAL InGaN override STILL absent from server .par (OBSERVED)
 
 - Worker 이택규 executed read-only absolute path `tail -n 18 /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/FASTC1_pp6_des.par`. Output showed end of existing GaN Mg Ionization Species block and final closing braces only. No appended `Material = "InGaN"` / Scharfetter override appears at EOF.

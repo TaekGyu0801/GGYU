@@ -560,7 +560,7 @@
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "CANCEL input-generation dialog in original SWB. Read-only compare active project file/parameter references and confirm preexisting custom FASTC1 .par, doping/mesh, effective materials and 2D J. New independent calibration clone only; short NtSide0 pilot, trap on, half-full checks after gates.",
+    "next": "Read active pp1_dvs.cmd SDE doping profile definitions/placements for Magnesium and n donors, then verify n1_msh.tdr doping spatial maps and 2D electrical current normalization; preserve 5V_TEST.",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
@@ -1312,14 +1312,54 @@
       "incompleteIonizationRegionVerified": false,
       "steadyState5VVerified": false,
       "next": "Read sed -n '112,175p' pp2_des.cmd and sed -n '505,615p' pp2_des.cmd, then validate trap concentrations/all-region scope and bias ramp/hold. No code edits or rerun."
+    },
+    "sidewallTrapOffVerification20261009": {
+      "status": "VERIFIED_ALL_12_OFF_PREPROCESSED_DECK",
+      "file": "pp2_des.cmd",
+      "condition": "NtSide=0, 5V test",
+      "names": [
+        "DmgL_pGaN",
+        "DmgL_EBL",
+        "DmgL_Barrier0",
+        "DmgL_QW1",
+        "DmgL_Barrier1",
+        "DmgL_QW2",
+        "DmgL_Barrier2",
+        "DmgL_QW3",
+        "DmgL_Barrier3",
+        "DmgL_QW4",
+        "DmgL_Barrier4",
+        "DmgL_nGaN"
+      ],
+      "concValues": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "magnesiumIncompleteIonizationRegions": [
+        "Clean_pGaN",
+        "DmgL_pGaN"
+      ],
+      "dopingPlacementValidated": false,
+      "bulkSrhStillOn": true,
+      "damagedNtSide1e18RunVerified": false
     }
   },
   "latestObservedEvent": {
     "date": "2026-10-09",
     "worker": "이택규",
-    "status": "OBSERVED_SWB_MISSING_PROJECT_SDEVICE_PAR_DIALOG_DISTINCT_FROM_FINISHED_5V_TEST",
-    "source": "SWB screenshot of original JUSUBIN_FAST_HALF_SWB and Synopsys Workbench manual; previous user n2_des.log and GitHub timeline",
-    "event": "Create Parameter File in original JUSUBIN_FAST_HALF_SWB shows missing sdevice.par and Silicon default, which is not proof 5V_TEST used Silicon. Choose Materials can generate copies from MaterialDB; must not overwrite custom FASTC1 parameters or regard GaN-only as sufficient for InGaN/AlGaN LED. Cancel original dialog; clone finished 5V_TEST for calibration."
+    "status": "VERIFIED_ALL_12_ACTIVE_DECK_NTSIDE0_SIDEWALL_TRAP_CONCENTRATIONS_ZERO",
+    "source": "user grep of completed JUSUBIN_FAST_HALF_5V_TEST/pp2_des.cmd",
+    "event": "All twelve preprocessed DmgL sidewall regions (pGaN EBL Barrier0..4 QW1..4 nGaN) have Trap Conc=0 at NtSide=0; Mg IncompleteIonization declared in Clean_pGaN and DmgL_pGaN. Generic bulk SRH remains active. Next SDE Mg/donor doping placement."
   },
   "projectAFabricationFeasibility20261009": {
     "status": "PROPOSED_RESEARCH_ROUTE_COMPARISON_NOT_APPROVED",

@@ -560,7 +560,7 @@
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "In copied SWB select SDevice Node 2, Ctrl+P only, then grep preprocessed pp2_des.cmd for Transient, FinalTime, Voltage and FilePrefix. Do not F7 yet.",
+    "next": "Archive copied 5V test project before F7 to protect old n2 outputs; verify archive and inspect Grid/Parameter/Conc/solver preprocess. No run yet.",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
@@ -619,6 +619,20 @@
       "Verify Grid and parameter/trap substitutions",
       "Preserve copied n2 output files from prior 0.3V run",
       "Validate no stale/cross-project output pointers"
-    ]
+    ],
+    "oldCopiedOutputsObserved": true,
+    "oldCopiedOutputSizes": {
+      "n1_msh_tdr": "1.6M",
+      "n2_des_log": "1.1M",
+      "n2_des_plt": "412K",
+      "n2_des_tdr": "15M"
+    },
+    "oldCopiedOutputTimestamps": {
+      "n2": "2026-10-09 01:39 KST",
+      "mesh": "2026-10-08 18:08 KST"
+    },
+    "fiveVNewResults": "NOT_RUN",
+    "preRunBackupStatus": "PENDING_USER_COMMAND",
+    "preprocessedGridTrapAudit": "PENDING_USER_GREP"
   }
 }

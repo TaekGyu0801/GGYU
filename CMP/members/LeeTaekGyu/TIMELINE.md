@@ -1,3 +1,8 @@
+## 2026-10-09 — User asks to clean pre5V archive and choose near-final next run (PROPOSED)
+
+- 이택규 screenshot shows SWB project `JUSUBIN_FAST_HALF_5V_TEST` and second entry text truncated `JUSUBIN_FAST_HALF_5V_TEST_pre5V_20261009.tar.g...`, likely a pre-5V `.tar.gz` backup archive, not another simulation node. Filename suffix, archive contents, storage redundancy not yet checked. Recommendation: do NOT delete until listing and a recovery copy are independently verified; use read-only `ls -lh .../JUSUBIN_FAST_HALF_5V_TEST_pre5V_20261009.tar*` first.
+- User wants another nearly-final Baseline run. Proposed next: preserve completed 5V NtSide0 and source; clone independent branch and review actual effective InGaN SRH/Radiative/Auger and electrical current/AreaFactor/injection BEFORE choosing a justified parameter-only calibration; short NtSide0 transient smoke then 5V with fixed geometry and repeat NtSide1e18 with identical physics if passed. Full/Half+coarse numerical equivalence required before final/publishable claims; avoid failed QS method. No TCAD writes, deletion, or run performed.
+
 ## 2026-10-09 — Daily verified outcomes and near-final baseline run request (OBSERVED + PROPOSED)
 
 - Worker 이택규 requested recap of October 9 work and expressed preference to run a near-final baseline candidate rather than spend more days on preliminary checks. This is intent, not permission to modify source or evidence of a run.

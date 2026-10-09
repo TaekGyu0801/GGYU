@@ -1306,3 +1306,9 @@ Evidence: user's last-row DF-ISE awk and `cat FASTC1_pp6_des.par`, grep of execu
 2. Confirm electrical J(V) using 2D contact normalization, half-domain physical width and any AreaFactor; raw final terminal current 1.448e-11 in plot units may be very low. Verify QW e/h distributions at matched current (QW3 point eDensity ~1.386e14, hDensity ~4.508e11 cm^-3, NOT region representative). Check polarity, polarization, EBL/injection and existing thermionic solver.
 3. Continue separate 2D Rrad/SRH/Auger integrals for all 4 QWs (Clean+DmgL) then compute recombination-based full MQW IQE (do NOT treat QW3 0.0454257% as device IQE). Distinguish lateral mesa Dmg sidewall vs vertical QW/Barrier interface, and confirm if any real interface trap was configured before blaming boundary SRH.
 4. Only after physics and injection gates, compare NtSide0 vs nominal damage NtSide1e18 and full/half mesh at matched bias and same current; production A/B NO-GO until verified. No code change requested this turn.
+
+## 2026-10-09 — QW4 complete 2D Clean+DmgL integration result and follow-up
+
+- OBSERVED from 6 distinct 2D field-region values: Clean_QW4 Rad=38746.96, SRH=35617690, Auger=1327.983; DmgL_QW4 Rad=98.768, SRH=226496.2, Auger=2.414354 [s^-1 um^-1]. Combined QW4 Rad=38845.728, SRH=35844186.2, Auger=1330.397354, fraction IQE_rec,QW4=0.1082525242% **QW4 only**. QW3 previously 0.0454256871%.
+- NEXT: QW1 and QW2 six standalone-region (Clean and DmgL) 2D integrals each; then sum all 4 wells and calculate whole-MQW recombination ratio. Keep separate field Domain verification; do not use plus-named interfaces as 2D regions.
+- Critical before final Baseline: effective SRH/radiative parameters, current-density normalization, physical injection/transient state, half/coarse vs full/fine and nominal NtSide1e18 damaged sidewall comparison. Preserve existing SDevice files and results.

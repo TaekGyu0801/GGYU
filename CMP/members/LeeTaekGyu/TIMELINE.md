@@ -1,3 +1,9 @@
+## 2026-10-09 — Full GaN Mg ionization parameter block from active 5V_TEST (OBSERVED)
+
+- Worker 이택규 supplied `sed -n '20,55p' FASTC1_pp6_des.par`: `Material="GaN" / Ionization / Species("pMagnesiumActiveConcentration")` has `E_0=0.2`, `alpha=8e-9`, `g=4.0`, `Xsec=1.0e-14`. All four declared coefficients are present in actual referenced parameter file.
+- Earlier pp2 command declared `IncompleteIonization` for Clean_pGaN and DmgL_pGaN, and SVisual Probe returned Clean_pGaN hDensity≈3.001343e17 while MgActive=MgMinus=9.59e18 cm^-3. Effective ionization, output dataset semantics, and material model calibration remain UNRESOLVED. No parameter changes or simulation runs.
+- Next: inspect relevant Sentaurus T-2022.03 reference syntax and output variable definitions; evaluate simulation field's meaning before assuming fully ionized Mg. Preserve baseline.
+
 ## 2026-10-09 — 5V_TEST custom GaN Mg ionization coefficients observed
 
 - 이택규 user terminal grep on actual `FASTC1_pp6_des.par`: `Material = "GaN" { Ionization { Species ("pMagnesiumActiveConcentration") { E_0 = 0.2; alpha = 8e-9` (lines 24-32). More lines are not yet shown; units, degeneracy and effective model still require confirmation.

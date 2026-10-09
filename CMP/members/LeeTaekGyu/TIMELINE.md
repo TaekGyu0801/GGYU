@@ -1456,3 +1456,8 @@
 - 이택규 screenshot shows choices `Clean_QW3` and `Clean_QW3+DmgL_QW3` in Field Integration selector. For full physical QW3 recombination accounting in current Half model, select `Clean_QW3+DmgL_QW3` as a single combined group, not both it and `Clean_QW3` (would double count).
 - `Clean_QW3` alone excludes the QW3 damaged sidewall; still useful later for separate core-vs-edge attribution. `NtSide=0` deactivates parameterized sidewall traps but the DmgL_QW3 geometric region still exists.
 - This is a selection decision, NOT an executed/verified integral. Next capture chosen field `RadiativeRecombination`, selected group, numerical Integral/Domain and actual 2D units; verify group region membership before claiming whole-well total. Repeat same group for SRH/Auger, and other QWs before IQE computation. Keep comparison scope consistent for full/fine and damaged NtSide=1e18 branches.
+
+## 2026-10-09 — SVisual QW3 Rrad integral and ROI correction
+
+- 이택규 screenshot shows Clean_QW3(InGaN) only: RadiativeRecombination Integral=2.657110e+02 [s^-1 um^-1], Domain=5.985012e-03 [um^2], dimension 2. Full QW3 (including DmgL_QW3) not yet measured.
+- Prior guidance calling Clean_QW3+DmgL_QW3 a combined 2D QW region was not supported; it is likely an interface label. Safest next: independently select DmgL_QW3 (standalone name), press Start Integration, verify right output Regions of Dimension 2 DmgL_QW3, then add to Clean_QW3; same procedure SRH/Auger and other QWs. Preserve files. No device IQE yet.

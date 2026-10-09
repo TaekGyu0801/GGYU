@@ -560,7 +560,7 @@
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "Preserve final 5V data. Audit QW4 local SRH dominance mechanism and integration/QW1-4; no new run or baseline edits until source and physics gate.",
+    "next": "Run read-only SVisual Field Integration on Clean_QW3 RadiativeRecombination, verify integral and domain units, then per-QW SRH/Auger and all MQWs. No solver/source changes.",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
@@ -919,14 +919,34 @@
       "iqeDeviceVerified": false,
       "interpretation": "SRH dominates locally at this point; cannot infer whole-QW or device IQE. NtSide=0 sets damage-region trap concentration zero, not global SRH physics off.",
       "next": "Inspect SRH lifetimes and actual radiative coefficients, validate per-QW integrated Rrad/SRH/Auger, compare electrical injection/2D normalization and reference full/fine results."
+    },
+    "qw3CoLocated20261009": {
+      "status": "OBSERVED_SAME_POINT_LOCAL_ONLY",
+      "zone": "Clean_QW3(InGaN)",
+      "x": 0.219173763524,
+      "y": 0.555622585194,
+      "z": 0,
+      "units": "cm^-3 s^-1",
+      "radiative": 833361156895700,
+      "srh": 53901145301060000000,
+      "auger": 579338765.299,
+      "notIntegrated": true,
+      "iqeDeviceVerified": false
+    },
+    "qwIntegration20261009": {
+      "status": "PROPOSED_SVISUAL_OPERATION_NOT_YET_EXECUTED",
+      "basis": "PROJECT_AB_PRE_RUN_AUDIT.md G5 and metric definition, older/newer Sentaurus Visual User Guide Field Integration",
+      "firstAction": "SVisual Tools > Integrate or right ∫dr icon, select RadiativeRecombination and Region/Material Clean_QW3 only, Complete Domain, Start Integration; screenshot integral and domain units",
+      "after": "integrate SRH, Auger for each QW and physical Dmg edge QW as needed, sum recombination integrals; 2D unit and area-factor validation mandatory",
+      "noIQEUntilIntegral": true
     }
   },
   "latestObservedEvent": {
     "date": "2026-10-09",
     "worker": "이택규",
-    "source": "3 user-shared SVisual Probe panels at same x/y Clean_QW4(InGaN) on completed 5V_TEST n2_des",
-    "status": "OBSERVED_QW4_COLOCATED_RAD_SRH_AUGER_LOCAL_SRH_DOMINANT",
-    "event": "QW4 same-point Rrad 7.103015017104e18, SRH 1.681575471039e22, Auger 1.238545872618e15, Total 1.682285896396e22 per cm3-second; pointwise radiative fraction about 0.0422%, not device IQE."
+    "source": "user Clean_QW3 SVisual Probe screenshots and request for whole-QW integration",
+    "status": "OBSERVED_QW3_POINT_AND_INTEGRATION_PRIORITY_CONFIRMED",
+    "event": "QW3 5V same-point Rrad=8.333611568957e14, SRH=5.390114530106e19, Auger=5.79338765299e8 per cm3-second. User correctly requests per-QW spatial rate integration for IQE; no integrated rate measured yet."
   },
   "projectAFabricationFeasibility20261009": {
     "status": "PROPOSED_RESEARCH_ROUTE_COMPARISON_NOT_APPROVED",

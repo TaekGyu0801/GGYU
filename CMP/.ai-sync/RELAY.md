@@ -1,3 +1,11 @@
+## 2026-10-09 — QS Copy last voltage clarified (이택규 / ChatGPT)
+- OBSERVED: last saved `.plt` time 0.0643487876313307 and `anode OuterVoltage` 0.0193046362893992 V, only 6.435% of 0.3V goal.
+- UNRESOLVED blocker: SDevice QS reports `Step-size less than MinStep (8.3986e-07)` near t=0.06435; exact underlying solver issue unknown.
+- Read `sed -n '6900,7010p' n2_des.log` and `tail -n 40 n2_des.err` before editing or restarting.
+- Preserve original 0.3V transient and Common Baseline; QS elapsed time is not a fair speedup benchmark.
+
+---
+
 ## 2026-10-09 — QS Copy MinStep blocker (Lee Taekgyu; ChatGPT)
 - Project: `/user/semi/semi437/tmp/myproject/JUSUBIN_FAST_HALF_SWB_Copy`; distinct from completed transient original.
 - User-shared `n2_des.log`: `Finished, because... Step-size less than MinStep (step-size = 8.3986e-07)`; SDevice final `Good Bye !`, save + plot written, 18417.09 s (5:06:57), max memory 2.96 GB.

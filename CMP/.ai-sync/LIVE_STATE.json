@@ -1457,5 +1457,27 @@
     "sidewallTrapOn": "NtSide1e18_UNVERIFIED_IN_HALF_COARSE",
     "sidewallTrapOff": "NtSide0_5V_NORMAL_FINISH_AND_4QW_RECOMB_INTEGRALS_COMPLETED",
     "C2SaveLoad": "PENDING_SMOKE_VALIDATION"
+  },
+  "nearFinalBaselineCandidate": {
+    "date": "2026-10-09",
+    "worker": "이택규",
+    "name": "CMP_BASELINE_CAL_V1",
+    "status": "PROPOSED_NOT_RUN",
+    "parent": "JUSUBIN_FAST_HALF_5V_TEST",
+    "preserve": [
+      "original 5V completed NtSide0 source and results",
+      "pre5V_20261009.tar.gz backup",
+      "full/fine FAST_C1 references"
+    ],
+    "firstAction": "Obtain and inspect actual private successful 5V SDE/SDevice/custom parameter/preprocessed deck/mesh/log files before editing",
+    "validationGates": [
+      "actual effective InGaN SRH/Radiative/Auger and interpolation",
+      "2D current density AreaFactor and injection",
+      "short Transient-BE smoke before 5V",
+      "same-physics NtSide0/NtSide1e18 comparison",
+      "full-half-coarse equivalence before final freeze"
+    ],
+    "claudeHandoff": "See CMP/.ai-sync/RELAY.md; no Claude direct chat contacted",
+    "noSolverRunYet": true
   }
 }

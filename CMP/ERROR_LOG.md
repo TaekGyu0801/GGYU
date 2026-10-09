@@ -1,3 +1,7 @@
+## 2026-10-10 — Outdated SDevice comments falsely advertise numerical ramp/Save schedule (OBSERVED)
+
+- Source: private `CMP_BASELINE_1.2.0_CAL_AUDIT.tar.gz` inspection of successful 5V_TEST `sdevice_des.cmd` vs `pp2_des.cmd` and `n2_des.log`. Header claims 0–4V Increment1.2, 4–5V Increment1.05, Save at 4.0/4.5/4.8/5V; mid-Solve comment claims short 0–0.3V smoke. Actual executable has single 0–5V Transient Increment1.2 and Save at 5V only. Solver completed, so this is a **documentation/extraction/checkpoint-plan mismatch**, not a simulation failure. Intermediate 4–5V TDR coverage absent in active command. No source edited. Correct in a separate future CAL branch after preserving originals and verifying exact syntax.
+
 ## 2026-10-08 — cmp216 FAST_C1_ACCOUNT_TEST n6 logging stopped during new BE-step (OBSERVED / TERMINATION CAUSE UNRESOLVED)
 
 - OBSERVED incomplete log, **not a confirmed software error**: next BE-step printed iteration header but no iterations; subsequent grep found no `fatal`, `killed`, `aborted`, `signal`, `good bye`, or `simulation finished` report. Earlier grep `license` shows successful checkout Oct 7 16:22.

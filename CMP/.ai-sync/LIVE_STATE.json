@@ -560,7 +560,7 @@
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "Preserve outputs/checkpoints. Inspect complete n2_des.plt and area/current normalization, physical recombination/current sanity, full-versus-half mesh/symmetry equivalence. Then separately audit/run NtSide=1e18 nominal damaged reference. Project A/B production NO-GO.",
+    "next": "Read-only PLT I-V parser/parameter reference check, then recombination fields and full-vs-half equivalence. Preserve saved 5V results.",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
@@ -706,14 +706,45 @@
         "NtSide=1e18 damaged reference not run in this branch",
         "A/B research outcome not demonstrated"
       ]
+    },
+    "postRunArtifactCheck20261009": {
+      "status": "OBSERVED_FILES_AND_PLT_SCHEMA_PASS_CURRENT_NORMALIZATION_PENDING",
+      "files": [
+        {
+          "name": "n2_des.plt",
+          "reportedSize": "412K",
+          "timestamp": "2026-10-09T14:29:52+09:00"
+        },
+        {
+          "name": "n2_des.tdr",
+          "reportedSize": "16M",
+          "timestamp": "2026-10-09T14:29:53+09:00"
+        },
+        {
+          "name": "n2_5V_ckpt_des.sav",
+          "reportedSize": "3.2M",
+          "timestamp": "2026-10-09T14:29:50+09:00"
+        },
+        {
+          "name": "n2_5V_ckpt_circuit_des.sav",
+          "reportedSize": "306B",
+          "timestamp": "2026-10-09T14:29:50+09:00"
+        }
+      ],
+      "pltHeader": "DF-ISE text; 17 datasets incl time, anode/cathode OuterVoltage, eCurrent, hCurrent, TotalCurrent, DisplacementCurrent",
+      "pltRowsParsed": false,
+      "lastPltVoltageVerified": false,
+      "areaFactorSearch": "grep on pp2_des.cmd printed no matching AreaFactor; pp2_des.par file does not exist",
+      "currentNormalizationVerified": false,
+      "next": "Read-only parse n2_des.plt voltage/current rows and inspect actual Parameters reference/*.par before assigning A/cm2; protect files"
     }
   },
   "latestObservedEvent": {
-    "date": "2026-10-09T14:29:52+09:00",
+    "date": "2026-10-09",
     "worker": "이택규",
-    "source": "user terminal tail -n 40 n2_des.log",
-    "event": "JUSUBIN_FAST_HALF_5V_TEST Node2 NtSide=0 Half+Coarse Transient reached 5 V and terminated normally",
-    "status": "OBSERVED_SOLVER_COMPLETE",
+    "source": "user shell ls -lh --full-time, head n2_des.plt, grep AreaFactor",
+    "event": "Confirmed fresh 5V output files and DF-ISE PLT voltage/current dataset schema. pp2_des.par absent, no AreaFactor match in pp2_des.cmd",
+    "status": "OBSERVED_OUTPUTS_PRESENT_IV_AUDIT_PENDING",
     "physicalBaselineValidated": false
   }
 }

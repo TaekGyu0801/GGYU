@@ -1,3 +1,9 @@
+## 2026-10-10 — CAL clone source parity confirmed (OBSERVED)
+
+- User checked three SHA256 hashes in new CMP_BASELINE_1.2.0_CAL. Each exactly matches independently audited successful 5V_TEST parent: SDE, SDevice, custom .par.
+- New project has not received 100ns InGaN SRH candidate yet, and has not been preprocessed/run.
+- Next: transfer private ZIP from chat via SFTP and verify it on server; then safely install only new .par in clone, preprocess, short transient smoke.
+
 ## 2026-10-10 — CMP_BASELINE_1.2.0_CAL new SWB project visible (OBSERVED)
 
 - 이택규 SWB screenshot shows project `CMP_BASELINE_1.2.0_CAL` exists under `/user/semi/semi437/tmp/myproject/`, SDE→SDEVICE topology and one `NtSide=0` experiment. Both tool result cells are `--`, so no successful preprocess, mesh or SDevice runs evidenced. Completed parent JUSUBIN_FAST_HALF_5V_TEST remains listed.

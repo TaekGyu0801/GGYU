@@ -1,3 +1,9 @@
+## 2026-10-09 — 5V_TEST actual SDevice parameter path verified (OBSERVED)
+
+- User shell `grep` on active pp2_des.cmd and n2_des.log: pp2_des.cmd line 22 `Parameters = "FASTC1_pp6_des.par"`; line 68 `DefaultParametersFromFile`; n2_des.log line 291 ModelParameters same file; line 760 reads it, line 804 loads MaterialDB/GaN.par; Silicon.par is also loaded. `Use Si parameters` appears in generic default-device log; does NOT by itself prove GaN regions use silicon material physics.
+- Existing SVisual screenshot: Clean_pGaN hDensity ~3.001343e17, Mg active and Mg minus ~9.59e18 cm^-3; unresolved effective incomplete ionization and interpretation.
+- Next read-only inspect fast custom par and GaN material parameters for Mg doping ionization, without changing runs.
+
 ## 2026-10-09 — 5V_TEST Clean_pGaN SVisual Probe: hole density target matched (OBSERVED)
 
 - Worker: 이택규. User supplied screenshot of existing `JUSUBIN_FAST_HALF_5V_TEST/n2_des` SVisual Probe in region `Clean_pGaN(GaN)`, coordinate (x,y,z)=(0.0741335366319,1.00590269042,0) displayed in the viewer (coordinate units not independently confirmed).

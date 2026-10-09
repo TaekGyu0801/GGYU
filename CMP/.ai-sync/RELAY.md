@@ -1,3 +1,10 @@
+## 2026-10-09 — pp2 5V not running; other jobs active (이택규)
+- OBSERVED `ps` on semi437: PID 69457 pp6_des.cmd since Oct04, PID 93915 pp12_des.cmd since Oct06; no pp2_des.cmd. Copied 5V_TEST `n2_des.log` is original completed 0.3V smoke (mtime Oct9 01:39:13, wallclock 25019.43s, peak 2.61GB, Good Bye); **NOT** a 5V result.
+- SWB screenshot showed 5V_TEST open with SDE→SDEVICE, NtSide=0; no active node2 run in process evidence. Clean Up Node not needed, risks clearing inherited results. Tested pre5V tar archive readable and pp2 preprocessed FinalTime1.0 Goal5V Grid n1_msh NtSide0 verified.
+- NEXT: user may select copied project's SDevice Node2 only and F7 (if resource pressure from pp6/pp12 acceptable); inspect fresh `n2_des.log`, SWB View Output and convergence. No 5V launch confirmed as of last user terminal. Do not touch original SDE/other running jobs.
+
+---
+
 ## 2026-10-09 — 5V Half SWB preflight done, archive integrity pending (이택규)
 - OBSERVED user terminal: copied `JUSUBIN_FAST_HALF_5V_TEST` 12M snapshot archive `../JUSUBIN_FAST_HALF_5V_TEST_pre5V_20261009.tar.gz` exists (Oct9 11:25); `tar -tzf` integrity test not yet run.
 - Executable pp2: `Grid=n1_msh.tdr`, 12 printed `Conc=0` entries, RHSMin=1e-3, Coupled iterations startup=500/100, sweep=15. Prior pp2 confirmed Transient FinalTime=1.0 Goal anode=5.0 Save=n2_5V_ckpt. No 5V run observed yet.

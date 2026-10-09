@@ -560,7 +560,7 @@
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "Inspect 5V n2_des.tdr QW RadiativeRecombination numeric field and material radiative coefficient; no code changes or rerun.",
+    "next": "SVisual Regions tab: isolate Clean_QW1..4, measure RadiativeRecombination numeric rates, compare SRH/Auger and integrate. Keep original results unchanged.",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
@@ -832,13 +832,28 @@
       "areaFactorMatchFound": false,
       "interpretation": "Terminal displacement minor at endpoint, anode hole dominated; does not establish MQW carrier injection or emitted light; zero/default/override material radiative coefficient unresolved",
       "next": "Inspect final n2_des.tdr RadiativeRecombination values in Clean_QW regions and actual effective GaN/InGaN radiative parameters. Preserve outputs."
+    },
+    "svisualRadiative20261009": {
+      "status": "OBSERVED_NONZERO_SPATIAL_FIELD_QW_INTEGRATION_PENDING",
+      "data": "n2_des",
+      "selectedScalar": "RadiativeRecombination",
+      "displayedMaxCmMinus3SMinus1": 74830000000000000000,
+      "displayedMinCmMinus3SMinus1": -7.512e-34,
+      "visualNote": "Upper thin layers have varied higher rates; deep bulk near zero; individual named QW regions cannot be identified from screenshot.",
+      "meshElements": 138194,
+      "meshPoints": 65513,
+      "cleanQw1ToQw4NumericValuesObserved": false,
+      "mqwIntegratedRadiativeObserved": false,
+      "iqeVerified": false,
+      "modelCoefficientVerified": false,
+      "next": "SVisual Regions tab identify and zoom Clean_QW1..Clean_QW4, probe numeric RadiativeRecombination there, compare SRH and Auger, then integrate."
     }
   },
   "latestObservedEvent": {
     "date": "2026-10-09",
     "worker": "이택규",
-    "source": "user n2_des.plt awk terminal + FASTC1_pp6_des.par full text + grep pp2_des.cmd",
-    "status": "OBSERVED_5V_CARRIER_CURRENT_AND_RECOMBINATION_DECLARATIONS",
-    "event": "Anode final total current 1.44801646079583e-11 raw, hole current 1.42020180788235e-11, eCurrent 2.78143237811134e-13, displacement 3.29132361382365e-18. Global SRH/Auger/Radiative declared and output fields requested; effective InGaN radiative parameter and QW recombination not yet measured."
+    "source": "user uploaded SVisual screenshot from JUSUBIN_FAST_HALF_5V_TEST n2_des.tdr",
+    "status": "OBSERVED_POSITIVE_SPATIAL_RADIATIVE_FIELD_QW_NOT_IDENTIFIED",
+    "event": "SVisual RadiativeRecombination colorbar maximum=7.483e19 cm^-3 s^-1, minimum=-7.512e-34 (near zero); top thin layers high and lower bulk negligible; MQW per-region radiative and IQE not verified."
   }
 }

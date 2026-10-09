@@ -560,7 +560,7 @@
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "SVisual read-only SRH and Auger point-probe for QW4 and QW1..3; then integrated rates, current sanity, NtSide 1e18 and full-vs-half comparison.",
+    "next": "Repeat QW4 SRH probe exactly at Rrad x=0.245093340874 y=0.58321731303 (same region); then Auger. No IQE from mismatched points.",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
@@ -878,14 +878,30 @@
           "RradiativePerCm3S": 7094266327897000000
         }
       ],
-      "localSampleOnly": true
+      "localSampleOnly": true,
+      "localQw4Srh20261009": {
+        "region": "Clean_QW4(InGaN)",
+        "field": "srhRecombination",
+        "x": 0.244864017914,
+        "y": 0.599783903626,
+        "z": 0,
+        "valuePerCm3S": 1.681637512936e+22,
+        "priorRadiativePoint": {
+          "x": 0.245093340874,
+          "y": 0.58321731303,
+          "valuePerCm3S": 7094266327897000000
+        },
+        "coLocated": false,
+        "ratioOrIQEValid": false,
+        "next": "Probe SRH at exact earlier QW4 radiative x/y, then Auger at same point."
+      }
     }
   },
   "latestObservedEvent": {
     "date": "2026-10-09",
     "worker": "이택규",
-    "source": "four user-supplied SVisual Probe screenshots in 5V_TEST n2_des.tdr",
-    "status": "OBSERVED_POSITIVE_LOCAL_RADIATIVE_RECOMBINATION_ALL_FOUR_QWS",
-    "event": "All Clean_QW1..QW4(InGaN) single-point RadiativeRecombination Probes positive; do not equate with integrated emission or IQE."
+    "status": "OBSERVED_QW4_SRH_LOCAL_NON_COLOCATED_WITH_RRAD",
+    "source": "user uploaded SVisual Probe screenshot",
+    "event": "Clean_QW4(InGaN) srhRecombination 1.681637512936e22 at x=0.244864017914 y=0.599783903626; prior Rrad at different x/y; do not calculate local IQE/loss ratio."
   }
 }

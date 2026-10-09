@@ -1,3 +1,9 @@
+## 2026-10-10 — 이택규 verified actual 5V parent model via uploaded HDF5 archive (OBSERVED/DERIVED)
+
+- Baseline candidate `CMP_BASELINE_1.2.0_CAL` under preparation, not yet created; confidential nine-file input and result archive read privately by GPT. Audit without proprietary contents: `CMP/reviews/BASELINE_1_2_0_CAL_AUDIT_20261010.md`.
+- Strong model discovery: every Clean/DmgL 5V QW rate field follows Radiative B=2e-10, Auger C=1e-30, and SRH tau=1ns. Mg incomplete ionization produces reduced net doping through 0.031286 maximum pGaN occupation. 5V current remains low, physical calibration remains open.
+- SDevice code comments incorrectly advertise 4V/4.5V/4.8V Saves and staged increment; actual run only had 5V Save and constant Increment=1.2. No code modifications or new solver job.
+
 ## 2026-10-09 — CMP naming/version policy confirmed by 이택규 (DECISION)
 
 - Use `CMP_<TYPE>_<MAJOR.MINOR.PATCH>_<TAG>` for new project candidates; see `CMP/PROJECT_NAMING_CONVENTION.md`. New proposed Baseline candidate: `CMP_BASELINE_1.2.0_CAL`, not yet an existing simulation. PROJECTA/B have independent version histories; preserve parent Baseline provenance and NtSide run metadata.

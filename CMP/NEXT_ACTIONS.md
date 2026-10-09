@@ -1024,3 +1024,9 @@ Common Baseline Final 통과 후에만:
 - Last log attempts at t=0.0643488 to 0.0643505 then terminated `Step-size less than MinStep (step-size = 8.3986e-07)`.
 - QS runtime 18417.09 s but did NOT reach goal. Cannot compare as speedup to original transient that reached 0.3 V in 25019.43 s.
 - Root numerical/physics trigger not yet established. Next: inspect QS log around lines 6900-7000 and `n2_des.err`; no blind MinStep or baseline modification.
+
+
+## 2026-10-09 — Next gate after QS Newton diagnostic
+- QS Copy: confirmed Newton failure after 15 iterations and repeated step reduction near 19.3 mV, stopping at MinStep. Do not change common physics/mesh or rerun without numerical cause review.
+- Inspect actual QS `pp2_des.cmd` Math / Solve (`RHSMin`, `Digits`, `NotDamped`, `LineSearchDamping`, `Extrapolate`, `Coupled`, QS step settings) and original transient deck for controlled diff.
+- Decide whether to prioritize original successful transient reference and higher-bias/physics checks versus separate numerical-only QS solver sensitivity pilot. No speedup claim allowed.

@@ -1,3 +1,11 @@
+## 2026-10-09 — QS Copy actual Math/Solve controls inspected (이택규 / ChatGPT)
+- Exact preprocessed QS deck (user terminal): `ErrRef(e/h)=1e4, RHSMin=1e-3, CheckRhsAfterUpdate, Transient=BE, ExtendedPrecision(80), Blocked/ILS(set=22)`; initialization Poisson 500 iterations + `LineSearchDamping=1e-2`, startup carrier coupled 100 iterations; QS Goal 0.3V, `InitialStep=.03, MinStep=1e-6, MaxStep=.15, Increment=1.5, Decrement=2`, inner coupled Poisson/Electron/Hole `Iterations=15` (no explicit damping).
+- Observed failure: Newton 15 iter, nonconvergent RHS at 0.019304636V; step cutback below MinStep. Underlying root cause UNRESOLVED. Damping within QS is a **proposal**, not yet verified fix.
+- WARNING: `Save(n2_qs0p3_ckpt)` executed after QS failed, despite code comment saying only after 0.3V completed. This checkpoint must not be interpreted as verified 0.3V.
+- Next: inspect/compare original transient pp2_des.cmd Math/Solve numeric controls and physics; no code changed; preserve original full/common baseline and both results.
+
+---
+
 ## 2026-10-09 — Final QS Copy convergence diagnostic (이택규 / ChatGPT)
 - Source log user provided `n2_des.log` 6900-6997: on t=0.0643488→0.0643505 (step 1.6797e-6), Poisson/electron/hole Bank/Rose Newton with factor 1.0 oscillates strongly, Rhs up to 1.26e8; after 15 iterations final Rhs 1.85e6 → `#iterations larger than 15`. Retry 8.3986e-7 violates MinStep 1e-6; sweep stops, last accepted V=0.0193046363 V of 0.3 V.
 - `.err`: repeated vanOverstraetendeMan E0 isotropic/anisotropic difference; direct link to failure not established. DOS mass interpolation is logged.

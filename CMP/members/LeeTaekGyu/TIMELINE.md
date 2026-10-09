@@ -1,3 +1,9 @@
+## 2026-10-09 — 5V_TEST custom GaN Mg ionization coefficients observed
+
+- 이택규 user terminal grep on actual `FASTC1_pp6_des.par`: `Material = "GaN" { Ionization { Species ("pMagnesiumActiveConcentration") { E_0 = 0.2; alpha = 8e-9` (lines 24-32). More lines are not yet shown; units, degeneracy and effective model still require confirmation.
+- Prior `pp2_des.cmd` activates IncompleteIonization in Clean_pGaN and DmgL_pGaN; active parameter file path verified in n2_des.log. Prior SVisual Clean_pGaN hDensity≈3.001343e17, MgActive and MgMinus each 9.59e18 cm^-3. No claim of correct ionization physics from partial deck.
+- Next: read-only show entire GaN Ionization section with `sed -n '20,55p' FASTC1_pp6_des.par`; no rerun or code edits.
+
 ## 2026-10-09 — 5V_TEST actual SDevice parameter path verified (OBSERVED)
 
 - User shell `grep` on active pp2_des.cmd and n2_des.log: pp2_des.cmd line 22 `Parameters = "FASTC1_pp6_des.par"`; line 68 `DefaultParametersFromFile`; n2_des.log line 291 ModelParameters same file; line 760 reads it, line 804 loads MaterialDB/GaN.par; Silicon.par is also loaded. `Use Si parameters` appears in generic default-device log; does NOT by itself prove GaN regions use silicon material physics.

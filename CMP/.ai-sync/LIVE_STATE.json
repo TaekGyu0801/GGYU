@@ -560,11 +560,23 @@
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "Open test copied project in existing SWB, verify project flow and working directory visually; no Run/F7 or source edits",
+    "next": "Read copied sdevice_des.cmd lines 565-620; verify original editable Solve block, preflight 5V step-control and preserve original before modifying",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
       "evidence": "User terminal ls -la on both project marker files"
+    },
+    "swbScreenshot20261009": {
+      "status": "OBSERVED_CROPPED_VIEW",
+      "visibleTools": [
+        "SDE",
+        "SDEVICE"
+      ],
+      "parameterNtSide": 0,
+      "visibleVariableHeader": "No Variables",
+      "SVisualVisible": false,
+      "projectTitleVisible": false,
+      "sourceReadPending": true
     }
   }
 }

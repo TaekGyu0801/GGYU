@@ -1222,3 +1222,10 @@ Evidence: user's last-row DF-ISE awk and `cat FASTC1_pp6_des.par`, grep of execu
 1. OBSERVED on `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`: `RadiativeRecombination` scalar colorbar max=7.483e19 and min≈-7.512e-34 cm^-3 s^-1, top thin layers colored and lower bulk near zero. This proves nonzero values exist in spatial output **somewhere**; not yet tied to any named InGaN Clean_QW region.
 2. SVisual GUI next (no computation change): keep scalar checked; use Data Selection `Regions` to locate `Clean_QW1`–`Clean_QW4`, zoom the upper active stack, and Probe one or more points per clean QW with region and full Radiative field label visible. Screenshot for reproducible source evidence.
 3. Subsequently compare SRHRecombination/AugerRecombination and carrier densities and integrate per-QW regions; confirm optical radiative coefficient source and full/half current normalization before quoting IQE or electroluminescence. Maintain NtSide=0 pristine status; A/B NO-GO.
+
+## 2026-10-09 — After four 5V InGaN QW positive Rrad Probes (이택규)
+
+1. User SVisual Probes **OBSERVED** `Clean_QW1=1.836010164996e13`, `Clean_QW2=3.558921779790e12`, `Clean_QW3=8.395713573050e14`, `Clean_QW4=7.094266327897e18` cm^-3 s^-1, each one *local point* (not per-well integrated or average) with corresponding x/y logged in LeeTaekGyu timeline.
+2. First next GUI test (read-only): switch SVisual scalar to `SRHRecombination` and probe `Clean_QW4` at previous x=0.245093340874, y=0.58321731303, then `AugerRecombination` at the same coordinate, preserving the Rrad reference; repeat QW1–QW3 when workflow validated. Beware selection point may shift; verify Probe zone each time.
+3. Then integrate Rrad/RSRH/RAuger over each full active QW using validated units/mesh, compute clearly labelled recombination-based `IQE_rec`, and cross-check electrical injection, 2D current/AreaFactor and full-vs-half mesh equivalence. Do not infer IQE from one point or claim QW4 dominates total photon production.
+4. Preserve completed NtSide=0 5V_TEST results; nominal damaged NtSide=1e18 baseline and A/B production gates remain pending. No rerun, no file cleanup or code change.

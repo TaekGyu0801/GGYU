@@ -1110,3 +1110,11 @@ old-vs-current 20.1× slowdown 결론은 철회하고, stage identification 전�
 - OBSERVED: `JUSUBIN_FAST_HALF_SWB` original transient completed `Curve trace finished` at 0.300 V, wallclock 25019.43 s, and wrote n2_des.plt/tdr/sav. I-V 0.3 V very low current; full LED turn-on/IQE/reference equivalence not yet validated.
 - UNRESOLVED: distinct `JUSUBIN_FAST_HALF_SWB_Copy` QS run ended with `Step-size less than MinStep (step-size = 8.3986e-07)` after 18417.09 s (5:06:57); wrote sav/tdr and `Good Bye`, but goal 0.3 V is NOT verified. Do not call it successful or faster than transient.
 - Current blocker: obtain last accepted QS bias and diagnose rejected steps/Newton using QS n2_des.plt/log/err.
+
+
+## 2026-10-09 — QS Copy last accepted bias determined
+- 작업자: 이택규. OBSERVED from user-provided `JUSUBIN_FAST_HALF_SWB_Copy/n2_des.plt` tail and `n2_des.log` grep.
+- Last recorded QS pseudo-time: 6.43487876313307E-02; last anode OuterVoltage: 1.93046362893992E-02 V (0.0193046363 V; 19.3 mV, only ~6.435% of requested 0.3 V).
+- Last log attempts at t=0.0643488 to 0.0643505 then terminated `Step-size less than MinStep (step-size = 8.3986e-07)`.
+- QS runtime 18417.09 s but did NOT reach goal. Cannot compare as speedup to original transient that reached 0.3 V in 25019.43 s.
+- Root numerical/physics trigger not yet established. Next: inspect QS log around lines 6900-7000 and `n2_des.err`; no blind MinStep or baseline modification.

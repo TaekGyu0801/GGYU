@@ -560,7 +560,7 @@
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "SWB 5V_TEST SDevice Node2 F7 only if resources acceptable, view new log and verify actual 5V ramp; do not rerun SDE",
+    "next": "Check fresh n2_des.log and process status; do not cleanup or rerun.",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
@@ -607,7 +607,7 @@
     },
     "sourceSyncedToGitHub": false,
     "preprocessStatus": "OBSERVED_PP2_5V_SETTINGS",
-    "simulationRunStatus": "NOT_STARTED_AS_OF_LAST_USER_PS_LOG_OBSERVATION",
+    "simulationRunStatus": "SWB_JOB_2_STARTED_20261009_113314_KST",
     "preprocessedVerified": {
       "SolveMode": "Transient",
       "FinalTime": 1,
@@ -661,6 +661,7 @@
       "n2LogWallclockSeconds": 25019.43,
       "n2LogPeakMemoryGiB": 2.61
     },
-    "concurrencyConcern": "TWO_OTHER_RUNNING_PP6_PP12_JOBS_99PERCENT_CPU"
+    "concurrencyConcern": "TWO_OTHER_RUNNING_PP6_PP12_JOBS_99PERCENT_CPU",
+    "runConvergence": "UNVERIFIED"
   }
 }

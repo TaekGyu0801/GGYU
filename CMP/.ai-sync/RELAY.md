@@ -1,3 +1,11 @@
+## 2026-10-09 — Final QS Copy convergence diagnostic (이택규 / ChatGPT)
+- Source log user provided `n2_des.log` 6900-6997: on t=0.0643488→0.0643505 (step 1.6797e-6), Poisson/electron/hole Bank/Rose Newton with factor 1.0 oscillates strongly, Rhs up to 1.26e8; after 15 iterations final Rhs 1.85e6 → `#iterations larger than 15`. Retry 8.3986e-7 violates MinStep 1e-6; sweep stops, last accepted V=0.0193046363 V of 0.3 V.
+- `.err`: repeated vanOverstraetendeMan E0 isotropic/anisotropic difference; direct link to failure not established. DOS mass interpolation is logged.
+- Already tried: actual QS Copy started and completed process but not bias sweep; separate original transient 0.3V completed.
+- Next: inspect actual QS pp2_des.cmd Math/Solve settings for controlled numerical-only remedy; preserve physical Common Baseline, both branches. Do not blindly lower MinStep or claim QS speedup.
+
+---
+
 ## 2026-10-09 — QS Copy last voltage clarified (이택규 / ChatGPT)
 - OBSERVED: last saved `.plt` time 0.0643487876313307 and `anode OuterVoltage` 0.0193046362893992 V, only 6.435% of 0.3V goal.
 - UNRESOLVED blocker: SDevice QS reports `Step-size less than MinStep (8.3986e-07)` near t=0.06435; exact underlying solver issue unknown.

@@ -1,3 +1,11 @@
+## 2026-10-09 — All four InGaN QW integrated Rrad/SRH/Auger complete (이택규)
+
+- Latest user SVisual Clean_QW1 (Rrad=857.9041, SRH=77658.39, Auger=252.5448) and DmgL_QW1 (Rrad=19.46374, SRH=496.6036, Auger=2.309115) [s^-1 um^-1] confirm last missing well. Derived QW1 total Rrad=877.36784, SRH=78154.9936, Auger=254.853915, well ratio=1.1065691%.
+- Sum all four wells Clean+DmgL at 5V NtSide0: Radiative=40072.8158452, SRH=36562944.9075, Auger=1599.706168587, total=36604617.4295138 [s^-1 um^-1], **MQW recombination radiative fraction=0.1094747566%**. QW4 provides ~96.94% of MQW integrated radiative. This is NOT experimentally validated LED IQE/EQE or final reference.
+- NEXT: inspect active effective SRH lifetimes and Radiative coefficients/material DB, 2D J-V normalization, carrier distribution/polarization, then full/fine and NtSide1e18 comparisons. Preserve files, no solver change.
+
+---
+
 ## 2026-10-09 — QW2 recombination integrals complete / default-parameters audit ongoing (LeeTaekGyu)
 
 - 5V_TEST NtSide=0 Half, SVisual Clean_QW2 Rad=83.3149, SRH=54645.76, Auger=1.736316 [s^-1 um^-1]; DmgL_QW2 Rad=0.1672872, SRH=141.6049, Auger=0.003800247. Sum QW2 Rrad=83.4821872, SRH=54787.3649, Auger=1.740116247, QW-only recombination radiative fraction 0.1521382378%. QW1 still missing; QW3 0.0454256871% and QW4 0.1082525242% known.

@@ -1,3 +1,10 @@
+## 2026-10-09 Original Transient endpoint verified
+- 이택규 verified executable original Node2 Transient: FinalTime 0.06, Goal anode 0.3V, Inner Coupled Iterations 15. Header 0–4/4–5 V comments are stale for the smoke.
+- Original Transient 0.3V smoke complete; QS Copy failed at 0.019304636V. Neither proves the 3–5V LED baseline or full/fine equivalence.
+- Preserve original, QS Copy and outputs. Next review separate higher-bias transient branch without changing Common Baseline. No SDevice sources were modified.
+
+---
+
 ## 2026-10-09 — Transient versus QS settings checked (이택규 / ChatGPT)
 - OBSERVED original `JUSUBIN_FAST_HALF_SWB/pp2_des.cmd` and QS Copy pp2: both startup Poisson Coupled 500 with LineSearchDamping=1e-2, initial carriers Coupled 100, sweep inner Coupled Iterations=15; ErrRef e/h 1e4, RHSMin=1e-3. So lack of QS sweep damping is NOT a unique QS-vs-original difference.
 - Original Transient controls InitialStep 1e-5, MinStep 1e-9, MaxStep 1e-3, Increment 1.2; QS InitialStep .03, MinStep 1e-6, MaxStep .15, Increment 1.5, Decrement 2.0. Different time semantics; direct numerical comparison invalid.

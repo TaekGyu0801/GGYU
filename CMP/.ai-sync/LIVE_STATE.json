@@ -429,5 +429,27 @@
       "status": "CODE_STATIC_PASS_UNTESTED"
     },
     "next": "Stop only old half transient Node2 if switching, back up source/output, install QS deck, SWB preprocess, run 0.3V QS smoke, compare wallclock and I-V"
+  },
+  "qsCopyRun20261009": {
+    "worker": "이택규",
+    "project": "JUSUBIN_FAST_HALF_SWB_Copy",
+    "mode": "Quasistationary",
+    "status": "UNRESOLVED_MINSTEP_TERMINATION",
+    "observedLogEnd": "2026-10-09T00:28:10+09:00",
+    "stopReason": "Step-size less than MinStep",
+    "attemptedStep": 8.3986e-7,
+    "wallclockSeconds": 18417.09,
+    "peakMemoryGB": 2.96,
+    "outputsSaved": true,
+    "goal0p3VReached": "NOT_VERIFIED",
+    "lastAcceptedVoltage": "PENDING_PLT_CHECK",
+    "comparison": "Do not infer QS speedup against original half transient 25019.43s, which reached 0.3V",
+    "next": "Extract final accepted voltage from n2_des.plt; examine final accepted/rejected QS steps and n2_des.err before adjusting solver settings"
+  },
+  "halfTransientRun20261009": {
+    "project": "JUSUBIN_FAST_HALF_SWB",
+    "status": "CONFIRMED_0P3V_COMPLETE",
+    "wallclockSeconds": 25019.43,
+    "finalVoltageV": 0.3
   }
 }

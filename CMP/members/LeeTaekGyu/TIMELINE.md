@@ -1,3 +1,9 @@
+## 2026-10-10 — Exact cloned CAL .par current contents read before edit (OBSERVED)
+
+- Worker 이택규 used cd to the cloned SWB project `/user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL` and ran `cat FASTC1_pp6_des.par` on live server. File contains only `LatticeParameters { X=(0,0,-1); Y=(1,0,0) }`, `Thermionic { Formula=1 }`, and `Material="GaN" { Ionization { Species("pMagnesiumActiveConcentration") { E_0=0.2; alpha=8e-9; g=4; Xsec=1e-14 } } }`.
+- CONFIRMED actual cloned .par has no InGaN/Scharfetter block yet; original Mg and crystal/thermionic config intact. Instructed user to append material-specific InGaN Scharfetter tau_max=1e-7 s for both electron/hole, with taumin=0, Nref=1e16, gamma=1, Talpha/Tcoeff/Etrap=0, preserving earlier blocks. This remains a proposed manual edit until user shows result.
+- Do not claim a simulation run or physical calibration. After saved file, read-only grep/check and SWB preprocess/log proving effect, then short transient smoke.
+
 ## 2026-10-10 — CAL par backup made, 100ns InGaN override still absent (OBSERVED)
 
 - 이택규 server shell executed `cp -p /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/FASTC1_pp6_des.par /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/FASTC1_pp6_des.par.bak_1ns` without error (copy command returned to shell; backup existence not independently listed).

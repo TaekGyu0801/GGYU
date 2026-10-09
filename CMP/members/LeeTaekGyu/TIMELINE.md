@@ -1,3 +1,9 @@
+## 2026-10-10 — Worker authorizes direct 5V CAL sensitivity run, skipping additional short smoke (DECISION / NOT YET LAUNCHED)
+
+- Worker 이택규 explicitly requests starting the already prepared `CMP_BASELINE_1.2.0_CAL` at 5 V now rather than further serial verification. Assistant agrees it is defensible as an **exploratory 100ns InGaN SRH sensitivity trial**, NOT publication-grade certified baseline.
+- Gates already OBSERVED: original JUSUBIN_FAST_HALF_5V_TEST NtSide0 Half+Coarse succeeded 5V with same SDE/SDevice source hashes; new cloned SDE user reports yellow `done`; cloned custom `FASTC1_pp6_des.par` now displays InGaN Scharfetter `taumax=1e-7,1e-7 s`; cloned SDevice File still explicitly `Parameters = "FASTC1_pp6_des.par"`. Physical lifetime application must be checked in new runtime log; no new SDevice simulation has yet been confirmed started or completed.
+- Immediate direction: SWB select only `NtSide=0` SDevice node and RUN, which should preprocess automatically; inspect first generated `pp2_des.cmd` and early `n2_des.log` for custom `.par` load and InGaN material model parse. If error appears, pause and diagnose. Observe full 5V transient run may take hours and has only final Save/Plot, so no intermediate checkpoint/restart expected. Preserve old 5V_TEST/Full reference. After completion compare I(V), QW Rrad/SRH/Auger, 2D J, numerical convergence; physical parameter and full/half validation still open.
+
 ## 2026-10-10 — CAL SDE node now reports DONE in SWB (USER-OBSERVED)
 
 - 이택규 explicitly confirms yellow `done` status for the SDE node in `CMP_BASELINE_1.2.0_CAL` after prior SDE GUI `Meshing successful` at 00:11:50 KST. Thus SWB SDE workflow step is reported completed, not merely internal mesh command.

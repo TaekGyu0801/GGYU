@@ -1,3 +1,9 @@
+## 2026-10-10 — User opted for manual CAL parameter copy/paste instead of ZIP transfer (PROPOSED / NOT YET APPLIED)
+
+- User shell found `~/CMP_BASELINE_1.2.0_CAL_INPUT_CANDIDATE.zip` missing on school server. This is only a transfer gap, not a TCAD error.
+- User asked to manually paste the full candidate parameter text. Assistant provided full text of custom `FASTC1_pp6_des.par` to paste **only into cloned** `CMP_BASELINE_1.2.0_CAL`: original LatticeParameters, Thermionic, GaN Mg Ionization retained; InGaN-specific Scharfetter with `taumax=1e-7 s` both carriers, unchanged taumin/Nref/gamma/Talpha/Tcoeff/Etrap. Text formatting condensed vs ZIP, physical parameter blocks equivalent; do not expect ZIP byte SHA256 after manual edit.
+- Instructions: first `cp -p` cloned 283B original parameter to `.bak_1ns`, then edit cloned `FASTC1_pp6_des.par` only. Following save run read-only `grep` to verify effective text, then SWB preprocess/log, make a genuinely short Transient smoke before 5V. `sde_dvs.cmd`, `sdevice_des.cmd`, completed parent, vendor MaterialDB unchanged. **No confirmation yet that worker pasted or ran code**.
+
 ## 2026-10-10 — CAL clone parent-input SHA256 exact match (OBSERVED)
 
 - User terminal SHA256 in `CMP_BASELINE_1.2.0_CAL`: `sde_dvs.cmd` 4a30e922aade3c9ed576889598a0f6b7ef164d675f284470388f21d1f35458d5, `sdevice_des.cmd` 1a89149505d4556bfb7bed81bd5326a36dd173c8b7d298f83584c5b4921fae91, `FASTC1_pp6_des.par` 60405755de61500d9815a8e9ecca6a7a465783d77eb8e5dadf1db515aeb10039. GPT independently compared against exact private nine-file successful 5V parent archive and verified **all three hashes identical**. Clone input provenance PASS; no new 100ns CAL parameter has yet been installed, preprocessed or simulated.

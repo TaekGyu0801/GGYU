@@ -520,3 +520,8 @@ Do not change baseline physics parameters while diagnosing this.
 - User screenshot of SVisual Field Integration `RadiativeRecombination` with `Clean_QW3` and `Clean_QW3+DmgL_QW3` highlighted displays output ONLY for `Regions of Dimension 2: Clean_QW3`, Integral 2.657110e+02 [s^-1 um^-1], Domain 5.985012e-03 [um^2].
 - GPT earlier incorrectly stated `Clean_QW3+DmgL_QW3` was guaranteed combined whole-QW ROI; current evidence does NOT support that and likely represents a boundary/interface label (exact '+' metadata unconfirmed). Do not claim total QW3 integral from this selection.
 - Safe fix (read-only): independently integrate `Clean_QW3` and *standalone* `DmgL_QW3` using SVisual's `Regions of Dimension 2` pane to verify each result and sum their integrals (avoid overlapping selections or confusing interface). No user computation or device source needs rerun, no data was deleted or changed.
+
+## 2026-10-09 — Shell syntax mistake in supplied MaterialDB inspection command (RESOLVED GUIDANCE)
+
+- Assistant provided Bash assignment `DB=/...` and Bash `for m in ...; do` while user's current shell reports C-shell-family errors (`Command not found`, `Undefined variable`). Read-only `sed -n '330,350p' n2_des.log` worked. No MaterialsDB parameter values were retrieved; no simulation/model/source error from this incident.
+- Corrected with one literal-path C-shell-compatible command `grep -niE 'SRH|Radiative|Auger|taun0|taup0|Scharfetter' /user/tools/synopsys/sentaurus/T-2022.03/tcad/current/lib/sdevice/MaterialDB/InGaN.par | head -n 70`. After output verify effective parameter selection/material DB and exact status of `Use Si parameters`. Do not rerun/modify TCAD.

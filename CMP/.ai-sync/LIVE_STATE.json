@@ -560,7 +560,7 @@
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "Inspect InGaN.par lines 855-925 for numeric SRH, Auger, Radiative parameters and defaults, then GaN/InN and effective logging as required; preserve simulation.",
+    "next": "Read actual pp2 region/global Physics and log context; verify 2D units and In0.15 effective coefficients; short pilot only after physics audit. No solver/source edit today.",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
@@ -1235,14 +1235,62 @@
       "fourQwRecombinationRatioPercent": 0.10947475662698732,
       "source": "Sentaurus MaterialDB/InGaN.par, directly displayed by user",
       "next": "Confirm n2_des.log InGaN parameter loading/priority 945-970 and 270-310; effective material parameters/2D J injection; no physics edits."
+    },
+    "paperCalibrationReview20261009": {
+      "status": "REVIEWED_PROPOSED_REVALIDATION_NO_NEW_RUN",
+      "references": [
+        {
+          "doi": "10.1364/OE.27.00A643",
+          "claim": "Kou 2019 SRH lifetime numerical 1e-7 and Auger 1e-30, with printed lifetime unit s^-1 inconsistent; caution"
+        },
+        {
+          "doi": "10.1038/s41467-023-36773-w",
+          "claim": "Baek et al 2023 TCAD SRH 100ns, Radiative 1e-10 cm3/s, Auger 1e-31 cm6/s; different epi and polarization assumptions"
+        },
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8175512/",
+          "claim": "Lu et al 2021 SRH dominance at low J"
+        }
+      ],
+      "observedVendorFile": {
+        "InGaNParLoaded": true,
+        "provenance": "GaAs-derived; vendor says calibrate",
+        "taumaxSec": 1e-9,
+        "radiativeCcm3PerS": 2e-10,
+        "augerAcm6PerS": 1e-30,
+        "effectiveAlloyParametersVerified": false
+      },
+      "latestLog": {
+        "noSeparateLifetimeFile": true,
+        "modelParametersFile": "FASTC1_pp6_des.par",
+        "meshFile": "n1_msh.tdr",
+        "defaultParametersFromFileInGaN": true
+      },
+      "previousFourQwRecombRatioPct": 0.10947475662698732,
+      "conditionalCurrentDensityCheck": {
+        "rawAnodeCurrentPerUmAssumedA": 1.44801646079583e-11,
+        "halfWidthUmFromQwAreaApprox": 2,
+        "J_AperCm2_if2D_AperUm_and_no_AreaFactor": 0.000724008230397915,
+        "status": "DERIVED_CONDITIONAL_NOT_VERIFIED"
+      },
+      "scientificBlockers": [
+        "effective InGaN lifetime/B and region overrides not verified",
+        "I2D to J and very low injection not yet validated",
+        "pMg ionization/polarization/carrier balance unresolved",
+        "transient 5V final vs steady state not verified",
+        "No damaged NtSide1e18 matched-current comparison",
+        "full vs half/mesh no convergence check"
+      ],
+      "decision": "No original geometry rewrite; pause long production, read-only audit, then controlled calibrated short-run separate branch before final baseline.",
+      "next": "Read actual pp2 region/global Physics and log context; verify 2D units and In0.15 effective coefficients; short pilot only after physics audit. No solver/source edit today."
     }
   },
   "latestObservedEvent": {
     "date": "2026-10-09",
     "worker": "이택규",
-    "source": "user direct output from installed T-2022.03 MaterialDB/InGaN.par lines 855-925",
-    "status": "OBSERVED_GAAS_DERIVED_INGAN_RECOMBINATION_PARAMETERS_REQUIRE_CALIBRATION",
-    "event": "Explicit GaAs-origin calibration warning. InGaN.par Scharfetter taumin 0, taumax 1e-9 s, Nref 1e16 cm^-3, gamma 1; Auger A 1e-30 cm6/s, Radiative C 2e-10 cm3/s. Actual effective MQW values depend on mixing/overrides not yet inspected."
+    "status": "REVIEWED_LITERATURE_BASELINE_PHYSICS_CALIBRATION_AND_RERUN_GATES",
+    "source": "User n2_des.log 945-970 and 270-310 plus vendor InGaN.par and peer-reviewed Kou 2019/Nature Communications 2023",
+    "event": "Existing InGaN MaterialDB GaAs-derived carrier lifetime 1ns vs independent microLED papers using 100ns, with exact effective alloy params and 2D J unverified. No geometry rebuild supported. Need calibrate separate branch only after physics/current audit; full MQW 5V recombination ratio 0.1094747566% not final physical baseline."
   },
   "projectAFabricationFeasibility20261009": {
     "status": "PROPOSED_RESEARCH_ROUTE_COMPARISON_NOT_APPROVED",

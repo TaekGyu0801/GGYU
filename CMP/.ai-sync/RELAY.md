@@ -1,3 +1,9 @@
+## 2026-10-10 — Shared mandatory naming rule reiterated for 주수빈 as well as 이택규 (DECISION)
+
+Worker 이택규 explicitly requests that **주수빈's future CMP-created project names/files** follow the same confirmed format `CMP_<TYPE>_<MAJOR.MINOR.PATCH>_<TAG>`. This applies across separate chats and Claude whenever the agent reads CMP common instructions. Canonical updated `CMP/PROJECT_NAMING_CONVENTION.md` and entry-point `CMP/AGENTS.md`. Version the project and released bundles, but **do not rename SWB-consumed native files** such as sde_dvs.cmd, sdevice_des.cmd, sdevice.par and pp/n outputs. Preserve old projects and record provenance, parent and changes. Future new projects should be easy for professor to reproduce via SWB GUI parameter editors where feasible; do not alter current running CAL code. This is a shared policy, NOT a change actually made in 주수빈's separate private SWB directory.
+
+---
+
 ## 2026-10-10 — CAL 5V Run pressed by 이택규 (USER REPORTED)
 
 - Worker reports starting CMP_BASELINE_1.2.0_CAL NtSide0 5V SDevice in SWB. No new solver log or completion checked yet.

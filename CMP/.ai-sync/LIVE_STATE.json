@@ -560,7 +560,7 @@
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "Read copied sdevice_des.cmd lines 565-620; verify original editable Solve block, preflight 5V step-control and preserve original before modifying",
+    "next": "Back up copied SDevice source, apply only to independent 5V_TEST if user approves, SWB preprocess and inspect generated pp2 before any 5V run",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
@@ -577,6 +577,23 @@
       "SVisualVisible": false,
       "projectTitleVisible": false,
       "sourceReadPending": true
+    },
+    "editableSourceReviewed": true,
+    "editableSourceGoalV": 0.3,
+    "editableSourceFinalTime": 0.06,
+    "editableSourceTransientControls": {
+      "InitialStep": 0.00001,
+      "MinStep": 1e-9,
+      "MaxStep": 0.001,
+      "Increment": 1.2,
+      "Iterations": 15
+    },
+    "proposed5VChanges": {
+      "status": "PROPOSED_NOT_APPLIED",
+      "GoalV": 5,
+      "FinalTime": 1,
+      "SaveFilePrefix": "n@node@_5V_ckpt",
+      "purpose": "Preserve old ramp voltage/time=5 in same Transient source"
     }
   }
 }

@@ -514,3 +514,9 @@ Do not change baseline physics parameters while diagnosing this.
 - The initial Poisson damping does not imply the QS inner Coupled has damping. Hypothesis to test: QS Newton stabilization numerics may improve convergence; no direct causal verification yet. Math `Transient=BE` does not replace QS Solve command.
 - IMPORTANT discrepancy: code comment says 0.3V checkpoint written only after sweep completed, but actual logs prove Save ran after QS `Step-size less than MinStep` termination at last accepted V=0.019304636 V. Thus `n2_qs0p3_ckpt` is NOT a verified 0.3V checkpoint; never use filename as endpoint evidence.
 - Next before code edits: compare numeric & physics control lines of original transient `JUSUBIN_FAST_HALF_SWB/pp2_des.cmd` with QS Copy actual deck. No solver setting modified yet.
+
+## 2026-10-09 — Correction: wrongly interpreted SVisual '+' group as combined QW bulk (GPT guidance error)
+
+- User screenshot of SVisual Field Integration `RadiativeRecombination` with `Clean_QW3` and `Clean_QW3+DmgL_QW3` highlighted displays output ONLY for `Regions of Dimension 2: Clean_QW3`, Integral 2.657110e+02 [s^-1 um^-1], Domain 5.985012e-03 [um^2].
+- GPT earlier incorrectly stated `Clean_QW3+DmgL_QW3` was guaranteed combined whole-QW ROI; current evidence does NOT support that and likely represents a boundary/interface label (exact '+' metadata unconfirmed). Do not claim total QW3 integral from this selection.
+- Safe fix (read-only): independently integrate `Clean_QW3` and *standalone* `DmgL_QW3` using SVisual's `Regions of Dimension 2` pane to verify each result and sum their integrals (avoid overlapping selections or confusing interface). No user computation or device source needs rerun, no data was deleted or changed.

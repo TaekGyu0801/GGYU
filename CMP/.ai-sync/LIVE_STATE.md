@@ -1039,3 +1039,9 @@ The original synchronized SDevice2 deck contains `SRHRecombination`; the fact th
 - User `grep -niE 'AreaFactor|Radiative|SRH|Auger|Recombination|CurrentPlot' pp2_des.cmd FASTC1_pp6_des.par` shows SDevice Physics `Recombination(SRH(), Auger(), Radiative)` at pp2 lines ~78–84, and Plot datasets `SRHRecombination`, `RadiativeRecombination`, `AugerRecombination` ~398–408. No AreaFactor match in these two files. These are code/model/output declarations, **not proof that any MQW Rrad is positive, integrated, or emitted light**.
 - Prior Synopsys T-2022.03 UG audit recorded in `LeeTaekGyu/TIMELINE.md` (2026-10-08; Device UG §16 pp.488–489) cautions non-GaAs radiative-coefficient default may be zero without override; need verify effective GaN/InGaN material coefficients instead of claiming emission. Material database not reviewed in this turn.
 - Next: read-only inspect `pp2_des.cmd` Physics/Plot context and `n2_des.log` radiative/material parameter clues, then open final `n2_des.tdr` in SVisual and confirm fully visible `RadiativeRecombination` values inside `Clean_QW1`–`Clean_QW4`; compare SRH/Auger and carrier maps and, when validated, perform spatial integration. Current-density normalization/AreaFactor still unresolved; no code modified, no rerun.
+
+## 2026-10-09 — 5V SVisual radiative field (OBSERVED)
+
+- 이택규 screenshot shows positive RadiativeRecombination in final n2_des.tdr; plot max 7.483e19 cm^-3 s^-1, min about zero (-7.512e-34). Mesh 138194 elements / 65513 points.
+- The high-rate thin layers have not been mapped to named Clean_QW1-4, so MQW emission, integrated rates and IQE remain unverified.
+- NEXT: SVisual Regions tab identify QWs and probe rates; then SRH/Auger and material radiative coefficient. Preserve results.

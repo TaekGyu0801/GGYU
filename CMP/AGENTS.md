@@ -28,3 +28,9 @@
 - 기록 실패: 성공했다고 말하지 않음
 
 세부 규칙과 기록 형식은 `AI_SHARED_MEMORY_PROTOCOL.md`를 최우선으로 따른다.
+
+## TCAD 프로젝트 명명 규칙 (2026-10-09 확정)
+
+새 CMP Baseline/Project A/Project B SWB 프로젝트를 생성하거나 이름을 제안하기 전에 `PROJECT_NAMING_CONVENTION.md`를 읽는다.
+
+형식: `CMP_<TYPE>_<MAJOR.MINOR.PATCH>_<TAG>`. 현재 준비 중인 신규 후보는 `CMP_BASELINE_1.2.0_CAL`이고 기존 완성 프로젝트 `JUSUBIN_FAST_HALF_5V_TEST`와는 별도이다. 정확한 부모 코드·물성/mesh 버전과 실험 파라미터를 기록하고, 실제 결과 없이 후보를 검증 완료라고 부르지 않는다.

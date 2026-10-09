@@ -1,3 +1,11 @@
+## 2026-10-10 — CAL SRH-only private input candidate ready (PROPOSED / NOT SENTARUS TESTED)
+
+Worker 이택규 supplied current server default InGaN Scharfetter/Radiative/Auger section. ChatGPT used confidential 9-file completed parent archive to build `CMP_BASELINE_1.2.0_CAL_INPUT_CANDIDATE.zip` privately; this is a ZIP of three source inputs and README, **not** a full SWB project. It preserves original SDE byte for byte; executable SDevice lines identical (only header/comments corrected); original custom LatticeParameters, Thermionic, GaN Mg block remain. Added InGaN-specific Scharfetter tau_max=1e-7 s for n/p, other default Scharfetter terms unchanged; GaN and AlGaN not changed. Private candidate par SHA256 adfe81ab03b8f0ca84b09b9a4373fdc8e71f7a5faa00ce01a7c0b82b7fb2f1ad. Zip static checks pass; **local T-2022.03 preprocess not performed**. Vendor central MaterialDB not edited.
+
+New branch to be created in SWB using `Project > Save As > Clean Project` from parent to `CMP_BASELINE_1.2.0_CAL`, then install candidate files only in clone. Source still does one full 0-to-5V Transient Increment=1.2 and Save at 5V, so make separate short 0-0.3V smoke before using source for long solve. Do not confuse 100ns literature sensitivity with experimental lifetime calibration or solved/correct IQE. Follow `CMP/reviews/BASELINE_1_2_0_CAL_AUDIT_20261010.md` and `CMP/PROJECT_NAMING_CONVENTION.md`. No code added to public GitHub, no new project/run yet.
+
+---
+
 ## 2026-10-10 — Crucial CAL audit evidence and recommended experiment for Claude/next AI
 
 Actual privately uploaded successful JUSUBIN_FAST_HALF_5V_TEST 5V archive has been inspected. See public-safe `CMP/reviews/BASELINE_1_2_0_CAL_AUDIT_20261010.md` before suggesting any new code. Key computational evidence: eight 5V InGaN QW Clean/Dmg regions show exactly Rrad=Bnp with B=2e-10, Auger=A np(n+p) with A=1e-30, and SRH=np/[tau(n+p)] with tau=1ns, computed from HDF5 fields. The 0.10947% four-well model radiative share is not calibrated LED IQE. pGaN occupation*MgActive equals ionized -DopingConcentration (effective ~3e17 at some locations), so previous MgMinus raw field did NOT prove incomplete ionization inactive. Last 5V raw current 1.448e-11 with provisional J much lower than 0.1A/cm2; scaling unverified.

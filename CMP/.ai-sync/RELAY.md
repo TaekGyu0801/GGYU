@@ -1,3 +1,12 @@
+## 2026-10-09 — Baseline physics plausibility + literature rerun plan (이택규 / ChatGPT)
+
+- Latest log proves `DefaultParametersFromFile` loads InGaN.par/InN.par and active custom FASTC1_pp6_des.par; no standalone Lifetime file is normal, not proof of no SRH lifetime. Vendor InGaN.par GaAs-derived recombination warning: taumax 1ns, Radiative C 2e-10 cm3/s, Auger 1e-30 cm6/s. Numeric effective QW parameters/mixing unresolved. `Use Si parameters`, `Without incomplete ionization` in default-device block need scoped verification.
+- Peer papers: Kou 2019 DOI 10.1364/OE.27.00A643 numerical SRH lifetime 1e-7 (unit printed s^-1, inconsistent with lifetime) and Auger 1e-30; Baek Nature Communications 2023 DOI 10.1038/s41467-023-36773-w simulator SRH=100ns, Radiative=1e-10, Auger=1e-31, but 6-QW/different epitaxy. Neither is a unique fit to current 4-QW device.
+- 5V_TEST final 4-QW 2D IQE_rec ratio=0.1094747566% is a *modeled* recombination share only. 2D terminal current 1.448e-11 unverified units, 2um Half width inferred from 3nm QW ×0.006um²; conditional J≈7.24e-4 A/cm2 if A/um and no scale. Injection/polarization, material calibration, steady vs transient, and full/half equivalence unresolved.
+- DECISION: keep current sources/results intact; **no blind rerun** or geometry remake. Audit live pp2/global region physics, actual effective material and current normalization. Then, with team approval, separate literature-calibrated parameter sensitivity branch and short NtSide0 pilot, followed by matched-current NtSide1e18, full/fine & mesh convergence. Project A/B not approved until physically credible baseline.
+
+---
+
 ## 2026-10-09 — InGaN.par actually uses GaAs-derived uncalibrated recombination model parameters (이택규)
 
 - **OBSERVED** live file line ~868 warning `Parameters for the recombination models below were taken from GaAs and require calibration for accurate simulations`. Scharfetter taumin=0, taumax=1e-9 s, Nref=1e16 cm^-3, gamma=1; Auger A=1e-30 cm6/s; Radiative C=2e-10 cm3/s. MaterialDB InGaN.par has been parsed according to earlier `n2_des.log`, but effective alloy parameters and overrides remain unverified.

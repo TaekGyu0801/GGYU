@@ -1,3 +1,9 @@
+## 2026-10-09 — Naming policy confirmed; use CMP_BASELINE_1.2.0_CAL (ACTIVE)
+
+- Naming standard: `CMP_<TYPE>_<MAJOR.MINOR.PATCH>_<TAG>`; `CMP/PROJECT_NAMING_CONVENTION.md`. Supersedes the earlier proposed `CMP_BASELINE_CAL_V1` candidate label; no SWB project renamed or created yet.
+- All nine required private 5V_TEST files confirmed present by user `ls -lh`; next user action is to archive/share those actual files privately for code review (do not upload vendor source to public GitHub).
+- Inspect effective InGaN recombination parameters, 2D current/AreaFactor/injection and physics before a new parameter-only branch; run short smoke before NtSide0/1e18 5V comparisons. Preserve Full/Half verification requirement and completed reference outputs.
+
 ## 2026-10-09 — CMP_BASELINE_CAL_V1 near-final candidate preparation (이택규, PROPOSED)
 
 1. Do not delete or move the pre5V archive; user elected to retain it where it is. Preserve completed `JUSUBIN_FAST_HALF_5V_TEST` and full/fine FAST_C1 references.

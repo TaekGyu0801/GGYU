@@ -34,3 +34,10 @@
 새 CMP Baseline/Project A/Project B SWB 프로젝트를 생성하거나 이름을 제안하기 전에 `PROJECT_NAMING_CONVENTION.md`를 읽는다.
 
 형식: `CMP_<TYPE>_<MAJOR.MINOR.PATCH>_<TAG>`. 현재 준비 중인 신규 후보는 `CMP_BASELINE_1.2.0_CAL`이고 기존 완성 프로젝트 `JUSUBIN_FAST_HALF_5V_TEST`와는 별도이다. 정확한 부모 코드·물성/mesh 버전과 실험 파라미터를 기록하고, 실제 결과 없이 후보를 검증 완료라고 부르지 않는다.
+
+### 공동 적용 범위 — 이택규 / 주수빈 모두 필수 (2026-10-10 재확인)
+
+- 이택규와 주수빈이 **각자의 별도 채팅/Claude에서 새 CMP SWB 프로젝트 또는 배포용 작업 결과물**을 만들 때 동일한 `CMP_<TYPE>_<MAJOR.MINOR.PATCH>_<TAG>` 규칙을 적용한다. 작업자가 주수빈이라고 예외가 생기지 않는다.
+- 새 소자 명명 전에 `PROJECT_NAMING_CONVENTION.md`를 읽고, 부모 버전과 주요 변경을 문서화한다. 기존 프로젝트는 소급해서 이름을 바꾸지 않는다.
+- **SWB 실행에 필요한 내부 파일명/생성 파일명은 임의로 바꾸지 않는다**. 버전은 프로젝트와 별도 배포 산출물에 적용한다.
+- 현재 이택규 CAL 소자는 기존 custom `.par` 방식으로 실행 중이라고 사용자가 보고했다. 차기 신규 소자에서 교수님이 재현하기 쉬운 SWB-native 명령/파라미터 편집 방식을 검토한다.

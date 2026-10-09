@@ -1,3 +1,10 @@
+## 2026-10-10 — Actual 5V parent archive audit complete; CAL next experiment gate (ACTIVE)
+
+- New detailed evidence: `CMP/reviews/BASELINE_1_2_0_CAL_AUDIT_20261010.md`. 5V parent HDF5 shows effective InGaN recombination B=2e-10 cm3/s, Auger=1e-30 cm6/s, SRH tau=1ns, exactly; Mg incomplete ionization valid in DopingConcentration via occupation factor. Raw terminal J/Areal normalization, steady-state, Full/Half/mesh and physical calibration remain unresolved.
+- **FIRST read-only:** inspect local Sentaurus T-2022.03 MaterialDB `InGaN.par` recombination section and official SDevice material-specific parameter override syntax; preserve FASTC1 custom GaN Mg + lattice/thermionic definitions. Verify whether to override both Clean/DmgL InGaN regions in .par. Do not improvise syntax or mutate vendor MaterialDB.
+- Then prepare *separate* `CMP_BASELINE_1.2.0_CAL` branch, isolate SRH lifetime sensitivity (100ns vs old 1ns as literature candidate, not physical fit), hold geometry/doping/polarization/Radiative/Auger/numerics and NtSide0, perform preprocess+short Transient BE smoke, then 5V run only on PASS. Check source/header discrepancy: old header falsely claims staged increments and 4/4.5/4.8/5V Saves, whereas executed deck had single Increment1.2 ramp and only final Save. Add validated within-sweep TDR snapshots/Save as needed for matched-current extraction.
+- Finally make NtSide1e18 comparison at matched injected current, check current/J scaling and full/half numerical equivalence. No full A/B production before gates.
+
 ## 2026-10-09 — Naming policy confirmed; use CMP_BASELINE_1.2.0_CAL (ACTIVE)
 
 - Naming standard: `CMP_<TYPE>_<MAJOR.MINOR.PATCH>_<TAG>`; `CMP/PROJECT_NAMING_CONVENTION.md`. Supersedes the earlier proposed `CMP_BASELINE_CAL_V1` candidate label; no SWB project renamed or created yet.

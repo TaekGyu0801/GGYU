@@ -1,3 +1,10 @@
+## 2026-10-09 — 이택규 CMP_BASELINE_CAL_V1 preparation chosen (PROPOSED; NOT RUN)
+
+- Keep 12 MB pre5V tar.gz backup in place per user decision. Preserve completed JUSUBIN_FAST_HALF_5V_TEST NtSide0 5V transient result and original full/fine reference.
+- New private candidate proposed: CMP_BASELINE_CAL_V1, building from verified Half+Coarse 5V reference with 4 InGaN QWs, 5nm physical sidewall damage, protected Mg/EBL/nGaN doping, and known convergent Transient-BE. No SDE/SDevice edits or simulation launch yet.
+- Critical gates: obtain exact private active SDE/SDevice/FASTC1 .par/pp-decks/mesh/log; verify applied InGaN SRH/Radiative/Auger and material mixing, provisional J/AreaFactor and injection before choosing evidence-backed parameter-only sensitivity updates; then NtSide0 pilot→5V, NtSide1e18 comparison. Full/Half/mesh convergence and matched-current quantities mandatory before final publication baseline/A/B production.
+- Claude cannot be directly addressed in a separate chat through this session; questions recorded in CMP/.ai-sync/RELAY.md for later reader. Current team status remains A/B PRODUCTION NO-GO.
+
 ## 2026-10-08 — 주수빈 accelerated Half+coarse QS smoke deck prepared (PROPOSED)
 
 - Half+coarse SDE mesh actually built successfully; 138,194 elements, 65,513 points.

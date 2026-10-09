@@ -846,14 +846,15 @@
       "mqwIntegratedRadiativeObserved": false,
       "iqeVerified": false,
       "modelCoefficientVerified": false,
-      "next": "SVisual Regions tab identify and zoom Clean_QW1..Clean_QW4, probe numeric RadiativeRecombination there, compare SRH and Auger, then integrate."
+      "next": "Zoom upper active stack and inspect/probe RadiativeRecombination in each named clean QW. No simulation edits.",
+      "cleanQw1ToQw4RegionLabelsObserved": true
     }
   },
   "latestObservedEvent": {
     "date": "2026-10-09",
     "worker": "이택규",
-    "source": "user uploaded SVisual screenshot from JUSUBIN_FAST_HALF_5V_TEST n2_des.tdr",
-    "status": "OBSERVED_POSITIVE_SPATIAL_RADIATIVE_FIELD_QW_NOT_IDENTIFIED",
-    "event": "SVisual RadiativeRecombination colorbar maximum=7.483e19 cm^-3 s^-1, minimum=-7.512e-34 (near zero); top thin layers high and lower bulk negligible; MQW per-region radiative and IQE not verified."
+    "status": "OBSERVED_SVISUAL_QW_REGION_NAMES_PRESENT",
+    "source": "SVisual Regions screenshot",
+    "event": "Clean_QW1, Clean_QW2, Clean_QW3, Clean_QW4 region tags visible in completed 5V_TEST; per-QW radiative rates remain unmeasured"
   }
 }

@@ -1,3 +1,10 @@
+## 2026-10-09 — Correction: '+' region labels in SVisual integration (이택규)
+
+- Observed screenshot output clean QW3-only radiative 2D integral 2.657110e+02 [s^-1 um^-1] and domain 5.985012e-03 um². Left `Clean_QW3+DmgL_QW3` selection did not show as separate 2D integrated region.
+- Prior GPT incorrectly claimed '+' is combined area: retract that assumption. Likely interface/boundary (not confirmed metadata). Safest exact follow-up: select standalone `DmgL_QW3` region only, Start Integration, verify Regions of Dimension 2, then add nonoverlapping Clean_QW3 + DmgL_QW3; do NOT infer full-well value from '+' selected row.
+- No remote source change or rerun; preserve data. Continue other QWs, SRH/Auger and IQE after region verification.
+
+---
 ## 2026-10-09 이택규 handoff: 5V_TEST at Clean_QW4 same (x,y)=(0.244864017914,0.651958341615): Rrad=7.103015017104e18, SRH=1.681575471039e22, Auger=1.238545872618e15 cm^-3 s^-1. Pointwise radiative share ~0.0422%, not device IQE. Check spatial integrated MQW rates and effective SRH/material parameters next. NtSide=0 does not disable all SRH. Preserve outputs; no solver edits.
 
 ## 2026-10-09 — 5V copied Half+Coarse SDevice finished; postprocessing/validation now first (이택규 / ChatGPT)

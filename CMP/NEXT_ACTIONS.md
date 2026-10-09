@@ -1,3 +1,12 @@
+## 2026-10-10 — Separate CAL candidate ZIP created; next SWB clone and smoke (ACTIVE)
+
+1. Download locally prepared private `CMP_BASELINE_1.2.0_CAL_INPUT_CANDIDATE.zip` via chat (only source + README; not on public GitHub). Static checked: SDE bytes identical to 5V_TEST parent; executable SDevice lines identical; GaN Mg/Lattice/Thermionic preserved; material InGaN Scharfetter tau_max electrons/holes changed to literature sensitivity 100ns. This zip is NOT an SWB importable project and is NOT Sentaurus-tested.
+2. On user's workstation/SWB, use `Project > Save As > Clean Project` from completed `JUSUBIN_FAST_HALF_5V_TEST` to new `CMP_BASELINE_1.2.0_CAL`. This retains source and tool flow without copying old node outputs; preserve original project. Confirm location and tool flow.
+3. Replace ONLY the new project's named `sde_dvs.cmd`, `sdevice_des.cmd`, `FASTC1_pp6_des.par` from ZIP. Check names, path, Fermi/Thermionic/Piezoelectric, NtSide=0 and param reference, SDE mesh. Do not generate `sdevice.par` from Silicon template and do not modify system MaterialDB.
+4. Preprocess and audit pp deck; verify model parameter inheritance/actual changed InGaN Scharfetter logged. Make separate 0-0.3V Transient-BE smoke input from copied SDevice, since ZIP's actual Solve Goal=5.0V. Do not launch full 5V until smoke passes.
+5. Then NtSide0 5V exploratory CAL sensitivity run, extract same-bias and eventually same-current charge/radiative/SRH/Auger/J; matched-condition NtSide1e18 follow-up only after its preprocess gate. Add validated intermediate spatial snapshots when going beyond the initial control.
+6. Full/Half+coarse error, material realism, low J/injection, 5V steady status remain publication gates.
+
 ## 2026-10-10 — Actual 5V parent archive audit complete; CAL next experiment gate (ACTIVE)
 
 - New detailed evidence: `CMP/reviews/BASELINE_1_2_0_CAL_AUDIT_20261010.md`. 5V parent HDF5 shows effective InGaN recombination B=2e-10 cm3/s, Auger=1e-30 cm6/s, SRH tau=1ns, exactly; Mg incomplete ionization valid in DopingConcentration via occupation factor. Raw terminal J/Areal normalization, steady-state, Full/Half/mesh and physical calibration remain unresolved.

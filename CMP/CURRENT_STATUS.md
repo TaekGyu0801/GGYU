@@ -1098,3 +1098,9 @@ old-vs-current 20.1× slowdown 결론은 철회하고, stage identification 전�
 과거 약 3일 완료된 preprocessed SDevice deck의 전체 설정을 확보했다. 이 old deck은 모든 sidewall damage trap의 `Conc=0`인 **NtSide=0 케이스**다. 또한 Transient 설정은 `1e-5 / 1e-9 / 1e-3 / Increment 1.2 / Goal 5 V`로 현재 slow run에서 확인한 step-control과 동일하다.
 
 따라서 다음 판정의 핵심은 현재 slow Node 6도 `Conc=0`인지 여부다. current가 1e18이면 old 0과 runtime을 직접 비교하면 안 된다. current도 0이면 Math/Physics/mesh 차이로 바로 좁힌다.
+
+
+## 2026-10-09 11:30 KST update
+- OBSERVED (user report): `JUSUBIN_FAST_HALF_SWB` run completed overnight.
+- Previous blocker "half+coarse transient still running" is cleared at report level.
+- Verification gate remains: confirm final 0.3 V, no fatal termination, output artifacts, and extract runtime/I-V before treating the run as a validated result.

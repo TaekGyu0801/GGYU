@@ -1,3 +1,9 @@
+## 2026-10-10 — Separate CAL project cloned in SWB (OBSERVED / NOT RUN)
+
+Worker 이택규 provided screenshot showing `CMP_BASELINE_1.2.0_CAL` in SWB, SDE→SDEVICE and NtSide=0, with `--` tool results; parent project still listed separately. Actual new source and parameter contents remain unchecked. Next verify new project file inventory, then install private candidate .par only in new clone and preprocess/short smoke. Do not claim CAL simulation has run or lifetime override is active.
+
+---
+
 ## 2026-10-10 — CAL SRH-only private input candidate ready (PROPOSED / NOT SENTARUS TESTED)
 
 Worker 이택규 supplied current server default InGaN Scharfetter/Radiative/Auger section. ChatGPT used confidential 9-file completed parent archive to build `CMP_BASELINE_1.2.0_CAL_INPUT_CANDIDATE.zip` privately; this is a ZIP of three source inputs and README, **not** a full SWB project. It preserves original SDE byte for byte; executable SDevice lines identical (only header/comments corrected); original custom LatticeParameters, Thermionic, GaN Mg block remain. Added InGaN-specific Scharfetter tau_max=1e-7 s for n/p, other default Scharfetter terms unchanged; GaN and AlGaN not changed. Private candidate par SHA256 adfe81ab03b8f0ca84b09b9a4373fdc8e71f7a5faa00ce01a7c0b82b7fb2f1ad. Zip static checks pass; **local T-2022.03 preprocess not performed**. Vendor central MaterialDB not edited.

@@ -498,3 +498,9 @@ Do not change baseline physics parameters while diagnosing this.
 - Final failed QS step t=0.0643488 to 0.0643505 (1.6797e-6): Newton Bank/Rose `Coupled` Poisson+electron+hole factor=1, |Rhs| nonmonotonic (from 3.80e1, peaks to 1.26e8, last 1.85e6); `#iterations larger than 15` after 208.16 s (assembly 41.26, solve 161.58). Then half-step retry proposed at 8.3986e-7, smaller than MinStep 1e-6; QS stops.
 - `.err` contains `vanOverstraetendeMan` E0 isotropic 1 vs anisotropic 4e5 mismatch; only isotropic value used. No basis to attribute QS Newton failure to this warning. Also InGaN region DOS mass material interpolation lines.
 - CONFIRMED immediate cause: Newton not converged at iteration limit and next cutback below MinStep. UNRESOLVED root cause of poor conditioning/divergence. No evidence that blindly lowering MinStep fixes issue.
+
+
+## 2026-10-09 — QS Copy active preprocess settings checked
+- OBSERVED from semi437 `JUSUBIN_FAST_HALF_SWB_Copy/pp2_des.cmd` grep supplied by Lee Taekgyu: Quasistationary begins line 589 (InitialStep=0.03, MinStep=1e-6, MaxStep=0.15). QS Coupled has `Iterations=15` line 601; Math `RHSMin=1e-3` line 510. Earlier `Coupled(Iterations=500, LineSearchDamping=1e-2)` around 570-572 appears in initial solve, another initial Coupled Iterations=100 at line 578.
+- OBSERVED final QS failed Newton after 15 iterations and rejected halved step below MinStep; 0.0193046363 V last accepted. Specific nonlinear divergence trigger remains UNRESOLVED.
+- Need inspect full surrounding Math/Solve 505-610 before attributing nonconvergence to damping, iteration cap, or other solver options. Avoid changing frozen Common Baseline, preserved transient results, or rerunning blindly.

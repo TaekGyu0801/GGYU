@@ -560,7 +560,7 @@
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "Repeat QW4 SRH probe exactly at Rrad x=0.245093340874 y=0.58321731303 (same region); then Auger. No IQE from mismatched points.",
+    "next": "Preserve final 5V data. Audit QW4 local SRH dominance mechanism and integration/QW1-4; no new run or baseline edits until source and physics gate.",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
@@ -902,13 +902,30 @@
         "fallback": "Re-probe Radiative, SRH, Auger all at x=0.24509 y=0.58322 z=0 and verify identical actual position and Clean_QW4 zone",
         "uiChangeTested": false
       }
+    },
+    "qw4CoLocated20261009": {
+      "status": "OBSERVED_SAME_POINT",
+      "zone": "Clean_QW4(InGaN)",
+      "x": 0.244864017914,
+      "y": 0.651958341615,
+      "z": 0,
+      "units": "cm^-3 s^-1",
+      "radiative": 7103015017104000000,
+      "srh": 1.681575471039e+22,
+      "auger": 1238545872618000,
+      "total": 1.682285896396e+22,
+      "localRadiativeFractionPercentApprox": 0.0422,
+      "regionalIntegration": false,
+      "iqeDeviceVerified": false,
+      "interpretation": "SRH dominates locally at this point; cannot infer whole-QW or device IQE. NtSide=0 sets damage-region trap concentration zero, not global SRH physics off.",
+      "next": "Inspect SRH lifetimes and actual radiative coefficients, validate per-QW integrated Rrad/SRH/Auger, compare electrical injection/2D normalization and reference full/fine results."
     }
   },
   "latestObservedEvent": {
     "date": "2026-10-09",
     "worker": "이택규",
-    "status": "OBSERVED_PROBE_AT_DECIMAL_PRECISION_LIMIT",
-    "source": "user statement that SVisual Probe At accepts at most 5 digits past decimal point",
-    "event": "Cannot type full QW4 12-decimal probe coordinate into Probe At; proposed test of Show Only Active Field unchecked or re-probe all fields at identical rounded coordinates."
+    "source": "3 user-shared SVisual Probe panels at same x/y Clean_QW4(InGaN) on completed 5V_TEST n2_des",
+    "status": "OBSERVED_QW4_COLOCATED_RAD_SRH_AUGER_LOCAL_SRH_DOMINANT",
+    "event": "QW4 same-point Rrad 7.103015017104e18, SRH 1.681575471039e22, Auger 1.238545872618e15, Total 1.682285896396e22 per cm3-second; pointwise radiative fraction about 0.0422%, not device IQE."
   }
 }

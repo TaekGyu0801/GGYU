@@ -1267,3 +1267,10 @@ Evidence: user's last-row DF-ISE awk and `cat FASTC1_pp6_des.par`, grep of execu
 - 이택규 screenshot shows choices `Clean_QW3` and `Clean_QW3+DmgL_QW3` in Field Integration selector. For full physical QW3 recombination accounting in current Half model, select `Clean_QW3+DmgL_QW3` as a single combined group, not both it and `Clean_QW3` (would double count).
 - `Clean_QW3` alone excludes the QW3 damaged sidewall; still useful later for separate core-vs-edge attribution. `NtSide=0` deactivates parameterized sidewall traps but the DmgL_QW3 geometric region still exists.
 - This is a selection decision, NOT an executed/verified integral. Next capture chosen field `RadiativeRecombination`, selected group, numerical Integral/Domain and actual 2D units; verify group region membership before claiming whole-well total. Repeat same group for SRH/Auger, and other QWs before IQE computation. Keep comparison scope consistent for full/fine and damaged NtSide=1e18 branches.
+
+## 2026-10-09 — Next after Clean_QW3 region integral and ROI '+ label' correction
+
+1. OBSERVED 5V_TEST SVisual `RadiativeRecombination` area integral Clean_QW3 alone = 2.657110e+02 [s^-1 um^-1], domain 5.985012e-03 [um^2]. This is not combined QW3.
+2. **Do NOT rely on `Clean_QW3+DmgL_QW3` as a combined 2D volume/area; likely a lower-dimensional interface label.** Locate independent `DmgL_QW3` row in Regions list, select only this, press Start Integration. Verify output lists `DmgL_QW3` under Regions of Dimension 2, capture Integral and Domain. Add independent integrals from Clean_QW3 and DmgL_QW3 after confirming nonoverlap, rather than double-counting or trusting selection highlight.
+3. For each QW1..4 integrate exact bulk Clean_QW + separate DmgL_QW (in full model add DmgR_QW), for Rrad, SRH, Auger, then compute IQE_rec from sums of like-normalized integrals. Record SVisual units per um depth; verify 2D thickness and current normalization for physical optical totals.
+4. No SDE/SDevice rerun or cleanup. Correct prior log saying '+' item represented combined region; label remains UNRESOLVED pending dimensional confirmation.

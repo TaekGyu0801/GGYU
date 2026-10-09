@@ -500,5 +500,43 @@
     "status": "CONFIRMED_0P3V_COMPLETE",
     "wallclockSeconds": 25019.43,
     "finalVoltageV": 0.3
+  },
+  "qsTransientComparison20261009": {
+    "worker": "이택규",
+    "status": "OBSERVED_PARTIAL_CONFIGURATION_COMPARE",
+    "sharedControls": {
+      "ErrRefElectron": 10000,
+      "ErrRefHole": 10000,
+      "RHSMin": 0.001,
+      "initialPoissonIterations": 500,
+      "initialPoissonLineSearchDamping": 0.01,
+      "initialCarrierIterations": 100,
+      "sweepCoupledIterations": 15
+    },
+    "transient": {
+      "mode": "Transient",
+      "InitialStep": 0.00001,
+      "MinStep": 1e-9,
+      "MaxStep": 0.001,
+      "Increment": 1.2,
+      "confirmedCompletedGoalV": 0.3
+    },
+    "quasistationary": {
+      "mode": "Quasistationary",
+      "InitialStep": 0.03,
+      "MinStep": 0.000001,
+      "MaxStep": 0.15,
+      "Increment": 1.5,
+      "Decrement": 2,
+      "goalV": 0.3,
+      "lastAcceptedV": 0.0193046362893992
+    },
+    "conclusions": [
+      "No evidence that sweep-local damping is uniquely missing in QS: both Coupled blocks list Iterations=15 only",
+      "Step controls expressed in different virtual/physical parameterization are not directly comparable",
+      "Full physical model equivalence, precise original Goal block and Decrement not yet audited"
+    ],
+    "commentDiscrepancy": "Original preprocessed header comments mention 0-4V and 4-5V but runtime was confirmed at 0.3V; inspect original executable Goal lines rather than trust comments",
+    "nextAction": "Read original transient pp2_des.cmd lines 583-615 and verify Goal and step configuration; no edits yet"
   }
 }

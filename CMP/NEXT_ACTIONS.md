@@ -1281,3 +1281,8 @@ Evidence: user's last-row DF-ISE awk and `cat FASTC1_pp6_des.par`, grep of execu
 2. Next read-only SVisual integration: field `srhRecombination`; integrate both *standalone* `Clean_QW3` and `DmgL_QW3` as two separate 2D regions, confirm each output line and Total Integral/Domain. Same process with `AugerRecombination`.
 3. Repeat all three rates for QW1/QW2/QW4 using standalone Clean and DmgL. Compute `IQE_rec = ΣRrad_integral/(ΣRrad+ΣRSRH+ΣRAuger)` from consistent 2D normalized integrals; do NOT average probe ratios. Then validate absolute out-of-plane normalization, NtSide=1e18 and full/fine comparison.
 4. Preserve finished Node2 results and original simulations. Avoid selecting plus-named interface instead of 2D Dmg region.
+
+## 2026-10-09 — QW3 5V SRH Dmg edge integral confirmed
+
+- New 2D SVisual `DmgL_QW3` SRH Integral=1.655249e3 [s^-1 um^-1], Domain=1.500002e-05 um²; compare same Dmg region Rrad=0.526818. NtSide=0 trap-off condition, generic SRH() active; no causal attribution. `Clean_QW3` SRH pending.
+- **Next**: Field `srhRecombination` standalone `Clean_QW3` and Start Integration; send Region of Dimension 2, Integral, Domain. Then Auger for same standalone Clean and DmgL and sum; verify normalized 2D ratio before broader 4-QW IQE. Keep current data intact.

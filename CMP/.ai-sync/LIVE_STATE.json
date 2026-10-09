@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-08",
+  "updated": "2026-10-09",
   "primaryWorker": "주수빈",
   "phase": "Phase 0 — Common Baseline completion + Project A/B pre-run implementation gate",
   "task": "Complete mandatory A/B pre-run gates before any multi-day production sweep",
@@ -553,14 +553,14 @@
     "recommendedNext": "Preserve original smoke/QS Copy; audit source and prepare separate forward-bias 3–5 V transient candidate with preflight and comparison gates, not automatic launch."
   },
   "half5VTestCopy20261009": {
-    "status": "OBSERVED_DIRECTORY_COPY_SWB_UNVERIFIED",
+    "status": "OBSERVED_NODE2_COMPLETE_TO_5V",
     "worker": "이택규",
     "original": "/user/semi/semi437/tmp/myproject/JUSUBIN_FAST_HALF_SWB",
     "copied": "/user/semi/semi437/tmp/myproject/JUSUBIN_FAST_HALF_5V_TEST",
     "evidence": "User terminal cp -a, ls -ld target directory, cmp SDevice source no output",
     "shellObservation": "Bash conditional if syntax rejected (C-shell-like command interpreter); standalone cp succeeded",
     "swbRecognition": "PENDING_GUI_OPEN",
-    "next": "Check fresh n2_des.log and process status; do not cleanup or rerun.",
+    "next": "Preserve outputs/checkpoints. Inspect complete n2_des.plt and area/current normalization, physical recombination/current sanity, full-versus-half mesh/symmetry equivalence. Then separately audit/run NtSide=1e18 nominal damaged reference. Project A/B production NO-GO.",
     "projectMarkers": {
       "original": ".project present, 0 bytes, Oct 8 16:58",
       "testCopy": ".project present, 0 bytes, Oct 8 16:58",
@@ -607,7 +607,7 @@
     },
     "sourceSyncedToGitHub": false,
     "preprocessStatus": "OBSERVED_PP2_5V_SETTINGS",
-    "simulationRunStatus": "SWB_JOB_2_STARTED_20261009_113314_KST",
+    "simulationRunStatus": "COMPLETED_20261009_142952_KST",
     "preprocessedVerified": {
       "SolveMode": "Transient",
       "FinalTime": 1,
@@ -631,7 +631,7 @@
       "n2": "2026-10-09 01:39 KST",
       "mesh": "2026-10-08 18:08 KST"
     },
-    "fiveVNewResults": "NOT_RUN",
+    "fiveVNewResults": "OBSERVED_FINAL_5V_AND_FILES_WRITTEN",
     "preRunBackupStatus": "CONFIRMED_TAR_READABLE",
     "preprocessedGridTrapAudit": "OBSERVED_GREP_PASS",
     "backupArchive": {
@@ -662,7 +662,7 @@
       "n2LogPeakMemoryGiB": 2.61
     },
     "concurrencyConcern": "TWO_OTHER_RUNNING_PP6_PP12_JOBS_99PERCENT_CPU",
-    "runConvergence": "UNVERIFIED",
+    "runConvergence": "OBSERVED_CURVE_TRACE_FINISHED_AT_ANODE_5V",
     "runtimeEstimate20261009": {
       "kind": "INFERENCE_NOT_MEASURED",
       "baseline0p3VWallclockHours": 6.95,
@@ -672,7 +672,48 @@
       "linearExtrapolationHours": 116,
       "planningRange": "approximately 3-7 days or longer; early failure possible",
       "launch": "2026-10-09 11:33:14 KST",
-      "observedActualProgress": "UNKNOWN_PENDING_n2_des_log"
+      "observedActualProgress": "UNKNOWN_PENDING_n2_des_log",
+      "supersededByMeasuredResult": true,
+      "actualMeasuredWallclockSeconds": 10596.76,
+      "actualStatus": "OBSERVED_FINISHED_20261009_142952_KST",
+      "causeOfEstimateMismatch": "UNRESOLVED"
+    },
+    "completionEvidence20261009": {
+      "source": "User terminal output from /user/semi/semi437/tmp/myproject/JUSUBIN_FAST_HALF_5V_TEST/n2_des.log",
+      "solverEnd": "2026-10-09T14:29:52+09:00",
+      "requestedAnodeGoalV": 5,
+      "observedFinalAnodeVoltageV": 5,
+      "finalAnodeElectronCurrentAsPrinted": 2.781e-13,
+      "finalAnodeHoleCurrentAsPrinted": 1.42e-11,
+      "finalAnodeTotalCurrentAsPrinted": 1.448e-11,
+      "currentOutputUnits": "UNVERIFIED_2D_CURRENT_NORMALIZATION_PENDING",
+      "finishReason": "Curve trace finished.",
+      "normalTermination": true,
+      "wallclockSeconds": 10596.76,
+      "totalCpuSeconds": 30641.23,
+      "peakMemoryGB": 2.97,
+      "saveWritten": [
+        "n2_5V_ckpt_des.sav",
+        "n2_5V_ckpt_circuit_des.sav"
+      ],
+      "finalTdrWritten": "n2_des.tdr",
+      "processCheck": "no pp2_des.cmd, only existing pp6 PID69457 and pp12 PID93915 running",
+      "trapCase": "NtSide=0 per preprocessed grep 12 Conc=0, not nominal damaged",
+      "limitations": [
+        "IQE and integrated MQW recombination not analyzed",
+        "2D current/AreaFactor unverified",
+        "half/coarse vs full/fine equivalence unverified",
+        "NtSide=1e18 damaged reference not run in this branch",
+        "A/B research outcome not demonstrated"
+      ]
     }
+  },
+  "latestObservedEvent": {
+    "date": "2026-10-09T14:29:52+09:00",
+    "worker": "이택규",
+    "source": "user terminal tail -n 40 n2_des.log",
+    "event": "JUSUBIN_FAST_HALF_5V_TEST Node2 NtSide=0 Half+Coarse Transient reached 5 V and terminated normally",
+    "status": "OBSERVED_SOLVER_COMPLETE",
+    "physicalBaselineValidated": false
   }
 }

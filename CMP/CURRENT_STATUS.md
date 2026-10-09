@@ -1104,3 +1104,9 @@ old-vs-current 20.1× slowdown 결론은 철회하고, stage identification 전�
 - OBSERVED (user report): `JUSUBIN_FAST_HALF_SWB` run completed overnight.
 - Previous blocker "half+coarse transient still running" is cleared at report level.
 - Verification gate remains: confirm final 0.3 V, no fatal termination, output artifacts, and extract runtime/I-V before treating the run as a validated result.
+
+
+## 2026-10-09 — Half transient completed, QS Copy MinStep failure
+- OBSERVED: `JUSUBIN_FAST_HALF_SWB` original transient completed `Curve trace finished` at 0.300 V, wallclock 25019.43 s, and wrote n2_des.plt/tdr/sav. I-V 0.3 V very low current; full LED turn-on/IQE/reference equivalence not yet validated.
+- UNRESOLVED: distinct `JUSUBIN_FAST_HALF_SWB_Copy` QS run ended with `Step-size less than MinStep (step-size = 8.3986e-07)` after 18417.09 s (5:06:57); wrote sav/tdr and `Good Bye`, but goal 0.3 V is NOT verified. Do not call it successful or faster than transient.
+- Current blocker: obtain last accepted QS bias and diagnose rejected steps/Newton using QS n2_des.plt/log/err.

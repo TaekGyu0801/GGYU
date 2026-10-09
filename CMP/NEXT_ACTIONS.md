@@ -1179,3 +1179,13 @@ Common Baseline Final 통과 후에만:
 - VERIFIED baseline trap geometry: preprocessed half-domain has 12 DmgL regions (pGaN, EBL, Barrier0–4, QW1–4, nGaN); each is sidewall-damage region with acceptor trap parameterized by `@NtSide@`. Thus yes, QW1–4 have sidewall-edge trap definitions, but not distributed through the pristine central MQWs. `NtSide=0` means declared trap concentration 0 (5V_TEST branch); nominal `NtSide=1e18 cm^-3` activates damage traps, to be validated with proper same-source test.
 - IMPORTANT physics distinction: Carbon C-related deep acceptor/compensation in Cedge is NOT the existing sidewall Dmg trap. Baseline Dmg trap nominal Et=Ev+0.75eV, e/h sigma=1e-15cm2; proposed C_N literature anchor near Ev+0.9eV is independent and must not be substituted as same species without model justification. Project A causal hypothesis is current steering to lower sidewall SRH, not yet proven; C-off null, trap-on damage case and matched-current IQE metrics required.
 - No TCAD code changes, no new solver/output progress evidenced. Existing 5V_TEST startup remains last live evidence.
+
+## 2026-10-09 — After confirmed Half+Coarse 5V_TEST completion (이택규)
+
+1. **Do not rerun or cleanup** the finished `JUSUBIN_FAST_HALF_5V_TEST` Node2; preserve `n2_des.log`, `n2_des.plt`, `n2_des.tdr`, and both `n2_5V_ckpt*.sav` files. Keep unrelated pp6/pp12 runs unchanged.
+2. First non-destructive check: verify `ls -lh n2_des.plt n2_des.tdr n2_5V_ckpt_des.sav n2_5V_ckpt_circuit_des.sav`, then inspect full voltage/current curves; do **not** interpret `1.448E-11` as A or J without verifying 2D units and AreaFactor.
+3. Validate output physics: MQW radiative/SRH/Auger recombination, integrated IQE components, carrier distribution, contact e/h/displacement current, operating-current plausibility; check actual `pp2_des.cmd/par` and fields.
+4. Compare half/coarse `NtSide=0` with original full/fine same-trap pristine reference at matched bias/current, with symmetry ×2 handling and mesh-convergence gates; investigate why measured 5V runtime 10596.76 s differs sharply from older 0.3V smoke 25019.43 s before claiming acceleration/equivalence.
+5. Next separate **nominal damage** `NtSide=1e18` branch with exact physics/source verification and short preprocess/solver gates; compare same-current I(V), sidewall SRH, MQW recombination and IQE. Project A/B production remains blocked until pre-run audit gates pass.
+
+Evidence: user-provided Oct9 completed `n2_des.log` (anode 5.000E+00; Curve trace finished; final TDR/checkpoints saved; normal completion at 14:29:52 KST). Previous instruction to simply check if Node2 is running has been superseded.

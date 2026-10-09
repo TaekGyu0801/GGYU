@@ -1,3 +1,7 @@
+## 2026-10-10 — 이택규 CAL input candidate created off-server, no simulator run (PROPOSED / STATIC CHECKED)
+
+- User provided installed T-2022.03 InGaN.par SRH/Auger/Radiative section proving vendor's GaAs-derived 1ns lifetime warning and default coefficients. Private ChatGPT downloadable `CMP_BASELINE_1.2.0_CAL_INPUT_CANDIDATE.zip` generated from validated 5V_TEST input files: same SDE, same executed SDevice sweep/model (comments corrected only), GaN Mg and crystal orientation intact, InGaN SRH Scharfetter tau_max set to 100ns both carriers in custom .par. This is a *literature sensitivity proposal*, not calibrated or run. New SWB clone pending.
+
 ## 2026-10-10 — 이택규 verified actual 5V parent model via uploaded HDF5 archive (OBSERVED/DERIVED)
 
 - Baseline candidate `CMP_BASELINE_1.2.0_CAL` under preparation, not yet created; confidential nine-file input and result archive read privately by GPT. Audit without proprietary contents: `CMP/reviews/BASELINE_1_2_0_CAL_AUDIT_20261010.md`.

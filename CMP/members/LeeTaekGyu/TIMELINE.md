@@ -1202,3 +1202,8 @@
 
 ## 2026-10-09 — QS Copy Newton divergence root symptom checked
 - 작업자 이택규; user-shared `n2_des.log` lines 6900-6997 from QS Copy show Coupled Poisson/electron/hole using Bank/Rose nonlinear solver, factor 1.0, Newton residual erratic (`|Rhs|` from 38 to up to 1.26e8, ending 1.85e6). Coupled exhausted 15 iterations in 208.16 s, then failed retry because half-step 8.3986e-7 < MinStep 1e-6. Last accepted bias 0.0193046363 V, goal 0.3 V. Error file E0 anisotropic/isotropic mismatch notice; not identified as termination cause. Numerical trigger observed, fundamental cause unresolved. No TCAD changes. Next inspect actual pp2_des.cmd Math/Solve settings and compare original transient in controlled no-change analysis.
+
+
+## 2026-10-09 — QS preprocessing numerical settings
+- OBSERVED: `JUSUBIN_FAST_HALF_SWB_Copy/pp2_des.cmd` uses Quasistationary, InitialStep 0.03, MinStep 1e-6, MaxStep 0.15, RHSMin 1e-3 and QS Coupled Iterations 15. `LineSearchDamping=1e-2` shown in earlier startup Coupled block with 500 iterations, not in listed QS inner Coupled line.
+- QS last accepted bias 0.019304636 V; nonlinear Newton convergence failure after 15 attempts confirmed from logs. Full Math and Solve block comparison pending; no code changed.

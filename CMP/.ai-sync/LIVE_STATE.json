@@ -927,5 +927,37 @@
     "source": "3 user-shared SVisual Probe panels at same x/y Clean_QW4(InGaN) on completed 5V_TEST n2_des",
     "status": "OBSERVED_QW4_COLOCATED_RAD_SRH_AUGER_LOCAL_SRH_DOMINANT",
     "event": "QW4 same-point Rrad 7.103015017104e18, SRH 1.681575471039e22, Auger 1.238545872618e15, Total 1.682285896396e22 per cm3-second; pointwise radiative fraction about 0.0422%, not device IQE."
+  },
+  "projectAFabricationFeasibility20261009": {
+    "status": "PROPOSED_RESEARCH_ROUTE_COMPARISON_NOT_APPROVED",
+    "worker": "이택규",
+    "goal": "Translate Stage1 Cedge in upper nGaN beside damaged mesa sidewall into a physically credible process; no fabrication or SProcess completed.",
+    "pathways": [
+      {
+        "route": "POST_MESA_ANGLED_C_ION_IMPLANT",
+        "concept": "Etch finished LED mesa, protect MQW/pGaN sidewall and other surfaces, implant C+ selectively into exposed upper nGaN sidewall, recover/passivate",
+        "gate": "Selective height mask and tilt shadowing, carbon activation versus irradiation damage, MQW thermal budget not validated."
+      },
+      {
+        "route": "PRE_MQW_MASKED_C_OR_GROWTH",
+        "concept": "Grow upper nGaN, mask future mesa ring and introduce carbon, recover/regrow MQW and top epi, then align mesa etch",
+        "gate": "Future mesa overlay alignment, implanted surface recovery, uniform high quality epitaxial regrowth and buried C profile unverified."
+      }
+    ],
+    "constraints": [
+      "Cannot automatically equate implanted C with electrically active C_N deep acceptor as-grown carbon-doped GaN",
+      "Prior As/F microLED ion implantation studies are mechanism analogs, not carbon validation",
+      "Keep original 5nm damaged strip and Stage1 Cedge position for baseline model; no process choice approved",
+      "Do not assume an exact rectangular C profile, lateral straggle and implantation damage matter",
+      "Investigate material-specific anneal thermal budget for InGaN MQW"
+    ],
+    "evidenceUrls": [
+      "https://doi.org/10.1016/j.nxnano.2024.100101",
+      "https://doi.org/10.1021/acsphotonics.5c02363",
+      "https://doi.org/10.1016/S0921-5107(97)00144-X",
+      "https://www.sandia.gov/research/publications/details/role-of-c-o-and-h-in-iii-v-nitrides-1995-12-01/",
+      "https://doi.org/10.1016/j.jallcom.2021.163519"
+    ],
+    "next": "Research choice of chemical compensation vs implantation-damage isolation; compare post-mesa and pre-MQW process masks/thermal risks, then process-profile and controls. No change to current Baseline validation priority."
   }
 }

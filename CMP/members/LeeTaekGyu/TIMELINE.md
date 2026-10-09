@@ -1198,3 +1198,7 @@
 - Last log attempts at t=0.0643488 to 0.0643505 then terminated `Step-size less than MinStep (step-size = 8.3986e-07)`.
 - QS runtime 18417.09 s but did NOT reach goal. Cannot compare as speedup to original transient that reached 0.3 V in 25019.43 s.
 - Root numerical/physics trigger not yet established. Next: inspect QS log around lines 6900-7000 and `n2_des.err`; no blind MinStep or baseline modification.
+
+
+## 2026-10-09 — QS Copy Newton divergence root symptom checked
+- 작업자 이택규; user-shared `n2_des.log` lines 6900-6997 from QS Copy show Coupled Poisson/electron/hole using Bank/Rose nonlinear solver, factor 1.0, Newton residual erratic (`|Rhs|` from 38 to up to 1.26e8, ending 1.85e6). Coupled exhausted 15 iterations in 208.16 s, then failed retry because half-step 8.3986e-7 < MinStep 1e-6. Last accepted bias 0.0193046363 V, goal 0.3 V. Error file E0 anisotropic/isotropic mismatch notice; not identified as termination cause. Numerical trigger observed, fundamental cause unresolved. No TCAD changes. Next inspect actual pp2_des.cmd Math/Solve settings and compare original transient in controlled no-change analysis.

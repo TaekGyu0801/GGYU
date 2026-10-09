@@ -1,3 +1,10 @@
+## 2026-10-09 — Canonical naming adopted and 5V_TEST file inventory verified (DECISION/OBSERVED)
+
+- Worker 이택규: new future Baseline candidate is **`CMP_BASELINE_1.2.0_CAL`**, not `CMP_BASELINE_CAL_V1`. Official policy `CMP/PROJECT_NAMING_CONVENTION.md`: `CMP_<TYPE>_<MAJOR.MINOR.PATCH>_<TAG>`, independent A/B lineages, NtSide is a run variable.
+- User server listing confirms 9 source/preprocessed/mesh/log/results file paths exist in `JUSUBIN_FAST_HALF_5V_TEST`, but the private bytes have not yet been provided for review. Next AI/Claude: review exact sources and effective material/current models before proposing edits. Preserve finished 5V_TEST, pre5V tar.gz and Full/Fine FAST_C1. No new solver work performed.
+
+---
+
 ## 2026-10-09 — Claude / next AI review request: CMP_BASELINE_CAL_V1 proposal (PROPOSED, NOT SENT DIRECTLY)
 
 Worker 이택규 chose to keep `JUSUBIN_FAST_HALF_5V_TEST_pre5V_20261009.tar.gz` in place and prepare a separate near-final candidate `CMP_BASELINE_CAL_V1`. Existing 5V NtSide0 Half+Coarse transient result (138194 elements; modeled 4QW radiative fraction ~0.10947%; low provisional J) must be preserved and not treated as a calibrated IQE. Region-specific Mg IncompleteIonization runs with E0=0.2eV/g=4; local hDensity matched historical target, yet MgMinus interpretation unresolved. The installed MaterialDB InGaN recombination defaults are annotated GaAs-derived and require validation of effective alloy mixing/overrides. QS branch previously failed near 0.0193V; use proven Transient-BE for first candidate.

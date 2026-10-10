@@ -1,3 +1,10 @@
+## 2026-10-10 ~19:56 KST — hDensity C1 Cutline first displayed (OBSERVED GUI / NOT PHYSICS-VALIDATED)
+
+- 작업자 주수빈이 완료된 `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr` (NtSide0, 5V transient)에서 기존 Clean 영역 vertical `C1(n2_des)` cutline의 variable을 `DopingConcentration`에서 **`hDensity`**로 변경했고, 우측 legend `hDensity(C1(n2_des))`가 직접 확인됨.
+- 오른쪽 graph X축은 변경 후 전체 약 0–4.5 µm로 돌아왔으며 Y축 선형에서는 상단 계면/QW 근처로 보이는 X≈0.1–0.25 µm에서 좁고 큰 hole-density spikes가 보임. Y축 4e19 cm^-3 tick 위로 올라가는 peak가 존재하나 **정확한 최대값/영역/물리적 원인은 미확인**. 넓은 n-GaN에서 정공이 작게 보이는 것은 이 선형축 스케일에서의 시각적 인상이며 0이라고 단정할 수 없음.
+- Kou의 nominal p-GaN free-hole 3e17 cm^-3 대비 p-GaN 내부 실제 hDensity는 이 화면만으로 정량 비교 불가. 급격한 spike를 Mg 고농도·물리 불량·QW accumulation으로 확정하지 말 것. 5V transient endpoint는 0V equilibrium calibration과 다름.
+- NEXT view-only: 오른쪽 1D plot X-axis Axis Properties에서 fixed Min=0 Max=0.4 µm로 확대; 필요하면 hDensity 양수 로그 Y축/정확한 Probe로 p-GaN interior vs EBL/MQW 각 region 분리, Rhs/field check. 그래프 변경은 visualization only; SDE/SDevice/별도 running CAL 수정 없음.
+
 ## 2026-10-10 19:46 KST — SVisual cutline upper-layer net doping inspected
 
 - JuSubin 5V NtSide0 `JUSUBIN_FAST_HALF_5V_TEST` screenshot: `DopingConcentration` cutline X 0–0.4 um. Approx net profile upper p-side -3e17 cm^-3 until X ~0.10 um, approaches zero ~0.12 um, near-zero area over ~0.12–0.26 um, +5e18 cm^-3 from ~0.27 um into n-GaN. These are screen estimates; actual individual regions/point values unverified.

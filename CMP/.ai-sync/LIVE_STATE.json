@@ -1711,5 +1711,32 @@
     "full4VTDRVerified": false,
     "nextReadOnly": "Parse valid full records in Data block; print closest 4V voltage/time/current and latest record, then check 4V TDR persistence before considering stop.",
     "runningCALInterrupted": false
+  },
+  "latestJuSubinCALNear4VExtract": {
+    "timestamp": "2026-10-10T22:30:00+09:00",
+    "status": "OBSERVED",
+    "worker": "주수빈",
+    "experiment": "CMP_BASELINE_1.2.0_CAL 100ns InGaN SRH lifetime sensitivity",
+    "source": "user live terminal screenshot of read-only parse of n2_des.plt",
+    "near4V": {
+      "transientTime_s": 0.79993475,
+      "anodeOuterVoltage_V": 3.99967374,
+      "anodeTotalCurrent_2D_A_per_um": 3.497895e-14
+    },
+    "lastSavedRecordInScreenshot": {
+      "transientTime_s": 0.82993089,
+      "anodeOuterVoltage_V": 4.14965446,
+      "anodeTotalCurrent_2D_A_per_um": 4.839436e-14
+    },
+    "caveats": [
+      "latest PLT row not necessarily current real-time solver progress",
+      "transient TotalCurrent may have displacement component",
+      "neither 4V TDR nor 4V luminous baseline validated",
+      "low current Gate0 unresolved"
+    ],
+    "canUse4VFor": "intermediate I-V/current sensitivity at same bias only",
+    "cannotConclude": "4V endpoint is physically validated MicroLED baseline; 5V no longer needed; CAL safe to stop",
+    "nextReadOnly": "find CAL saved n2*.tdr/n2*.sav; inspect associated bias and Save/Plot directives before any Stop",
+    "codeOrSimulationChanged": false
   }
 }

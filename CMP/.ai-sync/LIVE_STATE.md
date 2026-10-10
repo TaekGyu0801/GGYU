@@ -1,3 +1,6 @@
+## 2026-10-10 — JuSubin pGaN vs EBL Ev/EFp probe
+- OBSERVED same existing 5V_TEST n2_des SVisual: Clean_pGaN X=0.05,Y=1um Ev=-5.130097037559eV, EFp=-4.999999973858eV -> local 0.130097063701eV. Prior Clean_EBL X=0.13,Y=1um Ev=-5.252508407140eV, EFp=-4.999999939039eV -> 0.252508468101eV. Delta 0.1224114044eV. These are local energy separations NOT cross-interface barrier. Need confirm actual 5.0V recorded endpoint: an earlier n2_des.log screenshot showed anode 4.139V mid-ramp. Read-only check first. No TCAD/CAL changes.
+
 ## 2026-10-10 — EBL same-point energy difference
 - OBSERVED (주수빈) 5V_TEST completed NtSide0 Clean_EBL at X=0.13um,Y=1.0um: Ev=-5.252508407140eV, EFp=-4.999999939039eV; EFp-Ev=0.252508468101eV. Previous hDensity=5.7879e15, acceptor=3e17, signed net doping=-3e17 cm^-3. Local EFp-Ev difference is not injection barrier height. Next read pGaN same-position values and compare regions. No code or CAL changes.
 

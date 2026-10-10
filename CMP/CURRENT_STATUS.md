@@ -1,3 +1,9 @@
+## 2026-10-10 ~19:02 KST — FAST_C1 node6 red in SWB; CAL progress still unresolved (OBSERVED SCREENSHOT / UNRESOLVED)
+
+- 이택규 제공 새 SWB 화면의 선택 프로젝트는 `GaN_PiN_Diode_FAST_C1`이며 NtSide0 SDevice `n6` 빨간색(기본 팔레트상 failed), n12 연파란색, SDE n1 노란색. `CMP_BASELINE_1.2.0_CAL`은 왼쪽 목록에만 있으므로 CAL 상태 판단 근거가 아님.
+- CAL의 최종 검증된 수치: 수빈이 2026-10-10 ~18:08 제공 n2 로그 약 4.138V, Newton 15회 및 cutback; 5V 완료 미확인. 사용자도 아직 완료되지 않았다고 보고.
+- Blocker: FAST_C1 n6 원인·종료시점 로그 부재; CAL 고전압 수렴 병목 및 최근 accepted step 부재. 기존의 완료된 `JUSUBIN_FAST_HALF_5V_TEST` 부모 결과는 별도 보존. 새 코드/시뮬레이션 변경 없음.
+
 ## 2026-10-10 ~18:08 KST — CAL NtSide0 high-bias Newton 15 cutback 관찰 (OBSERVED)
 
 - 주수빈 최신 `CMP_BASELINE_1.2.0_CAL/n2_des.log` 터미널 화면: 4.138V 부근(시도 시작 t=0.827672 s; 5V/s ramp라면 4.13836V)에서 BE step Newton iterations 15회에도 최종 RHS≈1.21e-3 (RHSMin 1e-3보다 큼). `#iterations larger than 15` 후 `Newton didn't converge, trying again with smaller timestep...` 출력; 실패 시도 wallclock 51.13초.

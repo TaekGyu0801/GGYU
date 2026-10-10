@@ -1,3 +1,9 @@
+## 2026-10-10 22:39 KST — Project A carbon high-resistivity edge literature and feasibility review (PROPOSED)
+- Worker: 이택규. Research request: evaluate physical/process/TCAD feasibility of Project A and recover original carbon high-resistance literature.
+- Recovered original project literature map from CMP/PROJECT_AB_TCAD_IMPLEMENTATION_PLAN.md: Richter 2020 (10.1002/crat.201900129), Ramdani 2012 (10.1016/j.sse.2012.04.034), Cao 2023 (10.1038/s41598-023-41678-1), Chang 2020 (10.1186/s11671-020-03372-3), Taube 2015 (10.1002/pssa.201431724). Distinguish C-doped grown material, C implantation-induced lattice damage and actual microLED sidewall data.
+- Proposed first mechanism screen remains existing documented plan: preserve 5nm Dmg and common baseline; SDE Cedge region inside damage in upper n-GaN below MQW; SDevice carbon-related deep acceptor/compensation vs A-null same mesh. Trial lateral wC 0/0.05/0.10/0.20/0.30um is proposed not fabricated or validated. No evidence that local carbon implantation microLED sidewall is validated by these papers. A/B production remains NO-GO due to low-J Gate0 and extraction/mesh/active-deck requirements.
+- No code/simulation changed. NEXT: audit actual active SDE mesh/region coordinates and current paths, compare Cedge upper-n only vs additional location options, validate null control, then small pilot after Gate0.
+
 ## 2026-10-10 ~22:11 KST — CAL 4.149V accepted; next BE-step Newton oscillatory (OBSERVED server log, READ ONLY)
 
 - 이택규가 학교 서버 `CMP_BASELINE_1.2.0_CAL/n2_des.log` `tail -n 60` 실제 출력 제공. CAL n2 100ns sensitivity의 **accepted** 두 단계 확인: (1) 직전 접촉 anode=4.149E+00V, total current=4.831E-14 (로그 표시 단위, 2D normalization 주의); (2) `Computing BE-step from 0.829858 s to 0.829862 s (Stepsize 3.8830e-06 s)` 후 Newton iteration2 RHS=8.97e-04<1e-3, `Finished because |RHS| less than 1e-3`, anode 4.149E+00V, total current 4.832E-14. **4.149V는 이번 실제 로그에서 정상 수렴 확인됨**; 표시가 소수 셋째 자리로 반올림되어 정확한 몇 mV 변화인지는 이 로그로 계산 불가.

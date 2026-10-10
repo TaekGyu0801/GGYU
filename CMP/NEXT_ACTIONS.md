@@ -1,3 +1,6 @@
+## 2026-10-10 ~21:43 KST — EBL Ev and EFp same-point probe next
+- The saved 5V NtSide0 SVisual hQuasiFermiEnergy center C1 plot has been zoomed X=0–0.4um, multiple upper-stack energy steps OBSERVED. Next read-only: Tools→Probe on existing n2_des (not C1 curve), X=0.13um,Y=1.0um, verify Zone Clean_EBL(AlGaN), obtain exact hQuasiFermiEnergy and ValenceBandEnergy in Var Values at identical coordinates; then compare pGaN/EBL/MQW and model barrier, without equating local energy offset with transport activation energy. No source or CAL changes.
+
 ## 2026-10-10 — JuSubin upper-stack Ev cutline completed
 - Observed 5V NtSide0 SVisual ValenceBandEnergy vertical C1 cutline zoomed to X=0–0.4 um; Ev is strongly nonuniform near Clean_EBL/MQW. Barrier magnitude and hole transport root cause are not yet established.
 - Next read-only: retain screenshot, select C1 then hQuasiFermiEnergy, verify legend and 0–0.4um axis, capture graph. No TCAD edits or CAL interruption.

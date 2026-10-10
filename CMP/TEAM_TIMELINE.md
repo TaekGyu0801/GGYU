@@ -1,3 +1,6 @@
+## 2026-10-10 — JuSubin Mg ionization runtime verification
+- OBSERVED log for completed 5V NtSide0: region With incomplete ionization, selected pMagnesiumActiveConcentration (lines 422-432), Nnet recalculation warning (line 2148). General Without incomplete ionization line 335 does not cancel region-specific activation. Physical output relation MgMinus 9.59e18 versus net doping -3e17 remains to verify. No code edits.
+
 ## 2026-10-10 — JuSubin AcceptorConcentration probe confirms 9.59e18
 - Observed SVisual at 5V NtSide0, Clean_pGaN X=0.05um Y=1.0um: AcceptorConcentration=9.59e18 cm^-3, same as pMagnesiumActive/Minus from previous Probe. Net Doping approx -3.00032e17, hDensity approx 3.00034e17, Donor=0. Physical Mg ionization mapping remains unverified despite local hole target agreement. Next check live n2 log, pp2 deck and GaN ionization parameters read-only. No solver changes.
 

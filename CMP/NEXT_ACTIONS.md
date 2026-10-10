@@ -1,3 +1,9 @@
+## 2026-10-10 ~21:48 KST — JuSubin Clean_EBL hole quasi-Fermi energy point probe (OBSERVED SVisual screenshot)
+
+- Worker 주수빈: finished `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr` (NtSide=0 nominal 5V), SVisual Probe at (X=0.13 um, Y=1.0 um, Z=0) in verified `Clean_EBL(AlGaN)`: `hQuasiFermiEnergy=-4.999999939039e+00 eV` and `hQuasiFermiPotential=+4.999999939039e+00 V` shown in Probe Var Values. These are opposite-sign representations; do not equate the absolute EFp value to hole barrier height.
+- Previous identical point: `AcceptorConcentration=3.000000e17 cm^-3`, `DonorConcentration=0`, `DopingConcentration=-3.000000e17 cm^-3`, `hDensity=5.787900714824e15 cm^-3`.
+- NEXT read-only: in same Probe coordinate and Clean_EBL Zone, scroll Var Values to `ValenceBandEnergy` and capture numerical eV value; then calculate `hQuasiFermiEnergy-ValenceBandEnergy` only as local energetic separation (not entire interfacial injection barrier). To evaluate EBL injection obstacle compare Ev and EFp across pGaN/EBL/MQW coordinates/cutline after alignment. No code, parameter, saved solver output, or CAL job changed.
+
 ## 2026-10-10 — 5V reference SVisual qualitative band/carrier screening completed; stop repetitive GUI work (OBSERVED / DECISION)
 
 - Worker 이택규 submitted final SVisual screenshot of JUSUBIN_FAST_HALF_5V_TEST n2_des.tdr, existing C1 cutline at lateral Y≈2um, vertical X=0–0.4um. Two variables selected: eDensity and hDensity, simultaneously plotted log scale Y 1e6–1e20 cm^-3. p-side holes dominate (red), n-side electrons dominate (green), MQW multi-peak density profiles show both carriers in different narrow wells/regions. **Colors inferred from previously displayed hDensity, legend not visible; figures approximate.** These are expected general p/n trends and insufficient to identify injection bottleneck alone.

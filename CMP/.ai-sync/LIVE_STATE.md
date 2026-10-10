@@ -1,3 +1,6 @@
+## 2026-10-10 22:25 KST — CAL PLT data schema verified; 4V value not extracted yet
+- OBSERVED read-only screenshot from JuSubin on `CMP_BASELINE_1.2.0_CAL/n2_des.plt`: `DF-ISE text`, `type=xyplot`, 17 stored datasets: time, 8 cathode fields, 8 anode fields including `anode OuterVoltage`, `anode TotalCurrent`, `anode DisplacementCurrent`. Numeric `Data {` present. Enables retrospective 4V I–V retrieval without stopping calculation, but the displayed first 30 lines alone do NOT verify an actual 4V datapoint nor TDR at 4V. Next read-only parse numerical rows; keep CAL running and Gate0 unresolved.
+
 ## 2026-10-10 22:21 KST — JuSubin confirms live CAL PLT exists (OBSERVED)
 - Separate `CMP_BASELINE_1.2.0_CAL/n2_des.plt` confirmed by `ls -lh` at ~22:21 KST: 1.4M, mtime Oct10 21:30. The reported missing file was typo `n2_des.pltls`; correct file is present. Still no direct confirmation of 4V current data contents or 4V TDR snapshot/checkpoint. The last *accepted* CAL voltage in documented 22:11 log remains ~4.149V; mtime alone does not prove progress. Keep CAL running; next read-only `head -n 30 .../n2_des.plt` and check Save/Plot config. No SWB/TCAD files edited.
 

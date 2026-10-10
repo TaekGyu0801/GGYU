@@ -1,3 +1,9 @@
+## 2026-10-10 ~19:16 KST — SVisual cutline Y-axis zoom-range issue clarified (OBSERVED UI)
+
+- 주수빈 screenshot: original 5V result `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`, Cutline_Y Plot has Y ticks `9.995e-21`, `1e-20`, `1.0005e-20`; these are closely spaced **linear** numbers, not evidence of log scale. Prior assistant repeatedly identifying `1e-20` by itself as a logarithmic axis was incorrect.
+- The rendered curve is compressed/clipped near the far-left X edge, because the Y plot range is extremely narrow around ~1e-20, missing physical signed DopingConcentration ~-3e17 to +5e18. Existing full vertical C1 cutline continues to be displayed on 2D view. Do NOT infer absent data or failed simulation from this plot.
+- Read-only GUI next step: activate **right** Cutline_Y Plot first, then reset that plot's view/zoom (suggested Ctrl+Shift+F already used for 2D view) to restore full signed Y-axis; if unsuccessful check Axis Properties auto/fixed min/max. Keep Log Y off. No source/results/ongoing CAL job edited.
+
 ## 2026-10-10 ~19:15 KST — SVisual full device restored; cutline plot Y log reenabled (OBSERVED screenshot)
 
 - 작업자 주수빈. 기존 완료된 `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`에서 화면 복구 후 2D 소자 X 약 0–4.5 µm 전체 구조와 중앙 내측의 세로 Cut Y `C1`이 다시 표시됨. 138194 elements, 65513 points.

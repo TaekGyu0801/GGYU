@@ -1,3 +1,9 @@
+## 2026-10-10 ~18:07 KST — JuSubin screenshot CAL n2 progressed to ~4.138 V (OBSERVED / NOT FINISHED)
+
+- 주수빈 SWB screen for `CMP_BASELINE_1.2.0_CAL/n2_des.out`: previous BE step shows `Finished, because |RHS| less than 1.0000E-03`, then contact anode `4.138E+00 V`. The next attempt `0.82766→0.827663 s` begins but acceptance is not shown. Prior observed 4.122 V is superseded as latest confirmed voltage.
+- For an unchanged 0→5 V ramp, ≈82.76% of **voltage range** reached, NOT 82.76% of total runtime. 5 V finish and InGaN Scharfetter 100ns effective application NOT established. Visible vanOverstraetendeMan E0 isotropic/anisotropic mismatch output is a warning, not a confirmed fatal cause.
+- Preserve the user's ongoing job and prior completed 5V reference. NEXT READ ONLY: compare future n2_des.log accepted t/V, cutbacks, Good Bye; inspect effective CAL .par only without editing. Worker 주수빈 observed/handed over 이택규's job; did not start or modify solver.
+
 ## 2026-10-10 (after 12:09 KST; exact log capture time not given) — CAL NtSide0 SDevice actually advancing to 4.122 V (OBSERVED LOG, NOT FINISHED)
 
 - Worker 이택규 supplied live command output from `tail -n 40 /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/n2_des.log`.

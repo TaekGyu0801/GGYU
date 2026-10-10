@@ -1,3 +1,10 @@
+## 2026-10-10 12:09 KST — CAL SDevice continues running in SWB (USER-REPORTED / LOG UNVERIFIED)
+
+- Worker 이택규 reports that the previously launched `CMP_BASELINE_1.2.0_CAL` SDevice still appears **running** in SWB at ~12:09 KST on Oct 10, with no completion observed.
+- Start time described as "어제 새벽 1~2시" (literally Oct 9 01:00–02:00), which would imply 34h09m–35h09m elapsed, but the same CAL project's SDE meshing was previously screenshot-confirmed completed **Oct 10 00:11:50 KST**. A **different interpretation of the date** (Oct 10 01:00–02:00) implies 10h09m–11h09m; therefore actual start date/time is **UNRESOLVED**, and must not be treated as known.
+- **SWB running display is user-reported only**; there is no freshly supplied CAL `n2_des.log` or `n2_des.out`, no observed accepted BE steps/current voltage, no proof the 100ns material override was applied, and no reliable ETA. Do not call this a hang or success.
+- Next **READ ONLY**: inspect `tail -n 40 /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/n2_des.log` and the SWB job/experiment identity and start timestamp; compare changing accepted-voltage/current and Newton retry patterns. Keep existing run and original completed 5V parent intact; no parameter/source edits while it is running.
+
 ## 2026-10-10 — CAL SDevice user says Run pressed (REPORTED / NOT YET VERIFIED)
 
 - 이택규 reports SWB SDEVICE Run launched for separate `CMP_BASELINE_1.2.0_CAL` NtSide0; original parent 5V run ~2h56m36s, but new InGaN SRH Scharfetter tau_max=100ns trial may change convergence and time. No live solver log or job PID from this new run reviewed yet, so cannot assert active computation, actual 100ns applied or finish. Next: request new project's actual `n2_des.log` tail and SWB node running/failed status, then diagnose/monitor and extract 5V I(V), QW SRH/radiative/Auger. Scientifically CAL remains a parameter sensitivity trial, not physical final baseline.

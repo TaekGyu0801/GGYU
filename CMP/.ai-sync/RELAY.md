@@ -1,3 +1,9 @@
+## 2026-10-10 ~19:02 KST — 이택규 SWB 빨간 FAST_C1 n6 / 진행 중 CAL n2 구분 필수 (UNRESOLVED)
+
+- 증거: 사용자가 제공한 T-2022.03 SWB 이미지. 활성 트리 선택 `GaN_PiN_Diode_FAST_C1`; NtSide0 `[n6]` red failed (default palette), `[n12]` pale blue, n1 yellow. 실제 n6 error log 아직 제공되지 않음. `CMP_BASELINE_1.2.0_CAL`은 같은 트리의 다른 프로젝트이며 이 캡처에 실행 상태 안 나옴.
+- 마지막 CAL 직접 로그(주수빈, ~18:08 KST): n2 약 4.138V, Newton 15 반복 후 cutback, 5V 미완료. 사용자 보고도 아직 미완료. 어느 계산도 이번 턴에서 중단/재실행/수정하지 않음.
+- FIRST READ: 학교 서버 `GaN_PiN_Diode_FAST_C1/n6_des.log` tail + err/sta, `CMP_BASELINE_1.2.0_CAL/n2_des.log` tail; 작업자가 출력 보내면 정확한 오류원인 판정. Common baseline / CAL / 완료된 5V_TEST 보호.
+
 ## 2026-10-10 (after 12:09 KST; exact log capture time not given) — CAL NtSide0 SDevice actually advancing to 4.122 V (OBSERVED LOG, NOT FINISHED)
 
 - Worker 이택규 supplied live command output from `tail -n 40 /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/n2_des.log`.

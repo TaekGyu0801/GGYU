@@ -1,3 +1,6 @@
+## 2026-10-10 ~21:22 KST — EBL free hole density much below nominal target at one biased point
+- OBSERVED by 주수빈, successful 5V NtSide0 SVisual Probe, `Clean_EBL(AlGaN)` X=0.13 µm Y=1.0 µm: hDensity=5.787900714824e15 cm^-3 vs nominal literature EBL free-hole reference 3e17. These are not directly interchangeable under 5V. The pGaN single point X=0.05 previously gave 3.00034e17; MgMinus field semantics still unresolved. NEXT read-only EBL acceptor/net-doping Probe at the same point and assess EBL hole transport. No solver/code change.
+
 ## 2026-10-10 ~21:17 KST — Same-point n1 mesh vs 5V net doping directly compared (OBSERVED SVisual screenshots; ionization-field interpretation unresolved)
 
 - Worker 주수빈 opened `JUSUBIN_FAST_HALF_5V_TEST/n1_msh.tdr` and used SVisual Probe at X=0.05 um, Y=1.0 um, Z=0; Zone `Clean_pGaN(GaN)`.

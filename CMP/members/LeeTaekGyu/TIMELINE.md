@@ -1,3 +1,10 @@
+## 2026-10-10 — Discussion: 4 V vs 5 V CAL endpoint (TECHNICAL ADVICE, NO DECISION TO STOP)
+
+- 이택규 질문 `왜 꼭 5V야? 4V이면 안 돼?`에 5V는 microLED 공통 필수 전압이 아니라 검증을 위해 선택한 high-bias endpoint임을 설명. 4V도 실질 주입/재결합/타당한 동작 J, IQE와 matched-J A/B 비교가 확보되면 SCIENTIFIC operating point 가능.
+- 기존 completed parent 5V에서 nominal J~7.24e-4A/cm², QW Rrad share~0.1095%라는 low-drive issue 있으므로 4V로 내린 것만으로 baseline valid 해지는 것은 아님. 별도 CAL (100ns SRH)에서 바이어스별 terminal J를 검토해 보는 것을 제안함.
+- CAL user-reported ~4.149V, acceptance not yet verified. 4V step의 log/plt, saved 4V TDR/checkpoint availability를 검증하기 전 계산 중단하지 말 것. User 승인/서버 변경 없음.
+
+
 ## 2026-10-10 — CAL n2 ~4.149V progress (USER REPORT, accepted step not verified)
 
 - 이택규가 별도 100ns sensitivity run `CMP_BASELINE_1.2.0_CAL` n2의 현재 표시 전압이 약 **4.149 V**라고 보고. 이전 사용자 보고 ~4.144V, 이전 실제 로그 accepted ~4.142V 대비 표시 기준으로 최대 +0.007V. 5V sweep 기준 82.98%이지만 **wall-clock/progress 퍼센트가 아님**. **4.149V가 accepted BE step인지는 최신 실제 log 미확인.** 계산 시간 및 완료 ETA 추정 근거 없음.

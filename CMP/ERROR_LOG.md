@@ -1,3 +1,7 @@
+## 2026-10-10 22:04 KST — TDR file run as shell executable (non-TCAD error)
+- OBSERVED in 주수빈 terminal: user entered `/user/semi/semi437/tmp/myproject/JUSUBIN_FAST_HALF_5V_TEST/n1_msh.tdr` at shell prompt and received `Permission denied`. Cause is execution attempt on non-executable TDR data file; not a simulator convergence, mesh, permissions-to-read or file content failure.
+- Same screenshot shows separate `n2_des.log` final t=1s anode 5.000V and Sentaurus Device finished/Good Bye (completed previous day). No remedial code changes required; view TDR through SVisual, not shell execution.
+
 ## 2026-10-10 — successful 5V_TEST Thermionic vs Piezo model log context inspected (OBSERVED; no physics bug proven)
 
 - 이택규가 성공한 `JUSUBIN_FAST_HALF_5V_TEST/n2_des.log` lines 345–425 실제 서버 출력을 제공. 셸 첫 입력이 두 `sed` 명령이 합쳐져 `.../n2_des.logsed` 파일 에러를 출력했으나 **뒤따른 동일 출력으로 필요한 본문을 정상 확보**, TCAD 자체 오류와 무관.

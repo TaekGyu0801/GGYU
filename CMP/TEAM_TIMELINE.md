@@ -1,3 +1,9 @@
+## 2026-10-10 ~21:48 KST — JuSubin Clean_EBL hole quasi-Fermi energy point probe (OBSERVED SVisual screenshot)
+
+- Worker 주수빈: finished `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr` (NtSide=0 nominal 5V), SVisual Probe at (X=0.13 um, Y=1.0 um, Z=0) in verified `Clean_EBL(AlGaN)`: `hQuasiFermiEnergy=-4.999999939039e+00 eV` and `hQuasiFermiPotential=+4.999999939039e+00 V` shown in Probe Var Values. These are opposite-sign representations; do not equate the absolute EFp value to hole barrier height.
+- Previous identical point: `AcceptorConcentration=3.000000e17 cm^-3`, `DonorConcentration=0`, `DopingConcentration=-3.000000e17 cm^-3`, `hDensity=5.787900714824e15 cm^-3`.
+- NEXT read-only: in same Probe coordinate and Clean_EBL Zone, scroll Var Values to `ValenceBandEnergy` and capture numerical eV value; then calculate `hQuasiFermiEnergy-ValenceBandEnergy` only as local energetic separation (not entire interfacial injection barrier). To evaluate EBL injection obstacle compare Ev and EFp across pGaN/EBL/MQW coordinates/cutline after alignment. No code, parameter, saved solver output, or CAL job changed.
+
 ## 2026-10-10 ~21:43 KST — JuSubin QF 1D upper stack plot observed
 - OBSERVED 5V NtSide0 SVisual existing center C1 cutline hQuasiFermiEnergy plotted on X=0–0.4um. Around X=0.15–0.25um several large rising steps; Ev had sharp drops/peaks nearby in earlier screenshot. Energy-step origins and EBL barrier not yet established; next compare numerical Ev and EFp at same physical point/region before causal claims. No code or jobs changed.
 

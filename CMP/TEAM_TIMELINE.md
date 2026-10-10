@@ -1,3 +1,10 @@
+## 2026-10-10 ~20:49 KST — Mg ionization parameters found in FASTC1_pp6_des.par (OBSERVED)
+
+- 주수빈 provided live terminal screenshot of `grep -n -A 18 -B 3 'Ionization' /user/semi/semi437/tmp/myproject/JUSUBIN_FAST_HALF_5V_TEST/FASTC1_pp6_des.par`.
+- **Actual file contents observed** at lines 24–40: `Material = "GaN" { Ionization { Species ("pMagnesiumActiveConcentration") { E_0 = 0.2; alpha = 8e-9; g = 4.0; Xsec = 1.0e-14; } } }`. E_0 in eV; Xsec in cm2; alpha is the dopant-density dependence parameter. These are actual values in the named .par, not independent confirmation of which effective parameter file n2 used.
+- Prior live `n2_des.log` directly confirmed `With incomplete ionization`, selected pMagnesium, and `Nnet will be recalculated`; prior same-position SVisual Probe (Clean_pGaN X=0.05um,Y=1.0um at 5V) gives `hDensity≈3.00034e17`, `DopingConcentration≈-3.00032e17`, `MgActive=MgMinus=Acceptor≈9.59e18 cm^-3`. Physical reconciliation of exported MgMinus with Nnet remains unresolved; single-point hole match is NOT a full doping model validation.
+- **NEXT READ ONLY**: determine which parameter file actual n2 run used from `pp2_des.cmd` File/Parameter block and/or `n2_des.job`/`n2_des.log`; do not presume `FASTC1_pp6_des.par` was consumed merely because it is in the directory. Inspect output species mapping only after verifying source. No SWB source changed or CAL interrupted.
+
 ## 2026-10-10 ~20:40 KST — 5V_TEST region scope and Nnet recalculation log context (OBSERVED)
 
 - 주수빈 terminal screenshot of read-only `sed -n '410,445p;2138,2160p' JUSUBIN_FAST_HALF_5V_TEST/n2_des.log` confirms region **DmgL_pGaN** `With incomplete ionization` selected `pMagnesiumActiveConcentration`; subsequent **DmgL_EBL** lists no incomplete-ionization. Previously inspected live pp2 Physics confirms `Clean_pGaN` also has region-specific incomplete ionization.

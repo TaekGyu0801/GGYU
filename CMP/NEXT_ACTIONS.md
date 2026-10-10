@@ -1,3 +1,6 @@
+## 2026-10-10 — EBL acceptor present, next check net doping
+- Read-only next: on JuSubin 5V_TEST SVisual Clean_EBL X=0.13,Y=1.0um (Acceptor=3e17, hDensity≈5.7879e15), probe DopingConcentration and DonorConcentration. Do not change baseline or running CAL. Later 0V/band profile to assess hole injection.
+
 ## 2026-10-10 ~21:22 KST — JuSubin EBL dopant versus free-hole check
 - Clean_EBL 5V SVisual Probe at X=0.13 µm Y=1.0 µm yielded hDensity 5.787900714824e15 cm^-3 (OBSERVED), about 52x under nominal literature reference 3e17. Before attributing to incorrect input doping, read `AcceptorConcentration`, `DopingConcentration`, `DonorConcentration` at same EBL position in existing 5V TDR; then inspect additional EBL points and band edge/polarization if needed. Preserve original and separate running CAL job.
 

@@ -1,3 +1,10 @@
+## 2026-10-10 ~18:27 KST — SVisual 5V NtSide0 vertical doping cutline created (OBSERVED UI / interpretation pending)
+
+- 작업자 주수빈은 완료된 `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr` (5V, NtSide=0)에서 `DopingConcentration`을 표시하고 `Cutline_Y Plot` 생성에 성공함. 사용자 SVisual screenshot: 138194 elements / 65513 points, x vertical 0 to ~4.5 um; cutline은 현재 Clean 영역 좌측 가까이 Y≈0.8 um 위치이며 영역 중앙 Y≈1.5 um에서 추후 재측정 권장.
+- 오른쪽 cutline 차트 y축에 1e+15, 1e+09, 1e+03, 1e-3 등이 보이는 일반 logarithmic scale이 적용됨. signed DopingConcentration의 **음수 p형 측은 이 축에서 정상 시각화되지 않으므로** 현재 선 그래프만으로 층별 p/n 도핑 분포를 해석하면 안 됨.
+- NEXT GUI: right cutline plot 선택 → 오른쪽 `log Y` 토글 해제해 선형 y축 확인 → 필요시 clean semiconductor 중앙 Y≈1.5 um cutline 다시 생성/이동 → 그래프 캡처하고 pGaN/EBL/nGaN 입력 도핑과 실제 hDensity/ionized Mg 분리 분석.
+- 실제 코드, 파라미터, 시뮬레이션 실행상태 변경 없음. CAL 별도 실행 보존.
+
 ## 2026-10-10 — Kou 2019 nominal epitaxy doping vs CMP step-constant profiles reviewed (REVIEWED / NO SOLVER CHANGE)
 
 - 작업자: 주수빈. 사용자가 layer별 동일 도핑을 구현한 실제 CMP 모델의 문헌 타당성을 재질문. 실제 Kou et al., *Optics Express* 27 A643-A653 (2019) Section 2, DOI 10.1364/OE.27.00A643 확인.

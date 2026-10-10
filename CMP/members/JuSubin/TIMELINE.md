@@ -1,3 +1,10 @@
+## 2026-10-10 ~19:13 KST — SVisual Cutline 재생성 후 1D 데이터 표시 축소 (OBSERVED GUI / CAUSE UNRESOLVED)
+
+- 주수빈은 기존 `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`를 SVisual에서 다시 열고, 새 Cut Y를 만들고 로그 Y를 해제했다고 보고. 스크린샷에서 왼쪽 2D 소자는 상단 X≈0~1.2µm만 확대된 뷰이며, 오른쪽 `Cutline_Y Plot`에는 x≈0.15µm 근처 짧은 음수 DopingConcentration 선분만 표시됨. 소스/데이터 수정 또는 solver failure 증거 없음.
+- 가능한 UI 해석: cutline 추출이 2D 현재 보이는 영역으로 제한되었거나 XY 축 표시가 직전 확대 상태를 유지. 원인 확정 전 `DopingConcentration` 전체 구간 데이터가 사라졌다고 판단하지 않음.
+- 공식 Sentaurus Visual User Guide는 cutline output이 현재 표시된 2D 영역에 국한될 수 있으며 Reset Zoom으로 전체 데이터 접근 가능하다고 명시. 우선 왼쪽 2D plot 선택 후 View > Reset (Ctrl+Shift+F)으로 full device 표시를 복구하고, 필요시 기존 cutline 제거 후 full 2D 상태에서 Cut Y 재작성·1D linear Y 확인하도록 안내.
+- 수행된 것은 GUI 보기 조작뿐; CAL 실행과 저장된 5V 데이터를 변경하지 않음. NEXT: 리셋된 화면 확인 후 단계별 재추출.
+
 ## 2026-10-10 ~18:33 KST — 주수빈 5V Baseline signed DopingConcentration vertical cutline linear-axis verified (OBSERVED UI)
 
 - 주수빈 provided Sentaurus Visual screenshot of completed `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`, NtSide=0, after toggling Cutline_Y Plot from logarithmic to linear Y-axis. Existing vertical (growth-axis X) cutline at lateral Y≈1.0 μm passes clean semiconductor away from physical damaged sidewall.

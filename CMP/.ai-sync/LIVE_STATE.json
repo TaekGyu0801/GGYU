@@ -1619,5 +1619,32 @@
     "caveat": "This is local band-to-hole-quasi-Fermi separation, not hole injection barrier; full transport and MgMinus still unresolved.",
     "nextReadOnly": "Probe Ev/EFp at verified Clean_pGaN X=0.05um,Y=1.0um, compare regional gaps and spatial bands.",
     "modelEdits": "none"
+  },
+  "latestJuSubinEnergyRegionalComparison": {
+    "timestamp": "2026-10-10T21:57:00+09:00",
+    "status": "OBSERVED + DERIVED; transport attribution UNRESOLVED",
+    "source": "Existing JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr SVisual Probe images",
+    "pGaN": {
+      "zone": "Clean_pGaN(GaN)",
+      "X_um": 0.05,
+      "Y_um": 1,
+      "Ev_eV": -5.130097037559,
+      "EFp_eV": -4.999999973858,
+      "EFpMinusEv_eV": 0.130097063701,
+      "hDensity_cm3": 300034279000600000
+    },
+    "EBL": {
+      "zone": "Clean_EBL(AlGaN)",
+      "X_um": 0.13,
+      "Y_um": 1,
+      "Ev_eV": -5.25250840714,
+      "EFp_eV": -4.999999939039,
+      "EFpMinusEv_eV": 0.252508468101,
+      "hDensity_cm3": 5787900714824000
+    },
+    "localSeparationDifference_eV": 0.1224114044,
+    "caveat": "Delta of local EFp-Ev values is NOT EBL hole injection barrier. Project name 5V_TEST does not verify that this TDR is actual full 5.0V converged state; earlier n2_des.log screenshot showed about 4.139V mid-ramp.",
+    "nextReadOnly": "Verify actual saved run endpoint voltage/time from n2_des.log / associated .plt, then interpret spatial band alignment and current.",
+    "sourceOrSolverChanged": false
   }
 }

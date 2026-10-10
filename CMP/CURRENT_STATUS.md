@@ -1,3 +1,10 @@
+## 2026-10-10 ~18:08 KST — CAL NtSide0 high-bias Newton 15 cutback 관찰 (OBSERVED)
+
+- 주수빈 최신 `CMP_BASELINE_1.2.0_CAL/n2_des.log` 터미널 화면: 4.138V 부근(시도 시작 t=0.827672 s; 5V/s ramp라면 4.13836V)에서 BE step Newton iterations 15회에도 최종 RHS≈1.21e-3 (RHSMin 1e-3보다 큼). `#iterations larger than 15` 후 `Newton didn't converge, trying again with smaller timestep...` 출력; 실패 시도 wallclock 51.13초.
+- 새 시도 t=0.827672→0.827674 s, Stepsize 2.8452e-06 s 시작. 해당 시도 accepted/finished 여부 화면에서 보이지 않음. **전체 계산의 fatal failure로 판단하지 않으며**, high-bias cutback에 의한 속도 저하 근거임.
+- 기존 5V 목표의 **전압** 진행률 약 82.8%이지 완료까지 시간 비율이 아님. 최신 5V 정상 종료 및 CAL effective InGaN 100ns 반영 여부 미확인. CAL input/solver 변경 없음.
+- NEXT READ-ONLY: 시간 차를 두고 `n2_des.log` 최종 accepted BE step/time/anode 전압 추세, 반복 reject 및 파일 mtime, 프로세스 상태 확인. 보존 중인 5V parent와 비교는 CAL 정상종료/파라미터 검증 후 수행.
+
 ## 2026-10-10 ~18:07 KST — CAL NtSide0 4.138 V 확인 (OBSERVED SCREENSHOT, NOT FINISHED)
 
 - 주수빈이 `/user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/n2_des.out`의 SWB Node n2 Output 스크린샷 제공. 화면의 직전 Newton step은 `Finished, because |RHS| less than 1.0000E-03`이고 anode voltage `4.138E+00` 표시. 이어서 `Computing BE-step from 0.82766 s to 0.827663 s`가 시작되지만 최종 수렴은 표시되지 않음.

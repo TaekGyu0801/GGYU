@@ -1738,5 +1738,53 @@
     "cannotConclude": "4V endpoint is physically validated MicroLED baseline; 5V no longer needed; CAL safe to stop",
     "nextReadOnly": "find CAL saved n2*.tdr/n2*.sav; inspect associated bias and Save/Plot directives before any Stop",
     "codeOrSimulationChanged": false
+  },
+  "latestJuSubinCALFileInventory": {
+    "timestamp": "2026-10-10T22:38:00+09:00",
+    "worker": "주수빈",
+    "status": "OBSERVED",
+    "project": "CMP_BASELINE_1.2.0_CAL",
+    "command": "find maxdepth1 type f name n2* -printf %f %k KB",
+    "files": [
+      [
+        "n2_des.err",
+        12
+      ],
+      [
+        "n2_des.job",
+        4
+      ],
+      [
+        "n2_des.log",
+        5120
+      ],
+      [
+        "n2_des.out",
+        5376
+      ],
+      [
+        "n2_des.plt",
+        1416
+      ],
+      [
+        "n2_des.sta",
+        4
+      ],
+      [
+        "n2_local.err",
+        0
+      ]
+    ],
+    "noTopLevelN2TDRorSAV": true,
+    "excludesDifferentNameOrNestedTDR": false,
+    "near4VPLT": {
+      "V": 3.99967374,
+      "time_s": 0.79993475,
+      "totalCurrent_2D_A_per_um": 3.497895e-14
+    },
+    "spatial4VStateAvailable": "UNRESOLVED; not confirmed in this listing",
+    "nextReadOnly": "check device command Plot/Save directives, and alternate paths/names before modifying runtime",
+    "userAuthorizedStop": false,
+    "solverCodeOrProcessChanged": false
   }
 }

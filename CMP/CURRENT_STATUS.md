@@ -1,3 +1,6 @@
+## 2026-10-10 — JuSubin EBL acceptor probe
+- OBSERVED completed 5V NtSide0 Clean_EBL(AlGaN), X=0.13um,Y=1um: AcceptorConcentration=3.000000000000e17 cm^-3. Prior same-position hDensity=5.787900714824e15 cm^-3. Nominal EBL acceptor correctly present; biased free holes much lower. Next compare net doping and donor fields at same position, then band/0V check. No TCAD job/source modifications.
+
 ## 2026-10-10 ~21:22 KST — EBL free hole density much below nominal target at one biased point
 - OBSERVED by 주수빈, successful 5V NtSide0 SVisual Probe, `Clean_EBL(AlGaN)` X=0.13 µm Y=1.0 µm: hDensity=5.787900714824e15 cm^-3 vs nominal literature EBL free-hole reference 3e17. These are not directly interchangeable under 5V. The pGaN single point X=0.05 previously gave 3.00034e17; MgMinus field semantics still unresolved. NEXT read-only EBL acceptor/net-doping Probe at the same point and assess EBL hole transport. No solver/code change.
 

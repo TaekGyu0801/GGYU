@@ -1,3 +1,9 @@
+## 2026-10-10 — SVisual existing 5V reference Ev 0–0.4 µm profile observed (OBSERVED screenshot)
+
+- 작업자 이택규가 `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`의 Y≈2.0 µm 내부 cutline C1에서 `ValenceBandEnergy(C1(n2_des))` 1D 곡선을 X=0–0.4 µm 깊이 범위로 실제 표시한 SVisual 스크린샷 제출. 값은 p-GaN 상단 x≈0–0.12 µm Ev≈-5.2 eV 주변 plateau, EBL/MQW 구간 x≈0.12–0.27 µm에서 급격히 변동하고 x>≈0.27 µm nGaN에서 대략 -3.5 eV 수준 평탄부(모두 **화면 육안 개략값**이며 Probe 수치가 아님).
+- 오른쪽 1D plot legend에는 **ValenceBandEnergy 하나만** 존재하며 이전 `ConductionBandEnergy` 곡선이 Ev로 교체된 것으로 보임. 이전 AI의 '더블클릭하면 곡선 추가' 단정은 현 GUI 동작에 맞지 않았음. 현재 두 곡선을 함께 오버레이했다는 주장은 하지 않음.
+- NEXT GUI read-only: 화면 왼쪽 아래 `Data Selection` 탭으로 돌아간 상태 스크린샷을 받아 vT-2022.03 실제 UI에서 두 band curves를 함께 표시하는 기능을 확인. 이후 e/h QuasiFermiEnergy 및 도핑/분극과 함께 주입장벽을 평가. 에너지 요철만으로 저전류 근본 원인을 단정할 수 없음. 학교서버 CAL/FAST/5V 데이터나 물리 코드 미변경.
+
 ## 2026-10-10 — 5V Half+Coarse SVisual ConductionBandEnergy vertical cutline created (OBSERVED screenshot; interpretation pending)
 
 - 이택규가 `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`를 SVisual T-2022.03에서 열고 `ConductionBandEnergy`를 선택, 물리 도메인 X=세로 약 0–4.6 µm / Y=가로 약 0–2.5 µm 중 Y≈2.0 µm에 수직 Cutline C1을 생성. 화면 왼쪽 2D 소자 내 C1 검은 수직선, 오른쪽 `Cutline_Y Plot`에 빨간 `ConductionBandEnergy(C1(n2_des))` 1D 곡선 실제 표시. 메쉬 65,513 points / 138,194 elements, 과거 보관된 결과와 일치.

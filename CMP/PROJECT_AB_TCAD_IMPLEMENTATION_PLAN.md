@@ -255,3 +255,12 @@ For both A and B, distinguish:
 - **Published fact:** material/defect/barrier physics demonstrated in cited literature.
 - **Published microLED principle:** controlling lateral carrier access to sidewalls reduces nonradiative loss.
 - **Our hypothesis:** localized Carbon High-R edge vs localized lateral AlGaN barrier on the same baseline.
+
+## 2026-10-10 — Additional F-ion MicroLED edge-isolation analogues (literature verified; does NOT alter Carbon Project A design)
+
+Status: LITERATURE OBSERVED / comparison to Project A PROPOSED, worker 이택규.
+
+- Y. Pan et al., **Enhancing the Performance of InGaN-Based Micro-LED Arrays via Fluorine Ion Implantation Passivation Ring Design**, ACS Photonics 13(2), 501–509 (2026), DOI [10.1021/acsphotonics.5c02363](https://doi.org/10.1021/acsphotonics.5c02363). Publisher abstract confirms fabricated 6/8/10 um blue MicroLED, F- implanted high-resistivity **p-GaN** edge ring that steers injection away from sidewall defects; reports improved leakage/optical performance; ion energy/dose and SIMS depth profiles are in supporting information. Do not transfer its F-specific mechanism or process values to C without calibration.
+- J. Ye et al., **Pixelation of GaN based Micro-LED arrays by tailoring injection energy and dose of fluorine ion implantation**, Journal of Luminescence 261 (2023) 119903, DOI [10.1016/j.jlumin.2023.119903](https://doi.org/10.1016/j.jlumin.2023.119903). F implanted **p-GaN** for pixel isolation, reports finite-element/SRIM implantation distribution analysis and 10um-array experimental results. The approach is pixel isolation, not identical to post-etch sidewall surface implantation.
+- IMPORTANT CORRECTION: Y.-C. Hsu et al., **Study on the performance of InGaN-based micro-LED by plasma etching combined with ion implantation process**, Next Nanotechnology 7 (2025) 100101, DOI 10.1016/j.nxnano.2024.100101, states **As (arsenic)** is the implanted species after ICP-RIE mesa etching, NOT F; its sidewall concept must not be cited as F implantation.
+- Existing A1 model is a proposed Carbon-related upper **n-GaN** edge region inside fixed 5nm damaged sidewall. Pan/Ye F literature chiefly examines **p-GaN** high-resistivity edge isolation. These are geometrically and physically different. A possible p-GaN edge option is only a hypothesis; no decision to change baseline or A1. Run remains NO-GO until Gate0 and extraction checks.

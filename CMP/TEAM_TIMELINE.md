@@ -1,3 +1,10 @@
+## 2026-10-10 ~19:46 KST — JuSubin p-GaN/EBL/MQW net-doping cutline X=0–0.4 μm zoom observed (OBSERVED SCREENSHOT / APPROXIMATE READOUT)
+
+- 작업자 주수빈; source: successful 5V `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr` NtSide0 `DopingConcentration` on interior half-device Cutline C1, lateral Y≈1 μm. SVisual Axis Properties 1D X-axis Min=0 Max=0.4 μm with signed linear concentration Y-axis now working.
+- Visual approximate X ranges: `0–~0.10 μm` plateau around `−3e17 cm^-3` (upper p-side); `~0.10–0.12 μm` signed net doping rises toward zero; `~0.12–0.26 μm` appears near zero on linear Y-axis; around `~0.27 μm` abrupt transition to about `+5e18 cm^-3` n-GaN plateau. These are graph visual estimates only, not numeric point extraction, and exact region boundaries await Regions/Probe identification.
+- Important interpretive boundary: plotted signed `DopingConcentration` is not raw Mg dose, ionized Mg or free `hDensity`. Apparent upper transition cannot be asserted as physical Mg backdiffusion or graded SDE profile without inspecting raw dopant species, model and materials. Small EBL/background 1e15–3e17 may be compressed on +6e18 linear graph.
+- NEXT read-only GUI: in SVisual Data Selection with cutline C1 selected, inspect `hDensity` (positive, log Y scale may be appropriate only after Y fixed bounds reset), compare carrier-density shape in pGaN/EBL and to intended 3e17 cm^-3 reference; if available plot `pMagnesiumActiveConcentration` and `pMagnesiumMinusConcentration` separately to explain net doping. Do not edit SDE/SDevice or interrupt ongoing independent CAL simulation.
+
 ## 2026-10-10 (user terminal capture, exact time unspecified) — Confirmed completed 5V half-device TDR exists (OBSERVED / READ-ONLY)
 
 - 작업자 이택규가 실제 학교 서버에서 `ls -lh /user/semi/semi437/tmp/myproject/JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr` 실행. 출력: `-rw-r--r--. 1 semi437 semi437 16M Oct 9 14:29 .../JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`. 완료된 NtSide=0 5V Half+Coarse baseline parent의 postprocessing 결과 파일 존재와 대략적인 크기/수정일만 **실제 확인**.

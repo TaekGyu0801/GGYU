@@ -1,3 +1,6 @@
+## 2026-10-10 — Runtime GaN Mg parameters confirmed by JuSubin
+- OBSERVED n2_des.log GaN Species pMagnesiumActiveConcentration acceptor E_0=0.2, alpha=8e-9, g=4, Xsec=1e-14, highdop_formula=1, b_Nref=6e18, E_Nref=2e18 (and beta0 gamma1). Activation and Nnet recalc confirmed. MgMinus equals MgActive at one 5V pGaN Probe yet Doping/hDensity near 3e17: output mapping remains unresolved. Next check effective datexcodes and ionized species semantics; no code changes.
+
 ## 2026-10-10 ~20:59 KST — n2 effective parameter file binding confirmed from pp2_des.cmd (OBSERVED TERMINAL SCREENSHOT)
 
 - 작업자: 주수빈. Actual read-only grep of `JUSUBIN_FAST_HALF_5V_TEST/pp2_des.cmd` showed line 22 `Parameters = "FASTC1_pp6_des.par"`, line 68 `DefaultParametersFromFile`, lines 128-129 and 137-138 `IncompleteIonization( Dopants="pMagnesiumActiveConcentration" )`, and Plot lines 456/458 `pMagnesiumActiveConcentration` and `pMagnesiumMinusConcentration`.

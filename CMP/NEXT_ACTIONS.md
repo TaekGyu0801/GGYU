@@ -1,3 +1,8 @@
+## 2026-10-10 20:21 KST — Inspect pGaN Mg-minus exported species before declaring calibration
+
+- At Clean_pGaN X=0.05,Y=1.0 um, Probe `hDensity=3.000342790006e17` whereas `pMagnesiumActiveConcentration=pMagnesiumMinusConcentration=9.59e18 cm^-3`. The one-point hole match is observed; physical incomplete Mg ionization is NOT verified by this match.
+- Next READ ONLY: SVisual Probe same point for `DopingConcentration`, `AcceptorConcentration`, `DonorConcentration` and `eDensity` if present; inspect pMagnesium mapping in effective datexcodes and SDevice pp2 parameter/Physics output to resolve exported Minus field semantics. No code changes or rerun.
+
 ## 2026-10-10 — CAL n2 ~4.144 V calculating (USER-REPORTED / ACCEPTANCE UNVERIFIED)
 
 - 작업자 이택규 직접 보고: `CMP_BASELINE_1.2.0_CAL`이 현재 약 **4.144 V 계산 중**. 직전 실제 공유 n2 로그에서 확인된 accepted 전압은 4.142 V; 이번 보고는 이전보다 약 0.002 V 높은 시도/진행으로 보이지만 **새 n2_des.log 스텝 수렴 결과는 제출되지 않아 4.144 V accepted라고 확정할 수 없음**. 5V/100ns effective 적용 모두 미확인.

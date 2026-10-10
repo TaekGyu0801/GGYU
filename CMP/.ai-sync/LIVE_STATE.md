@@ -1,3 +1,7 @@
+## 2026-10-10 — JuSubin independently confirms original 5V_TEST n2 finished log
+- OBSERVED user-provided grep/tail of existing `JUSUBIN_FAST_HALF_5V_TEST/n2_des.log`: final BE step to t=1.0s, anode=5.000V, 2D total current=1.448e-11 A/um, `Sentaurus Device simulation finished` + `Good Bye!` on Oct 9 14:29:52 KST. Repeat screenshots are same observation. This confirms last accepted solver state reached 5V; still verify `n2_des.tdr` time/bias provenance if interpreting visualized point data as final 5V.
+- Existing baseline low-J Gate0 remains blocker, J nominal ~7.24e-4 A/cm². `n1_msh.tdr: Permission denied` was attempted execution of data file, not TCAD crash. NEXT use existing data to diagnose low injected current without touching separate CAL or Baseline.
+
 ## 2026-10-10 — JuSubin pGaN vs EBL Ev/EFp probe
 - OBSERVED same existing 5V_TEST n2_des SVisual: Clean_pGaN X=0.05,Y=1um Ev=-5.130097037559eV, EFp=-4.999999973858eV -> local 0.130097063701eV. Prior Clean_EBL X=0.13,Y=1um Ev=-5.252508407140eV, EFp=-4.999999939039eV -> 0.252508468101eV. Delta 0.1224114044eV. These are local energy separations NOT cross-interface barrier. Need confirm actual 5.0V recorded endpoint: an earlier n2_des.log screenshot showed anode 4.139V mid-ramp. Read-only check first. No TCAD/CAL changes.
 

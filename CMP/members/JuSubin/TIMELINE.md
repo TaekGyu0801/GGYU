@@ -1,3 +1,10 @@
+## 2026-10-10 ~20:35 KST — JuSubin pGaN AcceptorConcentration 9.59e18 independently probed (OBSERVED 5V TCAD output; interpretation unresolved)
+
+- Worker 주수빈 supplied screenshot of completed `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`, NtSide=0, SVisual Probe at (X=0.05, Y=1.0, Z=0) um, Zone `Clean_pGaN(GaN)`. This screenshot explicitly confirms `AcceptorConcentration=9.590000000000e18 cm^-3`.
+- Prior screenshots at identical point: `pMagnesiumActiveConcentration=9.59e18`, `pMagnesiumMinusConcentration=9.59e18`, `DonorConcentration=0`, `DopingConcentration≈-3.0003179e17`, `hDensity≈3.000342790006e17 cm^-3`. Kou-inspired free-hole target 3e17 is numerically attained at this one 5V sample location, but effective Mg ionization species interpretation and ionized-doping charge balance remain UNRESOLVED.
+- If exported Mg Minus truly represents ionized acceptor for the same state, its equality to total 9.59e18 alongside low signed net doping cannot be explained simply from donor=0. Need inspect exact T-2022.03 field semantics, effective custom parameter/species configuration and n2 runtime ionization/recalculated doping logs; don't declare physical calibration pass/failure based only on variable names.
+- Next read-only: inspect pp2_des.cmd region-scoped `IncompleteIonization`, actual `FASTC1_pp6_des.par` ionization block and `n2_des.log` run-time activation; examine `datexcodes` species field mapping if necessary. Keep completed original and ongoing CAL simulation untouched; no code change or rerun.
+
 ## 2026-10-10 ~20:31 KST — Clean_pGaN donor and net doping measured at same probe point (OBSERVED)
 
 - 주수빈 SVisual completed 5V NtSide0 `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`, Probe X=0.05 um, Y=1.0 um, Z=0, Zone `Clean_pGaN(GaN)`.

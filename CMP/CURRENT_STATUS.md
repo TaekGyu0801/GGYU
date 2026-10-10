@@ -1,3 +1,6 @@
+## 2026-10-10 22:21 KST — 100ns CAL n2_des.plt file existence confirmed (OBSERVED)
+- JuSubin screenshot confirms correct CAL `n2_des.plt` 1.4M, mtime Oct10 21:30; preceding `No such file` refers to mistyped path `n2_des.pltls`, NOT missing correct file. File existence does NOT prove usable 4V trace, checkpoint, TDR, or completed/validated 5V. Team last CAL accepted ~4.149V at ~22:11 KST. Preserve running job; next read-only `head -n 30` of CAL PLT followed by inspecting voltage/current history and Save/Plot coverage. No server changes.
+
 ## 2026-10-10 ~22:11 KST — CAL 4.149V accepted; next BE-step Newton oscillatory (OBSERVED server log, READ ONLY)
 
 - 이택규가 학교 서버 `CMP_BASELINE_1.2.0_CAL/n2_des.log` `tail -n 60` 실제 출력 제공. CAL n2 100ns sensitivity의 **accepted** 두 단계 확인: (1) 직전 접촉 anode=4.149E+00V, total current=4.831E-14 (로그 표시 단위, 2D normalization 주의); (2) `Computing BE-step from 0.829858 s to 0.829862 s (Stepsize 3.8830e-06 s)` 후 Newton iteration2 RHS=8.97e-04<1e-3, `Finished because |RHS| less than 1e-3`, anode 4.149E+00V, total current 4.832E-14. **4.149V는 이번 실제 로그에서 정상 수렴 확인됨**; 표시가 소수 셋째 자리로 반올림되어 정확한 몇 mV 변화인지는 이 로그로 계산 불가.

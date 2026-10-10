@@ -1,3 +1,10 @@
+## 2026-10-10 ~20:59 KST — n2 effective parameter file binding confirmed from pp2_des.cmd (OBSERVED TERMINAL SCREENSHOT)
+
+- 작업자: 주수빈. Actual read-only grep of `JUSUBIN_FAST_HALF_5V_TEST/pp2_des.cmd` showed line 22 `Parameters = "FASTC1_pp6_des.par"`, line 68 `DefaultParametersFromFile`, lines 128-129 and 137-138 `IncompleteIonization( Dopants="pMagnesiumActiveConcentration" )`, and Plot lines 456/458 `pMagnesiumActiveConcentration` and `pMagnesiumMinusConcentration`.
+- The previously inspected named `FASTC1_pp6_des.par` in the same working directory has a GaN Ionization Species pMagnesiumActiveConcentration block with `E_0=0.2`, `alpha=8e-9`, `g=4.0`, `Xsec=1e-14`. The effective Node2 SDevice input explicitly REFERENCES this file despite pp6 in the filename; runtime n2 log confirms Mg incomplete ionization is enabled and net doping is recalculated. File reference established; precise resolved parameter semantics/ionized-species output remain to be validated.
+- Previously Clean_pGaN 5V Probe at X=0.05/Y=1um yielded hDensity≈3.00034e17, DopingConcentration≈-3.00032e17, Acceptor=MgActive=MgMinus=9.59e18, Donor=0 cm^-3. These values are not proof of correctly calibrated ionization physics; exported MgMinus and recalculated net-doping relation remains unresolved.
+- NEXT read-only: inspect `sed -n '115,145p;450,465p' .../JUSUBIN_FAST_HALF_5V_TEST/pp2_des.cmd` for region-specific Mg ionization scope and Plot fields, then if needed cross-check T-2022.03 species mapping/ionized acceptor fields. Do not change current TCAD decks nor running separate CAL simulation.
+
 ## 2026-10-10 ~20:40 KST — 5V_TEST region scope and Nnet recalculation log context (OBSERVED)
 
 - 주수빈 terminal screenshot of read-only `sed -n '410,445p;2138,2160p' JUSUBIN_FAST_HALF_5V_TEST/n2_des.log` confirms region **DmgL_pGaN** `With incomplete ionization` selected `pMagnesiumActiveConcentration`; subsequent **DmgL_EBL** lists no incomplete-ionization. Previously inspected live pp2 Physics confirms `Clean_pGaN` also has region-specific incomplete ionization.

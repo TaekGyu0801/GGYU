@@ -1,3 +1,9 @@
+## 2026-10-10 ~21:36 KST — 5V ValenceBandEnergy C1 cutline plotted, awaiting upper-layer zoom (OBSERVED SVisual Screenshot)
+
+- Worker: 주수빈. In saved completed NtSide=0 5V `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`, created existing-type vertical C1 line at internal Y≈1 um and confirmed right 1D `Cutline_Y Plot` legend **`ValenceBandEnergy(C1(n2_des))`**. Full-depth 1D X axis spans ~0–4.5 um, while upper-stack Ev varies sharply near X<0.3 um. The broad plot is not sufficiently resolved for EBL injection barrier assignment.
+- NEXT read-only UI: right 1D plot X Axis Properties: Min=0 Fixed, Max=0.4 um Fixed, Log off; keep Energy/Y axis unchanged; capture pGaN/EBL/MQW resolved band edges, and then overlay/compare `hQuasiFermiEnergy` at same C1 to evaluate hole-transport barrier hypotheses. Do not infer barrier magnitude from screenshot before clear zoom and layer boundaries. Existing observation: EBL X=0.13 um/Y=1um 5V Acceptor=3e17, Donor=0, Net=-3e17, hDensity=5.787900714824e15 cm^-3; root cause remains UNRESOLVED.
+- No SWB/SDE/SDevice file changes or live CAL job actions.
+
 ## 2026-10-10 ~21:33 KST — 5V ValenceBandEnergy 2D field visible; vertical cutline pending (OBSERVED SVisual screenshot)
 
 - Worker 주수빈 opened existing finished `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr` NtSide0 5V in SVisual, selected `ValenceBandEnergy` in Scalars and activated its 2D field. Color-bar range approximately -5.66219 to +0.421554 eV. The 2D cross-section contains near-top pGaN/EBL/MQW transitions, but this picture alone does **not** measure valence-band barrier height or establish cause of EBL hole deficit.

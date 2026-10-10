@@ -1,3 +1,8 @@
+## 2026-10-10 ~21:22 KST — Clean_EBL hDensity probed at 5V
+- OBSERVED: 주수빈 SVisual completed `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr` (NtSide=0, 5V), Probe (X=0.13 µm, Y=1.0 µm, Z=0), Zone `Clean_EBL(AlGaN)`, `hDensity=5.787900714824e15 cm^-3` (screenshot readout). Prior 5V point `Clean_pGaN` X=0.05 µm gave hDensity≈3.00034279e17 cm^-3. EBL hole concentration is about 51.8x lower than the 3e17 cm^-3 nominal Kou EBL hole-density reference at this one 5V point.
+- INTERPRETATION: 5V local EBL carrier density is not necessarily equal to nominal 0V/equilibrium density or SDE acceptor input; heterojunction/polarization/hole injection effects may dominate. This single point does not establish wrong EBL doping. Need identify nominal EBL accepted and net doping with same-position Probe before judging baseline.
+- NEXT read-only: at identical Probe coordinates, scroll `Var Values` to `AcceptorConcentration`, `DopingConcentration`, `DonorConcentration` and capture magnitudes; optionally check hDensity at adjacent EBL points or equilibrium saved state later. MgMinus interpretation still unresolved. No file/source/simulation changes.
+
 ## 2026-10-10 ~21:17 KST — Same-point n1 mesh vs 5V net doping directly compared (OBSERVED SVisual screenshots; ionization-field interpretation unresolved)
 
 - Worker 주수빈 opened `JUSUBIN_FAST_HALF_5V_TEST/n1_msh.tdr` and used SVisual Probe at X=0.05 um, Y=1.0 um, Z=0; Zone `Clean_pGaN(GaN)`.

@@ -1,3 +1,9 @@
+## 2026-10-10 22:30 KST — JuSubin 4V CAL retrieval handoff (OBSERVED)
+- Worker: 주수빈 (ChatGPT). Source: user's screenshot of terminal read-only parse of `CMP_BASELINE_1.2.0_CAL/n2_des.plt`.
+- Real near-4V record: transient time 0.79993475s; V=3.99967374; `anode TotalCurrent=3.497895e-14` (2D A/um). Last record shown: time 0.82993089s; V=4.14965446; I=4.839436e-14 A/um. 100ns refers InGaN SRH lifetime (not transient time step). PLT text format has 17 fields; index0 time,index9 anode OuterVoltage,index15 anode TotalCurrent.
+- Researcher asks whether 4V can replace 5V due slow convergence beyond 4V. Answer: 4V usable for read-only transient I–V sensitivity and intermediate diagnostics; not yet validated baseline/optical IQE, because low-J Gate0 unresolved and TDR spatial checkpoint at 4V not confirmed. Need ensure terminal current excludes displacement if interpreting as diode conduction. DO NOT stop/abort running CAL before checking TDR/Save.
+- Next: read-only check saved n2*.tdr/n2*.sav in CAL, actual output time/bias state and Plot/Save directive; preserve original baseline/5V_TEST and CAL. No software changes executed.
+
 ## 2026-10-10 ~22:11 KST — CAL 4.149V accepted; next BE-step Newton oscillatory (OBSERVED server log, READ ONLY)
 
 - 이택규가 학교 서버 `CMP_BASELINE_1.2.0_CAL/n2_des.log` `tail -n 60` 실제 출력 제공. CAL n2 100ns sensitivity의 **accepted** 두 단계 확인: (1) 직전 접촉 anode=4.149E+00V, total current=4.831E-14 (로그 표시 단위, 2D normalization 주의); (2) `Computing BE-step from 0.829858 s to 0.829862 s (Stepsize 3.8830e-06 s)` 후 Newton iteration2 RHS=8.97e-04<1e-3, `Finished because |RHS| less than 1e-3`, anode 4.149E+00V, total current 4.832E-14. **4.149V는 이번 실제 로그에서 정상 수렴 확인됨**; 표시가 소수 셋째 자리로 반올림되어 정확한 몇 mV 변화인지는 이 로그로 계산 불가.

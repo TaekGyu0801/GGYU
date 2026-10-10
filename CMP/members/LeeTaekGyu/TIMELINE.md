@@ -1,3 +1,9 @@
+## 2026-10-10 — 5V Half+Coarse SVisual ConductionBandEnergy vertical cutline created (OBSERVED screenshot; interpretation pending)
+
+- 이택규가 `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`를 SVisual T-2022.03에서 열고 `ConductionBandEnergy`를 선택, 물리 도메인 X=세로 약 0–4.6 µm / Y=가로 약 0–2.5 µm 중 Y≈2.0 µm에 수직 Cutline C1을 생성. 화면 왼쪽 2D 소자 내 C1 검은 수직선, 오른쪽 `Cutline_Y Plot`에 빨간 `ConductionBandEnergy(C1(n2_des))` 1D 곡선 실제 표시. 메쉬 65,513 points / 138,194 elements, 과거 보관된 결과와 일치.
+- 현재 우측 1D 전체 깊이 0–4.6 µm를 표시해 활성층·EBL·pGaN의 x≈0–0.4 µm 에너지 변화가 좌측에 압축되어 있음. 이 화면만으로 저전류 근본 원인 또는 EBL 장벽 높이를 확정할 수 없음.
+- NEXT UI READ ONLY: 우측 1D x-axis Axis Properties Main에서 Min=0 Max=0.4 µm linear/fixed로 범위 확대 후 스크린샷; 이후 동일 C1에 ValenceBandEnergy, e/h QuasiFermiEnergy 등을 함께 표시·자료 추출. TCAD 코드 또는 CAL 실행 변경 없음.
+
 ## 2026-10-10 — Claude v2 independent CMP audit submitted; low-current Gate 0 prioritized (DOCUMENT-BASED REVIEW / PROPOSED)
 
 - 작업자 이택규가 Claude 작성 `CMP MicroLED TCAD — 독립 중간 기술감사 및 연구계획 재수립 (v2)` 전문을 채팅 업로드함. **Claude의 독립 감사 의견이며 이번 메시지는 새 실험/로그가 아님.** Claude는 GitHub 기록과 구 FAST 입력은 보았으나 5V_TEST/CAL 현재 실제 pp/log/TDR을 직접 읽지 못했다고 보고함.

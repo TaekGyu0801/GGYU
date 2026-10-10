@@ -1,3 +1,11 @@
+## 2026-10-10 ~18:08 KST — CAL SDevice Newton cutback 확인 (OBSERVED LOG SCREENSHOT)
+
+- 작업자 주수빈이 이택규가 기존 실행한 `CMP_BASELINE_1.2.0_CAL` NtSide=0의 터미널 `tail -n 40 n2_des.log`를 제공함. 새 실행/입력 수정 없음.
+- 계산이 4.138V 부근에서 진행 중. 로그에서 해당 BE 시도 15 Newton iterations 이후 마지막 `|Rhs|=1.21e-03` (RHSMin=1e-03 초과), `#iterations larger than 15`, `Newton didn't converge, trying again with smaller timestep...` 확인. 실패한 attempt wallclock 약 51.13초.
+- 다음 attempt는 `Computing BE-step from 0.827672 s to 0.827674 s (Stepsize: 2.8452e-06 s)`. 기존 0–5V 선형 ramp를 가정하면 0.827672×5≈4.13836V. 이 시도는 화면 마지막 부분에서 시작만 확인되며 accepted 여부는 미확인.
+- 이는 전체 job fatal 종료가 아니라 adaptive timestep cutback의 직접 증거. 고전압 수렴성/런타임 병목 현상 관찰, 남은 벽시계 시간 추정 불가. NtSide=0 CAL 5V 완료와 effective 100ns 모델 확인은 여전히 미완료.
+- NEXT: job·input 그대로 보존; 일정 시간 뒤 최신 `n2_des.log`의 accepted t/V 및 cutback 빈도와 mtime, 필요시 프로세스 생존을 read-only 재검증. 절대 이 로그만 보고 solver 또는 MinStep 임의 변경하지 않음.
+
 ## 2026-10-10 ~18:07 KST — 주수빈 CAL 실행 상태 인수인계 화면 확인 (OBSERVED SCREENSHOT)
 
 - 작업자 주수빈이 `CMP_BASELINE_1.2.0_CAL` SWB SDevice node n2 Output 스크린샷 제공. 이 계산은 기존 이택규가 실행한 별도 NtSide=0 CAL 후보이며, 주수빈이 새로 실행한 작업은 아님.

@@ -1,3 +1,7 @@
+## 2026-10-10 — JuSubin 5V upper-layer Ev cutline zoom
+- OBSERVED SVisual completed NtSide0 5V C1 ValenceBandEnergy plot X range 0–0.4 um, strong band bending/multiple offsets near X≈0.12–0.26 um (location/values only screenshot estimates). This may be relevant to prior 5V Clean_EBL hDensity≈5.7879e15 at X=0.13 um while acceptor/net doping correctly applied at 3e17. Exact band offset, injection barrier and cause NOT verified.
+- Next: hQuasiFermiEnergy same 1D cutline, keep Ev screen for comparison. No code or CAL changes.
+
 ## 2026-10-10 ~21:29 KST — JuSubin 5V Clean_EBL net doping and donor Probe confirmed (OBSERVED, PHYSICS CAUSE UNRESOLVED)
 
 - Worker 주수빈 provided SVisual Probe screenshot of saved, completed `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`, NtSide=0, 5V endpoint. Coordinates `X=0.13 um,Y=1.0 um,Z=0`; Zone `Clean_EBL(AlGaN)`.

@@ -1,3 +1,8 @@
+## 2026-10-10 — active model log clarifies Thermionic and leaves polarization scope pending (OBSERVED / READ-ONLY NEXT)
+
+- 5V_TEST `n2_des.log`에서 Thermionic emission for both carriers at heterointerfaces, ThermionicEmission Formula=1 출력이 실제 확인되어 'Formula1 인식 실패' 가설 우선순위 해제. 이를 반복 점검하지 말 것.
+- 다음 1회 읽기 전용 명령: `sed -n '345,425p' /user/semi/semi437/tmp/myproject/JUSUBIN_FAST_HALF_5V_TEST/n2_des.log` 로 `Without Piezo`, `Without polarization`, activation1/strain model이 각각 소속된 범위를 파악. 그 후 5V low-current Gate0의 실질 transport/band bottleneck 여부를 평가. NtSide0 완료 parent와 CAL 운용 수정 금지.
+
 ## 2026-10-10 ~21:51 KST — JuSubin Clean_EBL Ev versus EFp measured at same point (OBSERVED screen, derived difference; barrier cause UNRESOLVED)
 
 - Worker 주수빈. Completed `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr` NtSide=0 nominal 5V, SVisual Probe coordinates X=0.13um, Y=1.0um, Z=0, Zone `Clean_EBL(AlGaN)`. New screenshot directly shows `ValenceBandEnergy=-5.252508407140e+00 eV`. Previous directly observed at identical coordinates `hQuasiFermiEnergy=-4.999999939039e+00 eV` and `hQuasiFermiPotential=+4.999999939039 V`.

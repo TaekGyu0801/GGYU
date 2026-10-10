@@ -1,3 +1,8 @@
+## 2026-10-10 20:21 KST — JuSubin pGaN Mg fields inconsistent with naive hole interpretation (OBSERVED / UNRESOLVED)
+
+- In 5V NtSide0 `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`, SVisual Probe Zone Clean_pGaN, (X=0.05,Y=1.0 um), `pMagnesiumActiveConcentration=9.59e18`, `pMagnesiumMinusConcentration=9.59e18`, while earlier `hDensity=3.000342790006e17 cm^-3`. The local hole target numerically matches Kou, but **ionization physics is NOT thereby validated**.
+- Minus is an ionized-acceptor related field in Sentaurus dopant mapping. Equal exported Mg fields require review of actual T-2022.03 `datexcodes` mapping, IncompleteIonization and effective values. Next: same-coordinate net-doping, donor/acceptor/electron probes and read-only live model check. No TCAD source/run changed.
+
 ## 2026-10-10 — JuSubin Clean_pGaN single-point hole density probe
 - OBSERVED 5V NtSide0 SVisual Probe, project `JUSUBIN_FAST_HALF_5V_TEST`, X=0.05 um Y=1 um, Zone Clean_pGaN(GaN): `hDensity=3.000342790006e17 cm^-3`. This agrees with nominal target at one point only. Mg input, ionization field, 0V state and spatial profile remain to validate. Next read MgActive/MgMinus at same point. No simulator changes.
 

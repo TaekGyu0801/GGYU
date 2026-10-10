@@ -1,3 +1,6 @@
+## 2026-10-10 ~21:22 KST — JuSubin EBL dopant versus free-hole check
+- Clean_EBL 5V SVisual Probe at X=0.13 µm Y=1.0 µm yielded hDensity 5.787900714824e15 cm^-3 (OBSERVED), about 52x under nominal literature reference 3e17. Before attributing to incorrect input doping, read `AcceptorConcentration`, `DopingConcentration`, `DonorConcentration` at same EBL position in existing 5V TDR; then inspect additional EBL points and band edge/polarization if needed. Preserve original and separate running CAL job.
+
 ## 2026-10-10 ~21:17 KST — Same-point n1 mesh vs 5V net doping directly compared (OBSERVED SVisual screenshots; ionization-field interpretation unresolved)
 
 - Worker 주수빈 opened `JUSUBIN_FAST_HALF_5V_TEST/n1_msh.tdr` and used SVisual Probe at X=0.05 um, Y=1.0 um, Z=0; Zone `Clean_pGaN(GaN)`.

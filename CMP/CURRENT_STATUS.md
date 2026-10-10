@@ -1,3 +1,6 @@
+## 2026-10-10 22:25 KST — CAL PLT confirmed readable text with anode I–V datasets
+- OBSERVED JuSubin terminal `head -n 30` of separate `CMP_BASELINE_1.2.0_CAL/n2_des.plt`: DF-ISE text, type=xyplot, Info 17 datasets including time, anode OuterVoltage, anode eCurrent/hCurrent/TotalCurrent/DisplacementCurrent; numeric Data rows present. Thus can extract transient I–V around 4V from existing PLT. 4V actual row/value and 4V full TDR still unverified. Next read-only parse complete 17-field rows; preserve live CAL and low-J Gate0. No changes to solver or model.
+
 ## 2026-10-10 22:21 KST — 100ns CAL n2_des.plt file existence confirmed (OBSERVED)
 - JuSubin screenshot confirms correct CAL `n2_des.plt` 1.4M, mtime Oct10 21:30; preceding `No such file` refers to mistyped path `n2_des.pltls`, NOT missing correct file. File existence does NOT prove usable 4V trace, checkpoint, TDR, or completed/validated 5V. Team last CAL accepted ~4.149V at ~22:11 KST. Preserve running job; next read-only `head -n 30` of CAL PLT followed by inspecting voltage/current history and Save/Plot coverage. No server changes.
 

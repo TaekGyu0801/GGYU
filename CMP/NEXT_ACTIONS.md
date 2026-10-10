@@ -1,3 +1,9 @@
+## 2026-10-10 ~21:33 KST — 5V ValenceBandEnergy 2D field visible; vertical cutline pending (OBSERVED SVisual screenshot)
+
+- Worker 주수빈 opened existing finished `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr` NtSide0 5V in SVisual, selected `ValenceBandEnergy` in Scalars and activated its 2D field. Color-bar range approximately -5.66219 to +0.421554 eV. The 2D cross-section contains near-top pGaN/EBL/MQW transitions, but this picture alone does **not** measure valence-band barrier height or establish cause of EBL hole deficit.
+- Prior exact Clean_EBL(AlGaN) Probe X=0.13um, Y=1um: Acceptor=3e17, Donor=0, Doping=-3e17, hDensity=5.787900714824e15 cm^-3 at 5V. Distinct pGaN Mg ionized-field semantics remain unresolved.
+- Next read-only GUI: create same center-interior vertical X-direction Cutline at Y=1.0um used previously, with `ValenceBandEnergy` field selected on C1 so 1D curve appears. Then X-axis range 0–0.4um and compare `hQuasiFermiEnergy` on same cutline. Need confirm band-edge peak, local coordinates and quasi-Fermi alignment before barrier physics interpretation. No TCAD code/results/jobs changed.
+
 ## 2026-10-10 ~21:29 KST — JuSubin 5V Clean_EBL net doping and donor Probe confirmed (OBSERVED, PHYSICS CAUSE UNRESOLVED)
 
 - Worker 주수빈 provided SVisual Probe screenshot of saved, completed `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`, NtSide=0, 5V endpoint. Coordinates `X=0.13 um,Y=1.0 um,Z=0`; Zone `Clean_EBL(AlGaN)`.

@@ -1,3 +1,7 @@
+## 2026-10-10 — JuSubin upper-stack Ev cutline completed
+- Observed 5V NtSide0 SVisual ValenceBandEnergy vertical C1 cutline zoomed to X=0–0.4 um; Ev is strongly nonuniform near Clean_EBL/MQW. Barrier magnitude and hole transport root cause are not yet established.
+- Next read-only: retain screenshot, select C1 then hQuasiFermiEnergy, verify legend and 0–0.4um axis, capture graph. No TCAD edits or CAL interruption.
+
 ## 2026-10-10 ~21:36 KST — 5V ValenceBandEnergy C1 cutline plotted, awaiting upper-layer zoom (OBSERVED SVisual Screenshot)
 
 - Worker: 주수빈. In saved completed NtSide=0 5V `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`, created existing-type vertical C1 line at internal Y≈1 um and confirmed right 1D `Cutline_Y Plot` legend **`ValenceBandEnergy(C1(n2_des))`**. Full-depth 1D X axis spans ~0–4.5 um, while upper-stack Ev varies sharply near X<0.3 um. The broad plot is not sufficiently resolved for EBL injection barrier assignment.

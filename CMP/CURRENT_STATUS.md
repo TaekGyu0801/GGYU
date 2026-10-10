@@ -1,3 +1,12 @@
+## 2026-10-10 ~21:57 KST — JuSubin Clean_pGaN and Clean_EBL numerical Ev/EFp comparison (OBSERVED SVisual screenshots; derived local-gap difference; transport cause UNRESOLVED)
+
+- Worker 주수빈 provided TWO Probe screenshots in project `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`, NtSide=0. Both at Y=1.0 um, Z=0; see zone to avoid accidental interface mixing.
+- **Clean_pGaN(GaN)** X=0.05 um: `ValenceBandEnergy = -5.130097037559 eV`, `hQuasiFermiEnergy = -4.999999973858 eV`. Derived local `EFp-Ev = 0.130097063701 eV`. Earlier same-point `hDensity=3.000342790006e17 cm^-3`.
+- **Clean_EBL(AlGaN)** X=0.13 um: prior screenshot `ValenceBandEnergy=-5.252508407140 eV`, `hQuasiFermiEnergy=-4.999999939039 eV`, so `EFp-Ev=0.252508468101 eV`; `hDensity=5.787900714824e15 cm^-3`; `Acceptor=3e17`, `Doping=-3e17`, `Donor=0 cm^-3`.
+- DERIVED difference in **local** gaps EBL minus pGaN `0.122411404400 eV`. pGaN/EBL hole-density ratio ~51.84. Increased local EFp–Ev at EBL is consistent with lower hole density via nondegenerate `p ≈ Nv exp[-(EFp-Ev)/kBT]`, recognizing Nv differs for GaN vs AlGaN and thermodynamic/bias conditions matter. Not the full spatial hole-injection barrier or proof that EBL causes weak terminal current.
+- IMPORTANT: device is labeled 5V_TEST but these snapshots alone do NOT prove TDR represents fully converged 5.0V final bias; an earlier `n2_des.log` screenshot mid-run showed anode around 4.139V at t~0.8277s. Verify actual final condition/status before claiming any 5V conclusion or baseline acceptance.
+- Next: read-only inspect latest `n2_des.log` for last converged anode OuterVoltage/completion or recorded terminal voltage; then examine spatial Ev/EFp/valence-band offsets across exact EBL and MQW boundaries if low holes still important. No TCAD code/model or separate CAL job modified.
+
 ## 2026-10-10 — successful 5V_TEST Thermionic vs Piezo model log context inspected (OBSERVED; no physics bug proven)
 
 - 이택규가 성공한 `JUSUBIN_FAST_HALF_5V_TEST/n2_des.log` lines 345–425 실제 서버 출력을 제공. 셸 첫 입력이 두 `sed` 명령이 합쳐져 `.../n2_des.logsed` 파일 에러를 출력했으나 **뒤따른 동일 출력으로 필요한 본문을 정상 확보**, TCAD 자체 오류와 무관.

@@ -1,3 +1,9 @@
+## 2026-10-10 — 이택규 Claude 독립 기술감사 요청 준비 (HANDOFF / PROPOSED)
+
+- 사용자가 기존 성공한 NtSide0 5V Half+Coarse (wallclock 10596.76s), FAST_C1 n6 4.801V MinStep 실패(wallclock 525152.85s), CAL InGaN 100ns 후보 ~4.142V 고전압 수렴 병목 차이를 의문으로 제기하고, Claude와 중간 기술감사/향후 로드맵 검증을 요청함.
+- ChatGPT는 세 프로젝트가 동일한 계산이 아니며 FAST_C1은 수치 설정/메쉬 및 geometry 조건 차이, CAL은 InGaN SRH tau_max 변경 시도 등의 후보 요인을 구분함. 특정 고전압 수렴 실패의 근본 원인은 아직 확정하지 않음. 새 실제 로그 없음. 사용자에게 Claude용 비판적 독립감사 프롬프트 제공(실제 GitHub 소스·학교 서버 preprocess 비교, low J, SRH, Mg, solver, symmetry, GO/NO-GO 및 일단 READ ONLY).
+- NEXT: Claude 독립감사 결과 및 사용자가 제공한 실제 diff/로그와 대조 후 결정. 실행 중 CAL을 Abort/Reset/코드변경하지 않음. 완료 5V_TEST와 FAST 로그 보존. Claude에게 직접 메시지 송신 아님.
+
 ## 2026-10-10 — CAL 4V+ 수렴 불안정 우려에 따른 판단 보류 및 감시 계획 (PROPOSED)
 
 - 작업자 이택규가 FAST_C1 n6의 약 4.801V 실패와 CAL n2의 약 4.142V 부근 반복 Newton 문제를 비교하면서 CAL 실패 위험에 대한 우려를 표시. 이후 즉시 contact 좌표 확인을 멈추고 CAL 리스크를 우선 재평가하기로 대화 방향 변경. **CAL 중단(Abort)은 요청·실행되지 않음.**

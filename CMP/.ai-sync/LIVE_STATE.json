@@ -1674,5 +1674,22 @@
     "caveat": "2D A/um over 2um nominal width, transient total current may include displacement, not steady-state J; voltage fraction not runtime fraction",
     "currentBlocker": "very low current; 5V completion unverified",
     "nextAction": "Read-only monitor acceptance/step size; inspect CAL n2_des.plt 4V+ current and checkpoint availability before bias-target decisions; preserve active job"
+  },
+  "latestJuSubinCALPLTFileCheck": {
+    "timestamp": "2026-10-10T22:21:00+09:00",
+    "status": "OBSERVED",
+    "worker": "주수빈",
+    "project": "CMP_BASELINE_1.2.0_CAL",
+    "file": "n2_des.plt",
+    "exists": true,
+    "displaySize": "1.4M",
+    "displayedMtime": "Oct 10 21:30",
+    "mistakenCommandSuffix": "n2_des.pltls",
+    "actual4VHistoryVerified": false,
+    "actual4VTDRVerified": false,
+    "calibrationRunFinishedVerified": false,
+    "latestPreviouslyAcceptedCALVoltage_V": 4.149,
+    "nextReadOnly": "head -n 30 of CAL n2_des.plt; then inspect datasets and actual I–V history plus Save/Plot coverage.",
+    "tcadCodeOrJobChanged": false
   }
 }

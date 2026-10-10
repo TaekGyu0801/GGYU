@@ -1,3 +1,6 @@
+## 2026-10-10 ~21:09 KST — datexcodes check command shell mismatch
+- JuSubin GUI terminal csh/tcsh shell error on AI-provided bash for-loop: `for: Command not found`; `f: Undefined variable`; `do: Command not found`. This is a command-shell mismatch and NOT simulation crash. Replaced with `bash -c` single-line wrapper as read-only check. No datexcodes.txt values confirmed yet.
+
 ## 2026-10-10 ~20:38 KST — Mg incomplete ionization physically unresolved, despite runtime activation (OBSERVED)
 
 - `JUSUBIN_FAST_HALF_5V_TEST/n2_des.log` has `With incomplete ionization`, selected pMagnesium and Nnet recalc warning; this confirms activation rather than a solver runtime failure. Outstanding issue is interpreting exported pMagnesiumMinus=9.59e18, MgActive=9.59e18 vs net doping≈-3e17 and hole≈3e17 (5V Clean_pGaN). Do not conflate ionization activation with calibration correctness; inspect effective log/parameters/species mapping read-only.

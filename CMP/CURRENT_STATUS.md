@@ -1,3 +1,7 @@
+## 2026-10-10 — JuSubin EBL local energy offset measured
+- OBSERVED 5V NtSide0 saved TDR, Clean_EBL(AlGaN), X=0.13um/Y=1.0um: Ev=-5.252508407140eV, EFp=-4.999999939039eV (separate direct SVisual screenshots). Derived local EFp-Ev=+0.252508468101eV. EBL hDensity=5.7879e15, Acceptor=3e17, Net=-3e17 cm^-3 at same coordinate. Local offset is NOT the EBL hole injection barrier.
+- NEXT read-only same TDR pGaN X=0.05um/Y=1.0um Ev and EFp Probe, then region-aligned spatial band/transport review. Keep CAL and codes intact.
+
 ## 2026-10-10 21:48 KST — Clean_EBL local EFp measured, Ev numeric reading next
 - OBSERVED JuSubin completed 5V NtSide0 SVisual Probe in Clean_EBL(AlGaN), X=0.13,Y=1.0 um: `hQuasiFermiEnergy=-4.999999939039 eV`, `hQuasiFermiPotential=+4.999999939039 V`. Same coordinate previously had `Acceptor=3e17`, `Donor=0`, `NetDoping=-3e17`, `hDensity=5.787900714824e15 cm^-3`. Do NOT infer barrier height or cause from absolute EFp alone.
 - NEXT read-only same-point Probe `ValenceBandEnergy`, then spatially compare Ev and EFp across EBL/neighboring layers. Original TCAD decks and CAL remain untouched.

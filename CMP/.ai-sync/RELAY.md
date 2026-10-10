@@ -1,3 +1,10 @@
+## 2026-10-10 12:09 KST — CAL SDevice continues running in SWB (USER-REPORTED / LOG UNVERIFIED)
+
+- Worker 이택규 reports that the previously launched `CMP_BASELINE_1.2.0_CAL` SDevice still appears **running** in SWB at ~12:09 KST on Oct 10, with no completion observed.
+- Start time described as "어제 새벽 1~2시" (literally Oct 9 01:00–02:00), which would imply 34h09m–35h09m elapsed, but the same CAL project's SDE meshing was previously screenshot-confirmed completed **Oct 10 00:11:50 KST**. A **different interpretation of the date** (Oct 10 01:00–02:00) implies 10h09m–11h09m; therefore actual start date/time is **UNRESOLVED**, and must not be treated as known.
+- **SWB running display is user-reported only**; there is no freshly supplied CAL `n2_des.log` or `n2_des.out`, no observed accepted BE steps/current voltage, no proof the 100ns material override was applied, and no reliable ETA. Do not call this a hang or success.
+- Next **READ ONLY**: inspect `tail -n 40 /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/n2_des.log` and the SWB job/experiment identity and start timestamp; compare changing accepted-voltage/current and Newton retry patterns. Keep existing run and original completed 5V parent intact; no parameter/source edits while it is running.
+
 ## 2026-10-10 — Shared mandatory naming rule reiterated for 주수빈 as well as 이택규 (DECISION)
 
 Worker 이택규 explicitly requests that **주수빈's future CMP-created project names/files** follow the same confirmed format `CMP_<TYPE>_<MAJOR.MINOR.PATCH>_<TAG>`. This applies across separate chats and Claude whenever the agent reads CMP common instructions. Canonical updated `CMP/PROJECT_NAMING_CONVENTION.md` and entry-point `CMP/AGENTS.md`. Version the project and released bundles, but **do not rename SWB-consumed native files** such as sde_dvs.cmd, sdevice_des.cmd, sdevice.par and pp/n outputs. Preserve old projects and record provenance, parent and changes. Future new projects should be easy for professor to reproduce via SWB GUI parameter editors where feasible; do not alter current running CAL code. This is a shared policy, NOT a change actually made in 주수빈's separate private SWB directory.

@@ -1,3 +1,9 @@
+## 2026-10-10 — CAL lifetime setting verification already performed; corrective handoff (USER CORRECTION)
+
+- 이택규가 AI의 재확인 요청을 정정함: 성공한 기존 5V 소자를 복제한 CAL에서 InGaN Scharfetter electron/hole SRH lifetime 1ns→100ns (`taumax=1e-7s`)로 설정하는 작업은 이택규와 ChatGPT가 함께 수행했고 변경 설정 파일도 당시 검토함. 기존 파일 수정 자체를 미검증이라고 반복 질문하지 말 것.
+- 구분: 변경을 함께 설정/확인한 기록은 존재하나, CAL 실행 중인 해의 실제 lifetime 효과를 수치적으로 독립 추출해 완전 검증했는지는 별도 문제. 이 차이를 설명할 때 이미 확인한 사용자 작업을 부정하거나 기초 단계로 되돌리지 않음.
+- 현재 우선 연구 질문: 왜 동일 Half+Coarse 부모(5V 성공)에서 lifetime만 100ns로 의도적으로 바꾼 CAL이 4.144V 부근에서 고전압 Newton 수렴 병목을 보이는가? 원인 미확정. CAL 원본/run 보존, accepted BE pseudo-time·스텝만 읽기 전용 분석, 물리 메커니즘 및 수치 반응 구분.
+
 ## 2026-10-10 — CAL n2 ~4.144 V calculating (USER-REPORTED / ACCEPTANCE UNVERIFIED)
 
 - 작업자 이택규 직접 보고: `CMP_BASELINE_1.2.0_CAL`이 현재 약 **4.144 V 계산 중**. 직전 실제 공유 n2 로그에서 확인된 accepted 전압은 4.142 V; 이번 보고는 이전보다 약 0.002 V 높은 시도/진행으로 보이지만 **새 n2_des.log 스텝 수렴 결과는 제출되지 않아 4.144 V accepted라고 확정할 수 없음**. 5V/100ns effective 적용 모두 미확인.

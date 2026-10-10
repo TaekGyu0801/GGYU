@@ -1566,5 +1566,23 @@
     "calAcceptanceStatus": "UNVERIFIED; last direct log accepted ~4.142V",
     "next": "READ_ONLY TDR band/quasi-Fermi/density/polarization and injection/J sanity audit, then verified hypothesis-driven small pilot only with approval. Do not edit/abort CAL or restart FAST.",
     "caveats": "Claude proposed ~2.9V outside QW, polarization+EBL cause, run-in-minutes, October 23 deadline and half/full current ~1% extrapolation: interpret as estimates/hypotheses not independently proven."
+  },
+  "latestJuSubinEBLProbe": {
+    "timestamp": "2026-10-10T21:29:00+09:00",
+    "status": "OBSERVED",
+    "source": "SVisual screenshot of JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr, completed NtSide0 5V",
+    "zone": "Clean_EBL(AlGaN)",
+    "coordinate_um": {
+      "X": 0.13,
+      "Y": 1,
+      "Z": 0
+    },
+    "AcceptorConcentration_cm3": 300000000000000000,
+    "DonorConcentration_cm3": 0,
+    "DopingConcentration_cm3": -300000000000000000,
+    "hDensity_cm3": 5787900714824000,
+    "interpretation": "Effective EBL acceptor and signed net doping correctly present; 5V local free holes about 52x smaller. No unique inference of injection barrier, doping failure, or 0V equilibrium density.",
+    "nextReadOnly": "Inspect ValenceBandEnergy and hQuasiFermiEnergy upper-stack cutline at Y=1um in existing 5V TDR; retain MgMinus mapping as separate unresolved item.",
+    "changeScope": "No TCAD code, solver, or CAL change"
   }
 }

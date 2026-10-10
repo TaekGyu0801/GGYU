@@ -1,3 +1,9 @@
+## 2026-10-10 ~18:08 KST — 주수빈 CAL n2 high-bias cutback 추적 (OBSERVED)
+
+- 4.138V 부근 BE attempt에서 Newton 15회 후 RHS=1.21e-3>1e-3, `Newton didn't converge` 및 step cutback 확인. 새 시도 t=0.827672→0.827674 s, dt=2.8452e-6 s 시작만 확인; 전체 job failure 아님.
+- PRIORITY: running source/solver/job 보존. 일정 시간 간격으로 `tail -n 40 .../CMP_BASELINE_1.2.0_CAL/n2_des.log` 비교하고 accepted t/V가 늘어나는지, reject 반복/MinStep/fatal/Good Bye 여부 확인. 출력 timestamp 및 process로 실행/정지 구분.
+- 전압 82.8%가 곧 wallclock 82.8%라는 해석 금지. ETA 단정 금지, 100ns effective 적용 아직 입증 안 됨.
+
 ## 2026-10-10 ~18:07 KST — 주수빈 CAL 4.138 V 진행 인수인계 (OBSERVED)
 
 - 최신 SWB n2 Output 화면에서 직전 accepted step 결과 anode 4.138 V(5 V 대비 전압 스윕 약 82.76%) 및 다음 BE attempt t=0.82766→0.827663 s 시작 확인. 5 V 완료 또는 다음 시도의 수렴은 미확인.

@@ -1,3 +1,7 @@
+## 2026-10-10 ~22:38 KST — JuSubin CAL 100ns 4V spatial checkpoint handoff
+- WORKER 주수빈 / AI ChatGPT. OBSERVED on user's shell screenshot: read-only `find .../CMP_BASELINE_1.2.0_CAL -maxdepth 1 -type f -name 'n2*' ...` prints `n2_des.err 12KB`, `n2_des.job 4KB`, `n2_des.log 5120KB`, `n2_des.out 5376KB`, `n2_des.plt 1416KB`, `n2_des.sta 4KB`, `n2_local.err 0KB`; no top-level n2 TDR or SAV. Previously confirmed near-4V PLT row V=3.99967374V, time=.79993475s, terminal 2D I=3.497895e-14 A/um. The PLT only gives terminal transient data, not volumetric QW recombination maps; 4V TDR availability currently UNRESOLVED.
+- No solver/control/source file changes have been made, **do not Stop/Abort running CAL**. NEXT READ-ONLY find actual command file and inspect Plot/Save schedule (e.g. `ls .../*des.cmd`; `grep -nEi -C 3 'Plot|Save|CurrentPlot|FinalTime|Time[[:space:]]*=' .../n2_des.cmd`). Check for TDR in nested/other-named files if needed. Keep Gate0 low-injection unresolved, no baseline freeze/A-B production.
+
 ## 2026-10-10 22:30 KST — JuSubin 4V CAL retrieval handoff (OBSERVED)
 - Worker: 주수빈 (ChatGPT). Source: user's screenshot of terminal read-only parse of `CMP_BASELINE_1.2.0_CAL/n2_des.plt`.
 - Real near-4V record: transient time 0.79993475s; V=3.99967374; `anode TotalCurrent=3.497895e-14` (2D A/um). Last record shown: time 0.82993089s; V=4.14965446; I=4.839436e-14 A/um. 100ns refers InGaN SRH lifetime (not transient time step). PLT text format has 17 fields; index0 time,index9 anode OuterVoltage,index15 anode TotalCurrent.

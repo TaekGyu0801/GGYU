@@ -1,3 +1,9 @@
+## 2026-10-10 ~18:07 KST — 주수빈 CAL 진행 상태 스크린샷 확인 (OBSERVED)
+
+- 주수빈이 이택규의 기존 `CMP_BASELINE_1.2.0_CAL` NtSide0 실행 상황을 SWB Node n2 Output 창으로 공유. 직전 accepted step 뒤 displayed anode=4.138 V, next BE attempt pseudo-time 0.82766 -> 0.827663 s. 이전 기록 4.122 V보다 약 0.016 V 진전. 5 V 기준 약 82.76% 전압 스윕이며 wallclock 진행률 아님.
+- 다음 단계 수렴/5 V 완료/100 ns override effective 여부는 화면에서 확정 불가. `n2_des.err` E0 warning은 fatal 원인으로 확정하지 않음. 서버 소스/작업은 변경하지 않음.
+- NEXT: 현재 실행 유지, 후속 로그 read-only 확인과 5 V 성공 후 이전 1 ns Baseline 대조.
+
 ## 2026-10-10 12:09 KST — CAL SDevice continues running in SWB (USER-REPORTED / LOG UNVERIFIED)
 
 - Worker 이택규 reports that the previously launched `CMP_BASELINE_1.2.0_CAL` SDevice still appears **running** in SWB at ~12:09 KST on Oct 10, with no completion observed.

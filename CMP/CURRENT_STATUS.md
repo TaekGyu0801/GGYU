@@ -1,3 +1,8 @@
+## 2026-10-10 20:21 KST — JuSubin observed p-GaN Mg ionization-output ambiguity
+
+- Existing completed `JUSUBIN_FAST_HALF_5V_TEST` 5V NtSide0 Probe, Clean_pGaN at (X=0.05,Y=1.0 um): `hDensity=3.000342790006e17`, `pMagnesiumActiveConcentration=9.59e18`, `pMagnesiumMinusConcentration=9.59e18 cm^-3`. One-point hole target matches nominal, but MgMinus=MgActive cannot independently establish the correct incomplete-ionization physics or its ionization fraction. This is a model interpretation/calibration gate, not proven code error.
+- NEXT: read-only same-position `DopingConcentration`, `AcceptorConcentration`, `DonorConcentration`, `eDensity` in Probe; verify actual T-2022.03 custom doping-species definition and ionization behavior. Keep completed 5V source and CAL running job untouched.
+
 ## 2026-10-10 (last log time unspecified) — FAST_C1 n6 tiny BE-steps oscillate near 4.801V; final minimum step failure (OBSERVED)
 
 - Worker 이택규 supplied filtered **actual** `GaN_PiN_Diode_FAST_C1/n6_des.log` tail. Pseudo-time printed `0.960247 s` on successive BE attempts (6 decimal digits only), corresponding to ~4.801235 V at unchanged 0→5V ramp. Last repeated anode printed `4.801E+00V`, not proof exact zero time advancement.

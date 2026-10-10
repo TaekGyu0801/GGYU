@@ -1,3 +1,6 @@
+## 2026-10-10 ~21:22 KST — JuSubin 5V Clean_EBL hole-density observation
+- OBSERVED by 주수빈 at X=0.13 µm Y=1 µm on completed 5V NtSide0 `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`: `Zone=Clean_EBL(AlGaN)`, `hDensity=5.787900714824e15 cm^-3`, ~52x below nominal literature EBL hole concentration 3e17 at this particular biased location. No judgment that input dopant is wrong: carrier concentration under 5V need not equal nominal acceptor or equilibrium concentration. NEXT same point `AcceptorConcentration` and signed net doping check. No model edits.
+
 ## 2026-10-10 ~21:17 KST — Same-point n1 mesh vs 5V net doping directly compared (OBSERVED SVisual screenshots; ionization-field interpretation unresolved)
 
 - Worker 주수빈 opened `JUSUBIN_FAST_HALF_5V_TEST/n1_msh.tdr` and used SVisual Probe at X=0.05 um, Y=1.0 um, Z=0; Zone `Clean_pGaN(GaN)`.

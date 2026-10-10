@@ -1,3 +1,6 @@
+## 2026-10-10 ~21:26 KST — 5V Clean_EBL AcceptorConcentration matches nominal 3e17 (OBSERVED)
+- 주수빈: SVisual completed 5V NtSide0 Clean_EBL(AlGaN), X=0.13,Y=1.0 um, `AcceptorConcentration=3.000000000000e17 cm^-3`; previously same point `hDensity=5.787900714824e15 cm^-3`, around 52x lower. Confirms modeled EBL acceptor input is present, NOT literature free-hole density match at bias. EBL transport/0V calibration not yet resolved. Next DopingConcentration+Donor probe same point. No simulation/source changes.
+
 ## 2026-10-10 ~21:22 KST — JuSubin 5V Clean_EBL hole-density observation
 - OBSERVED by 주수빈 at X=0.13 µm Y=1 µm on completed 5V NtSide0 `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`: `Zone=Clean_EBL(AlGaN)`, `hDensity=5.787900714824e15 cm^-3`, ~52x below nominal literature EBL hole concentration 3e17 at this particular biased location. No judgment that input dopant is wrong: carrier concentration under 5V need not equal nominal acceptor or equilibrium concentration. NEXT same point `AcceptorConcentration` and signed net doping check. No model edits.
 

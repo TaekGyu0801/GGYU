@@ -1,3 +1,9 @@
+## 2026-10-10 — Thermionic Formula=1 not silently ignored in completed 5V_TEST (HYPOTHESIS CHECK RESOLVED)
+
+- 이택규 실제 성공 5V_TEST `n2_des.log` grep: line354 `With Thermionic Emission at heterointerfaces for electrons and holes`, line803 `ThermionicEmission: Formula = 1, instead of: 0 [1]`. Claude audit에서 제기한 par section-name 불일치로 Formula1 미인식 가능성은 실행 로그 근거상 현재 5V_TEST에 대해 해소됨. 이는 물리적 저전류 해결이나 터널링 포함의 증거 아님.
+- 분극 로그 문맥은 UNRESOLVED: 355 `Without Piezo`, 373 `Without polarization` 대 379 activation1, 416 Piezo strain model. 정확히 어떤 물성/모델 하위 섹션인지 확인 전 오류로 분류하지 말 것.
+- 기타 Plot alias 경고와 Nnet incomplete ionization 재계산은 비치명적인 정보/호환성 알림으로 보이며 별도 조사에 우선순위 낮음. 변경 및 재실행 없음.
+
 ## 2026-10-10 ~21:17 KST — Same-point n1 mesh vs 5V net doping directly compared (OBSERVED SVisual screenshots; ionization-field interpretation unresolved)
 
 - Worker 주수빈 opened `JUSUBIN_FAST_HALF_5V_TEST/n1_msh.tdr` and used SVisual Probe at X=0.05 um, Y=1.0 um, Z=0; Zone `Clean_pGaN(GaN)`.

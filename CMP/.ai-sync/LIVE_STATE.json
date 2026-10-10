@@ -1691,5 +1691,25 @@
     "latestPreviouslyAcceptedCALVoltage_V": 4.149,
     "nextReadOnly": "head -n 30 of CAL n2_des.plt; then inspect datasets and actual I–V history plus Save/Plot coverage.",
     "tcadCodeOrJobChanged": false
+  },
+  "latestJuSubinCALPLTStructure": {
+    "timestamp": "2026-10-10T22:25:00+09:00",
+    "status": "OBSERVED",
+    "worker": "주수빈",
+    "source": "head -n 30 of CAL n2_des.plt shown in user screenshot",
+    "format": "DF-ISE text",
+    "type": "xyplot",
+    "hasDataBlock": true,
+    "fieldsCount": 17,
+    "indicesZeroBased": {
+      "time": 0,
+      "anodeOuterVoltage": 9,
+      "anodeTotalCurrent": 15,
+      "anodeDisplacementCurrent": 12
+    },
+    "near4VValueVerified": false,
+    "full4VTDRVerified": false,
+    "nextReadOnly": "Parse valid full records in Data block; print closest 4V voltage/time/current and latest record, then check 4V TDR persistence before considering stop.",
+    "runningCALInterrupted": false
   }
 }

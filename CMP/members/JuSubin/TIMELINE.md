@@ -1,3 +1,11 @@
+## 2026-10-10 20:21 KST — p-GaN Mg Active and Mg Minus same values, physically unresolved (OBSERVED)
+
+- Worker: 주수빈. Completed 5V NtSide0 SVisual Probe from `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`, coordinate X=0.05 um/Y=1.0 um/Z=0, Zone `Clean_pGaN(GaN)`.
+- **New observed:** `pMagnesiumActiveConcentration = 9.590000000000e18 cm^-3`; `pMagnesiumMinusConcentration = 9.590000000000e18 cm^-3`. Previous same-point `hDensity=3.000342790006e17 cm^-3` (5V transient).
+- Literature/source semantics: in Sentaurus Device the dopant species ionized field for acceptor is typically `MinusConcentration`. Therefore equality of Active and Minus does **not** demonstrate incomplete Mg ionization despite hDensity matching a target. Exact T-2022.03 custom species mapping/plot output and net doping charge, compensation or possible plot bookkeeping must be audited before physical explanation. It is incorrect to infer ionization fraction as hDensity/MgActive.
+- Next read-only GUI: at same 5V coordinate Probe `DopingConcentration`, `AcceptorConcentration`, `DonorConcentration` and if available `eDensity` to check consistency; later audit actual `datexcodes.txt` pMagnesium species mapping, effective GaN Ionization and SDevice region model & Plot. Not evidence the full p-GaN doping calibration is validated.
+- No source changes, rerun or CAL interruption.
+
 ## 2026-10-10 ~20:10 KST — JuSubin clean p-GaN hDensity target confirmed at one 5V point (OBSERVED)
 
 - Worker **주수빈** supplied Sentaurus Visual **Probe** screenshot of completed `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`, NtSide=0, nominal 5V transient endpoint.

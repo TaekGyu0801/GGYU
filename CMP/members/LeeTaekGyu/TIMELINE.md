@@ -1,3 +1,9 @@
+## 2026-10-10 — 5V reference SVisual qualitative band/carrier screening completed; stop repetitive GUI work (OBSERVED / DECISION)
+
+- Worker 이택규 submitted final SVisual screenshot of JUSUBIN_FAST_HALF_5V_TEST n2_des.tdr, existing C1 cutline at lateral Y≈2um, vertical X=0–0.4um. Two variables selected: eDensity and hDensity, simultaneously plotted log scale Y 1e6–1e20 cm^-3. p-side holes dominate (red), n-side electrons dominate (green), MQW multi-peak density profiles show both carriers in different narrow wells/regions. **Colors inferred from previously displayed hDensity, legend not visible; figures approximate.** These are expected general p/n trends and insufficient to identify injection bottleneck alone.
+- Previous GUI session also recorded Ec, Ev, eQuasiFermiEnergy, hQuasiFermiEnergy in same cutline at 5V. User requested stopping repeated screen tasks ('언제까지 해야해'); AI agreed SVisual qualitative screening is **complete for now**, no more incremental GUI screenshots requested. This is not a validated physical baseline, nor proof of cause behind exceptionally low nominal 5V current density.
+- Next decision work: summarize existing data, identify which exact numeric region/voltage-loss values would discriminate polarization/EBL/contact/MQW injection hypotheses; focus original 5V TDR and actual model. Avoid repetitive manual plotting, unnecessary long simulations, FAST rerun or CAL editing.
+
 ## 2026-10-10 — 5V_TEST hole-density log plot fixed to 1e6–1e20 cm^-3 (OBSERVED screenshot)
 
 - 이택규가 동일한 SVisual 스크린샷 두 장 제공. `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`의 C1 (lateral Y≈2.0µm), 깊이 X=0–0.4µm에서 이전에 사용자 선택했다고 보고한 `hDensity` cutline의 Y축을 `Log. Scale=ON`, `Fixed Min=1e6`, `Fixed Max=1e20`으로 성공적으로 설정함. 화면상 p-GaN 상단 X≈0–0.11µm에서 약 1e17cm^-3 농도 평탄부, X≈0.12µm에서 큰 정공 농도 피크, X≈0.14–0.26µm EBL/MQW 인접 스택에서 좁은 양의 피크와 깊은 골 반복, X≈0.27µm 이후 1e6 이하로 범위 바깥. 정량값·피크 region assignment는 그래프 육안 개략치, 단독 screenshot에 변수 legend는 없음.

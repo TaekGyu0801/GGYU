@@ -1,3 +1,6 @@
+## 2026-10-10 ~20:35 KST — Read-only audit of Mg species output meaning
+- The completed NtSide0 5V pGaN Probe now has Acceptor=MgActive=MgMinus=9.59e18, Donor=0, net doping≈-3.00032e17, hDensity≈+3.00034e17 cm^-3 at Clean_pGaN X=0.05um,Y=1.0um. Target local hole density matches, but Mg incomplete ionization interpretation remains unresolved. NEXT: inspect `JUSUBIN_FAST_HALF_5V_TEST/pp2_des.cmd` effective region scope and parameter linkage, `FASTC1_pp6_des.par` Mg ionization block, `n2_des.log` activation and net doping recalculation; preserve model. Later verify pGaN spatial and 0V concentrations, EBL separately.
+
 ## 2026-10-10 — Claude v2 independent CMP audit submitted; low-current Gate 0 prioritized (DOCUMENT-BASED REVIEW / PROPOSED)
 
 - 작업자 이택규가 Claude 작성 `CMP MicroLED TCAD — 독립 중간 기술감사 및 연구계획 재수립 (v2)` 전문을 채팅 업로드함. **Claude의 독립 감사 의견이며 이번 메시지는 새 실험/로그가 아님.** Claude는 GitHub 기록과 구 FAST 입력은 보았으나 5V_TEST/CAL 현재 실제 pp/log/TDR을 직접 읽지 못했다고 보고함.

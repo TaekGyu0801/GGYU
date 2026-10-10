@@ -1,3 +1,8 @@
+## 2026-10-10 — Mg Minus equals Mg Active in Clean_pGaN (UNRESOLVED interpretation)
+
+- Screenshot, worker 주수빈, `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr` 5V NtSide0, (X=0.05,Y=1.0 um) Clean_pGaN: pMagnesiumActive and pMagnesiumMinus both 9.59e18 cm^-3; hDensity 3.000342790006e17 cm^-3. This is an *interpretation/validation blocker*, **not a runtime crash**. Sentaurus species naming links Minus to ionized acceptor; confirm effective output semantics and charge balance before concluding Mg ionization/compensation.
+- Read-only next: probe DopingConcentration, AcceptorConcentration, DonorConcentration, eDensity in same zone; inspect actual custom species definitions and material ionization. Do not infer hDensity/total Mg equals ionized fraction.
+
 ## 2026-10-10 ~19:43 KST — SVisual Cutline signed net-doping graph successfully restored (OBSERVED screenshot)
 
 - 작업자 주수빈. 완료된 `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr` (NtSide=0, 5 V) `DopingConcentration` `Cutline_Y Plot`에서 Y-axis 수동 범위 설정 후 음·양 signed net-doping plot 전체가 다시 표시되는 것을 직접 확인.

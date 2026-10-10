@@ -1,3 +1,6 @@
+## 2026-10-10 — EBL same-point energy difference
+- OBSERVED (주수빈) 5V_TEST completed NtSide0 Clean_EBL at X=0.13um,Y=1.0um: Ev=-5.252508407140eV, EFp=-4.999999939039eV; EFp-Ev=0.252508468101eV. Previous hDensity=5.7879e15, acceptor=3e17, signed net doping=-3e17 cm^-3. Local EFp-Ev difference is not injection barrier height. Next read pGaN same-position values and compare regions. No code or CAL changes.
+
 ## 2026-10-10 21:43 KST — JuSubin upper-stack hole quasi-Fermi cutline now zoomed (OBSERVED)
 - Completed NtSide0 5V n2_des: C1(Y≈1um) `hQuasiFermiEnergy` graph is displayed over X=0–0.4um. Plateau near -5eV in top segment and several marked steps X≈0.15–0.25um; approximate screenshot reading only, not energy barrier measurement. Previous Ev cutline also showed strong upper-stack structure. EBL low biased free-hole density cause remains unresolved.
 - NEXT read-only: same-coordinate Probe Clean_EBL X=0.13um,Y=1.0um for Ev and hole quasi-Fermi, then layer-aligned band/transport check. Gate0 low-current and CAL prior status unchanged.

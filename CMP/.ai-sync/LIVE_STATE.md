@@ -1,3 +1,8 @@
+## 2026-10-10 22:30 KST — JuSubin extracts real 100ns CAL 4V I–V record
+- OBSERVED read-only parsing of live `CMP_BASELINE_1.2.0_CAL/n2_des.plt`: near-4V saved record time=0.79993475s, anode=3.99967374V, 2D TotalCurrent=3.497895e-14 A/um. Last PLT row in screenshot time=0.82993089s, anode=4.14965446V, TotalCurrent=4.839436e-14 A/um. Values directly displayed, not estimated. LAST PLT ROW does not prove currently running solver is still at the same point; no 5V completion.
+- 4V transient current history obtainable without changing running CAL. But 4V point is low-current, not an established LED baseline or sufficient IQE test; verify displacement current / geometry normalisation and region-specific 4V TDR / save checkpoints before changing endpoint. Low-J Gate0 remains UNRESOLVED. 
+- NEXT read-only `find` saved n2*.tdr/n2*.sav and inspect Plot/Save coverage. No TCAD code/process/source/CAL change.
+
 ## 2026-10-10 22:25 KST — CAL PLT data schema verified; 4V value not extracted yet
 - OBSERVED read-only screenshot from JuSubin on `CMP_BASELINE_1.2.0_CAL/n2_des.plt`: `DF-ISE text`, `type=xyplot`, 17 stored datasets: time, 8 cathode fields, 8 anode fields including `anode OuterVoltage`, `anode TotalCurrent`, `anode DisplacementCurrent`. Numeric `Data {` present. Enables retrospective 4V I–V retrieval without stopping calculation, but the displayed first 30 lines alone do NOT verify an actual 4V datapoint nor TDR at 4V. Next read-only parse numerical rows; keep CAL running and Gate0 unresolved.
 

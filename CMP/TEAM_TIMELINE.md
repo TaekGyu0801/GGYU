@@ -1,3 +1,6 @@
+## 2026-10-10 ~21:43 KST — JuSubin QF 1D upper stack plot observed
+- OBSERVED 5V NtSide0 SVisual existing center C1 cutline hQuasiFermiEnergy plotted on X=0–0.4um. Around X=0.15–0.25um several large rising steps; Ev had sharp drops/peaks nearby in earlier screenshot. Energy-step origins and EBL barrier not yet established; next compare numerical Ev and EFp at same physical point/region before causal claims. No code or jobs changed.
+
 ## 2026-10-10 ~21:37 KST — Upper 0–0.4um ValenceBandEnergy cutline zoom observed (OBSERVED SVisual screenshot / CAUSAL INFERENCE UNRESOLVED)
 
 - Worker **주수빈** displayed `ValenceBandEnergy(C1(n2_des))` in completed `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr` (NtSide0 5V) using same vertical interior C1 line at Y≈1.0 um. **Right 1D plot X axis now 0–0.4 um** (confirmed visually), with resolved sharp energy structure in upper pGaN/EBL/MQW layers.

@@ -1,3 +1,11 @@
+## 2026-10-10 ~21:17 KST — Same-point n1 mesh vs 5V net doping directly compared (OBSERVED SVisual screenshots; ionization-field interpretation unresolved)
+
+- Worker 주수빈 opened `JUSUBIN_FAST_HALF_5V_TEST/n1_msh.tdr` and used SVisual Probe at X=0.05 um, Y=1.0 um, Z=0; Zone `Clean_pGaN(GaN)`.
+- **Direct initial mesh Probe**: `DopingConcentration = -9.590000000000e18 cm^-3`; `NDopantActiveConcentration = 0`; `PDopantActiveConcentration = 0` (Mg is a separate pMagnesium species). Two screenshots of identical panel provided; count as one observation.
+- **Existing previous finished 5V n2 Probe at same coordinates**: `DopingConcentration≈-3.000317924998e17 cm^-3`; `hDensity≈+3.000342790006e17 cm^-3`; `pMagnesiumActiveConcentration=9.59e18 cm^-3`; `pMagnesiumMinusConcentration=9.59e18 cm^-3`; `AcceptorConcentration=9.59e18 cm^-3`; `DonorConcentration=0`.
+- Initial nominal net doping and final effective net doping are demonstrably distinct, and SDevice log previously confirmed `IncompleteIonization` and explicit Nnet recomputation. The ratio |Nnet(final)|/|Nnet(mesh)|≈0.0313 is **NOT independently established as the Mg ionization fraction**, because exported MgMinus still equals MgActive while net doping is much lower. Actual species charge/output semantics need validation. Single-point target match is not spatial, EBL or 0V calibration.
+- No SDE/SDevice codes, numerical parameters, or CAL job modified. Suggested next step: check whether effective ionized acceptor field `AccepMinusConcentration` can be obtained or verify custom pMagnesiumMinus output behavior in same saved 5V run; preserve this as UNRESOLVED. Optionally proceed to EBL point-by-point hole-density checks once scope clarified.
+
 ## 2026-10-10 — Mg ionized field mapping found; exported values unresolved
 - OBSERVED by JuSubin in datexcodes mapping: `doping = acceptor(active=pMagnesiumActiveConcentration, ionized=pMagnesiumMinusConcentration)`; labeled `pMagnesiumMinusConcentration` as incomplete-ionization concentration. Screenshot omitted explicit filename header. 
 - Existing 5V_TEST pGaN Probe at X=0.05um,Y=1.0um: active=minus=acceptor=9.59e18, donor=0, signed net doping≈-3.00032e17, holes≈3.00034e17 cm^-3. Species mapping demonstrates intended ionized output relationship but these TDR values cannot yet be reconciled; pGaN ionization physical calibration NOT CONFIRMED.

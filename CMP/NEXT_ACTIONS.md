@@ -1,3 +1,10 @@
+## 2026-10-10 ~21:29 KST — JuSubin 5V Clean_EBL net doping and donor Probe confirmed (OBSERVED, PHYSICS CAUSE UNRESOLVED)
+
+- Worker 주수빈 provided SVisual Probe screenshot of saved, completed `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`, NtSide=0, 5V endpoint. Coordinates `X=0.13 um,Y=1.0 um,Z=0`; Zone `Clean_EBL(AlGaN)`.
+- **New directly observed:** `DonorConcentration = 0.000000000000e+00 cm^-3`; `DopingConcentration = -3.000000000000e+17 cm^-3`. Prior screenshots **same point**: `AcceptorConcentration=3.000000000000e17 cm^-3`, `hDensity=5.787900714824e15 cm^-3`.
+- EBL effective acceptor input and signed net doping agree with nominal acceptor=3e17 / donor=0. The local 5V mobile hole density is ~51.8x lower than effective acceptor doping, so this is NOT evidence that SDE EBL dopant is missing/misassigned. It may reflect a space-charge/polarization/heterojunction/bias effect; **no single mechanism or bad EBL design is proven from one local point**. Kou literature nominal hole concentration is not interchangeable with 5V local electron/hole density.
+- Next **read-only** on same existing TDR: vertical cutline across pGaN/EBL/MQW (Y=1.0 um), inspect `ValenceBandEnergy` and `hQuasiFermiEnergy` plus local hole density to investigate effective hole-injection barrier. Start by checking availability of `ValenceBandEnergy` in Data Selection; no new solver jobs nor model changes. Existing MgMinus custom mapping versus effective net doping is a SEPARATE unresolved item.
+
 ## 2026-10-10 — EBL acceptor present, next check net doping
 - Read-only next: on JuSubin 5V_TEST SVisual Clean_EBL X=0.13,Y=1.0um (Acceptor=3e17, hDensity≈5.7879e15), probe DopingConcentration and DonorConcentration. Do not change baseline or running CAL. Later 0V/band profile to assess hole injection.
 

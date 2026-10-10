@@ -1,3 +1,6 @@
+## 2026-10-10 ~20:35 KST — Mg Acceptor/Minus vs NetDoping output relation unresolved (OBSERVED DATA / MODEL AUDIT)
+- Additional direct 5V NtSide0 Clean_pGaN Probe shows AcceptorConcentration=9.59e18 cm^-3 (X=0.05,Y=1.0um); matching MgActive=MgMinus=9.59e18, but Donor=0 and signed Doping≈-3.00032e17, hDensity≈+3.00034e17 cm^-3. Current interpretation of active ionization, net doping recalc and species fields needs verification. This is not a simulation crash nor grounds for blind code edits. Next read actual pp2/n2 ionization and parameter binding read-only, then determine meaning from T-2022.03 references.
+
 ## 2026-10-10 — Mg Minus equals Mg Active in Clean_pGaN (UNRESOLVED interpretation)
 
 - Screenshot, worker 주수빈, `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr` 5V NtSide0, (X=0.05,Y=1.0 um) Clean_pGaN: pMagnesiumActive and pMagnesiumMinus both 9.59e18 cm^-3; hDensity 3.000342790006e17 cm^-3. This is an *interpretation/validation blocker*, **not a runtime crash**. Sentaurus species naming links Minus to ionized acceptor; confirm effective output semantics and charge balance before concluding Mg ionization/compensation.

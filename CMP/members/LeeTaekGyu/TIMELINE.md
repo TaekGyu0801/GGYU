@@ -1,3 +1,9 @@
+## 2026-10-10 — completed 5V_TEST n2_des.log confirms ThermionicEmission Formula=1, piezo strain model (OBSERVED)
+
+- 이택규가 실서버 `/user/semi/semi437/tmp/myproject/JUSUBIN_FAST_HALF_5V_TEST/n2_des.log`에서 `grep -niE 'thermionic|polariz|piezo|warning|unrecognized|unknown' ... | head -n 60` 출력 제공. 354행 `With Thermionic Emission at heterointerfaces for electrons and holes`; 803행 `ThermionicEmission: Formula = 1, instead of: 0 [1]`. 기존 Claude 의심(`Thermionic` 파라미터 섹션명 불일치로 Formula1 적용 안 될 가능성)은 이 실행 로그에 대해 사실상 배제. Thermionic 수송 자체의 충분성은 미검증.
+- 379행 `Piezoelectrice Activation = 1`, 416행 `Piezoelectric polarization model: strain`; 반면 355행 `Without Piezo`, 373행 `Without polarization`도 있어 서로 다른 model/section context 확인 전 전역 분극이 모두 켜지거나 꺼졌다고 단정 금지. 293행 `no Piezo file`은 곧바로 오류로 해석 금지.
+- 2148행 `WARNING: Doping concentration (Nnet) will be recalculated because of incomplete ionization!`은 알려진 Mg incomplete-ionization 적용 메시지; 574/583/585/587/589행은 Plot alias deprecation warnings, 현재 low current/root solver failure 원인 증거가 아님. NEXT read-only: `sed -n '345,425p' .../n2_des.log`로 분극 문구가 속한 블록 문맥과 물리 scope 확인. 서버 SWB 파일/계산 CAL/FAST 변경 없음.
+
 ## 2026-10-10 — 5V reference SVisual qualitative band/carrier screening completed; stop repetitive GUI work (OBSERVED / DECISION)
 
 - Worker 이택규 submitted final SVisual screenshot of JUSUBIN_FAST_HALF_5V_TEST n2_des.tdr, existing C1 cutline at lateral Y≈2um, vertical X=0–0.4um. Two variables selected: eDensity and hDensity, simultaneously plotted log scale Y 1e6–1e20 cm^-3. p-side holes dominate (red), n-side electrons dominate (green), MQW multi-peak density profiles show both carriers in different narrow wells/regions. **Colors inferred from previously displayed hDensity, legend not visible; figures approximate.** These are expected general p/n trends and insufficient to identify injection bottleneck alone.

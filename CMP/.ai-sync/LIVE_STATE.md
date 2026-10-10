@@ -1,3 +1,8 @@
+## 2026-10-10 21:29 KST — JuSubin Clean_EBL doping input correct; 5V holes remain low (OBSERVED)
+
+- Completed `JUSUBIN_FAST_HALF_5V_TEST` NtSide0 5V SVisual Probe at X=0.13 µm/Y=1.0 µm (Clean_EBL, AlGaN): `AcceptorConcentration=3.000000e17`, `DonorConcentration=0`, `DopingConcentration=-3.000000e17`, `hDensity=5.787900714824e15 cm^-3`. Input effective acceptor and signed net doping agree; one-point free holes ~52 times smaller than acceptor under 5V. Potential hole-injection barrier/depletion/polarization cause NOT CONFIRMED.
+- Next JuSubin step: use existing 5V TDR to inspect vertical `ValenceBandEnergy` and `hQuasiFermiEnergy` cutline around pGaN/EBL/MQW, without editing/rerunning. Separate MgMinus field semantics remain unresolved. Other team's low-J Gate0 and CAL watch remain ongoing/unmodified.
+
 ## 2026-10-10 — Claude v2 independent CMP audit submitted; low-current Gate 0 prioritized (DOCUMENT-BASED REVIEW / PROPOSED)
 
 - 작업자 이택규가 Claude 작성 `CMP MicroLED TCAD — 독립 중간 기술감사 및 연구계획 재수립 (v2)` 전문을 채팅 업로드함. **Claude의 독립 감사 의견이며 이번 메시지는 새 실험/로그가 아님.** Claude는 GitHub 기록과 구 FAST 입력은 보았으나 5V_TEST/CAL 현재 실제 pp/log/TDR을 직접 읽지 못했다고 보고함.

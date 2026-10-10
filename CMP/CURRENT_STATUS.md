@@ -1,3 +1,9 @@
+## 2026-10-10 — completed 5V reference thermionic setting directly confirmed (OBSERVED); polarisation log context pending
+
+- 실서버 5V_TEST `n2_des.log`에 Thermionic emission at heterointerfaces (354)와 ThermionicEmission Formula1 (803)가 출력되어 성공한 model에 실제 해당 설정 인식 확인. Claude audit의 설정명 불일치 의심은 이 실행에서는 뒷받침되지 않음.
+- Piezo strain model(416), activation1(379) 기록과 'Without Piezo'(355), 'Without polarization'(373)이 함께 있으므로 각 로그 heading context 확인 전 full physics 가정 유지. Plot 별칭과 Nnet recalculation 경고는 5V 저전류 근본 원인 아님. 저전류 Gate0 여전히 미해결. CAL 최신 직접 accepted≈4.142V, 별도 사용자 시도≈4.144V에서 더 새 로그 근거 없음.
+- NEXT read only `sed -n '345,425p' .../JUSUBIN_FAST_HALF_5V_TEST/n2_des.log`.
+
 ## 2026-10-10 — JuSubin EBL local energy offset measured
 - OBSERVED 5V NtSide0 saved TDR, Clean_EBL(AlGaN), X=0.13um/Y=1.0um: Ev=-5.252508407140eV, EFp=-4.999999939039eV (separate direct SVisual screenshots). Derived local EFp-Ev=+0.252508468101eV. EBL hDensity=5.7879e15, Acceptor=3e17, Net=-3e17 cm^-3 at same coordinate. Local offset is NOT the EBL hole injection barrier.
 - NEXT read-only same TDR pGaN X=0.05um/Y=1.0um Ev and EFp Probe, then region-aligned spatial band/transport review. Keep CAL and codes intact.

@@ -1,3 +1,10 @@
+## 2026-10-10 ~20:10 KST — JuSubin clean p-GaN hDensity target confirmed at one 5V point (OBSERVED)
+
+- Worker **주수빈** supplied Sentaurus Visual **Probe** screenshot of completed `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`, NtSide=0, nominal 5V transient endpoint.
+- **Direct readout**: Probe coordinates `X=0.05 um, Y=1.0 um, Z=0`; Zone `Clean_pGaN(GaN)`; `hDensity = 3.000342790006e+17 cm^-3`.
+- This matches the nominal Kou-based p-GaN hole-density target 3e17 cm^-3 **at one observed interior location**, not proof of global/equilibrium/0V carrier profile, actual chemical Mg density, effective ionized acceptor fraction, or full physical calibration. Historical SDE Mg input `N_Mg_p=9.59e18 cm^-3` is a *different quantity*.
+- **Next view-only**: keep same Probe coordinates and read `pMagnesiumActiveConcentration`, `pMagnesiumMinusConcentration` magnitudes, and optionally `DopingConcentration` to separate nominal Mg input, exported Mg− field, and free holes. Inspect EBL/near-QW hole density and polarization spikes only after confirming Zone of each sample. No SDE/SDevice edits; existing CAL run remains untouched.
+
 ## 2026-10-10 ~20:09 KST — Probe pGaN position attempted, value not yet visible
 
 - 주수빈이 finished `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr` NtSide0 5V SVisual에서 Probe At X=0.05 um, Y=1.0 um, Z=0 수행 후 화면을 보냄. 주황색 상단 영역에 표식은 보이나 Probe result/Zone/Magnitude 패널이 스크린샷에는 없어 실제 hDensity 측정값이나 Clean_pGaN Zone은 아직 직접 확인되지 않음.

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "primaryWorker": "주수빈",
   "phase": "Phase 0 — Common Baseline completion + Project A/B pre-run implementation gate",
   "task": "Complete mandatory A/B pre-run gates before any multi-day production sweep",
@@ -1384,11 +1384,13 @@
     }
   },
   "latestObservedEvent": {
-    "date": "2026-10-09",
+    "date": "2026-10-10",
+    "timeKST": "12:09",
     "worker": "이택규",
-    "status": "OBSERVED_SDE_COMMENT_PRIOR_MG_CALIBRATION_TARGET_NOT_MEASURED",
-    "source": "user terminal sed pp1_dvs.cmd lines 105-128",
-    "event": "Actual SDE comment says Mg input N_Mg_p=9.59e18 was previously calibrated so hDensity~3e17 cm-3 at 300K with incomplete ionization; this is code comment rather than currently verified hole-density measurement."
+    "status": "USER_REPORTED_SWB_RUNNING_LOG_UNVERIFIED",
+    "source": "direct worker follow-up in ChatGPT; no SDevice log supplied",
+    "event": "CAL NtSide0 SDevice appears running in SWB as of 12:09 KST. Start described as '어제 새벽 1~2시' conflicts with Oct10 00:11:50 SDE success timestamp for this candidate; actual CAL job start is unresolved.",
+    "next": "Read-only inspect CAL n2_des.log, SWB job identity/start time and accepted voltage progression; do not claim solver convergence, parameter application or ETA from SWB running state."
   },
   "projectAFabricationFeasibility20261009": {
     "status": "PROPOSED_RESEARCH_ROUTE_COMPARISON_NOT_APPROVED",
@@ -1462,7 +1464,7 @@
     "date": "2026-10-09",
     "worker": "이택규",
     "name": "CMP_BASELINE_1.2.0_CAL",
-    "status": "OFFLINE_INPUT_ZIP_PREPARED_NOT_SIMULATED",
+    "status": "USER_REPORTED_SDEVICE_RUNNING_LOG_UNVERIFIED",
     "parent": "JUSUBIN_FAST_HALF_5V_TEST",
     "preserve": [
       "original 5V completed NtSide0 source and results",
@@ -1478,17 +1480,33 @@
       "full-half-coarse equivalence before final freeze"
     ],
     "claudeHandoff": "See CMP/.ai-sync/RELAY.md; no Claude direct chat contacted",
-    "noSolverRunYet": true,
+    "noSolverRunYet": false,
     "namingConvention": "CMP/PROJECT_NAMING_CONVENTION.md",
     "namingConfirmedDate": "2026-10-09",
     "fileInventory": "OBSERVED: all 9 candidate source/parameter/pp mesh/result files present in user shell; bytes not yet provided",
     "sourceAudit": "CMP/reviews/BASELINE_1_2_0_CAL_AUDIT_20261010.md",
     "recombinationFinding": "Effective 5V QW B=2e-10, Auger=1e-30, SRH lifetime=1ns validated from private TDR",
     "mgFinding": "DopingConcentration tracks MgActive*occupation; numerical ionization verified",
-    "nextAction": "SWB Project > Save As > Clean Project to new name; install private zip files only in clone; preprocess and short smoke before any 5V",
+    "nextAction": "Read-only verify SDevice n2_des.log and job start, effective InGaN 100ns and accepted voltage increments. SWB running is not proof of numerical progress.",
     "privateInputZip": "CMP_BASELINE_1.2.0_CAL_INPUT_CANDIDATE.zip (provided privately in conversation)",
     "candidateParSha256": "adfe81ab03b8f0ca84b09b9a4373fdc8e71f7a5faa00ce01a7c0b82b7fb2f1ad",
     "parentPhysicalChanges": "Proposed InGaN Scharfetter tau_max from 1ns to 100ns only; SDE unchanged, SDevice executable unchanged",
-    "newSolverRun": false
+    "newSolverRun": true,
+    "newSolverRunVerification": "User reports SWB RUNNING; no solver log yet"
+  },
+  "calRuntimeObservation20261010": {
+    "worker": "이택규",
+    "project": "CMP_BASELINE_1.2.0_CAL",
+    "reportedAtKST": "2026-10-10 12:09",
+    "status": "USER_REPORTED_SWB_RUNNING",
+    "solverLogReviewed": false,
+    "reportedStartTime": "어제 새벽 1~2시 (calendar interpretation ambiguous)",
+    "timestampConflict": "CAL SDE meshing success recorded 2026-10-10 00:11:50 KST, which is after literal previous-day start 2026-10-09 01:00-02:00",
+    "durationIfOct9Start": "34h09m-35h09m",
+    "durationIfOct10Start": "10h09m-11h09m",
+    "trueDuration": "UNRESOLVED",
+    "verifiedVoltageProgress": false,
+    "effectiveInGaNSRH100nsApplied": "UNVERIFIED",
+    "nextAction": "Check CAL SDevice n2_des.log accepted steps, job start timestamp and effective parameters; preserve running project and completed 5V parent."
   }
 }

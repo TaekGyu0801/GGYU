@@ -1,3 +1,9 @@
+## 2026-10-10 ~19:40 KST — SVisual 1D doping Y-axis not yet restored after auto-range advice (OBSERVED screenshot)
+
+- 주수빈이 `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr` 5V NtSide0 `Cutline_Y Plot`의 후속 screenshot을 제공. 왼쪽 2D full geometry와 Cut Y C1은 보이지만, 오른쪽 1D Y axis는 여전히 약 `9.995e-21`–`1.0005e-20`이며 실제 doping magnitude를 나타내지 못함.
+- 이전 화면에서 Axis Properties Min/Max Fixed가 잘못 설정된 것이 확인됨. 사용자가 체크 해제를 수행했는지 그 이후 축 자동 설정이 반영되었는지는 이 화면만으로 불확실. 후속 조치로 `Axis Properties > Main`에서 Y1 `Min=-4e17`, `Max=6e18`를 입력하고 각각 Fixed 체크(선형 Log Scale 해제 유지)하여 표시 범위를 수동 제어하는 방법을 제안함. 이는 VIEW ONLY, 실제 5V 시뮬레이션 입력/데이터의 변경 아님.
+- 실제 numeric axis restoration 미검증; 후속 화면 확인 필요. 그래도 실패 시 선택 축이 Y1인지, cutline 1D 실제 원자료가 있는지 확인하고 필요하면 Clean 영역 full-height cutline 재생성. 임의 재실행/소스 수정 금지.
+
 ## 2026-10-10 ~19:37 KST — SVisual Y-axis fixed-range root cause confirmed (OBSERVED GUI; remedy not yet tested)
 
 - 작업자: 주수빈. 완료된 `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`에서 `DopingConcentration` / `Cutline_Y Plot` 표시 이상을 조사.

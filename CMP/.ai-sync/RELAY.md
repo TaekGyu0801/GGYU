@@ -1,3 +1,9 @@
+## 2026-10-10 — Claude independent mid-project review handoff prepared (PROPOSED / NOT SENT)
+
+- 이택규 요청으로 ChatGPT가 Claude에게 복사할 독립 기술감사 프롬프트 작성: 공통 MicroLED baseline 및 A C-edge/B AlGaN-side-barrier 목적, 세 버전 비교(5V_TEST success ~10596.76s, FAST_C1 4.801V failed ~525152.85s, CAL 100ns candidate last accepted ~4.142V), 최근 pp inputs 및 failure evidence, Mg/2D J/IQE model validation, minimal-cost go/no-go roadmap.
+- 구분: 계산 성공은 물리적 calibration success가 아님. FAST_C1 실패는 MinStep reached direct cause이며 underlying Newton instability unresolved. CAL 100ns effective application and 5V outcome unverified; no conclusion same-root-cause. Claude를 통한 리뷰 요청은 사용자 전달을 기다리는 단계이며 AI가 Claude 채팅에 직접 전송한 것이 아님.
+- NEXT: 사용자 Claude 리뷰 결과를 현재 Github evidence와 비판적으로 대조. School server jobs and inputs untouched.
+
 ## 2026-10-10 (last log time unspecified) — FAST_C1 n6 tiny BE-steps oscillate near 4.801V; final minimum step failure (OBSERVED)
 
 - Worker 이택규 supplied filtered **actual** `GaN_PiN_Diode_FAST_C1/n6_des.log` tail. Pseudo-time printed `0.960247 s` on successive BE attempts (6 decimal digits only), corresponding to ~4.801235 V at unchanged 0→5V ramp. Last repeated anode printed `4.801E+00V`, not proof exact zero time advancement.

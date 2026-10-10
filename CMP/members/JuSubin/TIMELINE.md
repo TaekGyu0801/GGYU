@@ -1,3 +1,9 @@
+## 2026-10-10 ~19:15 KST — SVisual full device restored; cutline plot Y log reenabled (OBSERVED screenshot)
+
+- 작업자 주수빈. 기존 완료된 `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`에서 화면 복구 후 2D 소자 X 약 0–4.5 µm 전체 구조와 중앙 내측의 세로 Cut Y `C1`이 다시 표시됨. 138194 elements, 65513 points.
+- 1D `Cutline_Y Plot`에서는 Y축 눈금 `1e-20` 및 오른쪽 `log Y` 토글이 보이며, signed `DopingConcentration`의 음수 값을 표현하지 못하는 로그 스케일이 재활성화된 것으로 해석. 이전 스크린샷의 짧은 붉은 선분 문제를 도핑 프로파일 자체가 손상된 것으로 해석하면 안 됨.
+- 다음 읽기 전용 UI 단계: 오른쪽 1D 그래프 활성화 후 `log Y` 해제, 선형 Y축에서 음·양의 DopingConcentration 전체 깊이 프로파일을 확인. 이후 상단 p-GaN/EBL/MQW 구간 확대 및 `hDensity`/Mg species 분리 비교. TCAD 입력, 저장 결과, CAL 실행은 변경하지 않음.
+
 ## 2026-10-10 ~19:13 KST — SVisual Cutline 재생성 후 1D 데이터 표시 축소 (OBSERVED GUI / CAUSE UNRESOLVED)
 
 - 주수빈은 기존 `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`를 SVisual에서 다시 열고, 새 Cut Y를 만들고 로그 Y를 해제했다고 보고. 스크린샷에서 왼쪽 2D 소자는 상단 X≈0~1.2µm만 확대된 뷰이며, 오른쪽 `Cutline_Y Plot`에는 x≈0.15µm 근처 짧은 음수 DopingConcentration 선분만 표시됨. 소스/데이터 수정 또는 solver failure 증거 없음.

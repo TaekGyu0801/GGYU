@@ -1646,5 +1646,17 @@
     "caveat": "Delta of local EFp-Ev values is NOT EBL hole injection barrier. Project name 5V_TEST does not verify that this TDR is actual full 5.0V converged state; earlier n2_des.log screenshot showed about 4.139V mid-ramp.",
     "nextReadOnly": "Verify actual saved run endpoint voltage/time from n2_des.log / associated .plt, then interpret spatial band alignment and current.",
     "sourceOrSolverChanged": false
+  },
+  "latestJuSubin5VEndpointLog": {
+    "timestamp": "2026-10-10T22:04:00+09:00",
+    "source": "5V_TEST n2_des.log screenshot",
+    "status": "OBSERVED",
+    "solverEnd": "2026-10-09T14:29:52+09:00",
+    "time_s": 1,
+    "anode_V": 5,
+    "current2D_A_per_um": 1.448e-11,
+    "solverFinished": true,
+    "tdrFinalBiasVerified": false,
+    "lowCurrentGate0Resolved": false
   }
 }

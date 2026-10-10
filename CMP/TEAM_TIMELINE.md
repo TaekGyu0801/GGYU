@@ -1,3 +1,6 @@
+## 2026-10-10 — JuSubin AcceptorConcentration probe confirms 9.59e18
+- Observed SVisual at 5V NtSide0, Clean_pGaN X=0.05um Y=1.0um: AcceptorConcentration=9.59e18 cm^-3, same as pMagnesiumActive/Minus from previous Probe. Net Doping approx -3.00032e17, hDensity approx 3.00034e17, Donor=0. Physical Mg ionization mapping remains unverified despite local hole target agreement. Next check live n2 log, pp2 deck and GaN ionization parameters read-only. No solver changes.
+
 ## 2026-10-10 ~20:31 KST — JuSubin Clean_pGaN net doping and free holes agree at one point (OBSERVED)
 
 - SVisual Probe of 5V NtSide0 `JUSUBIN_FAST_HALF_5V_TEST`, Zone Clean_pGaN at X=0.05, Y=1.0 um: DonorConcentration=0, DopingConcentration≈-3.0003179e17, hDensity (earlier same coordinate)≈+3.0003428e17 cm^-3. Earlier `pMagnesiumActiveConcentration=pMagnesiumMinusConcentration=9.59e18` remains not yet reconciled with signed net doping.

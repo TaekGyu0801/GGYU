@@ -1,3 +1,8 @@
+## 2026-10-10 ~20:31 KST — JuSubin Clean_pGaN net doping and free holes agree at one point (OBSERVED)
+
+- SVisual Probe of 5V NtSide0 `JUSUBIN_FAST_HALF_5V_TEST`, Zone Clean_pGaN at X=0.05, Y=1.0 um: DonorConcentration=0, DopingConcentration≈-3.0003179e17, hDensity (earlier same coordinate)≈+3.0003428e17 cm^-3. Earlier `pMagnesiumActiveConcentration=pMagnesiumMinusConcentration=9.59e18` remains not yet reconciled with signed net doping.
+- This is good local numerical correspondence with nominal 3e17 free hole target, not full Mg incomplete-ionization calibration or full device validation. Next same-point AcceptorConcentration and effective species mapping; keep running CAL intact.
+
 ## 2026-10-10 — Claude v2 independent CMP audit submitted; low-current Gate 0 prioritized (DOCUMENT-BASED REVIEW / PROPOSED)
 
 - 작업자 이택규가 Claude 작성 `CMP MicroLED TCAD — 독립 중간 기술감사 및 연구계획 재수립 (v2)` 전문을 채팅 업로드함. **Claude의 독립 감사 의견이며 이번 메시지는 새 실험/로그가 아님.** Claude는 GitHub 기록과 구 FAST 입력은 보았으나 5V_TEST/CAL 현재 실제 pp/log/TDR을 직접 읽지 못했다고 보고함.

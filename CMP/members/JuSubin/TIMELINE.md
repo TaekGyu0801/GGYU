@@ -1,3 +1,10 @@
+## 2026-10-10 ~19:58 KST — hDensity upper-stack peaks spatially resolved in cutline (OBSERVED / PHYSICAL INTERPRETATION PENDING)
+
+- Worker 주수빈, completed 5V NtSide0 `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`: SVisual interior Cutline C1 at lateral Y≈1µm; `hDensity` plotted with linear X axis restricted 0–0.4µm.
+- Two sharp high `hDensity` peaks visually at growth-axis X≈0.12µm (above ~4e19cm^-3) and X≈0.245µm (about 5e19cm^-3). A smaller feature near X≈0.22µm. Region attribution and precise numeric magnitude cannot be established from screenshot. pGaN interior `hDensity` ~3e17cm^-3 cannot be resolved accurately due to linear vertical scale at ~5e19.
+- Do NOT declare incorrect doping, physical hole accumulation or source of QW recombination loss from the spikes. Model/Scharfetter/lattice polarization, junction/interface and numerical overconcentration remain hypotheses. This is a simulated 5V transient endpoint, not 0V equilibrium carrier density.
+- NEXT read-only: SVisual Probe on 2D `n2_des` at representative `Clean_pGaN` coordinate X≈0.05µm,Y≈1.0µm,z=0, record Zone, `hDensity`, MgActive/MgMinus and units; then probe peaks/EBL/QW points by region and check results. Keep running CAL and baseline files untouched.
+
 ## 2026-10-10 ~19:56 KST — hDensity C1 Cutline first displayed (OBSERVED GUI / NOT PHYSICS-VALIDATED)
 
 - 작업자 주수빈이 완료된 `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr` (NtSide0, 5V transient)에서 기존 Clean 영역 vertical `C1(n2_des)` cutline의 variable을 `DopingConcentration`에서 **`hDensity`**로 변경했고, 우측 legend `hDensity(C1(n2_des))`가 직접 확인됨.

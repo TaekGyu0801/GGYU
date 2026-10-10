@@ -1,3 +1,8 @@
+## 2026-10-10 — 이택규 CAL SDevice log confirms 4.122V (OBSERVED)
+
+- Live CAL `n2_des.log`: accepted BE step to t=0.824478s, V=4.122V, Newton RHS=7.30e-4 under threshold 1e-3, raw anode current 4.344e-14. Next BE attempt t=0.824487s only observed through iteration 5 (RHS=1.10e-3), not yet confirmed accepted. No 5V completion or actual InGaN 100ns model proof.
+- Next: keep run intact; compare later log tail for progress/cutback; inspect parameter loading read-only. Do not infer remaining wallclock from ~82.45% voltage sweep.
+
 ## 2026-10-10 12:09 KST — CAL SDevice continues running in SWB (USER-REPORTED / LOG UNVERIFIED)
 
 - Worker 이택규 reports that the previously launched `CMP_BASELINE_1.2.0_CAL` SDevice still appears **running** in SWB at ~12:09 KST on Oct 10, with no completion observed.

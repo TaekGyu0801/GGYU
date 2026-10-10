@@ -1,3 +1,6 @@
+## 2026-10-10 — Confirm actual 5V endpoint before EBL conclusions
+- JuSubin pGaN/EBL Ev EFp point comparison: local EFp-Ev 0.130097eV vs 0.252508eV, respectively (observed + derived). Difference 0.122411eV is not injection barrier. Previous n2 log screenshot anode 4.139V mid-transient; verify file n2_des end bias/status instead of assuming the TDR is converged at 5.0V. Continue region-aware spatial band/transport check afterward, read-only. No TCAD/CAL changes.
+
 ## 2026-10-10 — successful 5V_TEST Thermionic vs Piezo model log context inspected (OBSERVED; no physics bug proven)
 
 - 이택규가 성공한 `JUSUBIN_FAST_HALF_5V_TEST/n2_des.log` lines 345–425 실제 서버 출력을 제공. 셸 첫 입력이 두 `sed` 명령이 합쳐져 `.../n2_des.logsed` 파일 에러를 출력했으나 **뒤따른 동일 출력으로 필요한 본문을 정상 확보**, TCAD 자체 오류와 무관.

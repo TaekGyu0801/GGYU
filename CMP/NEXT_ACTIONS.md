@@ -1,3 +1,9 @@
+## 2026-10-10 — 5V reference SVisual qualitative band/carrier screening completed; stop repetitive GUI work (OBSERVED / DECISION)
+
+- Worker 이택규 submitted final SVisual screenshot of JUSUBIN_FAST_HALF_5V_TEST n2_des.tdr, existing C1 cutline at lateral Y≈2um, vertical X=0–0.4um. Two variables selected: eDensity and hDensity, simultaneously plotted log scale Y 1e6–1e20 cm^-3. p-side holes dominate (red), n-side electrons dominate (green), MQW multi-peak density profiles show both carriers in different narrow wells/regions. **Colors inferred from previously displayed hDensity, legend not visible; figures approximate.** These are expected general p/n trends and insufficient to identify injection bottleneck alone.
+- Previous GUI session also recorded Ec, Ev, eQuasiFermiEnergy, hQuasiFermiEnergy in same cutline at 5V. User requested stopping repeated screen tasks ('언제까지 해야해'); AI agreed SVisual qualitative screening is **complete for now**, no more incremental GUI screenshots requested. This is not a validated physical baseline, nor proof of cause behind exceptionally low nominal 5V current density.
+- Next decision work: summarize existing data, identify which exact numeric region/voltage-loss values would discriminate polarization/EBL/contact/MQW injection hypotheses; focus original 5V TDR and actual model. Avoid repetitive manual plotting, unnecessary long simulations, FAST rerun or CAL editing.
+
 ## 2026-10-10 ~21:43 KST — EBL Ev and EFp same-point probe next
 - The saved 5V NtSide0 SVisual hQuasiFermiEnergy center C1 plot has been zoomed X=0–0.4um, multiple upper-stack energy steps OBSERVED. Next read-only: Tools→Probe on existing n2_des (not C1 curve), X=0.13um,Y=1.0um, verify Zone Clean_EBL(AlGaN), obtain exact hQuasiFermiEnergy and ValenceBandEnergy in Var Values at identical coordinates; then compare pGaN/EBL/MQW and model barrier, without equating local energy offset with transport activation energy. No source or CAL changes.
 

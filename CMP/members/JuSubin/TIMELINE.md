@@ -1,3 +1,7 @@
+## 2026-10-10 ~21:43 KST — JuSubin hQuasiFermiEnergy C1 zoom to 0–0.4 um
+- OBSERVED SVisual saved JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr, NtSide0 5V, existing vertical interior C1 Y≈1um. Right 1D hQuasiFermiEnergy(C1(n2_des)) is now zoomed to X=0–0.4um. Visually approx -5eV flat to 0.14um, rises 0.15–0.18um, multiple abrupt steps around 0.19–0.25um, ~-2.6eV after 0.25um. These are screenshot estimates, not quantitative fit or proven barrier.
+- Prior 1D ValenceBandEnergy C1 shows sharp shifts near 0.12–0.26um. Coincident shifts merit same-coordinate Ev-vs-EFp quantitative comparison; barrier/depletion and low EBL hDensity cause remain UNRESOLVED. NEXT read-only SVisual Probe of ValenceBandEnergy and hQuasiFermiEnergy at existing confirmed Clean_EBL point X=0.13um,Y=1.0um, recording Zone and values, then spatial region-aware comparison. No model or CAL modifications.
+
 ## 2026-10-10 ~21:37 KST — Upper 0–0.4um ValenceBandEnergy cutline zoom observed (OBSERVED SVisual screenshot / CAUSAL INFERENCE UNRESOLVED)
 
 - Worker **주수빈** displayed `ValenceBandEnergy(C1(n2_des))` in completed `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr` (NtSide0 5V) using same vertical interior C1 line at Y≈1.0 um. **Right 1D plot X axis now 0–0.4 um** (confirmed visually), with resolved sharp energy structure in upper pGaN/EBL/MQW layers.

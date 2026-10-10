@@ -1,3 +1,9 @@
+## 2026-10-10 — Claude independent audit before CAL/FAST rerun decisions (PROPOSED)
+
+- 이택규가 세 소자의 런타임·수렴성 차이에 대한 독립 감사와 중간 연구 로드맵 검토를 Claude에 요청할 프롬프트를 받아보려 함. Claude에 직접 보낸 것이 아니며, 사용자가 복사하여 전달할 예정.
+- Claude 검토 범위: 성공한 5V_TEST(parent, 1ns), FAST_C1 n6(Failed 4.801V MinStep and Iterations15), CAL n2(100ns candidate unverified effective, last accepted ~4.142V), exact pp inputs and mesh/physics/contacts differences, GaN Mg ionization, 2D J / QW IQE physical realism, A/B prep gates.
+- NEXT: audit verdict and user-supplied read-only exact active pp data reconcile first. No premature CAL Abort, FAST immediate rerun, code changes, or final physical calibration claims.
+
 ## 2026-10-10 — CAL 4V+ 수렴 불안정 우려에 따른 판단 보류 및 감시 계획 (PROPOSED)
 
 - 작업자 이택규가 FAST_C1 n6의 약 4.801V 실패와 CAL n2의 약 4.142V 부근 반복 Newton 문제를 비교하면서 CAL 실패 위험에 대한 우려를 표시. 이후 즉시 contact 좌표 확인을 멈추고 CAL 리스크를 우선 재평가하기로 대화 방향 변경. **CAL 중단(Abort)은 요청·실행되지 않음.**

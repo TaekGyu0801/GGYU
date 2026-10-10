@@ -1,3 +1,6 @@
+## 2026-10-10 — Mg ionized field mapping check
+- Observed 5V_TEST n2 runtime Mg parameters (E_0=0.2 alpha=8e-9 g4 Xsec1e-14). Next read-only check project and system datexcodes mapping for pMagnesiumActive/Minus, and whether AccepMinusConcentration output exists. MgMinus interpretation unresolved. Do not change inputs or rerun.
+
 ## 2026-10-10 ~21:02 KST — Mg ionization region scopes verified, species semantics next
 - OBSERVED: pp2_des.cmd confirms `IncompleteIonization` for `Clean_pGaN` and `DmgL_pGaN` with species `pMagnesiumActiveConcentration`; DmgL trap `Conc=0`; Plot explicitly requests pMagnesiumActive/Minus. Still unresolved: why exported MgMinus=9.59e18 but net doping/hDensity≈3e17 at single 5V pGaN point.
 - NEXT READ ONLY: `sed -n '810,850p' /user/semi/semi437/tmp/myproject/JUSUBIN_FAST_HALF_5V_TEST/n2_des.log` to inspect species block, then inspect actual custom species mapping and potential `AccepMinusConcentration` output; no rerun or source edit.

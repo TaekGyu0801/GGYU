@@ -1,3 +1,8 @@
+## 2026-10-10 ~20:38 KST — Runtime Mg incomplete ionization confirmed; inspect effective log scope next
+
+- In `JUSUBIN_FAST_HALF_5V_TEST/n2_des.log`, region selected pMagnesium with incomplete ionization (422–432), Mg acceptor species (2143), Nnet recalc warning (2148) observed. The active model is confirmed but why MgMinus=MgActive=9.59e18 while net doping and holes ~3e17 at one clean pGaN point remains unclear.
+- Next read-only: `sed -n '410,445p;2138,2160p' /user/semi/semi437/tmp/myproject/JUSUBIN_FAST_HALF_5V_TEST/n2_des.log`. Then inspect active parameter/species mapping if required; do not modify running CAL nor existing parent.
+
 ## 2026-10-10 ~20:35 KST — Read-only audit of Mg species output meaning
 - The completed NtSide0 5V pGaN Probe now has Acceptor=MgActive=MgMinus=9.59e18, Donor=0, net doping≈-3.00032e17, hDensity≈+3.00034e17 cm^-3 at Clean_pGaN X=0.05um,Y=1.0um. Target local hole density matches, but Mg incomplete ionization interpretation remains unresolved. NEXT: inspect `JUSUBIN_FAST_HALF_5V_TEST/pp2_des.cmd` effective region scope and parameter linkage, `FASTC1_pp6_des.par` Mg ionization block, `n2_des.log` activation and net doping recalculation; preserve model. Later verify pGaN spatial and 0V concentrations, EBL separately.
 

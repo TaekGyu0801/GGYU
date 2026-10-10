@@ -1,3 +1,9 @@
+## 2026-10-10 — 5V_TEST hole-density log plot fixed to 1e6–1e20 cm^-3 (OBSERVED screenshot)
+
+- 이택규가 동일한 SVisual 스크린샷 두 장 제공. `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`의 C1 (lateral Y≈2.0µm), 깊이 X=0–0.4µm에서 이전에 사용자 선택했다고 보고한 `hDensity` cutline의 Y축을 `Log. Scale=ON`, `Fixed Min=1e6`, `Fixed Max=1e20`으로 성공적으로 설정함. 화면상 p-GaN 상단 X≈0–0.11µm에서 약 1e17cm^-3 농도 평탄부, X≈0.12µm에서 큰 정공 농도 피크, X≈0.14–0.26µm EBL/MQW 인접 스택에서 좁은 양의 피크와 깊은 골 반복, X≈0.27µm 이후 1e6 이하로 범위 바깥. 정량값·피크 region assignment는 그래프 육안 개략치, 단독 screenshot에 변수 legend는 없음.
+- 관찰은 `정공이 MQW에 전혀 없다`를 지지하지 않음; 일부 좁은 구간에서 고농도 존재. 장벽에서의 낮은 정공 농도는 통상 quantum well carrier confinement과 과도한 주입 장벽 모두 가능한 해석이므로 원인 미확정. NTSide0 5V 매우 낮은 J의 물리 원인 진단에는 같은 위치 eDensity와 region-specific e/h probe를 비교해야 함.
+- NEXT GUI read-only: `Data Selection`으로 가서 C1의 `eDensity`를 추가(다중 선택 Ctrl)하거나 단독 표시해 1e6–1e20 로그 Y축과 함께 스크린샷 제출. 기존 hDensity 그래프 내용 보존 권고. 학교 서버 코드·실행 중 CAL 변경 없음.
+
 ## 2026-10-10 — 5V_TEST SVisual apparent hDensity vertical cutline viewed in linear scale (OBSERVED screenshot)
 
 - 이택규가 성공한 JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr, lateral C1 Y≈2.0 um, X depth 0–0.4 um에서 hDensity로 변경했다고 보고한 후 SVisual 스크린샷 제출. 그래프 Y축은 선형이고 0, 2e19, 4e19 등의 눈금 및 X≈0.12um, ≈0.25um에서 날카로운 큰 피크가 관찰됨. 변수 legend는 표시되지 않아 그림만으로 실제 hDensity임을 독립 입증하지 못함. 큰 동적 범위 때문에 다른 위치 농도가 0 부근에 눌려 보여 EBL/MQW carrier injection 원인은 이 화면만으로 확정 불가.

@@ -1,3 +1,9 @@
+## 2026-10-10 ~18:07 KST — 주수빈 CAL 4.138 V 진행 인수인계 (OBSERVED)
+
+- 최신 SWB n2 Output 화면에서 직전 accepted step 결과 anode 4.138 V(5 V 대비 전압 스윕 약 82.76%) 및 다음 BE attempt t=0.82766→0.827663 s 시작 확인. 5 V 완료 또는 다음 시도의 수렴은 미확인.
+- 최우선: 진행 중 소자/설정 손대지 말고 `tail -n 40 /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/n2_des.log`를 나중에 다시 확인해 accepted V·retry·fatal/Good Bye 및 종료 여부 기록.
+- CAL 종료 후만: 100ns InGaN override 실제 적용증거 검증, 기준 1ns와 같은 조건 I(V)/QW SRH/Rrad/Auger 비교; 원본 및 CAL 소스 보존. 전압 진행률로 ETA 산출 금지.
+
 ## 2026-10-10 — 이택규 CAL SDevice log confirms 4.122V (OBSERVED)
 
 - Live CAL `n2_des.log`: accepted BE step to t=0.824478s, V=4.122V, Newton RHS=7.30e-4 under threshold 1e-3, raw anode current 4.344e-14. Next BE attempt t=0.824487s only observed through iteration 5 (RHS=1.10e-3), not yet confirmed accepted. No 5V completion or actual InGaN 100ns model proof.

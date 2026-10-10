@@ -1,3 +1,9 @@
+## 2026-10-10 ~19:02 KST — FAST_C1 n6 red Failed UI, CAL remains unconfirmed (OBSERVED / UNRESOLVED)
+
+- 이택규가 SWB T-2022.03 스크린샷 제공. 현재 열린 프로젝트는 `GaN_PiN_Diode_FAST_C1`이며 `NtSide=0` SDevice `[n6]`가 빨간색, `NtSide=1e18` `[n12]`은 연파란색, `[n1]` SDE는 노란색. SWB 기본 색상 기준 빨간색=failed, 연파랑=running, 노랑=done. 단 사용자 환경의 색상 커스터마이즈/정확한 종료 원인은 확인 전.
+- 화면의 `CMP_BASELINE_1.2.0_CAL`은 왼쪽 프로젝트 목록에 있으나 **선택되지 않아** 실제 n2 상태가 표시되지 않음. 사용자에 따르면 여전히 미완료. CAL 마지막 직접 확인은 ~18:08 KST 4.138 V 부근 Newton cutback; 5V 완료 여부는 미확인.
+- 두 프로젝트/노드를 혼동하지 않는다. FAST_C1 `n6_des.log` 및 `.err/.sta` 마지막 구간과 CAL `n2_des.log`를 읽기 전용으로 요청. 기존 실행을 abort/rerun/reset/edit하지 않음. 원인 미확인, 최초 보고 단계.
+
 ## 2026-10-10 (after 12:09 KST; exact log capture time not given) — CAL NtSide0 SDevice actually advancing to 4.122 V (OBSERVED LOG, NOT FINISHED)
 
 - Worker 이택규 supplied live command output from `tail -n 40 /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/n2_des.log`.

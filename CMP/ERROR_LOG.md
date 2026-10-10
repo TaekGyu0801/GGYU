@@ -1,3 +1,9 @@
+## 2026-10-10 ~19:02 KST — FAST_C1 n6 red Failed status screenshot (OBSERVED UI / ROOT CAUSE UNRESOLVED)
+
+- 이택규 SWB 캡처: 선택 프로젝트 `GaN_PiN_Diode_FAST_C1`, row NtSide=0 SDevice `[n6]` 빨간색. SWB 기본 색상은 `failed=#FF0000`, 따라서 실패 상태로 해석하되 custom node-color 여부 및 실행 종료 로그 미확인. 이 화면 자체는 `CMP_BASELINE_1.2.0_CAL`의 상태를 보여주지 않음.
+- 원인, 마지막 accepted voltage, 재시작 가능성, 5V 도달 여부 전부 UNRESOLVED. CAL은 별도 n2로 마지막 직접 로그 ~4.138 V cutback 및 5V 미확인.
+- Next READ ONLY: `GaN_PiN_Diode_FAST_C1/n6_des.log` tail 및 `n6_des.err/.sta` 확인, `CMP_BASELINE_1.2.0_CAL/n2_des.log` tail 비교; 변경/중단/재실행 금지.
+
 ## 2026-10-10 — Outdated SDevice comments falsely advertise numerical ramp/Save schedule (OBSERVED)
 
 - Source: private `CMP_BASELINE_1.2.0_CAL_AUDIT.tar.gz` inspection of successful 5V_TEST `sdevice_des.cmd` vs `pp2_des.cmd` and `n2_des.log`. Header claims 0–4V Increment1.2, 4–5V Increment1.05, Save at 4.0/4.5/4.8/5V; mid-Solve comment claims short 0–0.3V smoke. Actual executable has single 0–5V Transient Increment1.2 and Save at 5V only. Solver completed, so this is a **documentation/extraction/checkpoint-plan mismatch**, not a simulation failure. Intermediate 4–5V TDR coverage absent in active command. No source edited. Correct in a separate future CAL branch after preserving originals and verifying exact syntax.

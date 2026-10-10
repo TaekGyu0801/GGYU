@@ -1,3 +1,9 @@
+## 2026-10-10 ~19:02 KST — 이택규 FAST_C1 n6 / CAL n2 로그 분리 진단 (READ ONLY)
+
+1. 학교 서버에서 `tail -n 50 /user/semi/semi437/tmp/myproject/GaN_PiN_Diode_FAST_C1/n6_des.log`를 확인하고, failed 원인 판단이 부족하면 `n6_des.err`, `n6_des.sta`, SWB node output/exit status 확인. '빨강=failed' UI와 실제 solver fatal cause는 구분.
+2. 별도로 `tail -n 50 /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/n2_des.log`로 accepted t/V, cutback, job exit, Good Bye 확인. CAL status는 별도 프로젝트를 선택해 확인.
+3. 로그 확보 전 두 프로젝트에서 Abort/Run/Reset/Preprocess/입력 수정 금지. 완료된 5V_TEST 기준 결과와 현재 실행 기록 보존. 이후 원인에 맞춰 하나씩 조치.
+
 ## 2026-10-10 ~18:08 KST — 주수빈 CAL n2 high-bias cutback 추적 (OBSERVED)
 
 - 4.138V 부근 BE attempt에서 Newton 15회 후 RHS=1.21e-3>1e-3, `Newton didn't converge` 및 step cutback 확인. 새 시도 t=0.827672→0.827674 s, dt=2.8452e-6 s 시작만 확인; 전체 job failure 아님.

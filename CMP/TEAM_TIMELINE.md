@@ -1,3 +1,6 @@
+## 2026-10-10 — JuSubin Clean_pGaN single-point hole density probe
+- OBSERVED 5V NtSide0 SVisual Probe, project `JUSUBIN_FAST_HALF_5V_TEST`, X=0.05 um Y=1 um, Zone Clean_pGaN(GaN): `hDensity=3.000342790006e17 cm^-3`. This agrees with nominal target at one point only. Mg input, ionization field, 0V state and spatial profile remain to validate. Next read MgActive/MgMinus at same point. No simulator changes.
+
 ## 2026-10-10 ~19:46 KST — JuSubin p-GaN/EBL/MQW net-doping cutline X=0–0.4 μm zoom observed (OBSERVED SCREENSHOT / APPROXIMATE READOUT)
 
 - 작업자 주수빈; source: successful 5V `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr` NtSide0 `DopingConcentration` on interior half-device Cutline C1, lateral Y≈1 μm. SVisual Axis Properties 1D X-axis Min=0 Max=0.4 μm with signed linear concentration Y-axis now working.

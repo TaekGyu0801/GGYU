@@ -1,3 +1,9 @@
+## 2026-10-10 — SVisual 5V_TEST 4-band (Ec/Ev/Fn/Fp) cutline overlay confirmed (OBSERVED SCREENSHOT)
+
+- 이택규가 성공한 `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`의 Y≈2.0µm C1 깊이 X=0–0.4µm에서 `ConductionBandEnergy`(red), `ValenceBandEnergy`(green), `eQuasiFermiEnergy`(blue), `hQuasiFermiEnergy`(cyan) 네 개 곡선을 동시에 표시한 SVisual 화면 공유.
+- 그래프상 p-GaN (X≈0–0.12µm) Fp는 Ev와 간격 존재; QW/EBL (X≈0.12–0.27µm) Ec/Ev와 Fn/Fp에 급격한 단계 변동; nGaN (X>≈0.27µm) Fn는 Ec 부근. **근본 원인/장벽 높이/실제 injection efficiency는 아직 미확인**. GUI 스크린샷 육안 관찰이므로 수치 전압분배 단정 금지.
+- NEXT: 그래프 보존 후 동일 C1의 `hDensity`를 별도 단독 표시(logarithmic positive y-axis)해 p-GaN/EBL/MQW 정공 분포를 관찰, 이후 `eDensity` 등 비교. 서버 원본, CAL, FAST_C1 변경 없음.
+
 ## 2026-10-10 — SVisual existing 5V reference Ev 0–0.4 µm profile observed (OBSERVED screenshot)
 
 - 작업자 이택규가 `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`의 Y≈2.0 µm 내부 cutline C1에서 `ValenceBandEnergy(C1(n2_des))` 1D 곡선을 X=0–0.4 µm 깊이 범위로 실제 표시한 SVisual 스크린샷 제출. 값은 p-GaN 상단 x≈0–0.12 µm Ev≈-5.2 eV 주변 plateau, EBL/MQW 구간 x≈0.12–0.27 µm에서 급격히 변동하고 x>≈0.27 µm nGaN에서 대략 -3.5 eV 수준 평탄부(모두 **화면 육안 개략값**이며 Probe 수치가 아님).

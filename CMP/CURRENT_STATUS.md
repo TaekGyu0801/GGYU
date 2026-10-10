@@ -1,3 +1,8 @@
+## 2026-10-10 — Mg ionized field mapping found; exported values unresolved
+- OBSERVED by JuSubin in datexcodes mapping: `doping = acceptor(active=pMagnesiumActiveConcentration, ionized=pMagnesiumMinusConcentration)`; labeled `pMagnesiumMinusConcentration` as incomplete-ionization concentration. Screenshot omitted explicit filename header. 
+- Existing 5V_TEST pGaN Probe at X=0.05um,Y=1.0um: active=minus=acceptor=9.59e18, donor=0, signed net doping≈-3.00032e17, holes≈3.00034e17 cm^-3. Species mapping demonstrates intended ionized output relationship but these TDR values cannot yet be reconciled; pGaN ionization physical calibration NOT CONFIRMED.
+- NEXT preserve original and CAL; read-only compare initial mesh and final TDR MgMinus if exposed, verify ionized acceptor field; EBL probe separate. No code changes.
+
 ## 2026-10-10 — Runtime GaN Mg parameters confirmed by JuSubin
 - OBSERVED n2_des.log GaN Species pMagnesiumActiveConcentration acceptor E_0=0.2, alpha=8e-9, g=4, Xsec=1e-14, highdop_formula=1, b_Nref=6e18, E_Nref=2e18 (and beta0 gamma1). Activation and Nnet recalc confirmed. MgMinus equals MgActive at one 5V pGaN Probe yet Doping/hDensity near 3e17: output mapping remains unresolved. Next check effective datexcodes and ionized species semantics; no code changes.
 

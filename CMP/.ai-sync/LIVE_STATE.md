@@ -1,3 +1,9 @@
+## 2026-10-10 — CAL n2 ~4.144 V calculating (USER-REPORTED / ACCEPTANCE UNVERIFIED)
+
+- 작업자 이택규 직접 보고: `CMP_BASELINE_1.2.0_CAL`이 현재 약 **4.144 V 계산 중**. 직전 실제 공유 n2 로그에서 확인된 accepted 전압은 4.142 V; 이번 보고는 이전보다 약 0.002 V 높은 시도/진행으로 보이지만 **새 n2_des.log 스텝 수렴 결과는 제출되지 않아 4.144 V accepted라고 확정할 수 없음**. 5V/100ns effective 적용 모두 미확인.
+- 시간당 속도, 최종 종료 예상, 근본적인 고전압 수렴 문제의 동일성은 아직 판단 불가. 현재/목표 전압 비율은 ≈82.88% *스윕 구간*일 뿐 시간 진행률 아님.
+- NEXT: 기존 CAL 작업 그대로 보존, 현재/이후 `n2_des.log`의 accepted t/V, Newton 컷백, timestep, 최소 간격 경고 비교하는 읽기 전용 감시. CAL 임의 Abort·Reset·파라미터 수정하지 않음. 최근 FAST_C1 4.801 V MinStep 실패는 별도 사례.
+
 ## 2026-10-10 (last log time unspecified) — FAST_C1 n6 tiny BE-steps oscillate near 4.801V; final minimum step failure (OBSERVED)
 
 - Worker 이택규 supplied filtered **actual** `GaN_PiN_Diode_FAST_C1/n6_des.log` tail. Pseudo-time printed `0.960247 s` on successive BE attempts (6 decimal digits only), corresponding to ~4.801235 V at unchanged 0→5V ramp. Last repeated anode printed `4.801E+00V`, not proof exact zero time advancement.

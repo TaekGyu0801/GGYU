@@ -1,3 +1,7 @@
+## 2026-10-10 ~20:38 KST — Mg incomplete ionization physically unresolved, despite runtime activation (OBSERVED)
+
+- `JUSUBIN_FAST_HALF_5V_TEST/n2_des.log` has `With incomplete ionization`, selected pMagnesium and Nnet recalc warning; this confirms activation rather than a solver runtime failure. Outstanding issue is interpreting exported pMagnesiumMinus=9.59e18, MgActive=9.59e18 vs net doping≈-3e17 and hole≈3e17 (5V Clean_pGaN). Do not conflate ionization activation with calibration correctness; inspect effective log/parameters/species mapping read-only.
+
 ## 2026-10-10 ~20:35 KST — Mg Acceptor/Minus vs NetDoping output relation unresolved (OBSERVED DATA / MODEL AUDIT)
 - Additional direct 5V NtSide0 Clean_pGaN Probe shows AcceptorConcentration=9.59e18 cm^-3 (X=0.05,Y=1.0um); matching MgActive=MgMinus=9.59e18, but Donor=0 and signed Doping≈-3.00032e17, hDensity≈+3.00034e17 cm^-3. Current interpretation of active ionization, net doping recalc and species fields needs verification. This is not a simulation crash nor grounds for blind code edits. Next read actual pp2/n2 ionization and parameter binding read-only, then determine meaning from T-2022.03 references.
 

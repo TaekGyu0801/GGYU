@@ -1584,5 +1584,22 @@
     "interpretation": "Effective EBL acceptor and signed net doping correctly present; 5V local free holes about 52x smaller. No unique inference of injection barrier, doping failure, or 0V equilibrium density.",
     "nextReadOnly": "Inspect ValenceBandEnergy and hQuasiFermiEnergy upper-stack cutline at Y=1um in existing 5V TDR; retain MgMinus mapping as separate unresolved item.",
     "changeScope": "No TCAD code, solver, or CAL change"
+  },
+  "latestJuSubinBandProfile": {
+    "timestamp": "2026-10-10T21:43:00+09:00",
+    "status": "OBSERVED",
+    "source": "SVisual screenshot of completed NtSide0 5V n2_des.tdr",
+    "dataset": "C1(n2_des)",
+    "cutline": "vertical X direction at Y approximately 1um",
+    "variable": "hQuasiFermiEnergy",
+    "depthWindow_um": [
+      0,
+      0.4
+    ],
+    "observation": "roughly -5eV top, marked rising steps near X 0.15–0.25um; screenshot estimates only",
+    "priorComparison": "Ev in identical cutline showed abrupt band shifts near X 0.12–0.26um",
+    "physicsInterpretation": "UNRESOLVED. Cannot derive EBL hole injection barrier or causation from independent screenshots alone.",
+    "nextReadOnly": "Probe hQuasiFermiEnergy and ValenceBandEnergy at confirmed Clean_EBL coordinate X=0.13um,Y=1.0um, then spatial compare",
+    "tcadAndCALChanges": "none"
   }
 }

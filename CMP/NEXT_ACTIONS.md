@@ -1,3 +1,6 @@
+## 2026-10-10 ~21:09 KST — datexcodes check command shell mismatch
+- JuSubin login shell rejects bash for-loop syntax (`for: Command not found`, `f: Undefined variable`). Re-run custom pMagnesium datexcodes search via single-line `bash -c '...'` wrapper to obtain actual file mappings. If blank, locate effective datexcodes file before any ionization interpretation. Do not modify SDevice inputs or the ongoing CAL job.
+
 ## 2026-10-10 — Mg ionized field mapping check
 - Observed 5V_TEST n2 runtime Mg parameters (E_0=0.2 alpha=8e-9 g4 Xsec1e-14). Next read-only check project and system datexcodes mapping for pMagnesiumActive/Minus, and whether AccepMinusConcentration output exists. MgMinus interpretation unresolved. Do not change inputs or rerun.
 

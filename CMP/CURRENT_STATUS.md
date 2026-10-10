@@ -1,3 +1,6 @@
+## 2026-10-10 ~21:43 KST — JuSubin hQuasiFermiEnergy C1 zoom completed
+- OBSERVED on saved completed NtSide0 5V device: hQuasiFermiEnergy(C1(n2_des)) plotted over depth X=0–0.4um at Y≈1um, step-like EFp increase across approx X=0.15–0.25um. Prior Ev 1D curve showed sharp structure in same depth range; no quantitative region/energy barrier extraction yet. Next read-only probe both fields at same confirmed Clean_EBL coordinate X=0.13,Y=1.0um, then compare spatial structure. No model/source/job changes.
+
 ## 2026-10-10 — JuSubin 5V upper-layer Ev cutline zoom
 - OBSERVED SVisual completed NtSide0 5V C1 ValenceBandEnergy plot X range 0–0.4 um, strong band bending/multiple offsets near X≈0.12–0.26 um (location/values only screenshot estimates). This may be relevant to prior 5V Clean_EBL hDensity≈5.7879e15 at X=0.13 um while acceptor/net doping correctly applied at 3e17. Exact band offset, injection barrier and cause NOT verified.
 - Next: hQuasiFermiEnergy same 1D cutline, keep Ev screen for comparison. No code or CAL changes.

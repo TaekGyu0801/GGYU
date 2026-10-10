@@ -1,3 +1,7 @@
+## 2026-10-10 ~21:09 KST — datexcodes check command shell mismatch
+- OBSERVED JuSubin terminal screenshot. Assistant's prior bash `for f in ...; do ...; done` was pasted directly into login shell that responds `for: Command not found`, `do: Command not found`, `f: Undefined variable`. This is consistent with csh/tcsh and NOT a TCAD SDevice or model failure. No datexcodes contents obtained; Mg species output interpretation still UNRESOLVED.
+- Assistant correction: re-run search via `bash -c 'for f in ...; do if [ -f "$f" ]; then echo "$f"; grep -n -B 12 -A 12 pMagnesiumActiveConcentration "$f"; fi; done'`. Follow up if no files/output. This is read-only and must not change existing 5V baseline or independent CAL run.
+
 ## 2026-10-10 ~21:05 KST — Node2 runtime GaN Mg ionization species parameters observed (OBSERVED SCREENSHOT / CALIBRATION UNRESOLVED)
 
 - Worker: 주수빈. Actual read-only `sed -n '810,850p' JUSUBIN_FAST_HALF_5V_TEST/n2_des.log` screenshot shows `Reading parameters for material "GaN"`, `Species "pMagnesiumActiveConcentration"` `type = acceptor`, runtime values `E_0=0.2eV`, `alpha=8e-9 eV*cm`, `beta=0`, `gamma=1`, `g=4`, `Xsec=1e-14 cm^2`, `Xsec_formula=1`, `highdop_formula=1`, `b_Nref=6e18 cm^-3`, `b_pow=2`, `E_Nref=2e18 cm^-3`, `E_pow=2`. This is stronger than just pp2 file reference: SDevice reports the *effective runtime-read* parameters.

@@ -1,3 +1,8 @@
+## 2026-10-10 ~22:39 KST — Follow-up F-ion implanted MicroLED paper retrieval (OBSERVED literature; no code changes)
+- Retrieved official ACS Photonics Yuzhu Pan et al. 2026 DOI 10.1021/acsphotonics.5c02363: F- implanted high-resistivity **p-GaN passivation ring** surrounds active areas and steers current from damaged mesa sides in 6/8/10um blue MicroLED arrays.
+- Also retrieved Jinyu Ye et al., Journal of Luminescence 2023 DOI 10.1016/j.jlumin.2023.119903: F- implant into p-GaN for pixel isolation, energy/dose dependent lateral spread.
+- Crucial distinction: Hsu et al. Next Nanotechnology 2025 DOI 10.1016/j.nxnano.2024.100101 uses **As**, not F, after ICP-RIE sidewall etching. Project A Carbon upper-n-GaN mechanism remains proposed; papers cannot be substituted for a direct Carbon MicroLED verification. Project plan literature appendix updated; no running jobs/files modified.
+
 ## 2026-10-10 22:39 KST — Project A carbon high-resistivity edge literature and feasibility review (PROPOSED)
 - Worker: 이택규. Research request: evaluate physical/process/TCAD feasibility of Project A and recover original carbon high-resistance literature.
 - Recovered original project literature map from CMP/PROJECT_AB_TCAD_IMPLEMENTATION_PLAN.md: Richter 2020 (10.1002/crat.201900129), Ramdani 2012 (10.1016/j.sse.2012.04.034), Cao 2023 (10.1038/s41598-023-41678-1), Chang 2020 (10.1186/s11671-020-03372-3), Taube 2015 (10.1002/pssa.201431724). Distinguish C-doped grown material, C implantation-induced lattice damage and actual microLED sidewall data.

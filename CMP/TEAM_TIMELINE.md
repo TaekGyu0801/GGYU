@@ -1,3 +1,6 @@
+## 2026-10-10 ~21:02 KST — JuSubin effective Mg ionization region scopes verified
+- Screenshot of `JUSUBIN_FAST_HALF_5V_TEST/pp2_des.cmd` confirms `IncompleteIonization(Dopants="pMagnesiumActiveConcentration")` in Clean_pGaN and DmgL_pGaN. DmgL_pGaN trap block has `Conc=0`; output Plot requests MgActive and MgMinus and doping/polarization variables. This is verified model configuration, not complete physical validation of 5V p-GaN doping. Next review actual species output interpretation and `AccepMinusConcentration`; preserve existing simulation state.
+
 ## 2026-10-10 ~20:59 KST — n2 effective parameter file binding confirmed from pp2_des.cmd (OBSERVED TERMINAL SCREENSHOT)
 
 - 작업자: 주수빈. Actual read-only grep of `JUSUBIN_FAST_HALF_5V_TEST/pp2_des.cmd` showed line 22 `Parameters = "FASTC1_pp6_des.par"`, line 68 `DefaultParametersFromFile`, lines 128-129 and 137-138 `IncompleteIonization( Dopants="pMagnesiumActiveConcentration" )`, and Plot lines 456/458 `pMagnesiumActiveConcentration` and `pMagnesiumMinusConcentration`.

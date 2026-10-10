@@ -1,3 +1,9 @@
+## 2026-10-10 ~23:00 KST — External GaN/MicroLED TCAD deck search and numerical speed review (OBSERVED/PROPOSED)
+- User requested independent Github/other sources for full MicroLED TCAD `.cmd` / `.par` because present simulation extremely slow.
+- OBSERVED: closest official Sentaurus analogue is GaN p-i-n diode in training Chapter16.8 with GaN/AlGaN/InGaN MaterialDB location and Chapter16.6 numeric settings; vendor Silvaco has Blue_GaN_uLED_10Acm-2 plot but input deck unverified public; Silvaco blue LED ledex01 (SQW) exposed as ATLAS not Sentaurus source. Nature Communications 2023 Baek explicitly disclaims code public availability. Inspected external Sentaurus repositories fenning solar cells, Alisama silicon MOSFET (`*.cmd`/`*.par`), ananthakrishnan photodiode, sai1999gaurav PN; none verified as ready-to-run III-nitride 4MQW microLED with sidewall trap. Public teammate repository only has source/README.md; not independent.
+- PROPOSED only: audit latest actual CAL `pp2_des.cmd/par` for solve ramp, numerical precision and nonlinear cutbacks; note stale published source Transient MaxStep=1e-3s imposes >=1000 accepted steps over 1s if used, PLUS high-bias rejected attempts, but this is not yet verified as CAL active setting. No code/run modified, do not stop 100ns CAL. Existing low-J Gate0 stays unresolved.
+- Detailed source links and caveats: CMP/reviews/EXTERNAL_GAN_MICROLED_TCAD_SOURCES_2026-10-10.md.
+
 ## 2026-10-10 ~22:39 KST — Follow-up F-ion implanted MicroLED paper retrieval (OBSERVED literature; no code changes)
 - Retrieved official ACS Photonics Yuzhu Pan et al. 2026 DOI 10.1021/acsphotonics.5c02363: F- implanted high-resistivity **p-GaN passivation ring** surrounds active areas and steers current from damaged mesa sides in 6/8/10um blue MicroLED arrays.
 - Also retrieved Jinyu Ye et al., Journal of Luminescence 2023 DOI 10.1016/j.jlumin.2023.119903: F- implant into p-GaN for pixel isolation, energy/dose dependent lateral spread.

@@ -1,3 +1,7 @@
+## 2026-10-10 — Node2 Mg parameter binding confirmed
+- OBSERVED by 주수빈: active `JUSUBIN_FAST_HALF_5V_TEST/pp2_des.cmd` line 22 has `Parameters = "FASTC1_pp6_des.par"`; line 68 DefaultParametersFromFile; lines 128 and 137 call Mg IncompleteIonization; 456/458 request Mg active/minus fields.
+- Existing linked FASTC1_pp6_des.par has GaN Mg Species Ionization E_0=0.2, alpha=8e-9, g=4.0, Xsec=1e-14. n2 log recognized Mg incomplete ionization and recalculated net doping. Exact MgMinus versus net-doping semantics remain unresolved; next inspect pp2 region scope and actual species output meaning. No simulation changes.
+
 ## 2026-10-10 ~20:40 KST — 5V_TEST region scope and Nnet recalculation log context (OBSERVED)
 
 - 주수빈 terminal screenshot of read-only `sed -n '410,445p;2138,2160p' JUSUBIN_FAST_HALF_5V_TEST/n2_des.log` confirms region **DmgL_pGaN** `With incomplete ionization` selected `pMagnesiumActiveConcentration`; subsequent **DmgL_EBL** lists no incomplete-ionization. Previously inspected live pp2 Physics confirms `Clean_pGaN` also has region-specific incomplete ionization.

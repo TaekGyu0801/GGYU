@@ -1,3 +1,8 @@
+## 2026-10-10 — CAL n2 ~4.149V progress (USER REPORT, accepted step not verified)
+
+- 이택규가 별도 100ns sensitivity run `CMP_BASELINE_1.2.0_CAL` n2의 현재 표시 전압이 약 **4.149 V**라고 보고. 이전 사용자 보고 ~4.144V, 이전 실제 로그 accepted ~4.142V 대비 표시 기준으로 최대 +0.007V. 5V sweep 기준 82.98%이지만 **wall-clock/progress 퍼센트가 아님**. **4.149V가 accepted BE step인지는 최신 실제 log 미확인.** 계산 시간 및 완료 ETA 추정 근거 없음.
+- NEXT read-only: `tail -n 60 /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/n2_des.log` 를 실서버에서 실행, accepted/rejected step, timestep, actual anode voltage와 수렴 상태 확인 후 ETA 판단. CAL abort/restart/수정 금지.
+
 ## 2026-10-10 — LeeTaekGyu decision: do not idle for CAL; parallel low-current baseline Gate0 using existing data (PROPOSED)
 
 - 작업자 이택규가 `그냥 CAL 돌아가기 전까지 기다리는 게 나을까?` 요청. 답: CAL 100ns sensitivity is independent of physical baseline validity. Continue current CAL unchanged and periodically review **accepted** BE time/bias and cutbacks; do not abort/reset or run FAST again merely by schedule. CAL user last reported attempting ~4.144V, last provided actual accepted n2 log ~4.142V; no newer status in current chat.

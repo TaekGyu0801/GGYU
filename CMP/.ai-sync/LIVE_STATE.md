@@ -1,3 +1,7 @@
+## 2026-10-10 21:43 KST — JuSubin upper-stack hole quasi-Fermi cutline now zoomed (OBSERVED)
+- Completed NtSide0 5V n2_des: C1(Y≈1um) `hQuasiFermiEnergy` graph is displayed over X=0–0.4um. Plateau near -5eV in top segment and several marked steps X≈0.15–0.25um; approximate screenshot reading only, not energy barrier measurement. Previous Ev cutline also showed strong upper-stack structure. EBL low biased free-hole density cause remains unresolved.
+- NEXT read-only: same-coordinate Probe Clean_EBL X=0.13um,Y=1.0um for Ev and hole quasi-Fermi, then layer-aligned band/transport check. Gate0 low-current and CAL prior status unchanged.
+
 ## 2026-10-10 21:29 KST — JuSubin Clean_EBL doping input correct; 5V holes remain low (OBSERVED)
 
 - Completed `JUSUBIN_FAST_HALF_5V_TEST` NtSide0 5V SVisual Probe at X=0.13 µm/Y=1.0 µm (Clean_EBL, AlGaN): `AcceptorConcentration=3.000000e17`, `DonorConcentration=0`, `DopingConcentration=-3.000000e17`, `hDensity=5.787900714824e15 cm^-3`. Input effective acceptor and signed net doping agree; one-point free holes ~52 times smaller than acceptor under 5V. Potential hole-injection barrier/depletion/polarization cause NOT CONFIRMED.

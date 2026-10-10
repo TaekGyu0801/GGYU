@@ -1,3 +1,7 @@
+## 2026-10-10 — JuSubin SVisual Probe At dialog opened
+- OBSERVED: In finished 5V NtSide0 SVisual, Probe panel plus Probe At dialog opened. Current X=0.5 um, Y=1.0 um, Z=0; Zone=Clean_nGaN(GaN).
+- NEXT: set X=0.05 um for candidate Clean_pGaN, press Probe; verify Zone and hDensity before interpreting. No code changes.
+
 ## 2026-10-10 ~19:58 KST — hDensity upper-stack peaks spatially resolved in cutline (OBSERVED / PHYSICAL INTERPRETATION PENDING)
 
 - Worker 주수빈, completed 5V NtSide0 `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`: SVisual interior Cutline C1 at lateral Y≈1µm; `hDensity` plotted with linear X axis restricted 0–0.4µm.

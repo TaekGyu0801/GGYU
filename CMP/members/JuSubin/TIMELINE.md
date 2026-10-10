@@ -1,3 +1,6 @@
+## 2026-10-10 — JuSubin pGaN energy probe
+- Observed Clean_pGaN X=0.05um,Y=1um: Ev=-5.130097037559eV and EFp=-4.999999973858eV. Local EFp minus Ev=0.130097063701eV. Compared with prior Clean_EBL X=0.13um local separation=0.252508468101eV; EBL minus pGaN=0.122411404400eV. Energy-gap difference is not EBL injection barrier. Next confirm actual nominal 5V endpoint, then review layer-wise band edge. No simulator edits.
+
 ## 2026-10-10 ~21:51 KST — JuSubin Clean_EBL Ev versus EFp measured at same point (OBSERVED screen, derived difference; barrier cause UNRESOLVED)
 
 - Worker 주수빈. Completed `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr` NtSide=0 nominal 5V, SVisual Probe coordinates X=0.13um, Y=1.0um, Z=0, Zone `Clean_EBL(AlGaN)`. New screenshot directly shows `ValenceBandEnergy=-5.252508407140e+00 eV`. Previous directly observed at identical coordinates `hQuasiFermiEnergy=-4.999999939039e+00 eV` and `hQuasiFermiPotential=+4.999999939039 V`.

@@ -1,3 +1,9 @@
+## 2026-10-10 — CAL 4V+ 수렴 불안정 우려에 따른 판단 보류 및 감시 계획 (PROPOSED)
+
+- 작업자 이택규가 FAST_C1 n6의 약 4.801V 실패와 CAL n2의 약 4.142V 부근 반복 Newton 문제를 비교하면서 CAL 실패 위험에 대한 우려를 표시. 이후 즉시 contact 좌표 확인을 멈추고 CAL 리스크를 우선 재평가하기로 대화 방향 변경. **CAL 중단(Abort)은 요청·실행되지 않음.**
+- 실제 확인: FAST_C1은 Iterations15, MinStep1e-9 하에서 Step-size too small로 실패; CAL은 최근 accepted anode 약 4.142V까지 전진했으며 후속 RHS 1.03e-3~1.09e-3 근방에서 수렴 기준 1e-3 위로 반복한 구간 관측. 이 두 계산의 근본 원인 동일 여부·CAL 최종 실패 여부·100ns 유효 적용 여부 불명.
+- NEXT READ ONLY: CAL n2 실제 상태를 서로 시간 간격을 둔 두 로그로 비교. `anode` 마지막 accepted 전압뿐 아니라 BE pseudo-time, step size/retry 추세, log 수정 시각 및 solver running 여부 확인. 전진하면 유지, 정체 + 극소 스텝 반복이면 중단/짧은 pilot 분기 여부를 연구자가 결정. 5V parent를 별도 보존, FAST_C1 즉시 재실행 금지. TDR은 검증된 restart 체크포인트가 아님.
+
 ## 2026-10-10 — Half+Coarse completed 5V reference top/bottom contact placement logic verified from live pp1 (OBSERVED; actual mesh edge IDs pending)
 - 작업자 이택규가 원본 `JUSUBIN_FAST_HALF_5V_TEST/pp1_dvs.cmd` lines 420–500을 실서버 출력으로 제공. SDE는 `sdegeo:define-contact-set "anode"` 및 `"cathode"`를 정의.
 - Anode `sdegeo:set-contact`는 x=`x0`에서 y=`(yL+yDL)/2` 및 y=`(yDL+yC)/2`의 **두 top edge ID**를 동일 `"anode"`로 등록함. 소스 주석에 Half top consists of DmgL + Clean이라고 명시. Cathode는 x=`xb`, y=`yC/2`인 bottom n-GaN numerical/contact base edge를 `"cathode"`로 등록.

@@ -1,3 +1,10 @@
+## 2026-10-10 ~21:37 KST — Upper 0–0.4um ValenceBandEnergy cutline zoom observed (OBSERVED SVisual screenshot / CAUSAL INFERENCE UNRESOLVED)
+
+- Worker **주수빈** displayed `ValenceBandEnergy(C1(n2_des))` in completed `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr` (NtSide0 5V) using same vertical interior C1 line at Y≈1.0 um. **Right 1D plot X axis now 0–0.4 um** (confirmed visually), with resolved sharp energy structure in upper pGaN/EBL/MQW layers.
+- Approximate visual band-edge features (not point-extracted): X=0–0.11um ~-5.1eV; pronounced downward feature around X≈0.12–0.15um to roughly -5.6eV; repeated abrupt peaks and dips around X≈0.17–0.26um; beyond ~0.28um ~-3.5eV plateau. Exact interfacial region mapping, magnitude of hole barrier, and peak origins are NOT verified by a color/curve screenshot; these are hypotheses for carrier barrier and band offsets, not validation of EBL injection-loss mechanism.
+- Previous same SVisual Probe: `Clean_EBL(AlGaN)` X=0.13um Y=1um, Acceptor=3e17, Donor=0, Doping=-3e17, `hDensity=5.787900714824e15 cm^-3`; cannot attribute low biased mobile holes solely to an EBL barrier yet.
+- NEXT read-only UI: retain reference Ev screenshot; click existing C1 dataset on right 1D Data Selection and select `hQuasiFermiEnergy` from lower field list; check legend changes and that 0–0.4um horizontal axis remains or reapply bound. Compare Ev vs hole quasi-Fermi for band-edge proximity and carrier transport. If both can be overlaid later, do so after verifying each alone. No TCAD source, model or running CAL change.
+
 ## 2026-10-10 ~21:36 KST — 5V ValenceBandEnergy C1 cutline plotted, awaiting upper-layer zoom (OBSERVED SVisual Screenshot)
 
 - Worker: 주수빈. In saved completed NtSide=0 5V `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`, created existing-type vertical C1 line at internal Y≈1 um and confirmed right 1D `Cutline_Y Plot` legend **`ValenceBandEnergy(C1(n2_des))`**. Full-depth 1D X axis spans ~0–4.5 um, while upper-stack Ev varies sharply near X<0.3 um. The broad plot is not sufficiently resolved for EBL injection barrier assignment.

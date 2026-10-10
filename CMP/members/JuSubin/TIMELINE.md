@@ -1,3 +1,10 @@
+## 2026-10-10 ~20:38 KST — 5V_TEST n2 log confirms Mg incomplete-ionization and Nnet recalc (OBSERVED)
+
+- Worker 주수빈 provided live read-only terminal output: `grep -niE 'incomplete ionization|recalculat|pMagnesium' /user/semi/semi437/tmp/myproject/JUSUBIN_FAST_HALF_5V_TEST/n2_des.log | head -n 60`.
+- Observed: line 335 `Without incomplete ionization` for a distinct/global scope; line 422 `With incomplete ionization`, line 423 `Selected dopants: pMagnesiumActiveConcentration`; line 431/432 repeat; line 821 species `pMagnesiumActiveConcentration`; line 2143 `pMagnesiumActiveConcentration (acceptor)`; line 2148 `WARNING: Doping concentration (Nnet) will be recalculated because of incomplete ionization!`.
+- This confirms runtime recognized region-specific Mg incomplete-ionization and Nnet recalculation. It DOES NOT prove ionization coefficient/curve correctly calibrated or resolve why SVisual `pMagnesiumMinusConcentration=pMagnesiumActiveConcentration=9.59e18` while `DopingConcentration=-3.0003179e17` and `hDensity=3.00034279e17 cm^-3` at Clean_pGaN X=0.05um,Y=1um. These are different output quantities; no inference of Mg 100% ionization or a fraction from hDensity/nominal doping without direct verification.
+- NEXT read-only: inspect log surrounding line 410–440 (Physics scopes) and 2138–2160 (species/ionization and warning context), then inspect active GaN ionization parameter section as needed; avoid source edits or disrupting separate CAL job.
+
 ## 2026-10-10 ~20:35 KST — JuSubin pGaN AcceptorConcentration 9.59e18 independently probed (OBSERVED 5V TCAD output; interpretation unresolved)
 
 - Worker 주수빈 supplied screenshot of completed `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`, NtSide=0, SVisual Probe at (X=0.05, Y=1.0, Z=0) um, Zone `Clean_pGaN(GaN)`. This screenshot explicitly confirms `AcceptorConcentration=9.590000000000e18 cm^-3`.

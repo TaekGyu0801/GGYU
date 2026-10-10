@@ -1526,5 +1526,30 @@
     },
     "voltageSweepCompletionPercentApprox": 82.45,
     "actualSolverCompletion": "NOT_VERIFIED"
+  },
+  "latestCALn2Observation": {
+    "date": "2026-10-10",
+    "screenClockLocal": "18:07 KST (screenshot system clock)",
+    "workerObserving": "주수빈",
+    "jobOrigin": "이택규 previously started NtSide=0 CAL",
+    "status": "OBSERVED_SCREENSHOT_NOT_FINISHED",
+    "project": "CMP_BASELINE_1.2.0_CAL",
+    "node": "n2",
+    "source": "SWB node output screenshot of n2_des.out and n2_des.err",
+    "lastShownAcceptedAnodeVoltageV": 4.138,
+    "previousObservedAnodeVoltageV": 4.122,
+    "voltageSweepGoalV": 5,
+    "voltageSweepPercentApprox": 82.76,
+    "nextBEAttemptTimeS": {
+      "from": 0.82766,
+      "to": 0.827663
+    },
+    "nextAttemptAccepted": false,
+    "nextAttemptAcceptStatus": "NOT_SHOWN",
+    "newFatalErrorConfirmed": false,
+    "warningObserved": "vanOverstraetendeMan impact ionization E0 isotropic vs anisotropic mismatch",
+    "effectiveInGaN100nsOverrideConfirmed": false,
+    "runtimePercentConfirmed": false,
+    "nextAction": "Do not restart or modify; read-only inspect newest CAL n2_des.log and n2_des.err for accepted t/voltage, cutback, finished/Good Bye. Then compare against prior 1ns 5V run with same-normalization metrics."
   }
 }

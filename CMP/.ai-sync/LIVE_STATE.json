@@ -1601,5 +1601,23 @@
     "physicsInterpretation": "UNRESOLVED. Cannot derive EBL hole injection barrier or causation from independent screenshots alone.",
     "nextReadOnly": "Probe hQuasiFermiEnergy and ValenceBandEnergy at confirmed Clean_EBL coordinate X=0.13um,Y=1.0um, then spatial compare",
     "tcadAndCALChanges": "none"
+  },
+  "latestJuSubinEBLEnergyProbe": {
+    "timestamp": "2026-10-10T21:51:00+09:00",
+    "status": "OBSERVED",
+    "node": "JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr",
+    "condition": "NtSide=0 completed nominal 5V",
+    "zone": "Clean_EBL(AlGaN)",
+    "X_um": 0.13,
+    "Y_um": 1,
+    "valenceBandEnergy_eV": -5.25250840714,
+    "hQuasiFermiEnergy_eV": -4.999999939039,
+    "derived_EFp_minus_Ev_eV": 0.252508468101,
+    "hDensity_cm3": 5787900714824000,
+    "acceptor_cm3": 300000000000000000,
+    "netDoping_cm3": -300000000000000000,
+    "caveat": "This is local band-to-hole-quasi-Fermi separation, not hole injection barrier; full transport and MgMinus still unresolved.",
+    "nextReadOnly": "Probe Ev/EFp at verified Clean_pGaN X=0.05um,Y=1.0um, compare regional gaps and spatial bands.",
+    "modelEdits": "none"
   }
 }

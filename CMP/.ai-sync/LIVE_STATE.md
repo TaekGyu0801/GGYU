@@ -1,3 +1,9 @@
+## 2026-10-10 ~19:02 KST — FAST_C1 NtSide0 n6 red failed UI; CAL 5V unverified (OBSERVED / UNRESOLVED)
+
+- 이택규 SWB 캡처 선택 프로젝트 `GaN_PiN_Diode_FAST_C1`: `NtSide=0` SDevice n6 red (SWB default failed), n12 pale blue (default running), n1 yellow (default done). No n6 stderr/log or failure mechanism shown; cannot conflate this with another FAST test or CAL.
+- `CMP_BASELINE_1.2.0_CAL` is listed but not selected; worker reports no finish. Latest actual CAL n2 evidence from 주수빈 at ~18:08 KST: ~4.138 V, Newton max iterations / timestep cutback. 5V, 100ns physical effect, CAL walltime ETA unresolved.
+- NEXT READ ONLY: review `GaN_PiN_Diode_FAST_C1/n6_des.log` (+err/sta if needed), and `CMP_BASELINE_1.2.0_CAL/n2_des.log`; preserve jobs, no rerun/reset/edit until diagnosis. Existing JUSUBIN_FAST_HALF_5V_TEST 5V done result remains separate.
+
 ## 2026-10-10 ~18:07 KST — JuSubin screenshot CAL n2 progressed to ~4.138 V (OBSERVED / NOT FINISHED)
 
 - 주수빈 SWB screen for `CMP_BASELINE_1.2.0_CAL/n2_des.out`: previous BE step shows `Finished, because |RHS| less than 1.0000E-03`, then contact anode `4.138E+00 V`. The next attempt `0.82766→0.827663 s` begins but acceptance is not shown. Prior observed 4.122 V is superseded as latest confirmed voltage.

@@ -1,3 +1,10 @@
+## 2026-10-10 ~20:31 KST — Clean_pGaN donor and net doping measured at same probe point (OBSERVED)
+
+- 주수빈 SVisual completed 5V NtSide0 `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`, Probe X=0.05 um, Y=1.0 um, Z=0, Zone `Clean_pGaN(GaN)`.
+- New screenshot direct Probe readout: `DonorConcentration=0 cm^-3`; `DopingConcentration=-3.000317924998e17 cm^-3` (screenshot readout approximated from displayed digits). Previous same-point `hDensity=3.000342790006e17 cm^-3`, `pMagnesiumActiveConcentration=pMagnesiumMinusConcentration=9.59e18 cm^-3`.
+- Net doping magnitude and hDensity agree closely at THIS single 5V point; consistent with approximately charge-neutral p-type local result, but other charge terms and ionization species mapping have not been fully evaluated. Strong warning: identical MgActive/MgMinus exported values are not reconciled with net doping ≈-3e17; do not infer a Mg ionization fraction or claim physically calibrated doping from the probe alone.
+- Next read-only: in same Probe Zone inspect `AcceptorConcentration` (and optionally `eDensity`) then audit actual Sentaurus T-2022.03 species output semantics and Mg incomplete ionization, followed by 0V and EBL carrier profile checks. No input source/run changed.
+
 ## 2026-10-10 20:21 KST — p-GaN Mg Active and Mg Minus same values, physically unresolved (OBSERVED)
 
 - Worker: 주수빈. Completed 5V NtSide0 SVisual Probe from `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr`, coordinate X=0.05 um/Y=1.0 um/Z=0, Zone `Clean_pGaN(GaN)`.

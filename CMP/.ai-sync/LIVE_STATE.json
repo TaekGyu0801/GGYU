@@ -1385,12 +1385,12 @@
   },
   "latestObservedEvent": {
     "date": "2026-10-10",
-    "timeKST": "12:09",
     "worker": "이택규",
-    "status": "USER_REPORTED_SWB_RUNNING_LOG_UNVERIFIED",
-    "source": "direct worker follow-up in ChatGPT; no SDevice log supplied",
-    "event": "CAL NtSide0 SDevice appears running in SWB as of 12:09 KST. Start described as '어제 새벽 1~2시' conflicts with Oct10 00:11:50 SDE success timestamp for this candidate; actual CAL job start is unresolved.",
-    "next": "Read-only inspect CAL n2_des.log, SWB job identity/start time and accepted voltage progression; do not claim solver convergence, parameter application or ETA from SWB running state."
+    "status": "OBSERVED_LIVE_SDEVICE_ACCEPTED_4p122V",
+    "source": "user-provided live n2_des.log last 40 lines",
+    "event": "CAL NtSide0 at least 4.122V with prior BE-step accepted (t=0.824478s, Newton RHS 7.30e-4<1e-3). Raw anode total current 4.344e-14. Next attempt t=0.824487s iter5 RHS 1.10e-3 (not yet converged in excerpt).",
+    "uncertainties": "Next step acceptance, full 5V completion, physical 100ns lifetime application, elapsed duration/ETA cannot yet be confirmed.",
+    "next": "Leave solver running. Compare later tail for increasing accepted time/voltage and cutbacks; check effective parameter file read-only."
   },
   "projectAFabricationFeasibility20261009": {
     "status": "PROPOSED_RESEARCH_ROUTE_COMPARISON_NOT_APPROVED",
@@ -1464,7 +1464,7 @@
     "date": "2026-10-09",
     "worker": "이택규",
     "name": "CMP_BASELINE_1.2.0_CAL",
-    "status": "USER_REPORTED_SDEVICE_RUNNING_LOG_UNVERIFIED",
+    "status": "CAL_SDEVICE_LOG_CONFIRMED_4p122V_NOT_FINISHED",
     "parent": "JUSUBIN_FAST_HALF_5V_TEST",
     "preserve": [
       "original 5V completed NtSide0 source and results",
@@ -1487,26 +1487,44 @@
     "sourceAudit": "CMP/reviews/BASELINE_1_2_0_CAL_AUDIT_20261010.md",
     "recombinationFinding": "Effective 5V QW B=2e-10, Auger=1e-30, SRH lifetime=1ns validated from private TDR",
     "mgFinding": "DopingConcentration tracks MgActive*occupation; numerical ionization verified",
-    "nextAction": "Read-only verify SDevice n2_des.log and job start, effective InGaN 100ns and accepted voltage increments. SWB running is not proof of numerical progress.",
+    "nextAction": "Continue existing run, inspect later log to see increase beyond 4.122V; confirm effective material override in output and check final 5V result.",
     "privateInputZip": "CMP_BASELINE_1.2.0_CAL_INPUT_CANDIDATE.zip (provided privately in conversation)",
     "candidateParSha256": "adfe81ab03b8f0ca84b09b9a4373fdc8e71f7a5faa00ce01a7c0b82b7fb2f1ad",
     "parentPhysicalChanges": "Proposed InGaN Scharfetter tau_max from 1ns to 100ns only; SDE unchanged, SDevice executable unchanged",
     "newSolverRun": true,
-    "newSolverRunVerification": "User reports SWB RUNNING; no solver log yet"
+    "newSolverRunVerification": "Actual n2_des.log accepted 4.122V, prior BE step finished; next at ~4.122V mid-iteration; no 5V finish yet"
   },
   "calRuntimeObservation20261010": {
     "worker": "이택규",
     "project": "CMP_BASELINE_1.2.0_CAL",
     "reportedAtKST": "2026-10-10 12:09",
-    "status": "USER_REPORTED_SWB_RUNNING",
-    "solverLogReviewed": false,
+    "status": "SOLVER_PROGRESS_VERIFIED_TO_4p122V",
+    "solverLogReviewed": true,
     "reportedStartTime": "어제 새벽 1~2시 (calendar interpretation ambiguous)",
     "timestampConflict": "CAL SDE meshing success recorded 2026-10-10 00:11:50 KST, which is after literal previous-day start 2026-10-09 01:00-02:00",
     "durationIfOct9Start": "34h09m-35h09m",
     "durationIfOct10Start": "10h09m-11h09m",
     "trueDuration": "UNRESOLVED",
     "verifiedVoltageProgress": false,
-    "effectiveInGaNSRH100nsApplied": "UNVERIFIED",
-    "nextAction": "Check CAL SDevice n2_des.log accepted steps, job start timestamp and effective parameters; preserve running project and completed 5V parent."
+    "effectiveInGaNSRH100nsApplied": "NOT_VERIFIED",
+    "nextAction": "Read-only new log tail later; compare accepted t/anode voltage, step retry counts, inspect parameter inclusion.",
+    "acceptedStep": {
+      "tFromSeconds": 0.824472,
+      "tToSeconds": 0.824478,
+      "anodeVoltsApprox": 4.122,
+      "rhs": 0.00073,
+      "convergenceCriterion": 0.001,
+      "stepWallclockSeconds": 7.39,
+      "rawAnodeTotalCurrent": 4.344e-14
+    },
+    "nextAttempt": {
+      "tFromSeconds": 0.824478,
+      "tToSeconds": 0.824487,
+      "iterationLastSeen": 5,
+      "rhsLastSeen": 0.0011,
+      "accepted": "NOT_VERIFIED"
+    },
+    "voltageSweepCompletionPercentApprox": 82.45,
+    "actualSolverCompletion": "NOT_VERIFIED"
   }
 }

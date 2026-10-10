@@ -1,3 +1,7 @@
+## 2026-10-10 21:48 KST — Clean_EBL local EFp measured, Ev numeric reading next
+- OBSERVED JuSubin completed 5V NtSide0 SVisual Probe in Clean_EBL(AlGaN), X=0.13,Y=1.0 um: `hQuasiFermiEnergy=-4.999999939039 eV`, `hQuasiFermiPotential=+4.999999939039 V`. Same coordinate previously had `Acceptor=3e17`, `Donor=0`, `NetDoping=-3e17`, `hDensity=5.787900714824e15 cm^-3`. Do NOT infer barrier height or cause from absolute EFp alone.
+- NEXT read-only same-point Probe `ValenceBandEnergy`, then spatially compare Ev and EFp across EBL/neighboring layers. Original TCAD decks and CAL remain untouched.
+
 ## 2026-10-10 ~21:43 KST — JuSubin hQuasiFermiEnergy C1 zoom completed
 - OBSERVED on saved completed NtSide0 5V device: hQuasiFermiEnergy(C1(n2_des)) plotted over depth X=0–0.4um at Y≈1um, step-like EFp increase across approx X=0.15–0.25um. Prior Ev 1D curve showed sharp structure in same depth range; no quantitative region/energy barrier extraction yet. Next read-only probe both fields at same confirmed Clean_EBL coordinate X=0.13,Y=1.0um, then compare spatial structure. No model/source/job changes.
 

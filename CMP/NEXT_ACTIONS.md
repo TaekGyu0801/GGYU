@@ -1,3 +1,10 @@
+## 2026-10-10 22:04 KST — JuSubin independently confirms 5V_TEST n2 terminal completion (OBSERVED from screenshot; old job ended 2026-10-09 14:29:52 KST)
+
+- Worker 주수빈 re-read existing `/user/semi/semi437/tmp/myproject/JUSUBIN_FAST_HALF_5V_TEST/n2_des.log` via grep/tail (two screenshots repeat identical output). Last accepted BE step: `0.999674 s -> 1.000000 s`. Terminal anode voltage `5.000E+00 V`; terminal electron current `2.781E-13`, hole current `1.420E-11`, total current `1.448E-11` in Sentaurus 2D current-per-length convention (A/um, not total measured 3D A). `Sentaurus Device simulation finished (Date: Fri Oct 9 14:29:52 2026 KST)` and `Good Bye!` show successful completion.
+- This closes uncertainty about **solver log reaching 5V**, but does not yet prove specific opened `n2_des.tdr` snapshot was written at the final 5V state. Document provenance/time/Plot directive if required. Independently reported raw I2D ~1.44801646e-11 A/um / nominal J~7.24e-4 A/cm2 under documented width normalization and MQW Rrad share~0.1095% remain LOW-J GATE0 blocker; successful solver convergence is not physical baseline validation.
+- A separate `n1_msh.tdr: Permission denied` arose because TDR binary/data file was typed as an executable in shell; **not a TCAD job failure**. Existing MgMinus ionization-field interpretation and EBL barrier causality also unresolved. CAL project status not updated and its running job must remain untouched.
+- NEXT: prioritize quantitative low-current/injection Gate0 from existing outputs, verify TDR time-bias linkage if necessary, no repeated reruns or unsolicited code edits.
+
 ## 2026-10-10 — LeeTaekGyu decision: do not idle for CAL; parallel low-current baseline Gate0 using existing data (PROPOSED)
 
 - 작업자 이택규가 `그냥 CAL 돌아가기 전까지 기다리는 게 나을까?` 요청. 답: CAL 100ns sensitivity is independent of physical baseline validity. Continue current CAL unchanged and periodically review **accepted** BE time/bias and cutbacks; do not abort/reset or run FAST again merely by schedule. CAL user last reported attempting ~4.144V, last provided actual accepted n2 log ~4.142V; no newer status in current chat.

@@ -4,7 +4,7 @@
   "phase": "Phase 0 — low-current / injection validity Gate 0 before Baseline freeze and Project A/B",
   "task": "Read-only physics audit of existing completed 5V half device; CAL risk monitoring; triage Claude independent review",
   "status": "BASELINE_5V_SOLVE_COMPLETE_LOW_J_UNVALIDATED_AB_PRODUCTION_NO_GO",
-  "blocker": "Nominal half-device J at 5V ~7.24e-4 A/cm2 under documented 2D normalization; radiative/QW recombination share ~0.1095%; physically meaningful operating region and injection barriers not yet established. Separate CAL at reported 4.144V has not shown final 5V convergence.",
+  "blocker": "Nominal half-device J at 5V ~7.24e-4 A/cm2 under documented 2D normalization; radiative/QW recombination share ~0.1095%; physically meaningful operating region and injection barriers not yet established. Separate CAL latest direct log accepted ~4.149V and next BE Newton RHS oscillates above 1e-3; 5V convergence and physical J validation unresolved.",
   "parallelWork": {
     "worker": "주수빈",
     "status": "OBSERVED",
@@ -1658,5 +1658,21 @@
     "solverFinished": true,
     "tdrFinalBiasVerified": false,
     "lowCurrentGate0Resolved": false
+  },
+  "latestCALn2Observation20261010_2211": {
+    "status": "OBSERVED",
+    "worker": "이택규",
+    "source": "live server n2_des.log tail -n 60 provided by user",
+    "run": "CMP_BASELINE_1.2.0_CAL",
+    "lastAcceptedTime_s": 0.829862,
+    "lastAcceptedAnode_V_approx": 4.149,
+    "lastAcceptedRHSEnd": 0.000897,
+    "RHSMin": 0.001,
+    "lastAcceptedTotalCurrent_A_per_um": 4.832e-14,
+    "nextAttempt": "BE 0.829862->0.829867s, step=4.6596e-6s, Newton iter2-9 RHS around 1.28e-3 to 1.34e-3 (>1e-3), final acceptance unknown",
+    "conditionalWidthNormalizedJ_A_per_cm2": 0.000002416,
+    "caveat": "2D A/um over 2um nominal width, transient total current may include displacement, not steady-state J; voltage fraction not runtime fraction",
+    "currentBlocker": "very low current; 5V completion unverified",
+    "nextAction": "Read-only monitor acceptance/step size; inspect CAL n2_des.plt 4V+ current and checkpoint availability before bias-target decisions; preserve active job"
   }
 }

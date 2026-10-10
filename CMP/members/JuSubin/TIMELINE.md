@@ -1,3 +1,9 @@
+## 2026-10-10 19:46 KST — SVisual cutline upper-layer net doping inspected
+
+- JuSubin 5V NtSide0 `JUSUBIN_FAST_HALF_5V_TEST` screenshot: `DopingConcentration` cutline X 0–0.4 um. Approx net profile upper p-side -3e17 cm^-3 until X ~0.10 um, approaches zero ~0.12 um, near-zero area over ~0.12–0.26 um, +5e18 cm^-3 from ~0.27 um into n-GaN. These are screen estimates; actual individual regions/point values unverified.
+- Cutline now displays normally after earlier fixed axis problem. Net doping is not raw Mg dose or mobile hole density; apparent transition is not proof of physical Mg diffusion.
+- Next inspect `hDensity` on same C1 cutline, then active Mg species if available. No TCAD code/run changed.
+
 ## 2026-10-10 ~19:43 KST — SVisual Cutline signed net-doping graph successfully restored (OBSERVED screenshot)
 
 - 작업자 주수빈. 완료된 `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr` (NtSide=0, 5 V) `DopingConcentration` `Cutline_Y Plot`에서 Y-axis 수동 범위 설정 후 음·양 signed net-doping plot 전체가 다시 표시되는 것을 직접 확인.

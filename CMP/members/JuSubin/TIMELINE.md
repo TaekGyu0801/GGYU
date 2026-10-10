@@ -1,3 +1,9 @@
+## 2026-10-10 ~20:09 KST — Probe pGaN position attempted, value not yet visible
+
+- 주수빈이 finished `JUSUBIN_FAST_HALF_5V_TEST/n2_des.tdr` NtSide0 5V SVisual에서 Probe At X=0.05 um, Y=1.0 um, Z=0 수행 후 화면을 보냄. 주황색 상단 영역에 표식은 보이나 Probe result/Zone/Magnitude 패널이 스크린샷에는 없어 실제 hDensity 측정값이나 Clean_pGaN Zone은 아직 직접 확인되지 않음.
+- 다음 확인: Tools > Probe로 아래 Probe panel 다시 표시하고 X/Y/Z 및 Zone=Clean_pGaN(GaN), Var Values > hDensity magnitude를 함께 캡처. 데이터가 보이기 전 도핑 calibration 성공/실패 판정 금지.
+- No source, simulation, or running CAL changes.
+
 ## 2026-10-10 — JuSubin SVisual Probe At dialog opened
 - OBSERVED: In finished 5V NtSide0 SVisual, Probe panel plus Probe At dialog opened. Current X=0.5 um, Y=1.0 um, Z=0; Zone=Clean_nGaN(GaN).
 - NEXT: set X=0.05 um for candidate Clean_pGaN, press Probe; verify Zone and hDensity before interpreting. No code changes.

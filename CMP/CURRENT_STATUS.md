@@ -1,3 +1,10 @@
+## 2026-10-10 ~18:07 KST — CAL NtSide0 4.138 V 확인 (OBSERVED SCREENSHOT, NOT FINISHED)
+
+- 주수빈이 `/user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/n2_des.out`의 SWB Node n2 Output 스크린샷 제공. 화면의 직전 Newton step은 `Finished, because |RHS| less than 1.0000E-03`이고 anode voltage `4.138E+00` 표시. 이어서 `Computing BE-step from 0.82766 s to 0.827663 s`가 시작되지만 최종 수렴은 표시되지 않음.
+- 기존 0–5 V linear ramp 기준, voltage sweep ≈82.76% (이전 확인값 4.122 V보다 약 0.016 V 진전), **wallclock duration 완료율 아님**. 새 고전압 solver attempt의 진행·종료 미확인. `n2_des.err` vanOverstraetendeMan E0 isotropic/anisotropic warning 표시, fatal로 확인되지 않음.
+- **UNRESOLVED:** 실제 5 V 정상 종료, InGaN 100 ns override의 effective 적용, 2D current/injection, physical recombination validity, full/half mesh equivalence, trapped NtSide=1e18 run.
+- **NEXT READ ONLY:** CAL `n2_des.log` tail과 `n2_des.err` 변화 확인. 완료 전 소스/solver 변경 또는 재실행 금지.
+
 ## 2026-10-10 (after 12:09 KST; exact log capture time not given) — CAL NtSide0 SDevice actually advancing to 4.122 V (OBSERVED LOG, NOT FINISHED)
 
 - Worker 이택규 supplied live command output from `tail -n 40 /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/n2_des.log`.

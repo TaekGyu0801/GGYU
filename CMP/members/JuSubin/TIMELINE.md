@@ -1,3 +1,11 @@
+## 2026-10-10 ~18:07 KST — 주수빈 CAL 실행 상태 인수인계 화면 확인 (OBSERVED SCREENSHOT)
+
+- 작업자 주수빈이 `CMP_BASELINE_1.2.0_CAL` SWB SDevice node n2 Output 스크린샷 제공. 이 계산은 기존 이택규가 실행한 별도 NtSide=0 CAL 후보이며, 주수빈이 새로 실행한 작업은 아님.
+- 실제 `n2_des.out` 화면 직전 BE iteration에서 `Finished, because |RHS| less than 1.0000E-03` 후 contact anode `voltage=4.138E+00` 출력. 다음 시도 `Computing BE-step from 0.82766 s to 0.827663 s (Stepsize: 3.2930e-06 s)`가 이어짐. 다음 시도의 최종 수렴은 화면에 없음.
+- 기존 0–5 V ramp가 그대로라는 조건에서 약 4.138 V/5 V = 82.76%의 **전압 스윕** 도달(이전 4.122 V 로그 대비 약 0.016 V 추가 진전). Runtime/남은 시간 비율 아님.
+- 아래 `n2_des.err`의 vanOverstraetendeMan impact ionization isotropic/anisotropic E0 mismatch 메시지는 출력되어 있으나 이것만으로 fatal/중단 여부 확인 불가. 사진에서 5 V 완료, 실제 100 ns InGaN SRH 효과, 고전압 steady-state 검증 없음.
+- NEXT: 소스 변경/중단 없이 나중에 `tail -n 40 .../CMP_BASELINE_1.2.0_CAL/n2_des.log`와 날짜·progress를 읽기 전용 확인; 5 V 정상 종료 시 비교용 I(V)와 QW 재결합 검토.
+
 ## 2026-10-08 — Baseline uniform-layer doping physical validity review (PROPOSED VALIDATION)
 
 - 작업자: 주수빈; 사용자 제기: SVisual n1_msh screenshot에서 각 에피층의 DopingConcentration이 균일/step-like로 나타나 실제 MOCVD 성장 도핑 분포와 차이가 있는지 검증 필요.

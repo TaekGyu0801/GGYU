@@ -1,8 +1,8 @@
 {
   "updated": "2026-10-11",
   "primaryWorker": "주수빈",
-  "phase": "Phase 0 — low-current / injection validity Gate 0 before Baseline freeze and Project A/B",
-  "task": "Read-only physics audit of existing completed 5V half device; CAL risk monitoring; triage Claude independent review",
+  "phase": "Phase 0 — working 5V reference NtSide 0/1e18 comparison; physical Gate0 low-J still unresolved",
+  "task": "JuSubin decision: create/preprocess NtSide1e18 split on original completed JUSUBIN_FAST_HALF_5V_TEST without waiting for 100ns CAL",
   "status": "BASELINE_5V_SOLVE_COMPLETE_LOW_J_UNVALIDATED_AB_PRODUCTION_NO_GO",
   "blocker": "Nominal half-device J at 5V ~7.24e-4 A/cm2 under documented 2D normalization; radiative/QW recombination share ~0.1095%; physically meaningful operating region and injection barriers not yet established. Separate CAL latest direct log accepted ~4.149V and next BE Newton RHS oscillates above 1e-3; 5V convergence and physical J validation unresolved.",
   "parallelWork": {
@@ -1891,5 +1891,24 @@
     "unresolved": "Runtime effective SRH sensitivity / 4V QW spatial TDR, injection and current normalization, low-J Gate0",
     "next": "Skip previously completed audit; assess comparative output and remaining transport/normalization physical issue",
     "simulatorChangeThisTurn": false
+  },
+  "latestNtSideSplitDecision": {
+    "date": "2026-10-11",
+    "worker": "주수빈",
+    "classification": "DECISION; RUN_NOT_YET_VERIFIED",
+    "parent": "JUSUBIN_FAST_HALF_5V_TEST",
+    "originalNtSide0": "COMPLETED_TO_5V_2026-10-09_14:29:52_KST",
+    "newNtSide1e18": "USER_PLANS_SPLIT; NO_LOG_OF_START_OR_SUCCESS",
+    "comparisonValidity": "must verify exact SDE/SDEVICE+custom par same source, 0 vs 1e18 only NtSide trap Conc",
+    "preflight": [
+      "preserve completed NtSide0 n2_des.log/plt/tdr and inputs",
+      "select NtSide1e18 in SWB without touching original reference",
+      "preprocess new SDevice node and check preprocessed effective trap Conc and input parity vs pp2_des.cmd",
+      "start SDevice only after quick checks"
+    ],
+    "precedent": "Sep26 another Node12 NtSide1e18 initialization failure with mismatched/stale node6/node12 .par; do not assume recurrence or automatic fix",
+    "CAL": "Separate 100ns sensitivity experiment; no stopping authorized",
+    "baselineFreeze": "NOT_FROZEN; low-J Gate0 and IQE validity unresolved",
+    "userSchoolServerAction": "NOT_YET_OBSERVED"
   }
 }

@@ -1875,5 +1875,21 @@
     "calStatus": "Current CAL 100ns sensitivity independent; last accepted ~4.179V, no current run modification",
     "next": "Read-only audit archived 5V_TEST n2_des.plt/TDR and effective model; no A/B production baseline freeze until gates met",
     "statusChangeApproved": false
+  },
+  "latestPriorWorkCorrection": {
+    "date": "2026-10-11",
+    "worker": "주수빈",
+    "status": "CONFIRMED_HISTORICAL_RECORDS",
+    "summary": "이택규 already analysed 5V_TEST low MQW radiative fraction and 1ns default InGaN SRH lifetime, and intentionally saved CAL custom InGaN Scharfetter taumax=100ns; don't restart or deny this completed work",
+    "parent5VTestIntegrated4QW_Rrad": 40072.8158452,
+    "parent5VTestIntegrated4QW_SRH": 36562944.9075,
+    "parent5VTestIntegrated4QW_Auger": 1599.706168587,
+    "radiativeFractionPct": 0.1094747566,
+    "hypothesis": "short 1ns SRH lifetime may explain high SRH, not proven cause of low terminal current",
+    "actualCALParameterChange": "FASTC1_pp6_des.par InGaN Scharfetter taumax 1e-7s (electron/hole) saved; old 5V parent protected",
+    "approx4VComparison": "Old parent 4.003368865V I2D=3.505521343e-14 A/um vs CAL 3.99967374V I2D=3.497895e-14 A/um, raw difference ~0.22% at nonidentical biases, no clear low-current improvement",
+    "unresolved": "Runtime effective SRH sensitivity / 4V QW spatial TDR, injection and current normalization, low-J Gate0",
+    "next": "Skip previously completed audit; assess comparative output and remaining transport/normalization physical issue",
+    "simulatorChangeThisTurn": false
   }
 }

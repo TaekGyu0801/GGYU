@@ -1802,7 +1802,7 @@
     "wallclockETA": "unknown",
     "gate0": "UNRESOLVED_LOW_CURRENT",
     "spatial4VTDR": "UNRESOLVED",
-    "next": "Preserve CAL; read-only inspect later log, Plot/Save and saved TDR paths"
+    "next": "Read-only inspect full Transient Goal and existing TDR/Save paths; preserve running CAL"
   },
   "latestCALCommandFilesObservation": {
     "timeKST": "2026-10-11 16:45",
@@ -1817,5 +1817,29 @@
     "plotSaveSchedule": "UNRESOLVED; file content not yet read",
     "nextReadOnlyCommand": "grep -nEi -C 4 'Plot|Save|CurrentPlot|Time[[:space:]]*=' /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/pp2_des.cmd | tail -n 120",
     "simulationModified": false
+  },
+  "latestCALPlotSaveAudit": {
+    "timeKST": "2026-10-11 16:46",
+    "worker": "주수빈",
+    "status": "OBSERVED input excerpt, spatial4VTDR UNRESOLVED",
+    "source": "user screenshot of grep on CMP_BASELINE_1.2.0_CAL/pp2_des.cmd",
+    "filePlot": "n2_des.tdr",
+    "fileCurrent": "n2_des.plt",
+    "fileOutput": "n2_des.log",
+    "fileParameters": "FASTC1_pp6_des.par",
+    "transient": {
+      "initialTime": 0,
+      "finalTime": 1,
+      "initialStep": 0.00001,
+      "minStep": 1e-9,
+      "maxStep": 0.001
+    },
+    "save": "After Transient close, FilePrefix=n2_5V_ckpt (lines 607-609)",
+    "intermediatePlotSave": "No mid-transient Plot(Time) or Save(Time) in grep output",
+    "warning": "No guaranteed ~4V spatial TDR; never assume abort yields saved 4V state",
+    "commentDiscrepancy": "line584 says 0→0.3V smoke, inconsistent with actual accepted ~4.179V; check actual Goal",
+    "nextReadOnlyCommand": "sed -n '580,612p' /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/pp2_des.cmd",
+    "otherAudit": "Verify effective 100ns physical lifetime in FASTC1_pp6_des.par and log before calibration claim",
+    "jobChanged": false
   }
 }

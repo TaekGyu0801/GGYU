@@ -1,3 +1,7 @@
+## 2026-10-11 17:36 KST — CAL4V cloned source file observed
+- Screenshot confirms normal shell prompt recovered after multiline input error. `ls -l` confirms `CMP_BASELINE_1.3.0_CAL4V/sdevice_des.cmd` exists at 5981 bytes with Oct9 23:35 mtime. Whether 4V patch was applied is UNKNOWN; no SUCCESS/STOP output seen.
+- Next read-only grep FinalTime/Voltage/3p8V/4V_* before source edit, then use short single-line change with backup on clone only. No run verified; active original CAL must be preserved.
+
 ## 2026-10-11 ~17:30 KST — JuSubin reports repeated `?` continuation prompt, CAL4V terminal edit still BLOCKED
 - User confirms shell remains stuck at `?` even after prior instruction; previous long Python heredoc did not show any `SUCCESS` or `STOP`. Do not treat code edit as applied. Most likely interactive csh/tcsh multiline/here-document handling, but exact syntax state unverified.
 - Safe immediate action: terminal focus → Ctrl+C until normal `$`/`%` prompt → type `bash` as separate command → read-only `ls -l /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.3.0_CAL4V/sdevice_des.cmd` to check whether separately cloned project actually exists. If absent, clone CAL in SWB before editing. After confirming prompt/target, use shorter Bash-compatible patch, backup before edits and grep source before SWB Preprocess. Do not retry multiline at `?`, do not touch live original CAL or finished 5V_TEST.

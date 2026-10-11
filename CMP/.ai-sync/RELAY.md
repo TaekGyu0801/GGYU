@@ -1,3 +1,9 @@
+## 2026-10-11 16:46 KST — 주수빈 CAL Save placement confirmed
+- OBSERVED in live node2 `pp2_des.cmd` screenshot: `Save(FilePrefix="n2_5V_ckpt")` is after the transient block; no intermediate time-specific Plot/Save lines in grep. `Plot="n2_des.tdr"` declares an output file, not a 4V snapshot. 4V PLT terminal I-V is available; 4V TDR unknown.
+- File points to `FASTC1_pp6_des.par`. Comment claims 0–0.3V smoke but actual run accepted ~4.179V. Actual Goal is in unseen code lines.
+- Blocker: no confirmed spatial ~4V IQE map and very low-J Gate0; 5V CAL status pending. No code or active job modifications. Protect common baseline.
+- Next read-only: `sed -n '580,612p' /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/pp2_des.cmd`; then inspect existing spatial output locations and effective 100ns override. Do not abort active CAL.
+
 ## 2026-10-11 ~16:45 KST — JuSubin locates CAL pp2_des.cmd (OBSERVED)
 - READ-ONLY `ls -lh .../CMP_BASELINE_1.2.0_CAL/*des.cmd` screenshot verifies three files: `FASTC1_pp6_des.cmd`, `pp2_des.cmd`, `sdevice_des.cmd`. Node2 `pp2_des.cmd` present (~5.8 KB, Oct10 00:40). No file body/Plot/Save schedule was printed yet; no proof of a 4V spatial TDR.
 - Previous accepted 100ns CAL state ~4.179 V; screenshot shows old log only and cannot establish further progress. Existing low-J baseline Gate0 unresolved.

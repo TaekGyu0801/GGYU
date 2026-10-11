@@ -1,3 +1,7 @@
+## 2026-10-11 ~16:45 KST — JuSubin CAL node2 input file found (OBSERVED)
+- CAL directory read-only listing confirmed `FASTC1_pp6_des.cmd`, `pp2_des.cmd`, and `sdevice_des.cmd`; node2 preprocessed `pp2_des.cmd` exists. Plot/Save contents not yet inspected; 4V spatial TDR still unverified.
+- Previous accepted CAL 100ns ~4.179V unchanged by current screenshot; 5V ETA unknown; low-current Gate0 unresolved. Next read-only grep Plot/Save in `pp2_des.cmd`. No TCAD source/job changes.
+
 ## 2026-10-11 ~16:41 KST — JuSubin 100ns CAL accepted ~4.179V (OBSERVED screenshot)
 - Actual `CMP_BASELINE_1.2.0_CAL/n2_des.out` screenshot: accepted BE 0.835804→0.835806s (`RHS=7.30e-04<1e-3`), anode voltage ~4.179V, total terminal current 5.555e-14 A/um in the documented 2D convention. About **83.58% of the 0→5V voltage sweep**, not compute time; prior Oct10 saved ~4.14965V -> +~0.029V.
 - Next BE 0.835806→0.835808s trial Newton RHS ~1.03e-3–1.09e-3 (iterations 2-6), still above 1e-3; later acceptance/failure not in screenshot. 5V completion/ETA **UNRESOLVED**, no observed fatal termination.

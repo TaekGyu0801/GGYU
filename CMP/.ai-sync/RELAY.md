@@ -1,3 +1,6 @@
+## 2026-10-11 17:28 KST — JuSubin 4V CAL Python heredoc still in terminal continuation (OBSERVED)
+- MobaXterm screenshot displays `?` continuation prompt for pasted Python code and closing `? PY`, but **no SUCCESS/STOP or normal prompt**. The clone source edit is unverified; this is an interactive-shell input state, not SDevice solver failure. Advise one Enter on closing PY; if `?` persists Ctrl+C, explicitly enter bash and retry script. Read-only `grep -nE 'FinalTime|Voltage|3p8V|4V_final|4V_ckpt' .../CMP_BASELINE_1.3.0_CAL4V/sdevice_des.cmd` plus backup listing before SWB Preprocess/Run. Active 5V CAL and parent 5V_TEST unchanged as far as evidence shows.
+
 ## 2026-10-11 17:20 KST — JuSubin 4V CAL source-tail screenshot
 - Original running CAL source observed: anode Goal5V, FinalTime1.0, Increment1.2, InitialStep1e-5, MinStep1e-9, MaxStep1e-3, coupled15; one 5V Save after transient. Stale comment 0.3V ignored.
 - Copy/paste change proposed for NEW clone only: FinalTime0.8, Goal4.0, intermediate Plot/Save at t0.76, final Plot+Save 4V, preserve 100ns InGaN .par. No running jobs or source changed yet. Next SWB Clone→edit→Preprocess verify→Run. Record run only on user proof.

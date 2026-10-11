@@ -1,3 +1,8 @@
+## 2026-10-11 — 주수빈: 5V_TEST working baseline proposal
+- Proposed, not adopted/frozen: use completed NtSide=0 JUSUBIN_FAST_HALF_5V_TEST as numerical reference rather than waiting for CAL. SDevice finished 5V Oct9; preserve both jobs/decks.
+- Blocker: 5V nominal J ~7.24e-4 A/cm2 conditional, very low QW radiative share; 2D normalization, effective recombination, NtSide1e18, Half vs Full unvalidated. No server input edits.
+- Next: audit saved 5V_TEST terminal currents and TDR injection physics read-only, then plan a controlled separate short calibration trial only upon approval. Project A/B production not ready.
+
 ## 2026-10-11 — 주수빈 4V diagnostic cutoff requested (PROPOSED, not adopted)
 - User worries 100ns CAL 5V ramp costs too much time; asks whether 4V endpoint is acceptable and why 5V was originally chosen. GitHub `COMMON_BASELINE.md` documents initial forward sweep 0→5V but does not identify 5V as a mandatory physical turn-on or operating voltage.
 - 4V can bound a **separate diagnostic pilot**, but 4V alone cannot validate the baseline while 5V_TEST low-J Gate0 remains unresolved. Current CAL PLT near 4V raw I2D 3.497895e-14 A/um (conditional J ~1.75e-6 A/cm² for 2um width, 2D normalization and displacement not validated). Existing nominal 5V_TEST J ~7.24e-4 A/cm² is already low under documented convention.

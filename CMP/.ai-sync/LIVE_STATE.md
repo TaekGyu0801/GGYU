@@ -1,3 +1,8 @@
+## 2026-10-11 17:39 KST — CAL4V clone still 5V code; safe shell edits instructed (OBSERVED / NOT YET APPLIED)
+- Screenshot read-only grep from new `CMP_BASELINE_1.3.0_CAL4V/sdevice_des.cmd`: FinalTime1.0 line587, Voltage5.0 line597, `n@node@_5V_ckpt` line608; no 4V or 3.8V output. Earlier heredoc script did not modify this file; SWB SDevice not run.
+- Worker instructed short separate commands only within clone: `cd`, `cp -pn sdevice_des.cmd sdevice_des.cmd.bak_5V`, GNU `sed -i -E` change FinalTime1→0.8 and Goal Voltage5→4, save prefix5→4, and second `sed -i` insert a final `Plot(FilePrefix="n@node@_4V_final")` before the Save. This retains 5V/s ramp. Existing completed 5V_TEST and separately active 5V CAL must stay untouched.
+- AFTER EDIT: use read-only `tail -n 40 sdevice_des.cmd` and custom InGaN Scharfetter `taumax` par check; consider separate 3.8V intermediate Plot/Save once actual modified source shown, not yet inserted by commands. SWB Preprocess validate effective Goal/FTime/Plot/Save/par, then RUN only after evidence. Not a validated physical baseline; low-J gate pending.
+
 ## 2026-10-11 17:20 KST — JuSubin CAL 4V source patch prepared (NOT RUN)
 - Original source Solve confirmed 5V Goal, FinalTime1s, Save after Transient. Separate clone only: 4V Goal, FinalTime0.8s, 3.8V intermediate and 4V end Plot/Save; 100ns custom parameter unchanged. Await SWB clone/preprocess/run proof. Original live 5V CAL untouched.
 

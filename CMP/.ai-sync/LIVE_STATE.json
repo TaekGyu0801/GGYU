@@ -1936,5 +1936,13 @@
     "original": "5V Goal at FinalTime1s, 5V Save after Transient",
     "proposed": "Clone: 4V Goal at FinalTime0.8s, optional 3.8V intermediate Plot/Save, final 4V Plot/Save; retain 100ns CAL model",
     "next": "SWB clone/edit/preprocess then RUN; do not edit active original"
+  },
+  "latestCAL4VTerminalAttempt": {
+    "date": "2026-10-11 17:28 KST",
+    "worker": "주수빈",
+    "status": "INPUT_STILL_IN_MULTILINE_SHELL_PROMPT; NOT_CONFIRMED_APPLIED",
+    "evidence": "MobaXterm screenshot ? continuation prompt and ? PY no SUCCESS output",
+    "next": "Press Enter once; if ? persists Ctrl+C then enter bash and paste code; read-only grep 4V config and backup existence before Preprocess/Run",
+    "originalCALTouched": "NOT_OBSERVED"
   }
 }

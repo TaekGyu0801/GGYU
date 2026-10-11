@@ -1,3 +1,7 @@
+## 2026-10-11 17:20 KST — JuSubin confirms CAL Solve tail (OBSERVED)
+- Existing active CAL source actually sets Transient FinalTime=1.0, anode Goal=5.0, Increment1.2 and Coupled Iterations15; final Save at 5V. Screenshot read-only only.
+- Proposed separate 4V clone source change: FinalTime=.8 and Goal=4.0, with 3.8V interim spatial Plot/Save and 4V final Plot/Save; input 100ns unchanged. Not edited/run yet. Original jobs preserved.
+
 ## 2026-10-11 — JuSubin DECISION: stage CAL 100ns 4V branch for run today (CODE PROPOSAL, NOT APPLIED)
 - Worker 주수빈: in addition to a separate 5V_TEST NtSide=1e18 split, wants to edit today's 100ns CAL maximum applied voltage from 5V to 4V and launch before leaving. User explicitly requested code revision, but **school-server SWB files are not directly accessible from GitHub/ChatGPT**; no server changes or run verified. Running original `CMP_BASELINE_1.2.0_CAL` last accepted ~4.179V is NOT to be edited in-place, since altering on-disk input cannot retroactively make it save the earlier ~4.0V TDR.
 - Planned versioned clone, tentative unique project name `CMP_BASELINE_1.3.0_CAL4V` (must check not already used on school server before creation). Preserve original CAL and 5V_TEST, and 100ns InGaN Scharfetter custom `FASTC1_pp6_des.par`. New case NtSide=0, all material/physics/mesh/solver unchanged except intentional voltage sweep endpoint and output scheduling.

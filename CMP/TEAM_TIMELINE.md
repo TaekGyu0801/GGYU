@@ -1,3 +1,6 @@
+## 2026-10-11 17:36 KST — JuSubin normal shell restored; CAL4V SDevice file found (OBSERVED)
+- Screenshot shows normal `$` prompt and `ls -l` confirms 5981-byte `CMP_BASELINE_1.3.0_CAL4V/sdevice_des.cmd` (mtime Oct9 23:35); existence only, 4V edit not proven. Prior multiline script had not produced SUCCESS/STOP. NEXT read-only grep of FinalTime/Voltage/3p8V/4V_final/4V_ckpt/5V_ckpt to determine source state before writing a short non-heredoc patch. Active original CAL not touched by this check.
+
 ## 2026-10-11 17:28 KST — JuSubin 4V CAL Python heredoc still in terminal continuation (OBSERVED)
 - MobaXterm screenshot displays `?` continuation prompt for pasted Python code and closing `? PY`, but **no SUCCESS/STOP or normal prompt**. The clone source edit is unverified; this is an interactive-shell input state, not SDevice solver failure. Advise one Enter on closing PY; if `?` persists Ctrl+C, explicitly enter bash and retry script. Read-only `grep -nE 'FinalTime|Voltage|3p8V|4V_final|4V_ckpt' .../CMP_BASELINE_1.3.0_CAL4V/sdevice_des.cmd` plus backup listing before SWB Preprocess/Run. Active 5V CAL and parent 5V_TEST unchanged as far as evidence shows.
 

@@ -1,3 +1,8 @@
+## 2026-10-11 — CAL4V Run clicked (USER-REPORTED, actual solver status pending)
+- 주수빈 confirmed cloned CAL4V source `FinalTime=0.8` and clicked SWB **Run** for `CMP_BASELINE_1.3.0_CAL4V`. Previous actual screenshot independently showed `Goal anode Voltage=4.0`, final Plot `n@node@_4V_final`, Save `n@node@_4V_ckpt`, cloned custom InGaN Scharfetter electron/hole `taumax=1e-7s`. Keeps 5V/s ramp.
+- Status **RUN REQUESTED by researcher**, not yet independently OBSERVED SDevice process/preprocessed deck/accepted BE-step and certainly NOT completion. Current 4V TDR/SAV absent/unconfirmed. Do not interrupt running original 5V CAL or preserve-solved 5V_TEST parent. NtSide1e18 split run still unverified.
+- NEXT read-only in new CAL4V folder: `ls -lt n*_des.log n*_des.err n*_des.out 2>/dev/null | head -n 12`, then actual nN_des.log tail, preprocessed ppN Goal/FinalTime/Plot/Save/Parameter. Check SWB SDevice node state. Initial failure/syntax errors before overnight run are high priority; do not claim CAL4V will finish today. Physical low-J Gate0 persists.
+
 ## 2026-10-11 — JuSubin CAL4V code edit observed
 - User screenshot confirms new clone sdevice_des.cmd Goal anode Voltage4.0, preserved time-step math and final Plot n@node@_4V_final plus Save n@node@_4V_ckpt after Transient. Custom FASTC1_pp6_des.par InGaN Scharfetter taumax1e-7 electron/hole also confirmed. FinalTime0.8 cropped off the screenshot and still needs grep verification. No mid-3.8V output; optional, not needed to delay 4V run.
 - Next read-only FinalTime/source check; SWB CAL4V Preprocess only, verify pp command/par, then Run. Running original 5V CAL and older 5V_TEST untouched. Not physically frozen due low-J Gate0.

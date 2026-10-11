@@ -1,3 +1,8 @@
+## 2026-10-11 ~16:45 KST — JuSubin locates CAL pp2_des.cmd (OBSERVED)
+- READ-ONLY `ls -lh .../CMP_BASELINE_1.2.0_CAL/*des.cmd` screenshot verifies three files: `FASTC1_pp6_des.cmd`, `pp2_des.cmd`, `sdevice_des.cmd`. Node2 `pp2_des.cmd` present (~5.8 KB, Oct10 00:40). No file body/Plot/Save schedule was printed yet; no proof of a 4V spatial TDR.
+- Previous accepted 100ns CAL state ~4.179 V; screenshot shows old log only and cannot establish further progress. Existing low-J baseline Gate0 unresolved.
+- NEXT read-only inspect `grep -nEi -C 4 'Plot|Save|CurrentPlot|Time[[:space:]]*=' /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/pp2_des.cmd | tail -n 120` and, if appropriate, alternate TDR locations. No changes to CAL process, solver or source.
+
 ## 2026-10-11 ~16:41 KST — JuSubin 100ns CAL accepted ~4.179V (OBSERVED screenshot)
 - Actual `CMP_BASELINE_1.2.0_CAL/n2_des.out` screenshot: accepted BE 0.835804→0.835806s (`RHS=7.30e-04<1e-3`), anode voltage ~4.179V, total terminal current 5.555e-14 A/um in the documented 2D convention. About **83.58% of the 0→5V voltage sweep**, not compute time; prior Oct10 saved ~4.14965V -> +~0.029V.
 - Next BE 0.835806→0.835808s trial Newton RHS ~1.03e-3–1.09e-3 (iterations 2-6), still above 1e-3; later acceptance/failure not in screenshot. 5V completion/ETA **UNRESOLVED**, no observed fatal termination.

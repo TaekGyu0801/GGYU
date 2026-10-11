@@ -1,3 +1,8 @@
+## 2026-10-11 ~16:45 KST — JuSubin locates CAL pp2_des.cmd (OBSERVED)
+- READ-ONLY `ls -lh .../CMP_BASELINE_1.2.0_CAL/*des.cmd` screenshot verifies three files: `FASTC1_pp6_des.cmd`, `pp2_des.cmd`, `sdevice_des.cmd`. Node2 `pp2_des.cmd` present (~5.8 KB, Oct10 00:40). No file body/Plot/Save schedule was printed yet; no proof of a 4V spatial TDR.
+- Previous accepted 100ns CAL state ~4.179 V; screenshot shows old log only and cannot establish further progress. Existing low-J baseline Gate0 unresolved.
+- NEXT read-only inspect `grep -nEi -C 4 'Plot|Save|CurrentPlot|Time[[:space:]]*=' /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/pp2_des.cmd | tail -n 120` and, if appropriate, alternate TDR locations. No changes to CAL process, solver or source.
+
 ## 2026-10-11 ~16:41 KST — 주수빈 CAL 100ns 4.179V read-only handoff (OBSERVED)
 - Worker 주수빈 / ChatGPT. Source: current MobaXterm `CMP_BASELINE_1.2.0_CAL/n2_des.out` screenshot. Accepted BE 0.835804→0.835806s with RHS 7.30e-4 (<RHSMin 1e-3); accepted anode 4.179E+00 V, TotalCurrent 5.555E-14 A/um (2D convention). Voltage sweep to 5V ~83.58%, not wallclock percentage; increment from previous CAL 4.14965446V PLT ~0.029V.
 - Next trial 0.835806→0.835808s, Newton RHS iter2–6 1.03e-3–1.09e-3; screen ends mid-step, later success/cutback/failure unknown. Do not confuse with separate completed `JUSUBIN_FAST_HALF_5V_TEST` or earlier failed FAST_C1.

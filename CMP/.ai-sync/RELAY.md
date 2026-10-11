@@ -1,3 +1,8 @@
+## 2026-10-11 17:39 KST — CAL4V clone is still original 5V source
+- OBSERVED grep of newly cloned `CMP_BASELINE_1.3.0_CAL4V/sdevice_des.cmd`: `FinalTime=1.0`, `Voltage=5.0`, `FilePrefix=n@node@_5V_ckpt`; previous multiline script did not apply.
+- Gave JuSubin short terminal commands `cd` to clone, `cp -pn sdevice_des.cmd sdevice_des.cmd.bak_5V`, `sed -i -E` changing FinalTime1→0.8, Goal Voltage5→4, 5V_ckpt→4V_ckpt, then GNU sed insert post-transient `Plot(FilePrefix="n@node@_4V_final")` immediately before end Save. Await user execution: NOT yet confirmed applied.
+- Original active CAL5V and completed parent must not be touched. Next inspect `tail -n 40 sdevice_des.cmd` and `grep ... InGaN .../FASTC1_pp6_des.par` for 100ns, optional intermediate t0.76 Plot/Save after file structure confirmation; SWB Preprocess before Run. Low-J Gate0 persists.
+
 ## 2026-10-11 17:28 KST — JuSubin 4V CAL Python heredoc still in terminal continuation (OBSERVED)
 - MobaXterm screenshot displays `?` continuation prompt for pasted Python code and closing `? PY`, but **no SUCCESS/STOP or normal prompt**. The clone source edit is unverified; this is an interactive-shell input state, not SDevice solver failure. Advise one Enter on closing PY; if `?` persists Ctrl+C, explicitly enter bash and retry script. Read-only `grep -nE 'FinalTime|Voltage|3p8V|4V_final|4V_ckpt' .../CMP_BASELINE_1.3.0_CAL4V/sdevice_des.cmd` plus backup listing before SWB Preprocess/Run. Active 5V CAL and parent 5V_TEST unchanged as far as evidence shows.
 

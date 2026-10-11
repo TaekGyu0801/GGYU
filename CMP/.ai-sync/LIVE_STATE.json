@@ -1928,5 +1928,13 @@
     "needReadOnly": "sed -n '580,612p' /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/pp2_des.cmd; check source sdevice_des.cmd Solve tail",
     "currentStatus": "No school-server source edits or new node run verified",
     "scientificCaution": "4V pilot is not physically validated final baseline; low-current Gate0 outstanding"
+  },
+  "latestCAL4VVerifiedCode": {
+    "date": "2026-10-11 17:20 KST",
+    "worker": "주수빈",
+    "status": "SOURCE_CONFIRMED_PATCH_NOT_APPLIED",
+    "original": "5V Goal at FinalTime1s, 5V Save after Transient",
+    "proposed": "Clone: 4V Goal at FinalTime0.8s, optional 3.8V intermediate Plot/Save, final 4V Plot/Save; retain 100ns CAL model",
+    "next": "SWB clone/edit/preprocess then RUN; do not edit active original"
   }
 }

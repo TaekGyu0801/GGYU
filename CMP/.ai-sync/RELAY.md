@@ -1,3 +1,8 @@
+## 2026-10-11 — JuSubin: separate 100ns CAL 4V clone requested; NOT RUN
+- DECISION: clone live `CMP_BASELINE_1.2.0_CAL` to versioned project (candidate `CMP_BASELINE_1.3.0_CAL4V`, check name uniqueness), keep active CAL as-is. User plans a 4V run with 100ns InGaN SRH and NtSide0, besides separate 5V_TEST NtSide1e18 split.
+- Draft source changes only in cloned `sdevice_des.cmd`: Transient Goal anode 5V→4V and FinalTime1→0.8 to keep ramp 5V/s, add post-ramp 4V Plot TDR + Save checkpoint. Need actual source Solve tail and pp2 lines 580–612 before final exact patch; never edit generated pp2. Preprocess validate then Run.
+- No server code edit/job start/abort has been observed; physical low-current baseline Gate0 unresolved. Preserve original results and active jobs.
+
 ## 2026-10-11 — JuSubin DECISION: 5V_TEST parent NtSide0 → NtSide1e18 split now (RUN UNVERIFIED)
 - Due to very slow 100ns CAL, researcher chooses prior completed `JUSUBIN_FAST_HALF_5V_TEST` NtSide0 5V as **working numerical comparison parent** and NtSide=1e18 SDevice split; this does NOT certify physical common baseline or indicate new run already launched. CAL ongoing/unchanged, parent 5V outputs must stay preserved.
 - Sep26 trap-on Node12 fail involved stale/nonidentical source or parameter revision, so only clean same-input `ppN_des.cmd/par` NtSide-only comparison passes the pre-run gate. First preserve n2 5V logs/PLT/TDR, add NtSide=1e18 parameter case with original 0 case intact; preprocess before costly RUN; verify all damaged-region Conc, no other Physics/Math/Solve/custom .par change, intended 5V Goal and no stale cached 0-case. Run trap-on only after checks. No new server actions confirmed yet.

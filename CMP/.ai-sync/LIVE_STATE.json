@@ -1857,5 +1857,23 @@
     ],
     "nextAction": "READ ONLY inspect pp2_des.cmd lines580–612 actual Goal, output data, effective 100ns parameter; request decision before any new run or stopping active CAL",
     "serverJobChanged": false
+  },
+  "latestBaselineReuseProposal": {
+    "date": "2026-10-11",
+    "worker": "주수빈",
+    "status": "PROPOSED_ONLY_NOT_FROZEN",
+    "candidate": "JUSUBIN_FAST_HALF_5V_TEST",
+    "confirmed": "NtSide=0 reached 5.0V and SDevice completed 2026-10-09 14:29:52 KST",
+    "recommendedRole": "working numerical/solver reference, not qualified publication baseline",
+    "gate0": "low physical injection/current density unresolved; conditional J~7.24e-4 A/cm² at 5V and QW radiative share~0.1095% not accepted as IQE",
+    "missing": [
+      "verify 2D current and AreaFactor/steady state",
+      "audit band/injection QW rates and lifetime",
+      "NtSide 1e18 convergence",
+      "half/full mesh equivalence and clean account reproducibility"
+    ],
+    "calStatus": "Current CAL 100ns sensitivity independent; last accepted ~4.179V, no current run modification",
+    "next": "Read-only audit archived 5V_TEST n2_des.plt/TDR and effective model; no A/B production baseline freeze until gates met",
+    "statusChangeApproved": false
   }
 }

@@ -1,3 +1,7 @@
+## 2026-10-11 17:20 KST — JuSubin 4V CAL source-tail screenshot
+- Original running CAL source observed: anode Goal5V, FinalTime1.0, Increment1.2, InitialStep1e-5, MinStep1e-9, MaxStep1e-3, coupled15; one 5V Save after transient. Stale comment 0.3V ignored.
+- Copy/paste change proposed for NEW clone only: FinalTime0.8, Goal4.0, intermediate Plot/Save at t0.76, final Plot+Save 4V, preserve 100ns InGaN .par. No running jobs or source changed yet. Next SWB Clone→edit→Preprocess verify→Run. Record run only on user proof.
+
 ## 2026-10-11 — JuSubin: separate 100ns CAL 4V clone requested; NOT RUN
 - DECISION: clone live `CMP_BASELINE_1.2.0_CAL` to versioned project (candidate `CMP_BASELINE_1.3.0_CAL4V`, check name uniqueness), keep active CAL as-is. User plans a 4V run with 100ns InGaN SRH and NtSide0, besides separate 5V_TEST NtSide1e18 split.
 - Draft source changes only in cloned `sdevice_des.cmd`: Transient Goal anode 5V→4V and FinalTime1→0.8 to keep ramp 5V/s, add post-ramp 4V Plot TDR + Save checkpoint. Need actual source Solve tail and pp2 lines 580–612 before final exact patch; never edit generated pp2. Preprocess validate then Run.

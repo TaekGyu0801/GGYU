@@ -1,3 +1,9 @@
+## 2026-10-11 — Prior low-J audit already performed by LeeTaekGyu (HANDOFF CORRECTION)
+- User JuSubin correctly pointed out historical sequence: Oct9 parent 5V_TEST 4QW regional Rrad/SRH/Auger integrals and actual InGaN.par Scharfetter 1ns maximum lifetime were inspected by LeeTaekGyu; excessive SRH from overly short lifetime became a **hypothesis**.
+- Oct10 clone CAL custom .par **actually updated** to InGaN Scharfetter taumax=1e-7s (100ns both carriers) and saved on server (confirmed by tail; change should not be repeatedly questioned as though never made). Same geometry and numerics parent remained a numerical reference. 100ns max is not uniform effective lifetime or proof it fixes terminal low-J.
+- At approx 4.0V, prior 5V_TEST I2D 3.505521343e-14 A/um at 4.003369V and CAL I2D 3.497895e-14 A/um at 3.999674V (~0.22% raw difference at slightly different bias), no observed improvement in electrical current at that comparison point. No CAL ~4V spatial QW IQE TDR yet; 5V CAL incomplete.
+- Stop proposing to redo the **already completed** prior baseline SRH / MaterialDB investigation. Next question is whether 100ns affects recombination/IQE at matched injection, while isolating distinct carrier transport/current density normalization concern (Gate0). Preserve CAL and finished parent, no code/job action.
+
 ## 2026-10-11 — 주수빈 baseline strategy: preserve successful 5V_TEST as working reference (PROPOSED, NOT FROZEN)
 - `JUSUBIN_FAST_HALF_5V_TEST` NtSide=0 completed 5V SDevice Oct9 14:29:52 KST; serves as a **numerical working/solver baseline candidate**, not validated/frozen Common Baseline.
 - Physical Gate0 persists: 5V I2D~1.448e-11 A/um, conditional J~7.24e-4 A/cm2 under 2um half-width, low all-QW radiative share~0.1095% (not validated IQE); current normalization, operating J, QW recombination/transport and effective τ must be audited. NtSide1e18 and Half vs Full equivalence unverified.

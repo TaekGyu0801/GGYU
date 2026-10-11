@@ -1841,5 +1841,21 @@
     "nextReadOnlyCommand": "sed -n '580,612p' /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/pp2_des.cmd",
     "otherAudit": "Verify effective 100ns physical lifetime in FASTC1_pp6_des.par and log before calibration claim",
     "jobChanged": false
+  },
+  "latestVoltageLimitProposal": {
+    "date": "2026-10-11",
+    "worker": "주수빈",
+    "status": "PROPOSED_ONLY",
+    "proposedDiagnosticMaxVoltageV": 4,
+    "baselineDocumentOriginalSweep": "0→5V, unchanged",
+    "motivation": "CAL takes extremely long beyond 4V; 5V is an initial I-V scan limit and not confirmed mandatory operating point",
+    "caveats": [
+      "At ~4V current density still very low, Gate0 physical injection validity unresolved",
+      "Near-4V CAL 100ns I2D=3.497895e-14 A/um, conditional J~1.75e-6 A/cm² assuming 2um width and 2D units; transient/displacement effects unresolved",
+      "Current live CAL has already accepted ~4.179V; changing its endpoint cannot retroactively create 4V spatial TDR",
+      "New 4V diagnostic pilot requires separate clone and explicit snapshot output; original 5V common baseline preserved"
+    ],
+    "nextAction": "READ ONLY inspect pp2_des.cmd lines580–612 actual Goal, output data, effective 100ns parameter; request decision before any new run or stopping active CAL",
+    "serverJobChanged": false
   }
 }

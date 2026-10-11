@@ -1,3 +1,12 @@
+## 2026-10-11 ~16:41 KST — JuSubin CAL 100 ns advances to accepted ~4.179 V (OBSERVED n2_des.out screenshot)
+
+- Worker: 주수빈, ChatGPT. Source: user-provided MobaXterm live `/user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/n2_des.out` screenshot. This is the separate InGaN SRH-lifetime 100 ns sensitivity case, **not** the already completed 5V_TEST parent.
+- A BE step `0.835804 -> 0.835806 s` (stepsize `1.9143e-06 s`) **accepted** with Newton iteration 2 `|Rhs|=7.30e-04 < 1e-03`, `Finished, because |RHS| less than 1e-3`. Accepted anode voltage **4.179E+00 V** and anode terminal `TotalCurrent=5.555E-14` (2D A/um convention; transient displacement/current-density normalization unresolved). At 0-to-5 V per 1 s ramp this corresponds to **~83.58% of bias sweep, not wallclock progress**.
+- Next trial `0.835806 -> 0.835808 s`, step `2.2972e-06 s`, screenshots show Newton iterations 0-6 with RHS `~1.03e-03 to 1.09e-03` for iterations 2-6, slightly above `RHSMin=1e-03`. Whether this trial later converges or cuts back is **UNRESOLVED**: screenshot ends mid-iteration; no displayed fatal error or simulation completion.
+- Relative to 2026-10-10 ~22:30 saved PLT row 4.14965446 V, latest accepted displayed ~4.179 V is ~0.0293 V higher, with different display precisions/sources. No credible 5V ETA from voltage fraction, especially with repeated tiny steps.
+- Existing low-injection / very-low-J Gate 0 persists: no physical baseline freeze or Project A/B production. Previous CAL folder top-level listing had no n2*.tdr/sav; investigate alternate stored spatial outputs and actual Plot/Save directives **READ-ONLY**, do not assume stopping produces a usable 4V TDR. No SWB, code, running job or solver change performed by ChatGPT.
+- NEXT: preserve CAL, read-only inspect current later log/out + `ls .../*des.cmd` then `grep -nEi -C 3 'Plot|Save|CurrentPlot|FinalTime|Time[[:space:]]*=' .../pp2_des.cmd` (use actual existing cmd file), and check alternate TDR locations before any shorten/stop decision.
+
 ## 2026-10-10 ~22:38 KST — CAL n2* files listed; no TDR/SAV in top-level folder (OBSERVED terminal screenshot; 4V space-state missing or saved elsewhere UNRESOLVED)
 
 - Worker 주수빈 executed READ-ONLY `find /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL -maxdepth 1 -type f -name 'n2*' -printf '%f %k KB\n' | sort` while separate `CMP_BASELINE_1.2.0_CAL` (InGaN SRH tau 100 ns sensitivity) has been progressing slowly above 4V.

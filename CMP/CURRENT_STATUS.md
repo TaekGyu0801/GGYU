@@ -1,3 +1,7 @@
+## 2026-10-11 17:20 KST — CAL 4V clone patch pending (OBSERVED source, NOT RUN)
+- User screenshot confirms source Solve with original anode Goal=5V, FinalTime=1.0, post-Transient 5V Save. 4V new clone only: Goal=4V, FinalTime=.8, intermediate Plot/Save at t=.76 (~3.8V), final Plot/Save at 4V, same 100ns custom .par and NtSide0.
+- Running 5V CAL untouched; original 5V_TEST NtSide0 and NtSide1e18 plan separate. Next user clone+edit source, Preprocess, verify expanded command/par, RUN and show log. Baseline low-J Gate0 persists.
+
 ## 2026-10-11 — JuSubin DECISION: stage CAL 100ns 4V branch for run today (CODE PROPOSAL, NOT APPLIED)
 - Worker 주수빈: in addition to a separate 5V_TEST NtSide=1e18 split, wants to edit today's 100ns CAL maximum applied voltage from 5V to 4V and launch before leaving. User explicitly requested code revision, but **school-server SWB files are not directly accessible from GitHub/ChatGPT**; no server changes or run verified. Running original `CMP_BASELINE_1.2.0_CAL` last accepted ~4.179V is NOT to be edited in-place, since altering on-disk input cannot retroactively make it save the earlier ~4.0V TDR.
 - Planned versioned clone, tentative unique project name `CMP_BASELINE_1.3.0_CAL4V` (must check not already used on school server before creation). Preserve original CAL and 5V_TEST, and 100ns InGaN Scharfetter custom `FASTC1_pp6_des.par`. New case NtSide=0, all material/physics/mesh/solver unchanged except intentional voltage sweep endpoint and output scheduling.

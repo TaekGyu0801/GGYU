@@ -2,7 +2,7 @@
   "updated": "2026-10-11",
   "primaryWorker": "주수빈",
   "phase": "Phase 0 — working 5V reference NtSide 0/1e18 comparison; physical Gate0 low-J still unresolved",
-  "task": "JuSubin decision: create/preprocess NtSide1e18 split on original completed JUSUBIN_FAST_HALF_5V_TEST without waiting for 100ns CAL",
+  "task": "JuSubin plans NtSide1e18 5V_TEST split and separate CAL 100ns 4V run, pending SWB source confirmation",
   "status": "BASELINE_5V_SOLVE_COMPLETE_LOW_J_UNVALIDATED_AB_PRODUCTION_NO_GO",
   "blocker": "Nominal half-device J at 5V ~7.24e-4 A/cm2 under documented 2D normalization; radiative/QW recombination share ~0.1095%; physically meaningful operating region and injection barriers not yet established. Separate CAL latest direct log accepted ~4.149V and next BE Newton RHS oscillates above 1e-3; 5V convergence and physical J validation unresolved.",
   "parallelWork": {
@@ -1910,5 +1910,23 @@
     "CAL": "Separate 100ns sensitivity experiment; no stopping authorized",
     "baselineFreeze": "NOT_FROZEN; low-J Gate0 and IQE validity unresolved",
     "userSchoolServerAction": "NOT_YET_OBSERVED"
+  },
+  "latestCAL4VPlan": {
+    "date": "2026-10-11",
+    "classification": "DECISION_AND_CODE_DRAFT_NOT_APPLIED",
+    "worker": "주수빈",
+    "goal": "Launch separate InGaN 100ns CAL 4V endpoint run today without waiting for original 5V CAL",
+    "candidateProjectName": "CMP_BASELINE_1.3.0_CAL4V (verify name unused)",
+    "origin": "CMP_BASELINE_1.2.0_CAL",
+    "changes": "CLONE sdevice_des.cmd: FinalTime 1.0→0.8; Goal anode 5.0V→4.0V to preserve slope 5V/s; explicit post-transient Plot n@node@_4V_final and Save n@node@_4V_ckpt",
+    "preserve": [
+      "active original 5V CAL",
+      "finished JUSUBIN_FAST_HALF_5V_TEST NtSide0",
+      "separate NtSide1e18 split plan",
+      "custom 100ns InGaN Scharfetter par"
+    ],
+    "needReadOnly": "sed -n '580,612p' /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/pp2_des.cmd; check source sdevice_des.cmd Solve tail",
+    "currentStatus": "No school-server source edits or new node run verified",
+    "scientificCaution": "4V pilot is not physically validated final baseline; low-current Gate0 outstanding"
   }
 }

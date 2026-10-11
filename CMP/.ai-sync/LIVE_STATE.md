@@ -1,3 +1,8 @@
+## 2026-10-11 ~16:41 KST — JuSubin 100ns CAL accepted ~4.179V (OBSERVED screenshot)
+- Actual `CMP_BASELINE_1.2.0_CAL/n2_des.out` screenshot: accepted BE 0.835804→0.835806s (`RHS=7.30e-04<1e-3`), anode voltage ~4.179V, total terminal current 5.555e-14 A/um in the documented 2D convention. About **83.58% of the 0→5V voltage sweep**, not compute time; prior Oct10 saved ~4.14965V -> +~0.029V.
+- Next BE 0.835806→0.835808s trial Newton RHS ~1.03e-3–1.09e-3 (iterations 2-6), still above 1e-3; later acceptance/failure not in screenshot. 5V completion/ETA **UNRESOLVED**, no observed fatal termination.
+- Gate0 remains **LOW-J UNRESOLVED**; 4V spatial TDR/Save currently not confirmed. Do NOT Stop/Abort CAL solely from terminal voltage. Next READ-ONLY inspect later n2_des.log/out, actual Plot/Save directives, and any alternate saved TDR paths; no SWB or simulation change.
+
 ## 2026-10-10 ~22:38 KST — JuSubin CAL 100ns folder n2* inventory read-only
 - OBSERVED screenshot: top-level `CMP_BASELINE_1.2.0_CAL` n2-prefixed files only `n2_des.err` (12KB), `.job` (4KB), `.log` (5120KB), `.out` (5376KB), `.plt` (1416KB), `.sta` (4KB), `n2_local.err` (0KB). No `n2*.tdr` or `n2*.sav` at this level. This does NOT exclude snapshots in subdirectories/differently named paths.
 - Existing near-4V transient `n2_des.plt` point V=3.99967374V, I=3.497895e-14 A/um is preserved, but 4V spatial state/QW recombination for IQE is NOT confirmed. Do not stop/abort CAL (may not preserve ~4V TDR). NEXT read-only inspect actual SDevice `Plot`/`Save` directives via `n2_des.cmd` or `pp2_des.cmd` and alternate output locations. Low-current Gate0 still active. No TCAD job/source changes.

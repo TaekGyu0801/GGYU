@@ -1,3 +1,8 @@
+## 2026-10-11 ~16:41 KST — JuSubin CAL 100ns n2 accepted ~4.179V (OBSERVED)
+- Screenshot from `CMP_BASELINE_1.2.0_CAL/n2_des.out`: BE 0.835804→0.835806s accepted (`RHS=7.30e-04 <1e-3`); anode=4.179E+00 V, total current=5.555E-14 A/um in 2D convention.
+- 5V goal relative sweep ~83.58%, **not runtime completion**; ~0.029V advancement vs Oct10 PLT 4.14965446V. Next BE 0.835806→0.835808s Newton iter2-6 RHS ~1.03e-3 to 1.09e-3 above threshold; later convergence unresolved. 5V not confirmed; no runtime ETA.
+- Continue preserving CAL job; check subsequent log and Plot/Save/TDR availability read-only; 4V IQE state not confirmed, low-current Gate0 still blocking baseline freeze and A/B. No TCAD/solver/code change.
+
 ## 2026-10-10 ~22:38 KST — CAL n2* files listed; no TDR/SAV in top-level folder (OBSERVED terminal screenshot; 4V space-state missing or saved elsewhere UNRESOLVED)
 
 - Worker 주수빈 executed READ-ONLY `find /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL -maxdepth 1 -type f -name 'n2*' -printf '%f %k KB\n' | sort` while separate `CMP_BASELINE_1.2.0_CAL` (InGaN SRH tau 100 ns sensitivity) has been progressing slowly above 4V.

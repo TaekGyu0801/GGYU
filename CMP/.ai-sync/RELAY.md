@@ -1,3 +1,9 @@
+## 2026-10-11 — 주수빈 4V diagnostic cutoff requested (PROPOSED, not adopted)
+- User worries 100ns CAL 5V ramp costs too much time; asks whether 4V endpoint is acceptable and why 5V was originally chosen. GitHub `COMMON_BASELINE.md` documents initial forward sweep 0→5V but does not identify 5V as a mandatory physical turn-on or operating voltage.
+- 4V can bound a **separate diagnostic pilot**, but 4V alone cannot validate the baseline while 5V_TEST low-J Gate0 remains unresolved. Current CAL PLT near 4V raw I2D 3.497895e-14 A/um (conditional J ~1.75e-6 A/cm² for 2um width, 2D normalization and displacement not validated). Existing nominal 5V_TEST J ~7.24e-4 A/cm² is already low under documented convention.
+- Old 0→5V reference and running CAL protected; current CAL already accepted ~4.179V and post-transient `Save` cannot retrospectively yield a 4V TDR. Any new shortened run needs versioned copy, maintained comparison conditions, explicit 4V spatial `Plot/Save` and controlled validation. No server edits.
+- NEXT read-only `sed -n '580,612p' /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/pp2_des.cmd` for goal/ramp; check effective 100ns par before claiming calibration, discuss user decision about new 4V pilot vs running CAL. NOT confirmed baseline freeze.
+
 ## 2026-10-11 16:46 KST — 주수빈 CAL Save placement confirmed
 - OBSERVED in live node2 `pp2_des.cmd` screenshot: `Save(FilePrefix="n2_5V_ckpt")` is after the transient block; no intermediate time-specific Plot/Save lines in grep. `Plot="n2_des.tdr"` declares an output file, not a 4V snapshot. 4V PLT terminal I-V is available; 4V TDR unknown.
 - File points to `FASTC1_pp6_des.par`. Comment claims 0–0.3V smoke but actual run accepted ~4.179V. Actual Goal is in unseen code lines.

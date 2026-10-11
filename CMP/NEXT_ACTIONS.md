@@ -1,3 +1,8 @@
+## 2026-10-11 ~16:45 KST — JuSubin locates CAL pp2_des.cmd (OBSERVED)
+- READ-ONLY `ls -lh .../CMP_BASELINE_1.2.0_CAL/*des.cmd` screenshot verifies three files: `FASTC1_pp6_des.cmd`, `pp2_des.cmd`, `sdevice_des.cmd`. Node2 `pp2_des.cmd` present (~5.8 KB, Oct10 00:40). No file body/Plot/Save schedule was printed yet; no proof of a 4V spatial TDR.
+- Previous accepted 100ns CAL state ~4.179 V; screenshot shows old log only and cannot establish further progress. Existing low-J baseline Gate0 unresolved.
+- NEXT read-only inspect `grep -nEi -C 4 'Plot|Save|CurrentPlot|Time[[:space:]]*=' /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/pp2_des.cmd | tail -n 120` and, if appropriate, alternate TDR locations. No changes to CAL process, solver or source.
+
 ## 2026-10-10 ~22:38 KST — CAL n2* files listed; no TDR/SAV in top-level folder (OBSERVED terminal screenshot; 4V space-state missing or saved elsewhere UNRESOLVED)
 
 - Worker 주수빈 executed READ-ONLY `find /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL -maxdepth 1 -type f -name 'n2*' -printf '%f %k KB\n' | sort` while separate `CMP_BASELINE_1.2.0_CAL` (InGaN SRH tau 100 ns sensitivity) has been progressing slowly above 4V.

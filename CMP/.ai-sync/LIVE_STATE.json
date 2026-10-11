@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-10",
-  "primaryWorker": "이택규",
+  "updated": "2026-10-11",
+  "primaryWorker": "주수빈",
   "phase": "Phase 0 — low-current / injection validity Gate 0 before Baseline freeze and Project A/B",
   "task": "Read-only physics audit of existing completed 5V half device; CAL risk monitoring; triage Claude independent review",
   "status": "BASELINE_5V_SOLVE_COMPLETE_LOW_J_UNVALIDATED_AB_PRODUCTION_NO_GO",
@@ -1786,5 +1786,22 @@
     "nextReadOnly": "check device command Plot/Save directives, and alternate paths/names before modifying runtime",
     "userAuthorizedStop": false,
     "solverCodeOrProcessChanged": false
+  },
+  "latestCALObservation": {
+    "timeKST": "2026-10-11 16:41",
+    "source": "user screenshot of CMP_BASELINE_1.2.0_CAL/n2_des.out",
+    "status": "OBSERVED",
+    "case": "InGaN SRH lifetime 100ns sensitivity, NtSide=0",
+    "lastAcceptedPseudoTimeS": 0.835806,
+    "lastAcceptedVoltageApproxV": 4.179,
+    "lastAcceptedAnodeTotalCurrent_A_per_um": 5.555e-14,
+    "lastAcceptedRHS": 0.00073,
+    "targetVoltageV": 5,
+    "voltageSweepPctApprox": 83.58,
+    "nextTrial": "0.835806→0.835808 s, Newton iter2-6 RHS ~1.03e-3 to 1.09e-3 >1e-3; later outcome not visible",
+    "wallclockETA": "unknown",
+    "gate0": "UNRESOLVED_LOW_CURRENT",
+    "spatial4VTDR": "UNRESOLVED",
+    "next": "Preserve CAL; read-only inspect later log, Plot/Save and saved TDR paths"
   }
 }

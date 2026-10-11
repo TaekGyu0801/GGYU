@@ -1,3 +1,6 @@
+## 2026-10-11 17:20 KST — JuSubin CAL 4V source patch prepared (NOT RUN)
+- Original source Solve confirmed 5V Goal, FinalTime1s, Save after Transient. Separate clone only: 4V Goal, FinalTime0.8s, 3.8V intermediate and 4V end Plot/Save; 100ns custom parameter unchanged. Await SWB clone/preprocess/run proof. Original live 5V CAL untouched.
+
 ## 2026-10-11 — JuSubin requests new 4V CAL run; code drafted, not yet executed
 - Parallel jobs planned: (1) 5V_TEST NtSide=1e18 split using 1ns physical parent; (2) **separately cloned** 100ns CAL at 4V. Do NOT change running original 5V CAL or 5V_TEST parent. User did not ask to abort either run.
 - Proposed clone project `CMP_BASELINE_1.3.0_CAL4V` (first verify name is unused on remote server). In cloned `sdevice_des.cmd` ONLY: keep existing transient physics/math, set `Goal{Name="anode" Voltage=4.0}` and `FinalTime=0.8` together to preserve original 5V/sec sweep, add post-transient `Plot(FilePrefix="n@node@_4V_final")` and `Save(FilePrefix="n@node@_4V_ckpt")`. Preserve existing InGaN Scharfetter `taumax=1e-7s` custom par and 2D geometry. Do not edit generated pp2_des.cmd.

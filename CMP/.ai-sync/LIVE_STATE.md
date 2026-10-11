@@ -1,3 +1,8 @@
+## 2026-10-11 ~16:46 KST — JuSubin CAL Plot/Save checkpoint review (OBSERVED)
+- Actual screenshot of `CMP_BASELINE_1.2.0_CAL/pp2_des.cmd`: File Plot `n2_des.tdr`, Current `n2_des.plt`, Output `n2_des.log`; Parameters `FASTC1_pp6_des.par`. `Plot{...}` field list is not bias-time output. Transient from 0 to FinalTime 1.0, MaxStep 1e-3, MinStep 1e-9; `Save(FilePrefix="n2_5V_ckpt")` is **after** Transient closes. No in-transient Plot(Time=...) or Save(Time=...) in the matching grep output, so no confirmed ~4V spatial checkpoint despite available I-V PLT. Existing top-level TDR/SAV absent in prior inventory; deeper/alternate paths still unverified.
+- `0->0.3V smoke` source comment likely stale compared to observed accepted 4.179V; inspect full `sed -n '580,612p' .../pp2_des.cmd` to see actual Goal. Verify 100ns lifetime override in active parameter file later; do not interpret file name alone as calibration proof.
+- Preserve active CAL, don't abort while data retention uncertain; low-J Gate0 and 5V CAL completion unresolved. No server model/process edits.
+
 ## 2026-10-11 ~16:45 KST — JuSubin CAL node2 input file found (OBSERVED)
 - CAL directory read-only listing confirmed `FASTC1_pp6_des.cmd`, `pp2_des.cmd`, and `sdevice_des.cmd`; node2 preprocessed `pp2_des.cmd` exists. Plot/Save contents not yet inspected; 4V spatial TDR still unverified.
 - Previous accepted CAL 100ns ~4.179V unchanged by current screenshot; 5V ETA unknown; low-current Gate0 unresolved. Next read-only grep Plot/Save in `pp2_des.cmd`. No TCAD source/job changes.

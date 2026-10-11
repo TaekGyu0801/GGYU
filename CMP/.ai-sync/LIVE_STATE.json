@@ -1803,5 +1803,19 @@
     "gate0": "UNRESOLVED_LOW_CURRENT",
     "spatial4VTDR": "UNRESOLVED",
     "next": "Preserve CAL; read-only inspect later log, Plot/Save and saved TDR paths"
+  },
+  "latestCALCommandFilesObservation": {
+    "timeKST": "2026-10-11 16:45",
+    "status": "OBSERVED",
+    "source": "user screenshot of read-only ls -lh for CMP_BASELINE_1.2.0_CAL/*des.cmd",
+    "files": [
+      "FASTC1_pp6_des.cmd",
+      "pp2_des.cmd",
+      "sdevice_des.cmd"
+    ],
+    "node2PreprocessedCmd": "CMP_BASELINE_1.2.0_CAL/pp2_des.cmd",
+    "plotSaveSchedule": "UNRESOLVED; file content not yet read",
+    "nextReadOnlyCommand": "grep -nEi -C 4 'Plot|Save|CurrentPlot|Time[[:space:]]*=' /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.2.0_CAL/pp2_des.cmd | tail -n 120",
+    "simulationModified": false
   }
 }

@@ -1,3 +1,7 @@
+## 2026-10-11 — JuSubin CAL4V code edit observed
+- User screenshot confirms new clone sdevice_des.cmd Goal anode Voltage4.0, preserved time-step math and final Plot n@node@_4V_final plus Save n@node@_4V_ckpt after Transient. Custom FASTC1_pp6_des.par InGaN Scharfetter taumax1e-7 electron/hole also confirmed. FinalTime0.8 cropped off the screenshot and still needs grep verification. No mid-3.8V output; optional, not needed to delay 4V run.
+- Next read-only FinalTime/source check; SWB CAL4V Preprocess only, verify pp command/par, then Run. Running original 5V CAL and older 5V_TEST untouched. Not physically frozen due low-J Gate0.
+
 ## 2026-10-11 17:39 KST — CAL4V clone still 5V code; safe shell edits instructed (OBSERVED / NOT YET APPLIED)
 - Screenshot read-only grep from new `CMP_BASELINE_1.3.0_CAL4V/sdevice_des.cmd`: FinalTime1.0 line587, Voltage5.0 line597, `n@node@_5V_ckpt` line608; no 4V or 3.8V output. Earlier heredoc script did not modify this file; SWB SDevice not run.
 - Worker instructed short separate commands only within clone: `cd`, `cp -pn sdevice_des.cmd sdevice_des.cmd.bak_5V`, GNU `sed -i -E` change FinalTime1→0.8 and Goal Voltage5→4, save prefix5→4, and second `sed -i` insert a final `Plot(FilePrefix="n@node@_4V_final")` before the Save. This retains 5V/s ramp. Existing completed 5V_TEST and separately active 5V CAL must stay untouched.

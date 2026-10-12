@@ -2,7 +2,7 @@
   "updated": "2026-10-12",
   "primaryWorker": "이택규",
   "phase": "Phase 0 — working 5V reference NtSide 0/1e18 comparison; physical Gate0 low-J still unresolved",
-  "task": "Low-J baseline physical gate: CAL4V MQW integrated radiative share 0.0122426% at 4V is very low vs functioning μLED literature; 2D current density conversion and effective recombination/injection need independent verification before A/B science.",
+  "task": "Both reported jobs numerical finished: CAL4V n2 at 4V and 5V_TEST n4 at 5V. Need verify n4 actual NtSide trap concentration and deck parity, 2D current density, and physical baseline Gate0.",
   "status": "BASELINE_5V_SOLVE_COMPLETE_LOW_J_UNVALIDATED_AB_PRODUCTION_NO_GO",
   "blocker": "Nominal half-device J at 5V ~7.24e-4 A/cm2 under documented 2D normalization; radiative/QW recombination share ~0.1095%; physically meaningful operating region and injection barriers not yet established. Separate CAL latest direct log accepted ~4.149V and next BE Newton RHS oscillates above 1e-3; 5V convergence and physical J validation unresolved.",
   "parallelWork": {
@@ -1985,7 +1985,10 @@
     "next": "Read last nN_des.log, ppN_des.cmd and inspect PLT/TDR/SAV for both. Avoid baseline freeze until physical Gate0 current and recombination validation.",
     "CAL4VNode2ActualLogVerified": true,
     "CAL4VNode2OutputFilesVerified": true,
-    "NtSide1e18SplitLogVerified": false
+    "NtSide1e18SplitLogVerified": false,
+    "FiveVTestNode4ActualLogVerified": true,
+    "FiveVTestNode4EndVVerified": true,
+    "Note": "n4 finished 5V, NtSide=1e18 identity not yet proven in pp4"
   },
   "cal4vCompletion20261012": {
     "project": "CMP_BASELINE_1.3.0_CAL4V",
@@ -2139,5 +2142,36 @@
       "compare at same bias/current with appropriate archived spatial data",
       "preserve parent; defer expensive runs until hypothesis targeted"
     ]
+  },
+  "node4FiveVTestFinish20261012": {
+    "status": "OBSERVED_SDEVICE_NORMAL_FINISH",
+    "project": "JUSUBIN_FAST_HALF_5V_TEST",
+    "node": "n4",
+    "screenshot": "n4_des.out tail shared by 이택규",
+    "finalAnodeVoltageV": 5,
+    "electronCurrentRaw": 7.534e-14,
+    "holeCurrentRaw": 6.975e-12,
+    "totalCurrentRaw": 7.05e-12,
+    "finishTimeKST": "2026-10-12 00:12:02",
+    "wallclockSeconds": 29806.55,
+    "totalCpuSeconds": 80172.55,
+    "peakMemoryGB": 3.11,
+    "checkpointSaved": "n4_5V_ckpt_des.sav",
+    "tdrSaved": "n4_des.tdr",
+    "IntendedNtSide": 1000000000000000000,
+    "NtSideActuallyVerifiedInPreprocessedN4": false,
+    "terminalCurrentUnitsAndAreaFactorVerified": false,
+    "priorN2NtSide0At5VRawTotalCurrent": 1.44801646079583e-11,
+    "rawN4ToN2CurrentRatio": 0.4868729182902603,
+    "causalityTrapOnlyVerified": false,
+    "next": "READ ONLY pp4_des.cmd trap Conc audit; compare pp2/pp4 effective .cmd/.par and current normalization; then MQW region-rate integrations of n4 vs n2 same 5V."
+  },
+  "ledColorVerification20261012": {
+    "confirmedDesign": "Blue InGaN/GaN 4-QW microLED",
+    "source": "CMP/COMMON_BASELINE.md; Kou et al Opt Express 2019 10.1364/OE.27.00A643",
+    "xIn": 0.15,
+    "nominalWavelengthNm": 445,
+    "measuredOrSimulatedELPeakVerified": false,
+    "efficiencyPointOneAmbiguous": "0.1 as fraction =10%; 0.1% =0.001 as fraction; 0.1 A/cm2 is current density, not efficiency"
   }
 }

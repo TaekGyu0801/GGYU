@@ -1,3 +1,9 @@
+## 2026-10-12 — 주수빈 5V_TEST n2 matched-current-nearest PLT current decomposition (OBSERVED)
+- Worker 주수빈. Terminal read-only parser output nearest recorded `n2_des.plt` point to n4 5V raw TotalCurrent target=7.05011114486348e-12: time=0.984673772998644s; anode OuterVoltage=4.92336886499322V; raw anode TotalCurrent=7.14463993632474e-12; DisplacementCurrent=3.0437121600456e-18; eCurrent=1.01944917915676e-13; hCurrent=7.0426919746969e-12.
+- Target-current deviation of this DISCRETE point = +1.34081278% (n2 vs n4); not exactly matched. Displacement/Total at selected n2 bias = 0.0000426013%, confirming negligible final comparison-point capacitive component. n4 actual 5V final Displacement=3.38231191699972e-18, Total=7.05011114486348e-12, fraction=0.0000479753%.
+- Previously two-point PLT interpolation gave n2 bias ~4.921801256V for exact n4 raw current and n4-minus-n2 +78.198744mV, but NO spatial TDR at that bias; 5V Radiative/SRH/Auger 4QW ratios cannot be interpreted as matched-current IQE. Neither negligible displacement nor electrode e/h fractions proves steady state or QW injection.
+- NEXT: read-only audit effective AreaFactor/2D current normalization in n2/n4 preprocessed SDevice decks and output logs (e.g. grep AreaFactor), before physical current density comparison. No solver rerun, model, mesh or result edits.
+
 ## 2026-10-12 — 주수빈 5V_TEST n2/n4 equal-raw-terminal-current bias from n2 PLT (OBSERVED + LINEAR INTERPOLATION)
 - Worker: 주수빈. Evidence: user terminal output of read-only 1023-point `n2_des.plt` scan against target `n4_des.plt` last 5V anode TotalCurrent=7.05011114486348e-12 (raw Sentaurus 2D values).
 - n2 bracketing recorded points: (V=4.91836886499322, I=6.84313365428304e-12, t=0.983673772998644s) and (V=4.92336886499322, I=7.14463993632474e-12, t=0.984673772998644s). Nearest discrete n2 sample is V=4.92336886499322, I=7.14463993632474e-12 (absolute error=9.452879146125942e-14).

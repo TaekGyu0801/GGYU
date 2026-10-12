@@ -1,3 +1,7 @@
+## 2026-10-12 — Next for JuSubin 5V_TEST: n4 anode decomposition
+- Read-only n2_des.plt parser succeeded (1023 records, 5V 1s): TotalCurrent 1.44801646079583e-11, DisplacementCurrent 3.29132361382365e-18; eCurrent 2.78143237811134e-13; hCurrent 1.42020180788235e-11. Displacement share ~0.00002273%. No DC/equal-J proof yet.
+- NEXT run same read-only parser on n4_des.plt, compare terminal component shares, then inspect full I-V to locate equal current and existing bias-resolved TDR. No new long run or source edits.
+
 ## 2026-10-12 — JuSubin confirms n2 PLT DF-ISE text Data structure (OBSERVED)
 - User screenshot shows `sed -n '1,28p' n2_des.plt` in 5V_TEST: `DF-ISE text`, `Info { version=1.0, type=xyplot, datasets=[time, electrode voltages and eCurrent/hCurrent/DisplacementCurrent/TotalCurrent/charge], functions=[...] }`, followed by `Data {` numeric entries wrapped over multiple lines. This is format inspection, not yet physical current extraction.
 - Next read-only parse the data numeric stream as dataset ordered records; validate count and last voltage/time, then compare both n2 and n4 anode current decomposition. Avoid misreading line-wrapped numeric values as independent records; no rerun/code edit.

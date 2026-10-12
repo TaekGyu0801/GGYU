@@ -2,7 +2,7 @@
   "updated": "2026-10-12",
   "primaryWorker": "이택규",
   "phase": "Phase 0 — working 5V reference NtSide 0/1e18 comparison; physical Gate0 low-J still unresolved",
-  "task": "CAL4V 4V EBL whole-domain SRH hotspot reported; independently verify AlGaN effective lifetime, central clean cutline and terminal/charge continuity. Residual terminal current is NOT proven 94% charging. NLM V2 held.",
+  "task": "LeeTaekGyu explicitly chose immediate single-factor CAL4V polarization activation 1.0 vs 0.5 sensitivity experiment on separate preserved-parent clone; NOT yet run. Verify actual active polarity model and T-2022.03 parameter semantics before edit; same 4V ramp/0.8s and all other parameters unchanged.",
   "status": "BASELINE_5V_SOLVE_COMPLETE_LOW_J_UNVALIDATED_AB_PRODUCTION_NO_GO",
   "blocker": "Nominal half-device J at 5V ~7.24e-4 A/cm2 under documented 2D normalization; radiative/QW recombination share ~0.1095%; physically meaningful operating region and injection barriers not yet established. Separate CAL latest direct log accepted ~4.149V and next BE Newton RHS oscillates above 1e-3; 5V convergence and physical J validation unresolved.",
   "parallelWork": {
@@ -2639,5 +2639,28 @@
     "matchCount": 0,
     "interpretation": "No explicit AreaFactor string in searched files. This does not independently verify 2D current unit, effective default scaling or physical J density.",
     "next": "Inspect actual planar half-device/contact width and Sentaurus T-2022.03 default normalization before assigning A/cm2. Do not rerun, change TCAD code or model."
+  },
+  "leeCAL4VPolarizationSensitivity20261012": {
+    "status": "USER_APPROVED_TEST_DESIGN_PROPOSED_NOT_RUN",
+    "parent": "CMP_BASELINE_1.3.0_CAL4V",
+    "candidate": "CMP_BASELINE_1.4.0_POL50 (verify naming and collision)",
+    "onlyPhysicsChange": "effective polarization activation factor 1.0 to 0.5 with same coverage; verify actual active deck scope and interface qPE",
+    "fixedConditions": [
+      "geometry/mesh/contacts/doping",
+      "SRH lifetime/traps/NtSide",
+      "band materials, polarization psps/a0/relax",
+      "thermionic and all other physics, no NLM",
+      "4 V Goal, FinalTime 0.8s, 5 V/s ramp",
+      "solver and current normalization"
+    ],
+    "validation": [
+      "actual preprocessed one-factor source diff",
+      "actual qPE/PE_Charge scaling at same interfaces",
+      "same time/bias anode/cathode I-V",
+      "EBL and eight-QW SRH/Radiative/Auger",
+      "QF and n/p/current, no claim physical baseline calibrated"
+    ],
+    "note": "Use separate clone; no old polarization-incompatible SAV restarts unless solver and physics semantics independently verified; user does not authorize additional factor or EBL lifetime edits.",
+    "schoolServerRun": "NOT PERFORMED BY CHATGPT"
   }
 }

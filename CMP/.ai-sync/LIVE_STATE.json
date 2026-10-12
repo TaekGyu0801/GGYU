@@ -2,7 +2,7 @@
   "updated": "2026-10-12",
   "primaryWorker": "이택규",
   "phase": "Phase 0 — working 5V reference NtSide 0/1e18 comparison; physical Gate0 low-J still unresolved",
-  "task": "CAL4V read-only low-J audit: pp2 global Physics Fermi, Thermionic, Piezoelectric_Polarization(strain), SRH/Auger/Radiative confirmed at 300 K. Next inspect active InGaN custom par Scharfetter tau; current normalization and carrier physics unresolved.",
+  "task": "CAL4V physics override audit: 12 DmgL region Physics blocks plus Clean_pGaN, global SRH/Radiative/Auger; no separate SRH/SurfaceRecombination match; Traps need direct grep. CAL4V low-J physical Gate0 unresolved.",
   "status": "BASELINE_5V_SOLVE_COMPLETE_LOW_J_UNVALIDATED_AB_PRODUCTION_NO_GO",
   "blocker": "Nominal half-device J at 5V ~7.24e-4 A/cm2 under documented 2D normalization; radiative/QW recombination share ~0.1095%; physically meaningful operating region and injection barriers not yet established. Separate CAL latest direct log accepted ~4.149V and next BE Newton RHS oscillates above 1e-3; 5V convergence and physical J validation unresolved.",
   "parallelWork": {
@@ -2245,5 +2245,31 @@
     "perMaterialRegionOverridesChecked": false,
     "lowJRootCauseIdentified": false,
     "next": "Read-only inspect FASTC1_pp6_des.par for InGaN Scharfetter effective lifetime, then check other Physics blocks and 2D current units. Do not change physical models pre-validation."
+  },
+  "cal4vRegionPhysicsAudit20261012": {
+    "status": "OBSERVED_PREPROCESSED_DECK_GREP",
+    "source": "user CAL4V pp2_des.cmd grep",
+    "globalPhysicsLine": 50,
+    "globalPiezoLine": 64,
+    "globalSRHLine": 80,
+    "cleanPGaNRegionPhysicsLine": 126,
+    "damagedRegionPhysicsLines": [
+      135,
+      159,
+      179,
+      199,
+      219,
+      239,
+      259,
+      279,
+      299,
+      319,
+      339,
+      359
+    ],
+    "separateSRHOrRecombinationMatchFound": false,
+    "literalSurfaceRecombinationOrSurfaceTrapOrInterfaceEqualMatchFound": false,
+    "caveat": "grep omitted Traps so no conclusion about actual region trap concentration or absence of surface SRV by any other syntax; 'SRHRecombination' at 398 is Plot output.",
+    "next": "Inspect read-only pp2_des.cmd Traps and Conc 12 blocks. Do not modify CAL4V model. JuSubin separate 5V_TEST track."
   }
 }

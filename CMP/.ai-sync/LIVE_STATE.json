@@ -2501,5 +2501,26 @@
     "displacementSharePercentApprox": 0.00002273,
     "caution": "Raw electrode-component fields: negligible displacement at final time, not proof of DC steady state, physical 2D AreaFactor calibration or adequate MQW injection.",
     "next": "Repeat read-only extraction for n4_des.plt, compare current component shares, then matched-current I-V and snapshot inspection."
+  },
+  "juSubin5Vn4AnodeCurrent20261012": {
+    "status": "OBSERVED_RAW_PLT_LAST_RECORD",
+    "worker": "주수빈",
+    "project": "JUSUBIN_FAST_HALF_5V_TEST",
+    "filename": "n4_des.plt",
+    "records": 1023,
+    "remainder": 0,
+    "timeSeconds": 1,
+    "anodeOuterVoltageV": 5,
+    "anodeTotalCurrentRaw": 7.05011114486348e-12,
+    "anodeDisplacementCurrentRaw": 3.38231191699972e-18,
+    "anodeElectronCurrentRaw": 7.53447212445082e-14,
+    "anodeHoleCurrentRaw": 6.97476304130706e-12,
+    "n2TotalCurrentRawAt5V": 1.44801646079583e-11,
+    "n4TotalCurrentChangePercentVsN2": -51.311940604675584,
+    "n4ElectronCurrentChangePercentVsN2": -72.91153945088212,
+    "n4HoleCurrentChangePercentVsN2": -50.88892999152659,
+    "n4DisplacementSharePercent": 0.00004797529921870779,
+    "caution": "Observed final-time raw 2D electrode fields; displacement is negligible at 5V but this is not verified steady state or AreaFactor/current-density normalization. Not QW injection balance.",
+    "next": "Read-only locate matched current on both I-V sweeps, then check saved bias-resolved spatial TDR availability."
   }
 }

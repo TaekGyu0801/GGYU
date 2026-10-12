@@ -1,3 +1,10 @@
+## 2026-10-12 — JuSubin 5V_TEST project-wide TDR/SAV inventory (OBSERVED)
+- Worker 주수빈; actual terminal screenshot command `find . -type f \( -name '*.tdr' -o -name '*.sav' \) | sort | head -n 100` from JUSUBIN_FAST_HALF_5V_TEST; only 10 matching entries displayed.
+- TDR: n1_bnd.tdr, n1_msh.tdr, n2_des.tdr, n4_des.tdr. No intermediate-bias spatial TDR in this project inventory. n2/n4 final datasets previously verified as 5V.
+- SAV: n2_5V_ckpt_circuit_des.sav, n2_5V_ckpt_des.sav, n2_smoke_ckpt_0p3V_circuit_des.sav, n2_smoke_ckpt_0p3V_des.sav, n4_5V_ckpt_circuit_des.sav, n4_5V_ckpt_des.sav. Saved-state files are NOT automatically visualization-ready intermediate spatial snapshots. Do NOT assume '0p3V' filename proves an actual 0.3V solve: prior QS trace only accepted around 0.019304636V before failure; provenance of these specific SAV files should be separately audited.
+- Result boundary: already established n2 and n4 5V 4QW 3-channel recombination fractions stay OBSERVED; true matched-terminal-current spatial 3-channel comparison cannot be produced immediately from existing 5V TDR alone.
+- Next: read-only parse 1023-point n2/n4 PLT I-V traces to locate overlapping current bias targets and assess stationarity/displacement; separate any future need for saved spatial TDR from existing checkpoint and request approval before additional simulation. No source/model/result edits.
+
 ## 2026-10-12 — JuSubin checks root-level 5V_TEST TDR snapshots (OBSERVED)
 - Worker: 주수빈; actual SSH screenshot of `find . -maxdepth 1 -type f -name '*.tdr' | sort` inside JUSUBIN_FAST_HALF_5V_TEST lists only `./n1_bnd.tdr`, `./n1_msh.tdr`, `./n2_des.tdr`, `./n4_des.tdr`.
 - Only root-level files were checked; presence or absence of intermediate-voltage spatial TDR in subdirectories is NOT established. n2_des/n4_des are previously verified final 5V SDevice TDR outputs, not demonstrated matched-current spatial snapshots.

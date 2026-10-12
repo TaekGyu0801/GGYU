@@ -2,7 +2,7 @@
   "updated": "2026-10-12",
   "primaryWorker": "이택규",
   "phase": "Phase 0 — working 5V reference NtSide 0/1e18 comparison; physical Gate0 low-J still unresolved",
-  "task": "CAL4V completed at t=0.8 s and 4.000 V with raw anode last current-column=3.498e-14; now analyze final QW rates and low-J, and verify distinct NtSide1e18 split completion.",
+  "task": "CAL4V Clean_QW1 integration obtained (radiative share 0.011483%); integrate Clean + DmgL QW1..4 all 3 rates before claiming MQW IQE. Separately verify NtSide1e18 finish.",
   "status": "BASELINE_5V_SOLVE_COMPLETE_LOW_J_UNVALIDATED_AB_PRODUCTION_NO_GO",
   "blocker": "Nominal half-device J at 5V ~7.24e-4 A/cm2 under documented 2D normalization; radiative/QW recombination share ~0.1095%; physically meaningful operating region and injection barriers not yet established. Separate CAL latest direct log accepted ~4.149V and next BE Newton RHS oscillates above 1e-3; 5V convergence and physical J validation unresolved.",
   "parallelWork": {
@@ -2019,5 +2019,22 @@
     "previousAtNear4VParentRawCurrent": 3.505521343e-14,
     "matchedBiasExactly": false,
     "IQECompared": false
+  },
+  "cal4vQW1Integration20261012": {
+    "dataset": "n2_4V_final_des",
+    "biasV": 4,
+    "region": "Clean_QW1",
+    "dimension": 2,
+    "domainUm2": 0.005985012,
+    "integralUnits": "s^-1 um^-1",
+    "radiative": 0.0005674131,
+    "srh": 4.940556,
+    "auger": 0.0002045051,
+    "sum": 4.9413279182,
+    "radiativeFractionPercent": 0.0114830084,
+    "srhFractionPercent": 99.9843783248,
+    "source": "2026-10-12 screenshot of 3 SVisual field integrations",
+    "important": "Only Clean_QW1, NOT all QWs nor overall IQE",
+    "next": "Confirm dimension-2 QW1-4 Clean and damaged segments, exclude interface/plus rows, integrate all 3 fields on same eight 2D regions."
   }
 }

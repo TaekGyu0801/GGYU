@@ -1,3 +1,10 @@
+## 2026-10-12 — 완료 보고 이후 최우선 검증
+- 1. 두 SWB 프로젝트/노드를 구분하고 사용자 보고된 완료를 실제 nN_des.log 정상 종료와 endpoint (CAL4V 4V, NtSide1e18 5V)로 검증.
+- 2. 각 node의 ppN_des.cmd 및 par 비교: CAL4V InGaN 100ns, Goal4V, FinalTime0.8; split NtSide0/1e18의 유일한 물리 차이와 parent 5V input 확인.
+- 3. 생성 PLT, final TDR/Save 존재 및 최종 전류 확인. CAL4V 100ns vs parent 1ns는 같은 V/J로 4QW Rrad/SRH/Auger를 비교. NtSide ON/OFF는 동일 물성, bias, mesh, temperature 조건 맞춘 뒤 비교.
+- 4. Low-J Gate0 및 IQE/half-full validation 유지. **완료 보고만으로 baseline 확정/Project A-B 생산 실행 금지**.
+- 근거: 이택규의 2026-10-12 사용자 발언. 두 작업 매칭/실제 종료 로그는 아직 제공되지 않음.
+
 ## 2026-10-11 — JuSubin reports 4V CAL4V Run initiated after FinalTime=0.8 check (USER-REPORTED; SOLVER START UNVERIFIED)
 - Worker 주수빈 explicitly reports checking `FinalTime=0.8` in separately cloned `CMP_BASELINE_1.3.0_CAL4V/sdevice_des.cmd` and clicking SWB **Run** for the new CAL4V simulation. The previous screenshot independently verified this clone's `Goal anode Voltage=4.0`, post-transient `Plot(FilePrefix="n@node@_4V_final")` and `Save(FilePrefix="n@node@_4V_ckpt")`, and custom `FASTC1_pp6_des.par` InGaN Scharfetter `taumax=1.0e-7s` for electrons/holes. New `FinalTime=0.8` is **USER-CONFIRMED**, not in a new screenshot. This retains nominal 5V/s ramp 0→4V. Source editing DONE by user; SWB Run action USER-REPORTED.
 - Do NOT claim run has entered SDevice, succeeded or finished; **no new generated `ppN_des.cmd`, `nN_des.log`, job status, process PID, PLT, spatial TDR or SAV supplied yet.** SWB may auto-preprocess on Run; verify actual preprocessed Goal=4.0 FinalTime=0.8 Plot/Save and parameter file, and initial log for syntax/error/accepted time steps. End-point Plot/Save created only after successful final solve. Do not promise it finishes tonight.

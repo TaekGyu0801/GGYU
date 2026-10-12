@@ -1,3 +1,9 @@
+## 2026-10-12 — JuSubin n2_des.plt 5V final anode current components extracted (OBSERVED)
+- Worker: 주수빈; AI: ChatGPT. Evidence: user-provided MobaXterm screenshot, read-only Python parser on DF-ISE text `n2_des.plt` in JUSUBIN_FAST_HALF_5V_TEST after correcting current-directory FileNotFoundError. 1023 complete records, remainder 0.
+- Last record: time=1.0 s, anode OuterVoltage=5.0 V, anode TotalCurrent=1.44801646079583e-11, anode DisplacementCurrent=3.29132361382365e-18, anode eCurrent=2.78143237811134e-13, anode hCurrent=1.42020180788235e-11 (raw PLT 2D units).
+- At this final time, DisplacementCurrent/TotalCurrent ~2.273e-7 (0.00002273%). Thus final-time terminal-current magnitude is not dominated by the displacement component; this alone does NOT prove temporal steady state, correct J normalization or adequate MQW hole injection. e/h current values are electrode-current components, not directly quantum-well injection efficiencies.
+- NEXT: repeat identical read-only parser for `n4_des.plt`; compare 5V anode current decomposition and check voltage/current traces for matched-current comparison. Keep SDevice model/files/results unchanged.
+
 ## 2026-10-12 — JuSubin 5V_TEST n2/n4 eight-QW three-channel recombination comparison (OBSERVED)
 - Worker 주수빈. Evidence: Sentaurus Visual Field Integration pasted outputs for RadiativeRecombination, srhRecombination, AugerRecombination on 8 distinct 2D regions Clean_QW1..4 + DmgL_QW1..4 (avoid '+' interface labels). Total Domain 0.02400002 um² for each node, units for all integrals s^-1 um^-1.
 - n2 NtSide0: Radiative 40072.82; SRH 36562940; Auger 1599.707; 3-channel total 36604612.527; Radiative fraction 0.10947478264%; SRH share 99.88615498397%; Auger share 0.00437023339%.

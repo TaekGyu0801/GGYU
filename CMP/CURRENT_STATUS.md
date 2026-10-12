@@ -1,3 +1,6 @@
+## 2026-10-12 — JuSubin Half-Mesa geometry OBSERVED
+SDE left-half geometry: physical full mesa 4um, simulated mesa 2um, numerical domain 5um. Conditional I_2D(A/um)/2um conversion at 5V gives n2 J=7.24008e-4 A/cm2 and n4 J=3.52506e-4 A/cm2; NOT validated until contact extents and T-2022.03 effective 2D current scaling established. No TCAD changes.
+
 ## 2026-10-12 — 이택규 CAL4V polarization 50% one-variable experiment (DECISION / PROPOSED; not yet run)
 - User explicitly chooses an immediate isolated sensitivity test: clone current completed CAL4V, change ONLY effective polarization-charge activation 1.0 to 0.5 (after verifying the actual active Sentaurus T-2022.03 syntax/parameter scope). No assumption this is experimentally calibrated.
 - Verify actual server parent input, pp2_des.cmd/.par, Physics scope, interface polarization charge and absence of independent overriding FixedCharge; clone and preserve parent TDR/log/mesh/results. Nominal Goal 4V, FinalTime 0.8s, 5V/s transient, contacts, geometry, doping, NtSide=0, SRH lifetime, traps, all other physics, material parameters, mesh, solver held fixed.

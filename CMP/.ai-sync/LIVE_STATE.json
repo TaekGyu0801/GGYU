@@ -2,7 +2,7 @@
   "updated": "2026-10-12",
   "primaryWorker": "이택규",
   "phase": "Phase 0 — working 5V reference NtSide 0/1e18 comparison; physical Gate0 low-J still unresolved",
-  "task": "CAL4V low-current hypotheses independent critique: charging contribution and EBL hole-blocking causal inference not established; first extract anode DisplacementCurrent versus TotalCurrent from n2_des.plt, then QW/EBL band/hole/electron cutlines.",
+  "task": "CAL4V MQW NonLocal tunneling v2 proposed, not executed. Verify true terminal displacement current, cutline coordinates/electron-hole carrier and potential profile, then test T2022.03 UG NonLocal syntax and lines in separate model before simulation. JuSubin 5V_TEST remains separate.",
   "status": "BASELINE_5V_SOLVE_COMPLETE_LOW_J_UNVALIDATED_AB_PRODUCTION_NO_GO",
   "blocker": "Nominal half-device J at 5V ~7.24e-4 A/cm2 under documented 2D normalization; radiative/QW recombination share ~0.1095%; physically meaningful operating region and injection barriers not yet established. Separate CAL latest direct log accepted ~4.149V and next BE Newton RHS oscillates above 1e-3; 5V convergence and physical J validation unresolved.",
   "parallelWork": {
@@ -2394,5 +2394,62 @@
     "n4TwoChannelRadiativePercent": 0.0489380663,
     "caveat": "Auger missing; the two-channel fraction is not IQE. n2 and n4 terminal currents differ at nominal 5V. Current normalization and equal-current comparison still unresolved.",
     "next": "JuSubin integrate AugerRecombination on the same 8 QW 2D regions for n2 and n4, then compute 3-channel radiative share after checking sign conventions."
+  },
+  "mqwTunnelingV2CriticalReview20261012": {
+    "classification": "USER_REPORTED_SVISUAL_AND_PROPOSED_CHANGE",
+    "model": "CAL4V existing n2_4V_final_des.tdr untouched",
+    "cutlineReported": {
+      "yUm": 2,
+      "xUmRange": [
+        0.1,
+        0.3
+      ],
+      "QFJumpEvRange": [
+        0.35,
+        0.5
+      ],
+      "QWApproxElectronMinusHoleQFSplittingEv": [
+        1.95,
+        1.9,
+        1.75,
+        1.45
+      ],
+      "independentlyVerifiedFromRawTDR": false
+    },
+    "limitations": [
+      "electron-hole QF splitting ≠ voltage loss from 4V; no 2V lost proof",
+      "thermionic heterojunction permits quasi-Fermi jumps, insufficient to prove missing tunneling",
+      "EBL band slope not equal measured voltage drop without Potential and offsets",
+      "y=2um center-versus-edge in half geometry unverified",
+      "transient charging 98% not verified by displacement current"
+    ],
+    "literature": {
+      "RajanRahman2022": {
+        "DOI": "10.1063/5.0125684",
+        "actualPaperRead": true,
+        "model": "Silvaco with thermionic, field emission, nonlocal QB tunneling and indium-composition fluctuations",
+        "qualifier": "supports QB tunneling as candidate mechanism, not this exact Sentaurus NLM syntax or sufficiency alone"
+      }
+    },
+    "proposal": {
+      "model": "e/h BarrierTunneling named NLM_MQW and Math reference MaterialInterface InGaN/GaN",
+      "status": "PROPOSED_NOT_APPROVED_OR_RUN",
+      "lengthCm": 5e-7,
+      "permeationCm": 5e-7,
+      "declaredDirection": [
+        1,
+        0,
+        0
+      ],
+      "maxAngleDegrees": 5,
+      "notes": "~5nm local mesh reach does not span 22nm QW barrier; not calibrated; verify actual nonlocal lines and rates; 3.5V 1e-12 raw total-current target is arbitrary and not a physics validation"
+    },
+    "manualExactVersion": "NOT IN CONNECTED REPO; T2022.03 exact syntax unverified independently; older guide support only",
+    "next": [
+      "review existing n2_des.plt anode DisplacementCurrent & TotalCurrent",
+      "SVisual valid central 4V cutline Potential, Ec/Ev, quasi-Fermi, n/p and Jn/Jp plus PiezoCharge",
+      "obtain and check actual T2022.03 UG source excerpt, region-interface NLM coverage and solver smoke",
+      "only then a separate approved versioned test branch. Protect source and JuSubin track"
+    ]
   }
 }

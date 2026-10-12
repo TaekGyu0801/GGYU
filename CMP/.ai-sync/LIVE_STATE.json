@@ -2,7 +2,7 @@
   "updated": "2026-10-12",
   "primaryWorker": "이택규",
   "phase": "Phase 0 — working 5V reference NtSide 0/1e18 comparison; physical Gate0 low-J still unresolved",
-  "task": "CAL4V NtSide0 12 explicit DmgL region traps all Conc=0 in actual pp2; nonetheless 4V low current and MQW Rrad share 0.0122426% (SRH dominates). Next verify current normalization and carrier injection; no unmotivated model changes.",
+  "task": "CAL4V low-current hypotheses independent critique: charging contribution and EBL hole-blocking causal inference not established; first extract anode DisplacementCurrent versus TotalCurrent from n2_des.plt, then QW/EBL band/hole/electron cutlines.",
   "status": "BASELINE_5V_SOLVE_COMPLETE_LOW_J_UNVALIDATED_AB_PRODUCTION_NO_GO",
   "blocker": "Nominal half-device J at 5V ~7.24e-4 A/cm2 under documented 2D normalization; radiative/QW recombination share ~0.1095%; physically meaningful operating region and injection barriers not yet established. Separate CAL latest direct log accepted ~4.149V and next BE Newton RHS oscillates above 1e-3; 5V convergence and physical J validation unresolved.",
   "parallelWork": {
@@ -2317,5 +2317,45 @@
     "decreasePercentAt5V": 82.3914,
     "limitation": "terminal current differs; radiative total is not IQE or equal-current evidence; SRH and Auger not yet integrated",
     "next": "JuSubin to integrate SRH and Auger for exactly same QW regions in both nodes; then check radiative fraction and matched-current comparison"
+  },
+  "claudeAudit20261012": {
+    "classification": "REVIEWED_NOT_VALIDATED",
+    "chargingFraction98PctConfirmed": false,
+    "reported4VTerminalCurrentAperUm": 3.498e-14,
+    "conditionalCapacitanceFPerUm": 6.996e-15,
+    "assumedAreaUm2": 2,
+    "epsR": 9.5,
+    "equivalentThicknessNmAssumingAllCurrentCapacitive": 24.04,
+    "EBLThicknessNm": 26,
+    "EBLVoltageLocalizationConfirmed": false,
+    "conditionalCarrierSumPerCm3": 6120000000000,
+    "carrierSumDirectlyMeasured": false,
+    "EBLHoleBarrierRootCauseConfirmed": false,
+    "minorityElectronAnodeIdealitySupportsEBLHoleBarrier": false,
+    "activeInGaNScharfetterMaxLifetimeS": 1e-7,
+    "verifiedLiterature": [
+      {
+        "DOI": "10.1186/s11671-021-03557-4",
+        "finding": "Lu et al 2021 uses 50% interface polarization charge and 100ns SRH in modeled blue microLED"
+      },
+      {
+        "DOI": "10.1007/s12200-024-00111-9",
+        "finding": "Yin et al 2024 uses 50% polarization factor in different MIS-sidewall microLED"
+      },
+      {
+        "DOI": "10.1038/s41467-023-36773-w",
+        "finding": "Baek et al 2023 QB/EBL injection experiment; PMCID PMC10023660; no established direct 50% scale"
+      },
+      {
+        "DOI": "10.1063/5.0125684",
+        "finding": "Rahman et al 2022 challenges 1D fixed interface representation with alloy fluctuations, not automatic NLM tunneling fix"
+      }
+    ],
+    "changeApproval": "none; no code modifications",
+    "criticalRisks": [
+      "nonlocal Barrier Region specification may be designed for insulator tunneling, not AlGaN semiconductor EBL",
+      "switching polarization OFF at AlGaN/GaN alone does not turn off InGaN/GaN MQW QCSE"
+    ],
+    "next": "Read-only grep -n -A 12 'datasets' /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.3.0_CAL4V/n2_des.plt | head -n 18; then inspect endpoint DisplacementCurrent and TotalCurrent and saved 4V band n/p/J fields."
   }
 }

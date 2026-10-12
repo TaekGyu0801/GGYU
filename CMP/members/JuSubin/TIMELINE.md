@@ -1,3 +1,6 @@
+## 2026-10-12 — CAL4V completed (confirmed by Lee TaekGyu screenshot)
+- 주수빈이 수행한 CMP_BASELINE_1.3.0_CAL4V Node2 calculation: 이택규 제공 n2_des.out 마지막 화면에서 Sentaurus Device simulation finished / Good Bye, final TDR n2_4V_final_des.tdr 및 checkpoint n2_4V_ckpt_des.sav 저장 완료 확인. 종료 시각 Oct 12 01:12:13 KST; elapsed 29706.72s. Final anode current / exact voltage and IQE not visible in image and still require analysis. NtSide1e18 split 별도 실로그 확인 대기. Original baseline, running jobs not modified.
+
 ## 2026-10-12 — 주수빈이 수행한 것으로 보고된 두 계산 완료 소식 (이택규 전달; USER-REPORTED)
 - 이택규가 2026-10-12 대화에서 주수빈이 전날 실행해 두고 간 '두 개' 시뮬레이션이 모두 끝났다고 보고. 직전 인수인계상 대상은 (1) 기존 `JUSUBIN_FAST_HALF_5V_TEST` 기반 NtSide=1e18 split과 (2) `CMP_BASELINE_1.3.0_CAL4V` (100ns, 0→4V)로 추정되며 **어느 두 SWB node인지 실제 로그나 화면으로 확인하기 전까지 프로젝트/노드 매칭 미검증**. 사용자 보고는 완료 주장의 근거이나 actual SDevice `Good Bye`/final V/timestep/terminal current/PLT/TDR/SAV는 미제공. NtSide=1e18 case가 NtSide-only matched input인지도 재확인 필요. 새 런이나 baseline freeze를 의미하지 않음. 기존 5V_TEST NtSide0 및 5V CAL 보호. 다음: 두 SWB 노드 이름, `n*_des.log` 마지막 35~50행, `pp*_des.cmd` Goal/Trap, 생성 PLT/TDR/SAV 확인→주입 전류 및 4QW Rrad/SRH/Auger를 동일 바이어스/전류 조건에서 비교. Gate0 낮은 J, 물리적 IQE/Full-Half 검증은 계속 미해결.
 

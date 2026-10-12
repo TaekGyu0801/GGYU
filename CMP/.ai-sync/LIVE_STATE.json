@@ -2,7 +2,7 @@
   "updated": "2026-10-12",
   "primaryWorker": "이택규",
   "phase": "Phase 0 — working 5V reference NtSide 0/1e18 comparison; physical Gate0 low-J still unresolved",
-  "task": "CAL4V physics override audit: 12 DmgL region Physics blocks plus Clean_pGaN, global SRH/Radiative/Auger; no separate SRH/SurfaceRecombination match; Traps need direct grep. CAL4V low-J physical Gate0 unresolved.",
+  "task": "CAL4V NtSide0 12 explicit DmgL region traps all Conc=0 in actual pp2; nonetheless 4V low current and MQW Rrad share 0.0122426% (SRH dominates). Next verify current normalization and carrier injection; no unmotivated model changes.",
   "status": "BASELINE_5V_SOLVE_COMPLETE_LOW_J_UNVALIDATED_AB_PRODUCTION_NO_GO",
   "blocker": "Nominal half-device J at 5V ~7.24e-4 A/cm2 under documented 2D normalization; radiative/QW recombination share ~0.1095%; physically meaningful operating region and injection barriers not yet established. Separate CAL latest direct log accepted ~4.149V and next BE Newton RHS oscillates above 1e-3; 5V convergence and physical J validation unresolved.",
   "parallelWork": {
@@ -2271,5 +2271,29 @@
     "literalSurfaceRecombinationOrSurfaceTrapOrInterfaceEqualMatchFound": false,
     "caveat": "grep omitted Traps so no conclusion about actual region trap concentration or absence of surface SRV by any other syntax; 'SRHRecombination' at 398 is Plot output.",
     "next": "Inspect read-only pp2_des.cmd Traps and Conc 12 blocks. Do not modify CAL4V model. JuSubin separate 5V_TEST track."
+  },
+  "cal4vNtSide0Verified20261012": {
+    "status": "OBSERVED_LIVE_PREPROCESSED_DECK",
+    "file": "CMP_BASELINE_1.3.0_CAL4V/pp2_des.cmd",
+    "regionTrapCount": 12,
+    "trapConcentrationCm3": 0,
+    "trapConcentrationLines": [
+      145,
+      165,
+      185,
+      205,
+      225,
+      245,
+      265,
+      285,
+      305,
+      325,
+      345,
+      365
+    ],
+    "implication": "Explicit NtSide sidewall volume trap not responsible for baseline SRH; global SRH still active, other interface surface and QW injection unknown",
+    "priorMQWRadiativeFractionPercent": 0.01224261249,
+    "priorMQWSRHPercent": 99.98361378,
+    "next": "Read-only verify effective QW injection/electron-hole densities, current area normalization, compare before change. No reruns, no code changes."
   }
 }

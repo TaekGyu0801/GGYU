@@ -2451,5 +2451,40 @@
       "obtain and check actual T2022.03 UG source excerpt, region-interface NLM coverage and solver smoke",
       "only then a separate approved versioned test branch. Protect source and JuSubin track"
     ]
+  },
+  "juSubin5VThreeChannel20261012": {
+    "worker": "주수빈",
+    "status": "OBSERVED_FULL_SVISUAL_3_CHANNEL",
+    "device": "JUSUBIN_FAST_HALF_5V_TEST",
+    "biasNominalVolt": 5,
+    "region": "Clean_QW1..4 + DmgL_QW1..4 (8 distinct 2D regions)",
+    "domainAreaUm2": 0.02400002,
+    "units": "s^-1 um^-1",
+    "n2NtSide0": {
+      "radiative": 40072.82,
+      "srh": 36562940,
+      "auger": 1599.707,
+      "total": 36604612.527,
+      "radiativePercent": 0.10947478264,
+      "srhPercent": 99.88615498397,
+      "augerPercent": 0.00437023339,
+      "rawTerminalTotalCurrent": 1.4480164608e-11
+    },
+    "n4NtSide1e18": {
+      "radiative": 7056.261,
+      "srh": 14411700,
+      "auger": 265.2578,
+      "total": 14419021.5188,
+      "radiativePercent": 0.04893716949,
+      "srhPercent": 99.9492231925,
+      "augerPercent": 0.00183963801,
+      "rawTerminalTotalCurrent": 7.05e-12
+    },
+    "radiativeIntegralDecreasePercent": 82.3914,
+    "srhIntegralDecreasePercent": 60.5839,
+    "augerIntegralDecreasePercent": 83.4184,
+    "radiativeFractionRelativeDecreasePercent": 55.2982,
+    "limitations": "Model 4QW internal 3-channel fractions, not measured EQE nor validated device IQE. Terminal currents differ at same 5 V; true equal-current trap-specific causal and physical parameter validation remain open.",
+    "next": "Read-only verify saved I-V current normalization (2D AreaFactor, transient displacement), inspect equal-current availability of saved 2D TDR, then propose appropriate controlled compare; preserve source and results."
   }
 }

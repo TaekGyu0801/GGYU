@@ -2,7 +2,7 @@
   "updated": "2026-10-12",
   "primaryWorker": "이택규",
   "phase": "Phase 0 — working 5V reference NtSide 0/1e18 comparison; physical Gate0 low-J still unresolved",
-  "task": "Both reported jobs numerical finished: CAL4V n2 at 4V and 5V_TEST n4 at 5V. Need verify n4 actual NtSide trap concentration and deck parity, 2D current density, and physical baseline Gate0.",
+  "task": "Two-person parallel tracks PROPOSED: 이택규 CAL4V physical Gate0 low-J/100ns/injection audit; 주수빈 5V_TEST n2 NtSide0 vs n4 NtSide1e18 input parity and QW recombination analysis. JuSubin agreement not yet verified.",
   "status": "BASELINE_5V_SOLVE_COMPLETE_LOW_J_UNVALIDATED_AB_PRODUCTION_NO_GO",
   "blocker": "Nominal half-device J at 5V ~7.24e-4 A/cm2 under documented 2D normalization; radiative/QW recombination share ~0.1095%; physically meaningful operating region and injection barriers not yet established. Separate CAL latest direct log accepted ~4.149V and next BE Newton RHS oscillates above 1e-3; 5V convergence and physical J validation unresolved.",
   "parallelWork": {
@@ -2159,12 +2159,14 @@
     "checkpointSaved": "n4_5V_ckpt_des.sav",
     "tdrSaved": "n4_des.tdr",
     "IntendedNtSide": 1000000000000000000,
-    "NtSideActuallyVerifiedInPreprocessedN4": false,
+    "NtSideActuallyVerifiedInPreprocessedN4": true,
     "terminalCurrentUnitsAndAreaFactorVerified": false,
     "priorN2NtSide0At5VRawTotalCurrent": 1.44801646079583e-11,
     "rawN4ToN2CurrentRatio": 0.4868729182902603,
     "causalityTrapOnlyVerified": false,
-    "next": "READ ONLY pp4_des.cmd trap Conc audit; compare pp2/pp4 effective .cmd/.par and current normalization; then MQW region-rate integrations of n4 vs n2 same 5V."
+    "next": "Verify deck parity pp2 vs pp4; no trap-only causality claimed until other inputs and same current normalization validated.",
+    "NtSideConcentrationValue": 1000000000000000000,
+    "NtSideTrapCount": 12
   },
   "ledColorVerification20261012": {
     "confirmedDesign": "Blue InGaN/GaN 4-QW microLED",
@@ -2173,5 +2175,30 @@
     "nominalWavelengthNm": 445,
     "measuredOrSimulatedELPeakVerified": false,
     "efficiencyPointOneAmbiguous": "0.1 as fraction =10%; 0.1% =0.001 as fraction; 0.1 A/cm2 is current density, not efficiency"
+  },
+  "parallelAssignmentProposed20261012": {
+    "dateTimeKST": "2026-10-12 17:03",
+    "status": "PROPOSED",
+    "reason": "avoid duplicate efforts and conflicting server operations",
+    "LeeTaekGyu": {
+      "project": "CMP_BASELINE_1.3.0_CAL4V",
+      "tasks": [
+        "verify current density normalization and AreaFactor from active pp2",
+        "verify InGaN 100ns active parameter values",
+        "inspect existing EBL/QW carrier/polarization fields"
+      ],
+      "mode": "read_only_no_new_simulation"
+    },
+    "JuSubin": {
+      "project": "JUSUBIN_FAST_HALF_5V_TEST",
+      "tasks": [
+        "check pp2 versus pp4 model/mesh/parameter parity beyond NtSide",
+        "integrate QW radiative/SRH/Auger n2 vs n4 at 5V"
+      ],
+      "mode": "read_only_no_new_simulation",
+      "acceptanceConfirmed": false
+    },
+    "source": "user said both working now and need different tasks",
+    "serverModified": false
   }
 }

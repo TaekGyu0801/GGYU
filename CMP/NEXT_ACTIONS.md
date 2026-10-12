@@ -1,3 +1,8 @@
+## 2026-10-12 — CAL4V endpoint verified; next QW quantitative gate
+- CONFIRMED: 100ns CAL4V node2 completed at time=0.8 s, anode=4.000V and last current-column=3.498e-14 (raw log value); earlier saved final TDR/SAV confirmed.
+- **NEXT** read-only inspect effective 100ns par and exact 2D area normalization, analyze n2_4V_final_des.tdr QW1–QW4 Radiative/SRH/Auger integrals, compare with preserved 1ns 5V_TEST at matched bias/current (historical near-4V parent 4.003369V, 3.505521343e-14, not exact match).
+- The 100ns run's unchanged near-4V raw current does not establish IQE behavior or solve Low-J Gate0. NtSide1e18 split still needs own normal-finish/physical-input comparison logs. Avoid reruns and original edits.
+
 ## 2026-10-12 — CAL4V 완료 이후 결과 검증 (UPDATED)
 - 확인됨: CAL4V `n2_des.out` 종료/Plot/Save 정상, `n2_4V_final_des.tdr`, `n2_4V_ckpt_des.sav` 생성 (2026-10-12 01:12:13 KST).
 - STEP 1: `CMP_BASELINE_1.3.0_CAL4V/n2_des.plt` 또는 `n2_des.log`에서 **실제 마지막 V/I 및 시간** 확인, `pp2_des.cmd` Goal4V/FinalTime0.8, 활성 .par 검증.

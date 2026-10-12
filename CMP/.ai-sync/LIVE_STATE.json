@@ -2373,5 +2373,26 @@
     "radFractionTwoChannelNoAugerPercent": 0.1094795672,
     "caution": "Two-channel fraction is NOT final IQE. Auger is missing, model physical validity and current normalization outstanding.",
     "next": "Integrate n4 srhRecombination for same eight 2D QW regions, then n2 and n4 AugerRecombination"
+  },
+  "juSubin5VQWSRHn4_20261012": {
+    "status": "OBSERVED_SVISUAL_8_QW_REGIONS",
+    "worker": "주수빈",
+    "dataset": "n4_des",
+    "field": "srhRecombination",
+    "unit": "s^-1 um^-1",
+    "total": 14411700,
+    "totalDomainUm2": 0.02400002,
+    "cleanSubtotalFromRoundedRegions": 14319161.96,
+    "damagedSubtotalFromRoundedRegions": 92534.28866,
+    "n2SRHTotal": 36562940,
+    "n4SRHReductionPercentVersusN2At5V": 60.5838589566,
+    "radiativeTotals": {
+      "n2": 40072.82,
+      "n4": 7056.261
+    },
+    "n2TwoChannelRadiativePercent": 0.1094795672,
+    "n4TwoChannelRadiativePercent": 0.0489380663,
+    "caveat": "Auger missing; the two-channel fraction is not IQE. n2 and n4 terminal currents differ at nominal 5V. Current normalization and equal-current comparison still unresolved.",
+    "next": "JuSubin integrate AugerRecombination on the same 8 QW 2D regions for n2 and n4, then compute 3-channel radiative share after checking sign conventions."
   }
 }

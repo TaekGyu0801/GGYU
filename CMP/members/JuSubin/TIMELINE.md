@@ -1,3 +1,8 @@
+## 2026-10-12 — JuSubin checks root-level 5V_TEST TDR snapshots (OBSERVED)
+- Worker: 주수빈; actual SSH screenshot of `find . -maxdepth 1 -type f -name '*.tdr' | sort` inside JUSUBIN_FAST_HALF_5V_TEST lists only `./n1_bnd.tdr`, `./n1_msh.tdr`, `./n2_des.tdr`, `./n4_des.tdr`.
+- Only root-level files were checked; presence or absence of intermediate-voltage spatial TDR in subdirectories is NOT established. n2_des/n4_des are previously verified final 5V SDevice TDR outputs, not demonstrated matched-current spatial snapshots.
+- NEXT read-only recursively list project TDR and SAV snapshot files before deciding whether identical injected-current 4QW spatial recombination comparison can be done without new runs; then extract matching-current voltage from n2/n4 PLT. Preserve device files and runs.
+
 ## 2026-10-12 — JuSubin 5V_TEST n4 final anode-current decomposition verified (OBSERVED)
 - Worker 주수빈. User submitted terminal output from read-only Python parser of `JUSUBIN_FAST_HALF_5V_TEST/n4_des.plt`. Prior shell quoting produced a SyntaxError, but subsequent command succeeded: 1023 records, remainder 0; last time=1.0 s, anode OuterVoltage=5.0 V.
 - n4 raw anode: TotalCurrent=7.05011114486348e-12; DisplacementCurrent=3.38231191699972e-18; eCurrent=7.53447212445082e-14; hCurrent=6.97476304130706e-12. Electron + hole + displacement reproduce TotalCurrent (display precision).

@@ -2695,5 +2695,35 @@
     },
     "physicalJStatus": "UNRESOLVED; Sentaurus effective 2D current unit and default scaling, and actual SDE variable values/edge lengths not yet verified",
     "next": "Inspect actual numerical yL, yDL, yC, x0, xb definitions and edge geometry in active pp1_dvs.cmd; no source modifications or reruns."
+  },
+  "juSubinHalfDeviceExactCoordinates20261012": {
+    "status": "OBSERVED_NUMERIC_GEOMETRY; CURRENT_DENSITY_CONDITIONAL",
+    "worker": "주수빈",
+    "project": "JUSUBIN_FAST_HALF_5V_TEST",
+    "source": "Actual server pp1_dvs.cmd lines 65-160 and 415-495",
+    "dimensionsUm": {
+      "fullMesa": 4,
+      "numericalFullDomain": 5,
+      "damagedEdge": 0.005,
+      "leftPhysicalMesaY": 0.5,
+      "damageStripEndY": 0.505,
+      "mirrorCenterY": 2.5
+    },
+    "topAnode": {
+      "damageWidthUm": 0.005,
+      "cleanWidthUm": 1.995,
+      "totalWidthUm": 2
+    },
+    "bottomCathode": {
+      "numericalBaseWidthUm": 2.5,
+      "doNotUseAsEmittingWidth": true
+    },
+    "planarDefaultThirdDimensionUm": "usually 1 per Sentaurus older user manuals; verify effective T-2022.03",
+    "conditionalCurrentDensityAcm2": {
+      "n2NtSide0At5V": 0.000724008230397915,
+      "n4NtSide1e18At5V": 0.000352505557243174
+    },
+    "caution": "Expected 2D depth=1um and implicit area scale; AreaFactor not explicitly found in 5 checked files. Absolute physical J still conditional, not calibrated.",
+    "next": "Confirm installation-specific 2D PLT units and AreaFactor defaults, then investigate low injection/SRH rather than additional long rerun."
   }
 }

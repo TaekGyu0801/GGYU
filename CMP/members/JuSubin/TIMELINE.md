@@ -1,3 +1,7 @@
+## 2026-10-12 — JuSubin confirms n2/n4 PLT current field structure (OBSERVED)
+- Read-only grep of datasets in 5V_TEST n2_des.plt and n4_des.plt confirms matching current field declarations: time; anode/cathode OuterVoltage, InnerVoltage, DisplacementCurrent, eCurrent, hCurrent, TotalCurrent (plus Charge/QuasiFermiPotential). Actual values and scaling still unverified.
+- Next inspect initial .plt Data layout and numeric current decomposition of each node, then assess equal-current voltage and available TDR snapshots. No TCAD source or results modified.
+
 ## 2026-10-12 — JuSubin 5V_TEST n2/n4 eight-QW three-channel recombination comparison (OBSERVED)
 - Worker 주수빈. Evidence: Sentaurus Visual Field Integration pasted outputs for RadiativeRecombination, srhRecombination, AugerRecombination on 8 distinct 2D regions Clean_QW1..4 + DmgL_QW1..4 (avoid '+' interface labels). Total Domain 0.02400002 um² for each node, units for all integrals s^-1 um^-1.
 - n2 NtSide0: Radiative 40072.82; SRH 36562940; Auger 1599.707; 3-channel total 36604612.527; Radiative fraction 0.10947478264%; SRH share 99.88615498397%; Auger share 0.00437023339%.

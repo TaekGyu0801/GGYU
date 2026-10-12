@@ -1,3 +1,7 @@
+## 2026-10-12 — JuSubin 5V_TEST next: read-only PLT current decomposition
+- `n2_des.plt` and `n4_des.plt` both contain anode/cathode OuterVoltage, eCurrent, hCurrent, DisplacementCurrent, TotalCurrent, Charge and time fields (OBSERVED in dataset declarations). 5V three-channel QW recombination integration already complete, but equal-current comparison and 2D normalization unresolved.
+- Next inspect .plt Data section structure then reliably extract currents vs bias, especially displacement contribution; do not assume terminal TotalCurrent is pure conductive injection in Transient. Preserve previous runs.
+
 ## 2026-10-12 — JuSubin 5V_TEST n2/n4 eight-QW three-channel recombination comparison (OBSERVED)
 - Worker 주수빈. Evidence: Sentaurus Visual Field Integration pasted outputs for RadiativeRecombination, srhRecombination, AugerRecombination on 8 distinct 2D regions Clean_QW1..4 + DmgL_QW1..4 (avoid '+' interface labels). Total Domain 0.02400002 um² for each node, units for all integrals s^-1 um^-1.
 - n2 NtSide0: Radiative 40072.82; SRH 36562940; Auger 1599.707; 3-channel total 36604612.527; Radiative fraction 0.10947478264%; SRH share 99.88615498397%; Auger share 0.00437023339%.

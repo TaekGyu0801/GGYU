@@ -1,3 +1,10 @@
+## 2026-10-12 — JuSubin 5V_TEST n2 8-QW Auger integrated; 3-channel rad fraction established (OBSERVED)
+- Worker: 주수빈; evidence: pasted SVisual Field Integration results `n2_des` / `AugerRecombination` for 8 separate 2D QW areas (Clean_QW1..4, DmgL_QW1..4), excluding '+' boundary entries.
+- Auger total = 1.599707e+03 s^-1 um^-1; total domain = 2.400002e-02 um^2. Clean integrals [252.5448,1.736316,12.65704,1327.983] subtotal 1594.921156; DmgL integrals [2.309115,0.003800247,0.05774334,2.414354] subtotal 4.785012587. Rounded constituent sum=1599.706168587 vs display total 1599.707 (rounding).
+- From same n2 8-region ROI: Rrad=40072.82, SRH=36562940, Auger=1599.707 s^-1 um^-1. Three-channel normalized shares: Rad=0.10947478264%, SRH=99.88615498397%, Auger=0.00437023339%. The bulk SRH channel dominates; Auger is not observed as the main efficiency-limiting recombination channel at this specific modeled bias.
+- These are model internal QW 3-channel integration shares, NOT experimentally calibrated EQE or definitive whole-device IQE. Need check recombination sign conventions/current normalization, equal-current normalization, QW hole injection/physics and baseline validation.
+- Next: obtain n4_des AugerRecombination integration over identical 8 2D QW regions; calculate both nodes' 3-channel shares, distinguish fixed-5V and equal-current comparisons. No model/source/run changes.
+
 ## 2026-10-12 — JuSubin 5V_TEST n4 8-QW SRH integrated; 2-channel comparison (OBSERVED)
 - Worker: 주수빈. User-provided Sentaurus Visual Field Integration exact result: dataset n4_des, field srhRecombination, 8 separate 2D QW regions Clean_QW1..4 and DmgL_QW1..4. Total Integral=1.441170e+07 s^-1 um^-1, Total Domain=2.400002e-02 um^2.
 - n4 Clean_QW1=7.535253e4, QW2=2.335633e4, QW3=2.936031e5, QW4=1.392685e7; subtotal of region-rounded values=14,319,161.96. n4 DmgL_QW1=3.279025e2, QW2=8.810076e1, QW3=7.204654e2, QW4=9.139782e4; subtotal=92,534.28866. Rounded-entry sum=14,411,696.24866 vs displayed SVisual total=14,411,700, normal decimal rounding difference.

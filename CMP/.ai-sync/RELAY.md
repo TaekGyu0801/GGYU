@@ -1,3 +1,8 @@
+## 2026-10-12 — Handoff: 두 run 완료 사용자 보고 / 실출력 검증 필요
+- 제보자/현재 작업자: 이택규; 원래 실행한 연구자: 주수빈; AI: ChatGPT.
+- 이택규가 2026-10-12 대화에서 주수빈이 전날 실행해 두고 간 '두 개' 시뮬레이션이 모두 끝났다고 보고. 직전 인수인계상 대상은 (1) 기존 `JUSUBIN_FAST_HALF_5V_TEST` 기반 NtSide=1e18 split과 (2) `CMP_BASELINE_1.3.0_CAL4V` (100ns, 0→4V)로 추정되며 **어느 두 SWB node인지 실제 로그나 화면으로 확인하기 전까지 프로젝트/노드 매칭 미검증**. 사용자 보고는 완료 주장의 근거이나 actual SDevice `Good Bye`/final V/timestep/terminal current/PLT/TDR/SAV는 미제공. NtSide=1e18 case가 NtSide-only matched input인지도 재확인 필요. 새 런이나 baseline freeze를 의미하지 않음. 기존 5V_TEST NtSide0 및 5V CAL 보호. 다음: 두 SWB 노드 이름, `n*_des.log` 마지막 35~50행, `pp*_des.cmd` Goal/Trap, 생성 PLT/TDR/SAV 확인→주입 전류 및 4QW Rrad/SRH/Auger를 동일 바이어스/전류 조건에서 비교. Gate0 낮은 J, 물리적 IQE/Full-Half 검증은 계속 미해결.
+- READ FIRST: two project node IDs, last nN_des.log lines and ppN_des.cmd, generated final PLT/TDR/SAV. Already failed old trap-ON run and original 5V CAL must not be mixed with newly reported run.
+
 ## 2026-10-11 — CAL4V Run clicked (USER-REPORTED, actual solver status pending)
 - 주수빈 confirmed cloned CAL4V source `FinalTime=0.8` and clicked SWB **Run** for `CMP_BASELINE_1.3.0_CAL4V`. Previous actual screenshot independently showed `Goal anode Voltage=4.0`, final Plot `n@node@_4V_final`, Save `n@node@_4V_ckpt`, cloned custom InGaN Scharfetter electron/hole `taumax=1e-7s`. Keeps 5V/s ramp.
 - Status **RUN REQUESTED by researcher**, not yet independently OBSERVED SDevice process/preprocessed deck/accepted BE-step and certainly NOT completion. Current 4V TDR/SAV absent/unconfirmed. Do not interrupt running original 5V CAL or preserve-solved 5V_TEST parent. NtSide1e18 split run still unverified.

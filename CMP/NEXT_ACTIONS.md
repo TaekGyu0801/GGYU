@@ -1,3 +1,6 @@
+## 2026-10-12 JuSubin matched-current voltage from 5V_TEST transient PLT
+OBSERVED n2 data: V=4.91836886499322 I=6.84313365428304e-12, and V=4.92336886499322 I=7.14463993632474e-12. Target n4 final 5V raw I=7.05011114486348e-12. LINEAR INTERPOLATION gives n2 V=4.921801256006416, n4 needs 78.198744 mV more for same raw TotalCurrent on 5 V/s Transient. Not a DC steady-state resistance or equal-J MQW comparison. No TDR at n2 4.9218V, no corresponding ROI recombination measured. Next read-only current components/displacement near n2 target, 2D AreaFactor and saved snapshot needs. No solver files modified.
+
 ## 2026-10-12 — 이택규 CAL4V 전영역 EBL SRH 결과 (USER-REPORTED, DERIVED)
 Claude 보고 수치: SRH 총 12294.2, EBL 12265.6, QW 5.134 [s^-1 um^-1]. EBL은 SRH의 99.7674%. q(R_SRH+R_rad+R_Auger)=1.96975e-15 A/um은 단자 total 3.498e-14의 5.6311%. **나머지 94.37%가 charging이라는 결론은 미확정**: 재결합 적분은 총 DC 단자 전류와 동일하지 않음. 사용자 제공 Claude 요약에 근거, 학교 raw TDR/PLT는 이 AI가 확인하지 못함. 다음: AlGaN SRH lifetime 파라미터·중앙 clean EBL/QW1 cutline e/hDensity/e/hCurrentDensity/QuasiFermi/Potential/SRH/PE_Charge 검증. 기존 소자 및 주수빈 5V_TEST 변경 없음.
 

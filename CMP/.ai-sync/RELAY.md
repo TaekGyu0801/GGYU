@@ -1,3 +1,6 @@
+## 2026-10-12 JuSubin half-mesa dimensions verified
+SDE yL=0.500um, yDL=0.505um, yC=2.500um. Anode half mesa=2.000um (DmgL 0.005um, Clean 1.995um). Cathode numerical base=2.500um. Assuming default 1um third-dimensional depth and no scaling, derived 5V n2 J=7.24008e-4 and n4 J=3.52506e-4 A/cm2. Absolute J not yet calibrated; physically low current and strong SRH remain Gate0 blockers. No TCAD edits.
+
 ## 2026-10-12 — 이택규 CAL4V polarization 50% one-variable experiment (DECISION / PROPOSED; not yet run)
 - User explicitly chooses an immediate isolated sensitivity test: clone current completed CAL4V, change ONLY effective polarization-charge activation 1.0 to 0.5 (after verifying the actual active Sentaurus T-2022.03 syntax/parameter scope). No assumption this is experimentally calibrated.
 - Verify actual server parent input, pp2_des.cmd/.par, Physics scope, interface polarization charge and absence of independent overriding FixedCharge; clone and preserve parent TDR/log/mesh/results. Nominal Goal 4V, FinalTime 0.8s, 5V/s transient, contacts, geometry, doping, NtSide=0, SRH lifetime, traps, all other physics, material parameters, mesh, solver held fixed.

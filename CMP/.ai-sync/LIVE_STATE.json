@@ -1,8 +1,8 @@
 {
-  "updated": "2026-10-11",
-  "primaryWorker": "주수빈",
+  "updated": "2026-10-12",
+  "primaryWorker": "이택규",
   "phase": "Phase 0 — working 5V reference NtSide 0/1e18 comparison; physical Gate0 low-J still unresolved",
-  "task": "User-reported CAL4V 100ns Run initiated; confirm preprocess, initial SDevice log and 4V outcome. NtSide1e18 original 5V_TEST split separately planned.",
+  "task": "Verify user-reported completion of two JuSubin runs (likely NtSide1e18 split and 100ns CAL4V): actual node IDs, final logs, endpoint V, TDR/PLT/SAV, matched-input controls. Low-J physical Gate0 remains open.",
   "status": "BASELINE_5V_SOLVE_COMPLETE_LOW_J_UNVALIDATED_AB_PRODUCTION_NO_GO",
   "blocker": "Nominal half-device J at 5V ~7.24e-4 A/cm2 under documented 2D normalization; radiative/QW recombination share ~0.1095%; physically meaningful operating region and injection barriers not yet established. Separate CAL latest direct log accepted ~4.149V and next BE Newton RHS oscillates above 1e-3; 5V convergence and physical J validation unresolved.",
   "parallelWork": {
@@ -1968,5 +1968,20 @@
     "baseline5VTEST": "PRESERVED",
     "NtSide1e18Split": "PLANNED_USER; RUN_UNVERIFIED",
     "physicalBaselineGate0": "LOW_CURRENT_UNRESOLVED"
+  },
+  "reportedTwoRunsFinished20261012": {
+    "reporter": "이택규",
+    "originatingResearcher": "주수빈",
+    "evidence": "direct user statement 2026-10-12 that both runs left by JuSubin finished",
+    "status": "USER_REPORTED_COMPLETION_NOT_LOG_VERIFIED",
+    "tentativeRunIdentities": [
+      "5V_TEST-derived NtSide1e18 split",
+      "CMP_BASELINE_1.3.0_CAL4V (100ns 4V)"
+    ],
+    "projectAndNodeMappingConfirmed": false,
+    "finishedSDeviceLogsVerified": false,
+    "finalVoltageVerified": false,
+    "outputTDRorSAVVerified": false,
+    "next": "Read last nN_des.log, ppN_des.cmd and inspect PLT/TDR/SAV for both. Avoid baseline freeze until physical Gate0 current and recombination validation."
   }
 }

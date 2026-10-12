@@ -1,3 +1,6 @@
+## 2026-10-12 — JuSubin 5V_TEST all TDR/SAV inventory checked (OBSERVED)
+- Read-only recursive `find . -type f ...` screenshot returns only 4 .tdr: n1_bnd.tdr, n1_msh.tdr, n2_des.tdr, n4_des.tdr; only 6 .sav: n2/n4 5V circuit/des checkpoint pairs plus n2_smoke_ckpt_0p3V circuit/des pair. No intermediate-bias spatial TDR observed. The smoke SAV filenames alone do not establish true 0.3V solved state (prior QS aborted near 0.019304636V; provenance uncertain). Existing 5V 4QW radiative fractions are not equal-current comparisons. Next read-only n2/n4 PLT full-I-V matched-current bias search; no new run or source edits.
+
 ## 2026-10-12 — 이택규 CAL4V Claude 19:30 재판단 전달 / ChatGPT 독립 검토 (USER-REPORTED / DERIVED / UNRESOLVED)
 - SOURCE: 이택규가 Claude 작성 `CAL4V_LOWJ_LOWIQE_DIAGNOSIS.md` 텍스트를 현재 채팅에 제출. 이는 **Claude 보고서의 내용**이지 ChatGPT가 Sentaurus 학교 서버나 T-2022.03 원본 문서를 직접 검증한 결과가 아님. 기존 CAL4V 코드/실행 변경 없음.
 - Reported CAL4V 4V: anode TotalCurrent=3.498e-14 A/um; QW integrals Rad=6.29e-4, SRH=5.13, Auger=2.13e-4 s^-1 um^-1. From these values, q*(Rad+SRH+Auger)=8.221e-19 A/um and ratio to anode total=2.350e-5 (0.002350%). This **does not itself prove** 98% charging current or hole-only starvation: QW-outside recombination, other leakage paths, transient charge and sign/normalization must be checked.

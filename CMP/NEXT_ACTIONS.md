@@ -1,3 +1,7 @@
+## 2026-10-12 — Complete four-QW integration after clean QW1 result
+- Observed CAL4V SVisual Clean_QW1 only at 4V: Radiative=5.674131e-04, SRH=4.940556, Auger=2.045051e-04 (s^-1 um^-1). Local 3-term radiative fraction=0.011483%; NOT whole MQW IQE.
+- Next select dimension-2 Clean_QW1..4 and DmgL_QW1..4 (exclude plus-named interfaces) and repeat all three field integrals; collect Totals/area. Compare 1ns reference at matched bias and check 2D normalization. No new run now.
+
 ## 2026-10-12 — Extract CAL4V regional MQW recombination (next step)
 - CAL4V n2_4V_final_des shown in SVisual: RadiativeRecombination, srhRecombination, AugerRecombination present. Spatial extrema: Rrad max 7.00132e13 and SRH max 2.98898e18 cm^-3 s^-1; ratio of maxima is NOT meaningful IQE because maxima can be in different locations.
 - NEXT click Regions tab to validate actual QW region identifiers, then integrate each recombination rate over all four QWs (including damage-side QW sections, if applicable); compute QW radiative share only from consistent spatial integrals, compare with 1ns at near-identical bias/current. Check 2D units and baseline Gate0. No simulation restart.

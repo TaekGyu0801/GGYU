@@ -2,7 +2,7 @@
   "updated": "2026-10-12",
   "primaryWorker": "이택규",
   "phase": "Phase 0 — working 5V reference NtSide 0/1e18 comparison; physical Gate0 low-J still unresolved",
-  "task": "LeeTaekGyu explicitly chose immediate single-factor CAL4V polarization activation 1.0 vs 0.5 sensitivity experiment on separate preserved-parent clone; NOT yet run. Verify actual active polarity model and T-2022.03 parameter semantics before edit; same 4V ramp/0.8s and all other parameters unchanged.",
+  "task": "Lee user reports CMP_BASELINE_1.4.0_POL50 started (node2, NtSide0, Goal 4V, FinalTime 0.8s, ramp 5V/s) with only global polarization activation 1->0.5; source/preprocess one-line diff and equilibrium smoke halved PE_Charge. Await actual 4V result; existing CAL4V cutline suggests EBL/B0/QW polarization-related injection barrier but causality not confirmed.",
   "status": "BASELINE_5V_SOLVE_COMPLETE_LOW_J_UNVALIDATED_AB_PRODUCTION_NO_GO",
   "blocker": "Nominal half-device J at 5V ~7.24e-4 A/cm2 under documented 2D normalization; radiative/QW recombination share ~0.1095%; physically meaningful operating region and injection barriers not yet established. Separate CAL latest direct log accepted ~4.149V and next BE Newton RHS oscillates above 1e-3; 5V convergence and physical J validation unresolved.",
   "parallelWork": {
@@ -2725,5 +2725,58 @@
     },
     "caution": "Expected 2D depth=1um and implicit area scale; AreaFactor not explicitly found in 5 checked files. Absolute physical J still conditional, not calibrated.",
     "next": "Confirm installation-specific 2D PLT units and AreaFactor defaults, then investigate low injection/SRH rather than additional long rerun."
+  },
+  "leeCAL4VCutlineAndPOL50_20261012": {
+    "source": "User-pasted Claude report labeled 2026-10-12 19:40 and 20:28 KST; raw school-server logs/cutline not directly accessed by this ChatGPT",
+    "status": "USER_REPORTED_OBSERVATIONS_AND_DERIVED_REVIEW; RUN START REPORTED_NOT_INDEPENDENTLY_VERIFIED",
+    "cal4V4Vcutline": {
+      "coordinate_y_um": 2,
+      "geometry_ymax_um": 2.5,
+      "QW1_eQF_eV": -1.4025,
+      "QW1_hQF_eV": -3.017,
+      "anode_hQF_eV": -4,
+      "cathode_eQF_eV": 0,
+      "QW1_split_eV": 1.6145,
+      "electron_drop_eV": 1.4025,
+      "hole_drop_eV": 0.983,
+      "EBL_potential_V": [
+        2.3215,
+        3.3274
+      ],
+      "EBL_dpsi_V": 1.0059,
+      "EBL_meanField_MVcm": 0.3869,
+      "EBL_Ev_eV": [
+        -3.995,
+        -5.041
+      ],
+      "QW_B1_field_MVcm": [
+        2.61,
+        -0.15
+      ],
+      "nominal_sheetCharge_cm2": 14500000000000,
+      "notes": "Gauss D jump depends on permittivity both sides and other sheet charge; not proof exactly 100 percent physical polarization. Single-energy WKB cannot bound full tunnel transport by <=2x."
+    },
+    "pol50": {
+      "parent": "CMP_BASELINE_1.3.0_CAL4V",
+      "candidate": "CMP_BASELINE_1.4.0_POL50",
+      "reported_status": "CLONE_CREATED_SOURCE_AND_PREPROCESSED_ONE_LINE_DIFF_EQUILIBRIUM_SMOKE_FINISHED_4V_NODE2_RUN_STARTED",
+      "only_change": "global Physics Piezoelectric_Polarization(strain) to (strain activation=0.5)",
+      "smokePE_ChargePair_cm3": [
+        577197710000000000000,
+        288598860000000000000
+      ],
+      "change_ratio": 0.5,
+      "biasGoal_V": 4,
+      "finalTime_s": 0.8,
+      "ramp_V_per_s": 5,
+      "NtSide": 0,
+      "unverified": "No POL50 4V transport/output has been provided, nor independent access to school server. 50% is sensitivity only, not accepted baseline."
+    },
+    "next": [
+      "Check POL50 actual 4V simulation status, no false completion claim",
+      "Compare matching t=0.8s at 4V parent vs POL50 currents, full EBL and 8-QW SRH/Radiative/Auger, n/p currents and QF / Potential",
+      "Read actual active AlGaN SRH lifetime and whether EBL recombination persists or moves, identify electron leakage/cathode hCurrent separately",
+      "Preserve original CAL4V and JuSubin 5V_TEST unchanged; no new long simulation or model edits pending results"
+    ]
   }
 }

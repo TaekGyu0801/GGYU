@@ -2295,5 +2295,27 @@
     "priorMQWRadiativeFractionPercent": 0.01224261249,
     "priorMQWSRHPercent": 99.98361378,
     "next": "Read-only verify effective QW injection/electron-hole densities, current area normalization, compare before change. No reruns, no code changes."
+  },
+  "juSubin5VQWRadiative20261012": {
+    "status": "OBSERVED_INTEGRATED_SVISUAL",
+    "project": "JUSUBIN_FAST_HALF_5V_TEST",
+    "domains": "Clean_QW1-4 + DmgL_QW1-4 (8 2D regions)",
+    "totalAreaUm2": 0.02400002,
+    "unit": "s^-1 um^-1",
+    "ntSide0": {
+      "node": "n2",
+      "radiativeTotal": 40072.82,
+      "cleanTotal": 39953.89,
+      "damagedTotal": 118.9258452
+    },
+    "ntSide1e18": {
+      "node": "n4",
+      "radiativeTotal": 7056.261,
+      "cleanTotal": 7033.27165,
+      "damagedTotal": 22.98885541
+    },
+    "decreasePercentAt5V": 82.3914,
+    "limitation": "terminal current differs; radiative total is not IQE or equal-current evidence; SRH and Auger not yet integrated",
+    "next": "JuSubin to integrate SRH and Auger for exactly same QW regions in both nodes; then check radiative fraction and matched-current comparison"
   }
 }

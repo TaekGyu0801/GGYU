@@ -1,3 +1,11 @@
+## 2026-10-12 — JuSubin 5V_TEST n4 final anode-current decomposition verified (OBSERVED)
+- Worker 주수빈. User submitted terminal output from read-only Python parser of `JUSUBIN_FAST_HALF_5V_TEST/n4_des.plt`. Prior shell quoting produced a SyntaxError, but subsequent command succeeded: 1023 records, remainder 0; last time=1.0 s, anode OuterVoltage=5.0 V.
+- n4 raw anode: TotalCurrent=7.05011114486348e-12; DisplacementCurrent=3.38231191699972e-18; eCurrent=7.53447212445082e-14; hCurrent=6.97476304130706e-12. Electron + hole + displacement reproduce TotalCurrent (display precision).
+- Existing n2 same last-bias: TotalCurrent=1.44801646079583e-11, DisplacementCurrent=3.29132361382365e-18, eCurrent=2.78143237811134e-13, hCurrent=1.42020180788235e-11.
+- n4 vs n2 (both 5V final transient points): TotalCurrent -51.31194%, eCurrent -72.91154%, hCurrent -50.88893%. Displacement / Total=0.0000479753% in n4 vs 0.0000227299% in n2; neither final-time total is displacement-dominated. n4 current composition: 1.0687% electron and 98.9312% hole; this is electrode composition, NOT QW injection or carrier balance.
+- Prior 4QW eight-region modeled recombination share n2=0.10947478%, n4=0.04893717% (Radiative/(Radiative+SRH+Auger)). Those ratios at 5V are NOT matched-current effect, validated whole-device IQE, or EQE. Model AreaFactor/current units and real steady state remain unverified.
+- NEXT read-only examine full n2/n4 I-V records to pick current in overlapping range, extract associated voltages and check pre-existing bias-resolved TDR snapshots. No source/mesh/solver/rerun changes.
+
 ## 2026-10-12 — JuSubin 5V_TEST n2 electrode current decomposition (OBSERVED)
 Final n2_des.plt record (time 1.0s, V=5V): anode TotalCurrent 1.44801646079583e-11, DisplacementCurrent 3.29132361382365e-18, eCurrent 2.78143237811134e-13, hCurrent 1.42020180788235e-11 (raw units). Ratio displacement/total ~0.00002273%, so terminal current at final bias not capacitive-current dominated. Not proof of true DC steady state, correct AreaFactor or physically meaningful MQW injection. Next read-only n4 .plt current decomposition. No TCAD source changes.
 

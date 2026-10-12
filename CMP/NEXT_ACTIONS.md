@@ -1,3 +1,7 @@
+## 2026-10-12 — Extract CAL4V regional MQW recombination (next step)
+- CAL4V n2_4V_final_des shown in SVisual: RadiativeRecombination, srhRecombination, AugerRecombination present. Spatial extrema: Rrad max 7.00132e13 and SRH max 2.98898e18 cm^-3 s^-1; ratio of maxima is NOT meaningful IQE because maxima can be in different locations.
+- NEXT click Regions tab to validate actual QW region identifiers, then integrate each recombination rate over all four QWs (including damage-side QW sections, if applicable); compute QW radiative share only from consistent spatial integrals, compare with 1ns at near-identical bias/current. Check 2D units and baseline Gate0. No simulation restart.
+
 ## 2026-10-12 — CAL4V endpoint verified; next QW quantitative gate
 - CONFIRMED: 100ns CAL4V node2 completed at time=0.8 s, anode=4.000V and last current-column=3.498e-14 (raw log value); earlier saved final TDR/SAV confirmed.
 - **NEXT** read-only inspect effective 100ns par and exact 2D area normalization, analyze n2_4V_final_des.tdr QW1–QW4 Radiative/SRH/Auger integrals, compare with preserved 1ns 5V_TEST at matched bias/current (historical near-4V parent 4.003369V, 3.505521343e-14, not exact match).

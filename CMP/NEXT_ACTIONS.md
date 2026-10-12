@@ -1,3 +1,11 @@
+## 2026-10-12 — CAL4V 완료 이후 결과 검증 (UPDATED)
+- 확인됨: CAL4V `n2_des.out` 종료/Plot/Save 정상, `n2_4V_final_des.tdr`, `n2_4V_ckpt_des.sav` 생성 (2026-10-12 01:12:13 KST).
+- STEP 1: `CMP_BASELINE_1.3.0_CAL4V/n2_des.plt` 또는 `n2_des.log`에서 **실제 마지막 V/I 및 시간** 확인, `pp2_des.cmd` Goal4V/FinalTime0.8, 활성 .par 검증.
+- STEP 2: `n2_4V_final_des.tdr`의 4QW별 Rrad, SRH, Auger (부피/단면 적분) 및 전하·전류 밀도 추출. 기존 1ns 5V_TEST 4V 부근 matched-bias/matched-current 자료와 비교; IQE 개념 혼동 금지.
+- STEP 3: 사용자 보고된 NtSide1e18 split은 **별도 로그 및 node/goal/Trap/outputs** 확인 전 미검증.
+- STEP 4: Low-J Gate0, physical baseline & Full/Half remains unresolved; avoid new high-cost runs and any source/parent changes.
+- Evidence: 이택규가 공유한 Node 2 Explorer `n2_des.out` screenshot.
+
 ## 2026-10-12 — 완료 보고 이후 최우선 검증
 - 1. 두 SWB 프로젝트/노드를 구분하고 사용자 보고된 완료를 실제 nN_des.log 정상 종료와 endpoint (CAL4V 4V, NtSide1e18 5V)로 검증.
 - 2. 각 node의 ppN_des.cmd 및 par 비교: CAL4V InGaN 100ns, Goal4V, FinalTime0.8; split NtSide0/1e18의 유일한 물리 차이와 parent 5V input 확인.

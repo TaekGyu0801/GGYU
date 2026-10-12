@@ -1,3 +1,7 @@
+## 2026-10-12 — JuSubin confirms n2 PLT DF-ISE text Data structure (OBSERVED)
+- User screenshot shows `sed -n '1,28p' n2_des.plt` in 5V_TEST: `DF-ISE text`, `Info { version=1.0, type=xyplot, datasets=[time, electrode voltages and eCurrent/hCurrent/DisplacementCurrent/TotalCurrent/charge], functions=[...] }`, followed by `Data {` numeric entries wrapped over multiple lines. This is format inspection, not yet physical current extraction.
+- Next read-only parse the data numeric stream as dataset ordered records; validate count and last voltage/time, then compare both n2 and n4 anode current decomposition. Avoid misreading line-wrapped numeric values as independent records; no rerun/code edit.
+
 ## 2026-10-12 — JuSubin confirms n2/n4 PLT current field structure (OBSERVED)
 - Read-only grep of datasets in 5V_TEST n2_des.plt and n4_des.plt confirms matching current field declarations: time; anode/cathode OuterVoltage, InnerVoltage, DisplacementCurrent, eCurrent, hCurrent, TotalCurrent (plus Charge/QuasiFermiPotential). Actual values and scaling still unverified.
 - Next inspect initial .plt Data layout and numeric current decomposition of each node, then assess equal-current voltage and available TDR snapshots. No TCAD source or results modified.

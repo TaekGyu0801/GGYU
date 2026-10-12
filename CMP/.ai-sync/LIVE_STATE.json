@@ -2548,5 +2548,27 @@
       "SVisual central clean slice Ec/Ev/e/h QF/e/h densities/currents/Potential/PE_Charge",
       "Check NLM manual and only user-approved branch sensitivity after evidence"
     ]
+  },
+  "juSubin5VsnapshotInventory20261012": {
+    "status": "OBSERVED_READ_ONLY_FIND",
+    "worker": "주수빈",
+    "project": "JUSUBIN_FAST_HALF_5V_TEST",
+    "tdrFiles": [
+      "n1_bnd.tdr",
+      "n1_msh.tdr",
+      "n2_des.tdr",
+      "n4_des.tdr"
+    ],
+    "savFiles": [
+      "n2_5V_ckpt_circuit_des.sav",
+      "n2_5V_ckpt_des.sav",
+      "n2_smoke_ckpt_0p3V_circuit_des.sav",
+      "n2_smoke_ckpt_0p3V_des.sav",
+      "n4_5V_ckpt_circuit_des.sav",
+      "n4_5V_ckpt_des.sav"
+    ],
+    "inference": "No intermediate-bias plot-ready TDR appears in recursive project scan. Existing spatial QW integrations are final 5V, not matched-current.",
+    "unresolved": "Smoke checkpoint named 0p3V does not prove that it contains a 0.3V accepted state; requires separate provenance verification.",
+    "next": "Read-only parse existing n2 and n4 1023-point PLT records to find corresponding voltage at a common terminal current. Do not rerun before deciding whether new spatial output is necessary."
   }
 }

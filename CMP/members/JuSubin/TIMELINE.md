@@ -1,3 +1,6 @@
+## 2026-10-12 — CAL4V final 4V and current externally confirmed (이택규 log check)
+- 이택규가 실제 `CMP_BASELINE_1.3.0_CAL4V/n2_des.log` grep 출력 공유. 마지막 `Computing BE-step from 0.799739 s to 0.8 s (Stepsize: 2.6098e-04 s)` 직후 `anode 4.000E+00 5.270E-20 3.498E-14 3.498E-14`가 표시됨. 직전 단계 0.798939→0.799739s에서는 anode 3.999V, 총전류 표기 3.496E-14. 앞서 확인된 동일 Node2 `Curve trace finished` / `Good Bye` 및 final `n2_4V_final_des.tdr`, `n2_4V_ckpt_des.sav` 저장과 연결되므로 100ns CAL4V에서 최종 time 0.8s / anode 4.000V, 로그 전류 마지막 열 3.498E-14 달성과 정상 완료 CONFIRMED. 로그 전류 물리 단위/2D AreaFactor 및 정상 DC상태는 독립 검증 미완료; 기존 기록의 2D A/um 관행에 따른 원시 수치이며 조건 없이 면적 전류밀도나 IQE로 간주하지 않는다. 참고: 기존 1ns 5V_TEST 가까운 4.003369V에서 I2D=3.505521343e-14였고 CAL4V 4.000V와 약 0.2% 원시 전류 차이이나 서로 완전한 동일 바이어스 아님. 100ns의 재결합 개선 여부 미확정. NEXT 이미 확보한 final TDR의 4QW별 Radiative/SRH/Auger 적분과 비교전류 정상화 후 연구 판단; 별도 NtSide1e18 split은 실제 로그 미검증. 원본 데이터 보존.
+
 ## 2026-10-12 — CAL4V completed (confirmed by Lee TaekGyu screenshot)
 - 주수빈이 수행한 CMP_BASELINE_1.3.0_CAL4V Node2 calculation: 이택규 제공 n2_des.out 마지막 화면에서 Sentaurus Device simulation finished / Good Bye, final TDR n2_4V_final_des.tdr 및 checkpoint n2_4V_ckpt_des.sav 저장 완료 확인. 종료 시각 Oct 12 01:12:13 KST; elapsed 29706.72s. Final anode current / exact voltage and IQE not visible in image and still require analysis. NtSide1e18 split 별도 실로그 확인 대기. Original baseline, running jobs not modified.
 

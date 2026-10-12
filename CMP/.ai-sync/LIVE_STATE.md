@@ -1,3 +1,6 @@
+## 2026-10-12 — JuSubin confirms exact half contacts
+Read-only SDE: yL=0.500um; yDL=0.505um; yC=2.500um (W_mesa=4um, W_domain=5um, W_damage=0.005um). Top anode DmgL 0.005um + Clean 1.995um = 2um; bottom cathode spans numerical base 0..2.5um. Conditional using default 1um depth: n2 5V J=7.24008e-4 A/cm2 and n4 5V J=3.52506e-4 A/cm2. Verify current unit/effective AreaFactor against installed T-2022.03 before declaring J validated. No TCAD changes. Next check physical normalization and injection/SRH; preserve prior runs.
+
 ## 2026-10-12 — JuSubin 5V_TEST SDE top/bottom electrode selection read-only (OBSERVED)
 - Worker 주수빈, AI ChatGPT. Real server stdout `sed -n '415,495p' pp1_dvs.cmd`, unchanged source.
 - SDE `sdegeo:define-contact-set` names "anode"/"cathode". Top p-contact `sdegeo:set-contact` assigns TWO distinct edges by `find-edge-id(position x0 ((yL+yDL)/2) 0)` and `find-edge-id(position x0 ((yDL+yC)/2) 0)` to anode, covering DmgL and Clean pieces of top half-mesa edge (provided edge geometry actually spans respective y ranges).

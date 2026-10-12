@@ -2486,5 +2486,20 @@
     "radiativeFractionRelativeDecreasePercent": 55.2982,
     "limitations": "Model 4QW internal 3-channel fractions, not measured EQE nor validated device IQE. Terminal currents differ at same 5 V; true equal-current trap-specific causal and physical parameter validation remain open.",
     "next": "Read-only verify saved I-V current normalization (2D AreaFactor, transient displacement), inspect equal-current availability of saved 2D TDR, then propose appropriate controlled compare; preserve source and results."
+  },
+  "juSubin5Vn2AnodeCurrent20261012": {
+    "status": "OBSERVED_SCREENSHOT_READ_ONLY_PLT_PARSE",
+    "worker": "주수빈",
+    "file": "JUSUBIN_FAST_HALF_5V_TEST/n2_des.plt",
+    "records": 1023,
+    "lastTimeSeconds": 1,
+    "anodeOuterVoltageV": 5,
+    "rawTerminalCurrent": 1.44801646079583e-11,
+    "rawAnodeDisplacementCurrent": 3.29132361382365e-18,
+    "rawAnodeElectronCurrent": 2.78143237811134e-13,
+    "rawAnodeHoleCurrent": 1.42020180788235e-11,
+    "displacementSharePercentApprox": 0.00002273,
+    "caution": "Raw electrode-component fields: negligible displacement at final time, not proof of DC steady state, physical 2D AreaFactor calibration or adequate MQW injection.",
+    "next": "Repeat read-only extraction for n4_des.plt, compare current component shares, then matched-current I-V and snapshot inspection."
   }
 }

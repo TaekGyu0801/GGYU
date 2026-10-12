@@ -1,3 +1,8 @@
+## 2026-10-12 — 주수빈 n2_des Auger 적분 완료 (OBSERVED)
+- SVisual 4QW 8개 2D 영역 AugerRecombination total 1599.707 s^-1 um^-1, domain 0.02400002 um^2. Clean total 1594.921156, DmgL total 4.785012587 (표시된 개별 값들의 합).
+- 같은 영역 n2 Radiative 40072.82, SRH 36562940. 3-channel radiative fraction=0.10947478%, SRH=99.88615498%, Auger=0.00437023%. 모델 내부 3채널 비율이며 EQE/검증된 IQE는 아님.
+- 다음 n4 Auger도 동일 8개 영역 적분; 이후 5V 비교 및 동일 전류 조건 분리. 실제 서버 코드 변경 없음.
+
 ## 2026-10-12 — 주수빈 n4_des 8-QW SRH integration observed
 - SVisual Field Integration: n4_des srhRecombination eight separate 2D QW regions total=1.441170e7 s^-1 um^-1; total domain=0.02400002 um^2. Clean regions subtotal=14319161.96; DmgL subtotal=92534.28866 (from rounded output).
 - Compared with n2 SRH total=3.656294e7, n4 SRH drops 60.5839%; radiative total n2=40072.82 vs n4=7056.261 drops 82.3914%. Two-channel Rrad/(Rrad+SRH): n2=0.10948%, n4=0.04894%. These are NOT final IQE; Auger still pending and terminal currents differ at nominal 5V.

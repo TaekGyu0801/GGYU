@@ -1,3 +1,10 @@
+## 2026-10-12 — JuSubin 5V_TEST n4 8-QW SRH integrated; 2-channel comparison (OBSERVED)
+- Worker: 주수빈. User-provided Sentaurus Visual Field Integration exact result: dataset n4_des, field srhRecombination, 8 separate 2D QW regions Clean_QW1..4 and DmgL_QW1..4. Total Integral=1.441170e+07 s^-1 um^-1, Total Domain=2.400002e-02 um^2.
+- n4 Clean_QW1=7.535253e4, QW2=2.335633e4, QW3=2.936031e5, QW4=1.392685e7; subtotal of region-rounded values=14,319,161.96. n4 DmgL_QW1=3.279025e2, QW2=8.810076e1, QW3=7.204654e2, QW4=9.139782e4; subtotal=92,534.28866. Rounded-entry sum=14,411,696.24866 vs displayed SVisual total=14,411,700, normal decimal rounding difference.
+- Previously observed same 8-region n2 SRH total=3.656294e+07; n2/n4 Radiative totals=4.007282e4/7.056261e3 s^-1 um^-1. At nominal 5V, n4 SRH total lower by 60.5839%, while Radiative lower by 82.3914%.
+- Two-channel Rad/(Rad+SRH) is n2 0.1094796%, n4 0.0489381% (n4 ~55.30% relatively lower). This is NOT final IQE; Auger integration incomplete, both 5V terminal currents differ and current-density normalization/physics remain unresolved. SRH falling with trap ON does not prove nonradiative trap effect absent: injection levels differ.
+- NEXT: On n2 and n4 SVisual integrate AugerRecombination for same eight 2D QW regions, inspect signs, then calculate 3-channel radiative share; matched-current comparison separately. No solver rerun or TCAD code/mesh change.
+
 ## 2026-10-12 — JuSubin 5V_TEST n2 SRH integration observed
 - SVisual n2_des `srhRecombination` integrated over 8 distinct 2D QW Clean_QW1..4/DmgL_QW1..4: Total=3.656294e7 s^-1 um^-1, area=2.400002e-2 um^2. Clean subtotal=3.633415525e7, damaged subtotal=2.287896575e5 from rounded region entries. 98.0342% of SRH integral is QW4.
 - Prior n2 8-QW Radiative=4.007282e4, so Rad/(Rad+SRH)~0.10947957% (Auger missing, NOT final IQE). n4 SRH and both Auger totals pending. No TCAD inputs/results changed.

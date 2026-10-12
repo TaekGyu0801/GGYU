@@ -2,7 +2,7 @@
   "updated": "2026-10-12",
   "primaryWorker": "이택규",
   "phase": "Phase 0 — working 5V reference NtSide 0/1e18 comparison; physical Gate0 low-J still unresolved",
-  "task": "Two-person parallel tracks PROPOSED: 이택규 CAL4V physical Gate0 low-J/100ns/injection audit; 주수빈 5V_TEST n2 NtSide0 vs n4 NtSide1e18 input parity and QW recombination analysis. JuSubin agreement not yet verified.",
+  "task": "LeeTaekGyu CAL4V n2 read-only current/polarization audit: pp2 Grid n1_msh.tdr, Parameters FASTC1_pp6_des.par, Current n2_des.plt, Thermionic and Piezoelectric_Polarization(strain) present; AreaFactor not explicit in pp2 grep. Next inspect File/Electrode/Physics scope before current J interpretation.",
   "status": "BASELINE_5V_SOLVE_COMPLETE_LOW_J_UNVALIDATED_AB_PRODUCTION_NO_GO",
   "blocker": "Nominal half-device J at 5V ~7.24e-4 A/cm2 under documented 2D normalization; radiative/QW recombination share ~0.1095%; physically meaningful operating region and injection barriers not yet established. Separate CAL latest direct log accepted ~4.149V and next BE Newton RHS oscillates above 1e-3; 5V convergence and physical J validation unresolved.",
   "parallelWork": {
@@ -2200,5 +2200,21 @@
     },
     "source": "user said both working now and need different tasks",
     "serverModified": false
+  },
+  "cal4vDeckAudit20261012": {
+    "status": "OBSERVED_GREP",
+    "project": "CMP_BASELINE_1.3.0_CAL4V",
+    "file": "pp2_des.cmd",
+    "mesh": "n1_msh.tdr",
+    "parameters": "FASTC1_pp6_des.par",
+    "current": "n2_des.plt",
+    "thermionicStatementLine": 60,
+    "piezoelectricPolarizationStrainStatementLine": 64,
+    "plotPolarizationLine": 462,
+    "plotPiezoChargeLine": 466,
+    "AreaFactorExplicitMatchFound": false,
+    "current2DNormalizationValidated": false,
+    "activePolarizationMagnitudeValidated": false,
+    "next": "Read-only sed -n '14,90p' pp2_des.cmd for File/Electrode/Physics declaration scopes; then inspect effective .par and log without changing model."
   }
 }

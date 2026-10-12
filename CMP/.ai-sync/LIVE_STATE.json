@@ -2,7 +2,7 @@
   "updated": "2026-10-12",
   "primaryWorker": "이택규",
   "phase": "Phase 0 — working 5V reference NtSide 0/1e18 comparison; physical Gate0 low-J still unresolved",
-  "task": "CAL4V MQW NonLocal tunneling v2 proposed, not executed. Verify true terminal displacement current, cutline coordinates/electron-hole carrier and potential profile, then test T2022.03 UG NonLocal syntax and lines in separate model before simulation. JuSubin 5V_TEST remains separate.",
+  "task": "CAL4V 4V charging-vs-true-injection UNRESOLVED: read-only CAL4V PLT electrode charge/current/time (verify scope and continuity), central clean cutline e/h QF, n/p and potential; NonLocal V2 held. JuSubin 5V_TEST independent.",
   "status": "BASELINE_5V_SOLVE_COMPLETE_LOW_J_UNVALIDATED_AB_PRODUCTION_NO_GO",
   "blocker": "Nominal half-device J at 5V ~7.24e-4 A/cm2 under documented 2D normalization; radiative/QW recombination share ~0.1095%; physically meaningful operating region and injection barriers not yet established. Separate CAL latest direct log accepted ~4.149V and next BE Newton RHS oscillates above 1e-3; 5V convergence and physical J validation unresolved.",
   "parallelWork": {
@@ -2522,5 +2522,31 @@
     "n4DisplacementSharePercent": 0.00004797529921870779,
     "caution": "Observed final-time raw 2D electrode fields; displacement is negligible at 5V but this is not verified steady state or AreaFactor/current-density normalization. Not QW injection balance.",
     "next": "Read-only locate matched current on both I-V sweeps, then check saved bias-resolved spatial TDR availability."
+  },
+  "leeCAL4VClaudeReview20261012": {
+    "source": "User-provided Claude diagnostic report, 2026-10-12 19:30 KST; ChatGPT checked derived numbers, not original TCAD solver/UG T-2022.03",
+    "status": "USER_REPORTED_DERIVED_UNRESOLVED",
+    "anodeTotalCurrent4V_A_per_um": 3.498e-14,
+    "eightQW_integrals_per_s_per_um": {
+      "radiative": 0.000629,
+      "srh": 5.13,
+      "auger": 0.000213
+    },
+    "q_times_eightQW_total_A_per_um": 8.220515165145827e-19,
+    "qR_over_anode_total": 0.00002350061510905039,
+    "correctedClaims": [
+      "98 percent charging not proven",
+      "QF interface steps cannot be summed into 2V voltage loss",
+      "EBL band bending does not prove 1V electrostatic drop",
+      "QW1-dominant radiation not proof of hole starvation",
+      "n2 parent 5V terminal displacement 3.29e-18 does not determine CAL4V 4V capacitance"
+    ],
+    "electrodeChargeCaution": "Anode Charge may include electrode and doping well, not global device stored charge. dQ/dt/Itot is a diagnostic, not a sufficient one-to-one charging fraction.",
+    "nlmV2": "ON HOLD; Claude reports T2022 UG compatibility but patch mesh placement/mass mt problems; unverified independently here",
+    "next": [
+      "Read-only CAL4V n2_des.plt anode/cathode Q, total, e/h, displacement vs time; validate units, sign and scope",
+      "SVisual central clean slice Ec/Ev/e/h QF/e/h densities/currents/Potential/PE_Charge",
+      "Check NLM manual and only user-approved branch sensitivity after evidence"
+    ]
   }
 }

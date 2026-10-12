@@ -2357,5 +2357,21 @@
       "switching polarization OFF at AlGaN/GaN alone does not turn off InGaN/GaN MQW QCSE"
     ],
     "next": "Read-only grep -n -A 12 'datasets' /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.3.0_CAL4V/n2_des.plt | head -n 18; then inspect endpoint DisplacementCurrent and TotalCurrent and saved 4V band n/p/J fields."
+  },
+  "juSubin5VQWSRH20261012": {
+    "status": "OBSERVED_SVISUAL_8_QW_REGIONS",
+    "worker": "주수빈",
+    "dataset": "n2_des",
+    "field": "srhRecombination",
+    "unit": "s^-1 um^-1",
+    "total": 36562940,
+    "areaUm2": 0.02400002,
+    "cleanSubtotalFromRoundedRegions": 36334155.25,
+    "damagedSubtotalFromRoundedRegions": 228789.6575,
+    "QW4SharePercentApprox": 98.0342,
+    "radiativeTotalFromPrior": 40072.82,
+    "radFractionTwoChannelNoAugerPercent": 0.1094795672,
+    "caution": "Two-channel fraction is NOT final IQE. Auger is missing, model physical validity and current normalization outstanding.",
+    "next": "Integrate n4 srhRecombination for same eight 2D QW regions, then n2 and n4 AugerRecombination"
   }
 }

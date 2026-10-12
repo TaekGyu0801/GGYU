@@ -1,3 +1,10 @@
+## 2026-10-12 — 주수빈 5V_TEST n2/n4 equal-raw-terminal-current bias from n2 PLT (OBSERVED + LINEAR INTERPOLATION)
+- Worker: 주수빈. Evidence: user terminal output of read-only 1023-point `n2_des.plt` scan against target `n4_des.plt` last 5V anode TotalCurrent=7.05011114486348e-12 (raw Sentaurus 2D values).
+- n2 bracketing recorded points: (V=4.91836886499322, I=6.84313365428304e-12, t=0.983673772998644s) and (V=4.92336886499322, I=7.14463993632474e-12, t=0.984673772998644s). Nearest discrete n2 sample is V=4.92336886499322, I=7.14463993632474e-12 (absolute error=9.452879146125942e-14).
+- Derived (LINEAR INTERPOLATION, NOT directly saved 2D result): n2 V at target raw I ≈ 4.921801256006416 V; n4 actual target voltage 5.0 V, so delta V=n4 minus n2≈+0.078198743993584 V = +78.20mV on 5 V/s transient sweep. Do not represent interpolation as an actually computed n2 spatial TDR or as validated steady-state series resistance.
+- Only spatial TDR files in recursive project inventory are n2_des.tdr and n4_des.tdr at final nominal 5V. Thus the existing radiative/SRH/Auger eight-QW full-region 5V ratios 0.10947478% (n2) vs 0.04893717% (n4) CANNOT be compared as equal-current spatial recombination results. No intermediate-voltage TDR near ~4.9218V. Same raw electrode current doesn't yet mean calibrated physical current density (AreaFactor check pending) and n2 transient displacement at target bias is not yet checked.
+- Next read-only n2 .plt nearest two points' DisplacementCurrent/eCurrent/hCurrent and current monotonicity; verify total-current definition / AreaFactor, decide what time and bias snapshots needed. Any new simulation/continuation requires explicit user decision; preserve completed files.
+
 ## 2026-10-12 — JuSubin 5V_TEST project-wide TDR/SAV inventory (OBSERVED)
 - Worker 주수빈; actual terminal screenshot command `find . -type f \( -name '*.tdr' -o -name '*.sav' \) | sort | head -n 100` from JUSUBIN_FAST_HALF_5V_TEST; only 10 matching entries displayed.
 - TDR: n1_bnd.tdr, n1_msh.tdr, n2_des.tdr, n4_des.tdr. No intermediate-bias spatial TDR in this project inventory. n2/n4 final datasets previously verified as 5V.

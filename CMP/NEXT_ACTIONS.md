@@ -1,3 +1,7 @@
+## 2026-10-12 — JuSubin confirms n2 PLT DF-ISE text Data structure (OBSERVED)
+- User screenshot shows `sed -n '1,28p' n2_des.plt` in 5V_TEST: `DF-ISE text`, `Info { version=1.0, type=xyplot, datasets=[time, electrode voltages and eCurrent/hCurrent/DisplacementCurrent/TotalCurrent/charge], functions=[...] }`, followed by `Data {` numeric entries wrapped over multiple lines. This is format inspection, not yet physical current extraction.
+- Next read-only parse the data numeric stream as dataset ordered records; validate count and last voltage/time, then compare both n2 and n4 anode current decomposition. Avoid misreading line-wrapped numeric values as independent records; no rerun/code edit.
+
 ## 2026-10-12 — JuSubin 5V_TEST next: read-only PLT current decomposition
 - `n2_des.plt` and `n4_des.plt` both contain anode/cathode OuterVoltage, eCurrent, hCurrent, DisplacementCurrent, TotalCurrent, Charge and time fields (OBSERVED in dataset declarations). 5V three-channel QW recombination integration already complete, but equal-current comparison and 2D normalization unresolved.
 - Next inspect .plt Data section structure then reliably extract currents vs bias, especially displacement contribution; do not assume terminal TotalCurrent is pure conductive injection in Transient. Preserve previous runs.

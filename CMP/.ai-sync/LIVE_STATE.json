@@ -2,7 +2,7 @@
   "updated": "2026-10-12",
   "primaryWorker": "이택규",
   "phase": "Phase 0 — working 5V reference NtSide 0/1e18 comparison; physical Gate0 low-J still unresolved",
-  "task": "CAL4V 100ns Node 2 successfully finished with final TDR/SAV. Verify actual 4V endpoint, terminal current, QW recombination; check separate NtSide1e18 run logs.",
+  "task": "CAL4V completed at t=0.8 s and 4.000 V with raw anode last current-column=3.498e-14; now analyze final QW rates and low-J, and verify distinct NtSide1e18 split completion.",
   "status": "BASELINE_5V_SOLVE_COMPLETE_LOW_J_UNVALIDATED_AB_PRODUCTION_NO_GO",
   "blocker": "Nominal half-device J at 5V ~7.24e-4 A/cm2 under documented 2D normalization; radiative/QW recombination share ~0.1095%; physically meaningful operating region and injection barriers not yet established. Separate CAL latest direct log accepted ~4.149V and next BE Newton RHS oscillates above 1e-3; 5V convergence and physical J validation unresolved.",
   "parallelWork": {
@@ -2005,9 +2005,19 @@
     ],
     "saveDevice": "n2_4V_ckpt_des.sav",
     "saveCircuit": "n2_4V_ckpt_circuit_des.sav",
-    "finalVoltageValueInScreenshot": false,
+    "finalVoltageValueInScreenshot": true,
     "finalCurrentValueInScreenshot": false,
     "physicsCalibrationValidated": false,
-    "nextAction": "Read actual final V and I (log/PLT), pp2_des.cmd actual active model and QW recombination spatial fields. Keep original old 5V parent unchanged."
+    "nextAction": "SVisual/SDevice read-only extraction of QW1–QW4 radiative, SRH, Auger from n2_4V_final_des.tdr and matched-bias 1ns data; verify NtSide 1e18 run separately.",
+    "finalVoltageV": 4,
+    "finalTimeS": 0.8,
+    "finalCurrentLastColumnRaw": 3.498e-14,
+    "finalCurrentUnitIndependentlyVerified": false,
+    "finalCurrentDCSteadyStateVerified": false,
+    "finalPointEvidence": "2026-10-12 user-pasted n2_des.log grep final anode line following 0.799739 -> 0.8s BE step",
+    "previousAtNear4VParentVoltageV": 4.003369,
+    "previousAtNear4VParentRawCurrent": 3.505521343e-14,
+    "matchedBiasExactly": false,
+    "IQECompared": false
   }
 }

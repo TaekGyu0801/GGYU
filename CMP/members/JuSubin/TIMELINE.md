@@ -1,3 +1,8 @@
+## 2026-10-12 — 주수빈 n4_des 8-QW SRH integration observed
+- SVisual Field Integration: n4_des srhRecombination eight separate 2D QW regions total=1.441170e7 s^-1 um^-1; total domain=0.02400002 um^2. Clean regions subtotal=14319161.96; DmgL subtotal=92534.28866 (from rounded output).
+- Compared with n2 SRH total=3.656294e7, n4 SRH drops 60.5839%; radiative total n2=40072.82 vs n4=7056.261 drops 82.3914%. Two-channel Rrad/(Rrad+SRH): n2=0.10948%, n4=0.04894%. These are NOT final IQE; Auger still pending and terminal currents differ at nominal 5V.
+- NEXT: Integrate AugerRecombination for same eight QW regions in n2 and n4, preserve signed values; compare at equal current separately. No TCAD inputs modified.
+
 ## 2026-10-12 — 주수빈 5V_TEST n2 8-QW SRH SVisual integration (OBSERVED)
 - 실제 사용자 제공 SVisual Field Integration 원문: dataset n2_des, field srhRecombination (lowercase s), 8 separate 2D QW ROI Clean_QW1..4 + DmgL_QW1..4. Reported Total Integral=3.656294e+07 s^-1 um^-1, Total Domain=2.400002e-02 um^2.
 - Clean_QW1=7.765839e4, QW2=5.464576e4, QW3=5.841611e5, QW4=3.561769e7; Clean subtotal from rounded entries=36,334,155.25 s^-1 um^-1.

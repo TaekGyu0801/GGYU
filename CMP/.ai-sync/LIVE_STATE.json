@@ -2678,5 +2678,22 @@
     "conditionalJ_n4_Acm2": 0.000352505557243174,
     "conditionalOn": "I raw in A/um, effective AreaFactor 1, dividing by 2um half mesa width. NOT calibrated physical current density.",
     "next": "Read-only inspect actual SDE top contact geometry and Sentaurus T-2022.03 2D default current normalization before reporting validated J."
+  },
+  "juSubin5VContacts20261012": {
+    "worker": "주수빈",
+    "status": "OBSERVED_SOURCE_CONTACT_SELECTION; GEOMETRIC_LENGTHS_PENDING_NUMERIC",
+    "source": "JUSUBIN_FAST_HALF_5V_TEST/pp1_dvs.cmd lines 415-495 (server screenshot or pasted terminal)",
+    "topAnodeEdges": [
+      "x=x0, y=(yL+yDL)/2 (DmgL)",
+      "x=x0, y=(yDL+yC)/2 (Clean)"
+    ],
+    "bottomCathodeEdge": "x=xb, y=yC/2 on n-GaN base y=0..yC",
+    "symmetryBoundary": "y=yC artificial mirror plane, not etched",
+    "predictedWidthsUmIfPriorMesaDomainDefinitionsConfirmed": {
+      "anodeMesaHalf": 2,
+      "cathodeNumericalBaseHalf": 2.5
+    },
+    "physicalJStatus": "UNRESOLVED; Sentaurus effective 2D current unit and default scaling, and actual SDE variable values/edge lengths not yet verified",
+    "next": "Inspect actual numerical yL, yDL, yC, x0, xb definitions and edge geometry in active pp1_dvs.cmd; no source modifications or reruns."
   }
 }

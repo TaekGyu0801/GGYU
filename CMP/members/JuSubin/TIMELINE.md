@@ -1,3 +1,11 @@
+## 2026-10-12 — 주수빈 5V_TEST n2 8-QW SRH SVisual integration (OBSERVED)
+- 실제 사용자 제공 SVisual Field Integration 원문: dataset n2_des, field srhRecombination (lowercase s), 8 separate 2D QW ROI Clean_QW1..4 + DmgL_QW1..4. Reported Total Integral=3.656294e+07 s^-1 um^-1, Total Domain=2.400002e-02 um^2.
+- Clean_QW1=7.765839e4, QW2=5.464576e4, QW3=5.841611e5, QW4=3.561769e7; Clean subtotal from rounded entries=36,334,155.25 s^-1 um^-1.
+- DmgL_QW1=4.966036e2, QW2=1.416049e2, QW3=1.655249e3, QW4=2.264962e5; DmgL subtotal from rounded entries=228,789.6575 s^-1 um^-1.
+- Display-rounded 8 entries sum=36,562,944.9075, differs from authoritative SVisual Total=36,562,940 by 4.9075 due to field output rounding. QW4 total SRH share ~98.0342%; DmgL share ~0.62574%.
+- Previously n2 same 8 QW ROI Radiative total=4.007282e+04; 2-channel radiative share (excluding Auger) =0.10947957%, NOT final radiative fraction or IQE. 12 sidewall DmgL trap concentrations in n2=0; background SRH remains ON; no proven causal attribution.
+- NEXT: n4_des srhRecombination integration on same 8 ROI; then AugerRecombination both n2/n4 before final ratio and equal-J discussion. No simulation or source modifications.
+
 ## 2026-10-12 — JuSubin 5V_TEST n2/n4 4QW RadiativeRecombination integration (OBSERVED)
 - 작업자: 주수빈; AI: ChatGPT. 실제 Sentaurus Visual `Field Integration` 출력 원문 제공. 8개 2D QW ROI: Clean_QW1..4 + DmgL_QW1..4, '+' 결합 경계 제외. 단위 s^-1 um^-1; 각 n2/n4 적분 총 Domain=2.400002e-02 um^2.
 - NtSide=0 n2 total=4.007282e+04; Clean total=3.995389e+04; DmgL total=1.189258452e+02. NtSide=1e18 n4 total=7.056261e+03; Clean total=7.03327165e+03; DmgL total=2.298885541e+01.

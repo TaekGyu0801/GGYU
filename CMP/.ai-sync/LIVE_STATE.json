@@ -2596,5 +2596,14 @@
       "Verified central cutline pGaN->EBL->Barrier0->QW1 with ElectrostaticPotential, Ec/Ev, e/hQF, n/p, e/hCurrentDensity, srhRecombination, PE_Charge",
       "Check electrode and spatial current continuity without new run; no baseline/NLM changes"
     ]
+  },
+  "juSubinRawMatchedCurrent20261012": {
+    "status": "OBSERVED_PLUS_INTERPOLATED",
+    "targetCurrentRaw": 7.05011114486348e-12,
+    "node2VoltageV": 4.921801256006416,
+    "node4VoltageV": 5,
+    "deltaV": 0.07819874399358362,
+    "caveat": "Transient 5V/s; no matched-current spatial TDR, no DC IQE conclusion",
+    "next": "Check node2 displacement at target bias, AreaFactor and availability of additional snapshot."
   }
 }

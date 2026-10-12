@@ -2,7 +2,7 @@
   "updated": "2026-10-12",
   "primaryWorker": "이택규",
   "phase": "Phase 0 — working 5V reference NtSide 0/1e18 comparison; physical Gate0 low-J still unresolved",
-  "task": "CAL4V Clean_QW1 integration obtained (radiative share 0.011483%); integrate Clean + DmgL QW1..4 all 3 rates before claiming MQW IQE. Separately verify NtSide1e18 finish.",
+  "task": "CAL4V four Clean QWs have 3-rate recombination integrals at 4V: Clean-only radiative fraction ≈0.0112433%. Integrate 4 damaged QW regions as well before full-MQW IQE claim; confirm separate NtSide1e18 node.",
   "status": "BASELINE_5V_SOLVE_COMPLETE_LOW_J_UNVALIDATED_AB_PRODUCTION_NO_GO",
   "blocker": "Nominal half-device J at 5V ~7.24e-4 A/cm2 under documented 2D normalization; radiative/QW recombination share ~0.1095%; physically meaningful operating region and injection barriers not yet established. Separate CAL latest direct log accepted ~4.149V and next BE Newton RHS oscillates above 1e-3; 5V convergence and physical J validation unresolved.",
   "parallelWork": {
@@ -2036,5 +2036,53 @@
     "source": "2026-10-12 screenshot of 3 SVisual field integrations",
     "important": "Only Clean_QW1, NOT all QWs nor overall IQE",
     "next": "Confirm dimension-2 QW1-4 Clean and damaged segments, exclude interface/plus rows, integrate all 3 fields on same eight 2D regions."
+  },
+  "cal4vClean4QWIntegration20261012": {
+    "status": "OBSERVED_SCREENSHOTS",
+    "biasV": 4,
+    "dataset": "n2_4V_final_des",
+    "regions": [
+      "Clean_QW1",
+      "Clean_QW2",
+      "Clean_QW3",
+      "Clean_QW4"
+    ],
+    "rateUnits": "s^-1 um^-1",
+    "qws": [
+      {
+        "name": "Clean_QW1",
+        "radiative": 0.0005674131,
+        "srh": 4.940556,
+        "auger": 0.0002045051
+      },
+      {
+        "name": "Clean_QW2",
+        "radiative": 0.00000720202,
+        "srh": 0.1246185,
+        "auger": 1.234635e-7
+      },
+      {
+        "name": "Clean_QW3",
+        "radiative": 4.57929e-7,
+        "srh": 0.04882792,
+        "auger": 1.495005e-8
+      },
+      {
+        "name": "Clean_QW4",
+        "radiative": 8.117469e-10,
+        "srh": 0.00005108214,
+        "auger": 8.907546e-11
+      }
+    ],
+    "displayedTotals": {
+      "radiative": 0.0005750738,
+      "srh": 5.114054,
+      "auger": 0.0002046436,
+      "areaUm2": 0.02394002
+    },
+    "radiativeFractionPercent": 0.01124326,
+    "QW1RadiativeSharePercent": 98.667865,
+    "interpretation": "Clean region only, not complete MQW / not validated EQE or IQE",
+    "next": "Add DmgL_QW1-4 2D regions to same integral and recalculate; preserve all eight region selection for all 3 fields."
   }
 }

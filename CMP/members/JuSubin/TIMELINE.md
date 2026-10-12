@@ -1,3 +1,9 @@
+## 2026-10-12 — JuSubin n2_des.plt 5V final anode current components extracted (OBSERVED)
+- Worker: 주수빈; AI: ChatGPT. Evidence: user-provided MobaXterm screenshot, read-only Python parser on DF-ISE text `n2_des.plt` in JUSUBIN_FAST_HALF_5V_TEST after correcting current-directory FileNotFoundError. 1023 complete records, remainder 0.
+- Last record: time=1.0 s, anode OuterVoltage=5.0 V, anode TotalCurrent=1.44801646079583e-11, anode DisplacementCurrent=3.29132361382365e-18, anode eCurrent=2.78143237811134e-13, anode hCurrent=1.42020180788235e-11 (raw PLT 2D units).
+- At this final time, DisplacementCurrent/TotalCurrent ~2.273e-7 (0.00002273%). Thus final-time terminal-current magnitude is not dominated by the displacement component; this alone does NOT prove temporal steady state, correct J normalization or adequate MQW hole injection. e/h current values are electrode-current components, not directly quantum-well injection efficiencies.
+- NEXT: repeat identical read-only parser for `n4_des.plt`; compare 5V anode current decomposition and check voltage/current traces for matched-current comparison. Keep SDevice model/files/results unchanged.
+
 ## 2026-10-12 — JuSubin confirms n2 PLT DF-ISE text Data structure (OBSERVED)
 - User screenshot shows `sed -n '1,28p' n2_des.plt` in 5V_TEST: `DF-ISE text`, `Info { version=1.0, type=xyplot, datasets=[time, electrode voltages and eCurrent/hCurrent/DisplacementCurrent/TotalCurrent/charge], functions=[...] }`, followed by `Data {` numeric entries wrapped over multiple lines. This is format inspection, not yet physical current extraction.
 - Next read-only parse the data numeric stream as dataset ordered records; validate count and last voltage/time, then compare both n2 and n4 anode current decomposition. Avoid misreading line-wrapped numeric values as independent records; no rerun/code edit.

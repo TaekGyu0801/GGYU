@@ -1,3 +1,11 @@
+## 2026-10-12 — JuSubin 5V_TEST SDE top/bottom electrode selection read-only (OBSERVED)
+- Worker 주수빈, AI ChatGPT. Real server stdout `sed -n '415,495p' pp1_dvs.cmd`, unchanged source.
+- SDE `sdegeo:define-contact-set` names "anode"/"cathode". Top p-contact `sdegeo:set-contact` assigns TWO distinct edges by `find-edge-id(position x0 ((yL+yDL)/2) 0)` and `find-edge-id(position x0 ((yDL+yC)/2) 0)` to anode, covering DmgL and Clean pieces of top half-mesa edge (provided edge geometry actually spans respective y ranges).
+- Bottom n-contact assigns ONE edge at `position xb (yC/2) 0` to cathode; source comment explicitly says half-domain numerical n-GaN base spans y=0...yC. `y=yC` is artificial mirror-symmetry boundary, NOT etched sidewall.
+- From previous observed W_mesa=4.0um and W_domain=5.0um for left-half symmetric model, predicted upper physical mesa span 2.0um and numerical bottom base 2.5um IF variable definitions satisfy yL=0.5, yC=2.5um; numerical values of yL,yDL,yC,x0,xb and exact edge lengths still to be read directly. Do not use bottom numerical-contact width as LED emission area.
+- Previous `AreaFactor` literal text check had no matches in pp2_des.cmd, pp4_des.cmd, FASTC1_pp6_des.par, n2/n4 logs; still NO independently established effective 2D raw-current unit/default or verified physical current density. Prior conditional J n2 ~7.24008e-4 A/cm2 and n4 ~3.52506e-4 at 5V require unit and width verification.
+- NEXT READ ONLY inspect `pp1_dvs.cmd` numeric definitions `yL,yDL,yC,x0,xb,W_mesa,W_domain` with grep and ensure SDE actual edge spans; no TCAD code/run/result edits.
+
 ## 2026-10-12 — JuSubin Half-Mesa geometry OBSERVED
 SDE left-half geometry: physical full mesa 4um, simulated mesa 2um, numerical domain 5um. Conditional I_2D(A/um)/2um conversion at 5V gives n2 J=7.24008e-4 A/cm2 and n4 J=3.52506e-4 A/cm2; NOT validated until contact extents and T-2022.03 effective 2D current scaling established. No TCAD changes.
 

@@ -2,7 +2,7 @@
   "updated": "2026-10-12",
   "primaryWorker": "이택규",
   "phase": "Phase 0 — working 5V reference NtSide 0/1e18 comparison; physical Gate0 low-J still unresolved",
-  "task": "CAL4V four Clean QWs have 3-rate recombination integrals at 4V: Clean-only radiative fraction ≈0.0112433%. Integrate 4 damaged QW regions as well before full-MQW IQE claim; confirm separate NtSide1e18 node.",
+  "task": "CAL4V 100ns at 4.0 V full QW 8-region integration complete, radiative fraction 0.0122426%; validate low-J physical baseline and check NtSide1e18 split logs next.",
   "status": "BASELINE_5V_SOLVE_COMPLETE_LOW_J_UNVALIDATED_AB_PRODUCTION_NO_GO",
   "blocker": "Nominal half-device J at 5V ~7.24e-4 A/cm2 under documented 2D normalization; radiative/QW recombination share ~0.1095%; physically meaningful operating region and injection barriers not yet established. Separate CAL latest direct log accepted ~4.149V and next BE Newton RHS oscillates above 1e-3; 5V convergence and physical J validation unresolved.",
   "parallelWork": {
@@ -2084,5 +2084,35 @@
     "QW1RadiativeSharePercent": 98.667865,
     "interpretation": "Clean region only, not complete MQW / not validated EQE or IQE",
     "next": "Add DmgL_QW1-4 2D regions to same integral and recalculate; preserve all eight region selection for all 3 fields."
+  },
+  "cal4vMQWAllEightRegions20261012": {
+    "status": "OBSERVED_REGION_INTEGRATIONS",
+    "source": "three user-supplied 2026-10-12 SVisual screenshots",
+    "dataset": "n2_4V_final_des",
+    "biasV": 4,
+    "model": "CAL4V InGaN 100ns Scharfetter taumax candidate",
+    "regionCount": 8,
+    "regions": [
+      "Clean_QW1",
+      "Clean_QW2",
+      "Clean_QW3",
+      "Clean_QW4",
+      "DmgL_QW1",
+      "DmgL_QW2",
+      "DmgL_QW3",
+      "DmgL_QW4"
+    ],
+    "areaUm2": 0.02400002,
+    "unit": "s^-1 um^-1",
+    "integralRadiative": 0.000628668,
+    "integralSRH": 5.134239,
+    "integralAuger": 0.0002127778,
+    "integralSum": 5.1350804458,
+    "radiativeFractionPercent": 0.012242612489434118,
+    "srhFractionPercent": 99.98361377569678,
+    "augerFractionPercent": 0.004143611813794109,
+    "QW1RadiativeSharePercent": 98.77877989654318,
+    "evidenceLimitations": "Three-channel recombination fraction for 2D MQW only. Not experimental/calibrated device IQE. Not comparable as a controlled lifetime test to 1ns parent's 5V total (bias differs). Low J persists.",
+    "next": "Verify NtSide1e18 own SDevice log and TDR, model input equivalence. For lifetime causal comparison find matched-bias or matched-current 1ns 4V QW spatial data, check 2D normalization."
   }
 }

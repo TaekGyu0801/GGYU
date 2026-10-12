@@ -1,3 +1,6 @@
+## 2026-10-12 — JuSubin 5V_TEST n2 final-time current components (OBSERVED)
+- `n2_des.plt` read-only parsed 1023 DF-ISE records. At time 1s, anode V=5V: raw TotalCurrent 1.44801646079583e-11; DisplacementCurrent 3.29132361382365e-18; eCurrent 2.78143237811134e-13; hCurrent 1.42020180788235e-11. Displacement/total 0.00002273%, negligible at last record. This does NOT establish time steady-state or validated 2D J normalization/QW injection. Next n4 PLT current decomposition and matched-J review. No TCAD source changes.
+
 ## 2026-10-12 — JuSubin 5V_TEST n2/n4 eight-QW three-channel recombination comparison (OBSERVED)
 - Worker 주수빈. Evidence: Sentaurus Visual Field Integration pasted outputs for RadiativeRecombination, srhRecombination, AugerRecombination on 8 distinct 2D regions Clean_QW1..4 + DmgL_QW1..4 (avoid '+' interface labels). Total Domain 0.02400002 um² for each node, units for all integrals s^-1 um^-1.
 - n2 NtSide0: Radiative 40072.82; SRH 36562940; Auger 1599.707; 3-channel total 36604612.527; Radiative fraction 0.10947478264%; SRH share 99.88615498397%; Auger share 0.00437023339%.

@@ -1,3 +1,6 @@
+## 2026-10-12 — 이택규 CAL4V 전영역 EBL SRH 결과 (USER-REPORTED, DERIVED)
+Claude 보고 수치: SRH 총 12294.2, EBL 12265.6, QW 5.134 [s^-1 um^-1]. EBL은 SRH의 99.7674%. q(R_SRH+R_rad+R_Auger)=1.96975e-15 A/um은 단자 total 3.498e-14의 5.6311%. **나머지 94.37%가 charging이라는 결론은 미확정**: 재결합 적분은 총 DC 단자 전류와 동일하지 않음. 사용자 제공 Claude 요약에 근거, 학교 raw TDR/PLT는 이 AI가 확인하지 못함. 다음: AlGaN SRH lifetime 파라미터·중앙 clean EBL/QW1 cutline e/hDensity/e/hCurrentDensity/QuasiFermi/Potential/SRH/PE_Charge 검증. 기존 소자 및 주수빈 5V_TEST 변경 없음.
+
 ## 2026-10-12 — JuSubin 5V_TEST project-wide TDR/SAV inventory (OBSERVED)
 - Worker 주수빈; actual terminal screenshot command `find . -type f \( -name '*.tdr' -o -name '*.sav' \) | sort | head -n 100` from JUSUBIN_FAST_HALF_5V_TEST; only 10 matching entries displayed.
 - TDR: n1_bnd.tdr, n1_msh.tdr, n2_des.tdr, n4_des.tdr. No intermediate-bias spatial TDR in this project inventory. n2/n4 final datasets previously verified as 5V.

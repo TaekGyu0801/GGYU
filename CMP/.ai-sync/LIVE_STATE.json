@@ -2,7 +2,7 @@
   "updated": "2026-10-12",
   "primaryWorker": "이택규",
   "phase": "Phase 0 — working 5V reference NtSide 0/1e18 comparison; physical Gate0 low-J still unresolved",
-  "task": "CAL4V 4V charging-vs-true-injection UNRESOLVED: read-only CAL4V PLT electrode charge/current/time (verify scope and continuity), central clean cutline e/h QF, n/p and potential; NonLocal V2 held. JuSubin 5V_TEST independent.",
+  "task": "CAL4V 4V EBL whole-domain SRH hotspot reported; independently verify AlGaN effective lifetime, central clean cutline and terminal/charge continuity. Residual terminal current is NOT proven 94% charging. NLM V2 held.",
   "status": "BASELINE_5V_SOLVE_COMPLETE_LOW_J_UNVALIDATED_AB_PRODUCTION_NO_GO",
   "blocker": "Nominal half-device J at 5V ~7.24e-4 A/cm2 under documented 2D normalization; radiative/QW recombination share ~0.1095%; physically meaningful operating region and injection barriers not yet established. Separate CAL latest direct log accepted ~4.149V and next BE Newton RHS oscillates above 1e-3; 5V convergence and physical J validation unresolved.",
   "parallelWork": {
@@ -2570,5 +2570,31 @@
     "inference": "No intermediate-bias plot-ready TDR appears in recursive project scan. Existing spatial QW integrations are final 5V, not matched-current.",
     "unresolved": "Smoke checkpoint named 0p3V does not prove that it contains a 0.3V accepted state; requires separate provenance verification.",
     "next": "Read-only parse existing n2 and n4 1023-point PLT records to find corresponding voltage at a common terminal current. Do not rerun before deciding whether new spatial output is necessary."
+  },
+  "leeCAL4VEBLRecombination20261012": {
+    "status": "USER_REPORTED_SVISUAL_SUMMARY_AND_ARITHMETIC_DERIVED_UNRESOLVED_CAUSE",
+    "dataSource": "Lee Taek Gyu user-shared Claude 2026-10-12 19:30 KST summary, raw SVisual integral not directly accessed by ChatGPT",
+    "cal4V_4V": {
+      "anodeTotalCurrent_A_per_um": 3.498e-14,
+      "srh_integral_s_inv_um_inv": 12294.2,
+      "rad_integral_s_inv_um_inv": 0.00243,
+      "auger_integral_s_inv_um_inv": 0.000296,
+      "cleanEBLSRH": 12230.8,
+      "dmgLEBLSRH": 34.8,
+      "qwSRH": 5.134
+    },
+    "derived": {
+      "eblSRHpercent": 99.76736997933983,
+      "qwSRHpercent": 0.04175952888353859,
+      "qR_A_per_um": 1.9697484341256305e-15,
+      "qR_over_anode": 0.056310704234580636,
+      "assumedW2um_Jrec_A_cm2": 9.848742170628153e-8
+    },
+    "criticalCorrection": "qR / Itot=5.63 percent does not prove true DC current is 5.63 percent or remaining 94.37 percent is charging; continuity and boundary/leakage/time must be verified.",
+    "next": [
+      "Check effective AlGaN/Scharfetter SRH parameters and SVisual integration scope",
+      "Verified central cutline pGaN->EBL->Barrier0->QW1 with ElectrostaticPotential, Ec/Ev, e/hQF, n/p, e/hCurrentDensity, srhRecombination, PE_Charge",
+      "Check electrode and spatial current continuity without new run; no baseline/NLM changes"
+    ]
   }
 }

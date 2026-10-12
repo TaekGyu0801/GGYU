@@ -1,3 +1,6 @@
+## 2026-10-12 — JuSubin 5V_TEST n4 final anode current (OBSERVED)
+- Parsed n4_des.plt 1023 records to final t=1s, 5V. Raw Total=7.05011114486348e-12, Displacement=3.38231191699972e-18, electron=7.53447212445082e-14, hole=6.97476304130706e-12. Versus n2 at same endpoint raw Total=1.44801646079583e-11, electron=2.78143237811134e-13, hole=1.42020180788235e-11, displacement=3.29132361382365e-18. n4 total -51.31194%, electron -72.91154%, hole -50.88893%. At last point displacement negligible in both. Does not establish physical J or steady-state; next n2/n4 full I-V matched-current check & available TDR. No TCAD edits.
+
 ## 2026-10-12 — JuSubin 5V_TEST n2 final-time current components (OBSERVED)
 - `n2_des.plt` read-only parsed 1023 DF-ISE records. At time 1s, anode V=5V: raw TotalCurrent 1.44801646079583e-11; DisplacementCurrent 3.29132361382365e-18; eCurrent 2.78143237811134e-13; hCurrent 1.42020180788235e-11. Displacement/total 0.00002273%, negligible at last record. This does NOT establish time steady-state or validated 2D J normalization/QW injection. Next n4 PLT current decomposition and matched-J review. No TCAD source changes.
 

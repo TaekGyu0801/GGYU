@@ -2662,5 +2662,21 @@
     ],
     "note": "Use separate clone; no old polarization-incompatible SAV restarts unless solver and physics semantics independently verified; user does not authorize additional factor or EBL lifetime edits.",
     "schoolServerRun": "NOT PERFORMED BY CHATGPT"
+  },
+  "juSubinHalfMesa20261012": {
+    "worker": "주수빈",
+    "status": "OBSERVED_GEOMETRY_DERIVED_CONDITIONAL_J",
+    "project": "JUSUBIN_FAST_HALF_5V_TEST",
+    "evidence": "user screenshot grep pp1_dvs.cmd",
+    "physicalFullMesaWidthUm": 4,
+    "simulatedLeftHalfMesaWidthUm": 2,
+    "numericalFullDomainWidthUm": 5,
+    "model": "2D Cartesian planar, left half symmetric",
+    "n2_5V_rawI": 1.44801646079583e-11,
+    "n4_5V_rawI": 7.05011114486348e-12,
+    "conditionalJ_n2_Acm2": 0.000724008230397915,
+    "conditionalJ_n4_Acm2": 0.000352505557243174,
+    "conditionalOn": "I raw in A/um, effective AreaFactor 1, dividing by 2um half mesa width. NOT calibrated physical current density.",
+    "next": "Read-only inspect actual SDE top contact geometry and Sentaurus T-2022.03 2D default current normalization before reporting validated J."
   }
 }

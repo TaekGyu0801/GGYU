@@ -2,7 +2,7 @@
   "updated": "2026-10-12",
   "primaryWorker": "이택규",
   "phase": "Phase 0 — working 5V reference NtSide 0/1e18 comparison; physical Gate0 low-J still unresolved",
-  "task": "Verify user-reported completion of two JuSubin runs (likely NtSide1e18 split and 100ns CAL4V): actual node IDs, final logs, endpoint V, TDR/PLT/SAV, matched-input controls. Low-J physical Gate0 remains open.",
+  "task": "CAL4V 100ns Node 2 successfully finished with final TDR/SAV. Verify actual 4V endpoint, terminal current, QW recombination; check separate NtSide1e18 run logs.",
   "status": "BASELINE_5V_SOLVE_COMPLETE_LOW_J_UNVALIDATED_AB_PRODUCTION_NO_GO",
   "blocker": "Nominal half-device J at 5V ~7.24e-4 A/cm2 under documented 2D normalization; radiative/QW recombination share ~0.1095%; physically meaningful operating region and injection barriers not yet established. Separate CAL latest direct log accepted ~4.149V and next BE Newton RHS oscillates above 1e-3; 5V convergence and physical J validation unresolved.",
   "parallelWork": {
@@ -1982,6 +1982,32 @@
     "finishedSDeviceLogsVerified": false,
     "finalVoltageVerified": false,
     "outputTDRorSAVVerified": false,
-    "next": "Read last nN_des.log, ppN_des.cmd and inspect PLT/TDR/SAV for both. Avoid baseline freeze until physical Gate0 current and recombination validation."
+    "next": "Read last nN_des.log, ppN_des.cmd and inspect PLT/TDR/SAV for both. Avoid baseline freeze until physical Gate0 current and recombination validation.",
+    "CAL4VNode2ActualLogVerified": true,
+    "CAL4VNode2OutputFilesVerified": true,
+    "NtSide1e18SplitLogVerified": false
+  },
+  "cal4vCompletion20261012": {
+    "project": "CMP_BASELINE_1.3.0_CAL4V",
+    "node": "n2",
+    "status": "OBSERVED_NORMAL_FINISH",
+    "evidence": "2026-10-12 user-supplied screenshot of n2_des.out tail",
+    "finishedAtKST": "2026-10-12 01:12:13",
+    "wallclockSeconds": 29706.72,
+    "cpuSeconds": 84070.27,
+    "peakMemoryGB": 4.05,
+    "curveTraceFinished": true,
+    "deviceSimulationFinished": true,
+    "goodBye": true,
+    "outputTDR": [
+      "n2_4V_final_des.tdr",
+      "n2_des.tdr"
+    ],
+    "saveDevice": "n2_4V_ckpt_des.sav",
+    "saveCircuit": "n2_4V_ckpt_circuit_des.sav",
+    "finalVoltageValueInScreenshot": false,
+    "finalCurrentValueInScreenshot": false,
+    "physicsCalibrationValidated": false,
+    "nextAction": "Read actual final V and I (log/PLT), pp2_des.cmd actual active model and QW recombination spatial fields. Keep original old 5V parent unchanged."
   }
 }

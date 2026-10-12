@@ -1,3 +1,9 @@
+## 2026-10-12 — 주수빈 5V_TEST n2 matched-current-nearest PLT current decomposition (OBSERVED)
+- Worker 주수빈. Terminal read-only parser output nearest recorded `n2_des.plt` point to n4 5V raw TotalCurrent target=7.05011114486348e-12: time=0.984673772998644s; anode OuterVoltage=4.92336886499322V; raw anode TotalCurrent=7.14463993632474e-12; DisplacementCurrent=3.0437121600456e-18; eCurrent=1.01944917915676e-13; hCurrent=7.0426919746969e-12.
+- Target-current deviation of this DISCRETE point = +1.34081278% (n2 vs n4); not exactly matched. Displacement/Total at selected n2 bias = 0.0000426013%, confirming negligible final comparison-point capacitive component. n4 actual 5V final Displacement=3.38231191699972e-18, Total=7.05011114486348e-12, fraction=0.0000479753%.
+- Previously two-point PLT interpolation gave n2 bias ~4.921801256V for exact n4 raw current and n4-minus-n2 +78.198744mV, but NO spatial TDR at that bias; 5V Radiative/SRH/Auger 4QW ratios cannot be interpreted as matched-current IQE. Neither negligible displacement nor electrode e/h fractions proves steady state or QW injection.
+- NEXT: read-only audit effective AreaFactor/2D current normalization in n2/n4 preprocessed SDevice decks and output logs (e.g. grep AreaFactor), before physical current density comparison. No solver rerun, model, mesh or result edits.
+
 ## 2026-10-12 JuSubin matched-current voltage from 5V_TEST transient PLT
 OBSERVED n2 data: V=4.91836886499322 I=6.84313365428304e-12, and V=4.92336886499322 I=7.14463993632474e-12. Target n4 final 5V raw I=7.05011114486348e-12. LINEAR INTERPOLATION gives n2 V=4.921801256006416, n4 needs 78.198744 mV more for same raw TotalCurrent on 5 V/s Transient. Not a DC steady-state resistance or equal-J MQW comparison. No TDR at n2 4.9218V, no corresponding ROI recombination measured. Next read-only current components/displacement near n2 target, 2D AreaFactor and saved snapshot needs. No solver files modified.
 

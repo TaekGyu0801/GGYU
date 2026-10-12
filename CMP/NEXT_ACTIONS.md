@@ -1,3 +1,8 @@
+## 2026-10-12 — JuSubin checks root-level 5V_TEST TDR snapshots (OBSERVED)
+- Worker: 주수빈; actual SSH screenshot of `find . -maxdepth 1 -type f -name '*.tdr' | sort` inside JUSUBIN_FAST_HALF_5V_TEST lists only `./n1_bnd.tdr`, `./n1_msh.tdr`, `./n2_des.tdr`, `./n4_des.tdr`.
+- Only root-level files were checked; presence or absence of intermediate-voltage spatial TDR in subdirectories is NOT established. n2_des/n4_des are previously verified final 5V SDevice TDR outputs, not demonstrated matched-current spatial snapshots.
+- NEXT read-only recursively list project TDR and SAV snapshot files before deciding whether identical injected-current 4QW spatial recombination comparison can be done without new runs; then extract matching-current voltage from n2/n4 PLT. Preserve device files and runs.
+
 ## 2026-10-12 — 이택규 CAL4V Claude 19:30 재판단 전달 / ChatGPT 독립 검토 (USER-REPORTED / DERIVED / UNRESOLVED)
 - SOURCE: 이택규가 Claude 작성 `CAL4V_LOWJ_LOWIQE_DIAGNOSIS.md` 텍스트를 현재 채팅에 제출. 이는 **Claude 보고서의 내용**이지 ChatGPT가 Sentaurus 학교 서버나 T-2022.03 원본 문서를 직접 검증한 결과가 아님. 기존 CAL4V 코드/실행 변경 없음.
 - Reported CAL4V 4V: anode TotalCurrent=3.498e-14 A/um; QW integrals Rad=6.29e-4, SRH=5.13, Auger=2.13e-4 s^-1 um^-1. From these values, q*(Rad+SRH+Auger)=8.221e-19 A/um and ratio to anode total=2.350e-5 (0.002350%). This **does not itself prove** 98% charging current or hole-only starvation: QW-outside recombination, other leakage paths, transient charge and sign/normalization must be checked.

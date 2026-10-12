@@ -2,7 +2,7 @@
   "updated": "2026-10-12",
   "primaryWorker": "이택규",
   "phase": "Phase 0 — working 5V reference NtSide 0/1e18 comparison; physical Gate0 low-J still unresolved",
-  "task": "CAL4V 100ns at 4.0 V full QW 8-region integration complete, radiative fraction 0.0122426%; validate low-J physical baseline and check NtSide1e18 split logs next.",
+  "task": "Low-J baseline physical gate: CAL4V MQW integrated radiative share 0.0122426% at 4V is very low vs functioning μLED literature; 2D current density conversion and effective recombination/injection need independent verification before A/B science.",
   "status": "BASELINE_5V_SOLVE_COMPLETE_LOW_J_UNVALIDATED_AB_PRODUCTION_NO_GO",
   "blocker": "Nominal half-device J at 5V ~7.24e-4 A/cm2 under documented 2D normalization; radiative/QW recombination share ~0.1095%; physically meaningful operating region and injection barriers not yet established. Separate CAL latest direct log accepted ~4.149V and next BE Newton RHS oscillates above 1e-3; 5V convergence and physical J validation unresolved.",
   "parallelWork": {
@@ -2114,5 +2114,30 @@
     "QW1RadiativeSharePercent": 98.77877989654318,
     "evidenceLimitations": "Three-channel recombination fraction for 2D MQW only. Not experimental/calibrated device IQE. Not comparable as a controlled lifetime test to 1ns parent's 5V total (bias differs). Low J persists.",
     "next": "Verify NtSide1e18 own SDevice log and TDR, model input equivalence. For lifetime causal comparison find matched-bias or matched-current 1ns 4V QW spatial data, check 2D normalization."
+  },
+  "cal4vLowJLiteratureReview20261012": {
+    "status": "REVIEWED_HYPOTHESIS_NOT_CAUSALLY_VALIDATED",
+    "mqwRadiativeFractionPercent": 0.01224261249,
+    "raw4VTerminalCurrent": 3.498e-14,
+    "conditionalJIfAperUmAndHalfWidth2Um_AperCm2": 0.000001749,
+    "unitAndAreaFactorValidated": false,
+    "literature": [
+      {
+        "doi": "10.1038/s41467-023-43472-z",
+        "example": "3.5um NBE blue microLED peak EQE 37.5% at around 3 A/cm2; EQE low-J 0.01 A/cm2 relative droop 26%"
+      },
+      {
+        "doi": "10.1038/s41467-023-36773-w",
+        "example": "10x10um blue MicroLED achieved 3.00% EQE at 0.1 A/cm2"
+      }
+    ],
+    "criticalComparisonCaveat": "Published external QE with different epitaxy/processing/injection cannot be directly compared to modeled MQW radiative fraction; historical 1ns parent at 5V and 100ns CAL at 4V are not matched bias.",
+    "nextSteps": [
+      "verify 2D current units/AreaFactor and actual working J",
+      "verify CAL active InGaN 100ns override effective values",
+      "check carrier densities and pGaN/EBL transport and polarization at QWs",
+      "compare at same bias/current with appropriate archived spatial data",
+      "preserve parent; defer expensive runs until hypothesis targeted"
+    ]
   }
 }

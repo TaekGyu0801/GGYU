@@ -1,3 +1,6 @@
+## 2026-10-13 — 이택규 Claude Baseline V2 ZIP static audit (OBSERVED code / PROPOSED run / UNRESOLVED physics)
+- **MODEL CONFIGURATION ERROR (source-level, not runtime failure)**: All `bl2_des.par` Scharfetter blocks use `taumin=0`, `taumax=1e-7`, `Nref=1e16`, `gamma=1` but documentation describes universal 100ns lifetimes. Standard doping-dependent Scharfetter gives nominal τ EBL 0.05ns, pGaN 0.166ns, nGaN 0.20ns, pCap 0.02ns, QW 90.91ns; verify effective values on target T-2022.03. This mismatch can heavily bias simulated EBL recombination. User ZIP contains no .log or numerical output. Fix intent before runtime smoke. Secondary analysis warnings: q(Rad+SRH+Aug+Trap)/I required ≈1 is not universal with leakage; double-counting/field naming unverified.
+
 ## 2026-10-10 22:04 KST — TDR file run as shell executable (non-TCAD error)
 - OBSERVED in 주수빈 terminal: user entered `/user/semi/semi437/tmp/myproject/JUSUBIN_FAST_HALF_5V_TEST/n1_msh.tdr` at shell prompt and received `Permission denied`. Cause is execution attempt on non-executable TDR data file; not a simulator convergence, mesh, permissions-to-read or file content failure.
 - Same screenshot shows separate `n2_des.log` final t=1s anode 5.000V and Sentaurus Device finished/Good Bye (completed previous day). No remedial code changes required; view TDR through SVisual, not shell execution.

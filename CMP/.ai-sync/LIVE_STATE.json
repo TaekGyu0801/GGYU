@@ -2781,12 +2781,22 @@
   },
   "leePOL50RuntimeDelay20261013": {
     "worker": "이택규",
-    "status": "USER_REPORTED_UNRESOLVED_NO_SERVER_LOG",
+    "status": "OBSERVED_PARTIAL_N2_LOG_UNRESOLVED_RUNNING_STATE",
     "project": "CMP_BASELINE_1.4.0_POL50",
-    "approxElapsedHours": 15,
-    "reported": "POL50 not finished yet after about 15 hours",
+    "approxElapsedHoursUserReported": 15,
+    "lastConvergedTime_s": 0.572417,
+    "lastAnodeVoltageRounded_V": 2.862,
+    "lastAnodeTotalCurrentRaw": 7.796e-14,
+    "lastConvergedRHS": 0.000497,
+    "RHSThreshold": 0.001,
+    "previousAcceptedStep_s": 0.0000045285,
+    "nextAttemptEndTime_s": 0.572422,
+    "nextAttemptStepsize_s": 0.0000054342,
+    "perStepWallclock_s": 6.82,
+    "goalVoltage_V": 4,
     "completionVerified": false,
-    "errorVerified": false,
-    "next": "Read-only POL50 n2_des.log tail and sdevice process; inspect accepted time, Voltage, BE Stepsize, convergence/error markers; no stop/rerun/physics edits until classified."
+    "processAliveVerified": false,
+    "rootCause": "UNRESOLVED",
+    "next": "Read-only check ps -fu semi437 | grep '[s]device', log modification time and latest BE-step accepted t/V; no stop, rerun or physics edits based solely on this excerpt."
   }
 }

@@ -1,3 +1,9 @@
+## 2026-10-13 — 이택규 Claude V2 n2 최종 출력 anode 2.070V / 1.781e-16, 목표 3.6V와 불일치 (OBSERVED / UNRESOLVED)
+- 근거: 사용자 실제 서버 `grep -E '^[[:space:]]*anode[[:space:]]' n2_des.log | tail -n 8` 및 `grep -nE 'Goal|Voltage|Vmax' pp2_des.cmd`. n2 마지막 표시 단자 anode voltage 2.070E+00 V, electron 6.437E-45, hole 1.781E-16, conduction current 1.781E-16 (**raw solver 값; 2D 정규화 미검증**). 로그는 n2 SDevice Simulation finished/Good Bye 및 SWB done이므로 프로그램 정상 종료는 확인됐으나, 최종 물리 bias가 3.6V 도달했다는 증거는 아님.
+- 실제 전처리 `pp2_des.cmd`에는 `Goal { Name="anode" Voltage=2.0 }` (L188), `Goal { Name="anode" Voltage=3.6 }` (L194) 둘 다 존재. 최종 *출력된* 전압은 목표 3.6V의 57.5%; 어떤 이유로 2.070V 이후 목표로 진행하지 않았는지는 **UNRESOLVED**. BreakCriteria/최종 PLT voltage/solve blocks 등 미확인. `2.070V`의 1.781e-16을 기존 4–5V 데이터와 비교하여 전류 문제를 악화/개선됐다고 단정하지 말 것.
+- Node6 서버 `ps -p 93107`: PID 93107 `gjob` wrapper (S-state, CPU 0.0%, elapsed 01:27:43), **실제 sdevice 자식 PID 생존 여부를 뜻하지 않음**. `n6_des.log` mtime `2026-10-13 20:18:51.645 +0900`, 259,459 bytes. SWB 상태는 running; 현 진행/정체 여부는 실제 SDevice process 및 로그 추세 확인 필요.
+- Next READ ONLY: `sed -n '170,210p' pp2_des.cmd`; `grep -niE 'break|stop|abort|fail|converg|quasistationary|goal|simulation finished' n2_des.log | tail -n 35`; `tail -n 20 n2_des.plt` (binary 여부 주의) 또는 2.070V 이후 log; `ps -fu semi437 | grep '[s]device'`, `tail -n 10 n6_des.log`. 기존 실행/코드 건드리지 않음.
+
 ## 2026-10-13 — 이택규 Claude V2 SDE done / SDevice n2 정상 종료, n6 실행 중 (OBSERVED SERVER LOG)
 - 근거: 사용자 제공 `CMP_BASELINE_2.0.0_V2` 실제 서버 `cat n1_dvs.sta n2_des.sta n6_des.sta`, `tail -n 35 n2_des.log`, `tail -n 20 n6_des.log`.
 - Node1 SWB status `done`; `n1_msh.tdr` 파일 존재. 기하/접촉/메쉬 품질은 별도 검증 필요.

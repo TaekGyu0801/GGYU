@@ -1,3 +1,11 @@
+## 2026-10-13 — 이택규 Claude V2 SDE done / SDevice n2 정상 종료, n6 실행 중 (OBSERVED SERVER LOG)
+- 근거: 사용자 제공 `CMP_BASELINE_2.0.0_V2` 실제 서버 `cat n1_dvs.sta n2_des.sta n6_des.sta`, `tail -n 35 n2_des.log`, `tail -n 20 n6_des.log`.
+- Node1 SWB status `done`; `n1_msh.tdr` 파일 존재. 기하/접촉/메쉬 품질은 별도 검증 필요.
+- **Node2 SWB `done` 및 `Sentaurus Device simulation finished (Tue Oct 13 18:51:50 2026 KST)`, `Good Bye !` 확인**. `n2_end_des.tdr`, `n2_end_des.sav`, `n2_des.tdr` 저장. wallclock 13107.96 s (3h38m27s), peak memory 2.41GB. **종료 확인 ≠ 물리적 Baseline 타당성 확인**; 최종 전압/전류 및 효과적인 physics는 아직 읽지 못함.
+- Node6 SWB status `running`; 마지막 제공 로그에는 직전 완료 단계 anode V=2.018E+00, conduction current=9.514E-17 (solver raw unit), cathode opposite sign. 새 단계 t=0.0113234→0.0119577가 Newton iteration 4 시점까지만 보이며 아직 accepted/failed 여부 미확인. 로그가 이후에도 최신 진행 중인지는 미확인. `n6_des.tdr` 최종 파일은 아직 없던 목록.
+- `grep -iE 'fatal|error|failed|simulation finished|good bye'`는 일반 Iteration 헤더와 `Error smaller than 1`까지 포함하여 끝부분 출력만으로 n6 fatal/종료 여부 판정 금지.
+- 사용자 시간 제약 때문에 다음 최소 read-only 점검: `grep -E '^[[:space:]]*anode[[:space:]]' n2_des.log | tail -n 8`; `grep -nE 'Goal|Voltage|Vmax' pp2_des.cmd | tail -n 20`; `ps -p 93107 -o pid,stat,etime,pcpu,args`; `stat -c '%y %s bytes' n6_des.log`. n2 최종 bias/current 수치 확보 후 전류 정규화 및 physics validation. 원본 코드·SWB 런 변경 없음.
+
 ## 2026-10-13 — 이택규 Claude V2 서버 실행 산출물 최초 확인 (OBSERVED FILE INVENTORY / UNRESOLVED RUN STATUS)
 - 사용자 제공 실제 학교 서버 Bash `ls -lh` 및 `find` 출력. 실 프로젝트 경로는 `/user/semi/semi437/CMP_BASELINE_2.0.0_V2` (**`tmp/myproject` 아래가 아님**); 이전 경로 안내를 정정.
 - SDE node1: `n1_bnd.tdr` 109,952 bytes, `n1_msh.tdr` 2,060,977 bytes, `n1_dvs.log` 8,046 bytes 및 `n1_msh.log` 2,992 bytes. 파일 생성 자체 확인, 메쉬 품질/접촉 검증 미완료.

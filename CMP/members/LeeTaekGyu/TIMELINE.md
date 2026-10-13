@@ -1,3 +1,13 @@
+## 2026-10-13 — 이택규 Claude V2 독립 수치·물리 검토 (GPT ANALYSIS / USER-REPORTED RUN3)
+- 사용자 전달 Claude 설명: run1 2.31V 도달 후 QS Newton 진동, run2 2.070V 조기 종료, **run3는 Claude가 수정한 복사본**에서 `Method=Blocked, SubMethod=ParDiSo, NumberOfThreads=4, Iterations=20, NotDamped=50, ExtendedPrecision` 설정으로 실행 중이라고 보고됨. **새 복사본의 원본 pp*/log 및 성공/개선은 직접 검증되지 않음**.
+- 독립 검토(해석, 결과 아님): QS MaxStep는 V가 아닌 정규화된 t에 작용하므로 stage 2.0→3.6V의 MaxStep 0.01은 최대 0.016V, 0.02는 0.032V, MinStep 1e-6은 1.6 microV. 2.3V 수렴은 스텝 크기/수치 stiff 문제 가능성 높으나 물리 원인 미확정. `NotDamped=50>Iterations=20`은 기본적으로 Bank–Rose damping을 지연시키지만 Sentaurus 교육자료는 QS에서 작은 스텝을 일반적으로 우선하므로 '오류'로 단정 금지.
+- Sentaurus 교육자료 `sd_6`에 따라 CNormPrint/NewtonPlot 좌표로 실패 방정식/영역을 확인. 사용자 서버 n2 파일 목록에는 `n2_des_min_des.tdr` 존재하므로 near-MinStep 자동 진단과 관계 있을 가능성(확정 전 로그 확인). 저밀도 `HighFieldSaturation` driving-force smoothing은 **실제 electron/hole 저밀도 수치 불안정이 확인되는 경우만** 제안.
+- `Method=Blocked, SubMethod=ParDiSo`는 mixed-mode에 적합; standalone device면 `Method=ParDiSo`가 교육자료 예시. `ExtendedPrecision`은 III-N에서 권장되지만 PARDISO 4-thread와 조합 시 병렬 성능이 저하될 수 있음. `Iterations=20` 일반적으로 합리적. T-2022.03 UG p221/1070 사용자 인용은 원문 직접 미대조.
+- 2.31V J≈1.3e-6 A/cm2 및 국소 이상계수≈1.6이 3.6V에서 J>1A/cm2 증거는 아님: 300K/고정 n=1.6 가정의 **순수 수학적** 외삽에서 J=1A/cm2는 V≈2.871V이며 높은 주입/직렬저항/수송 변화로 물리적 예측 불가. 2D J/AreaFactor 실제 설정 확인 필요.
+- A/B 보류사항: 50% polarization/70:30 offset calibration 없음; p+Mg/EBL PDopant 실제 활성 정공 및 thermionic interface 확인; sidewall uniform 5nm Nt1e18 cm-3→조건부 5e11cm-2 등가 면밀도, C implant의 실측 프로파일 아님; Project B edge-QW AlGaN replacement는 QW 부피/밴드·계면을 동시에 바꾸며 conformal barrier와 다름; equal-current QW IQE/transport, symmetry/full-vs-half/mesh convergence 검증 필요.
+- 근거: 사용자 메시지+앞서 제공된 n2/n6 실제 파일 목록/로그, GitHub 기존 V2 감사 및 Synopsys 교육자료 웹 미러 sd_6/sd_8/sd_9/sd_16, 학술 microLED 문헌. **코드 수정 또는 run 재시작 없음.**
+- 다음: 복사본 실제 전처리 Solve/Math, 최근 마지막 accepted voltage/current 및 CNormPrint/MinStep 메시지 확인. 실행 중인 원본 n6 및 복사본 무단 종료 금지.
+
 ## 2026-10-13 — 이택규 V2 n2 조기 종료 사용자 확인 (USER-REPORTED / UNRESOLVED CAUSE)
 - 사용자가 Claude Baseline V2 n2 계산이 3.6V 목표 전에 조기 종료됐다고 확인함. 이전 직접 제공 로그에서 n2는 'simulation finished' 및 SWB done이었지만, 마지막 표시된 anode 2.070V, raw conduction 1.781e-16이고 pp2_des.cmd Goal은 2.0V와 3.6V. 조기 종료 원인은 미확인. 성공 종료 메시지로 최종 바이어스 충족을 주장하지 말 것.
 - 재실행/원본 변경 없이 pp2_des.cmd 175–215행, n2_des.log 종료 조건/수렴 경고 및 마지막 65행을 확보해 원인을 식별. n6는 실행 중이므로 건드리지 않음.

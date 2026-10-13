@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-12",
+  "updated": "2026-10-13",
   "primaryWorker": "이택규",
   "phase": "Phase 0 — working 5V reference NtSide 0/1e18 comparison; physical Gate0 low-J still unresolved",
   "task": "Lee user reports CMP_BASELINE_1.4.0_POL50 started (node2, NtSide0, Goal 4V, FinalTime 0.8s, ramp 5V/s) with only global polarization activation 1->0.5; source/preprocess one-line diff and equilibrium smoke halved PE_Charge. Await actual 4V result; existing CAL4V cutline suggests EBL/B0/QW polarization-related injection barrier but causality not confirmed.",
@@ -2778,5 +2778,15 @@
       "Read actual active AlGaN SRH lifetime and whether EBL recombination persists or moves, identify electron leakage/cathode hCurrent separately",
       "Preserve original CAL4V and JuSubin 5V_TEST unchanged; no new long simulation or model edits pending results"
     ]
+  },
+  "leePOL50RuntimeDelay20261013": {
+    "worker": "이택규",
+    "status": "USER_REPORTED_UNRESOLVED_NO_SERVER_LOG",
+    "project": "CMP_BASELINE_1.4.0_POL50",
+    "approxElapsedHours": 15,
+    "reported": "POL50 not finished yet after about 15 hours",
+    "completionVerified": false,
+    "errorVerified": false,
+    "next": "Read-only POL50 n2_des.log tail and sdevice process; inspect accepted time, Voltage, BE Stepsize, convergence/error markers; no stop/rerun/physics edits until classified."
   }
 }

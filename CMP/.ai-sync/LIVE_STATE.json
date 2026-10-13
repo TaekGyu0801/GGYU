@@ -16,7 +16,8 @@
       "2D area and qR/I trap/ leakage semantics not checked",
       "README NOT RUN but user execution status unspecified"
     ],
-    "nextAction": "Keep historical baseline intact; clarify τ intent, obtain actual V2 log if exists, run separate S0/preprocess smoke before S1."
+    "nextAction": "Keep historical baseline intact; clarify τ intent, obtain actual V2 log if exists, run separate S0/preprocess smoke before S1.",
+    "supersededBy": "leeClaudeBaselineV2AuditCorrection20261013"
   },
   "updated": "2026-10-13",
   "primaryWorker": "이택규",
@@ -2847,5 +2848,21 @@
     "processAlivePreviouslyObserved": true,
     "sideBySide": "POL50 PID 94012 at ~2.863V and very small dt, not valid matched-bias current comparison",
     "next": "Inspect ps -p 88354,94012 -o pid,etime,time,pcpu,pmem,nlwp,stat,args and nproc; examine new accepted times. Do not stop jobs without decision."
+  },
+  "leeClaudeBaselineV2AuditCorrection20261013": {
+    "worker": "이택규",
+    "status": "OBSERVED_CODE_CORRECTION_AND_PROPOSED_UNRUN",
+    "supersedes": "leeClaudeBaselineV2Audit20261013",
+    "correction": "Previous audit INCORRECT: `Recombination(SRH Radiative Auger)` lacks DopingDependence, so expected tau=taumax=100ns not 0.05ns. Old Sentaurus UG explicitly τ=τmax unless DopingDependence on; verify T-2022.03 S0 runtime.",
+    "literature": "Lu 2021 50% polarization and 70:30, Yin 2024 50%/70:30, Baek 2023 50%/50:50. Vurgaftman Meyer 2003 bowing InGaN1.4/AlGaN0.7.",
+    "otherFindings": [
+      "neutral-bulk Mg calculations match target but 26nm EBL effective ionization unknown",
+      "p+ cap new confounding structure",
+      "postprocessor IQE label and qR/I leak/doublecount issue",
+      "no explicit SUPER; ErrRef=1e7 may dilute carrier convergence",
+      "Quantum corrections and QW overlap not explicitly modeled",
+      "same-mesh material changes require actual mesh comparison"
+    ],
+    "nextAction": "Run separate S0 parse+0V+pGaN/EBL ionization+polarization; verify model loading and postprocessor; S1 low current, matched J for S2; preserve 1.0 control."
   }
 }

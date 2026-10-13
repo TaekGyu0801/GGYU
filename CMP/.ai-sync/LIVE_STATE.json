@@ -2801,8 +2801,14 @@
       94012
     ],
     "processCmd": "sdevice --max_threads 4 pp2_des.cmd",
-    "processProjectMappingVerified": false,
+    "processProjectMappingVerified": true,
     "futureConvergenceAndETA": "UNRESOLVED",
-    "next": "Read-only ls -l /proc/88354/cwd /proc/94012/cwd then fresh POL50 n2_des.log tail/stat; preserve CAL4V and POL50, no restart or mutation until audit."
+    "next": "Read-only check POL50 and CAL log progress and process CPU/memory/thread counts. Do not terminate either job without evaluating results and user direction.",
+    "pidToProjectObserved20261013": {
+      "88354": "CMP_BASELINE_1.2.0_CAL",
+      "94012": "CMP_BASELINE_1.4.0_POL50"
+    },
+    "competingRuntimeJobsObserved": true,
+    "hardwareContentionHypothesis": "UNVERIFIED"
   }
 }

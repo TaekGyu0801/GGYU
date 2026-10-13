@@ -1,3 +1,9 @@
+## 2026-10-13 — 이택규 CAL 1.2.0 별도 4.207V 로그 검증 (OBSERVED / UNRESOLVED)
+- 사용자 제공 실제 학교 서버 read-only 출력 `tail -n 20 ../CMP_BASELINE_1.2.0_CAL/n2_des.log`. CAL 1.2.0 마지막 표시된 완료 단계 anode Voltage `4.207E+00 V`, anode electron current `2.330E-17`, hole current `6.423E-14`, total current `6.429E-14` (raw solver output; 단위 정규화 미확정). 다음 계산 시도 `Computing BE-step from 0.841422 s to 0.841424 s (Stepsize 1.6305e-06 s)`; 뉴턴 반복 2 `|Rhs| = 1.39e-03`으로 threshold 1e-03 미달, 해당 단계의 성공/실패 아직 미확인. 직전 완료 단계 wallclock 8.03 s.
+- 앞서 `/proc` cwd 실제 출력: PID 88354 -> `CMP_BASELINE_1.2.0_CAL`; PID 94012 -> `CMP_BASELINE_1.4.0_POL50`. POL50 이전 시도 시작 시각 0.572527s, ≈2.863V, stepsize 6.7501e-06 s, 반복 RHS 1.17e-03. 두 프로젝트 모두 매우 작은 adaptive step에서 느리게 진행함. 로그의 마지막 iteration 종료 여부만으로 job 실패/성공 판단 불가; 실제 CAL/POL50 log mtime 및 accepted step 후속 확인 필요.
+- CAL 1.2.0 최근 완료 4.207V와 POL50 2.863V의 raw current를 공정한 민감도 비교로 취급하지 않음. 원래 CAL 1.2.0이 목표 5V인지, 현재 데이터를 보존하고 중단 가능한지 재확인 필요. 이미 독립 CAL4V 4V 결과는 GitHub에 user-reported 존재, 따라서 우선 목표는 POL50 동일 조건 4V 비교이지만 CPU 경합과 CAL 중단의 적절성은 UNRESOLVED.
+- NEXT READ ONLY: `ps -p 88354,94012 -o pid,etime,time,pcpu,pmem,nlwp,stat,args` 와 `nproc` 출력으로 활성 프로세스의 자원 상태 파악; 필요시 `stat`와 `tail`로 각 로그의 실시간 시간 증가 검토. 원본 job의 무단 kill/restart 금지. 코드 수정 없음.
+
 ## 2026-10-13 — 이택규 POL50 PID 출처 확인 (OBSERVED)
 - 사용자 제공 서버 `/proc` cwd 출력으로 PID 88354는 `CMP_BASELINE_1.2.0_CAL`, PID 94012는 `CMP_BASELINE_1.4.0_POL50`임을 확인. 두 SDevice 동시 실행은 사실이지만 CPU 경합이 지연 원인인지 미확인. 다음 단계: 각 로그 진행 상태 및 자원 사용량 읽기 전용 점검. 계산 중단 또는 코드 변경 없음.
 

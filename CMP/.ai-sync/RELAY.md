@@ -1,3 +1,6 @@
+## 2026-10-13 — 이택규 POL50 PID 출처 확인 (OBSERVED)
+- 사용자 제공 서버 `/proc` cwd 출력으로 PID 88354는 `CMP_BASELINE_1.2.0_CAL`, PID 94012는 `CMP_BASELINE_1.4.0_POL50`임을 확인. 두 SDevice 동시 실행은 사실이지만 CPU 경합이 지연 원인인지 미확인. 다음 단계: 각 로그 진행 상태 및 자원 사용량 읽기 전용 점검. 계산 중단 또는 코드 변경 없음.
+
 ## 2026-10-13 — 이택규 POL50 slow-step Newton pattern and two SDevice PIDs (OBSERVED / UNRESOLVED)
 - Evidence: user-pasted live server `tail -n 40 n2_des.log`, `ps -fu semi437 | grep '[s]device'`, `stat -c '%y %s bytes' n2_des.log`, `tail -n 15 n2_des.log` in `/user/semi/semi437/tmp/myproject/CMP_BASELINE_1.4.0_POL50`. n2_des.log reported modified 2026-10-13 11:54:26.576373260 +0900; size 3,371,197 bytes.
 - Earlier completed BE-step at t=0.572417s with RHS 4.97e-04 <1e-03 and anode V ~2.862V, raw total I=7.796e-14. Later snippet shows new attempt `Computing BE-step from 0.572527 s to 0.572534 s (Stepsize: 6.7501e-06 s)` at 5V/s. Thus log advanced from t=0.572417 to a new attempt starting t=0.572527 (difference 1.10e-4 s = 0.00055V). Latest attempt is NOT shown converged. RHS iterations 2–6 repeatedly 1.17e-03 > criterion 1e-03, with alternate reported error around 6.34e2/4.16e3: observed iteration plateau; future acceptance/cutback/termination unknown.

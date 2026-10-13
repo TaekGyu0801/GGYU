@@ -1,3 +1,8 @@
+## 2026-10-13 — 이택규 POL50 약 15시간 경과 미완료 보고 (USER-REPORTED / UNRESOLVED)
+- 사용자는 `CMP_BASELINE_1.4.0_POL50` 4V transient 계산이 시작된 지 약 15시간이 되었으나 아직 완료되지 않았다고 보고함. 경과 시간은 추정, 학교 서버 실제 `n2_des.log`/SWB 상태/프로세스는 ChatGPT가 직접 확인하지 못함. 오류·정체·진행 중 여부와 현재 accepted t/V/Stepsize는 불명.
+- 우선 READ-ONLY `cd /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.4.0_POL50; tail -n 40 n2_des.log; ps -fu semi437 | grep '[s]device'`로 현재 계산 진행/반복 실패/프로세스 확인. 필요한 경우 반복 log snapshots로 accepted time과 Stepsize 비교.
+- 오류 미확인 상태에서 잡 강제 종료/재실행, 물성·메쉬·분극 추가 변경 금지. 기존 CAL4V 원본/5V_TEST 보존. POL50 최종 4V 결과·민감도 개선은 계속 UNVERIFIED. 사용자 로그 확인 후 계속/중단/수정 여부 결정.
+
 ## 2026-10-12 — Lee CAL4V cutline audit and POL50 running report (USER-REPORTED / DERIVED / RUN NOT DIRECTLY VERIFIED)
 - User provided Claude notes labeled 19:40 and 20:28 KST. Raw school-server cutline CSV / SWB job log not directly accessible to this ChatGPT. Claude reports completed CAL4V central y=2.0um x cutline: QW1 eQF=-1.4025eV, hQF=-3.017eV; anode hQF=-4, cathode eQF=0. Thus arithmetic exact 4.000=1.4025 electron difference +0.9830 hole difference +1.6145 QW splitting. Their alternative 1.397+0.983+1.615=3.995 is rounded/mismatched sampling, not proof of extra loss. QF drops localize especially B0 and QB interfaces, but heterojunction discontinuity alone does not identify tunneling absence.
 - EBL Potential reported 2.3215 to 3.3274 over 0.026um: 1.0059V, mean field ~0.3869MV/cm. EBL Ev -3.995 to -5.041 means 1.046eV change, ~96.2% numerical slope consistent with electrostatic contribution within reported homogeneous EBL. Source of equilibrium polarization vs imposed bias UNRESOLVED.

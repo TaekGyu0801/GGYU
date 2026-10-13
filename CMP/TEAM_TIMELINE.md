@@ -1,3 +1,6 @@
+## 2026-10-13 — 이택규 Claude Baseline V2 ZIP static audit (OBSERVED code / PROPOSED run / UNRESOLVED physics)
+- Lee uploaded Claude new Baseline V2 ZIP for independent review. Proposed/unrun per README; direct server run evidence not in ZIP. Critical Scharfetter 100ns vs doping-dependent τ mismatch, nominal EBL τ≈0.05ns. 50% polarization remains uncalibrated/protected; static audit only. Next independent smoke after correcting/documenting effective τ; preserve existing controls. See Lee timeline and Issue #7.
+
 ## 2026-10-13 — 이택규 CAL 1.2.0 별도 4.207V 로그 검증 (OBSERVED / UNRESOLVED)
 - 사용자 제공 실제 학교 서버 read-only 출력 `tail -n 20 ../CMP_BASELINE_1.2.0_CAL/n2_des.log`. CAL 1.2.0 마지막 표시된 완료 단계 anode Voltage `4.207E+00 V`, anode electron current `2.330E-17`, hole current `6.423E-14`, total current `6.429E-14` (raw solver output; 단위 정규화 미확정). 다음 계산 시도 `Computing BE-step from 0.841422 s to 0.841424 s (Stepsize 1.6305e-06 s)`; 뉴턴 반복 2 `|Rhs| = 1.39e-03`으로 threshold 1e-03 미달, 해당 단계의 성공/실패 아직 미확인. 직전 완료 단계 wallclock 8.03 s.
 - 앞서 `/proc` cwd 실제 출력: PID 88354 -> `CMP_BASELINE_1.2.0_CAL`; PID 94012 -> `CMP_BASELINE_1.4.0_POL50`. POL50 이전 시도 시작 시각 0.572527s, ≈2.863V, stepsize 6.7501e-06 s, 반복 RHS 1.17e-03. 두 프로젝트 모두 매우 작은 adaptive step에서 느리게 진행함. 로그의 마지막 iteration 종료 여부만으로 job 실패/성공 판단 불가; 실제 CAL/POL50 log mtime 및 accepted step 후속 확인 필요.

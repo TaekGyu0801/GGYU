@@ -1,3 +1,9 @@
+## 2026-10-13 — 3주차 발표 12번 '향후 연구 계획' 단일 슬라이드 개정 (PRESENTATION / OBSERVED)
+- 사용자 요청으로 기존 13장 중 **12번 슬라이드만** 가독성 중심의 4단계 로드맵으로 재설계하고, 요청대로 한 장짜리 편집 가능한 PowerPoint로 출력: `CMP_3주차_12번_향후연구계획_한장.pptx` (채팅 산출물; GitHub 바이너리 업로드 안 함).
+- 핵심 순서 유지: ① 전류 정규화·Mg/EBL/MQW 수송 검증 → ② 동일 전류의 Trap별 QW SRH/Radiative 비교 → ③ Full/Half·Mesh 정확도 검증과 Baseline 확정 → ④ Project A C 고저항 Edge와 B AlGaN Barrier 성능 평가.
+- 하단 지표는 측벽 SRH↓, QW Radiative↑, IQE↑, 구동전압 페널티로 축약. 미해결 항목은 향후 단계로 표시했으며 이미 완료된 것처럼 표현하지 않음.
+- 원본 2주차 밝은 배경·청록색 팔레트·헤더/푸터 계승. 수정 슬라이드만 분리한 PPTX의 slide count=1, ZIP 무결성 및 LibreOffice PDF 1페이지 변환·PNG 렌더링 확인. TCAD 코드·시뮬레이션·연구 결론 변경 없음.
+
 ## 2026-10-13 — 3주차 PPT 11번 슬라이드 가독성 개정 (PRESENTATION / OBSERVED)
 - 사용자 요청으로 11번 '추가 원인 검토'의 장황한 로그 상태표를 교체. 9·10번 개정 슬라이드 유지, 13장 전체 PPTX 산출물 `CMP_Week3_JuSubin_Slide11_Clear.pptx` (채팅 전달, GitHub에 PPT 바이너리는 올리지 않음).
 - 핵심 흐름을 ① 손실 위치: 이택규의 별도 CAL4V에서 전체 domain SRH 중 EBL 약 99.77% 집중으로 보고 ② 원인 후보: EBL/MQW 정공 주입 및 수송 제한 가능성은 UNRESOLVED ③ 검증 방향: POL50(activation 1.0→0.5) 별도 분극 민감도 시험, 4V 수송 결과 완료 확인 전으로 축약.

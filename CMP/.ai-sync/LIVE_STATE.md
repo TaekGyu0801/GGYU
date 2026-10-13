@@ -1,3 +1,10 @@
+## 2026-10-13 — 이택규 POL50 n2_des.log 직접 확인: 약 2.862 V, 작은 시간 간격 (OBSERVED / UNRESOLVED)
+- 사용자 제공 학교 서버 터미널 `tail -n 40 n2_des.log` 출력. 경로: `/user/semi/semi437/tmp/myproject/CMP_BASELINE_1.4.0_POL50`.
+- 마지막으로 단자 값이 출력된 수렴 단계: `Computing BE-step from 0.572412 s to 0.572417 s (Stepsize: 4.5285e-06 s)`; Newton iteration 2에서 `|RHS|=4.97e-04 < 1.0e-03`로 `Finished`. Anode Voltage 출력 `2.862E+00 V`, eCurrent `3.023E-17`, hCurrent `7.793E-14`, TotalCurrent `7.796E-14` (로그 원래의 전류 단위/AreaFactor는 아직 별도 확인 필요). Cathode TotalCurrent `-7.796E-14`. 직전 단계 시간 6.82 s wallclock.
+- 다음 계산 **시작만 확인**: `Computing BE-step from 0.572417 s to 0.572422 s (Stepsize: 5.4342e-06 s)`; iteration table header에서 출력이 끝남. 이 다음 단계 수렴 여부, 현재 실제 프로세스 동작 및 최근 파일 갱신 여부 미확인.
+- DERIVED: 5 V/s 램프 기준 0.572417 s → 약 2.862085 V, 4 V 목표의 약 71.55%; 다음 nominal time step의 bias 증가량 = 5×5.4342e-06 = 2.7171e-05 V (27.171 µV). 최근 매우 작은 stepsize 때문에 진행이 느릴 가능성 있으나 축소 원인과 미래 완료 시간은 예측/확정하지 않음.
+- 현재 발췌에 MinStep/fatal/simulation complete 출력 없음; **정상 완주나 현재 살아 있는 프로세스의 증거는 아님**. 즉시 종료/재시작·코드/물성 변경하지 말고 `ps -fu semi437 | grep '[s]device'`와 로그 수정 시각 및 새 BE accepted t를 확인하여 진행/정체/실패 분류. CAL4V 4V 값과 POL50 2.862V 값은 동등 조건이 아니므로 성능 개선 결론 금지.
+
 ## 2026-10-13 — 이택규 POL50 약 15시간 경과 미완료 보고 (USER-REPORTED / UNRESOLVED)
 - 사용자는 `CMP_BASELINE_1.4.0_POL50` 4V transient 계산이 시작된 지 약 15시간이 되었으나 아직 완료되지 않았다고 보고함. 경과 시간은 추정, 학교 서버 실제 `n2_des.log`/SWB 상태/프로세스는 ChatGPT가 직접 확인하지 못함. 오류·정체·진행 중 여부와 현재 accepted t/V/Stepsize는 불명.
 - 우선 READ-ONLY `cd /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.4.0_POL50; tail -n 40 n2_des.log; ps -fu semi437 | grep '[s]device'`로 현재 계산 진행/반복 실패/프로세스 확인. 필요한 경우 반복 log snapshots로 accepted time과 Stepsize 비교.

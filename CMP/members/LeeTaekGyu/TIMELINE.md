@@ -1,3 +1,7 @@
+## 2026-10-13 — 이택규 V2 n2 조기 종료 사용자 확인 (USER-REPORTED / UNRESOLVED CAUSE)
+- 사용자가 Claude Baseline V2 n2 계산이 3.6V 목표 전에 조기 종료됐다고 확인함. 이전 직접 제공 로그에서 n2는 'simulation finished' 및 SWB done이었지만, 마지막 표시된 anode 2.070V, raw conduction 1.781e-16이고 pp2_des.cmd Goal은 2.0V와 3.6V. 조기 종료 원인은 미확인. 성공 종료 메시지로 최종 바이어스 충족을 주장하지 말 것.
+- 재실행/원본 변경 없이 pp2_des.cmd 175–215행, n2_des.log 종료 조건/수렴 경고 및 마지막 65행을 확보해 원인을 식별. n6는 실행 중이므로 건드리지 않음.
+
 ## 2026-10-13 — 이택규 Claude V2 n2 최종 출력 anode 2.070V / 1.781e-16, 목표 3.6V와 불일치 (OBSERVED / UNRESOLVED)
 - 근거: 사용자 실제 서버 `grep -E '^[[:space:]]*anode[[:space:]]' n2_des.log | tail -n 8` 및 `grep -nE 'Goal|Voltage|Vmax' pp2_des.cmd`. n2 마지막 표시 단자 anode voltage 2.070E+00 V, electron 6.437E-45, hole 1.781E-16, conduction current 1.781E-16 (**raw solver 값; 2D 정규화 미검증**). 로그는 n2 SDevice Simulation finished/Good Bye 및 SWB done이므로 프로그램 정상 종료는 확인됐으나, 최종 물리 bias가 3.6V 도달했다는 증거는 아님.
 - 실제 전처리 `pp2_des.cmd`에는 `Goal { Name="anode" Voltage=2.0 }` (L188), `Goal { Name="anode" Voltage=3.6 }` (L194) 둘 다 존재. 최종 *출력된* 전압은 목표 3.6V의 57.5%; 어떤 이유로 2.070V 이후 목표로 진행하지 않았는지는 **UNRESOLVED**. BreakCriteria/최종 PLT voltage/solve blocks 등 미확인. `2.070V`의 1.781e-16을 기존 4–5V 데이터와 비교하여 전류 문제를 악화/개선됐다고 단정하지 말 것.

@@ -2952,5 +2952,15 @@
     },
     "nextReadOnly": "grep -E '^[[:space:]]*anode[[:space:]]' n2_des.log | tail -n 8; grep -nE 'Goal|Voltage|Vmax' pp2_des.cmd | tail -n 20; ps -p 93107 -o pid,stat,etime,pcpu,args; stat -c '%y %s bytes' n6_des.log",
     "researchStatus": "solver completion does not establish microLED performance/current normalization/IQE/calibration"
+  },
+  "leeClaudeV2N2EarlyTerminationUserConfirmed20261013": {
+    "worker": "이택규",
+    "status": "USER_REPORTED_EARLY_TERMINATION__CAUSE_UNRESOLVED",
+    "targetV": 3.6,
+    "lastLoggedAnodeVoltageV": 2.07,
+    "lastLoggedRawConductionCurrent": 1.781e-16,
+    "simulatorNormalFinish": true,
+    "physicalBaselineValidated": false,
+    "next": "Read pp2_des.cmd Solve lines 175-215 and n2_des.log termination/convergence and final 65 lines, without rerun or editing node6"
   }
 }

@@ -1,3 +1,9 @@
+## 2026-10-13 — 3주차 PPT 9번 슬라이드 가독성 개정 (PRESENTATION / OBSERVED)
+- 사용자 요청에 따라 9번 슬라이드의 장황한 본문을 제거하고, 좌측 5V raw TotalCurrent 2조건 수평 막대와 우측 QW SRH/방사 재결합 핵심 수치로 재설계함. 산출물: `CMP_Week3_JuSubin_Slide09_Clean.pptx` (13장 전체 덱, 9번만 변경).
+- 5V raw terminal current: NtSide=0 1.448e-11 vs NtSide=1e18 7.050e-12 (약 51.3% 차이). QW 모델 내부 SRH 비율 약 99.9%; 방사 비율 0.1095% vs 0.0489%를 표시함.
+- 저전류와 SRH 우세의 원인은 미확정. 동일 전압에서 서로 다른 전류로 비교한 결과이며, 동일 전류의 순수 Trap 영향으로 확정하지 않음. 2D 전류 정규화 및 IQE calibration 미완료 주의 문구 유지.
+- PPTX 13장 파싱·ZIP 무결성·9번 페이지 렌더링 확인 완료. TCAD 코드/시뮬레이션/물리 설정 변경 없음. 사용자 실제 PowerPoint 열림은 확인 전.
+
 ## 2026-10-13 — 3주차 PPTX 열기 문제 대응 (DELIVERABLE FIX / USER VERIFICATION PENDING)
 - 사용자 보고: 기존 3주차 PPTX가 열리지 않음. 기존 PPTX는 ZIP 무결성, XML 파싱, python-pptx(13장), LibreOffice 파일 열기/렌더링 검사에서 오류 재현되지 않음. 사용자 앱/다운로드 환경 원인은 확인하지 못함.
 - LibreOffice Impress Office Open XML 형식으로 다시 저장한 호환성 수정본 `CMP_Week3_JuSubin_Compatible.pptx` 작성. ZIP 압축 배포본과 13장 PDF 미리보기도 채팅에 제공. 수정본 ZIP/슬라이드 파싱/13장 PDF 생성 검사를 통과했으나 실제 사용자 PowerPoint에서 열리는지는 확인 전.

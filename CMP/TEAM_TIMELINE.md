@@ -1,3 +1,6 @@
+## 2026-10-13 — 이택규 Claude V2 n2 조기 종료 확인 (USER-REPORTED / CAUSE UNRESOLVED)
+- 사용자: n2가 목표 3.6V 전에 조기 종료. 로그 정상 finish와 2.070V 마지막 출력 확인됨. 원인 확인 위해 read-only Solve/code/log 출력 요청, n6는 보호. Baseline 완료 판정 불가.
+
 ## 2026-10-13 — 이택규 Claude V2 SDE done / SDevice n2 정상 종료, n6 실행 중 (OBSERVED SERVER LOG)
 - 근거: 사용자 제공 `CMP_BASELINE_2.0.0_V2` 실제 서버 `cat n1_dvs.sta n2_des.sta n6_des.sta`, `tail -n 35 n2_des.log`, `tail -n 20 n6_des.log`.
 - Node1 SWB status `done`; `n1_msh.tdr` 파일 존재. 기하/접촉/메쉬 품질은 별도 검증 필요.

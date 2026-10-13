@@ -1,4 +1,23 @@
 {
+  "leeClaudeBaselineV2Audit20261013": {
+    "worker": "이택규",
+    "source": "User-uploaded Claude Baseline V2 zip; SHA256 8f26d1d17fb24ba4528dc51daf0bb9edf3f95c6c984ceb942e02e5882099bde8",
+    "status": "OBSERVED_SOURCE_ONLY_UNRESOLVED_RUNTIME",
+    "codeFiles": [
+      "bl2_dvs.cmd",
+      "bl2_des.cmd",
+      "bl2_des.par",
+      "bl2_check.py"
+    ],
+    "scharfetterMismatch": "README fixed 100ns but code uses taumin=0, taumax=1e-7, Nref=1e16 gamma=1. Nominal EBL N=2e19 yields tau=0.04998ns; intended fixed τ must be clarified before S0.",
+    "otherGates": [
+      "PolAct0.5 uncalibrated",
+      "EBL NA=2e19 incomplete ionization needs verification",
+      "2D area and qR/I trap/ leakage semantics not checked",
+      "README NOT RUN but user execution status unspecified"
+    ],
+    "nextAction": "Keep historical baseline intact; clarify τ intent, obtain actual V2 log if exists, run separate S0/preprocess smoke before S1."
+  },
   "updated": "2026-10-13",
   "primaryWorker": "이택규",
   "phase": "Phase 0 — working 5V reference NtSide 0/1e18 comparison; physical Gate0 low-J still unresolved",

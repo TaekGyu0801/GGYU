@@ -1,3 +1,6 @@
+## 2026-10-13 — 이택규 Claude V2 n2 조기 종료 인수인계 (UNRESOLVED)
+- 관측: n2 done/SDevice finished, 마지막 표시 2.070V, 1.781e-16 raw, pp2 Goal 3.6V. 사용자 조기 종료 확인. 원인 아직 모름. 먼저 pp2_des.cmd 175–215행과 n2_des.log termination/last65 lines를 요청. n6 진행 중, 작업 및 소스 수정 금지.
+
 ## 2026-10-13 — 이택규 Claude V2 서버 실행 산출물 최초 확인 (OBSERVED FILE INVENTORY / UNRESOLVED RUN STATUS)
 - 사용자 제공 실제 학교 서버 Bash `ls -lh` 및 `find` 출력. 실 프로젝트 경로는 `/user/semi/semi437/CMP_BASELINE_2.0.0_V2` (**`tmp/myproject` 아래가 아님**); 이전 경로 안내를 정정.
 - SDE node1: `n1_bnd.tdr` 109,952 bytes, `n1_msh.tdr` 2,060,977 bytes, `n1_dvs.log` 8,046 bytes 및 `n1_msh.log` 2,992 bytes. 파일 생성 자체 확인, 메쉬 품질/접촉 검증 미완료.

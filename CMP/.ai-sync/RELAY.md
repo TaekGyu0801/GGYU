@@ -1,3 +1,8 @@
+## 2026-10-13 — 이택규 Claude Baseline V2 ZIP static audit (OBSERVED code / PROPOSED run / UNRESOLVED physics)
+- Source: user-uploaded Claude V2 ZIP SHA256 8f26d1d17fb24ba4528dc51daf0bb9edf3f95c6c984ceb942e02e5882099bde8. Files include bl2_dvs.cmd / bl2_des.cmd / bl2_des.par / bl2_check.py and SWB_PASTE copies. README PROPOSED/NOT RUN; actual user server job status requires real log. Existing baseline CAL/POL50/5V_TEST untouched.
+- Confirmed static source defect: `bl2_des.par` all Scharfetter blocks τmin=0, τmax=100ns, Nref=1e16, gamma=1; not fixed 100ns as claimed. Nominal EBL 2e19 gives τ≈0.05ns. Fix/change only in independent V2 variant after preserving user physical intent. qR/I audit assumptions incomplete; 50% polarization and EBL Mg activation need physical sensitivity/calibration. T-2022.03 preprocessed/par/log essential to validate. No simulator execution here.
+- Next AI first: obtain actual V2 run/preprocess/log if user has executed; compare source hash to uploaded; resolve SRH τ design; check S0 geometry, ionization, contact/polarity/PE_Charge, then S1 when smoke passes. Never overwrite/change existing CAL/POL50/5V reference runs without authorization.
+
 ## 2026-10-13 — Lee CAL 1.2.0 and POL50 parallel slow SDevice run handoff (OBSERVED)
 - 실서버 CAL 1.2.0 `n2_des.log`: 직전 완료 전압 4.207V, I=6.429e-14 raw, 새 시도 t=0.841422→0.841424s, dt=1.6305e-06s, Newton iteration2 RHS=1.39e-03 > 1e-03. 해당 시도 이후 수렴은 아직 미확인. PID 88354 = CAL 1.2.0, PID 94012 = POL50. POL50 직전 로그 ≈2.863V, dt≈6.7501e-06s. 두 계산 모두 느리며 CPU 경합은 아직 검증되지 않음. 원본 계산/결과/물성 유지, 급히 kill/restart 하지 말 것. 다음 단계: 프로세스 `%CPU`, `%MEM`, NLWP와 nproc 확인 및 로그 시간 증가 재확인. CAL4V 4V 대조와 POL50 2.863V 값을 직접 비교하지 말 것.
 

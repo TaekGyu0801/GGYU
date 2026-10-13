@@ -1,3 +1,8 @@
+## 2026-10-13 — 3주차 PPTX 열기 문제 대응 (DELIVERABLE FIX / USER VERIFICATION PENDING)
+- 사용자 보고: 기존 3주차 PPTX가 열리지 않음. 기존 PPTX는 ZIP 무결성, XML 파싱, python-pptx(13장), LibreOffice 파일 열기/렌더링 검사에서 오류 재현되지 않음. 사용자 앱/다운로드 환경 원인은 확인하지 못함.
+- LibreOffice Impress Office Open XML 형식으로 다시 저장한 호환성 수정본 `CMP_Week3_JuSubin_Compatible.pptx` 작성. ZIP 압축 배포본과 13장 PDF 미리보기도 채팅에 제공. 수정본 ZIP/슬라이드 파싱/13장 PDF 생성 검사를 통과했으나 실제 사용자 PowerPoint에서 열리는지는 확인 전.
+- TCAD 코드/계산/물리 해석/결과 변경 없음. 기존 발표 구조와 7개 목차 유지. 다음: 사용자가 수정본을 실제 PowerPoint에서 열 수 있는지 확인.
+
 ## 2026-10-13 — 주수빈 3주차 발표 PPT 초안 제작 (PRESENTATION / OBSERVED)
 - 2주차 발표 PDF와 CMP의 2026-10-12 실제 기록을 바탕으로 7개 한국어 목차를 유지한 13장 편집 가능한 발표 PPT 초안을 제작함. 산출물 로컬 파일명: `CMP_PRESENTATION_1.0.0_WEEK3_JUSUBIN.pptx`. GitHub에는 PPT 바이너리를 업로드하지 않았으며, 사용자의 채팅에서 파일로 제공함.
 - 구성: 이전 연구 및 현황 → Baseline 계산 문제 → Half-Mesa 물리 타당성/검증 조건 → Baseline 최적화 및 5V 결과 → 예상 외 저전류/SRH 지배 → 도핑·Contact·CAL 모델 진단 → 다음 계획. 기존 2주차 원문보다 기대/문제/대응/검증 수준에 집중하도록 편집.

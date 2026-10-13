@@ -1,3 +1,11 @@
+## 2026-10-13 — 이택규 Claude V2 서버 실행 산출물 최초 확인 (OBSERVED FILE INVENTORY / UNRESOLVED RUN STATUS)
+- 사용자 제공 실제 학교 서버 Bash `ls -lh` 및 `find` 출력. 실 프로젝트 경로는 `/user/semi/semi437/CMP_BASELINE_2.0.0_V2` (**`tmp/myproject` 아래가 아님**); 이전 경로 안내를 정정.
+- SDE node1: `n1_bnd.tdr` 109,952 bytes, `n1_msh.tdr` 2,060,977 bytes, `n1_dvs.log` 8,046 bytes 및 `n1_msh.log` 2,992 bytes. 파일 생성 자체 확인, 메쉬 품질/접촉 검증 미완료.
+- SDevice node2: `n2_des.log` 324,401 bytes, `n2_des.plt` 134,765 bytes, `n2_des.tdr` 20,661,842 bytes, `n2_end_des.tdr` 및 `n2_end_des.sav` 존재; `n2_eq_des.tdr` 존재. 이는 실제 실행 산출물의 존재를 확인하는 것이지 완료 성공/최종 전압/전류 검증은 아님.
+- SDevice node6: `n6_des.log` 257,035 bytes, `n6_des.plt` 65,627 bytes, `n6_eq_des.tdr` 및 `n6_V1_des.sav` 존재; 보여준 목록에는 `n6_des.tdr` 없음. 실제 진행/실패/완료 미확인.
+- 기존 정적 감사의 'NOT RUN'은 ZIP 배포 당시의 기록으로만 유지. 현 서버에는 2026-10-13 실제 출력 파일이 존재하므로 현재도 미실행이라고 말해서는 안 됨. 현재 상태는 **runtime artifacts observed; physics/electrical validation unresolved**.
+- 사용자는 시간 제약으로 빠른 read-only 검증 요청. 다음 실행: 현재 V2 폴더에서 `cat n1_dvs.sta n2_des.sta n6_des.sta`, `tail -n 35 n2_des.log`, `tail -n 20 n6_des.log`, `grep -iE 'fatal|error|failed|simulation finished|good bye' n2_des.log n6_des.log | tail -n 25` 출력 확인. 성공이 입증되면 목표 전압, raw terminal current, contact balance, physics runtime 적용을 점검. 모델/원본 결과 무단 수정·재실행 금지.
+
 ## 2026-10-13 — CORRECTION: Claude V2 SRH activation + full audit (OBSERVED source / pending T-2022.03 run)
 - Correction for next AI: **Do not 'fix' V2 Scharfetter by changing τ due to past claim of EBL τ 0.05ns**; active SDevice physics only `SRH` (no DopingDependence), so expected τmax=100ns. The conditional 0.05ns arises only with doping-dependent SRH. Confirm on real T-2022.03.
 - Remaining tasks: S0 SWB syntax/0V charge/contact/mesh, verify effective applied material params and new p+cap/EBL acceptor species, check absent MaterialInterface and trap currentplot syntax. bl2_check.py IQE and qR/I gate require leakage and trap reconciliation; S2 matched current. No server code/run edits by this audit. Full interpretation in Lee TIMELINE and Issue #7.

@@ -1,3 +1,6 @@
+## 2026-10-13 — 이택규 POL50 solver log 현황 (OBSERVED)
+- 이택규는 POL50 n2_des.log에서 마지막 완료 단계 t=0.572417 s, V=2.862 V, TotalCurrent=7.796E-14, RHS=4.97E-04 (<1E-03), next attempted step 0.572417→0.572422 s, stepsize 5.4342E-06 s를 확인함. 마지막 단계 6.82초 소요. 프로세스 활성/최근 업데이트 및 지연 원인 미확인. 다음: read-only 프로세스·최신 로그 확인, 기존 모델 변경 금지. 개인 기록과 LIVE LOG #7 상세 참조.
+
 ## 2026-10-13 — 이택규 POL50 약 15시간 경과 미완료 보고 (USER-REPORTED / UNRESOLVED)
 - 사용자는 `CMP_BASELINE_1.4.0_POL50` 4V transient 계산이 시작된 지 약 15시간이 되었으나 아직 완료되지 않았다고 보고함. 경과 시간은 추정, 학교 서버 실제 `n2_des.log`/SWB 상태/프로세스는 ChatGPT가 직접 확인하지 못함. 오류·정체·진행 중 여부와 현재 accepted t/V/Stepsize는 불명.
 - 우선 READ-ONLY `cd /user/semi/semi437/tmp/myproject/CMP_BASELINE_1.4.0_POL50; tail -n 40 n2_des.log; ps -fu semi437 | grep '[s]device'`로 현재 계산 진행/반복 실패/프로세스 확인. 필요한 경우 반복 log snapshots로 accepted time과 Stepsize 비교.

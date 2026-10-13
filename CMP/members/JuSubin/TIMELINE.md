@@ -1,3 +1,10 @@
+## 2026-10-13 — 3주차 PPT 11번 슬라이드 가독성 개정 (PRESENTATION / OBSERVED)
+- 사용자 요청으로 11번 '추가 원인 검토'의 장황한 로그 상태표를 교체. 9·10번 개정 슬라이드 유지, 13장 전체 PPTX 산출물 `CMP_Week3_JuSubin_Slide11_Clear.pptx` (채팅 전달, GitHub에 PPT 바이너리는 올리지 않음).
+- 핵심 흐름을 ① 손실 위치: 이택규의 별도 CAL4V에서 전체 domain SRH 중 EBL 약 99.77% 집중으로 보고 ② 원인 후보: EBL/MQW 정공 주입 및 수송 제한 가능성은 UNRESOLVED ③ 검증 방향: POL50(activation 1.0→0.5) 별도 분극 민감도 시험, 4V 수송 결과 완료 확인 전으로 축약.
+- 실제 CAL4V SVisual cutline 이미지 삽입 위치는 그대로 두고 가짜 SVisual 결과를 생성하지 않음. 사용자 전달 Claude 분석 보고치와 주수빈의 별도 5V_TEST 데이터를 혼합하지 않고, 원본 학교 서버 출력 미검증임을 각주에 표시.
+- PPTX 13장 재파싱, LibreOffice PDF 13장 변환, 11번 페이지 렌더링 시각 확인 성공. TCAD 코드·물성·실제 시뮬레이션 변경 없음.
+- 다음: 실제 SVisual cutline 확보 시 placeholder 교체; 사용자가 PowerPoint 열림 및 발표 디자인 확인.
+
 ## 2026-10-13 — 3주차 PPT 10번 슬라이드 가독성 개정 (PRESENTATION / OBSERVED)
 - 사용자 요청에 따라 10번 슬라이드 “문제 해결 시도”를 기존 5행 검사표에서 교수님이 이해하기 쉬운 **세 질문 → 확인된 근거 → 아직 남은 검증** 구조로 재설계. 산출물: `CMP_Week3_JuSubin_Slide10_Clear.pptx` (13장 전체, 기존 9번 슬라이드 개선 상태 유지, 10번만 변경).
 - ① 전극/대칭 구조 확인: Half 상부 접촉 2.0 um 및 중앙 대칭면 확인. ② p-GaN Mg 9.59e18 / hole density 약 3e17 cm^-3 관측, 이온화 해석은 미해결. ③ Thermionic 모델 ON 로그 확인, 실제 2D 전류 면적 보정 및 저전류 원인은 미해결.

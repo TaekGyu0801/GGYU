@@ -2810,5 +2810,23 @@
     },
     "competingRuntimeJobsObserved": true,
     "hardwareContentionHypothesis": "UNVERIFIED"
+  },
+  "leeCAL1p2Runtime20261013": {
+    "worker": "이택규",
+    "status": "OBSERVED_PARTIAL_LOG_STEP_NOT_YET_ACCEPTED",
+    "project": "CMP_BASELINE_1.2.0_CAL",
+    "pid": 88354,
+    "latestAnodeVoltageRounded_V": 4.207,
+    "latestAnodeTotalCurrentRaw": 6.429e-14,
+    "latestAttemptStartTime_s": 0.841422,
+    "latestAttemptEndTime_s": 0.841424,
+    "latestAttemptStepsize_s": 0.0000016305,
+    "latestIteration2RHS": 0.00139,
+    "convergenceRHSThreshold": 0.001,
+    "completedStepWallclock_s": 8.03,
+    "latestAttemptSucceeded": null,
+    "processAlivePreviouslyObserved": true,
+    "sideBySide": "POL50 PID 94012 at ~2.863V and very small dt, not valid matched-bias current comparison",
+    "next": "Inspect ps -p 88354,94012 -o pid,etime,time,pcpu,pmem,nlwp,stat,args and nproc; examine new accepted times. Do not stop jobs without decision."
   }
 }

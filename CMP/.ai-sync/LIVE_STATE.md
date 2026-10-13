@@ -1,3 +1,6 @@
+## 2026-10-13 — Claude V2 n2 조기 종료 사용자 확인 (UNRESOLVED)
+- n2 SDevice finished에도 3.6V Goal 미달, 사용자 조기 종료 확인; 마지막 보고 anode 2.070V/raw 1.781e-16. 원인 미확인. 다음 read-only n2 Solve block 및 종료 경고 검사. n6 실행 방해/수정 금지.
+
 ## 2026-10-13 — 이택규 Claude V2 SDE done / SDevice n2 정상 종료, n6 실행 중 (OBSERVED SERVER LOG)
 - 근거: 사용자 제공 `CMP_BASELINE_2.0.0_V2` 실제 서버 `cat n1_dvs.sta n2_des.sta n6_des.sta`, `tail -n 35 n2_des.log`, `tail -n 20 n6_des.log`.
 - Node1 SWB status `done`; `n1_msh.tdr` 파일 존재. 기하/접촉/메쉬 품질은 별도 검증 필요.

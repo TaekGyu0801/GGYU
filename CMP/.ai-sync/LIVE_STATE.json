@@ -2864,5 +2864,59 @@
       "same-mesh material changes require actual mesh comparison"
     ],
     "nextAction": "Run separate S0 parse+0V+pGaN/EBL ionization+polarization; verify model loading and postprocessor; S1 low current, matched J for S2; preserve 1.0 control."
+  },
+  "leeClaudeV2FirstRuntimeArtifacts20261013": {
+    "worker": "이택규",
+    "observedDate": "2026-10-13",
+    "status": "OBSERVED_SERVER_OUTPUT_FILES__UNRESOLVED_SOLVER_COMPLETION_AND_PHYSICS",
+    "projectDirectory": "/user/semi/semi437/CMP_BASELINE_2.0.0_V2",
+    "evidence": "User-pasted ls -lh and find file inventory from actual school-server terminal",
+    "sde": {
+      "node": 1,
+      "files": [
+        "n1_bnd.tdr",
+        "n1_msh.tdr",
+        "n1_dvs.log",
+        "n1_msh.log"
+      ],
+      "meshFileBytes": 2060977,
+      "validation": "created; mesh and contacts not yet checked"
+    },
+    "sdeviceNode2": {
+      "files": [
+        "n2_des.log",
+        "n2_des.plt",
+        "n2_des.tdr",
+        "n2_end_des.tdr",
+        "n2_end_des.sav",
+        "n2_eq_des.tdr"
+      ],
+      "logBytes": 324401,
+      "pltBytes": 134765,
+      "tdrBytes": 20661842,
+      "validatedTermination": false,
+      "validatedFinalBias": false,
+      "validatedCurrent": false
+    },
+    "sdeviceNode6": {
+      "files": [
+        "n6_des.log",
+        "n6_des.plt",
+        "n6_eq_des.tdr",
+        "n6_V1_des.sav"
+      ],
+      "logBytes": 257035,
+      "pltBytes": 65627,
+      "finalN6DesTdrInInventory": false,
+      "validatedStatus": false
+    },
+    "nextReadOnly": [
+      "cat n1_dvs.sta n2_des.sta n6_des.sta",
+      "tail -n 35 n2_des.log",
+      "tail -n 20 n6_des.log",
+      "grep -iE 'fatal|error|failed|simulation finished|good bye' n2_des.log n6_des.log | tail -n 25"
+    ],
+    "priorStaticAuditClarification": "V2 ZIP was unrun when audited, but 2026-10-13 server files now verify runtime artifacts exist; do not infer completed 3.6V electrical baseline.",
+    "nextStep": "Confirm node2 completion and terminal voltage/current, then effective physics and node6 status without rerun."
   }
 }

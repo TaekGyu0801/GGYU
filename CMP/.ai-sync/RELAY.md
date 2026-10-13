@@ -1,3 +1,6 @@
+## 2026-10-13 — Lee CAL 1.2.0 and POL50 parallel slow SDevice run handoff (OBSERVED)
+- 실서버 CAL 1.2.0 `n2_des.log`: 직전 완료 전압 4.207V, I=6.429e-14 raw, 새 시도 t=0.841422→0.841424s, dt=1.6305e-06s, Newton iteration2 RHS=1.39e-03 > 1e-03. 해당 시도 이후 수렴은 아직 미확인. PID 88354 = CAL 1.2.0, PID 94012 = POL50. POL50 직전 로그 ≈2.863V, dt≈6.7501e-06s. 두 계산 모두 느리며 CPU 경합은 아직 검증되지 않음. 원본 계산/결과/물성 유지, 급히 kill/restart 하지 말 것. 다음 단계: 프로세스 `%CPU`, `%MEM`, NLWP와 nproc 확인 및 로그 시간 증가 재확인. CAL4V 4V 대조와 POL50 2.863V 값을 직접 비교하지 말 것.
+
 ## 2026-10-13 — 이택규 POL50 PID 출처 확인 (OBSERVED)
 - 사용자 제공 서버 `/proc` cwd 출력으로 PID 88354는 `CMP_BASELINE_1.2.0_CAL`, PID 94012는 `CMP_BASELINE_1.4.0_POL50`임을 확인. 두 SDevice 동시 실행은 사실이지만 CPU 경합이 지연 원인인지 미확인. 다음 단계: 각 로그 진행 상태 및 자원 사용량 읽기 전용 점검. 계산 중단 또는 코드 변경 없음.
 

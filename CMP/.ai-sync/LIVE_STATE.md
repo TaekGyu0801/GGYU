@@ -1,3 +1,7 @@
+## 2026-10-13 — 이택규 V2 independent analysis (ANALYSIS, not experimental result)
+- User reports Claude already diagnosed and launched run3 in a copy with Blocked/ParDiSo, 4 threads, Iterations20, NotDamped50, ExtendedPrecision. Original pp/log not inspected; outcome unverified. QS stage 2.0-3.6 V MaxStep 0.01 means at most 0.016 V (normalized). Existing n2_des_min_des.tdr supports looking for automatic Newton/min-step diagnostics, but actual trigger unconfirmed.
+- Priority: locate failing Newton equation/mesh vertex; check low-density HFS, polarization EBL barrier and Mg activation; avoid calling NotDamped50 an error. PARDISO+extended precision supported but potential threading slowdown. Small-bias n=1.6 extrapolation cannot validate 3.6V / QW injection. For A/B, prevent conflating C process with ideal traps and conformal AlGaN with QW-edge substitution. No solver/physics validation confirmed; protect existing runs.
+
 ## 2026-10-13 — Claude V2 n2 조기 종료 사용자 확인 (UNRESOLVED)
 - n2 SDevice finished에도 3.6V Goal 미달, 사용자 조기 종료 확인; 마지막 보고 anode 2.070V/raw 1.781e-16. 원인 미확인. 다음 read-only n2 Solve block 및 종료 경고 검사. n6 실행 방해/수정 금지.
 

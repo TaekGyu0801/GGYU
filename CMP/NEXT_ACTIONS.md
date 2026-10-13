@@ -1,3 +1,6 @@
+## 2026-10-13 — V2 copied Run3 fast verification plan (PROPOSED)
+- Run3 user reported PARDISO/ExtendedPrecision/Iterations20 change; no new log independently validated. Preserve running copies. First inspect active pp6 Math/Solve and latest accepted anode, fail markers, CNormPrint/MinStep logs. Quasistationary MaxStep normalized to bias span (2→3.6V, 0.01 => 0.016V). Before any more solver tuning isolate failing vertex/region, contact current, effective Mg ionization, polarization and mesh. Original user-uploaded T-2022.03 manual specific pages not directly opened this session.
+
 ## 2026-10-13 — Claude V2 n2 조기 종료 우선 진단 (UNRESOLVED)
 - 재실행·코드변경 금지. 학교 서버 n2 `sed -n '175,215p' pp2_des.cmd`, `grep -niE 'break|stop|fail|minstep|abort|termination|quasistationary|goal' n2_des.log | tail -n 35`, `tail -n 65 n2_des.log` 출력 확보. 3.6V 목표 대비 2.070V 마지막 출력, 사용자 조기 종료 확인. n6 중단 금지.
 

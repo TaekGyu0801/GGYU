@@ -1,3 +1,6 @@
+## 2026-10-13 — CORRECTION: Claude V2 SRH activation + full audit (OBSERVED source / pending T-2022.03 run)
+- Independent critique of new proposed Claude Baseline V2. **Earlier Scharfetter EBL τ≈0.05ns claim corrected**: SDevice SRH lacks DopingDependence; UG indicates actual intended τmax=100ns when parsed. Literature supports 50% polarization hypothesis (Lu/Yin/Baek), with differing offset assumptions (Baek uses 50:50). Baseline/mesh/model validation still pending; no T-2022.03 server run. See Lee timeline and LIVE LOG Issue #7.
+
 ## 2026-10-13 — 이택규 Claude Baseline V2 ZIP static audit (OBSERVED code / PROPOSED run / UNRESOLVED physics)
 - Lee uploaded Claude new Baseline V2 ZIP for independent review. Proposed/unrun per README; direct server run evidence not in ZIP. Critical Scharfetter 100ns vs doping-dependent τ mismatch, nominal EBL τ≈0.05ns. 50% polarization remains uncalibrated/protected; static audit only. Next independent smoke after correcting/documenting effective τ; preserve existing controls. See Lee timeline and Issue #7.
 

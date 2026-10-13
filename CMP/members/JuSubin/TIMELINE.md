@@ -1,3 +1,9 @@
+## 2026-10-13 — 3주차 PPT 10번 슬라이드 가독성 개정 (PRESENTATION / OBSERVED)
+- 사용자 요청에 따라 10번 슬라이드 “문제 해결 시도”를 기존 5행 검사표에서 교수님이 이해하기 쉬운 **세 질문 → 확인된 근거 → 아직 남은 검증** 구조로 재설계. 산출물: `CMP_Week3_JuSubin_Slide10_Clear.pptx` (13장 전체, 기존 9번 슬라이드 개선 상태 유지, 10번만 변경).
+- ① 전극/대칭 구조 확인: Half 상부 접촉 2.0 um 및 중앙 대칭면 확인. ② p-GaN Mg 9.59e18 / hole density 약 3e17 cm^-3 관측, 이온화 해석은 미해결. ③ Thermionic 모델 ON 로그 확인, 실제 2D 전류 면적 보정 및 저전류 원인은 미해결.
+- 오른쪽 SVisual p-GaN Probe 또는 SDE Contact 실제 캡처를 넣을 플레이스홀더를 유지했으며, 가짜 실험 이미지는 생성하지 않음. 결론은 “구조/Thermionic 일부 설정 확인, 저전류 원인과 전류 정규화는 여전히 검증 중”으로 명시.
+- 출력 PPTX는 python-pptx 열기, 13장 검증, LibreOffice 렌더 및 슬라이드 오버플로 테스트를 통과함. 학교 서버 실행, TCAD 코드·물성·시뮬레이션 결과 변경 없음.
+
 ## 2026-10-13 — 3주차 PPT 9번 슬라이드 가독성 개정 (PRESENTATION / OBSERVED)
 - 사용자 요청에 따라 9번 슬라이드의 장황한 본문을 제거하고, 좌측 5V raw TotalCurrent 2조건 수평 막대와 우측 QW SRH/방사 재결합 핵심 수치로 재설계함. 산출물: `CMP_Week3_JuSubin_Slide09_Clean.pptx` (13장 전체 덱, 9번만 변경).
 - 5V raw terminal current: NtSide=0 1.448e-11 vs NtSide=1e18 7.050e-12 (약 51.3% 차이). QW 모델 내부 SRH 비율 약 99.9%; 방사 비율 0.1095% vs 0.0489%를 표시함.

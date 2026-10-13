@@ -2962,5 +2962,18 @@
     "simulatorNormalFinish": true,
     "physicalBaselineValidated": false,
     "next": "Read pp2_des.cmd Solve lines 175-215 and n2_des.log termination/convergence and final 65 lines, without rerun or editing node6"
+  },
+  "leeV2ClaudeRun3IndependentReview20261013": {
+    "worker": "이택규",
+    "status": "ANALYSIS_ONLY__RUN3_USER_REPORTED__NO_NEW_LOG",
+    "solverUserReported": "Method=Blocked SubMethod=ParDiSo NumberOfThreads=4 Iterations=20 NotDamped=50 ExtendedPrecision",
+    "caveats": [
+      "Quasistationary MaxStep 0.01 corresponds to 0.016V from 2.0 to 3.6V",
+      "PARDISO may not resolve nonlinear Newton instability",
+      "Low-current ideality 1.6 is not proof of high-J device performance",
+      "A/B comparability not yet established"
+    ],
+    "next": "Read-only CNormPrint/minstep failure coordinates and newest cloned run log, verify EBL band profiles and 2D current normalization",
+    "comparisonStatus": "V2 baseline NOT validated"
   }
 }

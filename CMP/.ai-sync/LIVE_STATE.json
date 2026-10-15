@@ -1,7 +1,7 @@
 {
   "juSubinV21PhysicalValidation20261015": {
     "worker": "주수빈",
-    "status": "OBSERVED_3P6V_LOG_AND_FILE_INVENTORY_PHYSICS_UNVALIDATED",
+    "status": "OBSERVED_N2_RADIATIVE_12QW_INTEGRAL_SRHAUGER_PENDING",
     "targetProject": "CMP_BASELINE_2.0.0_V2",
     "deviceConfiguration": "V2.1 shelf removed, PolAct=0.5 (Lee/Claude report; active code unverified)",
     "previousTarget": "CMP_BASELINE_2.0.0_V2_Copy (superseded choice, prior historical task)",
@@ -84,6 +84,29 @@
       ],
       "regionIntegral": "NOT_MEASURED",
       "next": "Field Integration dialog Region/Material tab verify/select 12 QW regions then integrate same field; document Total Integral and Domain."
+    },
+    "n2Radiative12QwIntegration20261015": {
+      "status": "OBSERVED_SVISUAL_FIELD_INTEGRATION",
+      "field": "RadiativeRecombination",
+      "dataset": "n2_des",
+      "rawTotalIntegralPerUmPerSec": 152409900000,
+      "domainUm2": 0.02399999,
+      "numberOfRegions": 12,
+      "regions": [
+        "Clean_QW1..4",
+        "Dmg_QW1..4",
+        "Edge_QW1..4"
+      ],
+      "sumFromDisplayedValuesPerUmPerSec": 152409866249.133,
+      "qwSumsPerUmPerSec": [
+        1884852.07,
+        2718766.47,
+        42986630.6,
+        152362276000
+      ],
+      "qw4Percentage": 99.9687748,
+      "limitations": "This is only radiative-recombination distribution, not IQE; SRH/Auger and n6 not yet integrated; verify TDR final bias and AreaFactor.",
+      "next": "Integrate SRH then Auger over exactly same twelve QW 2D regions, confirm matching total domain."
     }
   },
   "leeClaudeBaselineV2Audit20261013": {

@@ -1,3 +1,7 @@
+## 2026-10-15 — 주수빈 V2.1 QW ROI 명칭 확인 필요
+- 사용자의 SVisual 보고에서 `DmgL_QW1~4`가 없고 `Dmg_QW14` (정확 표기/범위 미확인) 및 `Edge_QW1~4`가 존재함. `Clean_QW1~4`는 이전 스크린샷에서 직접 관찰.
+- V2.1 활성 SDE `sde_dvs.cmd` 및 `pp1_dvs.cmd`를 read-only grep으로 확인하기 전 Clean/Edge/Dmg QW를 합쳐 적분하거나 중복 제거 관계를 가정하지 않는다. 실제 소스 검증 후 동일 ROI의 Rad/SRH/Auger 적분.
+
 ## 2026-10-15 — 주수빈 SVisual n2 확인 후 적분
 - 확인: Clean_QW1~4, AugerRecombination 필드, 화면 Elements=129404 Points=62529. 재결합 수치 아직 없음.
 - 다음: Regions의 DmgL_QW 존재와 Scalars의 Radiative/SRH 필드 확인 → QW 영역별 적분, n6 반복. TDR 최종 3.6V 저장 여부는 별도 확인.

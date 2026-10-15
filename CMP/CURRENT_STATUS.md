@@ -1,3 +1,6 @@
+## 2026-10-15 — V2.1 n2 MQW 3-channel integrals OBSERVED, physics gate open
+- 주수빈 SVisual 실제 출력 동일한 Clean/Edge/Dmg QW1..4 총 12 ROI (Domain=0.02399999 um²): Rad 1.524099e11, SRH 1.253894e10, Auger 6.265625e10 s^-1 um^-1. Derived 3-channel QW radiative fraction 66.9624%, SRH 5.5091%, Auger 27.5285%. QW4의 극단적 편중, 높은 Auger, current balance/AreaFactor/실제 n2 TDR bias 등 검증 필요. n6 적분 대기. This is not calibrated device IQE.
+
 ## 2026-10-15 — 주수빈 n2 MQW SRH 적분 관찰 (OBSERVED)
 - V2.1 SVisual n2_des srhRecombination 12 QW ROI Total Integral=1.253894e10 s^-1 um^-1, Domain=0.02399999 um²; QW4 98.6438%. 앞선 Radiative=1.524099e11. 두 채널 radiative share≈92.40% (not IQE). Auger/n6 미측정, AreaFactor와 TDR 최종 bias 미확인.
 

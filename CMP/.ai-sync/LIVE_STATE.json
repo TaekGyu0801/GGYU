@@ -29,7 +29,29 @@
       },
       "ratioN6overN2": 0.25281052920208386
     },
-    "next": "Read-only verify TDR final 3.6V save point, active region labels/fields, SVisual 4QW Rad/SRH/Auger integrals, AreaFactor."
+    "next": "In SVisual inspect DmgL QW names plus Radiative/SRH fields then same-QW ROI integrals; no numerical recombination result yet",
+    "svisualN2FirstObservation": {
+      "status": "OBSERVED_SCREENSHOT",
+      "dataset": "n2_des",
+      "folder": "CMP_BASELINE_2.0.0_V2",
+      "observedRegions": [
+        "Clean_EBL",
+        "Clean_QW1",
+        "Clean_QW2",
+        "Clean_QW3",
+        "Clean_QW4"
+      ],
+      "observedScalar": "AugerRecombination",
+      "activeScalar": "DopingConcentration",
+      "elements": 129404,
+      "points": 62529,
+      "notYetVerified": [
+        "DmgL_QW1-4 region names",
+        "Radiative/SRH field names",
+        "TDR final 3.6V snapshot",
+        "region-integrated recombination"
+      ]
+    }
   },
   "leeClaudeBaselineV2Audit20261013": {
     "worker": "이택규",

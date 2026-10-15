@@ -1,3 +1,6 @@
+## 2026-10-15 — 주수빈 n6 분석 중 n2/8 QW 적분 출력 확인 (OBSERVED; n6 PENDING)
+- 추가 SVisual Radiative 출력은 n6가 아닌 `n2_des`이며 Clean+Dmg 8개 QW ROI, Total 1.447895e11, Domain=0.02279999um². 과거 n2 12 ROI 1.524099e11과 차≈Edge_QW1..4 합. GUI Dataset과 Region selection을 수정한 뒤 n6 12ROI 측정 필요. n6 재결합 데이터는 아직 미확보.
+
 ## 2026-10-15 — 주수빈 V2.1 n2 MQW 재결합 3채널 적분 (OBSERVED)
 - 동일 12 QW, 면적 0.02399999 um²: Radiative 1.524099e11, SRH 1.253894e10, Auger 6.265625e10 s^-1 um^-1. Radiative fraction 66.9624%, Auger 27.5285%, SRH 5.5091% (3채널 모델 내부 비율). QW4 방사 99.969%, SRH 98.644%, Auger 99.993% 집중. n6 동일 ROI 적분 대기. IQE 검증, AreaFactor, 공간 TDR bias, 물리 원인 미해결.
 

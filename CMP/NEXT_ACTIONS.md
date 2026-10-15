@@ -1,3 +1,8 @@
+## 2026-10-15 — 주수빈 n2 MQW Radiative 적분 완료 후 다음 단계
+- OBSERVED: n2 SVisual에서 Clean/Edge/Dmg × QW1..4 총 12개 RadiativeRecombination 적분 = 1.524099e11 s^-1 um^-1, Total Domain=0.02399999 um². QW4 비중 약 99.9688%; 원인/정상성 미확정.
+- NEXT: 같은 12 regions에서 SRHRecombination 필드(실제 Scalars 이름 확인) 적분 → AugerRecombination 적분; 각 Total Domain이 0.02399999 um²인지 검사. 이후 n6에서 완전히 같은 ROI/필드 반복. 수치 합산 뒤 단일 전압 3.6V 3채널 비율 계산, IQE 해석 제한·matched-current 미확보 고지.
+- TDR final-bias 및 유효 AreaFactor/활성 trap 모델은 별도 검증 유지. 원본 덱/결과 수정 없음.
+
 ## 2026-10-15 — 주수빈 n2 Radiative 필드 표시 확인, 적분이 다음
 - SVisual `n2_des`에서 `RadiativeRecombination` 필드 활성화 및 최대 3.07538e25 cm^-3 s^-1 표시 관찰. 이는 공간 국소값이며 QW 재결합 총합 아님.
 - 다음 SVisual **Field Integration** → Region/Material 탭에서 실제 확인되는 Clean_QW1..4/Edge_QW1..4/Dmg_QW1..4만 선택하고 Start Integration. 수치 Total Integral과 Domain 보존. 전체 구조/재료 기본 적분을 QW 적분으로 잘못 해석하지 않기. 이후 SRH/Auger 동일 ROI, n6에서도 반복.

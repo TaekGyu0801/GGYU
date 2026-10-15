@@ -72,6 +72,18 @@
       "anticipatedQwRegionCount": 12,
       "regionNaming": "rE string-append Edge_ name; rD string-append Dmg_ name; clean from earlier SVisual; actual complete region list awaiting GUI confirmation",
       "next": "Check 12 regions in SVisual, then field-integrate Radiative, SRH, Auger over exactly matching QW ROIs; check final TDR bias."
+    },
+    "svisualN2RadiativeObservation": {
+      "status": "OBSERVED_USER_SCREENSHOT",
+      "field": "RadiativeRecombination",
+      "displayedMaxPerCm3PerSec": 3.07538e+25,
+      "dataset": "n2_des",
+      "visibleRegions": [
+        "Edge_QW3",
+        "Edge_QW4"
+      ],
+      "regionIntegral": "NOT_MEASURED",
+      "next": "Field Integration dialog Region/Material tab verify/select 12 QW regions then integrate same field; document Total Integral and Domain."
     }
   },
   "leeClaudeBaselineV2Audit20261013": {

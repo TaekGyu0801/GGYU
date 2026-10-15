@@ -1,3 +1,6 @@
+## 2026-10-15 — 주수빈 V2.1 n2 RadiativeRecombination field 시각화 확인 (OBSERVED)
+- SVisual n2_des screenshot: RadiativeRecombination active, displayed maximum 3.07538e25 cm^-3 s^-1 (local field, NOT ROI integral); Edge_QW3/4 region labels visible. n2 QW 적분과 12 ROI 실제 선택 미수행. 다음: Field Integration Region/Material 탭에서 QW regions만 선택해 Total Integral 확보.
+
 ## 2026-10-15 — 주수빈 V2.1 QW ROI 생성 규칙 확인 (OBSERVED SDE EXCERPT)
 - 실제 서버 `sde_dvs.cmd` grep은 각 QW1..4 thickness 0.003µm, `Wdmg=0.005` µm, `Wedge=@Wedge@`, `rE=(string-append "Edge_" name)`, `rD=(string-append "Dmg_" name)`을 보여줌. 기존 Clean_QW1..4 SVisual 확인과 합쳐 4 wells × 3 segments = 12 region ROI 구성이 예상됨. 실제 SVisual 12개 전체 선택 및 수치 적분은 아직 미수행.
 - Edge/clean baseline 동질성 및 Dmg NtSide 적용은 SDE 주석 근거이며 활성 effective SDevice deck 검증 필요. 다음: GUI region+field 존재 확인 후 동일 QW ROI 방사/SRH/Auger 적분.

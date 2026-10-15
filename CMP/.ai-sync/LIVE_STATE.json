@@ -19,12 +19,12 @@
     "nextAction": "Keep historical baseline intact; clarify τ intent, obtain actual V2 log if exists, run separate S0/preprocess smoke before S1.",
     "supersededBy": "leeClaudeBaselineV2AuditCorrection20261013"
   },
-  "updated": "2026-10-13",
+  "updated": "2026-10-15",
   "primaryWorker": "이택규",
-  "phase": "Phase 0 — working 5V reference NtSide 0/1e18 comparison; physical Gate0 low-J still unresolved",
-  "task": "Lee user reports CMP_BASELINE_1.4.0_POL50 started (node2, NtSide0, Goal 4V, FinalTime 0.8s, ramp 5V/s) with only global polarization activation 1->0.5; source/preprocess one-line diff and equilibrium smoke halved PE_Charge. Await actual 4V result; existing CAL4V cutline suggests EBL/B0/QW polarization-related injection barrier but causality not confirmed.",
-  "status": "BASELINE_5V_SOLVE_COMPLETE_LOW_J_UNVALIDATED_AB_PRODUCTION_NO_GO",
-  "blocker": "Nominal half-device J at 5V ~7.24e-4 A/cm2 under documented 2D normalization; radiative/QW recombination share ~0.1095%; physically meaningful operating region and injection barriers not yet established. Separate CAL latest direct log accepted ~4.149V and next BE Newton RHS oscillates above 1e-3; 5V convergence and physical J validation unresolved.",
+  "phase": "Phase 0 — Baseline V2.1 working geometry reached 3.6V (Claude-reported RUN); physical baseline validation / Project A/B production still pending",
+  "task": "Verify Lee/Claude Baseline V2.1 no-shelf 3.6V n2/n6 runs using actual preprocessed commands/logs/PLT, current normalization, recombination integrals and literature I–V before S3 and Project A/B pilot.",
+  "status": "V2_1_3P6V_REACHED_USER_REPORTED_RUN_PHYSICS_UNVALIDATED_AB_PRODUCTION_NO_GO",
+  "blocker": "Reported V2.1 solver endpoint stall relieved for n2/n6 to 3.6V, but original server logs not inspected by GPT; QW/EBL/sidewall recombination balances, current leakage/2D AreaFactor, NtSide1e18 suppressed current mechanism, turn-on versus literature and removed-shelf/cathode geometry effects unvalidated.",
   "parallelWork": {
     "worker": "주수빈",
     "status": "OBSERVED",
@@ -170,15 +170,19 @@
   ],
   "nextAction": {
     "priority": 0,
-    "action": "Inspect pp9_des.cmd File block",
+    "action": "Audit V2.1 raw server n2/n6 pp/log/plt and validated bl2_check.py region integrals; compare literature I-V, then conditional S3 PolAct=1 and A/B pilot.",
     "fields": [
-      "Grid",
-      "Parameters",
-      "Plot",
-      "Current",
-      "Output"
+      "pp2_des.cmd",
+      "pp6_des.cmd",
+      "n2_des.log",
+      "n6_des.log",
+      "n2_des.plt",
+      "n6_des.plt",
+      "SDE geometry and contacts",
+      "AreaFactor",
+      "bl2_check.py"
     ],
-    "purpose": "Determine actual preprocessed Plot/TDR filename before changing code"
+    "purpose": "Confirm reported 3.6V endpoints and physically meaningful injection/recombination before working-baseline validation; preserve prior source and half/full A/B comparison."
   },
   "doNotChange": [
     "Nt=1e18 cm^-3",
@@ -1404,13 +1408,13 @@
     }
   },
   "latestObservedEvent": {
-    "date": "2026-10-10",
+    "date": "2026-10-15",
     "worker": "이택규",
-    "status": "OBSERVED_LIVE_SDEVICE_ACCEPTED_4p122V",
-    "source": "user-provided live n2_des.log last 40 lines",
-    "event": "CAL NtSide0 at least 4.122V with prior BE-step accepted (t=0.824478s, Newton RHS 7.30e-4<1e-3). Raw anode total current 4.344e-14. Next attempt t=0.824487s iter5 RHS 1.10e-3 (not yet converged in excerpt).",
-    "uncertainties": "Next step acceptance, full 5V completion, physical 100ns lifetime application, elapsed duration/ETA cannot yet be confirmed.",
-    "next": "Leave solver running. Compare later tail for increasing accepted time/voltage and cutbacks; check effective parameter file read-only."
+    "status": "USER_REPORTED_CLAUDE_RUN_NOT_INDEPENDENTLY_VERIFIED",
+    "source": "Claude Baseline V2 work log #02 pasted by user (grep terminal values transcribed)",
+    "event": "V2.1 no-shelf PolAct0.5 n2/n6 reported 3.6V; J=1.8235/0.4610 A/cm2 under half 2um and 1um out-of-plane assumption; V2 shelf PolAct0 controls stopped at 2.069/2.036V.",
+    "uncertainties": "No raw server log/pp/PLT directly fetched; shelf and cathode jointly changed; physical recombination, leakage, turn-on and trap mechanism not validated.",
+    "next": "Read-only verify actual pp/log/PLT; compute region-wise balances; compare baseline literature."
   },
   "projectAFabricationFeasibility20261009": {
     "status": "PROPOSED_RESEARCH_ROUTE_COMPARISON_NOT_APPROVED",
@@ -2975,5 +2979,76 @@
     ],
     "next": "Read-only CNormPrint/minstep failure coordinates and newest cloned run log, verify EBL band profiles and 2D current normalization",
     "comparisonStatus": "V2 baseline NOT validated"
+  },
+  "leeClaudeV21ShelfRemoval20261015": {
+    "worker": "이택규",
+    "reportingAI": "Claude; transcribed/archived by ChatGPT",
+    "status": "USER_REPORTED_RUN_ENDPOINT_REACHED_PHYSICAL_VALIDATION_UNRESOLVED",
+    "date": "2026-10-15",
+    "sourceRecord": "CMP/members/LeeTaekGyu/LOG_20261015_02_baseline_v2_1_shelf_removal.md",
+    "projects": {
+      "working": "CMP_BASELINE_2.0.0_V2",
+      "control": "CMP_BASELINE_2.0.0_V2_Copy"
+    },
+    "geometry": {
+      "working": "V2.1 Wshelf=0, shelf region removed and bottom cathode removed, PolAct0.5",
+      "control": "V2 shelf present, PolAct0"
+    },
+    "solver": "default; Iterations20; NotDamped50; no PARDISO",
+    "terminalRuns": [
+      {
+        "case": "V2.1 n2",
+        "NtSide_cm3": 0,
+        "finalV": 3.6,
+        "I_A_per_um": 3.647e-8,
+        "J_A_per_cm2_derived": 1.8235,
+        "nonconvergedTextCount": 0
+      },
+      {
+        "case": "V2.1 n6",
+        "NtSide_cm3": 1000000000000000000,
+        "finalV": 3.6,
+        "I_A_per_um": 9.22e-9,
+        "J_A_per_cm2_derived": 0.461,
+        "nonconvergedTextCount": 1
+      },
+      {
+        "case": "V2_Copy n2",
+        "NtSide_cm3": 0,
+        "finalV": 2.069,
+        "I_A_per_um": 1.764e-16,
+        "J_A_per_cm2_derived": 8.82e-9,
+        "nonconvergedTextCount": 17
+      },
+      {
+        "case": "V2_Copy n6",
+        "NtSide_cm3": 1000000000000000000,
+        "finalV": 2.036,
+        "I_A_per_um": 1.235e-16,
+        "J_A_per_cm2_derived": 6.175e-9,
+        "nonconvergedTextCount": 23
+      }
+    ],
+    "currentDensityAssumption": "I[A/um]/2um*1e8 (half mesa 2um, verify AreaFactor and contact geometry)",
+    "derived": {
+      "n6_to_n2_at_3p6V": 0.25281052920208386,
+      "n2_local_ideality_last_two_points_300K": 2.27
+    },
+    "decision": "V2.1 working geometry selected by Lee/Claude, NOT globally validated final Common Baseline",
+    "interpretation": "Polarization turned off with shelf did not resolve stall; contribution of shelf geometry/contact changes probable, exact mechanism unconfirmed.",
+    "risks": [
+      "sidewall trap reduces rather than increases fixed-voltage current, mechanism unknown",
+      "recombination accounting and IQE denominator incomplete",
+      "turn-on vs literature unverified",
+      "shelf removal cathode changes A/B current path"
+    ],
+    "next": [
+      "read active source, raw log and plt",
+      "validate J normalization and bl2_check.py",
+      "compute QW/EBL/sidewall R and leakage",
+      "compare literature I-V",
+      "S3 PolAct1 control conditional",
+      "A/B pilot conditional"
+    ]
   }
 }

@@ -1,3 +1,9 @@
+## 2026-10-15 — 주수빈 V2.1 n2 QW Rad integral OBSERVED
+- 출처(OBSERVED): 주수빈이 2026-10-15 실제 Sentaurus Visual `Dataset: n2_des`, `Field: RadiativeRecombination`, `Regions of Dimension 2`의 Field Integration 출력 전체를 채팅에 제공. `Clean_QW1..4`, `Dmg_QW1..4`, `Edge_QW1..4` 총 12개 물리 영역이 확인됨. `Total Integral = 1.524099e+11 [s^-1*um^-1]`, `Total Domain = 2.399999e-02 [um^2]`; 12개 개별 값의 합 = 1.52409866249133e11 (출력 반올림과 일치).
+- QW별 세 영역 합계(표시 정밀도): QW1=1.884852e6, QW2=2.718766e6, QW3=4.298663e7, QW4=1.52362276e11 [s^-1*um^-1]. QW4 비중 ≈99.9688%. 공간적 방사 재결합 분포일 뿐 IQE가 아님. QW4 우세의 수송/전자·정공 주입 물리 원인은 미확인.
+- 각 Clean 합계≈1.44408491777e11, Edge≈7.62036249754e9, Dmg≈3.81011974593e8; 과거 `Dmg_QW14` 사용자 간략 표기와 달리 실제 적분에서 `Dmg_QW1..4` 개별 이름 확인. n6, SRH/Auger 및 3.6V에 대응하는 TDR 최종 저장점·물리 모델/AreaFactor 미검증.
+- 다음: 동일한 12개 ROI로 **n2 SRH** 적분 (`Total Domain` 동일 확인), 이후 Auger 적분하고 n6 반복. `Radiative/(Radiative+SRH+Auger)`는 정의 한정의 QW 내 비율이며 전류/누설/Trap 생성·재결합 수지 별도 검증 전 물리적으로 확정된 IQE 또는 matched-current 성능 차이가 아님. 코드/시뮬레이션 변경 없음.
+
 ## 2026-10-15 — 주수빈 V2.1 n2 RadiativeRecombination field 시각화 확인 (OBSERVED)
 - SVisual n2_des screenshot: RadiativeRecombination active, displayed maximum 3.07538e25 cm^-3 s^-1 (local field, NOT ROI integral); Edge_QW3/4 region labels visible. n2 QW 적분과 12 ROI 실제 선택 미수행. 다음: Field Integration Region/Material 탭에서 QW regions만 선택해 Total Integral 확보.
 

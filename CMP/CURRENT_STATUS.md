@@ -1,3 +1,9 @@
+## 2026-10-15 — V2.1 n2 4QW Radiative 적분 첫 확보 (OBSERVED; SRH/Auger pending)
+- 출처(OBSERVED): 주수빈이 2026-10-15 실제 Sentaurus Visual `Dataset: n2_des`, `Field: RadiativeRecombination`, `Regions of Dimension 2`의 Field Integration 출력 전체를 채팅에 제공. `Clean_QW1..4`, `Dmg_QW1..4`, `Edge_QW1..4` 총 12개 물리 영역이 확인됨. `Total Integral = 1.524099e+11 [s^-1*um^-1]`, `Total Domain = 2.399999e-02 [um^2]`; 12개 개별 값의 합 = 1.52409866249133e11 (출력 반올림과 일치).
+- QW별 세 영역 합계(표시 정밀도): QW1=1.884852e6, QW2=2.718766e6, QW3=4.298663e7, QW4=1.52362276e11 [s^-1*um^-1]. QW4 비중 ≈99.9688%. 공간적 방사 재결합 분포일 뿐 IQE가 아님. QW4 우세의 수송/전자·정공 주입 물리 원인은 미확인.
+- 각 Clean 합계≈1.44408491777e11, Edge≈7.62036249754e9, Dmg≈3.81011974593e8; 과거 `Dmg_QW14` 사용자 간략 표기와 달리 실제 적분에서 `Dmg_QW1..4` 개별 이름 확인. n6, SRH/Auger 및 3.6V에 대응하는 TDR 최종 저장점·물리 모델/AreaFactor 미검증.
+- 다음: 동일한 12개 ROI로 **n2 SRH** 적분 (`Total Domain` 동일 확인), 이후 Auger 적분하고 n6 반복. `Radiative/(Radiative+SRH+Auger)`는 정의 한정의 QW 내 비율이며 전류/누설/Trap 생성·재결합 수지 별도 검증 전 물리적으로 확정된 IQE 또는 matched-current 성능 차이가 아님. 코드/시뮬레이션 변경 없음.
+
 ## 2026-10-15 — V2.1 n2/n6 3.6V 실행 완료 직접 터미널 확인 (OBSERVED, 물리 검증 계속 UNRESOLVED)
 - 근거: 주수빈이 2026-10-15 실제 학교 서버에서 복사한 읽기 전용 출력. 경로 `/user/semi/semi437/CMP_BASELINE_2.0.0_V2`; `cat n2_des.sta n6_des.sta`에서 두 노드 모두 `done`; `grep '^ *anode' n2_des.log | tail -3` 마지막 (3.576V,2.424e-08), (3.592V,3.180e-08), (3.600V,3.647e-08); n6 동일 전압에서 7.077e-09 / 8.433e-09 / 9.220e-09 (SDevice raw terminal total-current log values).
 - 파일 존재: n2_des.plt 293K, n2_des.tdr 21M (Oct14 15:44); n6_des.plt 295K, n6_des.tdr 23M (Oct14 17:43). 출력 시점 및 최종 전압 기록은 사용자가 직접 제시한 실제 파일/로그 텍스트로 **OBSERVED**. 이는 종전의 Claude 단독 RUN 전사 근거를 강화함.

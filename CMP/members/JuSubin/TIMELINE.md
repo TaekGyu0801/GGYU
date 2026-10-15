@@ -1,3 +1,9 @@
+## 2026-10-15 — n2 SVisual RadiativeRecombination 시각화 (OBSERVED SCREENSHOT; no integral)
+- 주수빈 제공 `CMP_BASELINE_2.0.0_V2` Sentaurus Visual T-2022.03 `n2_des` 캡처에서 Scalars `RadiativeRecombination` 체크, 우측 범례 최대 `3.07538e25 cm^-3 s^-1` 표시 확인. **국소 필드 최대값이지 QW 지역 통합 값 아님**; 방사 재결합 총량, IQE 미측정.
+- Regions 현재 스크롤 위치에 `Edge_QW3`, `Edge_QW4` 표시 확인, 다른 QW Region은 해당 화면에서 확인되지 않음. 스크린샷 하단 Elements=129404, Points=62529.
+- 다음: SVisual Field Integration 대화창의 Region/Material 탭에서 실제 Clean/Edge/Dmg × QW1..4 총 12개 선택(실제 전체 존재 확인 후), `RadiativeRecombination` 적분 및 Total Integral/Domain 원문 확보. 이후 동일 영역으로 SRH/Auger. GUI Regions 화면의 표시 체크만으로 통합 ROI가 제한되는 것은 아님.
+- 서버 소스·시뮬레이션 수정 없음.
+
 ## 2026-10-15 — V2.1 MQW 영역 생성 규칙 서버 SDE 코드에서 확인 (OBSERVED CODE EXCERPT)
 - 주수빈이 실제 서버 `/user/semi/semi437/CMP_BASELINE_2.0.0_V2/sde_dvs.cmd`에 대해 `grep -nEi 'qw|quantum|edge|dmg|region' ...` 출력 제공. QW1~4 각각 0.003 µm, `Wdmg=0.005` µm (5nm), `Wedge=@Wedge@`, `Xd=Xs-Wdmg`, `Xe=Xd-Wedge` 코드 확인.
 - 영역명은 SDE 스크립트의 `(string-append "Edge_" name)`, `(string-append "Dmg_" name)` 등 런타임 구성으로 만들어져 정확 이름 검색이 빈 결과였음. 기존 SVisual Clean_QW1~4 화면과 합치면 의도된 MQW ROI는 **QW1~4 × Clean/Edge/Dmg = 12개의 2D 물리 영역**으로 추론되며 최종 실제 메쉬의 12 영역 존재는 GUI 확인 예정. 사용자의 `Dmg_QW14` 표기는 정확 라벨인지 약칭인지 미확정.

@@ -1,3 +1,9 @@
+## 2026-10-15 — 주수빈 V2.1 물리 검증 STEP 1 완료 (OBSERVED USER TERMINAL)
+- 근거: 주수빈이 2026-10-15 실제 학교 서버에서 복사한 읽기 전용 출력. 경로 `/user/semi/semi437/CMP_BASELINE_2.0.0_V2`; `cat n2_des.sta n6_des.sta`에서 두 노드 모두 `done`; `grep '^ *anode' n2_des.log | tail -3` 마지막 (3.576V,2.424e-08), (3.592V,3.180e-08), (3.600V,3.647e-08); n6 동일 전압에서 7.077e-09 / 8.433e-09 / 9.220e-09 (SDevice raw terminal total-current log values).
+- 파일 존재: n2_des.plt 293K, n2_des.tdr 21M (Oct14 15:44); n6_des.plt 295K, n6_des.tdr 23M (Oct14 17:43). 출력 시점 및 최종 전압 기록은 사용자가 직접 제시한 실제 파일/로그 텍스트로 **OBSERVED**. 이는 종전의 Claude 단독 RUN 전사 근거를 강화함.
+- 동일 3.6V n6/n2 raw terminal current ratio = 9.220e-09/3.647e-08≈0.2528. 진정한 QW 주입/효율/트랩 효과 원인, 2D A/µm/AreaFactor 정확한 설정, TDR가 목표 3.6V 최종 저장본인지, 활성 코드 Wshelf·PolAct·접촉 설정은 아직 **UNRESOLVED**.
+- 원본 소스/실행 변경 없음. 다음은 TDR 저장 시점·활성 덱 정의와 SVisual ROI·물리 필드 확인 후 QW별 Radiative/SRH/Auger 적분; 단일 전압에서 IQE causality 단정 금지.
+
 ## 2026-10-15 — 주수빈 V2.1 physical validation intake (PROPOSED, no fresh TCAD result)
 - **작업자/AI:** 주수빈 / ChatGPT. 기존 V2_Copy 수렴 진단을 우선 진행하겠다는 선택에서 전환하여, 이택규/Claude 보고의 `CMP_BASELINE_2.0.0_V2` (실제 구조 V2.1) n2(NtSide0)/n6(NtSide1e18) **전류·MQW 재결합·IQE 검증**을 맡음.
 - **현재 근거/한계:** V2.1 3.6V 도달 수치는 이택규/Claude 사용자 전달 보고만 존재하며 주수빈 현 세션에서 서버 로그/실제 최종 TDR 아직 확인하지 않음. 코드/물성/결과를 변경하지 않음.

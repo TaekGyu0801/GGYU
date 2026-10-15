@@ -1,3 +1,8 @@
+## 2026-10-15 — 주수빈 V2.1 n2 MQW Radiative 적분 (OBSERVED)
+- 실제 SVisual Field Integration 출력: n2_des RadiativeRecombination, 4QW×Clean/Edge/Dmg 총 12개 영역, Total Integral 1.524099e11 s^-1 um^-1, Total Domain 0.02399999 um².
+- QW별 합계(QW1~4): 1.884852e6, 2.718766e6, 4.298663e7, 1.52362276e11. QW4가 전체의 약 99.9688%를 차지. IQE가 아닌 방사 재결합 공간 비율, 물리 원인 미확정.
+- Dmg_QW1..4 실제 region 명칭 적분 출력에서 개별 확인. 다음: 정확히 동일한 12 QW ROI의 SRH/Auger 적분 및 n6 동일 작업. 최종 TDR bias/AreaFactor/물리 보정은 미확인. 소스/시뮬레이션 수정 없음.
+
 ## 2026-10-15 — n2 SVisual RadiativeRecombination 시각화 (OBSERVED SCREENSHOT; no integral)
 - 주수빈 제공 `CMP_BASELINE_2.0.0_V2` Sentaurus Visual T-2022.03 `n2_des` 캡처에서 Scalars `RadiativeRecombination` 체크, 우측 범례 최대 `3.07538e25 cm^-3 s^-1` 표시 확인. **국소 필드 최대값이지 QW 지역 통합 값 아님**; 방사 재결합 총량, IQE 미측정.
 - Regions 현재 스크롤 위치에 `Edge_QW3`, `Edge_QW4` 표시 확인, 다른 QW Region은 해당 화면에서 확인되지 않음. 스크린샷 하단 Elements=129404, Points=62529.

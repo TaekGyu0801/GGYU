@@ -1,3 +1,10 @@
+## 2026-10-15 — 이택규/Claude Baseline V2.1 shelf 제거 3.6V 도달 보고 (USER-REPORTED RUN; GPT 미검증)
+- Claude의 학교 서버 실행 보고: `CMP_BASELINE_2.0.0_V2`에 V2.1 `Wshelf=0`, shelf region 및 바닥 cathode 제거, SDE 재실행, PolAct=0.5, 기본 solver(Iterations20, NotDamped50, PARDISO 없음). n2(NtSide=0)와 n6(NtSide=1e18)가 모두 **3.600V** 목표 도달. `I_total`은 n2=3.647e-08, n6=9.220e-09 A/µm; half mesa 2µm 기준 조건부 J=1.8235, 0.4610 A/cm². `didn't converge` 출력 각각 0회/1회.
+- shelf 유지 `CMP_BASELINE_2.0.0_V2_Copy` + PolAct=0 대조군은 n2 2.069V, n6 2.036V에 정체. 분극 비활성화만으로 정체 미해결. shelf 제거와 cathode 경계조건이 함께 변해 모서리 단독 원인은 확정할 수 없음.
+- n6 전류/n2 전류=25.3% (같은 3.6V); 음전하 공핍 가설은 **UNRESOLVED**. n2 마지막 두 점 국소 n≈2.27은 유도값. 사용자는 **V2.1을 검증용 기준 구조로 채택**했다고 보고; 물리적 Baseline freeze는 아님.
+- **원본 서버 로그/코드 독립 열람하지 않음**. 상세 수치·대조 해석: [#02 보존 기록](../../members/LeeTaekGyu/LOG_20261015_02_baseline_v2_1_shelf_removal.md).
+- 다음: 활성 pp/log/.plt, J 정규화/접촉 확인 → `bl2_check.py` 재결합 적분 및 정의 점검 → 문헌 I-V 대조 → S3 PolAct1.0 → A/B pilot. 코드/학교 서버 run 수정 없음.
+
 ## 2026-10-13 — 이택규 Claude V2 독립 수치·물리 검토 (GPT ANALYSIS / USER-REPORTED RUN3)
 - 사용자 전달 Claude 설명: run1 2.31V 도달 후 QS Newton 진동, run2 2.070V 조기 종료, **run3는 Claude가 수정한 복사본**에서 `Method=Blocked, SubMethod=ParDiSo, NumberOfThreads=4, Iterations=20, NotDamped=50, ExtendedPrecision` 설정으로 실행 중이라고 보고됨. **새 복사본의 원본 pp*/log 및 성공/개선은 직접 검증되지 않음**.
 - 독립 검토(해석, 결과 아님): QS MaxStep는 V가 아닌 정규화된 t에 작용하므로 stage 2.0→3.6V의 MaxStep 0.01은 최대 0.016V, 0.02는 0.032V, MinStep 1e-6은 1.6 microV. 2.3V 수렴은 스텝 크기/수치 stiff 문제 가능성 높으나 물리 원인 미확정. `NotDamped=50>Iterations=20`은 기본적으로 Bank–Rose damping을 지연시키지만 Sentaurus 교육자료는 QS에서 작은 스텝을 일반적으로 우선하므로 '오류'로 단정 금지.

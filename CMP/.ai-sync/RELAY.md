@@ -1,3 +1,7 @@
+## 2026-10-15 — HANDOFF 주수빈 n2 QW SRH 적분 완료
+- 사용자 SVisual n2_des srhRecombination 12개 Clean/Edge/Dmg × QW1..4 적분 총 1.253894e10 s^-1 um^-1, 면적 0.02399999 um². 이전 Radiative 총 1.524099e11 같은 면적. QW4에 SRH 약 98.64%, Radiative 약 99.97% 집중. 물리 원인 불명, Auger 아직 없음.
+- 다음 단계: 같은 12 QW 영역 AugerRecombination 적분 원문 회수, n2 3채널 비율 산출 후 n6 반복. 물리적 IQE/누설/AreaFactor/bias 미검증. 소스 수정 없음.
+
 ## 2026-10-15 — HANDOFF 주수빈 V2.1 n2 QW 방사 재결합 적분 완료 (OBSERVED)
 - 출처(OBSERVED): 주수빈이 2026-10-15 실제 Sentaurus Visual `Dataset: n2_des`, `Field: RadiativeRecombination`, `Regions of Dimension 2`의 Field Integration 출력 전체를 채팅에 제공. `Clean_QW1..4`, `Dmg_QW1..4`, `Edge_QW1..4` 총 12개 물리 영역이 확인됨. `Total Integral = 1.524099e+11 [s^-1*um^-1]`, `Total Domain = 2.399999e-02 [um^2]`; 12개 개별 값의 합 = 1.52409866249133e11 (출력 반올림과 일치).
 - QW별 세 영역 합계(표시 정밀도): QW1=1.884852e6, QW2=2.718766e6, QW3=4.298663e7, QW4=1.52362276e11 [s^-1*um^-1]. QW4 비중 ≈99.9688%. 공간적 방사 재결합 분포일 뿐 IQE가 아님. QW4 우세의 수송/전자·정공 주입 물리 원인은 미확인.

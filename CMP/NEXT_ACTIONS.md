@@ -1,3 +1,7 @@
+## 2026-10-15 — 주수빈 V2.1 실행 확인 통과 후 다음 물리 검증
+- 완료된 확인(OBSERVED): `CMP_BASELINE_2.0.0_V2` n2/n6 status done, 마지막 anode 3.600V, n2 3.647e-08 / n6 9.220e-09 raw current, 두 노드의 TDR/PLT 파일 존재.
+- 다음 READ-ONLY: SDevice active pp2/pp6 `Plot/Save` 및 `AreaFactor`/물리 설정 확인; SVisual에서 두 TDR가 최종 3.6V인지 및 QW 영역/필드 availability 확인 → 동일한 4QW(각 Clean/DmgL 실제 region 명칭 확인) Rad/SRH/Auger 적분 → 정의 명확한 QW 3채널 비율 산출. 동전압 Trap ON/OFF는 matched-current 효율 비교가 아님. 소스/실행은 수정하지 않음.
+
 ## 2026-10-15 — 주수빈 V2.1 물리 검증 시작 (PROPOSED; no new measurement)
 - 주수빈은 기존 V2_Copy 수렴 진단 계획 대신 `CMP_BASELINE_2.0.0_V2` 안의 shelf 없는 **V2.1** 결과의 전류·MQW 재결합·IQE 검증을 맡기로 선택. 이택규의 실제 현재 작업/역할 합의는 미확인.
 - **최우선 READ-ONLY:** 보고된 서버 경로에서 `n2_des.tdr/n6_des.tdr`, `n2_des.plt/n6_des.plt`, `n2_des.sta/n6_des.sta`, 로그 마지막 anode 3.6V 실제 값의 존재·완료 여부 확인. 검증 출력은 아직 사용자로부터 도착하지 않음.

@@ -1,3 +1,9 @@
+## 2026-10-15 — 주수빈 V2.1 n2 12 QW SRH 적분 확보 (OBSERVED)
+- **OBSERVED, 사용자 SVisual 원문(2026-10-15):** `Dataset=n2_des`, `Field=srhRecombination`, Clean/Dmg/Edge QW1~4의 정확히 12개 2D region; Total Integral=`1.253894e+10 s^-1 um^-1`, Total Domain=`2.399999e-02 um²`. 개별 표시값 합계 `1.253894043236e10`으로 총합과 출력 반올림 내 일치.
+- QW1/QW2/QW3/QW4 (각 Clean+Dmg+Edge): `2.251474379e7`, `2.770548437e7`, `1.198340442e8`, `1.236888616e10 s^-1 um^-1`; SRH의 약 `98.6438%`는 QW4. 같은 12개 QW `RadiativeRecombination` 적분은 이전에 `1.524099e11`로 관찰, 동일 Domain. 두 채널만의 Radiative/(Radiative+SRH)≈92.398%; **Auger 미적분이므로 최종 3채널 비율/IQE 확정 불가**.
+- 물리 경계: 현재 n2 파일 시점의 3.6V TDR 저장 bias, 타 모델 calibration, AreaFactor, current leakage, `n6`의 동일 ROI 적분은 여전히 검증 전. QW4에 Rad와 SRH가 모두 집중하지만 원인 미확정. 신규 실행·소스 변경 없음.
+- **다음:** `n2_des`에서 동일 12개 ROI `AugerRecombination` Field Integration 실행하고 Total Integral/Domain 원문 전달 → 3채널 비율 산출. 그다음 n6 같은 12 ROI 반복.
+
 ## 2026-10-15 — 주수빈 V2.1 n2 MQW Radiative 적분 (OBSERVED)
 - 실제 SVisual Field Integration 출력: n2_des RadiativeRecombination, 4QW×Clean/Edge/Dmg 총 12개 영역, Total Integral 1.524099e11 s^-1 um^-1, Total Domain 0.02399999 um².
 - QW별 합계(QW1~4): 1.884852e6, 2.718766e6, 4.298663e7, 1.52362276e11. QW4가 전체의 약 99.9688%를 차지. IQE가 아닌 방사 재결합 공간 비율, 물리 원인 미확정.

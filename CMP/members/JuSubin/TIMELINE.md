@@ -1,3 +1,8 @@
+## 2026-10-15 — V2.1 SVisual MQW region naming correction (USER-REPORTED UI; mapping UNRESOLVED)
+- 주수빈은 n2 SVisual `Regions`에 기존 5V_TEST에서 기대한 `DmgL_QW1~4`가 없고 대신 `Dmg_QW14`(사용자 표기 그대로, 단일 이름/연속 범위 여부 미확정)와 `Edge_QW1~4`가 있다고 보고. 화면에서 직접 확인된 `Clean_QW1~4`와 함께 V2.1 QW ROI 구성의 정확한 포함/중복 관계는 미확인.
+- AI가 이전 버전의 region 이름을 V2.1에 그대로 적용한 안내를 정정함. ROI 정합 없이 적분/수치 합계 산출 금지.
+- 다음: 서버 현재 `CMP_BASELINE_2.0.0_V2` 경로의 실제 SDE 소스 `sde_dvs.cmd`/`pp1_dvs.cmd`에서 `Dmg_QW|Edge_QW|Clean_QW` 문자열 정의를 read-only 검사하도록 요청. 실제 명칭과 위치 확인 후 Rad/SRH/Auger 동일 ROI 적분 진행. 코드/시뮬레이션 변경 없음.
+
 ## 2026-10-15 — 주수빈 V2.1 n2 SVisual 공간 데이터 오픈 및 QW 영역 최초 확인 (OBSERVED SCREENSHOT)
 - 사용자 업로드 Sentaurus Visual T-2022.03 스크린샷: 상단 창 제목에 `/user/semi/semi437/CMP_BASELINE_2.0.0_V2`, 플롯 타이틀 `n2_des`가 표시. `Regions` 패널에서 `Clean_QW1`~`Clean_QW4`와 `Clean_EBL` 영역이 보임. `Scalars` 패널에서 `AugerRecombination` 필드 존재 확인, 현재 체크된 표시는 `DopingConcentration`임.
 - SVisual 하단 표시 Elements=129404, Points=62529. 이를 바탕으로 표시 데이터셋의 메쉬 카운트 관찰 (이 수치가 향후 다른 조건도 같다는 뜻 아님).

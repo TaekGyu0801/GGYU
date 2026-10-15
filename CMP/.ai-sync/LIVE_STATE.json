@@ -1,14 +1,35 @@
 {
   "juSubinV21PhysicalValidation20261015": {
     "worker": "주수빈",
-    "status": "PROPOSED_READ_ONLY_VERIFICATION_AWAITING_SERVER_OUTPUT",
+    "status": "OBSERVED_3P6V_LOG_AND_FILE_INVENTORY_PHYSICS_UNVALIDATED",
     "targetProject": "CMP_BASELINE_2.0.0_V2",
     "deviceConfiguration": "V2.1 shelf removed, PolAct=0.5 (Lee/Claude report; active code unverified)",
     "previousTarget": "CMP_BASELINE_2.0.0_V2_Copy (superseded choice, prior historical task)",
     "task": "Independently verify n2/n6 V-I traces, 4QW Radiative/SRH/Auger region integrals, QW radiative fraction/IQE interpretation, current normalization and trap ON/OFF comparison",
-    "firstStep": "Read-only check n2/n6 TDR PLT STA existence plus final anode V/current on server; no new results yet",
+    "firstStep": "Completed: n2/n6 STA both done, latest anode log both 3.600V and TDR/PLT files present, user terminal 2026-10-15. Spatial TDR final bias / active code not yet verified.",
     "source": "JuSubin project chat, 2026-10-15",
-    "boundary": "Role division with Lee is a recommendation, not jointly confirmed. No TCAD code or run changes."
+    "boundary": "Role division with Lee is a recommendation, not jointly confirmed. No TCAD code or run changes.",
+    "observations": {
+      "source": "JuSubin pasted server commands 2026-10-15",
+      "n2": {
+        "nodeStatus": "done",
+        "lastAnodeV": 3.6,
+        "lastRawTotalCurrent": 3.647e-8,
+        "tdr": "n2_des.tdr 21M",
+        "plt": "n2_des.plt 293K",
+        "fileTimestamp": "2026-10-14 15:44 KST"
+      },
+      "n6": {
+        "nodeStatus": "done",
+        "lastAnodeV": 3.6,
+        "lastRawTotalCurrent": 9.22e-9,
+        "tdr": "n6_des.tdr 23M",
+        "plt": "n6_des.plt 295K",
+        "fileTimestamp": "2026-10-14 17:43 KST"
+      },
+      "ratioN6overN2": 0.25281052920208386
+    },
+    "next": "Read-only verify TDR final 3.6V save point, active region labels/fields, SVisual 4QW Rad/SRH/Auger integrals, AreaFactor."
   },
   "leeClaudeBaselineV2Audit20261013": {
     "worker": "이택규",

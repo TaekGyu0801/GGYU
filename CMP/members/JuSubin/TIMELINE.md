@@ -1,3 +1,9 @@
+## 2026-10-15 — 주수빈 검증 대상 V2_Copy → V2.1 물리 검증으로 변경 (PROPOSED; NO NEW RUN RESULT)
+- 작업자 주수빈은 직전 `CMP_BASELINE_2.0.0_V2_Copy` 수렴 진단 선택에서 변경해, 이택규/Claude가 3.6V 목표 도달을 보고한 `CMP_BASELINE_2.0.0_V2` (내부 구조 V2.1, shelf 제거/PolAct0.5)를 대상으로 **전류·MQW Rad/SRH/Auger·IQE의 독립 검증**을 시작하기로 함. 기존 V2_Copy 기록은 이전 선택 이력이며 현재 작업 대상 아님.
+- 진행 단계: 서버 출력 대기. 사용자에게 `/user/semi/semi437/CMP_BASELINE_2.0.0_V2`에서 n2/n6 TDR/PLT 존재 여부, *.sta, 로그 마지막 anode 전압/전류를 읽기 전용 확인하는 명령 제공. 사용자 실제 검사 결과는 아직 전달되지 않음.
+- 이후 파일 출처와 최종 바이어스 검증을 통과하면 기존 5V_TEST와 같은 SVisual 방식으로 동일 QW ROI의 Radiative/SRH/Auger 적분 → 정의를 분리한 QW IQE 추정 → 동일 전류밀도 비교. 원본 코드/시뮬레이션을 임의 변경하지 않음.
+- 이택규 역할(구조/solver 검증)은 GPT의 권장 분담이며 당사자 간 확정 합의 또는 실시간 진행으로 주장하지 않음.
+
 ## 2026-10-15 — V2_Copy 독립 검증 담당 선택 (PROPOSED, 검증 실행 전)
 - 작업자: 주수빈. 본인 요청으로 이택규의 두 V2 계보를 비교한 뒤 `CMP_BASELINE_2.0.0_V2_Copy`를 우선 검증 대상으로 선택.
 - GitHub 기존 실행 보고 기준 V2_Copy는 shelf 유지/하부 cathode 유지/PolAct=0, n2(NtSide=0) 약 2.069V, n6(NtSide=1e18) 약 2.036V에서 정체. 이 수치는 Claude 보고의 전사값이며 이 세션에서 학교 서버 원본 로그 미열람.

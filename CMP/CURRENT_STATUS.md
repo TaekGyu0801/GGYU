@@ -1,3 +1,11 @@
+## 2026-10-15 — Baseline V2.1 working structure 3.6V endpoint (USER-REPORTED RUN; physical baseline UNVALIDATED)
+- **최신 사용자 전달 Claude 서버 실행**: `CMP_BASELINE_2.0.0_V2`에서 shelf 제거(`Wshelf=0`), shelf region·바닥 cathode 제거, PolAct=0.5, 기본 solver(Iterations20/NotDamped50, PARDISO 없음)로 n2 NtSide=0 및 n6 NtSide=1e18 모두 **3.600V 도달**. 조건부 half-width 2µm 기준 `I_total`=3.647e-08/9.220e-09 A/µm, J=1.8235/0.4610 A/cm², `didn't converge` 0/1회. 수치 출처는 Claude 보고이며 **GPT에서 서버 원본 로그 미검증**.
+- **대조:** shelf 유지+PolAct=0 `CMP_BASELINE_2.0.0_V2_Copy`는 n2/n6 2.069/2.036V에서 정체. 분극 제거 단독 해결 가설은 지지되지 않음; shelf 제거와 cathode 경계조건 변경을 하나씩 격리한 인과 실험은 아님. 구체적 수치 불안정 원인 미확인.
+- **의사결정(이택규/Claude 보고):** shelf 없는 **V2.1을 작업용 Baseline 구조로 채택**. 기존 shelf V2 수렴 실패한 계보는 현 검증 흐름에서 사용하지 않음. **Common Baseline 물리·효율 검증/정식 freeze 아님**.
+- **최신 blocker:** 활성 deck/AreaFactor·contact·mesh 대조, 3.6V QW·EBL·측벽 recombination 및 누설/current balance, `bl2_check.py` IQE 계산 정의 확인, NtSide ON 전류 25.3%의 원인, 문헌 I–V 대비 turn-on, 구조 변경의 A/B lateral physics 적합성 검증 필요. 3.6V 도달 = 동작 타당성 검증 완료 아님.
+- **다음:** V2.1 실제 pp/log/.plt 검증→ J–V/지역별 적분·동일전류 비교→ 기준 논문 I–V → 검증 통과 시 S3 PolAct1.0, A/B pilot; 필요 시 Save/Load 확인 후 복사본에서 4–5V 확장. [근거 #02](members/LeeTaekGyu/LOG_20261015_02_baseline_v2_1_shelf_removal.md).
+- 과거 CAL, POL50, Half+Coarse 5V 수치·이슈는 독립 계보로 유지함. 학교 서버 실제 코드 수정 없음.
+
 ## 2026-10-13 — 이택규 Claude V2 독립 수치·물리 검토 (GPT ANALYSIS / USER-REPORTED RUN3)
 - 사용자 전달 Claude 설명: run1 2.31V 도달 후 QS Newton 진동, run2 2.070V 조기 종료, **run3는 Claude가 수정한 복사본**에서 `Method=Blocked, SubMethod=ParDiSo, NumberOfThreads=4, Iterations=20, NotDamped=50, ExtendedPrecision` 설정으로 실행 중이라고 보고됨. **새 복사본의 원본 pp*/log 및 성공/개선은 직접 검증되지 않음**.
 - 독립 검토(해석, 결과 아님): QS MaxStep는 V가 아닌 정규화된 t에 작용하므로 stage 2.0→3.6V의 MaxStep 0.01은 최대 0.016V, 0.02는 0.032V, MinStep 1e-6은 1.6 microV. 2.3V 수렴은 스텝 크기/수치 stiff 문제 가능성 높으나 물리 원인 미확정. `NotDamped=50>Iterations=20`은 기본적으로 Bank–Rose damping을 지연시키지만 Sentaurus 교육자료는 QS에서 작은 스텝을 일반적으로 우선하므로 '오류'로 단정 금지.

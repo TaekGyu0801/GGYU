@@ -1,3 +1,9 @@
+## 2026-10-15 — V2.1 MQW 영역 생성 규칙 서버 SDE 코드에서 확인 (OBSERVED CODE EXCERPT)
+- 주수빈이 실제 서버 `/user/semi/semi437/CMP_BASELINE_2.0.0_V2/sde_dvs.cmd`에 대해 `grep -nEi 'qw|quantum|edge|dmg|region' ...` 출력 제공. QW1~4 각각 0.003 µm, `Wdmg=0.005` µm (5nm), `Wedge=@Wedge@`, `Xd=Xs-Wdmg`, `Xe=Xd-Wedge` 코드 확인.
+- 영역명은 SDE 스크립트의 `(string-append "Edge_" name)`, `(string-append "Dmg_" name)` 등 런타임 구성으로 만들어져 정확 이름 검색이 빈 결과였음. 기존 SVisual Clean_QW1~4 화면과 합치면 의도된 MQW ROI는 **QW1~4 × Clean/Edge/Dmg = 12개의 2D 물리 영역**으로 추론되며 최종 실제 메쉬의 12 영역 존재는 GUI 확인 예정. 사용자의 `Dmg_QW14` 표기는 정확 라벨인지 약칭인지 미확정.
+- SDE 17-20행: Edge는 Project A/B hook이고 baseline에서는 Clean과 같은 물질/도핑이라고 주석; Dmg은 측벽 trap 대상이라고 주석. 이것이 n2/n6 활성 SDevice Trap 범위 및 Bspan 실값을 직접 검증한 것은 아님.
+- 다음 SVisual: 12개 실제 region을 확인한 뒤 동일 ROI에 Radiative/SRH/Auger 적분. 인터페이스 항목, EBL/barrier는 QW 적분에서 제외. 소스/기존 계산 수정 없음.
+
 ## 2026-10-15 — V2.1 SDE exact region-name grep returned no matches (OBSERVED TERMINAL)
 - 주수빈은 `CMP_BASELINE_2.0.0_V2`에서 `grep -n -E -C 3 'Dmg_QW|Edge_QW|Clean_QW' sde_dvs.cmd | head -n 130` 실행 후 출력이 없는 것을 확인. 이는 해당 파일의 정확한 문자열 검색 불일치만 뜻하며, SVisual에 QW 영역이 없거나 메쉬 오류임을 의미하지 않음.
 - 가능성(미확인): region label을 동적으로 생성했거나 다른 코드/전처리 파일에서 정의. 다음 읽기 전용 검사: `grep -nEi 'qw|quantum|edge|dmg|region' sde_dvs.cmd | head -n 100`.

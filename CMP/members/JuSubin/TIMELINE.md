@@ -1,3 +1,9 @@
+## 2026-10-15 — V2_Copy 독립 검증 담당 선택 (PROPOSED, 검증 실행 전)
+- 작업자: 주수빈. 본인 요청으로 이택규의 두 V2 계보를 비교한 뒤 `CMP_BASELINE_2.0.0_V2_Copy`를 우선 검증 대상으로 선택.
+- GitHub 기존 실행 보고 기준 V2_Copy는 shelf 유지/하부 cathode 유지/PolAct=0, n2(NtSide=0) 약 2.069V, n6(NtSide=1e18) 약 2.036V에서 정체. 이 수치는 Claude 보고의 전사값이며 이 세션에서 학교 서버 원본 로그 미열람.
+- 계획: 원본 보호 및 read-only 로 *.sta, pp*.cmd, n2/n6 log 마지막 accepted V, 비수렴/MinStep/CNormPrint/NewtonPlot와 shelf/cathode/mesh 설정 점검. 실패 메커니즘 특정 전 임의 모델 수정·재실행 없음. V2.1과 shelf 외 PolAct/cathode도 달라 인과 단정 금지.
+- 상태: PROPOSED 검증 계획; 실제 수빈 검사 결과는 아직 없음.
+
 ## 2026-10-13 — 3주차 발표 12번 '향후 연구 계획' 단일 슬라이드 개정 (PRESENTATION / OBSERVED)
 - 사용자 요청으로 기존 13장 중 **12번 슬라이드만** 가독성 중심의 4단계 로드맵으로 재설계하고, 요청대로 한 장짜리 편집 가능한 PowerPoint로 출력: `CMP_3주차_12번_향후연구계획_한장.pptx` (채팅 산출물; GitHub 바이너리 업로드 안 함).
 - 핵심 순서 유지: ① 전류 정규화·Mg/EBL/MQW 수송 검증 → ② 동일 전류의 Trap별 QW SRH/Radiative 비교 → ③ Full/Half·Mesh 정확도 검증과 Baseline 확정 → ④ Project A C 고저항 Edge와 B AlGaN Barrier 성능 평가.

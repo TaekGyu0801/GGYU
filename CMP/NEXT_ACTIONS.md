@@ -1,3 +1,8 @@
+## 2026-10-15 — 주수빈 n2 3채널 확보 → n6 동일 QW 적분
+- OBSERVED n2 12 QW ROIs 동일 Domain 2.399999e-02 um²: Radiative 1.524099e11, SRH 1.253894e10, Auger 6.265625e10 s^-1 um^-1. Derived modeled 3-channel radiative share=66.96243%, SRH 5.50908%, Auger 27.52849%.
+- **NEXT:** n6_des.tdr 열기 → 실제 12개의 Clean/Edge/Dmg QW1..4와 3개 재결합 필드 확인 → n6 Rad, srhRecombination, Auger 적분 결과 전체 및 Domain(0.02399999 um²) 확보. n2/n6 동일전압 3.6V 전류가 달라 matched-current IQE 개선/손실 효과로 단정하지 않는다.
+- **추가 audit:** n2 TDR가 3.6V 저장점인지, AreaFactor, QW4 주입 편중·Auger 파라미터, leakage/Trap recombination/charge balance 확인. 기존 소스/데이터 덮어쓰기 금지.
+
 ## 2026-10-15 — 주수빈 n2 MQW SRH 완료 → Auger 적분
 - OBSERVED: n2_des srhRecombination 12 QW ROI 1.253894e10 s^-1 um^-1, Domain=0.02399999 um², 이전 Radiative 동일 Domain.
 - 다음: n2_des에서 AugerRecombination을 같은 12 ROI로 적분하고 Total Integral, Domain 기록. 이후 세 채널로 모델 내 QW 방사 비율만 계산, n6에서 같은 영역/필드 반복. QW4 SRH 98.64% 원인, 누설, AreaFactor, TDR 3.6V 저장 시점 별도 검증. 기존 소스와 실행 변경 금지.

@@ -1,3 +1,7 @@
+## 2026-10-15 — 주수빈 V2.1 QW ROI 생성 규칙 확인 (OBSERVED SDE EXCERPT)
+- 실제 서버 `sde_dvs.cmd` grep은 각 QW1..4 thickness 0.003µm, `Wdmg=0.005` µm, `Wedge=@Wedge@`, `rE=(string-append "Edge_" name)`, `rD=(string-append "Dmg_" name)`을 보여줌. 기존 Clean_QW1..4 SVisual 확인과 합쳐 4 wells × 3 segments = 12 region ROI 구성이 예상됨. 실제 SVisual 12개 전체 선택 및 수치 적분은 아직 미수행.
+- Edge/clean baseline 동질성 및 Dmg NtSide 적용은 SDE 주석 근거이며 활성 effective SDevice deck 검증 필요. 다음: GUI region+field 존재 확인 후 동일 QW ROI 방사/SRH/Auger 적분.
+
 ## 2026-10-15 — 주수빈 V2.1 region names differ from old 5V_TEST (USER-REPORTED; ROI NOT YET VERIFIED)
 - SVisual `n2_des`에 기존 `DmgL_QW1~4` 대신 사용자 표기 `Dmg_QW14`, `Edge_QW1~4` 존재 보고. `Clean_QW1~4`는 이전 스크린샷으로 관찰. Dmg_QW14가 정확한 단일 region label인지, Clean/Edge/Dmg의 물리적 범위 및 QW 중복 여부 미확인.
 - 다음: 활성 SDE 소스 read-only grep 후 동일 QW ROI 재결합 적분. 미확인 region을 합산하지 않음. 코드 수정/시뮬레이션 실행 없음.

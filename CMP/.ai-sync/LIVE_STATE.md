@@ -1,3 +1,6 @@
+## 2026-10-15 — 주수빈 V2.1 n2 MQW 재결합 3채널 적분 (OBSERVED)
+- 동일 12 QW, 면적 0.02399999 um²: Radiative 1.524099e11, SRH 1.253894e10, Auger 6.265625e10 s^-1 um^-1. Radiative fraction 66.9624%, Auger 27.5285%, SRH 5.5091% (3채널 모델 내부 비율). QW4 방사 99.969%, SRH 98.644%, Auger 99.993% 집중. n6 동일 ROI 적분 대기. IQE 검증, AreaFactor, 공간 TDR bias, 물리 원인 미해결.
+
 ## 2026-10-15 — 주수빈 V2.1 n2 QW SRH integration 관찰 (OBSERVED)
 - n2_des 12 QW ROI srhRecombination integral 1.253894e10 s^-1 um^-1, Domain 0.02399999 um². QW4가 약 98.6438% 담당. 이전 Rad=1.524099e11, 두 채널 rad share 92.40% (Auger 미포함, validated IQE 아님). 다음 n2 Auger 동일 ROI 후 n6 반복. TDR bias/AreaFactor 검증 잔여.
 

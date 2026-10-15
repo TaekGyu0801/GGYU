@@ -1,3 +1,6 @@
+## 2026-10-15 — 주수빈 V2.1 n2 SRH 12 QW integration 관찰
+- srhRecombination, 12 QW ROI Total Integral=1.253894e10 s^-1 um^-1, Domain=0.02399999 um². QW4 share≈98.64%. 이전 n2 Rad=1.524099e11, 두 채널 기준 Rad fraction≈92.40%; Auger 미확인, IQE 물리 해석 미검증. 다음 n2 Auger, n6 동일 ROI.
+
 ## 2026-10-15 — 주수빈 V2.1 QW 방사 재결합 적분 결과 (OBSERVED)
 - n2_des SVisual: Clean/Edge/Dmg 4개 QW, 총 12 regions RadiativeRecombination integral 1.524099e11 s^-1 um^-1, Domain 0.02399999 um². QW4 방사 기여율 약 99.9688%. SRH/Auger 및 n6 동일 영역 적분 대기. 물리적 IQE나 정상 LED 성능 확정 아님.
 

@@ -1,3 +1,7 @@
+## 2026-10-15 — 주수빈 n2 SVisual QW 표시 확인 (OBSERVED SCREENSHOT)
+- `CMP_BASELINE_2.0.0_V2/n2_des` SVisual: Clean_QW1..4/EBL 지역과 AugerRecombination scalar 존재, DopingConcentration 현재 선택, Elements 129404 / Points 62529. DmgL_QW 및 Radiative/SRH는 현재 화면 스크롤 범위 밖으로 미확인. 공간 TDR의 최종 bias 및 실제 재결합 적분은 미검증.
+- 다음: ROI/필드명 확인 → Rad/SRH/Auger 동일 영역 적분. 기존 소스/실행 변경 없음.
+
 ## 2026-10-15 — 주수빈 V2.1 실행 완료 직접 확인 (OBSERVED)
 - 학교 서버 `CMP_BASELINE_2.0.0_V2`: n2/n6 status `done`, 각 최종 anode 3.600 V, raw total current n2=3.647e-08, n6=9.220e-09. n2 TDR 21M/PLT 293K, n6 TDR 23M/PLT 295K 실제 파일 존재(10/14 수정). 주수빈이 10/15 제공한 원본 터미널 텍스트 기준. **전압 목표/파일 존재 확인이며 물리 타당성, TDR 최종바이어스, AreaFactor는 미검증.**
 - 다음: 읽기 전용으로 최종 TDR 저장 시점·SVisual QW 4개 영역/재결합 필드 확인 후 Radiative/SRH/Auger 적분. 소자 변경 없음.

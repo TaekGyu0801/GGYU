@@ -1,7 +1,7 @@
 {
   "juSubinV21PhysicalValidation20261015": {
     "worker": "주수빈",
-    "status": "OBSERVED_N2_RADIATIVE_12QW_INTEGRAL_SRHAUGER_PENDING",
+    "status": "OBSERVED_N2_RAD_AND_SRH_12QW_AUGER_PENDING",
     "targetProject": "CMP_BASELINE_2.0.0_V2",
     "deviceConfiguration": "V2.1 shelf removed, PolAct=0.5 (Lee/Claude report; active code unverified)",
     "previousTarget": "CMP_BASELINE_2.0.0_V2_Copy (superseded choice, prior historical task)",
@@ -107,6 +107,26 @@
       "qw4Percentage": 99.9687748,
       "limitations": "This is only radiative-recombination distribution, not IQE; SRH/Auger and n6 not yet integrated; verify TDR final bias and AreaFactor.",
       "next": "Integrate SRH then Auger over exactly same twelve QW 2D regions, confirm matching total domain."
+    },
+    "n2SRH12QwIntegration20261015": {
+      "status": "OBSERVED_USER_SVISUAL_INTEGRATION_TEXT",
+      "field": "srhRecombination",
+      "dataset": "n2_des",
+      "rawTotalIntegralPerUmPerSec": 12538940000,
+      "domainUm2": 0.02399999,
+      "regions": "Clean/Dmg/Edge QW1..4 total 12",
+      "regionDisplayedSumPerUmPerSec": 12538940432.36,
+      "qwSumsPerUmPerSec": [
+        22514743.79,
+        27705484.37,
+        119834044.2,
+        12368886160
+      ],
+      "qw4PercentOfQwSRH": 98.643790731144,
+      "radiativePreviousTotalPerUmPerSec": 152409900000,
+      "twoChannelRadiativeFractionApprox": 0.9239828,
+      "interpretation": "Two-channel quantity excludes Auger, leakage, other recombination paths; not a validated LED IQE.",
+      "next": "Integrate AugerRecombination over exact same 12 QW regions and compare Total Domain; then n6."
     }
   },
   "leeClaudeBaselineV2Audit20261013": {

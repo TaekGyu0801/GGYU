@@ -1,3 +1,8 @@
+## 2026-10-15 — n6 적분 시도에서 n2 데이터셋/8영역 선택 오류 확인 (OBSERVED)
+- 사용자가 새로 전달한 SVisual 출력은 `Dataset: n2_des`, `Field: RadiativeRecombination`. Clean_QW1..4 및 Dmg_QW1..4만 포함한 8개 2D 영역의 Total Integral 1.447895e11 s^-1 um^-1, Total Domain 0.02279999 um². n6의 측정 결과가 아님.
+- 앞서 n2 12개 QW 적분(1.524099e11, 0.02399999um²)과의 차는 약 7.6204e9 s^-1 um^-1로 이전 Edge_QW1..4 적분합과 일치함. 물리 변화가 아닌 ROI/데이터셋 선택 차이.
+- 다음은 SVisual에서 n6_des 데이터셋이 선택된 상태를 확인하고, Clean/Edge/Dmg × QW1..4 전체 12개에 Radiative 적분 수행. 코드는 변경하지 않음.
+
 ## 2026-10-15 — V2.1 n2 12 QW 3채널 재결합 적분 완료 (OBSERVED/DERIVED)
 - **OBSERVED SOURCE:** 주수빈 2026-10-15 Sentaurus Visual n2_des / AugerRecombination / Regions of Dimension 2 결과 원문. QW1~4 각각 Clean/Edge/Dmg 총 12 ROI, Total Integral **6.265625e10 s^-1 um^-1**, Total Domain **2.399999e-02 um²**. 개별 영역 표시 수치 합 6.26562547006376e10 (반올림 범위 내).
 - **Auger QW별 합(표시 정밀도):** QW1 7.10119054e4, QW2 1.102859532e5, QW3 3.918102779e6, QW4 6.26521553e10 s^-1 um^-1. QW4 Auger 집중 약 99.99346%.

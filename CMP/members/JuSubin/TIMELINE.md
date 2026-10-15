@@ -1,3 +1,8 @@
+## 2026-10-15 — V2.1 SDE exact region-name grep returned no matches (OBSERVED TERMINAL)
+- 주수빈은 `CMP_BASELINE_2.0.0_V2`에서 `grep -n -E -C 3 'Dmg_QW|Edge_QW|Clean_QW' sde_dvs.cmd | head -n 130` 실행 후 출력이 없는 것을 확인. 이는 해당 파일의 정확한 문자열 검색 불일치만 뜻하며, SVisual에 QW 영역이 없거나 메쉬 오류임을 의미하지 않음.
+- 가능성(미확인): region label을 동적으로 생성했거나 다른 코드/전처리 파일에서 정의. 다음 읽기 전용 검사: `grep -nEi 'qw|quantum|edge|dmg|region' sde_dvs.cmd | head -n 100`.
+- 실제 MQW Clean/Edge/Dmg ROI 관계가 확인되기 전 재결합 적분 보류. 소스·서버 run 변경 없음.
+
 ## 2026-10-15 — V2.1 SVisual MQW region naming correction (USER-REPORTED UI; mapping UNRESOLVED)
 - 주수빈은 n2 SVisual `Regions`에 기존 5V_TEST에서 기대한 `DmgL_QW1~4`가 없고 대신 `Dmg_QW14`(사용자 표기 그대로, 단일 이름/연속 범위 여부 미확정)와 `Edge_QW1~4`가 있다고 보고. 화면에서 직접 확인된 `Clean_QW1~4`와 함께 V2.1 QW ROI 구성의 정확한 포함/중복 관계는 미확인.
 - AI가 이전 버전의 region 이름을 V2.1에 그대로 적용한 안내를 정정함. ROI 정합 없이 적분/수치 합계 산출 금지.

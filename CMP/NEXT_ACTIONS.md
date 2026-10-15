@@ -1,3 +1,7 @@
+## 2026-10-15 — 주수빈 V2.1 MQW ROI 이름 생성 코드 확인 완료 (OBSERVED)
+- 실 서버 SDE grep: `QW1..4`, 3nm 각 well, `Wdmg=0.005µm`, `Wedge=@Wedge@`, `Edge_ + name`, `Dmg_ + name`을 확인. Clean/Edge/Dmg × 4 QW = 12 ROI 예상. 기존 exact-name grep no matches는 string-append 동적 명명 때문.
+- 다음: SVisual Regions에서 실제 12개를 확인, 각 field Radiative/SRH/Auger가 존재하면 동일한 12 QW ROI로 적분. barrier/EBL/interface 선택 금지. n2/n6 동일 기준 유지, TDR final bias 검증은 별도.
+
 ## 2026-10-15 — 주수빈 V2.1 QW ROI 명칭 확인 필요
 - 사용자의 SVisual 보고에서 `DmgL_QW1~4`가 없고 `Dmg_QW14` (정확 표기/범위 미확인) 및 `Edge_QW1~4`가 존재함. `Clean_QW1~4`는 이전 스크린샷에서 직접 관찰.
 - V2.1 활성 SDE `sde_dvs.cmd` 및 `pp1_dvs.cmd`를 read-only grep으로 확인하기 전 Clean/Edge/Dmg QW를 합쳐 적분하거나 중복 제거 관계를 가정하지 않는다. 실제 소스 검증 후 동일 ROI의 Rad/SRH/Auger 적분.

@@ -1,3 +1,7 @@
+## 2026-10-15 — 주수빈 n2 MQW SRH 완료 → Auger 적분
+- OBSERVED: n2_des srhRecombination 12 QW ROI 1.253894e10 s^-1 um^-1, Domain=0.02399999 um², 이전 Radiative 동일 Domain.
+- 다음: n2_des에서 AugerRecombination을 같은 12 ROI로 적분하고 Total Integral, Domain 기록. 이후 세 채널로 모델 내 QW 방사 비율만 계산, n6에서 같은 영역/필드 반복. QW4 SRH 98.64% 원인, 누설, AreaFactor, TDR 3.6V 저장 시점 별도 검증. 기존 소스와 실행 변경 금지.
+
 ## 2026-10-15 — 주수빈 n2 MQW Radiative 적분 완료 후 다음 단계
 - OBSERVED: n2 SVisual에서 Clean/Edge/Dmg × QW1..4 총 12개 RadiativeRecombination 적분 = 1.524099e11 s^-1 um^-1, Total Domain=0.02399999 um². QW4 비중 약 99.9688%; 원인/정상성 미확정.
 - NEXT: 같은 12 regions에서 SRHRecombination 필드(실제 Scalars 이름 확인) 적분 → AugerRecombination 적분; 각 Total Domain이 0.02399999 um²인지 검사. 이후 n6에서 완전히 같은 ROI/필드 반복. 수치 합산 뒤 단일 전압 3.6V 3채널 비율 계산, IQE 해석 제한·matched-current 미확보 고지.

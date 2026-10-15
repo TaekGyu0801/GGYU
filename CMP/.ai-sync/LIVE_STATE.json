@@ -1,4 +1,15 @@
 {
+  "juSubinV21PhysicalValidation20261015": {
+    "worker": "주수빈",
+    "status": "PROPOSED_READ_ONLY_VERIFICATION_AWAITING_SERVER_OUTPUT",
+    "targetProject": "CMP_BASELINE_2.0.0_V2",
+    "deviceConfiguration": "V2.1 shelf removed, PolAct=0.5 (Lee/Claude report; active code unverified)",
+    "previousTarget": "CMP_BASELINE_2.0.0_V2_Copy (superseded choice, prior historical task)",
+    "task": "Independently verify n2/n6 V-I traces, 4QW Radiative/SRH/Auger region integrals, QW radiative fraction/IQE interpretation, current normalization and trap ON/OFF comparison",
+    "firstStep": "Read-only check n2/n6 TDR PLT STA existence plus final anode V/current on server; no new results yet",
+    "source": "JuSubin project chat, 2026-10-15",
+    "boundary": "Role division with Lee is a recommendation, not jointly confirmed. No TCAD code or run changes."
+  },
   "leeClaudeBaselineV2Audit20261013": {
     "worker": "이택규",
     "source": "User-uploaded Claude Baseline V2 zip; SHA256 8f26d1d17fb24ba4528dc51daf0bb9edf3f95c6c984ceb942e02e5882099bde8",

@@ -51,6 +51,27 @@
         "TDR final 3.6V snapshot",
         "region-integrated recombination"
       ]
+    },
+    "mqwRegionNamingEvidence": {
+      "status": "OBSERVED_SERVER_SDE_CODE_EXCERPT",
+      "source": "2026-10-15 JuSubin pasted grep results sde_dvs.cmd",
+      "qwLayers": [
+        "QW1",
+        "QW2",
+        "QW3",
+        "QW4"
+      ],
+      "qwThicknessUm": 0.003,
+      "damageWidthUm": 0.005,
+      "edgeWidth": "@Wedge@ unresolved runtime",
+      "segments": [
+        "Clean",
+        "Edge",
+        "Dmg"
+      ],
+      "anticipatedQwRegionCount": 12,
+      "regionNaming": "rE string-append Edge_ name; rD string-append Dmg_ name; clean from earlier SVisual; actual complete region list awaiting GUI confirmation",
+      "next": "Check 12 regions in SVisual, then field-integrate Radiative, SRH, Auger over exactly matching QW ROIs; check final TDR bias."
     }
   },
   "leeClaudeBaselineV2Audit20261013": {

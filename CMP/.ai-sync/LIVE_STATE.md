@@ -1,3 +1,7 @@
+## 2026-10-15 — 주수빈 V2.1 실행 완료 직접 확인 (OBSERVED)
+- 학교 서버 `CMP_BASELINE_2.0.0_V2`: n2/n6 status `done`, 각 최종 anode 3.600 V, raw total current n2=3.647e-08, n6=9.220e-09. n2 TDR 21M/PLT 293K, n6 TDR 23M/PLT 295K 실제 파일 존재(10/14 수정). 주수빈이 10/15 제공한 원본 터미널 텍스트 기준. **전압 목표/파일 존재 확인이며 물리 타당성, TDR 최종바이어스, AreaFactor는 미검증.**
+- 다음: 읽기 전용으로 최종 TDR 저장 시점·SVisual QW 4개 영역/재결합 필드 확인 후 Radiative/SRH/Auger 적분. 소자 변경 없음.
+
 ## 2026-10-15 — 주수빈 V2.1 물리 검증 담당 전환 (PROPOSED / AWAITING SERVER READ-ONLY OUTPUT)
 - 주수빈은 V2_Copy 수렴 실패 진단을 우선 수행하려던 계획을 변경하고, 이택규/Claude 보고의 `CMP_BASELINE_2.0.0_V2` 내부 V2.1 결과에 대해 **전류 I–V / MQW Rad·SRH·Auger / QW IQE 검증**을 시작하기로 함. 이전 V2_Copy 선택은 historical, 최신 할 일은 V2.1.
 - 첫 단계는 n2/n6 파일 TDR/PLT/STA 존재 및 마지막 anode voltage/current를 서버 터미널에서 read-only 확인. 명령 안내는 완료되었지만 실제 출력·새 수치/실험은 아직 없음. 다음: 최종 bias 공간 TDR 검증 후 SVisual 4QW ROI 동일 적분.

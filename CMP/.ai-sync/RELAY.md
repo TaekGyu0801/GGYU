@@ -1,3 +1,7 @@
+## 2026-10-15 — 주수빈 n2 3채널 완료, n6 물리 검증 인수인계 (OBSERVED)
+- 데이터 n2_des 12 QW: Rad=1.524099e11, SRH=1.253894e10, Auger=6.265625e10 s^-1 um^-1, Total Domain=0.02399999 um² 각 동일. 3채널 방사비율=66.96243%. QW4 집중(방사≈99.969%, SRH≈98.644%, Auger≈99.993%) 확인, 물리 원인 불명.
+- Next SVisual n6_des.tdr 동일 12 regions + 세 필드 적분, 각 Total Domain 검증. n2/n6 3.6V 동일 전압이나 다른 전류라 matched current 불가. 실제 TDR 최종 저장 bias, current units AreaFactor, 물리 calibration 미해결. 기존 계산 덱 변경 금지.
+
 ## 2026-10-15 — HANDOFF 주수빈 n2 QW SRH 적분 완료
 - 사용자 SVisual n2_des srhRecombination 12개 Clean/Edge/Dmg × QW1..4 적분 총 1.253894e10 s^-1 um^-1, 면적 0.02399999 um². 이전 Radiative 총 1.524099e11 같은 면적. QW4에 SRH 약 98.64%, Radiative 약 99.97% 집중. 물리 원인 불명, Auger 아직 없음.
 - 다음 단계: 같은 12 QW 영역 AugerRecombination 적분 원문 회수, n2 3채널 비율 산출 후 n6 반복. 물리적 IQE/누설/AreaFactor/bias 미검증. 소스 수정 없음.

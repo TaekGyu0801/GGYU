@@ -1,3 +1,8 @@
+## 2026-10-15 — 주수빈 V2.1 물리 검증 시작 (PROPOSED; no new measurement)
+- 주수빈은 기존 V2_Copy 수렴 진단 계획 대신 `CMP_BASELINE_2.0.0_V2` 안의 shelf 없는 **V2.1** 결과의 전류·MQW 재결합·IQE 검증을 맡기로 선택. 이택규의 실제 현재 작업/역할 합의는 미확인.
+- **최우선 READ-ONLY:** 보고된 서버 경로에서 `n2_des.tdr/n6_des.tdr`, `n2_des.plt/n6_des.plt`, `n2_des.sta/n6_des.sta`, 로그 마지막 anode 3.6V 실제 값의 존재·완료 여부 확인. 검증 출력은 아직 사용자로부터 도착하지 않음.
+- **다음:** 실제 공간 TDR이 최종 3.6V 시점인지 검증 → 같은 4QW Clean+DmgL ROI에 Rad/SRH/Auger 적분 → QW radiative share 및 IQE 정의 분리 → 전류밀도/누설·Trap ON/OFF matched-current 한계 검토. 원본 소스/기존 run 변경 금지.
+
 ## 2026-10-15 — Baseline V2.1 3.6V 도달 후 우선 실행 계획 (USER-REPORTED RUN → INDEPENDENT VERIFICATION PENDING)
 1. **Read-only 최신 근거 확보:** 이택규/Claude가 수행했다고 보고한 V2.1 n2/n6 `n*_des.log`, `n*_des.plt`, active `pp*.cmd`/par, SDE `Wshelf=0`, cathode geometry, `AreaFactor`, mesh/contact; 각각 실제 accepted 최종 3.600V와 적용 물리 확인. source/hash 및 V2→V2.1 diff 보존.
 2. **후처리 먼저 검증:** `bl2_check.py` 실제 `.plt` 필드/적분 영역/2D 정규화 확인 후 J–V, QW Rad/SRH/Auger, EBL/sidewall Trap/total, current continuity+leakage. `q∫R/I≈1`을 항상 통과 기준으로 강제하지 않으며 QW IQE vs whole-device recombination share를 구분. NtSide=1e18 n6에서 전류가 n2 25.3%로 감소하는 메커니즘을 trap charge/occupancy, e/h density/current 맵으로 확인.

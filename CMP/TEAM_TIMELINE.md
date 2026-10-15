@@ -1,3 +1,9 @@
+## 2026-10-15 — 이택규/Claude V2.1 첫 3.6V 도달 및 작업용 구조 채택 (USER-REPORTED RUN)
+- 사용자 제공 Claude 기록 #02: shelf 제거 `CMP_BASELINE_2.0.0_V2` V2.1(PolAct0.5)은 NtSide=0/1e18 모두 3.600V 도달; 조건부 전류밀도 1.8235/0.4610 A/cm². shelf 유지+PolAct0 대조군은 2.069/2.036V에서 정체. **GPT는 실제 서버 로그/코드를 직접 열람하지 않음.**
+- 의사결정은 이택규/Claude의 **검증용 V2.1 구조 채택**; 연구팀 전체 물리 검증 완료 아님. shelf 제거 외 cathode 변화도 있어 정확한 수렴 원인은 미확인. NtSide ON/OFF 동일전압 전류비 약 25.3%의 원인도 미확인.
+- 기존 blocker '3.6V 미도달'은 이 사용자 보고의 V2.1 실행에 대해서는 완화되었으나 QW/EBL/측벽 적분, 전류 정규화·IQE/누설, 문헌 I-V, Full/Half/mesh 및 A/B gate는 남음.
+- 근거: [상세 보고 보존](members/LeeTaekGyu/LOG_20261015_02_baseline_v2_1_shelf_removal.md). 다음: 로그/.plt 검증 → S3 → A/B pilot, Common Baseline freeze 보류.
+
 ## 2026-10-13 — 이택규 Claude V2 n2 조기 종료 확인 (USER-REPORTED / CAUSE UNRESOLVED)
 - 사용자: n2가 목표 3.6V 전에 조기 종료. 로그 정상 finish와 2.070V 마지막 출력 확인됨. 원인 확인 위해 read-only Solve/code/log 출력 요청, n6는 보호. Baseline 완료 판정 불가.
 

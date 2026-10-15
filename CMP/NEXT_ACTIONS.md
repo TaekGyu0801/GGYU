@@ -1,3 +1,11 @@
+## 2026-10-15 — Baseline V2.1 3.6V 도달 후 우선 실행 계획 (USER-REPORTED RUN → INDEPENDENT VERIFICATION PENDING)
+1. **Read-only 최신 근거 확보:** 이택규/Claude가 수행했다고 보고한 V2.1 n2/n6 `n*_des.log`, `n*_des.plt`, active `pp*.cmd`/par, SDE `Wshelf=0`, cathode geometry, `AreaFactor`, mesh/contact; 각각 실제 accepted 최종 3.600V와 적용 물리 확인. source/hash 및 V2→V2.1 diff 보존.
+2. **후처리 먼저 검증:** `bl2_check.py` 실제 `.plt` 필드/적분 영역/2D 정규화 확인 후 J–V, QW Rad/SRH/Auger, EBL/sidewall Trap/total, current continuity+leakage. `q∫R/I≈1`을 항상 통과 기준으로 강제하지 않으며 QW IQE vs whole-device recombination share를 구분. NtSide=1e18 n6에서 전류가 n2 25.3%로 감소하는 메커니즘을 trap charge/occupancy, e/h density/current 맵으로 확인.
+3. **물리 성능:** 문헌 I–V/turn-on 대조. V2.1 shelf 제거와 bottom cathode 변경의 2D lateral current paths 및 Project A/B 해석 영향 검증, half/full·mesh test 일정 수립. 정식 Baseline freeze 보류.
+4. **조건부 후속:** 위 통과 시 S3 `PolAct=1.0` 분극 대조→ Project A `GaN:C` (`NCedge`) 및 Project B `AlGaN` (`Bspan`) 별도 pilot, 공통 baseline과 동일 전류밀도 비교.
+5. **필요시 확장:** 실제 유효한 `n@node@_end` Save/Load 여부를 확인한 복사본에서 4–5V; 원본 성공 run 훼손 금지.
+- 근거: 이택규/Claude 보고 #02, [보존본](members/LeeTaekGyu/LOG_20261015_02_baseline_v2_1_shelf_removal.md). 3.6V 도달과 물리/논문 검증은 별개. 관련 이전 미해결 구 V2 진단 항목은 별도 히스토리로 보존.
+
 ## 2026-10-13 — V2 copied Run3 fast verification plan (PROPOSED)
 - Run3 user reported PARDISO/ExtendedPrecision/Iterations20 change; no new log independently validated. Preserve running copies. First inspect active pp6 Math/Solve and latest accepted anode, fail markers, CNormPrint/MinStep logs. Quasistationary MaxStep normalized to bias span (2→3.6V, 0.01 => 0.016V). Before any more solver tuning isolate failing vertex/region, contact current, effective Mg ionization, polarization and mesh. Original user-uploaded T-2022.03 manual specific pages not directly opened this session.
 

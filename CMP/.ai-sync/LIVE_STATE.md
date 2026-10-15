@@ -1,3 +1,8 @@
+## 2026-10-15 — 주수빈 V2.1 물리 검증 담당 전환 (PROPOSED / AWAITING SERVER READ-ONLY OUTPUT)
+- 주수빈은 V2_Copy 수렴 실패 진단을 우선 수행하려던 계획을 변경하고, 이택규/Claude 보고의 `CMP_BASELINE_2.0.0_V2` 내부 V2.1 결과에 대해 **전류 I–V / MQW Rad·SRH·Auger / QW IQE 검증**을 시작하기로 함. 이전 V2_Copy 선택은 historical, 최신 할 일은 V2.1.
+- 첫 단계는 n2/n6 파일 TDR/PLT/STA 존재 및 마지막 anode voltage/current를 서버 터미널에서 read-only 확인. 명령 안내는 완료되었지만 실제 출력·새 수치/실험은 아직 없음. 다음: 최종 bias 공간 TDR 검증 후 SVisual 4QW ROI 동일 적분.
+- 이택규의 구조/solver 담당은 GPT 추천안이며 이택규의 실시간 진행 또는 두 연구원 간 확정 역할분담이 아님. 물리 baseline 정식 freeze는 여전히 미완료.
+
 ## 2026-10-15 — Baseline V2.1 shelf 제거 후 n2/n6 3.6V 도달 (USER-REPORTED RUN / GPT HAS NOT SEEN RAW SERVER LOG)
 - **실행 보고:** 이택규가 Claude의 #02(2026-10-15)를 전달. `CMP_BASELINE_2.0.0_V2`를 shelf 없는 V2.1(`Wshelf=0`, shelf와 해당 하단 cathode 삭제, PolAct=0.5, 기본 solver Iterations20/NotDamped50)로 SDE부터 다시 실행. n2(NtSide0)와 n6(NtSide1e18) 모두 3.600V 도달, raw terminal I 3.647e-08/9.220e-09 A/µm; half 2µm 가정 J 1.8235/0.4610 A/cm², didn't converge 0/1회. **사용자가 인용한 서버 grep 수치이며 실제 로그 파일을 GPT가 직접 열어 검증하지는 않음.**
 - **대조:** shelf 포함 V2+PolAct0 `CMP_BASELINE_2.0.0_V2_Copy` n2/n6 2.069/2.036V 정체 및 17/23 비수렴 출력. 분극 제거만으로 해결되지 않음. 정확한 수렴 원인은 shelf 자유표면/270도 모서리일 수 있지만 cathode 경계조건도 달라져 **원인 분리는 아직 미완료**.

@@ -161,6 +161,16 @@
       ],
       "interpretation": "Model 3-channel QW radiative fraction; not independently validated physical IQE, EQE or matched-current Trap effect.",
       "next": "In n6_des.tdr integrate same 12 QW regions in Radiative, srhRecombination, Auger, verify domain and final TDR bias; investigate QW4-heavy distribution and Auger."
+    },
+    "n6RecombinationStatus": "NOT_YET_OBSERVED",
+    "latestROICorrection20261015": {
+      "dataset": "n2_des",
+      "field": "RadiativeRecombination",
+      "regions": "Clean+Dmg × QW1..4 (8 regions; Edge absent)",
+      "integral": 144789500000,
+      "domainUm2": 0.02279999,
+      "classification": "OBSERVED; NOT n6 DATA",
+      "action": "Select n6_des dataset and all 12 Clean+Edge+Dmg QW1..4"
     }
   },
   "leeClaudeBaselineV2Audit20261013": {

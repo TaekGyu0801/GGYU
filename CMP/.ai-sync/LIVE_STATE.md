@@ -1,3 +1,7 @@
+## 2026-10-15 — 주수빈 V2.1 region names differ from old 5V_TEST (USER-REPORTED; ROI NOT YET VERIFIED)
+- SVisual `n2_des`에 기존 `DmgL_QW1~4` 대신 사용자 표기 `Dmg_QW14`, `Edge_QW1~4` 존재 보고. `Clean_QW1~4`는 이전 스크린샷으로 관찰. Dmg_QW14가 정확한 단일 region label인지, Clean/Edge/Dmg의 물리적 범위 및 QW 중복 여부 미확인.
+- 다음: 활성 SDE 소스 read-only grep 후 동일 QW ROI 재결합 적분. 미확인 region을 합산하지 않음. 코드 수정/시뮬레이션 실행 없음.
+
 ## 2026-10-15 — 주수빈 n2 SVisual QW 표시 확인 (OBSERVED SCREENSHOT)
 - `CMP_BASELINE_2.0.0_V2/n2_des` SVisual: Clean_QW1..4/EBL 지역과 AugerRecombination scalar 존재, DopingConcentration 현재 선택, Elements 129404 / Points 62529. DmgL_QW 및 Radiative/SRH는 현재 화면 스크롤 범위 밖으로 미확인. 공간 TDR의 최종 bias 및 실제 재결합 적분은 미검증.
 - 다음: ROI/필드명 확인 → Rad/SRH/Auger 동일 영역 적분. 기존 소스/실행 변경 없음.

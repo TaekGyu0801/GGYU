@@ -1,3 +1,8 @@
+## 2026-10-15 — V2 shelf 부근 Newton stall: V2.1 구조 변경으로 목표 도달 보고 (USER-REPORTED RUN, mechanism UNRESOLVED)
+- 기존 V2 shelf 보유 run은 2.0–2.3V 부근 정체. 이번 Claude 서버 결과 보고: shelf 제거+바닥 cathode 변경 V2.1(PolAct0.5) n2/n6 모두 3.6V 도달, `didn't converge` 0/1; shelf 유지+PolAct0 대조군은 2.069/2.036V 정체, 관련 카운트 17/23.
+- **해결 범위:** 보고된 V2.1 구성에서는 이전 stall이 재현되지 않음. PolAct0만으로 해결 불가. **정확한 수치 불안정 메커니즘(270도 코너, 표면 캐리어 상대오차, 필드/경계조건/메쉬)은 검증되지 않음**; shelf·접촉 경계가 함께 바뀐 다변수 구조 변경임. 기존 V2와 기존 CAL/POL50의 모든 수렴 문제가 일반적으로 해결된 것은 아님.
+- 다음: V2.1 원본 로그/활성 SDE·SDevice 파일 재검증, half geometry/cathode 정의 및 A/B 물리 영향 확인. [기록 #02](members/LeeTaekGyu/LOG_20261015_02_baseline_v2_1_shelf_removal.md).
+
 ## 2026-10-13 — CORRECTION: Claude V2 SRH activation + full audit (OBSERVED source / pending T-2022.03 run)
 - **RETRACTION of previous source-level error designation**: It was wrong to state the current V2 EBL lifetime is 0.05ns. The deck declares `Recombination(SRH Radiative Auger)` (no `DopingDependence`); Sentaurus UG (earlier editions) specifies τ=taumax=100ns unless doping-dependent SRH is activated. Thus source-level false-positive, not proven active model error. This correction supersedes prior entry; confirm T-2022.03 runtime. Actual V2 smoke has not run, so no new runtime error confirmed. Remaining warnings: current balance qR/I universal pass and IQE label, omission of EBL trap/Auger, no explicit SUPER. 
 

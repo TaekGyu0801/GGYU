@@ -1,3 +1,6 @@
+## 2026-10-15 — 주수빈 V2.1 QW 방사 재결합 적분 결과 (OBSERVED)
+- n2_des SVisual: Clean/Edge/Dmg 4개 QW, 총 12 regions RadiativeRecombination integral 1.524099e11 s^-1 um^-1, Domain 0.02399999 um². QW4 방사 기여율 약 99.9688%. SRH/Auger 및 n6 동일 영역 적분 대기. 물리적 IQE나 정상 LED 성능 확정 아님.
+
 ## 2026-10-15 — 주수빈 V2.1 n2/n6 학교 서버 상태·최종 전압 확인 (OBSERVED)
 - 근거: 주수빈이 2026-10-15 실제 학교 서버에서 복사한 읽기 전용 출력. 경로 `/user/semi/semi437/CMP_BASELINE_2.0.0_V2`; `cat n2_des.sta n6_des.sta`에서 두 노드 모두 `done`; `grep '^ *anode' n2_des.log | tail -3` 마지막 (3.576V,2.424e-08), (3.592V,3.180e-08), (3.600V,3.647e-08); n6 동일 전압에서 7.077e-09 / 8.433e-09 / 9.220e-09 (SDevice raw terminal total-current log values).
 - 파일 존재: n2_des.plt 293K, n2_des.tdr 21M (Oct14 15:44); n6_des.plt 295K, n6_des.tdr 23M (Oct14 17:43). 출력 시점 및 최종 전압 기록은 사용자가 직접 제시한 실제 파일/로그 텍스트로 **OBSERVED**. 이는 종전의 Claude 단독 RUN 전사 근거를 강화함.

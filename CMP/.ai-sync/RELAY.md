@@ -1,3 +1,12 @@
+## 2026-10-15 — HANDOFF: 이택규 Claude V2.1 shelf 제거 3.6V 도달 (USER-REPORTED; original server logs NOT VERIFIED BY GPT)
+- **작업자/AI:** 이택규, 서버 실험 보고 Claude → GPT가 전달 내용을 GitHub에 기록.
+- **최신 진전:** `CMP_BASELINE_2.0.0_V2`를 V2.1(`Wshelf=0`, shelf 및 shelf 하단 cathode 제거, PolAct=0.5, 기본 solver 20/50 non-PARDISO)로 변경한 run에서 n2 NtSide0 **3.600V / 3.647e-08 A/µm** (조건부 J 1.8235 A/cm²), n6 NtSide1e18 **3.600V / 9.220e-09 A/µm** (J 0.4610 A/cm²) 도달 보고. shelf 유지+PolAct0 `CMP_BASELINE_2.0.0_V2_Copy`는 2.069/2.036V 정체.
+- **기존 blocker 변화:** 기본 solver의 2.0–2.3V 정체는 보고된 V2.1 계보에서 해결된 것으로 보이나 아직 로그 독립 검증 없음. 분극 활성도를 0으로 만드는 조작만으로는 정체 해소되지 않았음. 정확히 shelf 모서리 자체 때문인지, cathode 경계 등 다른 구조 변수인지 **UNRESOLVED**.
+- **남은 blocker:** V2.1 활성 SDE/SDevice/cathode/area 및 실제 `.log`/`.plt` 출처 확인, `bl2_check.py` IQE 정의/재결합 수지와 leakage 검증, 논문 I-V/turn-on, NtSide ON 전류 감소 원인, full/half mesh 및 A/B 해석 적합성. 정식 physical baseline NO-GO.
+- **변경한 파일/실행:** GPT는 학교 서버/TCAD 소스 및 실행을 변경하지 않음. 보고서상 Claude는 서버 SDE·SDevice를 수정/실행. 자세한 파일 경로는 [상세 기록](../members/LeeTaekGyu/LOG_20261015_02_baseline_v2_1_shelf_removal.md) 참조. 이전 구 V2 파일을 무단 덮어쓰지 말 것.
+- **다음 AI 첫 확인:** 실제 `pp2_des.cmd`/`pp6_des.cmd`, `n2_des.log`/`n6_des.log` 완료된 3.6V 출력·`.plt` 데이터 및 AreaFactor; V2.1 디렉터리의 정확한 SDE/mesh/cathode 코드 hash 확보 후 J–V/region-integral 재계산.
+- **변경 금지 조건:** 프로젝트 A/B 비교 전 공통 5nm sidewall defect Nt/Et/σ, epitaxy, contacts/mesh provenance 보호; geometry 바뀐 V2.1은 이전 공통 baseline과 동등하다고 가정하지 않음.
+
 ## 2026-10-13 — 이택규 Claude V2 독립 수치·물리 검토 (GPT ANALYSIS / USER-REPORTED RUN3)
 - 사용자 전달 Claude 설명: run1 2.31V 도달 후 QS Newton 진동, run2 2.070V 조기 종료, **run3는 Claude가 수정한 복사본**에서 `Method=Blocked, SubMethod=ParDiSo, NumberOfThreads=4, Iterations=20, NotDamped=50, ExtendedPrecision` 설정으로 실행 중이라고 보고됨. **새 복사본의 원본 pp*/log 및 성공/개선은 직접 검증되지 않음**.
 - 독립 검토(해석, 결과 아님): QS MaxStep는 V가 아닌 정규화된 t에 작용하므로 stage 2.0→3.6V의 MaxStep 0.01은 최대 0.016V, 0.02는 0.032V, MinStep 1e-6은 1.6 microV. 2.3V 수렴은 스텝 크기/수치 stiff 문제 가능성 높으나 물리 원인 미확정. `NotDamped=50>Iterations=20`은 기본적으로 Bank–Rose damping을 지연시키지만 Sentaurus 교육자료는 QS에서 작은 스텝을 일반적으로 우선하므로 '오류'로 단정 금지.

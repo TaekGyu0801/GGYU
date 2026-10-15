@@ -1,3 +1,7 @@
+## 2026-10-15 — 주수빈 SVisual n2 확인 후 적분
+- 확인: Clean_QW1~4, AugerRecombination 필드, 화면 Elements=129404 Points=62529. 재결합 수치 아직 없음.
+- 다음: Regions의 DmgL_QW 존재와 Scalars의 Radiative/SRH 필드 확인 → QW 영역별 적분, n6 반복. TDR 최종 3.6V 저장 여부는 별도 확인.
+
 ## 2026-10-15 — 주수빈 V2.1 실행 확인 통과 후 다음 물리 검증
 - 완료된 확인(OBSERVED): `CMP_BASELINE_2.0.0_V2` n2/n6 status done, 마지막 anode 3.600V, n2 3.647e-08 / n6 9.220e-09 raw current, 두 노드의 TDR/PLT 파일 존재.
 - 다음 READ-ONLY: SDevice active pp2/pp6 `Plot/Save` 및 `AreaFactor`/물리 설정 확인; SVisual에서 두 TDR가 최종 3.6V인지 및 QW 영역/필드 availability 확인 → 동일한 4QW(각 Clean/DmgL 실제 region 명칭 확인) Rad/SRH/Auger 적분 → 정의 명확한 QW 3채널 비율 산출. 동전압 Trap ON/OFF는 matched-current 효율 비교가 아님. 소스/실행은 수정하지 않음.

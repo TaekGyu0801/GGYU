@@ -1,7 +1,7 @@
 {
   "juSubinV21PhysicalValidation20261015": {
     "worker": "주수빈",
-    "status": "OBSERVED_N2_RAD_AND_SRH_12QW_AUGER_PENDING",
+    "status": "OBSERVED_N2_ALL_THREE_RECOMBINATION_INTEGRALS_N6_PENDING",
     "targetProject": "CMP_BASELINE_2.0.0_V2",
     "deviceConfiguration": "V2.1 shelf removed, PolAct=0.5 (Lee/Claude report; active code unverified)",
     "previousTarget": "CMP_BASELINE_2.0.0_V2_Copy (superseded choice, prior historical task)",
@@ -127,6 +127,40 @@
       "twoChannelRadiativeFractionApprox": 0.9239828,
       "interpretation": "Two-channel quantity excludes Auger, leakage, other recombination paths; not a validated LED IQE.",
       "next": "Integrate AugerRecombination over exact same 12 QW regions and compare Total Domain; then n6."
+    },
+    "n2Auger12QwIntegration20261015": {
+      "status": "OBSERVED_USER_SVISUAL_12_REGION_INTEGRATION",
+      "field": "AugerRecombination",
+      "dataset": "n2_des",
+      "totalIntegralPerUmPerSec": 62656250000,
+      "totalDomainUm2": 0.02399999,
+      "qwSumsPerUmPerSec": [
+        71011.9054,
+        110285.9532,
+        3918102.779,
+        62652155300
+      ],
+      "qw4SharePercent": 99.9934573
+    },
+    "n2ThreeChannelQwResult20261015": {
+      "status": "DERIVED_FROM_THREE_OBSERVED_ROI_INTEGRALS",
+      "rad": 152409900000,
+      "srh": 12538940000,
+      "auger": 62656250000,
+      "total": 227605090000,
+      "radiativePercent": 66.96243041,
+      "srhPercent": 5.50907715,
+      "augerPercent": 27.52849244,
+      "regionCount": 12,
+      "domainUm2": 0.02399999,
+      "qwSpecificRadiativePercent": [
+        7.7025,
+        8.9039,
+        25.7808,
+        67.0068
+      ],
+      "interpretation": "Model 3-channel QW radiative fraction; not independently validated physical IQE, EQE or matched-current Trap effect.",
+      "next": "In n6_des.tdr integrate same 12 QW regions in Radiative, srhRecombination, Auger, verify domain and final TDR bias; investigate QW4-heavy distribution and Auger."
     }
   },
   "leeClaudeBaselineV2Audit20261013": {

@@ -1,3 +1,7 @@
+## 2026-10-15 — 주수빈 n6 GUI dataset/ROI 재선택 필요
+- 새 Radiative 출력이 `n2_des`, Clean+Dmg 8개 2D ROI, Domain=0.02279999um², Total=1.447895e11로 나타나 n6 결과가 아님. 기존 n2 12ROI와의 차이≈Edge 4ROI 합.
+- 다음: n6_des 로드 및 현재 Dataset 선택 확인 → 12개 Clean/Edge/Dmg QW1..4 적분, Total Domain 약 0.02399999um² 필수 확인. 기존 n2 3채널 결과 유지, n6 신규 측정 없음.
+
 ## 2026-10-15 — 주수빈 n2 3채널 확보 → n6 동일 QW 적분
 - OBSERVED n2 12 QW ROIs 동일 Domain 2.399999e-02 um²: Radiative 1.524099e11, SRH 1.253894e10, Auger 6.265625e10 s^-1 um^-1. Derived modeled 3-channel radiative share=66.96243%, SRH 5.50908%, Auger 27.52849%.
 - **NEXT:** n6_des.tdr 열기 → 실제 12개의 Clean/Edge/Dmg QW1..4와 3개 재결합 필드 확인 → n6 Rad, srhRecombination, Auger 적분 결과 전체 및 Domain(0.02399999 um²) 확보. n2/n6 동일전압 3.6V 전류가 달라 matched-current IQE 개선/손실 효과로 단정하지 않는다.

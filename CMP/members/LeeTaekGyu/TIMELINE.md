@@ -1,3 +1,9 @@
+## 2026-10-15 — 이택규 V2.1 현재 SDE 실제 소스 RS mesh wrapper 확인 (OBSERVED SERVER SOURCE FRAGMENT)
+- 사용자 학교 서버 실제 터미널: `cd /user/semi/semi437/CMP_BASELINE_2.0.0_V2`; `grep -n -A 8 -B 2 -E 'define-refinement-size|define-refinement-function|BulkFac|MaxLenInt' sde_dvs.cmd`.
+- Source L31–33: `(define (P lat dep z) (position dep lat z))`; `(define (RS name mxl mxd mnl mnd) (sdedr:define-refinement-size name mxd mxl mnd mnl))`. RS는 순서상 lateral/depth 인수를 SDE x=depth/y=lateral로 바꾸는 wrapper. L37: `(define Wshelf 0.0)` 및 V2.1 shelf removed 주석 직접 확인.
+- **근거의 한계:** 위 grep은 직접 `sdedr:define-refinement-size` 호출인 wrapper 정의만 출력하므로 실제 `(RS ...)` 호출의 Global/MQW/EBL/sidewall 최대·최소 mesh 숫자는 미확인. 과거 FAST_C1 Global 0.05/0.10 um 및 BulkFac1.5를 현 V2.1에 적용했다고 주장하지 않는다. 개별 size 및 V2.1 mesh elements/points는 현재 미확인.
+- 다음 READ ONLY: 현 경로에서 `grep -n -E '\\(RS[[:space:]]' sde_dvs.cmd` 실행해 실제 영역별 수치를 채집; 각 RS 인수 maxLat/maxDep/minLat/minDep를 올바르게 변환한 후 기존 FAST_C1과 비교. SDE 코드/시뮬레이션 무수정.
+
 ## 2026-10-15 — 이택규/Claude Baseline V2.1 shelf 제거 3.6V 도달 보고 (USER-REPORTED RUN; GPT 미검증)
 - Claude의 학교 서버 실행 보고: `CMP_BASELINE_2.0.0_V2`에 V2.1 `Wshelf=0`, shelf region 및 바닥 cathode 제거, SDE 재실행, PolAct=0.5, 기본 solver(Iterations20, NotDamped50, PARDISO 없음). n2(NtSide=0)와 n6(NtSide=1e18)가 모두 **3.600V** 목표 도달. `I_total`은 n2=3.647e-08, n6=9.220e-09 A/µm; half mesa 2µm 기준 조건부 J=1.8235, 0.4610 A/cm². `didn't converge` 출력 각각 0회/1회.
 - shelf 유지 `CMP_BASELINE_2.0.0_V2_Copy` + PolAct=0 대조군은 n2 2.069V, n6 2.036V에 정체. 분극 비활성화만으로 정체 미해결. shelf 제거와 cathode 경계조건이 함께 변해 모서리 단독 원인은 확정할 수 없음.

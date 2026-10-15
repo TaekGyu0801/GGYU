@@ -1,3 +1,9 @@
+## 2026-10-15 — 주수빈 V2.1 n2 SVisual 공간 데이터 오픈 및 QW 영역 최초 확인 (OBSERVED SCREENSHOT)
+- 사용자 업로드 Sentaurus Visual T-2022.03 스크린샷: 상단 창 제목에 `/user/semi/semi437/CMP_BASELINE_2.0.0_V2`, 플롯 타이틀 `n2_des`가 표시. `Regions` 패널에서 `Clean_QW1`~`Clean_QW4`와 `Clean_EBL` 영역이 보임. `Scalars` 패널에서 `AugerRecombination` 필드 존재 확인, 현재 체크된 표시는 `DopingConcentration`임.
+- SVisual 하단 표시 Elements=129404, Points=62529. 이를 바탕으로 표시 데이터셋의 메쉬 카운트 관찰 (이 수치가 향후 다른 조건도 같다는 뜻 아님).
+- **한계:** `DmgL_QW1~4` 존재 여부와 Radiative/SRH 필드명은 패널 스크롤 위치 때문에 미확인, TDR 최종 바이어스/재결합 적분량 역시 미확인. 계산 완료와 파일 존재는 앞선 터미널 출력으로 별도 확인했으나 현 이미지 자체에 3.6V 표시 없음.
+- 다음: Region 목록을 위로 스크롤해 DmgL QW 확인, Scalars에서 Radiative와 SRH 필드 확인, 동일한 QW ROI 선정 및 SVisual Field Integration; 원본 코드 및 실행 변경 없음.
+
 ## 2026-10-15 — 주수빈 V2.1 n2/n6 3.6V 목표 도달 및 결과 파일 직접 확인 (OBSERVED USER TERMINAL)
 - 근거: 주수빈이 2026-10-15 실제 학교 서버에서 복사한 읽기 전용 출력. 경로 `/user/semi/semi437/CMP_BASELINE_2.0.0_V2`; `cat n2_des.sta n6_des.sta`에서 두 노드 모두 `done`; `grep '^ *anode' n2_des.log | tail -3` 마지막 (3.576V,2.424e-08), (3.592V,3.180e-08), (3.600V,3.647e-08); n6 동일 전압에서 7.077e-09 / 8.433e-09 / 9.220e-09 (SDevice raw terminal total-current log values).
 - 파일 존재: n2_des.plt 293K, n2_des.tdr 21M (Oct14 15:44); n6_des.plt 295K, n6_des.tdr 23M (Oct14 17:43). 출력 시점 및 최종 전압 기록은 사용자가 직접 제시한 실제 파일/로그 텍스트로 **OBSERVED**. 이는 종전의 Claude 단독 RUN 전사 근거를 강화함.

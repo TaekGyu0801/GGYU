@@ -1,3 +1,7 @@
+## 2026-10-15 — 주수빈 n2 Radiative 필드 표시 확인, 적분이 다음
+- SVisual `n2_des`에서 `RadiativeRecombination` 필드 활성화 및 최대 3.07538e25 cm^-3 s^-1 표시 관찰. 이는 공간 국소값이며 QW 재결합 총합 아님.
+- 다음 SVisual **Field Integration** → Region/Material 탭에서 실제 확인되는 Clean_QW1..4/Edge_QW1..4/Dmg_QW1..4만 선택하고 Start Integration. 수치 Total Integral과 Domain 보존. 전체 구조/재료 기본 적분을 QW 적분으로 잘못 해석하지 않기. 이후 SRH/Auger 동일 ROI, n6에서도 반복.
+
 ## 2026-10-15 — 주수빈 V2.1 MQW ROI 이름 생성 코드 확인 완료 (OBSERVED)
 - 실 서버 SDE grep: `QW1..4`, 3nm 각 well, `Wdmg=0.005µm`, `Wedge=@Wedge@`, `Edge_ + name`, `Dmg_ + name`을 확인. Clean/Edge/Dmg × 4 QW = 12 ROI 예상. 기존 exact-name grep no matches는 string-append 동적 명명 때문.
 - 다음: SVisual Regions에서 실제 12개를 확인, 각 field Radiative/SRH/Auger가 존재하면 동일한 12 QW ROI로 적분. barrier/EBL/interface 선택 금지. n2/n6 동일 기준 유지, TDR final bias 검증은 별도.

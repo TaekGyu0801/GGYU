@@ -1,3 +1,9 @@
+## 2026-10-15 — V2.1 n2/n6 3.6V 실행 완료 직접 터미널 확인 (OBSERVED, 물리 검증 계속 UNRESOLVED)
+- 근거: 주수빈이 2026-10-15 실제 학교 서버에서 복사한 읽기 전용 출력. 경로 `/user/semi/semi437/CMP_BASELINE_2.0.0_V2`; `cat n2_des.sta n6_des.sta`에서 두 노드 모두 `done`; `grep '^ *anode' n2_des.log | tail -3` 마지막 (3.576V,2.424e-08), (3.592V,3.180e-08), (3.600V,3.647e-08); n6 동일 전압에서 7.077e-09 / 8.433e-09 / 9.220e-09 (SDevice raw terminal total-current log values).
+- 파일 존재: n2_des.plt 293K, n2_des.tdr 21M (Oct14 15:44); n6_des.plt 295K, n6_des.tdr 23M (Oct14 17:43). 출력 시점 및 최종 전압 기록은 사용자가 직접 제시한 실제 파일/로그 텍스트로 **OBSERVED**. 이는 종전의 Claude 단독 RUN 전사 근거를 강화함.
+- 동일 3.6V n6/n2 raw terminal current ratio = 9.220e-09/3.647e-08≈0.2528. 진정한 QW 주입/효율/트랩 효과 원인, 2D A/µm/AreaFactor 정확한 설정, TDR가 목표 3.6V 최종 저장본인지, 활성 코드 Wshelf·PolAct·접촉 설정은 아직 **UNRESOLVED**.
+- 원본 소스/실행 변경 없음. 다음은 TDR 저장 시점·활성 덱 정의와 SVisual ROI·물리 필드 확인 후 QW별 Radiative/SRH/Auger 적분; 단일 전압에서 IQE causality 단정 금지.
+
 ## 2026-10-15 — Baseline V2.1 working structure 3.6V endpoint (USER-REPORTED RUN; physical baseline UNVALIDATED)
 - **최신 사용자 전달 Claude 서버 실행**: `CMP_BASELINE_2.0.0_V2`에서 shelf 제거(`Wshelf=0`), shelf region·바닥 cathode 제거, PolAct=0.5, 기본 solver(Iterations20/NotDamped50, PARDISO 없음)로 n2 NtSide=0 및 n6 NtSide=1e18 모두 **3.600V 도달**. 조건부 half-width 2µm 기준 `I_total`=3.647e-08/9.220e-09 A/µm, J=1.8235/0.4610 A/cm², `didn't converge` 0/1회. 수치 출처는 Claude 보고이며 **GPT에서 서버 원본 로그 미검증**.
 - **대조:** shelf 유지+PolAct=0 `CMP_BASELINE_2.0.0_V2_Copy`는 n2/n6 2.069/2.036V에서 정체. 분극 제거 단독 해결 가설은 지지되지 않음; shelf 제거와 cathode 경계조건 변경을 하나씩 격리한 인과 실험은 아님. 구체적 수치 불안정 원인 미확인.

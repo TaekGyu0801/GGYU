@@ -1,3 +1,10 @@
+## 2026-10-15 — 주수빈 V2.1 physical validation intake (PROPOSED, no fresh TCAD result)
+- **작업자/AI:** 주수빈 / ChatGPT. 기존 V2_Copy 수렴 진단을 우선 진행하겠다는 선택에서 전환하여, 이택규/Claude 보고의 `CMP_BASELINE_2.0.0_V2` (실제 구조 V2.1) n2(NtSide0)/n6(NtSide1e18) **전류·MQW 재결합·IQE 검증**을 맡음.
+- **현재 근거/한계:** V2.1 3.6V 도달 수치는 이택규/Claude 사용자 전달 보고만 존재하며 주수빈 현 세션에서 서버 로그/실제 최종 TDR 아직 확인하지 않음. 코드/물성/결과를 변경하지 않음.
+- **첫 점검 요청:** `/user/semi/semi437/CMP_BASELINE_2.0.0_V2`에서 n2/n6 .tdr/.plt, *.sta 확인 후 `grep '^[[:space:]]*anode'` 마지막 행 확보. 사용자 명령 실행 출력 대기. n2/n6 마지막 bias 3.6V, TDR final bias 확인 후 동일 QW region에 SVisual Rad/SRH/Auger Field Integration.
+- **금지:** 기존 successful run 덮어쓰기, V2_Copy와 V2.1 code/물리 가정 섞기, 다른 전류에서 나온 Radiative/SRH/Auger 비율을 matched-current trap 효과나 measured IQE로 지칭하기.
+- **담당 경계:** 이택규 구조/solver 담당은 ChatGPT의 추천 분업일 뿐 이택규가 수락한 사실이나 현재 작업 중임을 입증하지 않음.
+
 ## 2026-10-15 — HANDOFF: 이택규 Claude V2.1 shelf 제거 3.6V 도달 (USER-REPORTED; original server logs NOT VERIFIED BY GPT)
 - **작업자/AI:** 이택규, 서버 실험 보고 Claude → GPT가 전달 내용을 GitHub에 기록.
 - **최신 진전:** `CMP_BASELINE_2.0.0_V2`를 V2.1(`Wshelf=0`, shelf 및 shelf 하단 cathode 제거, PolAct=0.5, 기본 solver 20/50 non-PARDISO)로 변경한 run에서 n2 NtSide0 **3.600V / 3.647e-08 A/µm** (조건부 J 1.8235 A/cm²), n6 NtSide1e18 **3.600V / 9.220e-09 A/µm** (J 0.4610 A/cm²) 도달 보고. shelf 유지+PolAct0 `CMP_BASELINE_2.0.0_V2_Copy`는 2.069/2.036V 정체.

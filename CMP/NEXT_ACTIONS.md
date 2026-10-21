@@ -1,3 +1,7 @@
+## 2026-10-21 n2 Radiative 화면 확인
+- 사용자 SVisual n2_des RadiativeRecombination 측벽 근처 MQW 화면 확보. QW4 강한 띠는 기존 PLT n2 QW4 Rad 99.9688% 우세와 정성 일치; 이미지 색상만으로 전역 분포/정량 비율/최종 바이어스 확증 불가.
+- NEXT: n6_end_des.tdr에서 같은 범위/스칼라 확인. Auto legend가 다르면 색의 절대 강도 직접 비교 금지. 그후 current normalization 확인 및 Full/Half.
+
 ## 2026-10-21 — Final TDR and SAV files confirmed; next MQW map, then Full comparison
 - 실제 `find . -maxdepth 1 -name '*end*' -print` 결과 n2/n6 `end_des.tdr`, `end_des.sav`, `end_circuit_des.sav` 모두 존재. File existence only; restart and TDR contents not yet independently opened.
 - 이미 두 condition PLT at 3.600V, terminal charge balance and whole-device recombination closure available. Do not rerun Half.

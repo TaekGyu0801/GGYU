@@ -1,3 +1,8 @@
+## 2026-10-21 — V2.1 DF-ISE PLT numerical values exist and multiline wrapping confirmed (OBSERVED)
+- Worker: 이택규. Actual school-server output `sed -n '45,58p' n2_des.plt` shows end of `functions` block, `Data {` at line 52, followed by full-precision scientific-notation numerical samples beginning from zero. `tail -n 5 n2_des.plt | cut -c1-180` shows numeric data continues to closing `}` without separate row labels; values wrap across lines. Both n2/n6 Data start at line52 (confirmed earlier).
+- **Interpretation:** `tail` numerical lines must not be treated as individual rows; need count of quoted names in `datasets=[...]` then group all data tokens accordingly. Header shows QW1..4 Clean/Edge/Dmg integrated Radiative/SRH/Auger. Actual final 3.6V current/region totals and units still unextracted/unverified.
+- NEXT READ ONLY: use local `python3` heredoc to parse quoted dataset labels, all floats within Data block, check complete row divisibility, select latest row nearest 3.6V, print electron/hole/displacement/total currents and all 12 QW region-integral sums for n2/n6; no modification to Sentaurus project. Do not label three-channel fraction calibrated device IQE or assume J normalization.
+
 ## 2026-10-21 — V2.1 n2/n6 DF-ISE PLT numeric data section 위치 확인 (OBSERVED METADATA)
 - 사용자 실 서버 출력 `sed -n '28,45p' n2_des.plt`: functions 배열에 Time/OuterVoltage/InnerVoltage/QuasiFermiPotential/DisplacementCurrent/eCurrent/hCurrent/TotalCurrent/Charge 그리고 RadiativeRecombination, srhRecombination, AugerRecombination, eGapStatesRecombination 항목 존재 (values 아직 미확인).
 - `grep -nE '^(Data|Values|Info|[[:space:]]*functions|[[:space:]]*units)' n2_des.plt n6_des.plt`: 양쪽 `Info {` line3, `functions = [` line28, `Data {` line52. numeric values/units/block layout 아직 미확인.

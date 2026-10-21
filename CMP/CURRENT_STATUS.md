@@ -1,3 +1,7 @@
+## 2026-10-21 — V2.1 n2/n6 parameter-file diff 동일 (OBSERVED; COMPARISON SETUP GATE PASSED)
+- `diff -u pp2_des.par pp6_des.par | head -n 80` output blank (user pasted terminal); preprocessed .par contents no differences observed. Existing full 76-line .cmd diff showed only 13 damaged-region SideTrap `Conc=0` n2/`Conc=1e18` n6 and node-specific input/output/checkpoint names; global model/solver/mesh and terminal target equal. Both n2/n6 logs confirm thermionic electron+hole Formula1.
+- Thus **input-control equivalence for ON/OFF comparison** supported. Cannot claim model calibration, current-density scaling, true 3.6V TDR bias, matched-current IQE or experimental validation. Next terminal I–V/current unit AreaFactor audit, n6 QW recombination. No code edits/run.
+
 ## 2026-10-21 — V2.1 n2/n6 command deck equivalence except Trap concentration (OBSERVED)
 - Full 76-line diff -u pp2_des.cmd pp6_des.cmd supplied. Both same Grid=n1_msh.tdr, physics/electrode/solver/bias settings, except 13 Dmg region SideTrap Conc=0 vs 1e18. Other changes are input par path, output filenames and checkpoint prefixes. Material .par equivalence pending.
 - n2 and n6 runtime logs both report Thermionic emission for electron/hole across heterointerfaces, Formula1 override. Physical carrier injection, AreaFactor and 2D current normalization remain unverified.

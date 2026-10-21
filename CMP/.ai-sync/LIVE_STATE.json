@@ -3322,7 +3322,7 @@
   },
   "leeV21ElectricalAudit20261021": {
     "worker": "이택규",
-    "status": "OBSERVED_N2_PLT_HEADER_NUMERIC_VALUES_PENDING",
+    "status": "PLT_NUMERIC_DATA_OBSERVED_EXTRACTION_PENDING",
     "source": "2026-10-21 user-pasted head -n 28 n2_des.plt and sed -n 1,28p pp2_des.cmd",
     "observedFields": [
       "anode/cathode OuterVoltage and InnerVoltage",
@@ -3342,7 +3342,13 @@
       "Thermionic InGaN/GaN AlGaN/GaN AlGaN/InGaN"
     ],
     "caveat": "These are metadata names, not proven values, units or valid IQE. AreaFactor/current scaling unresolved.",
-    "next": "Read n2/n6 .plt functions/units/Data layout; extract final-bias currents and QW rad/srh/auger integrated terms without new simulation.",
-    "tcadCodeChanged": false
+    "next": "Read-only Python extraction of n2/n6 final 3.6V terminal currents and all QW1-4 Clean/Edge/Dmg Rad/SRH/Auger integrals; inspect current units/AreaFactor before J or IQE assertions",
+    "tcadCodeChanged": false,
+    "observedDataLayout": {
+      "dataStartsLine": 52,
+      "format": "scientific notation floats wrapped across lines; multi-column rows must be recovered from dataset name count",
+      "n2NumericTokensSeen": true,
+      "n6DataBlockPreviouslySeen": true
+    }
   }
 }

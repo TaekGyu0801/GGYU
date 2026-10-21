@@ -1,3 +1,7 @@
+## 2026-10-21 — 이택규 V2.1 n2 Thermionic runtime 확인 (OBSERVED)
+- n2_des.log 실제 `With Thermionic Emission at heterointerfaces for electrons and holes` (662/671/680), `ThermionicEmission: Formula = 1, instead of: 0 [1]` (1784/1790/1796) 확인. `pp2_des.cmd` vs `pp6_des.cmd` unified diff 전체 76줄, 내용 아직 미제공이므로 실제 차이/동등성 미확인. `AreaFactor`는 출력 검색 매치 없음, current density normalization unresolved.
+- Next actual diff output and n6 runtime thermionic check, then AreaFactor current normalization. No mesh anomaly tunnel-vision; unchanged TCAD source/results.
+
 ## 2026-10-21 — 이택규 V2.1 n2/n6 SDevice preprocessed physics confirmed at keyword level (OBSERVED)
 - User-provided grep of pp2_des.cmd/pp6_des.cmd: both `Recombination(SRH Radiative Auger)`, incompletely ionized Mg/PDopant, `Piezoelectric_Polarization(strain activation=0.5)`. n2 all 13 Dmg SideTrap conc 0, n6 13 Dmg SideTrap conc 1e18; both EdgeTrap conc0 across 13 Edge regions. SideTrap EnergyMid0.75 fromValBand, EdgeTrap0.9 fromValBand, cross sections e/h 1e-15 in shown lines.
 - Only matched grep statements reviewed; full pp2/pp6 diff not yet run. No AreaFactor or ThermionicEmission keyword visible from this command; check effective model/defaults and terminal current normalization before physical conclusion.

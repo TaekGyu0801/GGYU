@@ -1,3 +1,8 @@
+## 2026-10-21 — 이택규 V2.1 3.6V 실제 n2/n6 단자전류·MQW 재결합 추출
+- OBSERVED n2 Ianode=3.64728525e-08 and n6 Ianode=9.21970771e-09 raw (same 3.600V, n6/n2=25.28%), respective cathode currents negative identical magnitude and displacement 0.
+- QW1..4 Clean/Edge/Dmg PLT integrals: n2 (Rad1.52410078e23, SRH1.25388758e22, Aug6.26565608e22); n6 (Rad2.55545394e22, SRH4.31092452e21, Aug7.83986116e21) raw. Radiative QW three-channel fractions 66.96% n2 and 67.77% n6 (NOT absolute physical IQE). n2 PLT raw ×1e-12 agrees with prior 주수빈 SVisual QW three-channel integrals.
+- q×(QW3channel raw)×1e-12 / I gives n2~99.98%, n6~65.52% under assumed normalization; residual n6 ~34.48% unresolved pending trap/whole-device integrated recombination. Do not assert mechanism. No run/edits.
+
 ## 2026-10-21 — 이택규 V2.1 n2/n6 .par 일치 확인 (OBSERVED)
 - 실제 서버 `diff -u pp2_des.par pp6_des.par | head -n 80` 출력 없음. 기존 동일 `n1_msh.tdr`/Solver/Physics, SideTrap OFF0/ON1e18 차이를 보이는 .cmd 전체 diff 결과와 합쳐, 현재 NtSide OFF/ON의 입력 split 일관성 검토를 통과. 물성 검증 완료/실제 IQE 검증 완료 의미 아님.
 - 다음은 전류 정규화, 실제 I-V, QW n6 integral 확인. 소스 및 시뮬레이션 변경 없음.

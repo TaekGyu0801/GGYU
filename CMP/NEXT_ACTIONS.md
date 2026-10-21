@@ -1,3 +1,7 @@
+## 2026-10-21 — n2/n6 full .cmd+parameter diff gate PASS; move to I–V/units
+- OBSERVED: `diff -u pp2_des.par pp6_des.par | head -n 80` no output, supporting identical preprocessed .par. Combined earlier 76-line .cmd diff indicates controlled 13 Dmg SideTrap OFF vs ON, with only files/prefixes otherwise changed.
+- NEXT concise READ ONLY: inspect `n2_des.plt` dataset metadata/current units and active SDevice File/Electrode/AreaFactor context; verify n2/n6 accepted 3.6V currents and 2D width normalization, assess conduction/displacement where available, then n6 QW integrals. Do not repeat basic trap diff or overfocus mesh short edge. Full after Half validated.
+
 ## 2026-10-21 — n2/n6 full .cmd diff done, next parameter diff
 - OBSERVED n2 versus n6 preprocessed SDevice .cmd differences limited to Dmg SideTrap concentration and node-specific file names/references. Both runtime logs confirm Thermionic electron/hole Formula1.
 - NEXT READ ONLY: diff -u pp2_des.par pp6_des.par | head -n 80; check .par differences before concluding pure trap split. Then current scaling AreaFactor, saved final TDR bias, n6 QW results.

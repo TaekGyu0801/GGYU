@@ -1,3 +1,7 @@
+## 2026-10-21 — n2/n6 full .cmd diff done, next parameter diff
+- OBSERVED n2 versus n6 preprocessed SDevice .cmd differences limited to Dmg SideTrap concentration and node-specific file names/references. Both runtime logs confirm Thermionic electron/hole Formula1.
+- NEXT READ ONLY: diff -u pp2_des.par pp6_des.par | head -n 80; check .par differences before concluding pure trap split. Then current scaling AreaFactor, saved final TDR bias, n6 QW results.
+
 ## 2026-10-21 — 다음: n2/n6 실제 diff hunk와 n6 thermionic 실행 확인
 - OBSERVED: n2_des.log에서 electron/hole heterointerface thermionic emission, Formula1 실적용 출력. pp2/pp6 unified diff 총 76줄은 차이 개수 아님.
 - READ ONLY 즉시: `diff -u pp2_des.cmd pp6_des.cmd | head -n 110`; `grep -niE 'Thermionic|AreaFactor' n6_des.log | head -n 25`. 확인 후 ON/OFF 물리 조건 동질성 판정과 2D AreaFactor/current units 검증 진행. 기존 소자 무수정.

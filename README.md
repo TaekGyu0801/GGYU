@@ -35,3 +35,12 @@ Contact
 
 ## CMP project
 이 저장소의 `CMP/`는 공동 연구용 active workspace이며, AI 간 인수인계 문서와 TCAD current code를 함께 관리한다.
+
+## Awards & Honors
+
+| 연도 | 대회 | 수상 | 프로젝트 | 참여 |
+|---|---|---|---|---|
+| 2026 | 차세대반도체 경진대회 | **최우수상** | TCAID · TCAD AI Manager | 팀 공동 수상 |
+| 2026 | 차세대반도체 경진대회 | **장려상** | TLMG VCAT Research | 팀 공동 수상 |
+
+[수상 상세 기록](Awards-Presentations/README.md)

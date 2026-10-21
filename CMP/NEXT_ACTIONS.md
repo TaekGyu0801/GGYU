@@ -1,3 +1,8 @@
+## 2026-10-21 — 이택규 V2.1 effective SDevice n2/n6 비교 다음 단계
+- OBSERVED `pp2_des.cmd`, `pp6_des.cmd`: n2 Dmg SideTrap Conc0 vs n6 Conc1e18 across 13 Dmg regions; EdgeTrap Conc0 both; global recombination SRH/Radiative/Auger, Mg+PDopant incomplete ionization and polarization activation0.5 shared.
+- NEXT concise READ ONLY: `diff -u pp2_des.cmd pp6_des.cmd | head -n 100` to audit other meaningful differences; `sed -n '1,27p;145,215p' pp2_des.cmd` plus selected runtime `n2_des.log` model lines as needed to confirm thermionic treatment, current normalization / AreaFactor and solver. Missing AreaFactor/ThermionicEmission in keyword grep does not by itself prove wrong physics. Check I-V/3.6V end and matched-current comparisons later.
+- User emphasis: do not fixate on single mesh angle, advance broad validation, Half first, then independent Full symmetric reference.
+
 ## 2026-10-21 — 폭넓은 Gate 검증 우선, Mesh 이상치 단독 추적 보류
 - OBSERVED `n1_msh.log` grep warning/error/quality 검색에서 경고/오류 텍스트는 추가로 나오지 않고 minAngle0.0167024°, minEdge1.95312e-05um 등 기존 품질 통계만 나옴. 품질 이상치 원인과 수송 정확도 영향은 UNRESOLVED.
 - 사용자 요청: 한 문제에 몰입하지 말고 빠르고 정확하게 전반적 물리/전기 검증으로 진행.

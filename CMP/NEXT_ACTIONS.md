@@ -1,3 +1,8 @@
+## 2026-10-21 — 이택규 V2.1 n2/n6 실제 3.6V 전류/QW 3채널 확보, 마지막 Trap 적분 확인
+- 실제 PLT 추출: n2 anode 3.64728525e-08, n6 anode 9.21970771e-09 (3.6V, both balanced cathode, displacement0); QW raw Rad: n2 1.52410078e23 / n6 2.55545394e22, three-channel Rad percentages 66.9624 vs 67.7744. Under PLT*1e-12 vs SVisual and q conversion, 3-channel QW sum/I = 99.982% n2 vs 65.523% n6.
+- n6 ~34.477% residual NOT YET ASSIGNED TO TRAP: next read final-row `IntegrTrap_all eGapStatesRecombination` and whole-device `IntegrRad_all`, `IntegrSRH_all`, `IntegrAug_all`, and verify against current balance/units.
+- Read-only extraction, then assess physical interpretation and AreaFactor. Preserve Half run; professor Full/Half after Half audit.
+
 ## 2026-10-21 — V2.1: Stop header probing; parse existing n2/n6 PLT numeric data
 - `n2_des.plt` Data block at line52 contains numerical scientific-notation values wrapped across lines; `tail` lines are NOT independently interpretable physical rows. n2/n6 datasets list already includes both contacts + full 4 QW Clean/Edge/Dmg radiative/SRH/Auger integrals.
 - Immediate read-only extraction with Python from both DF-ISE files: validate numeric tokens divisible by number of dataset names, choose final saved 3.6V row, report anode/cathode electron/hole/displacement/total currents, sum QW Radiative/SRH/Auger by region and by QW; compare at equal voltage and avoid absolute IQE/J claims until units/AreaFactor and other physical checks are resolved. No new run.

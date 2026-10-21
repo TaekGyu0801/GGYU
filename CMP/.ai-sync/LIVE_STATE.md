@@ -1,3 +1,8 @@
+## 2026-10-21 — 이택규 n2/n6 final 3.6V PLT extraction OBSERVED
+- Both runs n2/6 reached exactly 3.600V; anode/cathode totals balanced, displacement=0. n2 raw I3.64728525e−08, n6 I9.21970771e−09; ratio 25.28%.
+- QW total (raw PLT) n2 Rad1.52410078e23 SRH1.25388758e22 Aug6.26565608e22, n6 Rad2.55545394e22 SRH4.31092452e21 Aug7.83986116e21. QW three-channel Radiative fractions 66.96 vs 67.77%, though n6 radiative rate only 16.77% of n2. PLT ×1e−12 reproduces prior SVisual integrated magnitudes; conversion/A·area factor still conditional. q×(QW 3channel)×1e−12/I n2~0.99982, n6~0.65523, leaving n6 34.48% residual for trap/device-wide channels/current pathways; do NOT attribute until measured.
+- Python NameError 'PY' after complete output is harmless. Next inspect PLT IntegrTrap_all + global Rad/SRH/Aug; no code changes/new runs; Full after Half.
+
 ## 2026-10-21 — 이택규 n2 PLT numeric block wrapping verified (OBSERVED)
 - `sed -n '45,58p' n2_des.plt` shows scientific-notation floats in `Data {` starting line52; closing data block is visible at file tail. Values line-wrap; must parse by number of dataset labels rather than interpreting a tail line as one point. Numeric QW/terminal values have not yet been mapped or validated.
 - Next: one-pass read-only extraction of existing n2/n6 PLT currents and 12-region QW Rad/SRH/Auger integrals for final target 3.6V, checking row shape/units and preserving original TCAD runs; avoid repeated header inspection.

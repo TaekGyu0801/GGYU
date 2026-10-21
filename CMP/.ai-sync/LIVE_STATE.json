@@ -3306,21 +3306,18 @@
   },
   "leeV21PhysicsAudit20261021": {
     "worker": "이택규",
-    "status": "COMMAND_DECK_DIFF_VERIFIED_PARAMETER_FILE_DIFF_PENDING",
-    "source": "User-supplied 76-line diff pp2_des.cmd versus pp6_des.cmd, n2_des.log and n6_des.log thermionic excerpts, 2026-10-21",
-    "findings": [
-      "Both node command decks use n1_msh.tdr and share electrode, global physics, solver, 3.6V ramp",
-      "All 13 Dmg SideTrap concentration values differ: n2 0 vs n6 1e18 cm^-3",
-      "Other changes restricted to pp2/pp6 parameter path and n2/n6 output/checkpoint filenames",
-      "Both runtimes report thermionic emission electron/hole at heterointerfaces, Formula=1"
+    "status": "N2_N6_DECK_AND_PARITY_PASS_J_NORMALIZATION_PENDING",
+    "proof": "User-pasted diff -u pp2_des.par pp6_des.par | head -n 80 produced no output; full 76-line pp2 vs pp6 command diff was seen earlier",
+    "preprocessedParamsEquivalent": true,
+    "commandDifferences": "SideTrap Conc=0 in 13 Dmg regions on n2 vs 1e18 in n6; other diffs only node-specific filenames and .par reference; same n1_msh.tdr",
+    "runtimeThermionic": "n2 and n6 logs both indicate electron+hole thermionic emission, Formula 1",
+    "stillOpen": [
+      "AreaFactor 2D current normalization",
+      "actual current and TDR bias consistency",
+      "QW n6 triple-integral and matched-current comparison",
+      "physical validation and mesh convergence"
     ],
-    "unresolved": [
-      "pp2_des.par and pp6_des.par equality",
-      "Effective current units and AreaFactor",
-      "Physical transport calibration, final TDR bias",
-      "n6 QW three-channel integrals"
-    ],
-    "next": "diff -u pp2_des.par pp6_des.par | head -n 80",
+    "next": "Read .plt datasets/current units and SDevice File/Electrode to audit I-V before Full/Half comparison.",
     "tcadCodeChanged": false
   }
 }

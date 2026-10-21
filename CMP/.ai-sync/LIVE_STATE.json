@@ -3224,5 +3224,30 @@
       "S3 PolAct1 control conditional",
       "A/B pilot conditional"
     ]
+  },
+  "leeV21MeshAudit20261021": {
+    "worker": "이택규",
+    "status": "OBSERVED_SERVER_SOURCE_ONLY",
+    "source": "User-pasted sde_dvs.cmd lines 25-55, 170-270, 2026-10-21",
+    "device": "CMP_BASELINE_2.0.0_V2 (V2.1, shelf removed)",
+    "geometry": {
+      "fullMesaUm": 4,
+      "halfMesaUm": 2,
+      "sidewallDamageUm": 0.005,
+      "Wshelf": 0,
+      "Cath": 0
+    },
+    "meshSettingsMaxUm": {
+      "globalLateral": 0.25,
+      "globalDepth": 0.25,
+      "qwDepth": 0.0003,
+      "activeDepth": 0.0015,
+      "interfaceDepth": 0.0002,
+      "damagedLateral": 0.0005,
+      "cleanEdgeBoundaryLateral": 0.0008
+    },
+    "caution": "Nominal max mesh sizing is not actual element count, quality or convergence. R_sh remains in code although Wshelf=0. SWB Wedge/Bspan actual values unresolved.",
+    "next": "Read n1_msh.log; inspect pp1_dvs.cmd macros, then SVisual n1_msh.tdr and contacts, evaluate need for mesh convergence.",
+    "tcadCodeChanged": false
   }
 }

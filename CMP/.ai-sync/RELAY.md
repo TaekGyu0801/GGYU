@@ -1,3 +1,10 @@
+## 2026-10-21 — 이택규 V2.1 mesh minimum angle/edge handoff (OBSERVED LOG, UNRESOLVED)
+- Worker 이택규, AI ChatGPT. Actual SDE code and mesh log user supplied, original Half must be preserved.
+- Geometry: SDE depth x=0..4.288um, lateral y=0..2um; pCap 20nm, pGaN 120nm, EBL26nm, 5 barriers22nm, 4 wells3nm, nMesa0.5um, nBulk3.5um. Wedge0.1um, Wshelf0, Bspan0, Cath0. Top anode and bottom cathode in SDE.
+- Mesh log 62529 points,123917 elements, 42 regions vs 40 nMats (meaning unknown), minAngle 0.0167024deg and min edgeLength 1.95312e-05um near (depth0.0041875,lateral1.89501)um, corresponding to near Clean/Edge boundary Xe1.895um. Mesh saved successfully. Do not claim convergence error or cause from this alone.
+- NEXT FIRST: grep full n1_msh.log warnings, inspect SVisual n1_msh.tdr at suspicious location; validate mesh quality, geometry, contacts and decide whether isolated refinement test needed.
+- User explicitly deferred Full/Half production until current Half verification completes; do not create/launch Full ahead of that decision. No source or simulations changed.
+
 ## 2026-10-21 — 이택규 교수 피드백 반영: V2.1 Full/Half 근거 확보 필요 (HANDOFF, PROPOSED)
 - 작업자: 이택규; AI: ChatGPT. 사용자 보고 교수 피드백: 2um half model을 학술 발표/논문에 쓰려면 4um full reference와 정량 성능 동등성 검증 필요.
 - 확인된 근거: 활성 `pp1_dvs.cmd` Wshelf=0, Wedge=0.1um, Bspan=0, Cath=0, `n1_msh.tdr` 2.0MB 생성 2026-10-14. 앞선 실제 `sde_dvs.cmd`로 x=depth/y=lateral 및 RS ref-size 확인. `V2_Copy`는 구 shelf 포함 half로 Full이 아님.

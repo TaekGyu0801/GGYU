@@ -1,3 +1,8 @@
+## 2026-10-21 — 이택규 V2.1 half generated mesh quality flag; Full after verification (OBSERVED)
+- SDE physical region/contacts: full mesa nominal 4um, implemented half lateral 2um, depth4.288um; QWs 4×3nm; sidewall damaged width5nm; top pCap anode, bottom nGaN cathode. `n1_msh.log` reports successful mesh saved, 62529 points/123917 elements, 4.288×2um bbox, 8.576um² total domain.
+- Potential quality blocker (not confirmed solver error): minAngle 0.0167024deg and min edgeLength1.95312e-05um=0.0195312nm at (depth0.0041875,lateral1.89501)um, near computed Clean/Edge boundary Xe=1.895um. Examine SVisual local mesh/quality and warnings; source alone cannot prove mesh convergence. `42 regions`/nMats40 discrepancy observed but metadata semantics not resolved.
+- 이택규 instructed: finish Half check before launching Full comparator. Existing V2.1 runs untouched. Next inspect near reported sliver and mesh log warnings.
+
 ## 2026-10-21 — 이택규 Full/Half 검증 게이트 추가 + PP1 실제 값 확인 (USER-REPORTED PROFESSOR FEEDBACK, OBSERVED)
 - 교수가 절반 모델 활용 시 전체 4um Full과 2um Half 성능 재현성 비교를 요구했다고 이택규가 보고. 이는 실행/검증 완료가 아닌 **새 우선순위 게이트**. 기존 V2_Copy는 shelf 포함 half 소자이며 Full 아님.
 - 실제 서버 `pp1_dvs.cmd`: `Wshelf=0`, `Wedge=0.1` um, `Bspan=0`, `Cath=0`; `n1_msh.tdr` 약 2.0MB Oct14 13:43 존재. Element stats/quality, symmetry, Full 결과 미확인.

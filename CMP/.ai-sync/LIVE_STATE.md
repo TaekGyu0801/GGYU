@@ -1,3 +1,7 @@
+## 2026-10-21 — 이택규 V2.1 ON/OFF 물성 파일 동등성 확인 (OBSERVED)
+- User-shared terminal `diff -u pp2_des.par pp6_des.par | head -n 80` returned no differences. Combined full .cmd diff: same mesh/electrode/global physics/solver/3.6V sweeps, only SideTrap Conc0 versus 1e18 across 13 Dmg regions, with node-specific file naming. Input split consistency gate passed, but calibration, 2D current normalization, TDR bias, and matched-current IQE remain unresolved.
+- NEXT: inspect current .plt dataset metadata and current normalization; evaluate existing results first, then remaining QW checks. Original runs untouched; professor Full/Half comparison after Half verification.
+
 ## 2026-10-21 — 이택규 V2.1 n2/n6 command diff 검증 (OBSERVED)
 - Full 76-line unified .cmd diff: both identical mesh, electrode, global physics/solver/voltage ramp; 13 Dmg SideTrap OFF0/ON1e18 and node-specific file references/prefixes differ. .par contents NOT yet compared.
 - n2/n6 both show runtime Thermionic electron/hole Formula1; AreaFactor/2D current normalization unresolved. Next compare pp2/pp6 .par and electrical data, keeping Half unchanged before Full.

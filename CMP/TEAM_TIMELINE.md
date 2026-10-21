@@ -1,3 +1,7 @@
+## 2026-10-21 — 이택규 V2.1 n2/n6 .par 일치 확인 (OBSERVED)
+- 실제 서버 `diff -u pp2_des.par pp6_des.par | head -n 80` 출력 없음. 기존 동일 `n1_msh.tdr`/Solver/Physics, SideTrap OFF0/ON1e18 차이를 보이는 .cmd 전체 diff 결과와 합쳐, 현재 NtSide OFF/ON의 입력 split 일관성 검토를 통과. 물성 검증 완료/실제 IQE 검증 완료 의미 아님.
+- 다음은 전류 정규화, 실제 I-V, QW n6 integral 확인. 소스 및 시뮬레이션 변경 없음.
+
 ## 2026-10-21 — 이택규 V2.1 Half 생성 Mesh 로그 분석 및 교수 Full 검증 순서 조정
 - `sde_dvs.cmd` 확인: half 폭2um, depth4.288um, 4×3nm QW, 5nm damage, top anode/bottom cathode. `n1_msh.log`: 62529 points/123917 triangles, minAngle 0.0167024deg, min edge 1.95312e-05um at (depth0.0041875,lateral1.89501)um near Clean/Edge boundary, bbox 4.288×2um². Numeric mesh quality issue is **flagged**, not proven physics error.
 - User choice: finish existing V2.1 structure/mesh check first; subsequently prepare/run separate 4um Full comparison without changing original Half. No new simulation, code modification or confirmed mesh equivalence.

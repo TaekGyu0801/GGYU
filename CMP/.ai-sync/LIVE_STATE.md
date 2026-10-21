@@ -1,3 +1,7 @@
+## 2026-10-21 — V2.1 n2/n6 final TDR/SAV presence observed
+- User-provided `find . -maxdepth 1 -name '*end*' -print` listed both n2/n6 `end_des.tdr`, `end_des.sav`, `end_circuit_des.sav`; prior `ls cannot access 2` was malformed input, not missing output. Both PLT last points previously at 3.600V.
+- Existence confirmed, not content/Save-Load restart. Next SVisual QW4 radiative spatial profile review; current units/AreaFactor still unresolved and must not claim calibrated J. Full 4um reference after Half audit; original files untouched.
+
 ## 2026-10-21 — 이택규 OFF Trap baseline numerically negligible (OBSERVED PLT)
 - n2 `IntegrTrap_all eGapStatesRecombination` at 3.6V=1.17883032026416e6 raw; n6=1.98258247754075e22 raw, ratio 1.68e16. Under conditional q×1e−12 scaling n2 trap terminal-current-equivalent fraction ~5.18e−18 vs n6 ~34.4528%. n6 Rad/SRH/Auger/Trap whole-device accounting closes to ~99.99904% terminal. Supports intentional OFF/ON trap split actual effects, NOT unique current-suppression causality or validated absolute IQE.
 - Next current unit/AreaFactor and broad physical benchmark, then Full/Half after Half audit. No code/run changes.

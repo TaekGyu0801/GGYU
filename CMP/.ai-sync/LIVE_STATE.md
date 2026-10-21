@@ -1,3 +1,7 @@
+## 2026-10-21 — 이택규 V2.1 n2/n6 command diff 검증 (OBSERVED)
+- Full 76-line unified .cmd diff: both identical mesh, electrode, global physics/solver/voltage ramp; 13 Dmg SideTrap OFF0/ON1e18 and node-specific file references/prefixes differ. .par contents NOT yet compared.
+- n2/n6 both show runtime Thermionic electron/hole Formula1; AreaFactor/2D current normalization unresolved. Next compare pp2/pp6 .par and electrical data, keeping Half unchanged before Full.
+
 ## 2026-10-21 — 이택규 V2.1 n2 Thermionic runtime 확인 (OBSERVED)
 - n2_des.log 실제 `With Thermionic Emission at heterointerfaces for electrons and holes` (662/671/680), `ThermionicEmission: Formula = 1, instead of: 0 [1]` (1784/1790/1796) 확인. `pp2_des.cmd` vs `pp6_des.cmd` unified diff 전체 76줄, 내용 아직 미제공이므로 실제 차이/동등성 미확인. `AreaFactor`는 출력 검색 매치 없음, current density normalization unresolved.
 - Next actual diff output and n6 runtime thermionic check, then AreaFactor current normalization. No mesh anomaly tunnel-vision; unchanged TCAD source/results.

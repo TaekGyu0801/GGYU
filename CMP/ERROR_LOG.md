@@ -1,3 +1,8 @@
+## 2026-10-21 — V2.1 mesh-quality warning: extreme minimum triangle angle / short edge (OBSERVED LOG; ROOT CAUSE UNRESOLVED)
+- `CMP_BASELINE_2.0.0_V2/n1_msh.log` user-provided: mesh generation succeeded and n1_msh.tdr saved; minAngle=0.0167024 degrees, maxAngle=128.367 degrees, min edgeLength=1.95312e-05 um (0.0195312nm) near (xdepth=0.0041875um, ylateral=1.89501um). `Xe=1.895um` in active Wedge0.1um, locating anomalously short edge near pCap Clean/Edge transition.
+- Extremely narrow or nearly degenerate elements may cause conditioning/mesh-independence problems; this is **not a proven solver failure or exact origin of past convergence stalls**. No material/geometry/solver edits and no Full simulation.
+- Next check read-only actual mesh location and surrounding triangles in SVisual, any warnings in full mesh log, source/refinement overlap, and run controlled refinement only if warranted. Keep existing converged V2.1 outputs untouched.
+
 ## 2026-10-15 — V2 shelf 부근 Newton stall: V2.1 구조 변경으로 목표 도달 보고 (USER-REPORTED RUN, mechanism UNRESOLVED)
 - 기존 V2 shelf 보유 run은 2.0–2.3V 부근 정체. 이번 Claude 서버 결과 보고: shelf 제거+바닥 cathode 변경 V2.1(PolAct0.5) n2/n6 모두 3.6V 도달, `didn't converge` 0/1; shelf 유지+PolAct0 대조군은 2.069/2.036V 정체, 관련 카운트 17/23.
 - **해결 범위:** 보고된 V2.1 구성에서는 이전 stall이 재현되지 않음. PolAct0만으로 해결 불가. **정확한 수치 불안정 메커니즘(270도 코너, 표면 캐리어 상대오차, 필드/경계조건/메쉬)은 검증되지 않음**; shelf·접촉 경계가 함께 바뀐 다변수 구조 변경임. 기존 V2와 기존 CAL/POL50의 모든 수렴 문제가 일반적으로 해결된 것은 아님.

@@ -1,3 +1,7 @@
+## 2026-10-21 — 이택규 V2.1 Mesh 검증 다음 읽기 전용 단계
+- OBSERVED `sde_dvs.cmd`: QW depth max 0.3nm, sidewall damaged 5nm width에서 lateral max 0.5nm, `Wshelf=0`, `Cath=0`; window `R_sh` 남아 있음. Mesh sizing source 검토는 진행되었으나 generated mesh geometry·품질·수렴성 검증은 아님.
+- NEXT: `tail -n 35 n1_msh.log` 및 `grep -nE 'define Wedge|define Bspan|define Wshelf' pp1_dvs.cmd` (실제 syntax 맞는지 확인)로 생성 로그/활성 값 확인; 이후 SVisual `n1_msh.tdr`에서 QW/sidewall/mesa corner mesh와 contacts inspect. 동작 확인 이후에만 격리된 복사본에서 mesh-convergence test 결정. 원본 데크 무수정.
+
 ## 2026-10-15 — 주수빈 n6 GUI dataset/ROI 재선택 필요
 - 새 Radiative 출력이 `n2_des`, Clean+Dmg 8개 2D ROI, Domain=0.02279999um², Total=1.447895e11로 나타나 n6 결과가 아님. 기존 n2 12ROI와의 차이≈Edge 4ROI 합.
 - 다음: n6_des 로드 및 현재 Dataset 선택 확인 → 12개 Clean/Edge/Dmg QW1..4 적분, Total Domain 약 0.02399999um² 필수 확인. 기존 n2 3채널 결과 유지, n6 신규 측정 없음.

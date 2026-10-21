@@ -1,3 +1,8 @@
+## 2026-10-21 — 이택규 V2.1 n2/n6 active preprocessed physics/trap configuration (OBSERVED DECK; RUNTIME/UNIT GATE OPEN)
+- 실제 사용자 터미널 `pp2_des.cmd`/`pp6_des.cmd` grep output: Both explicitly include `Recombination(SRH Radiative Auger)`, Mg+PDopant incomplete ionization, `Piezoelectric_Polarization(strain activation=0.5)`, recombination/gap-state field outputs.
+- n2 `SideTrap` on all 13 Dmg regions (pCap, pGaN, EBL, B0..B4, QW1..4, nMesa) has Conc=0; n6 corresponding 13 regions Conc=1e18, identical displayed energy reference 0.75 from valence band and capture cross sections 1e-15. EdgeTrap in both conditions Conc=0 with 0.9 from valence band. Not a carbon implantation physical profile.
+- Full pp2/pp6 diff and SDevice runtime model summary still need audit; AreaFactor/ThermionicEmission absent from currently displayed keyword grep, **do not assume enabled or disabled**. Contact J normalization and actual QW transport physical calibration unresolved. Previous Half mesh outlier flagged but not current gate blocker. No edits/run.
+
 ## 2026-10-21 — 이택규 V2.1 actual geometry and generated mesh quality gate (OBSERVED/UNRESOLVED)
 - SDE confirms 2um half width, 4.288um vertical depth, 4×3nm QWs, 5nm damaged sidewall, top pCap anode and bottom nGaN cathode. Mesh generator successfully saved n1_msh.tdr: 62529 points, 123917 elements, bbox 4.288×2um², area 8.576um².
 - Mesh quality flagged: minAngle 0.0167024deg, min edgeLength 1.95312e-05um=0.0195312nm near (depth0.0041875,lateral1.89501)um; active `Xe=1.895um` (Clean/Edge). Need actual SVisual local triangle geometry/quality check; convergence error has **not** been established.

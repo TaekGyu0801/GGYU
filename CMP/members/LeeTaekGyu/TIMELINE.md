@@ -1,3 +1,11 @@
+## 2026-10-21 — V2.1 n2/n6 전처리 SDevice 물리 설정 직접 대조 (OBSERVED PASTED PP, RUNTIME UNVERIFIED)
+- 사용자 서버 실행 `grep -nEi 'AreaFactor|Piezoelectric_Polarization|IncompleteIonization|ThermionicEmission|Recombination|Traps|Conc[[:space:]]*=' pp2_des.cmd pp6_des.cmd | head -n 100` 결과 제공.
+- `pp2_des.cmd` n2와 `pp6_des.cmd` n6 모두 L19 `Recombination(SRH Radiative Auger)`, L20 `IncompleteIonization(Dopants="pMagnesiumActiveConcentration PDopantActiveConcentration")`, L21 `Piezoelectric_Polarization(strain activation=0.5)` 존재. L62-63에 SRH/Radiative/Auger/Total 및 e/hGapStatesRecombination plot 명령 관련 항목 존재.
+- n2 Dmg_pCap, Dmg_pGaN, Dmg_EBL, Dmg_B0, Dmg_QW1..4, Dmg_B1..4, Dmg_nMesa (총 13 Dmg regions) `SideTrap` Acceptor, `fromValBand EnergyMid=0.75`, `Conc=0`, `eXsection=hXsection=1e-15`. n6 대응 13개 Dmg regions에는 `Conc=1e18`; 다른 표시된 Trap 파라미터는 동일.
+- n2/n6 각각 Edge 13개 `EdgeTrap` `fromValBand EnergyMid=0.9` `Conc=0`, `eXsection=hXsection=1e-15`. Thus **shown effective settings** form NtSide OFF vs ON split, but full-deck `diff -u` pending to rule out other differences.
+- `AreaFactor` 및 `ThermionicEmission` string은 이 user-shared grep 결과에서 등장하지 않음; effective absence/default/runtime interpretation and 2D current normalization are **UNRESOLVED**. No basis yet to call model disabled/incorrect. `activation=0.5` is an active command value, NOT measured polarization sheet charge.
+- Next read-only: `diff -u pp2_des.cmd pp6_des.cmd` to isolate all changes, check beginning of Physics/File/Math and SDevice runtime model summary, AreaFactor normalization; later J-V, qR/I limitations, sidewall ON/OFF at matched current. No Sentaurus code/run changes.
+
 ## 2026-10-21 — V2.1 mesh-log warning 검색 완료, 과도한 단일 쟁점 추적 지양 (OBSERVED / RESEARCH PRIORITY)
 - 사용자 실제 명령: `grep -niE 'warning|error|bad|small|quality|angle|edgeLength' n1_msh.log | tail -n 40`. 출력은 `tri-grid quality`, `minAngle: 0.0167024`, `min edgeLength: 1.95312e-05 [near (0.0041875 1.89501)]`, `Smallest region: Dmg_QW3 Total volume: 1.5e-05` 4줄뿐임. 검색 패턴에 걸리는 별도 warning/error 문구 없음. 이는 모든 mesh 문제 부재 증명도 아니고 수치 정확도 통과도 아님.
 - 사용자의 명시적 검증 원칙: 한 가지 mesh 이상치에 과도하게 매달리지 말고 중요 항목 전체를 빠르고 정확하게 균형 있게 검증. Minimal angle/edge는 **미해결 관찰사항**으로 남기되 계산 영향 증거가 생기기 전에는 장시간 원인 규명을 우선하지 않음.

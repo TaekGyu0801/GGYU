@@ -1,3 +1,7 @@
+## 2026-10-21 — 이택규 V2.1 활성 SDE mesh-size 설정 확인 (OBSERVED SOURCE, MESH VERIFICATION PENDING)
+- 실제 서버 `CMP_BASELINE_2.0.0_V2/sde_dvs.cmd` 제공: x=depth/y=lateral; 4um full mesa, 2um half, damage width 5nm, `Wshelf=0`, `Cath=0`. Depth mesh maxima QW=0.3nm, EBL/MQW=1.5nm, interface=0.2nm; lateral damaged sidewall max 0.5nm, bulk default 250nm. `R_sh` shelf corner window remains active in source. Configuration only, actual elements/quality/convergence and preprocessed `Wedge/Bspan` not established.
+- Next (read-only): mesh build log, preprocessed SWB variables, SVisual actual n1_msh.tdr geometry/contacts. Existing V2.1 n2/n6 3.6V results unchanged, n6 recombination integral still pending.
+
 ## 2026-10-15 — 주수빈 n6 분석 중 n2/8 QW 적분 출력 확인 (OBSERVED; n6 PENDING)
 - 추가 SVisual Radiative 출력은 n6가 아닌 `n2_des`이며 Clean+Dmg 8개 QW ROI, Total 1.447895e11, Domain=0.02279999um². 과거 n2 12 ROI 1.524099e11과 차≈Edge_QW1..4 합. GUI Dataset과 Region selection을 수정한 뒤 n6 12ROI 측정 필요. n6 재결합 데이터는 아직 미확보.
 

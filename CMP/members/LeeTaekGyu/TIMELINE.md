@@ -1,3 +1,8 @@
+## 2026-10-21 — n2 QW Radiative SVisual 이미지 확인 (OBSERVED)
+- 사용자가 n2_des 화면에서 RadiativeRecombination 선택한 스크린샷 제공. 측벽 인접 lateral Y~1.2–2.0um, 깊이 X~0–0.45um 범위의 MQW 및 QW4 부근 강한 밴드가 보임. 이전 PLT QW4 방사 재결합 1.523625e23 / 전체 1.52410078e23 = 약 99.9688%와 정성적 일치.
+- 화면은 전체 폭이 아닌 측벽 근처 부분만 나타내고, 제목 n2_des만으로 최종 TDR 바이어스는 확인 불가. 물리적 모델 타당성 검증 완료 아님.
+- 다음: n6_end_des.tdr에서 동일 Radiative field/시야 확인 후 전류 단위와 Half/Full 비교 단계로 진행. 소자 변경/계산 재실행 없음.
+
 ## 2026-10-21 — V2.1 n2/n6 최종 TDR·체크포인트 파일 실제 존재 확인 (OBSERVED FILE LIST)
 - Worker 이택규가 학교 서버 `CMP_BASELINE_2.0.0_V2`에서 `find . -maxdepth 1 -name '*end*' -print` 결과를 제공. `n2_end_circuit_des.sav`, `n6_end_circuit_des.sav`, `n2_end_des.sav`, `n6_end_des.sav`, `n2_end_des.tdr`, `n6_end_des.tdr` 여섯 파일 존재.
 - 이전 `ls ... 2>/dev/null`에서 나왔던 `cannot access 2`는 터미널 리다이렉션 입력 문제였고 실제 파일 부재 증거가 아님. 파일 목록은 TDR/체크포인트 **존재**만 확인, TDR 내부 최종 바이어스 또는 정상 재시작(Save/Load)을 독립적으로 검증하지는 않음.

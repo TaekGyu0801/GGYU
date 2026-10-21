@@ -1,3 +1,7 @@
+## 2026-10-21 — 이택규 n2 PLT numeric block wrapping verified (OBSERVED)
+- `sed -n '45,58p' n2_des.plt` shows scientific-notation floats in `Data {` starting line52; closing data block is visible at file tail. Values line-wrap; must parse by number of dataset labels rather than interpreting a tail line as one point. Numeric QW/terminal values have not yet been mapped or validated.
+- Next: one-pass read-only extraction of existing n2/n6 PLT currents and 12-region QW Rad/SRH/Auger integrals for final target 3.6V, checking row shape/units and preserving original TCAD runs; avoid repeated header inspection.
+
 ## 2026-10-21 — 이택규 n2 .plt current/recombination fields found (OBSERVED HEADER, VALUES NOT YET CHECKED)
 - n2_des.plt DF-ISE header contains anode/cathode currents/voltages and Clean/Edge/Dmg region-wise IntegrRad, IntegrSRH, IntegrAug for all four QWs plus EBL and eGapStatesRecombination. pp2_des.cmd main Physics includes Fermi, radiative/SRH/Auger, Mg/PDopant incomplete ionization, strain polarization0.5, 3 heterointerface Thermionic blocks. n6 runtime repeats Thermionic enabled Formula1. pp2/pp6 .par files remain equal.
 - Next inspect .plt functions/units/values then programmatically recover matched final-bias current and summed QW channels n2 vs n6; actual IQE, unit normalization, physical calibration are not proven. Keep Half project intact, Full comparator later.

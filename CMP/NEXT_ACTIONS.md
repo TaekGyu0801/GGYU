@@ -1,3 +1,10 @@
+## 2026-10-21 — 우선순위 상향: 교수 피드백 Full(4um) vs Half(2um) 동등성 검증
+- REQUIREMENT USER-REPORTED: 논문/발표의 Half-domain 근거로 독립 Full-domain reference 필요; 현 `V2_Copy`는 Full이 아님.
+- OBSERVED `pp1_dvs.cmd`: Wshelf=0, Wedge=0.1um, Bspan=0, Cath=0. `n1_msh.tdr` 약 2.0MB 존재; mesh quality unknown.
+- FAST GATE 1 (read only): `sed -n '55,170p' sde_dvs.cmd`; `tail -n 35 n1_msh.log`. Symmetry boundary/regions/contact, actual 2D units, active physics/mesh audit.
+- GATE 2 (PROPOSED): 원본 half는 보존하고 별도 versioned Full symmetric SDE project 생성; 양 측벽에 동일 damage/edge/traps 적용, 동일 epitaxy/contacts/physics/mesh target; preprocess + geometry/contact/mesh inspection.
+- GATE 3 (NOT RUN): 동일 모델/solver/전압에서 NtSide0 Full vs Half 3.6V J-V, I_full~2I_half conditional on units, recombination ratios & mirrored profile; 이어 NtSide1e18. Full/Half 비교 오차는 mesh convergence 수준 고려하여 판정.
+
 ## 2026-10-21 — 이택규 V2.1 Mesh 검증 다음 읽기 전용 단계
 - OBSERVED `sde_dvs.cmd`: QW depth max 0.3nm, sidewall damaged 5nm width에서 lateral max 0.5nm, `Wshelf=0`, `Cath=0`; window `R_sh` 남아 있음. Mesh sizing source 검토는 진행되었으나 generated mesh geometry·품질·수렴성 검증은 아님.
 - NEXT: `tail -n 35 n1_msh.log` 및 `grep -nE 'define Wedge|define Bspan|define Wshelf' pp1_dvs.cmd` (실제 syntax 맞는지 확인)로 생성 로그/활성 값 확인; 이후 SVisual `n1_msh.tdr`에서 QW/sidewall/mesa corner mesh와 contacts inspect. 동작 확인 이후에만 격리된 복사본에서 mesh-convergence test 결정. 원본 데크 무수정.

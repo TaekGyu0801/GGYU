@@ -1,3 +1,8 @@
+## 2026-10-21 — V2.1 n2 .plt contains terminal currents and region-resolved recombination integration metadata (OBSERVED)
+- n2_des.plt DF-ISE xyplot header reports anode/cathode terminal currents (electron/hole/displacement/total), voltage and QW1..QW4 Clean/Edge/Dmg integrals for Radiative, SRH and Auger, EBL/trap integration outputs. Potentially use existing .plt to quantitatively verify recombination without manual SVisual, provided data columns and units genuinely populated.
+- pp2_des.cmd File/Electrode/Physics checks consistent with previous review: both electrodes initial 0V, global Fermi, NoBandGapNarrowing, HighFieldSaturation, SRH/Radiative/Auger, Mg/PDopant incomplete ionization, polarization activation0.5 and explicit 3 heterointerface Thermionic physics blocks. n6 runtime Thermionic Formula1 and identical pp2/pp6 parameter file reconfirmed.
+- Data values, current 2D units/AreaFactor, full J-V and IQE remain UNRESOLVED. No model changes/run.
+
 ## 2026-10-21 — V2.1 n2/n6 parameter-file diff 동일 (OBSERVED; COMPARISON SETUP GATE PASSED)
 - `diff -u pp2_des.par pp6_des.par | head -n 80` output blank (user pasted terminal); preprocessed .par contents no differences observed. Existing full 76-line .cmd diff showed only 13 damaged-region SideTrap `Conc=0` n2/`Conc=1e18` n6 and node-specific input/output/checkpoint names; global model/solver/mesh and terminal target equal. Both n2/n6 logs confirm thermionic electron+hole Formula1.
 - Thus **input-control equivalence for ON/OFF comparison** supported. Cannot claim model calibration, current-density scaling, true 3.6V TDR bias, matched-current IQE or experimental validation. Next terminal I–V/current unit AreaFactor audit, n6 QW recombination. No code edits/run.

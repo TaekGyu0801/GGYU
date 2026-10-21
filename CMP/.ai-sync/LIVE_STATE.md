@@ -1,3 +1,8 @@
+## 2026-10-21 — 이택규 메시 생성 로그 경고 검색/균형 잡힌 검증 우선 (OBSERVED; NO CONFIRMED ERROR)
+- `n1_msh.log` 경고/품질 grep 출력은 4개 통계 항목만 반환: minAngle 0.0167024deg, minEdge 1.95312e-05um, smallest region Dmg_QW3 1.5e-05um²; 별도 warning/error 텍스트는 없음. 이상치의 실제 물리 수치 영향 미확인.
+- 이택규는 한 이슈에 과도한 집착을 피하고 구조, Mesh, physics, I-V, current normalization을 폭넓게 확인하길 요청. Mesh 최솟값은 기록된 주의사항으로 보관, 관련 수치오류 근거 전까지 추가 원인 추적 보류.
+- 다음: pp2/pp6 실제 유효 물리 설정·AreaFactor·전류 정상성 간결 점검. Half 검증을 먼저 마친 뒤 Full 비교 run. 코드/서버 run 변경 없음.
+
 ## 2026-10-21 — 이택규 V2.1 half generated mesh quality flag; Full after verification (OBSERVED)
 - SDE physical region/contacts: full mesa nominal 4um, implemented half lateral 2um, depth4.288um; QWs 4×3nm; sidewall damaged width5nm; top pCap anode, bottom nGaN cathode. `n1_msh.log` reports successful mesh saved, 62529 points/123917 elements, 4.288×2um bbox, 8.576um² total domain.
 - Potential quality blocker (not confirmed solver error): minAngle 0.0167024deg and min edgeLength1.95312e-05um=0.0195312nm at (depth0.0041875,lateral1.89501)um, near computed Clean/Edge boundary Xe=1.895um. Examine SVisual local mesh/quality and warnings; source alone cannot prove mesh convergence. `42 regions`/nMats40 discrepancy observed but metadata semantics not resolved.

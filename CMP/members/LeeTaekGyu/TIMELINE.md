@@ -1,3 +1,9 @@
+## 2026-10-21 — V2.1 실제 n2 SDevice Thermionic 적용 확인, n2/n6 diff 길이만 확보 (OBSERVED)
+- 이택규 실제 서버 출력: `diff -u pp2_des.cmd pp6_des.cmd | wc -l` = 76. 76은 unified diff 전체 줄수(헤더/문맥 포함)이며 설정 변경 76개를 뜻하지 않음. 실제 hunk 내용은 사용자가 아직 제공하지 않았으므로 ON/OFF 차이가 trap만인지 UNRESOLVED.
+- `grep -niE 'Thermionic|AreaFactor' n2_des.log | head -n 25`: 662/671/680행 `With Thermionic Emission at heterointerfaces for electrons and holes`, 1784/1790/1796행 `ThermionicEmission: Formula = 1, instead of: 0 [1]`. 따라서 n2 runtime이 thermionic emission with Formula1을 인식한 것은 OBSERVED. n6 동일 실행 문맥은 아직 미확인.
+- 출력에서 AreaFactor 검색 매치가 없었으나 이는 기본값/유효 단위/2D normalization의 입증도, 설정 오류의 증거도 아님. 후속 확인 필요.
+- NEXT READ ONLY: `diff -u pp2_des.cmd pp6_des.cmd | head -n 110` 실제 차이 확인, `grep -niE 'Thermionic|AreaFactor' n6_des.log | head -n 25` 후 결과 기준 필요한 전류단위/AreaFactor/물리 설정만 추가 검증. 원본 SDevice/SDE 및 run 변경 없음.
+
 ## 2026-10-21 — V2.1 n2/n6 전처리 SDevice 물리 설정 직접 대조 (OBSERVED PASTED PP, RUNTIME UNVERIFIED)
 - 사용자 서버 실행 `grep -nEi 'AreaFactor|Piezoelectric_Polarization|IncompleteIonization|ThermionicEmission|Recombination|Traps|Conc[[:space:]]*=' pp2_des.cmd pp6_des.cmd | head -n 100` 결과 제공.
 - `pp2_des.cmd` n2와 `pp6_des.cmd` n6 모두 L19 `Recombination(SRH Radiative Auger)`, L20 `IncompleteIonization(Dopants="pMagnesiumActiveConcentration PDopantActiveConcentration")`, L21 `Piezoelectric_Polarization(strain activation=0.5)` 존재. L62-63에 SRH/Radiative/Auger/Total 및 e/hGapStatesRecombination plot 명령 관련 항목 존재.

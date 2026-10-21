@@ -3303,5 +3303,26 @@
     ],
     "next": "Inspect actual SDE geometry/contact/source 55-170 and mesh log; produce protected independent full candidate and verify preprocessed geometry and two-sided traps before solving full NtSide=0, later n6.",
     "tcadCodeChanged": false
+  },
+  "leeV21PhysicsAudit20261021": {
+    "worker": "이택규",
+    "status": "OBSERVED_PP_GREP_PARTIAL",
+    "observed": "User supplied preprocessed pp2_des.cmd and pp6_des.cmd grep lines",
+    "commonPhysics": [
+      "Recombination(SRH Radiative Auger)",
+      "IncompleteIonization pMagnesiumActiveConcentration and PDopantActiveConcentration",
+      "Piezoelectric_Polarization strain activation=0.5"
+    ],
+    "n2DmgSideTrapConcPerCm3": 0,
+    "n6DmgSideTrapConcPerCm3": 1000000000000000000,
+    "dmgRegionCountShown": 13,
+    "edgeTrapConcPerCm3Both": 0,
+    "sideTrapEnergyMidEv": 0.75,
+    "edgeTrapEnergyMidEv": 0.9,
+    "eCrossSectionCm2": 1e-15,
+    "hCrossSectionCm2": 1e-15,
+    "caveat": "Full deck diff, runtime effective model, current normalization and AreaFactor unresolved. Explicit ThermionicEmission and AreaFactor are not shown in grep, which is not proof they are off.",
+    "next": "Read full pp2/pp6 diff, selected main Physics and SDevice runtime model summary; then J-V and recombination validation",
+    "tcadCodeChanged": false
   }
 }

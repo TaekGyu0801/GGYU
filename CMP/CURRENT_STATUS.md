@@ -1,3 +1,8 @@
+## 2026-10-21 — V2.1 n2/n6 command deck equivalence except Trap concentration (OBSERVED)
+- Full 76-line diff -u pp2_des.cmd pp6_des.cmd supplied. Both same Grid=n1_msh.tdr, physics/electrode/solver/bias settings, except 13 Dmg region SideTrap Conc=0 vs 1e18. Other changes are input par path, output filenames and checkpoint prefixes. Material .par equivalence pending.
+- n2 and n6 runtime logs both report Thermionic emission for electron/hole across heterointerfaces, Formula1 override. Physical carrier injection, AreaFactor and 2D current normalization remain unverified.
+- Half V2.1 outputs preserved; Full comparator only after Half verification.
+
 ## 2026-10-21 — V2.1 Thermionic n2 runtime confirmed, ON/OFF entire-diff pending (OBSERVED)
 - 실제 `n2_des.log`: `With Thermionic Emission at heterointerfaces for electrons and holes` 3줄과 `ThermionicEmission: Formula = 1, instead of: 0 [1]` 3줄 존재. n2에서 모델 실행 인식은 CONFIRMED BY SHARED LOG EXCERPT. 모델 물리 타당성은 별개.
 - `diff -u pp2_des.cmd pp6_des.cmd | wc -l`=76, 실제 변경 hunk 미제공. ON/OFF deck 완전 동일성은 미확인. `AreaFactor` keyword n2 log grep 매치 없음; 실제 전류 정규화 아직 미확인. No source/run changes.

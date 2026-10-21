@@ -1,3 +1,7 @@
+## 2026-10-21 — 이택규 n2 SVisual spatial radiative band screenshot (OBSERVED USER IMAGE)
+- Screenshot of n2_des scalar RadiativeRecombination at X depth~0–0.45um, Y lateral~1.2–2um shows pronounced radiative bands near 4QW positions incl. strong QW4 ~0.263–0.266um. Consistent with independently calculated PLT QW4 share ~99.9688%; cannot infer numerical percentages or full-domain profile from cropped color plot, nor verify final 3.6V from dataset label n2_des alone.
+- Next n6_end_des.tdr same field/view qualitative comparison. Avoid over-focus one mesh element; current normalization and Full/Half planned later. No source/run changes.
+
 ## 2026-10-21 — V2.1 n2/n6 final TDR/SAV presence observed
 - User-provided `find . -maxdepth 1 -name '*end*' -print` listed both n2/n6 `end_des.tdr`, `end_des.sav`, `end_circuit_des.sav`; prior `ls cannot access 2` was malformed input, not missing output. Both PLT last points previously at 3.600V.
 - Existence confirmed, not content/Save-Load restart. Next SVisual QW4 radiative spatial profile review; current units/AreaFactor still unresolved and must not claim calibrated J. Full 4um reference after Half audit; original files untouched.

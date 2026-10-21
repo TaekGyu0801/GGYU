@@ -1,3 +1,11 @@
+## 2026-10-21 — 이택규 교수 피드백 반영: V2.1 Full/Half 근거 확보 필요 (HANDOFF, PROPOSED)
+- 작업자: 이택규; AI: ChatGPT. 사용자 보고 교수 피드백: 2um half model을 학술 발표/논문에 쓰려면 4um full reference와 정량 성능 동등성 검증 필요.
+- 확인된 근거: 활성 `pp1_dvs.cmd` Wshelf=0, Wedge=0.1um, Bspan=0, Cath=0, `n1_msh.tdr` 2.0MB 생성 2026-10-14. 앞선 실제 `sde_dvs.cmd`로 x=depth/y=lateral 및 RS ref-size 확인. `V2_Copy`는 구 shelf 포함 half로 Full이 아님.
+- 미해결: geometry mirror symmetry, full left/right contacts and sidewall trap placement, area normalization/AreaFactor, actual generated mesh quality, later Full/Half J-V/recombination/profile comparison. 원래 성공한 half V2.1 n2/n6 출력 절대 덮어쓰지 않음.
+- 이미 한 것: 소스 크기 설정 및 macros read only 확인. 아직 Full 구조 소스/시뮬레이션 생성하지 않음.
+- NEXT FIRST: `sed -n '55,170p' sde_dvs.cmd`, `tail -n 35 n1_msh.log`, inspect SVisual actual mesh; 이후 버전된 별도 Full 구조 작성해 NtSide0 먼저 수치 비교.
+- 보호 조건: 4um full, 5nm sidewall damage, Wedge0.1um, Bspan0, shelf0, Cath0, same EPI/doping/physics/solver/PolAct+NtSide cases. 2D full-to-half raw current 2x only conditional on normalization.
+
 ## 2026-10-15 — 주수빈 n2 3채널 완료, n6 물리 검증 인수인계 (OBSERVED)
 - 데이터 n2_des 12 QW: Rad=1.524099e11, SRH=1.253894e10, Auger=6.265625e10 s^-1 um^-1, Total Domain=0.02399999 um² 각 동일. 3채널 방사비율=66.96243%. QW4 집중(방사≈99.969%, SRH≈98.644%, Auger≈99.993%) 확인, 물리 원인 불명.
 - Next SVisual n6_des.tdr 동일 12 regions + 세 필드 적분, 각 Total Domain 검증. n2/n6 3.6V 동일 전압이나 다른 전류라 matched current 불가. 실제 TDR 최종 저장 bias, current units AreaFactor, 물리 calibration 미해결. 기존 계산 덱 변경 금지.

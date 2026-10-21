@@ -1,3 +1,7 @@
+## 2026-10-21 — n2 OFF/ n6 ON Trap-output cross-check complete; next current scaling and broad physics
+- n2 raw `IntegrTrap_all` 1.17883032026416e6 vs n6 1.98258247754075e22 at 3.6V; under provisional q×1e−12 conversion OFF trap contribution ~5.18e−18 of terminal current, ON ~34.453%. n6 whole-device Rad+SRH+Aug+Trap accounts for ~99.999% terminal current. ON/OFF input and output consistent; no re-run needed for this audit.
+- NEXT read-only: verify effective 2D current units and AreaFactor against runtime/manual/current log; confirm J at 3.6V only after units. Then assess QW4 dominance and overall physical plausibility without over-focusing any one mesh issue. Half audit before Full reference run.
+
 ## 2026-10-21 — n6 3.6V channel current balance nearly complete, n2 Trap + units next
 - OBSERVED n6 PLT final raw IntegrTrap_all=1.98258247754075e22, IntegrRad_all=2.55552035945039e22, IntegrSRH_all=4.32337288643595e21, IntegrAug_all=7.83993596604716e21. Under PLT×1e−12 and q conversion, recombination current equivalent: Rad+SRH+Aug 6.04317e−09 (65.546%), Trap 3.17645e−09 (34.453%), vs I_anode 9.21970771e−09; 99.999% closure. QW-only ~34.48% gap accounted numerically.
 - NEXT: one read-only `n2_des.plt` last-row `IntegrTrap_all eGapStatesRecombination` and whole-device Rad/SRH/Aug, assess any trap baseline. Then confirm current unit/AreaFactor assumptions from SDevice 2D conventions and revisit physical model validity; no need overfocus mesh outlier. Full/Half after Half.

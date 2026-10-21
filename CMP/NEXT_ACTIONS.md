@@ -1,3 +1,7 @@
+## 2026-10-21 — V2.1: Stop header probing; parse existing n2/n6 PLT numeric data
+- `n2_des.plt` Data block at line52 contains numerical scientific-notation values wrapped across lines; `tail` lines are NOT independently interpretable physical rows. n2/n6 datasets list already includes both contacts + full 4 QW Clean/Edge/Dmg radiative/SRH/Auger integrals.
+- Immediate read-only extraction with Python from both DF-ISE files: validate numeric tokens divisible by number of dataset names, choose final saved 3.6V row, report anode/cathode electron/hole/displacement/total currents, sum QW Radiative/SRH/Auger by region and by QW; compare at equal voltage and avoid absolute IQE/J claims until units/AreaFactor and other physical checks are resolved. No new run.
+
 ## 2026-10-21 — n2/n6 DF-ISE PLT Data at line52, next inspect numeric layout before extraction
 - Both n2_des.plt and n6_des.plt have Info line3, functions line28 and Data line52. n2 functions contain terminal V/e/h/displacement/total currents and QW radiative/SRH/Auger/trap integrated outputs, but actual numeric values/units not yet read.
 - Fast read-only next: `sed -n '45,58p' n2_des.plt` and `tail -n 5 n2_des.plt | cut -c1-180` to identify block structure, then a one-pass read-only extraction for both n2/n6 at final matched 3.6V. Do not infer units or IQE before reviewing values.

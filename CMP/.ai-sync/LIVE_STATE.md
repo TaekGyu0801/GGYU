@@ -1,3 +1,8 @@
+## 2026-10-21 — 이택규 V2.1 n2/n6 SDevice preprocessed physics confirmed at keyword level (OBSERVED)
+- User-provided grep of pp2_des.cmd/pp6_des.cmd: both `Recombination(SRH Radiative Auger)`, incompletely ionized Mg/PDopant, `Piezoelectric_Polarization(strain activation=0.5)`. n2 all 13 Dmg SideTrap conc 0, n6 13 Dmg SideTrap conc 1e18; both EdgeTrap conc0 across 13 Edge regions. SideTrap EnergyMid0.75 fromValBand, EdgeTrap0.9 fromValBand, cross sections e/h 1e-15 in shown lines.
+- Only matched grep statements reviewed; full pp2/pp6 diff not yet run. No AreaFactor or ThermionicEmission keyword visible from this command; check effective model/defaults and terminal current normalization before physical conclusion.
+- NEXT: full preprocessed deck diff; selected physics/math/log model validation then J-V/recombination gate. Maintain user's instruction to avoid tunnel vision on tiny mesh sliver. Do not run Full until Half verification. No code or server-run modifications.
+
 ## 2026-10-21 — 이택규 메시 생성 로그 경고 검색/균형 잡힌 검증 우선 (OBSERVED; NO CONFIRMED ERROR)
 - `n1_msh.log` 경고/품질 grep 출력은 4개 통계 항목만 반환: minAngle 0.0167024deg, minEdge 1.95312e-05um, smallest region Dmg_QW3 1.5e-05um²; 별도 warning/error 텍스트는 없음. 이상치의 실제 물리 수치 영향 미확인.
 - 이택규는 한 이슈에 과도한 집착을 피하고 구조, Mesh, physics, I-V, current normalization을 폭넓게 확인하길 요청. Mesh 최솟값은 기록된 주의사항으로 보관, 관련 수치오류 근거 전까지 추가 원인 추적 보류.

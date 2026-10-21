@@ -1,3 +1,7 @@
+## 2026-10-21 — 이택규 OFF Trap baseline numerically negligible (OBSERVED PLT)
+- n2 `IntegrTrap_all eGapStatesRecombination` at 3.6V=1.17883032026416e6 raw; n6=1.98258247754075e22 raw, ratio 1.68e16. Under conditional q×1e−12 scaling n2 trap terminal-current-equivalent fraction ~5.18e−18 vs n6 ~34.4528%. n6 Rad/SRH/Auger/Trap whole-device accounting closes to ~99.99904% terminal. Supports intentional OFF/ON trap split actual effects, NOT unique current-suppression causality or validated absolute IQE.
+- Next current unit/AreaFactor and broad physical benchmark, then Full/Half after Half audit. No code/run changes.
+
 ## 2026-10-21 — 이택규 n6 3.6V Trap-integral explains QW current-balance residual (OBSERVED)
 - User provided n6 .plt final row: IntegrTrap_all=1.98258247754075e22 raw; full-device IntegrRad_all=2.55552035945039e22, IntegrSRH_all=4.32337288643595e21, IntegrAug_all=7.83993596604716e21. With previously numerically supported 1e−12 PLT-to-SVisual conversion and q, 3channel equivalent=6.04317e−09 (65.546% I), gap-state trap equivalent=3.17645e−09 (34.453% I), sum=9.21961925e−09 ≈99.9990% of terminal I=9.21970771e−09. Earlier QW 3channel balance residual ~34.48% is accounted for by trap plus minuscule non-QW channels.
 - Conditional current-unit basis still unverified in UG/AreaFactor. Not a proven causal trap-current suppression mechanism or calibrated IQE. Next check n2 trap integral/current units, finish Half, Full later. TCAD unchanged.

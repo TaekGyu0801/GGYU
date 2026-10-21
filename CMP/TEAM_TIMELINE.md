@@ -1,3 +1,7 @@
+## 2026-10-21 — 이택규 V2.1 SDE 실제 Mesh refinement 설정 확인 (OBSERVED SOURCE ONLY)
+- 서버 `CMP_BASELINE_2.0.0_V2/sde_dvs.cmd` 전체 mesh block 발췌에서 coordinate x=depth/y=lateral, half width 2um, sidewall damage 5nm, `Wshelf=0`, `Cath=0`, QW depth max 0.3nm 및 sidewall lateral max 0.5nm 등 상세 설정을 확인. `R_sh` window는 shelf 제거 후에도 코드에 존재.
+- 이는 **설정 확인**이지 생성된 mesh/물리 정확도나 수렴성 통과가 아님. 실제 SWB `Wedge/Bspan` 값, n1_msh.log/tdr, 요소 품질 및 refinement convergence 필요. 이택규는 구조/mesh 검증 진행, 주수빈 n6 QW 재결합 적분 별도 진행. 원본 코드/계산 변경 없음.
+
 ## 2026-10-15 — 주수빈 V2.1 n2 SRH 12 QW integration 관찰
 - srhRecombination, 12 QW ROI Total Integral=1.253894e10 s^-1 um^-1, Domain=0.02399999 um². QW4 share≈98.64%. 이전 n2 Rad=1.524099e11, 두 채널 기준 Rad fraction≈92.40%; Auger 미확인, IQE 물리 해석 미검증. 다음 n2 Auger, n6 동일 ROI.
 

@@ -3227,7 +3227,7 @@
   },
   "leeV21MeshAudit20261021": {
     "worker": "이택규",
-    "status": "OBSERVED_SERVER_SOURCE_ONLY",
+    "status": "OBSERVED_SOURCE_AND_GENERATED_MESH_LOG_QUALITY_WARNING",
     "source": "User-pasted sde_dvs.cmd lines 25-55, 170-270, 2026-10-21",
     "device": "CMP_BASELINE_2.0.0_V2 (V2.1, shelf removed)",
     "geometry": {
@@ -3247,8 +3247,29 @@
       "cleanEdgeBoundaryLateral": 0.0008
     },
     "caution": "Nominal max mesh sizing is not actual element count, quality or convergence. R_sh remains in code although Wshelf=0. SWB Wedge/Bspan actual values unresolved.",
-    "next": "Read n1_msh.log; inspect pp1_dvs.cmd macros, then SVisual n1_msh.tdr and contacts, evaluate need for mesh convergence.",
-    "tcadCodeChanged": false
+    "next": "Read full mesh warnings and inspect n1_msh.tdr local mesh near minimum edge; finish Half verification before Full reference run",
+    "tcadCodeChanged": false,
+    "geometryDepthUm": 4.288,
+    "observedMeshLog": {
+      "points": 62529,
+      "elements": 123917,
+      "regionsReported": 42,
+      "nMats": 40,
+      "totalAreaUm2": 8.576,
+      "minAngleDeg": 0.0167024,
+      "maxAngleDeg": 128.367,
+      "minEdgeUm": 0.0000195312,
+      "minEdgeNearDepthUm": 0.0041875,
+      "minEdgeNearLateralUm": 1.89501,
+      "bboxDepthUm": 4.288,
+      "bboxLateralUm": 2,
+      "generationStatus": "done"
+    },
+    "derived": {
+      "XeUm": 1.895,
+      "note": "The min edge appears near clean/edge transition within pCap region; hypothesis pending SVisual validation."
+    },
+    "userSequence": "Defer Full simulation until Half mesh verification complete"
   },
   "leeFullHalfValidationGate20261021": {
     "worker": "이택규",

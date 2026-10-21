@@ -1,3 +1,8 @@
+## 2026-10-21 — V2.1 n2/n6 최종 TDR·체크포인트 파일 실제 존재 확인 (OBSERVED FILE LIST)
+- Worker 이택규가 학교 서버 `CMP_BASELINE_2.0.0_V2`에서 `find . -maxdepth 1 -name '*end*' -print` 결과를 제공. `n2_end_circuit_des.sav`, `n6_end_circuit_des.sav`, `n2_end_des.sav`, `n6_end_des.sav`, `n2_end_des.tdr`, `n6_end_des.tdr` 여섯 파일 존재.
+- 이전 `ls ... 2>/dev/null`에서 나왔던 `cannot access 2`는 터미널 리다이렉션 입력 문제였고 실제 파일 부재 증거가 아님. 파일 목록은 TDR/체크포인트 **존재**만 확인, TDR 내부 최종 바이어스 또는 정상 재시작(Save/Load)을 독립적으로 검증하지는 않음.
+- 앞서 n2/n6 PLT 최종 3.600V 및 전류 수지 확인; 현 기존 half run 재실행 불필요. 다음 가장 짧은 확인은 `n2_end_des.tdr` / `n6_end_des.tdr` SVisual에서 MQW 위치/방사재결합 분포와 QW4 집중 현상 검사 후 2D 전류 정규화 메모, 이어 교수 요청 4um Full reference 별도 제작 및 비교 run. 현재 작업은 소스/결과 파일 무수정.
+
 ## 2026-10-21 — V2.1 final-output lookup: shell redirection input issue (USER-REPORTED, NO TCAD ERROR)
 - Worker: 이택규. Command intended `ls -lh n2_end* n6_end* 2>/dev/null`, terminal emitted `ls: cannot access 2: No such file or directory`; likely malformed handling/pasting of `2>/dev/null` resulting in literal filename `2`. Not evidence that `n2_end` or `n6_end` checkpoint files are absent and not a device/solver failure. File existence still UNRESOLVED.
 - `grep -niE 'AreaFactor|current unit|unit.*current|A/um|A/cm' n2_des.log pp2_des.cmd pp2_des.par` produced only `n2_des.log:297: Use length unit of micrometer during currentplot integration.`. Confirms currentplot integration length choice, NOT terminal current density units or an AreaFactor setting.

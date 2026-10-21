@@ -1,3 +1,8 @@
+## 2026-10-21 — 새 Full/Half validation gate (PROPOSED, USER-REPORTED PROFESSOR FEEDBACK)
+- 교수 피드백(사용자 전달): 기존 2um Half로 논문 주장을 하려면 원형인 4um Full 결과와 전류밀도/재결합 및 공간 대칭성 정량 비교가 필요. 현재 Full-to-Half 등가성 **UNRESOLVED**. 구 V2 `_Copy`는 Full 대조군이 아니라 shelf 유지 half 계산.
+- `pp1_dvs.cmd` 실제 서버: Wshelf0, Wedge0.1um, Bspan0, Cath0. Mesh file `n1_msh.tdr` 약 2.0MB 존재 Oct14 13:43; element quality/mesh convergence 미확인.
+- 다음: SDE geometry, contacts, midplane symmetry 확인 후 독립 Full 만들고 3.6V까지 NtSide0 우선 비교; 2D AreaFactor 확인 후 I_full/2I_half 및 J-V/QW 재결합, NtSideON 반복. 아직 실제 Full simulation 미실행; baseline freeze 보류.
+
 ## 2026-10-21 — 이택규 V2.1 실제 SDE Mesh 설정 추가 확인 (OBSERVED SOURCE; VALIDATION PENDING)
 - 실제 서버 제공 `CMP_BASELINE_2.0.0_V2/sde_dvs.cmd` 발췌: x=depth/y=lateral, full mesa 4um/half 2um, sidewall damage 5nm, `Wshelf=0`, `Cath=0`. `RS` window-based refinement에서 QW depth max 0.3nm, active depth max 1.5nm, heterointerface depth max 0.2nm, damaged-sidewall lateral max 0.5nm, Bulk max 250nm. 3nm well/0.3nm ≈10 및 5nm damage/0.5nm≈10은 설정상 기대값일 뿐 생성 mesh count 아님.
 - `R_sh` shelf-corner window는 여전히 정의됨. 영향 여부 미확인. preprocessed `Wedge/Bspan`, `n1_msh.log`/실제 mesh, mesh convergence, 3.6V transport consistency 모두 미검증. 새로운 오류나 물리적 baseline 확정 아님. 코드/런 미변경.

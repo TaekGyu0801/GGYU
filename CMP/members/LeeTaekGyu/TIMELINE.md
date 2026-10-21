@@ -1,3 +1,8 @@
+## 2026-10-21 — V2.1 final-output lookup: shell redirection input issue (USER-REPORTED, NO TCAD ERROR)
+- Worker: 이택규. Command intended `ls -lh n2_end* n6_end* 2>/dev/null`, terminal emitted `ls: cannot access 2: No such file or directory`; likely malformed handling/pasting of `2>/dev/null` resulting in literal filename `2`. Not evidence that `n2_end` or `n6_end` checkpoint files are absent and not a device/solver failure. File existence still UNRESOLVED.
+- `grep -niE 'AreaFactor|current unit|unit.*current|A/um|A/cm' n2_des.log pp2_des.cmd pp2_des.par` produced only `n2_des.log:297: Use length unit of micrometer during currentplot integration.`. Confirms currentplot integration length choice, NOT terminal current density units or an AreaFactor setting.
+- Immediate next read-only command without shell redirection: `find . -maxdepth 1 -name '*end*' -print`. Continue broad physical and full-vs-half workflow once results confirmed; no TCAD files or runs modified.
+
 ## 2026-10-21 — V2.1 3.6V n2 Trap OFF residual cross-check 완료 (OBSERVED)
 - 이택규 실제 학교 서버 `n2_des.plt` 3.6V 마지막 행 `IntegrTrap_all eGapStatesRecombination` = 1178830.32026416 (PLT raw). 앞서 n6 같은 항목 = 1.98258247754075e22. ON/OFF integral ratio = 1.68182e16. OFF raw 값은 정확히 0은 아니지만 ON에 비해 사실상 무시할 수 있음.
 - 이전 관찰 수치 n2 Ianode = 3.64728525e-08, n6 Ianode = 9.21970771e-09 (PLT native unit). `q*1e-12` 환산 **가정 하에** n2 Trap equivalent current =1.88869439458e-25, fraction I=5.17836e-18; n6 Trap equivalent current =3.17644732049e-09, fraction I=34.4527985%. n6 전체-device Rad+SRH+Aug+Trap equivalent 9.21961925167e-09 vs measured I=9.21970771e-09 (99.99904% balance closure).

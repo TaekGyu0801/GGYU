@@ -3306,23 +3306,21 @@
   },
   "leeV21PhysicsAudit20261021": {
     "worker": "이택규",
-    "status": "OBSERVED_PP_GREP_PARTIAL",
-    "observed": "User supplied preprocessed pp2_des.cmd and pp6_des.cmd grep lines",
-    "commonPhysics": [
-      "Recombination(SRH Radiative Auger)",
-      "IncompleteIonization pMagnesiumActiveConcentration and PDopantActiveConcentration",
-      "Piezoelectric_Polarization strain activation=0.5"
+    "status": "COMMAND_DECK_DIFF_VERIFIED_PARAMETER_FILE_DIFF_PENDING",
+    "source": "User-supplied 76-line diff pp2_des.cmd versus pp6_des.cmd, n2_des.log and n6_des.log thermionic excerpts, 2026-10-21",
+    "findings": [
+      "Both node command decks use n1_msh.tdr and share electrode, global physics, solver, 3.6V ramp",
+      "All 13 Dmg SideTrap concentration values differ: n2 0 vs n6 1e18 cm^-3",
+      "Other changes restricted to pp2/pp6 parameter path and n2/n6 output/checkpoint filenames",
+      "Both runtimes report thermionic emission electron/hole at heterointerfaces, Formula=1"
     ],
-    "n2DmgSideTrapConcPerCm3": 0,
-    "n6DmgSideTrapConcPerCm3": 1000000000000000000,
-    "dmgRegionCountShown": 13,
-    "edgeTrapConcPerCm3Both": 0,
-    "sideTrapEnergyMidEv": 0.75,
-    "edgeTrapEnergyMidEv": 0.9,
-    "eCrossSectionCm2": 1e-15,
-    "hCrossSectionCm2": 1e-15,
-    "caveat": "Full deck diff, runtime effective model, current normalization and AreaFactor unresolved. Explicit ThermionicEmission and AreaFactor are not shown in grep, which is not proof they are off.",
-    "next": "Read full pp2/pp6 diff, selected main Physics and SDevice runtime model summary; then J-V and recombination validation",
+    "unresolved": [
+      "pp2_des.par and pp6_des.par equality",
+      "Effective current units and AreaFactor",
+      "Physical transport calibration, final TDR bias",
+      "n6 QW three-channel integrals"
+    ],
+    "next": "diff -u pp2_des.par pp6_des.par | head -n 80",
     "tcadCodeChanged": false
   }
 }

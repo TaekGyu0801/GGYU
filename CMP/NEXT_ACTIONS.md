@@ -1,3 +1,7 @@
+## 2026-10-21 — 다음: n2/n6 실제 diff hunk와 n6 thermionic 실행 확인
+- OBSERVED: n2_des.log에서 electron/hole heterointerface thermionic emission, Formula1 실적용 출력. pp2/pp6 unified diff 총 76줄은 차이 개수 아님.
+- READ ONLY 즉시: `diff -u pp2_des.cmd pp6_des.cmd | head -n 110`; `grep -niE 'Thermionic|AreaFactor' n6_des.log | head -n 25`. 확인 후 ON/OFF 물리 조건 동질성 판정과 2D AreaFactor/current units 검증 진행. 기존 소자 무수정.
+
 ## 2026-10-21 — 이택규 V2.1 effective SDevice n2/n6 비교 다음 단계
 - OBSERVED `pp2_des.cmd`, `pp6_des.cmd`: n2 Dmg SideTrap Conc0 vs n6 Conc1e18 across 13 Dmg regions; EdgeTrap Conc0 both; global recombination SRH/Radiative/Auger, Mg+PDopant incomplete ionization and polarization activation0.5 shared.
 - NEXT concise READ ONLY: `diff -u pp2_des.cmd pp6_des.cmd | head -n 100` to audit other meaningful differences; `sed -n '1,27p;145,215p' pp2_des.cmd` plus selected runtime `n2_des.log` model lines as needed to confirm thermionic treatment, current normalization / AreaFactor and solver. Missing AreaFactor/ThermionicEmission in keyword grep does not by itself prove wrong physics. Check I-V/3.6V end and matched-current comparisons later.

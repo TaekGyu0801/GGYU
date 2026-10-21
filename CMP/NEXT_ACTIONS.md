@@ -1,3 +1,8 @@
+## 2026-10-21 — Final TDR and SAV files confirmed; next MQW map, then Full comparison
+- 실제 `find . -maxdepth 1 -name '*end*' -print` 결과 n2/n6 `end_des.tdr`, `end_des.sav`, `end_circuit_des.sav` 모두 존재. File existence only; restart and TDR contents not yet independently opened.
+- 이미 두 condition PLT at 3.600V, terminal charge balance and whole-device recombination closure available. Do not rerun Half.
+- NEXT: SVisual open n2_end_des.tdr then n6_end_des.tdr, check RadiativeRecombination field across QW1..4 and carrier distribution (the earlier total had extraordinary QW4 localization). Do brief unit/AreaFactor qualification before claiming J, and then build protected independent Full device for professor feedback. No code changes.
+
 ## 2026-10-21 — n2 OFF/ n6 ON Trap-output cross-check complete; next current scaling and broad physics
 - n2 raw `IntegrTrap_all` 1.17883032026416e6 vs n6 1.98258247754075e22 at 3.6V; under provisional q×1e−12 conversion OFF trap contribution ~5.18e−18 of terminal current, ON ~34.453%. n6 whole-device Rad+SRH+Aug+Trap accounts for ~99.999% terminal current. ON/OFF input and output consistent; no re-run needed for this audit.
 - NEXT read-only: verify effective 2D current units and AreaFactor against runtime/manual/current log; confirm J at 3.6V only after units. Then assess QW4 dominance and overall physical plausibility without over-focusing any one mesh issue. Half audit before Full reference run.

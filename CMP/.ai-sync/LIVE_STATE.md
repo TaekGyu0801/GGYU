@@ -1,3 +1,8 @@
+## 2026-10-21 — 이택규 Full/Half 검증 게이트 추가 + PP1 실제 값 확인 (USER-REPORTED PROFESSOR FEEDBACK, OBSERVED)
+- 교수가 절반 모델 활용 시 전체 4um Full과 2um Half 성능 재현성 비교를 요구했다고 이택규가 보고. 이는 실행/검증 완료가 아닌 **새 우선순위 게이트**. 기존 V2_Copy는 shelf 포함 half 소자이며 Full 아님.
+- 실제 서버 `pp1_dvs.cmd`: `Wshelf=0`, `Wedge=0.1` um, `Bspan=0`, `Cath=0`; `n1_msh.tdr` 약 2.0MB Oct14 13:43 존재. Element stats/quality, symmetry, Full 결과 미확인.
+- NEXT: read-only actual geometry & contacts `sde_dvs.cmd` 55–170 lines, `n1_msh.log`; then preserve Half and prepare independent mirrored Full project; preprocess/mesh/contact gate and compare off/on J-V, QW 3-channel ratio, profile with current normalization. No TCAD code/run changes.
+
 ## 2026-10-21 — 이택규 V2.1 활성 SDE mesh-size 설정 확인 (OBSERVED SOURCE, MESH VERIFICATION PENDING)
 - 실제 서버 `CMP_BASELINE_2.0.0_V2/sde_dvs.cmd` 제공: x=depth/y=lateral; 4um full mesa, 2um half, damage width 5nm, `Wshelf=0`, `Cath=0`. Depth mesh maxima QW=0.3nm, EBL/MQW=1.5nm, interface=0.2nm; lateral damaged sidewall max 0.5nm, bulk default 250nm. `R_sh` shelf corner window remains active in source. Configuration only, actual elements/quality/convergence and preprocessed `Wedge/Bspan` not established.
 - Next (read-only): mesh build log, preprocessed SWB variables, SVisual actual n1_msh.tdr geometry/contacts. Existing V2.1 n2/n6 3.6V results unchanged, n6 recombination integral still pending.

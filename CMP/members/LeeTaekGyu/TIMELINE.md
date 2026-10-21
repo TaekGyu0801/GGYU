@@ -1,3 +1,11 @@
+## 2026-10-21 — 이택규 V2.1 활성 SDE Mesh 설정 원문 확인 (OBSERVED SERVER SOURCE, GENERATED MESH NOT YET VERIFIED)
+- 작업자 이택규가 서버 `/user/semi/semi437/CMP_BASELINE_2.0.0_V2`에서 `sed -n '25,55p;170,270p' sde_dvs.cmd` 실제 출력을 제공. SDE coordinate helper `P(lat,dep)=(x=dep,y=lat)`, `RS(mxl,mxd,mnl,mnd)=(maxDepth,maxLateral,minDepth,minLateral)` 확인.
+- `Wm=4.0 um`, half `Xs=2.0 um`, `Wdmg=0.005 um`, `Wshelf=0`, `Cath=0`; `Wedge=@Wedge@`와 `Bspan=@Bspan@`의 실제 SWB 값은 pp1 전처리에서 추가 확인 필요.
+- Mesh **설정값(생성된 실제 요소값 아님)**: R_all lateral/depth max 0.25/0.25 um; R_top depth max 0.005 um; R_ntop depth max 0.01 um; R_act depth max 0.0015 um; R_qw1..4 depth max 0.0003 um (0.3nm); R_if1 depth max 0.0002 um; R_if2 depth max 0.0006 um; R_x4 damaged 5nm band lateral max 0.0005 um (0.5nm), min 0.0002 um; R_xe lateral max 0.0008 um. SDE comments report QW 3nm; 3nm/0.3nm≈10, 5nm/0.5nm≈10 are **nominal estimates**, not observed actual cell count.
+- OBSERVED: `R_sh` refinement window/placement remains in source even though `Wshelf=0`; cannot yet infer it is erroneous or that removal will save runtime.
+- Mesh adequacy/convergence, element quality, exact geometry, contact placement, active SWB macro values, mesh element statistics and n1_msh.tdr visual inspection all **UNRESOLVED**. No deck edits/run/restarts.
+- NEXT READ-ONLY: `tail -n 35 n1_msh.log`; `grep -nE 'define Wedge|define Bspan|define Wshelf' pp1_dvs.cmd` or inspect pp1 macros and SVisual `n1_msh.tdr` QW/sidewall region mesh; do not promote mesh to verified convergence without a controlled refinement comparison.
+
 ## 2026-10-15 — 이택규 V2.1 현재 SDE 실제 소스 RS mesh wrapper 확인 (OBSERVED SERVER SOURCE FRAGMENT)
 - 사용자 학교 서버 실제 터미널: `cd /user/semi/semi437/CMP_BASELINE_2.0.0_V2`; `grep -n -A 8 -B 2 -E 'define-refinement-size|define-refinement-function|BulkFac|MaxLenInt' sde_dvs.cmd`.
 - Source L31–33: `(define (P lat dep z) (position dep lat z))`; `(define (RS name mxl mxd mnl mnd) (sdedr:define-refinement-size name mxd mxl mnd mnl))`. RS는 순서상 lateral/depth 인수를 SDE x=depth/y=lateral로 바꾸는 wrapper. L37: `(define Wshelf 0.0)` 및 V2.1 shelf removed 주석 직접 확인.

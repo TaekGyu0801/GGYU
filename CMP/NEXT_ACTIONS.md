@@ -1,3 +1,7 @@
+## 2026-10-21 — Read existing .plt integrated recombination instead of re-running or manual SVisual
+- OBSERVED `n2_des.plt` Info datasets include terminal voltage eCurrent/hCurrent/TotalCurrent/DisplacementCurrent and per-region MQW Radiative, SRH, Auger and trap-related integrals; actual data values/units still uninspected. Physics blocks confirmed, n2 and n6 thermionic runtime active.
+- NEXT READ ONLY: `sed -n '28,48p' n2_des.plt` and `grep -nE '^(Data|Values|Info|[[:space:]]*functions|[[:space:]]*units)' n2_des.plt n6_des.plt | head -n 30` to inspect DF-ISE data layout/unit metadata. Then extract final-voltage terminal current and MQW sum for n2/n6, validate electrical/recombination consistency, avoid treating raw QW radiative fraction as physically calibrated IQE.
+
 ## 2026-10-21 — n2/n6 full .cmd+parameter diff gate PASS; move to I–V/units
 - OBSERVED: `diff -u pp2_des.par pp6_des.par | head -n 80` no output, supporting identical preprocessed .par. Combined earlier 76-line .cmd diff indicates controlled 13 Dmg SideTrap OFF vs ON, with only files/prefixes otherwise changed.
 - NEXT concise READ ONLY: inspect `n2_des.plt` dataset metadata/current units and active SDevice File/Electrode/AreaFactor context; verify n2/n6 accepted 3.6V currents and 2D width normalization, assess conduction/displacement where available, then n6 QW integrals. Do not repeat basic trap diff or overfocus mesh short edge. Full after Half validated.

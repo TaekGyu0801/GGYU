@@ -1,3 +1,7 @@
+## 2026-10-21 — 이택규 V2.1 Half 생성 Mesh 로그 분석 및 교수 Full 검증 순서 조정
+- `sde_dvs.cmd` 확인: half 폭2um, depth4.288um, 4×3nm QW, 5nm damage, top anode/bottom cathode. `n1_msh.log`: 62529 points/123917 triangles, minAngle 0.0167024deg, min edge 1.95312e-05um at (depth0.0041875,lateral1.89501)um near Clean/Edge boundary, bbox 4.288×2um². Numeric mesh quality issue is **flagged**, not proven physics error.
+- User choice: finish existing V2.1 structure/mesh check first; subsequently prepare/run separate 4um Full comparison without changing original Half. No new simulation, code modification or confirmed mesh equivalence.
+
 ## 2026-10-21 — 이택규 교수 피드백: V2.1 Full-vs-Half 재현성 검증 선행 (USER-REPORTED CONSTRAINT; PROPOSED GATE)
 - Half 2um만으로 논문 타당성을 주장하지 않고 4um Full symmetric reference와 J-V, MQW 재결합, 대칭 carrier/current field를 정량 비교하기로 검증 계획 보강. 기존 `_Copy`는 구 V2 half 구조로 Full reference가 아님.
 - 사용자 제공 `pp1_dvs.cmd` 활성 설정: Wshelf=0, Wedge=0.1um, Bspan=0, Cath=0. `n1_msh.tdr` 약 2.0MB Oct14 생성 확인; 실제 mesh 내용/품질 미확인.

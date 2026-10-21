@@ -3247,7 +3247,7 @@
       "cleanEdgeBoundaryLateral": 0.0008
     },
     "caution": "Nominal max mesh sizing is not actual element count, quality or convergence. R_sh remains in code although Wshelf=0. SWB Wedge/Bspan actual values unresolved.",
-    "next": "Read full mesh warnings and inspect n1_msh.tdr local mesh near minimum edge; finish Half verification before Full reference run",
+    "next": "Read pp2_des.cmd/pp6_des.cmd physics and AreaFactor, verify current normalization; Full after Half validation",
     "tcadCodeChanged": false,
     "geometryDepthUm": 4.288,
     "observedMeshLog": {
@@ -3269,7 +3269,16 @@
       "XeUm": 1.895,
       "note": "The min edge appears near clean/edge transition within pCap region; hypothesis pending SVisual validation."
     },
-    "userSequence": "Defer Full simulation until Half mesh verification complete"
+    "userSequence": "Defer Full simulation until Half mesh verification complete",
+    "latestObservedLogGrep": {
+      "matchingLines": 4,
+      "independentWarningErrorText": false,
+      "minimumAngleDeg": 0.0167024,
+      "minimumEdgeUm": 0.0000195312,
+      "smallestRegion": "Dmg_QW3",
+      "smallestRegionAreaUm2": 0.000015
+    },
+    "investigationPriority": "Leave minimum-angle outlier as unresolved issue; move to broad physics and current consistency audit unless new numerical evidence emerges"
   },
   "leeFullHalfValidationGate20261021": {
     "worker": "이택규",

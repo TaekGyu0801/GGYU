@@ -1,3 +1,8 @@
+## 2026-10-21 — 이택규 V2.1 actual geometry and generated mesh quality gate (OBSERVED/UNRESOLVED)
+- SDE confirms 2um half width, 4.288um vertical depth, 4×3nm QWs, 5nm damaged sidewall, top pCap anode and bottom nGaN cathode. Mesh generator successfully saved n1_msh.tdr: 62529 points, 123917 elements, bbox 4.288×2um², area 8.576um².
+- Mesh quality flagged: minAngle 0.0167024deg, min edgeLength 1.95312e-05um=0.0195312nm near (depth0.0041875,lateral1.89501)um; active `Xe=1.895um` (Clean/Edge). Need actual SVisual local triangle geometry/quality check; convergence error has **not** been established.
+- Explicit user sequencing: complete original Half verification before creating/launching Full-vs-Half comparator. No Full run yet, existing Half code/results preserved.
+
 ## 2026-10-21 — 새 Full/Half validation gate (PROPOSED, USER-REPORTED PROFESSOR FEEDBACK)
 - 교수 피드백(사용자 전달): 기존 2um Half로 논문 주장을 하려면 원형인 4um Full 결과와 전류밀도/재결합 및 공간 대칭성 정량 비교가 필요. 현재 Full-to-Half 등가성 **UNRESOLVED**. 구 V2 `_Copy`는 Full 대조군이 아니라 shelf 유지 half 계산.
 - `pp1_dvs.cmd` 실제 서버: Wshelf0, Wedge0.1um, Bspan0, Cath0. Mesh file `n1_msh.tdr` 약 2.0MB 존재 Oct14 13:43; element quality/mesh convergence 미확인.

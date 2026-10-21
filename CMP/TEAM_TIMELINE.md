@@ -1,3 +1,8 @@
+## 2026-10-21 — 이택규 교수 피드백: V2.1 Full-vs-Half 재현성 검증 선행 (USER-REPORTED CONSTRAINT; PROPOSED GATE)
+- Half 2um만으로 논문 타당성을 주장하지 않고 4um Full symmetric reference와 J-V, MQW 재결합, 대칭 carrier/current field를 정량 비교하기로 검증 계획 보강. 기존 `_Copy`는 구 V2 half 구조로 Full reference가 아님.
+- 사용자 제공 `pp1_dvs.cmd` 활성 설정: Wshelf=0, Wedge=0.1um, Bspan=0, Cath=0. `n1_msh.tdr` 약 2.0MB Oct14 생성 확인; 실제 mesh 내용/품질 미확인.
+- Full 개발/실행 없음; 기존 V2.1 half를 보존. 다음 실제 원본 geometry/contact/mesh log audit 후 독립 Full 비교 소자 제안.
+
 ## 2026-10-21 — 이택규 V2.1 SDE 실제 Mesh refinement 설정 확인 (OBSERVED SOURCE ONLY)
 - 서버 `CMP_BASELINE_2.0.0_V2/sde_dvs.cmd` 전체 mesh block 발췌에서 coordinate x=depth/y=lateral, half width 2um, sidewall damage 5nm, `Wshelf=0`, `Cath=0`, QW depth max 0.3nm 및 sidewall lateral max 0.5nm 등 상세 설정을 확인. `R_sh` window는 shelf 제거 후에도 코드에 존재.
 - 이는 **설정 확인**이지 생성된 mesh/물리 정확도나 수렴성 통과가 아님. 실제 SWB `Wedge/Bspan` 값, n1_msh.log/tdr, 요소 품질 및 refinement convergence 필요. 이택규는 구조/mesh 검증 진행, 주수빈 n6 QW 재결합 적분 별도 진행. 원본 코드/계산 변경 없음.

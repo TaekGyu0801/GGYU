@@ -1,3 +1,7 @@
+## 2026-10-21 — 이택규 n6 3.6V Trap-integral explains QW current-balance residual (OBSERVED)
+- User provided n6 .plt final row: IntegrTrap_all=1.98258247754075e22 raw; full-device IntegrRad_all=2.55552035945039e22, IntegrSRH_all=4.32337288643595e21, IntegrAug_all=7.83993596604716e21. With previously numerically supported 1e−12 PLT-to-SVisual conversion and q, 3channel equivalent=6.04317e−09 (65.546% I), gap-state trap equivalent=3.17645e−09 (34.453% I), sum=9.21961925e−09 ≈99.9990% of terminal I=9.21970771e−09. Earlier QW 3channel balance residual ~34.48% is accounted for by trap plus minuscule non-QW channels.
+- Conditional current-unit basis still unverified in UG/AreaFactor. Not a proven causal trap-current suppression mechanism or calibrated IQE. Next check n2 trap integral/current units, finish Half, Full later. TCAD unchanged.
+
 ## 2026-10-21 — V2.1 n6 3.6V 전체 재결합/Trap 전류 수지 99.9990% 확인 (USER-OBSERVED PLT; UNIT CONSISTENCY INFERRED)
 - 작업자 이택규가 학교 서버 n6_des.plt 마지막 행에서 직접 추출해 제공: bias=3.6V; IntegrTrap_all eGapStatesRecombination = 1.98258247754075e22, IntegrSRH_all srhRecombination = 4.32337288643595e21, IntegrRad_all RadiativeRecombination = 2.55552035945039e22, IntegrAug_all AugerRecombination = 7.83993596604716e21 (raw PLT integral data).
 - 이전 같은 행 Ianode=9.21970771e-09, Icathode=-9.21970771e-09, displacement=0. Earlier n6 four-QW 3-channel sum raw Rad=2.55545394e22 SRH=4.31092452e21 Aug=7.83986116e21.

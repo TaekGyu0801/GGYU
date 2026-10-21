@@ -1,3 +1,7 @@
+## 2026-10-21 — V2.1 n6 최종 3.6V Trap 포함 전체 재결합 수지 확인
+- User-observed n6 PLT: IntegrTrap_all=1.98258247754075e22, global Rad=2.55552035945039e22, SRH=4.32337288643595e21, Auger=7.83993596604716e21 (raw). With q and 1e-12 numerical conversion, summed 4channel equivalent current=9.21961925e-09, n6 terminal I=9.21970771e-09; balance=99.99904%, residual=0.00096%. Trap contribution ~34.4528% I. This closes n6 charge/recombination budget numerically; NOT independent physical calibration, AreaFactor verification, or proof trap causes I reduction.
+- Continue broad audit: n2 global trap/channel control, current normalization and extreme QW4 recombination dominance; then separate Full/Half comparator as professor requested. TCAD unchanged.
+
 ## 2026-10-21 — V2.1 3.6V n2/n6 PLT direct quantitative data check (OBSERVED)
 - Both terminal currents balance to displayed precision and displacement=0: n2 anode+3.64728525e-08, cathode−3.64728525e-08; n6 anode+9.21970771e-09, cathode−9.21970771e-09 at 3.600V. Equal-voltage n6/n2 current 25.278%; raw 2D current normalisation AreaFactor not yet independently validated.
 - 12 QW-region integrations from PLT: n2 Rad1.52410078e23, SRH1.25388758e22, Aug6.26565608e22, three-channel fraction Rad66.962%; n6 Rad2.55545394e22, SRH4.31092452e21, Aug7.83986116e21, Rad67.774%. ON radiative rate only 16.77% of OFF, despite ~0.812pp higher internal three-channel fraction; cannot infer device IQE improvement or equal-current effect.

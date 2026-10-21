@@ -1,3 +1,7 @@
+## 2026-10-21 — V2.1 Thermionic n2 runtime confirmed, ON/OFF entire-diff pending (OBSERVED)
+- 실제 `n2_des.log`: `With Thermionic Emission at heterointerfaces for electrons and holes` 3줄과 `ThermionicEmission: Formula = 1, instead of: 0 [1]` 3줄 존재. n2에서 모델 실행 인식은 CONFIRMED BY SHARED LOG EXCERPT. 모델 물리 타당성은 별개.
+- `diff -u pp2_des.cmd pp6_des.cmd | wc -l`=76, 실제 변경 hunk 미제공. ON/OFF deck 완전 동일성은 미확인. `AreaFactor` keyword n2 log grep 매치 없음; 실제 전류 정규화 아직 미확인. No source/run changes.
+
 ## 2026-10-21 — 이택규 V2.1 n2/n6 active preprocessed physics/trap configuration (OBSERVED DECK; RUNTIME/UNIT GATE OPEN)
 - 실제 사용자 터미널 `pp2_des.cmd`/`pp6_des.cmd` grep output: Both explicitly include `Recombination(SRH Radiative Auger)`, Mg+PDopant incomplete ionization, `Piezoelectric_Polarization(strain activation=0.5)`, recombination/gap-state field outputs.
 - n2 `SideTrap` on all 13 Dmg regions (pCap, pGaN, EBL, B0..B4, QW1..4, nMesa) has Conc=0; n6 corresponding 13 regions Conc=1e18, identical displayed energy reference 0.75 from valence band and capture cross sections 1e-15. EdgeTrap in both conditions Conc=0 with 0.9 from valence band. Not a carbon implantation physical profile.

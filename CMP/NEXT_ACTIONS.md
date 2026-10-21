@@ -1,3 +1,8 @@
+## 2026-10-21 — 폭넓은 Gate 검증 우선, Mesh 이상치 단독 추적 보류
+- OBSERVED `n1_msh.log` grep warning/error/quality 검색에서 경고/오류 텍스트는 추가로 나오지 않고 minAngle0.0167024°, minEdge1.95312e-05um 등 기존 품질 통계만 나옴. 품질 이상치 원인과 수송 정확도 영향은 UNRESOLVED.
+- 사용자 요청: 한 문제에 몰입하지 말고 빠르고 정확하게 전반적 물리/전기 검증으로 진행.
+- NEXT read-only: preprocessed `pp2_des.cmd`/`pp6_des.cmd`의 AreaFactor/contacts/traps/polarization/SRH/Auger/thermionic 유효 설정, logs 및 current normalization 확인. Mesh sliver는 추후 mesh independence/convergence 이상 시 국소 점검. Half 검증 후 Full.
+
 ## 2026-10-21 — 다음: V2.1 Half mesh-quality 경고 국소 확인 후 Full 구조 준비
 - Observed `n1_msh.log`: mesh saved; points 62529, elements 123917, minAngle0.0167024deg; minimum edge0.0195312nm near SDE coords depth0.0041875, lateral1.89501um (Clean/Edge boundary). Geometry/contact source inspected.
 - NOW: `grep -niE 'warning|error|angle|quality|degenerate|sliver' n1_msh.log | tail -n 40` and SVisual `n1_msh.tdr` local mesh inspection around reported coordinates. Check whether extreme sliver isolated or prevalent; map to region boundary. Confirm generated contacts/interface and numerical quality, avoid unproven mesh-convergence claims.

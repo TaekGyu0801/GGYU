@@ -1,3 +1,7 @@
+## 2026-10-21 — n2/n6 DF-ISE PLT Data at line52, next inspect numeric layout before extraction
+- Both n2_des.plt and n6_des.plt have Info line3, functions line28 and Data line52. n2 functions contain terminal V/e/h/displacement/total currents and QW radiative/SRH/Auger/trap integrated outputs, but actual numeric values/units not yet read.
+- Fast read-only next: `sed -n '45,58p' n2_des.plt` and `tail -n 5 n2_des.plt | cut -c1-180` to identify block structure, then a one-pass read-only extraction for both n2/n6 at final matched 3.6V. Do not infer units or IQE before reviewing values.
+
 ## 2026-10-21 — Read existing .plt integrated recombination instead of re-running or manual SVisual
 - OBSERVED `n2_des.plt` Info datasets include terminal voltage eCurrent/hCurrent/TotalCurrent/DisplacementCurrent and per-region MQW Radiative, SRH, Auger and trap-related integrals; actual data values/units still uninspected. Physics blocks confirmed, n2 and n6 thermionic runtime active.
 - NEXT READ ONLY: `sed -n '28,48p' n2_des.plt` and `grep -nE '^(Data|Values|Info|[[:space:]]*functions|[[:space:]]*units)' n2_des.plt n6_des.plt | head -n 30` to inspect DF-ISE data layout/unit metadata. Then extract final-voltage terminal current and MQW sum for n2/n6, validate electrical/recombination consistency, avoid treating raw QW radiative fraction as physically calibrated IQE.

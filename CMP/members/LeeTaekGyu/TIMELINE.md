@@ -1,3 +1,9 @@
+## 2026-10-21 — V2.1 NtSide OFF/ON 물성 파라미터 동일성 확인 (OBSERVED SERVER DIFF)
+- 이택규가 학교 서버 `CMP_BASELINE_2.0.0_V2`에서 `diff -u pp2_des.par pp6_des.par | head -n 80` 실행 후 출력 없이 정상 프롬프트 복귀한 내용을 제공. 따라서 두 preprocessed parameter 파일에서 표시되는 차이가 없음(동일 내용으로 판정; 직접 해시 미확인).
+- 이전 전체 76행 `diff -u pp2_des.cmd pp6_des.cmd`에서 `SideTrap Conc=0` (n2) vs `1e18` (n6)의 13개 Dmg 영역 외에는 노드별 Parameter/Current/Plot/Output 및 Save/Plot prefix만 달랐고, 양쪽 Grid `n1_msh.tdr`, global Physics, thermionic runtime model Formula1, Math/Solve/3.6V 목표는 일치.
+- 판정 범위: **OFF/ON의 명령+물성 입력 조건 일관성 확인** (Intentional one-factor `SideTrap Conc` split). 런타임 물리 보정/전류 밀도 단위, TDR 최종 bias, 3.6V/QW IQE의 물리 타당성, matched-current trap 효과는 별도의 미해결 검증 항목.
+- NEXT: 원본 변경 없이 `n2_des.plt`/`n6_des.plt` 전류 dataset/단위 및 AreaFactor 확인 → J–V 일관성, final saved TDR bias → n6 QW 3채널 적분. 교수 요청 Full/Half는 Half 검증 마친 뒤.
+
 ## 2026-10-21 — V2.1 n2/n6 preprocessed SDevice full diff + runtime Thermionic 비교 (OBSERVED)
 - 학교 서버 diff -u pp2_des.cmd pp6_des.cmd 전체 76행 제공. 실질적인 명령 파일 차이는 13개 Dmg regions의 SideTrap Conc=0 (n2) versus 1e18 (n6)와 n2/n6 입출력 파일명/저장 prefix. 두 노드 Grid=n1_msh.tdr 동일, global physics, electrode, solver, bias sweep 동일. pp2_des.par / pp6_des.par 실제 내용은 아직 미대조.
 - n6_des.log 662/671/680행에서 With Thermionic Emission at heterointerfaces for electrons and holes, 1784/1790/1796에서 ThermionicEmission: Formula = 1, instead of: 0 [1] 확인. n2도 동일 로그 출력 확인됨. Model enabled is confirmed in both logs, physical accuracy not proven.

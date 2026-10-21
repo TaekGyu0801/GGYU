@@ -1,3 +1,8 @@
+## 2026-10-21 — 다음: V2.1 Half mesh-quality 경고 국소 확인 후 Full 구조 준비
+- Observed `n1_msh.log`: mesh saved; points 62529, elements 123917, minAngle0.0167024deg; minimum edge0.0195312nm near SDE coords depth0.0041875, lateral1.89501um (Clean/Edge boundary). Geometry/contact source inspected.
+- NOW: `grep -niE 'warning|error|angle|quality|degenerate|sliver' n1_msh.log | tail -n 40` and SVisual `n1_msh.tdr` local mesh inspection around reported coordinates. Check whether extreme sliver isolated or prevalent; map to region boundary. Confirm generated contacts/interface and numerical quality, avoid unproven mesh-convergence claims.
+- AFTER Half verification: create independent 4um Full reference with symmetric damage/contact settings and validate against 2um Half. User explicitly deferred Full run until current validation complete. Do not alter original successful Half run.
+
 ## 2026-10-21 — 우선순위 상향: 교수 피드백 Full(4um) vs Half(2um) 동등성 검증
 - REQUIREMENT USER-REPORTED: 논문/발표의 Half-domain 근거로 독립 Full-domain reference 필요; 현 `V2_Copy`는 Full이 아님.
 - OBSERVED `pp1_dvs.cmd`: Wshelf=0, Wedge=0.1um, Bspan=0, Cath=0. `n1_msh.tdr` 약 2.0MB 존재; mesh quality unknown.

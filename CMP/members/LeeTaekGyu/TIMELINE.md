@@ -1,3 +1,9 @@
+## 2026-10-21 — V2.1 n2/n6 preprocessed SDevice full diff + runtime Thermionic 비교 (OBSERVED)
+- 학교 서버 diff -u pp2_des.cmd pp6_des.cmd 전체 76행 제공. 실질적인 명령 파일 차이는 13개 Dmg regions의 SideTrap Conc=0 (n2) versus 1e18 (n6)와 n2/n6 입출력 파일명/저장 prefix. 두 노드 Grid=n1_msh.tdr 동일, global physics, electrode, solver, bias sweep 동일. pp2_des.par / pp6_des.par 실제 내용은 아직 미대조.
+- n6_des.log 662/671/680행에서 With Thermionic Emission at heterointerfaces for electrons and holes, 1784/1790/1796에서 ThermionicEmission: Formula = 1, instead of: 0 [1] 확인. n2도 동일 로그 출력 확인됨. Model enabled is confirmed in both logs, physical accuracy not proven.
+- AreaFactor and 2D current normalization unresolved. n2/n6 equal-voltage current difference does not prove matched-current trap efficiency.
+- NEXT READ ONLY: diff -u pp2_des.par pp6_des.par | head -n 80; current scaling, final TDR bias, then n6 QW recombination. No code/run edits.
+
 ## 2026-10-21 — V2.1 실제 n2 SDevice Thermionic 적용 확인, n2/n6 diff 길이만 확보 (OBSERVED)
 - 이택규 실제 서버 출력: `diff -u pp2_des.cmd pp6_des.cmd | wc -l` = 76. 76은 unified diff 전체 줄수(헤더/문맥 포함)이며 설정 변경 76개를 뜻하지 않음. 실제 hunk 내용은 사용자가 아직 제공하지 않았으므로 ON/OFF 차이가 trap만인지 UNRESOLVED.
 - `grep -niE 'Thermionic|AreaFactor' n2_des.log | head -n 25`: 662/671/680행 `With Thermionic Emission at heterointerfaces for electrons and holes`, 1784/1790/1796행 `ThermionicEmission: Formula = 1, instead of: 0 [1]`. 따라서 n2 runtime이 thermionic emission with Formula1을 인식한 것은 OBSERVED. n6 동일 실행 문맥은 아직 미확인.

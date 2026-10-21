@@ -3323,7 +3323,7 @@
   "leeV21ElectricalAudit20261021": {
     "worker": "이택규",
     "source": "User-pasted real server DF-ISE n2/n6 PLT Python extraction at 3.600V, 2026-10-21",
-    "status": "OBSERVED_N6_FULL_DEVICE_TRAP_RECOMBINATION_BALANCE_NEARLY_100_PERCENT",
+    "status": "N2_OFF_N6_ON_TRAP_CURRENT_BALANCE_OBSERVED_PHYSICAL_AND_AREAFACTOR_PENDING",
     "selected": {
       "n2": {
         "datasets": 100,
@@ -3368,7 +3368,7 @@
       "Terminal current balance confirms numerical consistency only",
       "Python NameError PY after all prints harmless"
     ],
-    "next": "Read n2 IntegrTrap_all and whole-device Rad/SRH/Aug; verify units/AreaFactor; then finish Half before Full.",
+    "next": "Verify 2D terminal current units and AreaFactor, review physical plausibility and prepare Full/Half after Half check.",
     "codeModified": false,
     "simulationRerun": false,
     "n6FinalGlobalRecombRaw": {
@@ -3404,6 +3404,16 @@
       "closureRatio": 0.9999904055,
       "trapFraction": 0.3445279851
     },
-    "caveat": "Applying q and PLT*1e-12 supported by previous numerical SVisual comparison. Physical model, AreaFactor and absolute current units still require independent verification. n6 trap channel accounts for prior ~34.48% QW-only current residual numerically but is NOT proof of unique causal mechanism nor calibrated IQE."
+    "caveat": "Applying q and PLT*1e-12 supported by previous numerical SVisual comparison. Physical model, AreaFactor and absolute current units still require independent verification. n6 trap channel accounts for prior ~34.48% QW-only current residual numerically but is NOT proof of unique causal mechanism nor calibrated IQE.",
+    "observedN2TrapAt3p6V": 1178830.32026416,
+    "observedN6TrapAt3p6V": 1.98258247754075e+22,
+    "n6ToN2TrapRawRatio": 16818217545477454,
+    "conditionalEquivalentCurrentAssumption": "q*1e-12 raw PLT, 2D unit/AreaFactor requires independent checking",
+    "n2TrapEquivalentCurrent": 1.8886943945779735e-25,
+    "n2TrapCurrentFraction": 5.178356682077371e-18,
+    "n6TrapEquivalentCurrent": 3.1764473204936194e-9,
+    "n6TrapCurrentFraction": 0.3445279850952693,
+    "n6WholeDeviceCurrentAccountingFraction": 0.9999904055,
+    "inferenceLimit": "Trap OFF practically negligible and ON material; does NOT imply proven unique mechanism of lower 3.6V terminal current or calibrated IQE."
   }
 }

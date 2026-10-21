@@ -3323,7 +3323,7 @@
   "leeV21ElectricalAudit20261021": {
     "worker": "이택규",
     "source": "User-pasted real server DF-ISE n2/n6 PLT Python extraction at 3.600V, 2026-10-21",
-    "status": "OBSERVED_N6_TRAP_INCLUSIVE_CHARGE_RECOMBINATION_CLOSURE",
+    "status": "OBSERVED_N6_FULL_DEVICE_TRAP_RECOMBINATION_BALANCE_NEARLY_100_PERCENT",
     "selected": {
       "n2": {
         "datasets": 100,
@@ -3368,7 +3368,7 @@
       "Terminal current balance confirms numerical consistency only",
       "Python NameError PY after all prints harmless"
     ],
-    "next": "Optionally read n2 global trap/channel from saved PLT, check AreaFactor/current normalization and QW4 distribution before preparing Full comparison.",
+    "next": "Read n2 IntegrTrap_all and whole-device Rad/SRH/Aug; verify units/AreaFactor; then finish Half before Full.",
     "codeModified": false,
     "simulationRerun": false,
     "n6FinalGlobalRecombRaw": {
@@ -3388,6 +3388,22 @@
       "qwThreeChannelFraction": 0.6552332538159192
     },
     "caution": "PLT data strongly supports internal current/recombination closure but 2D units and AreaFactor need independent review; do not infer same-current IQE or causality. n6 eGapStates total pertains to registered trap regions, ON/OFF effect requires control interpretation.",
-    "tcadCodeChanged": false
+    "tcadCodeChanged": false,
+    "n6Final3p6V": {
+      "anodeCurrentRaw": 9.21970771e-9,
+      "trapGapStateRaw": 1.98258247754075e+22,
+      "wholeDeviceRadiativeRaw": 2.55552035945039e+22,
+      "wholeDeviceSRHRaw": 4.32337288643595e+21,
+      "wholeDeviceAugerRaw": 7.83993596604716e+21
+    },
+    "conditionalConvertedCurrent": {
+      "nontrapEquivalent": 6.04317193118e-9,
+      "trapEquivalent": 3.17644732049e-9,
+      "totalEquivalent": 9.21961925167e-9,
+      "reportedAnodeCurrent": 9.21970771e-9,
+      "closureRatio": 0.9999904055,
+      "trapFraction": 0.3445279851
+    },
+    "caveat": "Applying q and PLT*1e-12 supported by previous numerical SVisual comparison. Physical model, AreaFactor and absolute current units still require independent verification. n6 trap channel accounts for prior ~34.48% QW-only current residual numerically but is NOT proof of unique causal mechanism nor calibrated IQE."
   }
 }

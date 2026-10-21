@@ -3249,5 +3249,29 @@
     "caution": "Nominal max mesh sizing is not actual element count, quality or convergence. R_sh remains in code although Wshelf=0. SWB Wedge/Bspan actual values unresolved.",
     "next": "Read n1_msh.log; inspect pp1_dvs.cmd macros, then SVisual n1_msh.tdr and contacts, evaluate need for mesh convergence.",
     "tcadCodeChanged": false
+  },
+  "leeFullHalfValidationGate20261021": {
+    "worker": "이택규",
+    "source": "User reported professor feedback and pasted server terminal, 2026-10-21",
+    "status": "PROPOSED_GATE_OBSERVED_PP1_NO_FULL_RUN",
+    "requirement": "Full 4um symmetric reference vs half 2um electrical and recombination validation before defending half-model performance.",
+    "observedPP1": {
+      "Wshelf_um": 0,
+      "Wedge_um": 0.1,
+      "Bspan": 0,
+      "Cath": 0
+    },
+    "observedMeshFile": {
+      "path": "CMP_BASELINE_2.0.0_V2/n1_msh.tdr",
+      "sizeReported": "2.0M",
+      "date": "2026-10-14 13:43 KST"
+    },
+    "knownCaveats": [
+      "V2_Copy remains half, not full",
+      "Half/Full raw current factor two only with equal 2D normalization and AreaFactor",
+      "No mesh-convergence accuracy established"
+    ],
+    "next": "Inspect actual SDE geometry/contact/source 55-170 and mesh log; produce protected independent full candidate and verify preprocessed geometry and two-sided traps before solving full NtSide=0, later n6.",
+    "tcadCodeChanged": false
   }
 }

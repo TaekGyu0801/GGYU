@@ -1,3 +1,8 @@
+## 2026-10-21 — V2.1 mesh-log warning 검색 완료, 과도한 단일 쟁점 추적 지양 (OBSERVED / RESEARCH PRIORITY)
+- 사용자 실제 명령: `grep -niE 'warning|error|bad|small|quality|angle|edgeLength' n1_msh.log | tail -n 40`. 출력은 `tri-grid quality`, `minAngle: 0.0167024`, `min edgeLength: 1.95312e-05 [near (0.0041875 1.89501)]`, `Smallest region: Dmg_QW3 Total volume: 1.5e-05` 4줄뿐임. 검색 패턴에 걸리는 별도 warning/error 문구 없음. 이는 모든 mesh 문제 부재 증명도 아니고 수치 정확도 통과도 아님.
+- 사용자의 명시적 검증 원칙: 한 가지 mesh 이상치에 과도하게 매달리지 말고 중요 항목 전체를 빠르고 정확하게 균형 있게 검증. Minimal angle/edge는 **미해결 관찰사항**으로 남기되 계산 영향 증거가 생기기 전에는 장시간 원인 규명을 우선하지 않음.
+- NEXT: 실제 전처리 SDevice의 physics, trap, polarization, contacts/AreaFactor 검증과 기존 I-V, 공간 field, carrier/recombination을 우선 점검. Full/Half 비교는 앞선 요청대로 Half 검증 후 진행. 코딩/시뮬레이션 변경 없음.
+
 ## 2026-10-21 — 이택규 V2.1 Half 소자 구조/생성 mesh log 검증 진전 (OBSERVED, QUALITY WARNING)
 - 사용자 서버 `sde_dvs.cmd` 55–170행과 `n1_msh.log` 마지막 35행 직접 제공. 활성 `pp1_dvs.cmd` 변수는 Wshelf=0, Wedge=0.1um, Bspan=0, Cath=0. 2um half 측방 폭(0..2um), 총 depth 4.288um, QW 4개(각 0.003um), 5nm damaged sidewall 확인. 구체적 epitaxy: pCap 0.020, pGaN 0.120, EBL 0.026, B0..B4 각 0.022, QW1..QW4 각 0.003, nMesa 0.5, bulk nGaN 3.5um; depth 합 4.288um. top anode Clean/Edge/Dmg pCap, bottom cathode under nGaN. Code-level topology/contacts only, mesh placement visualization not yet independently inspected.
 - `n1_msh.log` OBSERVED: 62529 points, 123917 elements, log 42 regions, nMats=40, minAngle=0.0167024deg, maxAngle=128.367deg, min edgeLength=1.95312e-05um =0.0195312nm [near (xdepth=0.0041875um, ylateral=1.89501um)], total 2D area=8.576um², bbox xdepth 0..4.288um, ylateral 0..2um; generated n1_msh.tdr saved/done and generation time 4.84s.

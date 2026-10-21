@@ -1,3 +1,7 @@
+## 2026-10-21 — 이택규 n2 .plt current/recombination fields found (OBSERVED HEADER, VALUES NOT YET CHECKED)
+- n2_des.plt DF-ISE header contains anode/cathode currents/voltages and Clean/Edge/Dmg region-wise IntegrRad, IntegrSRH, IntegrAug for all four QWs plus EBL and eGapStatesRecombination. pp2_des.cmd main Physics includes Fermi, radiative/SRH/Auger, Mg/PDopant incomplete ionization, strain polarization0.5, 3 heterointerface Thermionic blocks. n6 runtime repeats Thermionic enabled Formula1. pp2/pp6 .par files remain equal.
+- Next inspect .plt functions/units/values then programmatically recover matched final-bias current and summed QW channels n2 vs n6; actual IQE, unit normalization, physical calibration are not proven. Keep Half project intact, Full comparator later.
+
 ## 2026-10-21 — 이택규 V2.1 ON/OFF 물성 파일 동등성 확인 (OBSERVED)
 - User-shared terminal `diff -u pp2_des.par pp6_des.par | head -n 80` returned no differences. Combined full .cmd diff: same mesh/electrode/global physics/solver/3.6V sweeps, only SideTrap Conc0 versus 1e18 across 13 Dmg regions, with node-specific file naming. Input split consistency gate passed, but calibration, 2D current normalization, TDR bias, and matched-current IQE remain unresolved.
 - NEXT: inspect current .plt dataset metadata and current normalization; evaluate existing results first, then remaining QW checks. Original runs untouched; professor Full/Half comparison after Half verification.

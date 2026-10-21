@@ -1,3 +1,7 @@
+## 2026-10-21 — 이택규 V2.1 실제 SDE Mesh 설정 추가 확인 (OBSERVED SOURCE; VALIDATION PENDING)
+- 실제 서버 제공 `CMP_BASELINE_2.0.0_V2/sde_dvs.cmd` 발췌: x=depth/y=lateral, full mesa 4um/half 2um, sidewall damage 5nm, `Wshelf=0`, `Cath=0`. `RS` window-based refinement에서 QW depth max 0.3nm, active depth max 1.5nm, heterointerface depth max 0.2nm, damaged-sidewall lateral max 0.5nm, Bulk max 250nm. 3nm well/0.3nm ≈10 및 5nm damage/0.5nm≈10은 설정상 기대값일 뿐 생성 mesh count 아님.
+- `R_sh` shelf-corner window는 여전히 정의됨. 영향 여부 미확인. preprocessed `Wedge/Bspan`, `n1_msh.log`/실제 mesh, mesh convergence, 3.6V transport consistency 모두 미검증. 새로운 오류나 물리적 baseline 확정 아님. 코드/런 미변경.
+
 ## 2026-10-15 — V2.1 n2 MQW 3-channel integrals OBSERVED, physics gate open
 - 주수빈 SVisual 실제 출력 동일한 Clean/Edge/Dmg QW1..4 총 12 ROI (Domain=0.02399999 um²): Rad 1.524099e11, SRH 1.253894e10, Auger 6.265625e10 s^-1 um^-1. Derived 3-channel QW radiative fraction 66.9624%, SRH 5.5091%, Auger 27.5285%. QW4의 극단적 편중, 높은 Auger, current balance/AreaFactor/실제 n2 TDR bias 등 검증 필요. n6 적분 대기. This is not calibrated device IQE.
 

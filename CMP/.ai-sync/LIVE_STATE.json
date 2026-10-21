@@ -3322,33 +3322,54 @@
   },
   "leeV21ElectricalAudit20261021": {
     "worker": "이택규",
-    "status": "PLT_NUMERIC_DATA_OBSERVED_EXTRACTION_PENDING",
-    "source": "2026-10-21 user-pasted head -n 28 n2_des.plt and sed -n 1,28p pp2_des.cmd",
-    "observedFields": [
-      "anode/cathode OuterVoltage and InnerVoltage",
-      "anode/cathode eCurrent hCurrent DisplacementCurrent TotalCurrent",
-      "QW1..4 region-wise Clean/Edge/Dmg Radiative SRH Auger integrals",
-      "EBL radiative SRH Auger integrals",
-      "Damage/Edge eGapStatesRecombination trap integrals"
+    "source": "User-pasted real server DF-ISE n2/n6 PLT Python extraction at 3.600V, 2026-10-21",
+    "status": "OBSERVED_FINAL_PLT_CURRENT_AND_QW_3CHANNEL;_TRAP_BALANCE_PENDING",
+    "selected": {
+      "n2": {
+        "datasets": 100,
+        "points": 123,
+        "lastIndex": 122,
+        "voltage": 3.6,
+        "anodeCurrent": 3.64728525e-8,
+        "cathodeCurrent": -3.64728525e-8,
+        "displacement": 0,
+        "QW_Rad": 1.52410078e+23,
+        "QW_SRH": 1.25388758e+22,
+        "QW_Auger": 6.26565608e+22,
+        "QW_RadFraction": 0.66962383696,
+        "QW3ChannelsEquivalentCurrentFraction": 0.9998237381
+      },
+      "n6": {
+        "datasets": 100,
+        "points": 124,
+        "lastIndex": 123,
+        "voltage": 3.6,
+        "anodeCurrent": 9.21970771e-9,
+        "cathodeCurrent": -9.21970771e-9,
+        "displacement": 0,
+        "QW_Rad": 2.55545394e+22,
+        "QW_SRH": 4.31092452e+21,
+        "QW_Auger": 7.83986116e+21,
+        "QW_RadFraction": 0.67774351092,
+        "QW3ChannelsEquivalentCurrentFraction": 0.6552332538
+      }
+    },
+    "derived": {
+      "n6_to_n2_same_voltageCurrentRatio": 0.2527827433,
+      "n6_to_n2_QWRadiativeRatio": 0.167669617,
+      "PLTrawToSVisualObservedFactor": 1e-12,
+      "conditional": "q*QW PLT raw*1e-12/I assumes PLT/SVisual 2D unit convention, AreaFactor not independently verified"
+    },
+    "limitations": [
+      "QW 3channel proportion is not proven total device IQE",
+      "n6 residual ~34.48% not attributable to trap until eGapStatesRecombination and all-device channel integration read",
+      "same-voltage is not same-current efficiency",
+      "QW4 dominates; revisit if needed",
+      "Terminal current balance confirms numerical consistency only",
+      "Python NameError PY after all prints harmless"
     ],
-    "observedCmdPhysics": [
-      "Fermi",
-      "DefaultParametersFromFile",
-      "EffectiveIntrinsicDensity(NoBandGapNarrowing)",
-      "Mobility(HighFieldSaturation)",
-      "Recombination(SRH Radiative Auger)",
-      "IncompleteIonization(Mg PDopant)",
-      "Piezoelectric_Polarization activation=0.5",
-      "Thermionic InGaN/GaN AlGaN/GaN AlGaN/InGaN"
-    ],
-    "caveat": "These are metadata names, not proven values, units or valid IQE. AreaFactor/current scaling unresolved.",
-    "next": "Read-only Python extraction of n2/n6 final 3.6V terminal currents and all QW1-4 Clean/Edge/Dmg Rad/SRH/Auger integrals; inspect current units/AreaFactor before J or IQE assertions",
-    "tcadCodeChanged": false,
-    "observedDataLayout": {
-      "dataStartsLine": 52,
-      "format": "scientific notation floats wrapped across lines; multi-column rows must be recovered from dataset name count",
-      "n2NumericTokensSeen": true,
-      "n6DataBlockPreviouslySeen": true
-    }
+    "next": "Read n6 last-sample IntegrTrap_all and full-device Rad/SRH/Auger, optional n2 comparison; validate normalizations, then complete Half audit before Full comparator.",
+    "codeModified": false,
+    "simulationRerun": false
   }
 }

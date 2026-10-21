@@ -1,3 +1,8 @@
+## 2026-10-21 — V2.1 n6 3.6V whole-device recombination+Trap balances terminal current (OBSERVED WITH CONDITIONAL UNIT CONVERSION)
+- n6 final `IntegrTrap_all eGapStatesRecombination`=1.98258247754075e22, `IntegrRad_all`=2.55552035945039e22, `IntegrSRH_all`=4.32337288643595e21, `IntegrAug_all`=7.83993596604716e21 raw PLT.
+- Using PLT ×1e−12 conversion supported numerically by earlier n2 SVisual ROI and elementary charge, total non-trap Rad+SRH+Aug equivalent=6.043171931e−09 (65.546% of measured I=9.21970771e−09), trap equivalent=3.176447320e−09 (34.453%); sum=9.219619252e−09, ~99.99904% of terminal current. Prior QW-only missing ~34.48% is numerically explained by Trap plus tiny extra-QW channels.
+- **Do not infer** absolute IQE, causal explanation of 74.72% current reduction or equal-current performance. Units/AreaFactor still not independently checked; n2 IntegrTrap_all comparison pending. Half still in validation, Full/Half after that, no rerun/edit.
+
 ## 2026-10-21 — V2.1 n6 최종 3.6V Trap 포함 전체 재결합 수지 확인
 - User-observed n6 PLT: IntegrTrap_all=1.98258247754075e22, global Rad=2.55552035945039e22, SRH=4.32337288643595e21, Auger=7.83993596604716e21 (raw). With q and 1e-12 numerical conversion, summed 4channel equivalent current=9.21961925e-09, n6 terminal I=9.21970771e-09; balance=99.99904%, residual=0.00096%. Trap contribution ~34.4528% I. This closes n6 charge/recombination budget numerically; NOT independent physical calibration, AreaFactor verification, or proof trap causes I reduction.
 - Continue broad audit: n2 global trap/channel control, current normalization and extreme QW4 recombination dominance; then separate Full/Half comparator as professor requested. TCAD unchanged.

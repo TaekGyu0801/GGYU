@@ -1,3 +1,11 @@
+## 2026-10-21 — 교수 피드백에 따른 V2.1 Full/Half 대칭 검증 필요 및 활성 SDE 파라미터 확인 (USER-REPORTED REQUIREMENT + OBSERVED SERVER OUTPUT)
+- 교수 피드백(사용자 전달): half-domain 결과를 연구/발표에 활용하려면 원래 4um full geometry와 2um half geometry 결과의 정량 일치 근거가 있어야 설득력이 있음. 이는 교수 피드백으로 기록하며 Full/Half 동등성은 현재 **미검증**.
+- 실제 서버 `/user/semi/semi437/CMP_BASELINE_2.0.0_V2/pp1_dvs.cmd` grep: `Wshelf=0.0`, `Wedge=0.1` um, `Bspan=0`, `Cath=0`. `n1_msh.tdr` 파일 존재, 크기 약 2.0MB, mtime 2026-10-14 13:43 KST. 이는 mesh가 생성된 증거이지 mesh 요소 품질/수렴성 검증 아님.
+- 현재 `CMP_BASELINE_2.0.0_V2`와 `_Copy`는 앞선 기록상 모두 half-domain 계보이며 Copy를 Full reference라고 혼동하지 않는다.
+- **PLAN/PROPOSED, NOT RUN:** 실제 half SDE 영역/접촉/좌우대칭 조건 검토 → 기존 V2.1 half 결과 보존 → 독립 Full 4um symmetric geometry (양쪽 동일 측벽, contact/physics/Mg/trap/polarization/Wedge/Bspan/mesh nominal spacing 유지) 생성 및 preprocess/mesh gate → NtSide OFF를 먼저 동일 전압/solver 조건으로 run → 전류 정규화, J-V, QW 지역 적분 비율, 대칭 field, 이후 Trap ON matched-condition 비교 → mesh convergence 별도.
+- 비교 가정: 동일 2D out-of-plane 및 AreaFactor 정의일 때만 `I_full≈2 I_half`; J와 3-channel QW 방사 비율은 일치 기대. 근접 오차 허용값은 수치 mesh 정확도와 연구 목적 근거로 사전 정해야 하며 임의 성공 판정 금지.
+- NEXT READ-ONLY: `sed -n '55,170p' sde_dvs.cmd`, `tail -n 35 n1_msh.log`; mirror boundary/contacts/region mapping, 실제 mesh 및 symmetry를 확인한 뒤 별도 Full 구조 제작. 기존 SDE/SDevice/run 수정 없음.
+
 ## 2026-10-21 — 이택규 V2.1 활성 SDE Mesh 설정 원문 확인 (OBSERVED SERVER SOURCE, GENERATED MESH NOT YET VERIFIED)
 - 작업자 이택규가 서버 `/user/semi/semi437/CMP_BASELINE_2.0.0_V2`에서 `sed -n '25,55p;170,270p' sde_dvs.cmd` 실제 출력을 제공. SDE coordinate helper `P(lat,dep)=(x=dep,y=lat)`, `RS(mxl,mxd,mnl,mnd)=(maxDepth,maxLateral,minDepth,minLateral)` 확인.
 - `Wm=4.0 um`, half `Xs=2.0 um`, `Wdmg=0.005 um`, `Wshelf=0`, `Cath=0`; `Wedge=@Wedge@`와 `Bspan=@Bspan@`의 실제 SWB 값은 pp1 전처리에서 추가 확인 필요.

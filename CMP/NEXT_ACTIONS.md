@@ -1,3 +1,7 @@
+## 2026-10-21 — n6 3.6V channel current balance nearly complete, n2 Trap + units next
+- OBSERVED n6 PLT final raw IntegrTrap_all=1.98258247754075e22, IntegrRad_all=2.55552035945039e22, IntegrSRH_all=4.32337288643595e21, IntegrAug_all=7.83993596604716e21. Under PLT×1e−12 and q conversion, recombination current equivalent: Rad+SRH+Aug 6.04317e−09 (65.546%), Trap 3.17645e−09 (34.453%), vs I_anode 9.21970771e−09; 99.999% closure. QW-only ~34.48% gap accounted numerically.
+- NEXT: one read-only `n2_des.plt` last-row `IntegrTrap_all eGapStatesRecombination` and whole-device Rad/SRH/Aug, assess any trap baseline. Then confirm current unit/AreaFactor assumptions from SDevice 2D conventions and revisit physical model validity; no need overfocus mesh outlier. Full/Half after Half.
+
 ## 2026-10-21 — n6 3.6V 재결합 수지 closure 통과, 다음 n2 all channels/unit 확인
 - 작업자 이택규가 학교 서버 n6_des.plt 마지막 행에서 직접 추출해 제공: bias=3.6V; IntegrTrap_all eGapStatesRecombination = 1.98258247754075e22, IntegrSRH_all srhRecombination = 4.32337288643595e21, IntegrRad_all RadiativeRecombination = 2.55552035945039e22, IntegrAug_all AugerRecombination = 7.83993596604716e21 (raw PLT integral data).
 - 이전 같은 행 Ianode=9.21970771e-09, Icathode=-9.21970771e-09, displacement=0. Earlier n6 four-QW 3-channel sum raw Rad=2.55545394e22 SRH=4.31092452e21 Aug=7.83986116e21.

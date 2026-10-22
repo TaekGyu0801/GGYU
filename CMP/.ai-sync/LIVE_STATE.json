@@ -3887,5 +3887,26 @@
     "sdeviceExecuted": false,
     "runbook": "CMP/members/JuSubin/PROJECT_B_IMPLEMENTATION_RUNBOOK_20261022.md",
     "next": "User performs SWB Save As to new named project, changes Bspan=3 and executes SDE node; share verified new folder and pp1/SDE output. Do not claim results before observed output."
+  },
+  "leeTaekGyuWholeIQEProxy20261022": {
+    "worker": "이택규",
+    "date": "2026-10-22",
+    "status": "DERIVED_MODELED_RADIATIVE_SHARE; NOT_ABSOLUTE_VALIDATED_IQE",
+    "biasV": 3.6,
+    "qw3ChannelPercent": {
+      "n2": 66.9623836961,
+      "n6": 67.7744
+    },
+    "fullDeviceRatioN6": {
+      "radiativeRaw": 2.55552035945039e+22,
+      "srhRaw": 4.32337288643595e+21,
+      "augerRaw": 7.83993596604716e+21,
+      "trapRaw": 1.98258247754075e+22,
+      "trapInclusiveRadiativePercent": 44.40958889793,
+      "trapChannelPercent": 34.45312906948
+    },
+    "n2Approx": "QW 3-channel 66.9624%; n2 global channel integrals not independently extracted. q×QW Rad×1e-12 / I ≈66.95058% conditional on current conversion.",
+    "qualification": "Equal voltage different currents, excludes full device calibration/leakage and detailed photon physics; not confirmed matched-current IQE.",
+    "source": "User-provided school server PLT integral records in current project and CMP/CURRENT_STATUS.md"
   }
 }

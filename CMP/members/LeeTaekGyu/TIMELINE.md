@@ -1,3 +1,8 @@
+## 2026-10-22 — n2_end_des hDensity overview SVisual screenshot observed; QW-specific interpretation pending
+- User provided Sentaurus Visual T-2022.03 screenshot: dataset `n2_end_des`, scalar `hDensity` selected; logarithmic color legend approximately 1.0e-30 to 8.2788e19 cm^-3. Plot shows full 2um lateral width (Y horizontal) and excessive X vertical span with MQW layers compressed around X~0.17–0.27um.
+- OBSERVED: hDensity output exists and is visualized, but this full-depth overview is too coarse to quantify/compare hole densities in each QW or diagnose extreme QW4 Radiative localization. Legend global max is not QW-specific.
+- NEXT: SVisual plot axes adjust X(depth)~0.14–0.29um, Y(lateral)0–2um; retain log hDensity, capture enlarged QW1–QW4. Then same ROI eDensity or quantitative cutline as needed. No code/run change.
+
 ## 2026-10-22 — pp1_dvs.cmd Half/contact lateral geometry relationships checked (OBSERVED TERMINAL)
 - User provided actual preprocessed SDE `pp1_dvs.cmd` grep: line37 `(define Wshelf 0.0)`; line39 `(define Wedge 0.1)`; line53 `(define Xs (/ Wm 2.0))`; line54 `(define Xd (- Xs Wdmg))`; line55 `(define Xe (- Xd Wedge))`; line56 `(define Xend (+ Xs Wshelf))`.
 - Earlier same source lines154–158 map 3 anode contacts to top Clean+Edge+Dmg segments covering [0,Xs] (conditional on valid nonzero segments). Previously observed n1_msh.log bbox lateral span 2.0um and mesh succeeded. These are consistent with 4um target Wm→2um Half, but this grep did NOT separately print `Wm` or `Wdmg` numerical literal. Geometrical 2um span already independently observed from actual mesh log, so repeated micro-greps not necessary for current next task.

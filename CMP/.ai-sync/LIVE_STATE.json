@@ -4094,5 +4094,11 @@
     "observed": "n17_mesh.tdr 2MB present, Bspan1 preprocessed, n24 SDevice iteration logs; no later run completion established",
     "workWhileRunning": "SVisual open preexisting n17_msh.tdr and inspect Edge_QW1-4 AlGaN vs Clean/Dmg InGaN, geometry/mesh; prepare matched-current ON branches n6/n30/n44 comparison",
     "next": "User provides SVisual screenshot of n17_msh.tdr. Continue respecting existing SWB queue."
+  },
+  "Kou4umScaling20261022Lee": {
+    "worker": "이택규",
+    "status": "Kou 20/60/100 um epitaxy applied to representative 4um mesa is a hypothesis, not automatically wrong; Kou 4um damage dead zone, I-V, IQE and contacts are not transferable. New comparator Wang 2023 Nature Communications actual 3.5um LED EQE peak at J~3A/cm2, different 16-QW. Prior current injection failure inference from Kou J20 benchmark withdrawn. No TCAD changes.",
+    "next": "Validate 4um model current normalization/contact and sidewall traps; QW4 localization unresolved.",
+    "source": "https://www.nature.com/articles/s41467-023-43472-z"
   }
 }

@@ -1,3 +1,7 @@
+## 2026-10-22 — eDensity Cutline_Y exists; reset graph X range
+- OBSERVED user SVisual screenshot `eDensity(C2(n2_end_des))` on Cutline_Y at lateral Y~1.3um. Switching scalar reset horizontal depth X plot window to 0..4.288um so QW region is compressed.
+- NEXT: right XY plot horizontal X axis Fixed Min=0.14 and Max=0.29um. Inspect four-QW eDensity peak profile and compare with already acquired hDensity; do not interpret current full-depth eDensity graph as a resolved QW comparison. Existing Half calculations untouched.
+
 ## 2026-10-22 — 주수빈 Project B first nominal band-alignment preflight complete (OBSERVED+DERIVED; NO RUN)
 - Actual V2.1 pp2_des.par: GaN Eg0/Chi0 = 3.4376/4.1000 eV, InGaN 2.8569/4.5065 eV; previous AlGaN 3.7564/3.8768 eV, all Tpar300K. Corresponding nominal affinity-rule GaN→AlGaN electron/hole barriers 0.2232/0.0956 eV; InGaN→AlGaN 0.6297/0.2698 eV. This ignores polarization, charge, actual bending, heterointerface effects and bias; not validated TCAD Ec/Ev.
 - Initial Project B pilot geometry proposed after freeze: Bspan3, xAlB0.15, Wedge0.1um, Dmg0.005um unchanged; paired against same-Trap Bspan0 control at matched current. xAlB composition sweep deferred pending effective Eg/Chi model consistency. The 0.1um QW edge material-replacement portion is 5% of 2um half width.

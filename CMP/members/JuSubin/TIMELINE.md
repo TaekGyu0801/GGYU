@@ -1,3 +1,9 @@
+## 2026-10-22 — 주수빈 Project A/B 설계 준비 착수 (USER-APPROVED DIRECTION; PROPOSED DESIGN)
+- 주수빈이 이택규와 Baseline V2.1 최종 검증을 중복하지 않고 Project A(GaN:C 고저항 측벽 Edge), Project B(측벽 AlGaN lateral heterobarrier) 구현 준비에 집중하기로 선택. 이택규와의 상호 역할 승인/전담 확정은 아직 아님.
+- GitHub Phase #3/#4/#5, AI_SHARED_MEMORY_PROTOCOL 및 선행문헌을 기반으로 독립 설계 준비 문서 `members/JuSubin/PROJECT_AB_PREPARATION_20261022.md` 작성. 실제 Sentaurus 소스/런/새 프로젝트 생성 없음.
+- Project A는 nominal C dose를 고정 저항 또는 이온화 acceptor/trap 밀도로 단정하지 않으며, GaN 영역과 QW를 구분한 C 모델 검증이 선행되어야 함. Project B는 실제 Bspan geometry, Al mole fraction, polarization/band offsets 검증이 선행되어야 함. 수치 sweep은 PROPOSED screening only.
+- 다음 최우선: 학교 서버 `CMP_BASELINE_2.0.0_V2`에서 `sde_dvs.cmd`/`pp1_dvs.cmd`의 Wedge/Bspan/Wdmg 및 Edge/Dmg 재료·영역 생성 부분을 READ-ONLY 출력으로 확인. Common Baseline/기존 n2/n6 결과 보존; 이택규의 2D current normalisation 및 Full/Half 최종 검증 후 본격 A/B pilot.
+
 ## 2026-10-15 — n6 적분 시도에서 n2 데이터셋/8영역 선택 오류 확인 (OBSERVED)
 - 사용자가 새로 전달한 SVisual 출력은 `Dataset: n2_des`, `Field: RadiativeRecombination`. Clean_QW1..4 및 Dmg_QW1..4만 포함한 8개 2D 영역의 Total Integral 1.447895e11 s^-1 um^-1, Total Domain 0.02279999 um². n6의 측정 결과가 아님.
 - 앞서 n2 12개 QW 적분(1.524099e11, 0.02399999um²)과의 차는 약 7.6204e9 s^-1 um^-1로 이전 Edge_QW1..4 적분합과 일치함. 물리 변화가 아닌 ROI/데이터셋 선택 차이.

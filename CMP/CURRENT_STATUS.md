@@ -1,3 +1,8 @@
+## 2026-10-22 — V2.1 Xs relation and source top-contact coverage established (OBSERVED, MODEL AREA CONDITIONAL)
+- User actual pp1_dvs.cmd grep: Wshelf=0, Wedge=0.1um, Xs=Wm/2, Xd=Xs-Wdmg, Xe=Xd-Wedge, Xend=Xs+Wshelf (lines37/39/53–56). Combined with previously observed top anode Clean/Edge/Dmg contacts and mesh bbox width 2um, this supports intended 2um planar Half domain contact full-span. Wm/Wdmg literals not printed in this grep, so avoid claiming their numerical values newly reverified from this excerpt.
+- Given both n2/n6 have no explicit AreaFactor/Cylindrical in scanned runtime .cmd/.par, and Sentaurus Training default 2D effective width 1um, conditionally equivalent J 3.6V: n2 1.823642625 A/cm2; n6 0.4609853855 A/cm2. This is a 2D planar proxy, NOT certified J of a 4um circular mesa and NOT a validation of MQW transport or IQE.
+- Area/control inspection ready to move on; next inspect actual SVisual `hDensity` and `eDensity` around MQW/QW4 (if fields exist) to check unusual QW4 localization. Retain original converged Half; Full/Half separate comparator required. No source/run edit.
+
 ## 2026-10-22 — Team next-phase assignment specified; Project B preparation started (USER PLAN; NO NEW RUN)
 - User plan after Baseline freeze: 이택규 Project A(GaN:C); 주수빈 Project B(localized lateral AlGaN). Not evidence of completed freeze today, Lee's direct agreement, or any Project A/B simulation.
 - JuSubin now working on Project B read-only physical design prep, SDE Bspan/region mapping, electron/hole band-offset/polarization verification, minimum pilot/DOE plan; see `members/JuSubin/PROJECT_B_PLAN_20261022.md`. Existing V2.1 and Lee final validation remain untouched.

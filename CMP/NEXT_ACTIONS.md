@@ -1,3 +1,8 @@
+## 2026-10-22 — JuSubin's immediate Project B-only track (USER-DEFINED OWNER SPLIT)
+- 명시된 조건부 분업: Baseline freeze 이후 Lee→Project A, JuSubin→Project B. 이전 JuSubin A/B 동시 준비 제안을 JuSubin B-only 우선으로 대체. Lee의 직접 서면/채팅 승인 및 오늘 Baseline freeze 미확인.
+- JuSubin NOW (no new run): read-only `CMP_BASELINE_2.0.0_V2/sde_dvs.cmd` and `pp1_dvs.cmd`: Bspan, Wedge, Wdmg, AlGaN and Edge/Dmg region material/geometry references; map sidewall relative to damaged 5nm strip and 4×QWs. Then review both electron/hole offsets, polarization orientation, transport, and build one-pilot + Al fraction/width DOE proposal in `members/JuSubin/PROJECT_B_PLAN_20261022.md`.
+- Post-verified freeze: compare parent hashes, isolate `CMP_PROJECTB_1.0.0_ALBARRIER` candidate, preprocess/mesh smoke, run one case and same-current control metrics, then sweep. Existing baseline runs untouched.
+
 ## 2026-10-22 — Contact assignment source reviewed; get Xs then move forward
 - pp1_dvs.cmd lines150-168 user output: anode top segments 0..Xe, Xe..Xd, Xd..Xs; bottom cathode at midpoint Xs/2 when Cath=0, Wshelf=0 (as previously observed). Exact span Xs numerical expansion pending; non-overlap/mesh result not established by code alone.
 - NEXT FAST ONE-SHOT READ ONLY: inspect start of `pp1_dvs.cmd` for `Xs/Xe/Xd/Wmesa/Wshelf/Wedge` definitions and active parameter values. After check, label J as planar conditional and move to physical QW4/J-V plausibility and independent 4um Full/2um Half validation. Avoid rerunning converged Half.

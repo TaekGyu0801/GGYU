@@ -1,3 +1,7 @@
+## 2026-10-22 — JuSubin Project B-only role change / ready-to-start handoff (USER-DEFINED; NO RUN)
+- Worker 주수빈, AI ChatGPT. User specified after Baseline freeze Lee Project A GaN:C; JuSubin Project B localized AlGaN. Prior broad A/B preparation suggestion superseded for JuSubin. Baseline actually frozen today: NOT VERIFIED; Lee directly agreeing: NOT VERIFIED.
+- Plan `CMP/members/JuSubin/PROJECT_B_PLAN_20261022.md`. FIRST: on school server inspect `/user/semi/semi437/CMP_BASELINE_2.0.0_V2/sde_dvs.cmd` and `pp1_dvs.cmd` for Bspan/Wedge/Wdmg/AlGaN/Edge/Dmg; no existing baseline edits. Confirm exactly which vertical layer can accommodate lateral AlGaN without altering QWs/EBL/contacts. Inspect Al/Ga material parameters, band offsets and polarization orientation vs existing physics after region geometry. Propose B-only pilot DOE. Existing source and runs untouched. 2D J normalization/Full-Half remain upstream freeze gates. New errors/failed attempts: none.
+
 ## 2026-10-22 — 주수빈 Project A/B preparation handoff (DESIGN ONLY; NO DEVICE MODIFICATION)
 - 작업자: 주수빈 / AI: ChatGPT. 사용자 선택: 이택규의 V2.1 Baseline 최종 검증과 겹치지 않게 A(GaN:C Edge) 및 B(AlGaN lateral barrier) 물리/영역/DOE 사전 준비. 이택규의 전담 역할 동의는 확인되지 않음.
 - 상세 설계 준비 계획: `CMP/members/JuSubin/PROJECT_AB_PREPARATION_20261022.md`. 관련 Phase Issues #3/#4/#5. 새 SWB 프로젝트/코드/런 없음; 기존 Baseline/PLT/TDR 절대 수정 금지.

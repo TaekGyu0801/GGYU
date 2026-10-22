@@ -3992,5 +3992,64 @@
     "diagnosticCaveat": "In bash chain grep ... && ls n31_msh.tdr, ls was short-circuited so mesh presence was NOT checked",
     "priorSWB": "n31 Bspan3 displayed white/non-yellow compared with n17 yellow Bspan1; stale screenshot can only suggest not complete",
     "action": "Check current SWB n31 status; run SDE node 31 if ready/not already queued; if running leave alone; if failed inspect node error. No source changes."
+  },
+  "leeTaekGyuKouWuBenchmark20261022": {
+    "worker": "이택규",
+    "project": "Project A carbon-induced high resistivity GaN:C sidewall",
+    "date": "2026-10-22",
+    "status": "OBSERVED_REFERENCE_AND_COMPUTED_MISMATCH; BASELINE_NOT_QUANTITATIVELY_VALIDATED",
+    "literature": {
+      "Kou2019": {
+        "doi": "10.1364/OE.27.00A643",
+        "modelSizesUm": [
+          100,
+          60,
+          20
+        ],
+        "sameStackDesign": [
+          "nGaN 4um donor5e18",
+          "4 In0.15Ga0.85N QWs x3nm",
+          "GaN barriers22nm",
+          "pAlGaN EBL26nm",
+          "pGaN120nm",
+          "pLayer holes3e17cm-3"
+        ],
+        "forwardVat20Acm2": {
+          "noDefect100": 3.48,
+          "noDefect60": 3.37,
+          "noDefect20": 3.33,
+          "defect100": 3.47,
+          "defect60": 3.33,
+          "defect20": 3.23
+        },
+        "modelDifferences": [
+          "APSYS",
+          "surface damaged 4um dead zone",
+          "electron/hole traps at Ec-0.24/Ev+0.46eV, densities approx1e13cm-3",
+          "Auger 1e-30 cm6/s"
+        ]
+      },
+      "Wu2023": {
+        "doi": "10.1016/j.micrna.2023.207542",
+        "exampleSizeUm": 10,
+        "sidewallDefectDepthNm": 5,
+        "InComposition": 0.08,
+        "wellNm": 3,
+        "barrierNm": 8
+      }
+    },
+    "sim3p6V": {
+      "voltage": 3.6,
+      "model": "2D planar half2um with assumed 1um thickness",
+      "offJ_Acm2": 1.823642625,
+      "onJ_Acm2": 0.4609853855,
+      "offVpaperJ20GapFactor": 10.967061,
+      "onVpaperJ20GapFactor": 43.385323,
+      "trapOnOffCurrentRatio": 0.252782743,
+      "QW4RadiativeSharePercent": 99.9688,
+      "offQWAugerFractionPercent": 27.5286
+    },
+    "interpretation": "Stack broadly matched; sidewall OFF/ON radiative decrease trend compatible with literature, but forward current-density level at 3.6V materially below Kou J20 at V3.23–3.48 and defect-induced current-direction differs near Kou Fig3. Not direct same-device validation because size 4um vs 20/60/100, damaged width 5nm vs 4um, trap physics, contact layout, Auger and simulator differ. Actual IQE, EL wavelength 445nm, and dominant QW4 mechanism unresolved. Do not label baseline frozen or a calibrated Project A mechanism.",
+    "next": "Read-only J-V bias window and physics/transport/contacts review; matched-J n2/n6 analysis; evaluate extreme QW4/Auger; Full/Half protected comparison. Project A pilot can be isolated exploratory only."
   }
 }

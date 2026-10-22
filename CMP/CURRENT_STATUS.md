@@ -1,3 +1,8 @@
+## 2026-10-22 — Clarification of total IQE proxy from existing n2/n6 3.6V recombination (DERIVED, NOT CALIBRATED)
+- QW-only Rad/(Rad+SRH+Aug): n2 ~66.9624%, n6 ~67.7744%, excludes trap. n6 all-device measured raw Rad 2.55552035945039e22, SRH 4.32337288643595e21, Aug 7.83993596604716e21, eGapStates Trap 1.98258247754075e22: Rad/(all four)=44.40959%; trap fraction=34.45313%. This is a trap-inclusive all-device radiative recombination share, useful as **conditional IQE proxy**, not validated absolute LED IQE.
+- n2 trap almost zero but full-device channel integrals not extracted; n2 QW-only 66.9624% approximates full radiative fraction, conditional injected-current approach q×1e-12×QW Rad / I≈66.95058%. Avoid false precision or absolute IQE claims.
+- Comparison is equal-V3.6V, not equal-current. 22.55 pp apparent proxy difference cannot isolate trap impact at matched carriers/current; QW4 radiative localization remains separately unresolved. No TCAD edits or new experiments.
+
 ## 2026-10-22 — Project B isolated pilot authorized; scientific Baseline freeze remains unresolved (USER DECISION)
 - JuSubin authorized NEW SWB project CMP_PROJECTB_1.0.0_ALBARRIER cloned using Save As from protected CMP_BASELINE_2.0.0_V2; Bspan0→3 only in clone; Wedge .1um, xAlB .15, Wdmg .005um, traps and other parameters unchanged. Fresh SDE mesh/region validation is first, then Trap ON 3.6V SDevice pilot if passes. No actual user-reported clone/mesh/run yet. Existing 2D current normalization, Full/Half and QW4 physical checks not automatically resolved. See runbook.
 

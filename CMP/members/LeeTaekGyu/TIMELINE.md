@@ -1,3 +1,8 @@
+## 2026-10-22 — V2.1 n2/n6 AreaFactor grep 결과 (OBSERVED SERVER OUTPUT)
+- 학교 서버 `/user/semi/semi437/CMP_BASELINE_2.0.0_V2`에서 `grep -niE 'AreaFactor|current unit|length unit|A/cm|A/um' pp2_des.cmd pp2_des.par n2_des.log n6_des.log` 실행. 결과는 `n2_des.log:297: Use length unit of micrometer during currentplot integration.` 및 `n6_des.log:297: ...` 2줄뿐.
+- 명시적 `AreaFactor`/terminal current unit 표기는 위 검색 파일에서 발견되지 않음. `CurrentPlot` integration length 단위 µm는 terminal current 단위 검증이 아님.
+- 이전 3.6V 원시 전류 값에서 J를 물리적 보정/정규화 완료로 선언하지 않음. 다음: n2/n6 전체 전처리된 cmd/par에서 AreaFactor/Cylindrical/CoordinateSystem 확인, 2D 평면 깊이와 effective 1um default 두께가 실제 적용되는지 공식 T-2022.03 매뉴얼/로그와 대조; 그 후만 조건부 J 계산. TCAD 무변경.
+
 ## 2026-10-22 — V2.1 n6 RadiativeRecombination SVisual 화면 관찰 (OBSERVED USER SCREENSHOT)
 - 사용자 제공 Sentaurus Visual T-2022.03 화면: plot title `n6_end_des`, field `RadiativeRecombination` (legend `cm^-3 s^-1`), 표시 최고치 약 5.02e24. 표시 범위 x(depth) 대략 0~0.45 um, y(lateral) 대략 1.2~2.0 um.
 - MQW 위치에 복수의 수평 방사재결합 띠가 관찰되고, x 약 0.26 um 부근 강한 띠는 기존 n2 QW4-dominant 정량 관찰 및 n6 QW PLT 적분과 정성적으로 양립. 이 이미지 단독으로 QW별 적분값, 전역 profile, Trap의 인과효과, n2/n6 절대 강도 차이 또는 실제 TDR 저장 바이어스는 확정할 수 없음.

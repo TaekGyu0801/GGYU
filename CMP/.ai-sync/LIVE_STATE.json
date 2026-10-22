@@ -3718,5 +3718,45 @@
     ],
     "limits": "Scalar Eg0/Chi0 overrides shown with no explicit mole-fraction interpolation terms; changing xAlB alone may not vary effective bandgap/affinity. SRH lifetime at operating bias and lateral interface effects not verified. Baseline remains Bspan=0.",
     "next": "Read-only compare GaN and InGaN Bandgap/Chi in pp2_des.par (sed -n '1,85p' pp2_des.par) then decide physically justified xAlB=0.15 and Bspan pilot only on isolated frozen-baseline clone."
+  },
+  "leeTaekGyuN2QWHoleCutlinePeaks20261022": {
+    "worker": "이택규",
+    "date": "2026-10-22",
+    "status": "OBSERVED_GRAPH; APPROXIMATE_PEAK_READOUTS_NOT_NUMERICALLY_EXTRACTED",
+    "dataset": "n2_end_des",
+    "field": "hDensity",
+    "cut": "Cutline_Y C2 at lateral Y about 1.3um",
+    "depthXum": [
+      0.14,
+      0.29
+    ],
+    "verticalLogDensityCm3": [
+      10000000000,
+      100000000000000000000
+    ],
+    "fourQWPeakApprox": [
+      {
+        "qw": 1,
+        "xUm": 0.19,
+        "hCm3": 9000000000000000000
+      },
+      {
+        "qw": 2,
+        "xUm": 0.215,
+        "hCm3": 10000000000000000000
+      },
+      {
+        "qw": 3,
+        "xUm": 0.24,
+        "hCm3": 20000000000000000000
+      },
+      {
+        "qw": 4,
+        "xUm": 0.265,
+        "hCm3": 80000000000000000000
+      }
+    ],
+    "interpretation": "QW4 has highest hole density peak on this one cut. This may correlate with previous n2 QW4 ~99.97% radiative integral but does not prove root cause; electron overlap and 2D integration unverified.",
+    "next": "Inspect n2_end_des eDensity on the same Y-constant cut and depth ROI; retain protected existing runs."
   }
 }

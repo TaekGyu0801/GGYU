@@ -12,7 +12,7 @@
     "existingResult": "n2 PLT QW4 radiative integral ~99.97%, causal carrier mechanism unverified",
     "next": "Select SVisual Cut Y at constant lateral Y~1.3um to examine 1D hDensity versus depth X across QW1–4; then same-cut eDensity if necessary. No re-run."
   },
-"leeTaekGyuN2HoleDensityOverview20261022": {
+  "leeTaekGyuN2HoleDensityOverview20261022": {
     "worker": "이택규",
     "date": "2026-10-22",
     "status": "OBSERVED_USER_SCREENSHOT_NEEDS_ZOOM",
@@ -3606,5 +3606,27 @@
     "caveat": "Lateral edge semiconductor material replacement including QW edge, not external coating; no performance conclusion",
     "unknown": "numerical xAlB xEBL xIn; coordinate P transformation; Bspan>0 mesh/physics",
     "next": "Read-only sed -n '23,59p' pp1_dvs.cmd and grep xAlB,xEBL,xIn; preserve existing V2.1; no run until baseline frozen."
+  },
+  "juSubinProjectBAlContent20261022": {
+    "worker": "주수빈",
+    "date": "2026-10-22",
+    "status": "OBSERVED_SCHOOL_SERVER_PP1_DVS_PARAMETER_DEFINITIONS",
+    "source": "CMP_BASELINE_2.0.0_V2/pp1_dvs.cmd user supplied grep line output",
+    "xIn": 0.15,
+    "xEBL": 0.15,
+    "xAlB": 0.15,
+    "Wedge_um": 0.1,
+    "Wdmg_um": 0.005,
+    "Bspan": 0,
+    "coordinateTransform": "P(lat,dep,z)=(position dep lat z)",
+    "derivedHalfLateralWidths_um": {
+      "clean": 1.895,
+      "edge": 0.1,
+      "damage": 0.005
+    },
+    "derivedQWEdgeFraction": 0.05,
+    "caveat": "Bspan>0 AlGaN replaces QW lateral edge, not external coating; QW active volume change and interface band/polarization unverified",
+    "proposedPilot": "Isolated Bspan=3 screening geometry first, xAlB=0.15 Wedge=0.1um after freeze; Bspan=1 comparison candidate; no run approved or made",
+    "next": "Read only inspect detailed xAlB/physics/material parameters and then wait for frozen baseline provenance before cloning/running."
   }
 }

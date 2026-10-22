@@ -1,3 +1,7 @@
+## 2026-10-22 — Baseline 완료 이후 역할 분담 방향 지정: Lee Project A / JuSubin Project B (USER-STATED PLAN)
+- 사용자가 Baseline 최종 확정 이후 이택규→Project A GaN:C, 주수빈→Project B AlGaN 독립 진행 방향 명시. 이택규의 직접 발언/수락으로 전환하여 인용하지 말 것. Baseline 2026-10-22 실제 freeze도 미확인.
+- JuSubin Project B 사전설계 즉시 시작: `members/JuSubin/PROJECT_B_PLAN_20261022.md`; 실행/코드 수정 없는 PROPOSED planning. 최초 검증은 기존 SDE Bspan/AlGaN Edge geometry read-only audit. A/B 최종 비교는 동일 frozen baseline 및 matched J에 조건부.
+
 ## 2026-10-22 — 주수빈 A/B 준비 역할 선택 (USER-APPROVED WORK DIRECTION; DESIGN ONLY)
 - 주수빈은 이택규의 V2.1 Baseline 검증과 중복하지 않고 Project A/B 물리 모델, Edge 영역/재료 설계, 평가 지표/DOE를 준비하기로 동의. 이택규의 명시적 전담 합의는 미확인.
 - 제안 설계 문서: `members/JuSubin/PROJECT_AB_PREPARATION_20261022.md`. A: localized GaN:C resistive edge, B: localized AlGaN heterobarrier; 고정 sidewall trap과 matched-current 평가. 기존 실 소자/코드 변경 없음. Next: V2.1 SDE Edge/Bspan read-only audit.

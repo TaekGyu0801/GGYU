@@ -4156,5 +4156,50 @@
     ],
     "next": "READ ONLY inspect n2_eq_des.tdr/n2_end_des.tdr y=1.0um x=0..0.40um bands/polarization/e-h/QF; gtree & current accounting and matched-J afterward",
     "issue7comment": 6337013873
+  },
+  "leeV21N2QwCenterCarrierProbes20261022": {
+    "worker": "이택규",
+    "date": "2026-10-22",
+    "status": "OBSERVED_SVISUAL_USER_SCREENSHOTS_AND_DERIVED_POINTWISE_PRODUCT_NO_RUN",
+    "dataset": "n2_end_des",
+    "nominalBiasV": 3.6,
+    "lateralCutY_um": 1,
+    "centers": [
+      {
+        "qw": "QW1",
+        "x_um": 0.1895,
+        "hDensity_cm3": 3428490000000000,
+        "eDensity_cm3": 4460060000000000,
+        "np_cm6": 1.52912711e+31
+      },
+      {
+        "qw": "QW2",
+        "x_um": 0.2145,
+        "hDensity_cm3": 4478710000000000,
+        "eDensity_cm3": 4993540000000000,
+        "np_cm6": 2.23646175e+31
+      },
+      {
+        "qw": "QW3",
+        "x_um": 0.2395,
+        "hDensity_cm3": 18258200000000000,
+        "eDensity_cm3": 20418900000000000,
+        "np_cm6": 3.7281236e+32
+      },
+      {
+        "qw": "QW4",
+        "x_um": 0.2645,
+        "hDensity_cm3": 1135080000000000000,
+        "eDensity_cm3": 1351900000000000000,
+        "np_cm6": 1.53451465e+36
+      }
+    ],
+    "derived": {
+      "qw4_np_over_sum_qw123_np": 3738.449093562272,
+      "qw4_point_np_fraction_percent": 99.97325809297092,
+      "prior_qw4_2d_radiative_integral_fraction_percent": 99.96878290423813
+    },
+    "caveat": "Center-only Bnp proxy is not 2D recombination integral, causality or calibrated IQE. Nominal centers derived from source layering; GUI region label not re-probed.",
+    "next": "Use existing equilibrium/bias Ec, Ev, quasi-Fermi and polarization charge profiles at matched Y=1.0um to investigate both-carrier accumulation toward QW4. No new run or code edits."
   }
 }

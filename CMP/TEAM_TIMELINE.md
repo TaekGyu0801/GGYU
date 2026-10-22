@@ -1,3 +1,7 @@
+## 2026-10-22 — 주수빈 A/B 준비 역할 선택 (USER-APPROVED WORK DIRECTION; DESIGN ONLY)
+- 주수빈은 이택규의 V2.1 Baseline 검증과 중복하지 않고 Project A/B 물리 모델, Edge 영역/재료 설계, 평가 지표/DOE를 준비하기로 동의. 이택규의 명시적 전담 합의는 미확인.
+- 제안 설계 문서: `members/JuSubin/PROJECT_AB_PREPARATION_20261022.md`. A: localized GaN:C resistive edge, B: localized AlGaN heterobarrier; 고정 sidewall trap과 matched-current 평가. 기존 실 소자/코드 변경 없음. Next: V2.1 SDE Edge/Bspan read-only audit.
+
 ## 2026-10-22 — 이택규 n6 Trap ON SVisual Radiative 공간 화면 확보 (OBSERVED IMAGE)
 - V2.1 SVisual에서 `n6_end_des` RadiativeRecombination (x depth~0–0.45um, y lateral~1.2–2.0um) 사용자 스크린샷 확인. MQW radiative bands 및 약 x0.26um 강한 띠 표시; legend 최고치 약 5.02e24 cm^-3 s^-1.
 - 기존 n2 화면과 육안 비교하기 전에 color scale과 ROI를 동일하게 해야 함. 스크린샷만으로 trap 인과, 동일 전류 IQE/물리 보정, 저장 TDR 바이어스 확정 불가. 다음: n2/n6 공통 legend/ROI로 화면 비교 후 전류 정규화 및 별도 Full/Half 검증. No TCAD changes.

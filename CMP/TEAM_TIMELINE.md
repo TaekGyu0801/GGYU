@@ -1,3 +1,8 @@
+## 2026-10-22 — 주수빈 Project B first nominal band-alignment preflight complete (OBSERVED+DERIVED; NO RUN)
+- Actual V2.1 pp2_des.par: GaN Eg0/Chi0 = 3.4376/4.1000 eV, InGaN 2.8569/4.5065 eV; previous AlGaN 3.7564/3.8768 eV, all Tpar300K. Corresponding nominal affinity-rule GaN→AlGaN electron/hole barriers 0.2232/0.0956 eV; InGaN→AlGaN 0.6297/0.2698 eV. This ignores polarization, charge, actual bending, heterointerface effects and bias; not validated TCAD Ec/Ev.
+- Initial Project B pilot geometry proposed after freeze: Bspan3, xAlB0.15, Wedge0.1um, Dmg0.005um unchanged; paired against same-Trap Bspan0 control at matched current. xAlB composition sweep deferred pending effective Eg/Chi model consistency. The 0.1um QW edge material-replacement portion is 5% of 2um half width.
+- Project B design-preparation core inspection complete; next verify Lee's finished frozen-baseline source/mesh/provenance, then make separate versioned Project B clone → geometry/mesh/alloy smoke → 1 pilot electrical case and band/polarization/carrier/trap-region audit. Do not alter baseline. Detail in members/JuSubin/PROJECT_B_PLAN_20261022.md.
+
 ## 2026-10-22 — JuSubin Project B active V2.1 Bspan/Edge code hooks verified (OBSERVED USER TERMINAL)
 - User ran READ-ONLY `grep -nEi 'Bspan|Wedge|Wdmg|AlGaN|Aluminum|Edge_|Dmg_' sde_dvs.cmd pp1_dvs.cmd | head -n 140` in actual school server directory `/user/semi/semi437/CMP_BASELINE_2.0.0_V2`; source and preprocessed SDE printouts matched semantic definitions.
 - OBSERVED `sde_dvs.cmd`: Wdmg=0.005um (line38); Wedge=`@Wedge@` line39; Bspan=`@Bspan@` line45; `Xd=Xs-Wdmg`, `Xe=Xd-Wedge` lines54–55. Actual `pp1_dvs.cmd` has Wedge=0.1um and Bspan=0 (lines39,45).

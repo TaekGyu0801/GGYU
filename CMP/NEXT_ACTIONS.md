@@ -1,3 +1,7 @@
+## 2026-10-22 — n2 eDensity same-cut QW-depth graph achieved; prioritize quantitative physics
+- User SVisual same lateral Cutline_Y Y≈1.3um eDensity depth X≈0.14–0.29um now resolves four peaks ~0.19/.215/.24/.265um, deepest strongest visually, similar qualitative hDensity pattern. Exact peak-to-QW mapping and electron-hole spatial overlap unmeasured, QW4 radiative share 99.97% not causally explained.
+- NEXT highest value: use existing QW-region definitions/integrals to verify physical region correspondence and broad reasonableness of extreme QW4 radiative localization, rather than repeat chart zoom/restarts. Existing n2/n6 3.6V PLT comparison and provisional planar J are available; separate protected 4um Full/2um Half comparator after Half physics gate. No current simulation rerun.
+
 ## 2026-10-22 — eDensity Cutline_Y exists; reset graph X range
 - OBSERVED user SVisual screenshot `eDensity(C2(n2_end_des))` on Cutline_Y at lateral Y~1.3um. Switching scalar reset horizontal depth X plot window to 0..4.288um so QW region is compressed.
 - NEXT: right XY plot horizontal X axis Fixed Min=0.14 and Max=0.29um. Inspect four-QW eDensity peak profile and compare with already acquired hDensity; do not interpret current full-depth eDensity graph as a resolved QW comparison. Existing Half calculations untouched.

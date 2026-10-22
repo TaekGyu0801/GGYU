@@ -1,5 +1,29 @@
 {
-  "leeTaekGyuAreaFactorGrep20261022": {
+  "leeTaekGyuAreaFactorNoOverrides20261022": {
+    "worker": "이택규",
+    "date": "2026-10-22",
+    "status": "OBSERVED_USER_REPORTED_NO_MATCHES; PROVISIONAL_PLANAR_2D_J",
+    "command": "grep -niE 'AreaFactor|Cylindrical|CoordinateSystem' pp2_des.cmd pp6_des.cmd pp2_des.par pp6_des.par",
+    "observed": "User reports no terminal output (no matching explicit settings in these files)",
+    "source": "user-shared server execution report; Synopsys training sd_3.html for default 1 um 2D width",
+    "assumptions": [
+      "2D planar device with default 1 um out-of-plane width",
+      "Half lateral anode contact span 2 um; requires contact verification",
+      "Use native current corresponding to 1um effective width"
+    ],
+    "areaCm2": 2e-8,
+    "raw3p6V": {
+      "n2": 3.64728525e-8,
+      "n6": 9.21970771e-9
+    },
+    "conditionalJ_Acm2": {
+      "n2": 1.823642625,
+      "n6": 0.4609853855
+    },
+    "caveat": "Not actual calibrated J for 4 um circular microLED; current unit convention, contact span and Full/Half equivalence require further check",
+    "next": "Read actual SDE anode set-contact geometry then assess J/QW4 plausibility and run separate Full comparator after Half validation."
+  },
+"leeTaekGyuAreaFactorGrep20261022": {
     "worker": "이택규",
     "date": "2026-10-22",
     "status": "OBSERVED_SEARCH_NO_EXPLICIT_AREAFACTOR; CURRENT_NORMALIZATION_UNRESOLVED",

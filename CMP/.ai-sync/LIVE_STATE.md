@@ -1,3 +1,7 @@
+## 2026-10-22 — JuSubin Bspan3 pp31 preprocessed file absent in clone (USER OBSERVED, NOT TCAD FAILURE)
+- User ran `bash -lc 'cd ... && grep -n "define Bspan" pp31_dvs.cmd && ls -lh n31_msh.tdr'` in `CMP_B0/CMP_BASELINE_2.0.0_V2`; grep reported **`pp31_dvs.cmd: No such file or directory`**. `&&` short-circuited `ls`, so n31 mesh not checked and SDE failure/run state remains unresolved.
+- Earlier SWB n31 parameter cell was white, n17 yellow. NEXT look at actual live n31 SWB scheduler status; only run isolated n31 SDE if ready/not queued. Keep source and other running nodes untouched. No physics/code changes.
+
 ## 2026-10-22 — 이택규 Kou 2019 benchmark at J20 flags low V2.1 injection and trap-direction differences
 - Worker reaffirmed: **이택규 Project A (carbon-induced high-resistivity GaN:C sidewall edge)**; 주수빈 Project B (AlGaN). Prevent mixing user ownership or claiming both are completed.
 - Primary reference Kou et al., *Impact of the surface recombination on InGaN/GaN-based blue micro-light emitting diodes*, Optics Express 27 A643-A653 (2019), DOI https://doi.org/10.1364/OE.27.00A643. Paper Section 2 vertical epitaxy: nGaN 4um donor 5e18 cm^-3, 4×In0.15Ga0.85N QW 3nm, barrier 22nm, EBL 26nm Al0.15Ga0.85N, pGaN 120nm, p-layer holes 3e17 cm^-3, p+ cap20nm, ~445nm. Most of intended V2.1 stack matches design dimensions, BUT actual pGaN free hole profile and optical ~445nm emission unverified; ours has changed contact/half setup and 4um nominal mesa.

@@ -1,3 +1,7 @@
+## 2026-10-22 — V2.1 n2 hDensity screenshot received; carrier-profile gate still open (OBSERVED)
+- User SVisual image: `n2_end_des` hDensity logarithmic map, legend ~1e-30 to 8.2788e19 cm^-3 and Y~0–2um; X vertical view far larger than MQW ~0.17–0.27um, preventing individual QW carrier assessment. Full-domain maximum should not be treated as any QW density. No finding of the cause of ~99.97% QW4 radiative integral share.
+- Next narrow vertical X~0.14–0.29um at entire 2um Y width, compare QW1–4 hDensity; then eDensity same view if needed. Still separate current-normalization/circular Full/Half model limitations. Existing output untouched.
+
 ## 2026-10-22 — JuSubin Project B active V2.1 Bspan/Edge code hooks verified (OBSERVED USER TERMINAL)
 - User ran READ-ONLY `grep -nEi 'Bspan|Wedge|Wdmg|AlGaN|Aluminum|Edge_|Dmg_' sde_dvs.cmd pp1_dvs.cmd | head -n 140` in actual school server directory `/user/semi/semi437/CMP_BASELINE_2.0.0_V2`; source and preprocessed SDE printouts matched semantic definitions.
 - OBSERVED `sde_dvs.cmd`: Wdmg=0.005um (line38); Wedge=`@Wedge@` line39; Bspan=`@Bspan@` line45; `Xd=Xs-Wdmg`, `Xe=Xd-Wedge` lines54–55. Actual `pp1_dvs.cmd` has Wedge=0.1um and Bspan=0 (lines39,45).

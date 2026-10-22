@@ -1,3 +1,7 @@
+## 2026-10-22 — 이택규 n2 hDensity second zoom screenshot; QW4 concentration unresolved
+- User zoomed n2_end_des hDensity map, legend still ~1e-30–8.279e19 cm^-3 (log). Four MQW strata visible at X depth~0.17–0.27um; lateral Y shown~1.0–1.65um, not sidewall Y~2.0um. Color is not an absolute per-well density diagnostic with vast auto range. QW4 radiative dominance from earlier PLT remains separate observation; carrier localization cause unknown.
+- NEXT reduce back-and-forth zooming: SVisual Cut Y at constant lateral Y~1.3um for hDensity vs depth X crossing MQW, then eDensity if required. Official training https://ghzphy.github.io/Sentaurus_Training/sv/sv_5.html. No TCAD code/simulation modification.
+
 ## 2026-10-22 — 이택규 n2 hole density overview image observed; zoom required
 - User screenshot SVisual T-2022.03 `n2_end_des` scalar `hDensity` (log legend about 1e-30..8.2788e19 cm^-3) entire lateral Y=0..2um; MQW vertical lines highly compressed in large X depth view.
 - Field is accessible but screenshot insufficient to establish QW-by-QW carrier concentration, QW4 mechanism or actual final saved bias. NEXT: axes X 0.14–0.29um, Y 0–2um, capture enlarged hDensity then match eDensity as needed; no edits/reruns.

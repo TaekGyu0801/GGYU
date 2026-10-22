@@ -1,3 +1,7 @@
+## 2026-10-22 — JuSubin Project B SDevice physical-model declaration observed (READ ONLY)
+- In original V2.1 `pp2_des.cmd` (Bspan=0 baseline), user confirmed `Piezoelectric_Polarization(strain activation=0.5)` and `Thermionic` blocks for InGaN/GaN, AlGaN/GaN and AlGaN/InGaN material interfaces. `pp2_des.par` contains AlGaN Bandgap block and `ThermionicEmission { Formula = 1 }` entries; content of Bandgap and full interface context not yet checked.
+- NEXT: `sed -n '1,34p' pp2_des.cmd` and `sed -n '108,176p' pp2_des.par`, read-only. Presence of declarations is NOT proof lateral Bspan>0 interface validity/polarization physics or performance. Keep baseline intact.
+
 ## 2026-10-22 — n2 Cutline_Y created; XY depth-axis range now the only action
 - User screenshot shows successfully generated `Cutline_Y Plot` / `hDensity(C2(n2_end_des))` at lateral Y~1.3um. Right XY x-axis still 0..4.288um, so four-QW carrier peaks are compressed at left edge. The Axis Properties panel already exposes fixed Min0 and Max4.288 for horizontal X axis.
 - NEXT FIRST: change those fields to Min=0.14 and Max=0.29um, leave both Fixed checked, apply Enter. Send a screenshot of right XY plot, then compare hDensity peaks across QW1–4 and eDensity at the same cut only if needed. No new TCAD run.

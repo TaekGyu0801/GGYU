@@ -23,7 +23,7 @@
     "limits": "Not a confirmed physical current density for circular 4um full device, no experimental or matched-current IQE validation; numeric Wm/Wdmg not in this latest snippet",
     "next": "No further redundant geometry grep; examine hDensity in SVisual at QW1..4 on n2_end, then eDensity if needed; physical plausibility check, separate Full/Half."
   },
-"leeTaekGyuContactSegments20261022": {
+  "leeTaekGyuContactSegments20261022": {
     "worker": "이택규",
     "date": "2026-10-22",
     "status": "OBSERVED_SDE_CONTACT_SOURCE; Xs_NUMERIC_CONTACT_SPAN_PENDING",
@@ -3540,5 +3540,30 @@
     "priority": "JuSubin Project B-only; earlier dual A/B preparation proposal superseded",
     "sourcePlan": "CMP/members/JuSubin/PROJECT_B_PLAN_20261022.md",
     "next": "Read-only verify actual V2.1 SDE Bspan Wedge Wdmg AlGaN Edge Dmg geometry and material assignments, then review Ec/Ev/strain/polarization and proposed pilot/DOE. Do not edit original baseline or launch simulations before freeze."
+  },
+  "juSubinProjectBActiveBspanInspection20261022": {
+    "worker": "주수빈",
+    "date": "2026-10-22",
+    "status": "OBSERVED_SCHOOL_TERMINAL_SOURCE_AND_PREPROCESSED_SDE",
+    "sourceProject": "/user/semi/semi437/CMP_BASELINE_2.0.0_V2",
+    "sourceCode": "sde_dvs.cmd",
+    "preprocessedCode": "pp1_dvs.cmd",
+    "Wedge_um": 0.1,
+    "Wdmg_um": 0.005,
+    "Bspan_active": 0,
+    "logic": {
+      "0": "No added AlGaN Edge material",
+      "1": "QW1..QW4 Edge to AlGaN",
+      "2": "QW1..QW4+B1..B3 Edge to AlGaN",
+      "3": "QW1..QW4+B0..B4 Edge to AlGaN"
+    },
+    "program": "in-Bspan? (name) controlling AlGaN material; MF_AlB profile applied for AlGaN Edge; Edge host doping by source comment",
+    "unverified": [
+      "MF_AlB actual Al fraction and composition profile",
+      "geometry and layering details beyond grep",
+      "validity of Bspan>0 actual preprocessing/mesh and physics",
+      "Ec/Ev, polarization and trap carrier-access outcomes"
+    ],
+    "next": "Read-only inspect pp1_dvs.cmd lines 65-145 and MF_AlB definition; no source/run changes"
   }
 }

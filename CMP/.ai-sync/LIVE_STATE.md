@@ -1,3 +1,7 @@
+## 2026-10-22 — Project B operational clone and pilot greenlit by JuSubin (PROPOSED, NOT RUN)
+- User instructed proceeding to Project B implementation TODAY while assuming V2.1 Baseline completed. This is NOT confirmation of current-density/Full-Half/physical validation, and no original V2.1 source can be overwritten.
+- Candidate new versioned project CMP_PROJECTB_1.0.0_ALBARRIER Save As parent; Bspan=3 in new SWB only, retain xAlB .15, Wedge .1um, damage .005um and same NtSide ON split. SDE geometry/mesh smoke then a single 3.6V ON pilot, preserving original parameters and source. NO ACTUAL SERVER RUN YET. Runbook CMP/members/JuSubin/PROJECT_B_IMPLEMENTATION_RUNBOOK_20261022.md.
+
 ## 2026-10-22 — Verified V2.1 epi stack implies QW positions matching h/eDensity cutline peaks (DERIVED)
 - GitHub read of prior JuSubin pp1_dvs.cmd source observations: pCap.020, pGaN.120, EBL.026, B0..B4 .022, each QW .003um; with top X=0 yields QW1=.188-.191, QW2=.213-.216, QW3=.238-.241, QW4=.263-.266um. User plotted e/h density peaks ~.190/.215/.240/.265um coincide with these expected layer windows at graph resolution.
 - Geometry alignment supports well-localized peaks qualitatively. It does not independently validate exact peak e/h values, full-domain electron-hole overlap, or cause of extreme QW4-integrated Radiative dominance. Leave Half code/run untouched; next meaningful step is physics benchmark/Full-Half reference as planned.

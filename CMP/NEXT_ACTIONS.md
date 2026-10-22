@@ -1,3 +1,7 @@
+## 2026-10-22 — Stop hDensity zoom loop; switch to MQW line profile
+- n2_end_des hDensity screenshot now resolves QW1–QW4 bands geometrically, but enormous logarithmic legend and lateral crop Y~1.0–1.65um mean per-QW hole density and sidewall gradients not established. Do not infer carrier accumulation or mechanism.
+- Next SVisual Select n2_end_des hDensity; choose Cut Y (constant lateral Y) around Y=1.3um, across X depth~0.14–0.29um; inspect resultant XY curve hole density vs depth for 4 wells. If needed display eDensity on same cut. Training source https://ghzphy.github.io/Sentaurus_Training/sv/sv_5.html. Preserve baseline.
+
 ## 2026-10-22 — n2 hDensity full view insufficient for QW-specific diagnosis
 - Image OBSERVED: SVisual `n2_end_des` `hDensity` on log palette, max legend 8.2788e19 cm^-3, QW strata are too compressed vertically to distinguish/compare 4 wells. Do not infer QW4 carrier accumulation from palette.
 - NEXT ONE ACTION: Plot Properties > Axes; narrow depth X 0.14–0.29um and lateral Y 0–2um; capture four QWs with hDensity log. Then consider matching eDensity/ROI cutline for quantitative mechanism check. Preserve TCAD runs.

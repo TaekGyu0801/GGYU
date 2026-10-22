@@ -1,3 +1,8 @@
+## 2026-10-22 — 이택규 n2/n6 AreaFactor override check negative, conditional planar J derived
+- User reported zero output from `grep -niE 'AreaFactor|Cylindrical|CoordinateSystem' pp2_des.cmd pp6_des.cmd pp2_des.par pp6_des.par`: no explicit 2D area/cylindrical overrides in scanned two preprocessed decks.
+- Prior n2/n6 logs `Use length unit of micrometer during currentplot integration` only describe integration convention. Published Sentaurus training describes 1um default depth in 2D; conditionally for 2um Half strip area A=2e-8cm²: I_n2=3.64728525e-8 -> J=1.82364 A/cm², I_n6=9.21970771e-9 -> J=0.460985 A/cm² at 3.6V.
+- Conditional planar equivalence only; true circular-LED current density / full device equivalence / active anode full-span contact unverified. Next quick read-only contact boundary review, physical plausibility gate, independent 4um Full/Half comparator. TCAD unchanged.
+
 ## 2026-10-22 — JuSubin Project A/B preparation started (PROPOSED DESIGN; NO TCAD RUN)
 - 주수빈의 사용자 결정: 이택규 Baseline V2.1 final checks와 중복 없이 Project A localized GaN:C resistive edge 및 Project B localized AlGaN lateral heterobarrier 사전 물리·설계 검토 시작. Lee's agreement to formal exclusive role assignment unconfirmed.
 - Written design/preflight plan: `members/JuSubin/PROJECT_AB_PREPARATION_20261022.md`. NEXT: read-only audit V2.1 `sde_dvs.cmd` / `pp1_dvs.cmd` Wedge/Bspan/Wdmg, Edge/Dmg materials; verify C model and AlGaN interfaces before SWB pilot. Baseline freeze, 2D AreaFactor and Full/Half gate still pending. No SDE/SDevice source, simulation or parameter change.

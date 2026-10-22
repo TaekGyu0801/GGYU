@@ -1,3 +1,7 @@
+## 2026-10-22 — 이택규 AreaFactor/current-unit first read-only grep (OBSERVED)
+- User ran `grep -niE 'AreaFactor|current unit|length unit|A/cm|A/um' pp2_des.cmd pp2_des.par n2_des.log n6_des.log`; only n2/n6 log line297: `Use length unit of micrometer during currentplot integration.`
+- No explicit AreaFactor or terminal-current units in searched files, so current normalization and absolute J remain UNRESOLVED. IntegrationUnit is not terminal current unit. Next verify both n2/n6 preprocessed cmd/par for AreaFactor/Cylindrical/CoordinateSystem and effective 2D z-thickness/contact width, using T-2022.03 reference before physical J assertion. TCAD unchanged.
+
 ## 2026-10-22 — 이택규 n6 Radiative SVisual spatial screenshot observed
 - User screenshot from SVisual T-2022.03: title `n6_end_des`, `RadiativeRecombination` legend top about 5.02e24 cm^-3 s^-1, x depth~0–0.45um and y lateral~1.2–2um. Multiple MQW horizontal radiative bands including pronounced ~0.26um band; qualitative only.
 - n2 SVisual screenshot had previously been observed, but shared plot legend and exact matched spatial ROI are not yet confirmed; do not quantify n2/n6 map comparison from colors. TDR bias, per-region QW integrals from image, absolute IQE, AreaFactor and physical causality still not proved. NEXT: matched plot scales/ROI + existing PLT quantitative interpretation; then current-normalization and Full/Half validation. No TCAD changes.

@@ -1,3 +1,7 @@
+## 2026-10-22 — 이택규 n6 Radiative SVisual spatial screenshot observed
+- User screenshot from SVisual T-2022.03: title `n6_end_des`, `RadiativeRecombination` legend top about 5.02e24 cm^-3 s^-1, x depth~0–0.45um and y lateral~1.2–2um. Multiple MQW horizontal radiative bands including pronounced ~0.26um band; qualitative only.
+- n2 SVisual screenshot had previously been observed, but shared plot legend and exact matched spatial ROI are not yet confirmed; do not quantify n2/n6 map comparison from colors. TDR bias, per-region QW integrals from image, absolute IQE, AreaFactor and physical causality still not proved. NEXT: matched plot scales/ROI + existing PLT quantitative interpretation; then current-normalization and Full/Half validation. No TCAD changes.
+
 ## 2026-10-21 — 이택규 n2 SVisual spatial radiative band screenshot (OBSERVED USER IMAGE)
 - Screenshot of n2_des scalar RadiativeRecombination at X depth~0–0.45um, Y lateral~1.2–2um shows pronounced radiative bands near 4QW positions incl. strong QW4 ~0.263–0.266um. Consistent with independently calculated PLT QW4 share ~99.9688%; cannot infer numerical percentages or full-domain profile from cropped color plot, nor verify final 3.6V from dataset label n2_des alone.
 - Next n6_end_des.tdr same field/view qualitative comparison. Avoid over-focus one mesh element; current normalization and Full/Half planned later. No source/run changes.

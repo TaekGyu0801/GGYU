@@ -1,3 +1,7 @@
+## 2026-10-22 — Contact assignment source reviewed; get Xs then move forward
+- pp1_dvs.cmd lines150-168 user output: anode top segments 0..Xe, Xe..Xd, Xd..Xs; bottom cathode at midpoint Xs/2 when Cath=0, Wshelf=0 (as previously observed). Exact span Xs numerical expansion pending; non-overlap/mesh result not established by code alone.
+- NEXT FAST ONE-SHOT READ ONLY: inspect start of `pp1_dvs.cmd` for `Xs/Xe/Xd/Wmesa/Wshelf/Wedge` definitions and active parameter values. After check, label J as planar conditional and move to physical QW4/J-V plausibility and independent 4um Full/2um Half validation. Avoid rerunning converged Half.
+
 ## 2026-10-22 — Both 2D control decks have no explicit AreaFactor/Cylindrical settings (user report)
 - `pp2_des.cmd pp6_des.cmd pp2_des.par pp6_des.par` grep yielded no matches for `AreaFactor|Cylindrical|CoordinateSystem`. Default planar 2D effective out-of-plane 1um appears applicable based on published Sentaurus training; do not confuse with `CurrentPlot` integration µm.
 - Using 2um Half width gives conditional planar equivalent J at 3.6V n2 1.82364 A/cm², n6 0.46099 A/cm²; effective anode contact span and physical circular reference remain unverified.

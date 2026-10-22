@@ -1,3 +1,7 @@
+## 2026-10-22 — 이택규 hDensity Cutline_Y depth ROI achieved, high peaks clipped
+- User SVisual screenshot: `n2_end_des` / `hDensity` vertical Cutline_Y C2 at lateral Y~1.3 µm; XY horizontal depth X fixed 0.14–0.29 µm, so QW-depth oscillations near X~0.17–0.27 µm are now visible. XY vertical density log axis top ~1e17 cm^-3 clips multiple peaks, bottom plotted very low. Neither QW-specific hole concentrations nor QW4 causal mechanism can be inferred from the present cropped peaks.
+- NEXT adjust **right XY vertical density** log-axis to Min1e10 Max1e20 cm^-3, leave horizontal depth X unchanged; collect screenshot and assess peaks, optionally eDensity same cut. Existing code and simulations unchanged.
+
 ## 2026-10-22 — JuSubin Project B SDevice physical-model declaration observed (READ ONLY)
 - In original V2.1 `pp2_des.cmd` (Bspan=0 baseline), user confirmed `Piezoelectric_Polarization(strain activation=0.5)` and `Thermionic` blocks for InGaN/GaN, AlGaN/GaN and AlGaN/InGaN material interfaces. `pp2_des.par` contains AlGaN Bandgap block and `ThermionicEmission { Formula = 1 }` entries; content of Bandgap and full interface context not yet checked.
 - NEXT: `sed -n '1,34p' pp2_des.cmd` and `sed -n '108,176p' pp2_des.par`, read-only. Presence of declarations is NOT proof lateral Bspan>0 interface validity/polarization physics or performance. Keep baseline intact.

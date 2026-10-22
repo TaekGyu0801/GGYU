@@ -1,3 +1,7 @@
+## 2026-10-22 — Cutline hDensity peaks clipped
+- User SVisual screenshot: n2_end_des hDensity(C2) Cutline_Y at lateral Y~1.3um. Right plot X-axis fixed 0.14–0.29um displays MQW-related peaks, but log hole-density vertical axis max 1e17cm^-3 clips several peaks. QW4-relative hole levels and mechanism remain unresolved.
+- NEXT: Set right XY vertical axis min1e10 max1e20cm^-3 (log), keep depth X range; inspect new screenshot. No simulation or source changed.
+
 ## 2026-10-22 — n2 hDensity Cutline_Y plot established
 - OBSERVED SVisual screenshot: a Cutline_Y Plot showing hDensity(C2(n2_end_des)) at lateral Y~1.3um is present. Graph depth X range 0..4.288um compresses the MQW peaks; left Axis Properties shows Min=0 and Max=4.288 as fixed. No per-QW hDensity values can yet be inferred.
 - NEXT: Set depth X axis Min=0.14 Max=0.29um for a QW-resolved hole-density line plot, then examine eDensity on the same cut if needed. TCAD sources/runs unchanged.

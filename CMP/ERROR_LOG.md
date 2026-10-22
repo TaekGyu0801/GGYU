@@ -1,3 +1,6 @@
+## 2026-10-22 — Shell Bash for-loop diagnostic workaround verified (RESOLVED)
+- Previous `for: Command not found.` occurred because command required Bash syntax, terminal shell likely csh/tcsh. User successfully reran exact read-only check with `bash -lc '...'`; output showed SDE n17 and Device n24. This was a shell-only issue, no TCAD code or run error. Do not repeat remediation.
+
 ## 2026-10-22 — Project B terminal diagnostic loop: `for: Command not found.`
 - Worker: 주수빈. Status: OBSERVED shell error, probable csh/tcsh compatibility; no TCAD error, simulation unaffected.
 - Server screenshot project: `/user/semi/semi437/CMP_B0/CMP_BASELINE_2.0.0_V2`. Bash `for n in ...; do ...; done` used in terminal; login shell emitted `for: Command not found.` before any intended loop checks.

@@ -3982,5 +3982,15 @@
       44
     ],
     "next": "Inspect copied SWB SDE n31 scheduler state first; if ready/unsubmitted select and Run SDE n31 only, else leave queued/running, capture failed node error; keep other SWB jobs untouched. After n31 mesh verify Bspan3 and material region."
+  },
+  "juSubinProjectB31MissingPreprocessed20261022": {
+    "worker": "주수빈",
+    "date": "2026-10-22",
+    "status": "OBSERVED_PP31_ABSENT; SDE_MESH_NOT_CHECKED; SCHEDULER_UNKNOWN",
+    "project": "/user/semi/semi437/CMP_B0/CMP_BASELINE_2.0.0_V2",
+    "terminal": "grep: pp31_dvs.cmd: No such file or directory",
+    "diagnosticCaveat": "In bash chain grep ... && ls n31_msh.tdr, ls was short-circuited so mesh presence was NOT checked",
+    "priorSWB": "n31 Bspan3 displayed white/non-yellow compared with n17 yellow Bspan1; stale screenshot can only suggest not complete",
+    "action": "Check current SWB n31 status; run SDE node 31 if ready/not already queued; if running leave alone; if failed inspect node error. No source changes."
   }
 }

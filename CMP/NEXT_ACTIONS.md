@@ -1,3 +1,8 @@
+## 2026-10-22 — Lee four-QW carrier center measurements complete (READ ONLY priority)
+- OBSERVED n2_end_des 3.6V, Y=1.0um h/e center probes for all four QWs (Lee TIMELINE for exact numerical values). Derived point n*p QW4/(QW1+QW2+QW3)≈3738.45; equal-B pointwise QW4 share 99.9733%, close to earlier QW4 integrated radiation 99.9688%. DO NOT equate center-point proxy with whole-device radiation or IQE.
+- NEXT 1: diagnose WHY both carrier densities rise ~300x by QW4, not repeat Probe: use existing n2_eq/n2_end Ec/Ev / QF / polarization-charge field profiles at lateral Y=1.0um, verifying correct field and material regions and QW1/QW4 alignment.
+- NEXT 2: validate geometry/unit/current conservation and region-integrated QW radiative/SRH/Auger, then matched-J Trap ON/OFF; preserve existing server runs and baseline code.
+
 ## 2026-10-22 — Lee Claude 독립 검토 후속 (PROPOSED; READ ONLY)
 1. n2_eq_des.tdr, n2_end_des.tdr 존재 및 SVisual 필드 이름부터 확인; y=1.0um x=0~0.40um Ec/Ev, polarization charge, QW별 n/p/QF cutline 점검.
 2. 실제 active 덱 vs SWB_PASTE SHA, n2/n6 gtree와 PLT 전체 I-V, 2D 단위, terminal current와 재결합 적분 전류 수지 확인.

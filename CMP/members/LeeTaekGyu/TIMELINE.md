@@ -1,3 +1,8 @@
+## 2026-10-22 — Lee V2.1 n2_eq SVisual Cut Y conduction band (OBSERVED USER SCREENSHOT; NO RUN)
+- User opened n2_eq_des and n2_end_des in Sentaurus Visual, selected ConductionBandEnergy in equilibrium n2_eq and generated Cutline Y plot. Screenshot's horizontal depth X~0.145–0.285um, displayed energy trend with four repeated notches/well-like band features near X~0.19, 0.215, 0.24, 0.265um. These appear consistent with four QWs, but exact Cut Y coordinate and region labels are not visible in the 1D screenshot and therefore remain UNVERIFIED.
+- A tilted/sawtooth-looking Ec under equilibrium is NOT proof of correct polarization sign, band offsets or physical calibration. It does NOT explain the 3.6V QW4 99.97% radiative share on its own.
+- NEXT READ ONLY: in n2_end_des (biased final state), select hDensity and make Cut Y at the same fixed Y~1.0um, depth X~0.14–0.29um; then eDensity, preferably logarithmic density axis. Check y coordinate in cutline properties. No TCAD source, run or parameters changed by AI.
+
 ## 2026-10-22 — Claude V2.1 독립 검토 인계 (USER-SUPPLIED, PROPOSED, 새 RUN 없음)
 - 작업자 이택규, Project A. Claude 판정 B: 구조 유지 + 필수 검증, 확신 중간 이하. 이는 검토 의견이지 검증 완료/베이스라인 확정 아님.
 - Claude 주장 근거: SWB_PASTE SHA256 prefix SDE 907d267c, SDevice c01ab2c1, PAR 826b63c7, LOG #01/#02, T-2022.03 UG pp.58–59,253,473,580. 서버 active 덱 동일 여부 및 n2/n6 PLT/TDR 원문 Claude 미확인; Wang 2023 원문만 접근 보고. 이번 인계에서 원 보고서와 원시 로그를 별도 검증하지 않음.

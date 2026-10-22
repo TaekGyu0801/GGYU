@@ -1,3 +1,7 @@
+## 2026-10-22 — n2 hDensity full view insufficient for QW-specific diagnosis
+- Image OBSERVED: SVisual `n2_end_des` `hDensity` on log palette, max legend 8.2788e19 cm^-3, QW strata are too compressed vertically to distinguish/compare 4 wells. Do not infer QW4 carrier accumulation from palette.
+- NEXT ONE ACTION: Plot Properties > Axes; narrow depth X 0.14–0.29um and lateral Y 0–2um; capture four QWs with hDensity log. Then consider matching eDensity/ROI cutline for quantitative mechanism check. Preserve TCAD runs.
+
 ## 2026-10-22 — JuSubin Project B active V2.1 Bspan/Edge code hooks verified (OBSERVED USER TERMINAL)
 - User ran READ-ONLY `grep -nEi 'Bspan|Wedge|Wdmg|AlGaN|Aluminum|Edge_|Dmg_' sde_dvs.cmd pp1_dvs.cmd | head -n 140` in actual school server directory `/user/semi/semi437/CMP_BASELINE_2.0.0_V2`; source and preprocessed SDE printouts matched semantic definitions.
 - OBSERVED `sde_dvs.cmd`: Wdmg=0.005um (line38); Wedge=`@Wedge@` line39; Bspan=`@Bspan@` line45; `Xd=Xs-Wdmg`, `Xe=Xd-Wedge` lines54–55. Actual `pp1_dvs.cmd` has Wedge=0.1um and Bspan=0 (lines39,45).

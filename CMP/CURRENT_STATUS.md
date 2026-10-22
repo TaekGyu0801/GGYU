@@ -1,3 +1,7 @@
+## 2026-10-22 — V2.1 n6 radiative spatial plot captured (OBSERVED; COMPARISON PENDING)
+- Sentaurus Visual user screenshot shows `n6_end_des` with `RadiativeRecombination`, depth X~0–0.45um and lateral Y~1.2–2um. Horizontal MQW radiative bands, prominent deep band ~X0.26um; legend upper value ~5.02e24 cm^-3 s^-1.
+- Observation is spatial/qualitative only. Prior n2 screenshot exists, but common legend range/ROI comparison is not demonstrated; n6 screen alone does not establish causal spatial trap suppression, per-QW integrals, the bias stored in the TDR, calibrated current density, or matched-current IQE. Next controlled plotting + current units/AreaFactor + separate Full/Half validation. No code/run changes.
+
 ## 2026-10-21 — V2.1 OFF/ON trap-output controlled comparison verified (OBSERVED)
 - n2 3.6V `IntegrTrap_all eGapStatesRecombination` raw=1.17883032026416e6, n6 raw=1.98258247754075e22. OFF is nonzero but ~1.68e16× smaller. Under conditional q×1e−12 conversion n2 trap=1.888694e−25 terminal equivalent (5.18e−18 fraction), n6 trap=3.176447e−09 (34.4528% fraction). n6 standard 3-channel plus trap ~99.99904% current closure.
 - Controlled trap split now supported by both preprocessed deck and actual outputs; still NOT proof of physical mechanism, true calibrated device efficiency, matched-current results or AreaFactor normalization. Continue broad Half current-density/physical plausibility gate, then independent professor-requested Full/Half comparison. No TCAD edits.

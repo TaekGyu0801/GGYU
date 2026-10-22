@@ -1,3 +1,8 @@
+## 2026-10-22 — Contact geometry relation validated enough for provisional 2D J; focus physical plausibility next
+- User terminal `pp1_dvs.cmd` shows Wshelf0 Wedge0.1, Xs=Wm/2, Xd=Xs-Wdmg, Xe=Xd-Wedge, Xend=Xs+Wshelf. Prior n1_msh.log shows 2um lateral width and anode top segmented across [0,Xs]. Zero AreaFactor/Cylindrical matches in preprocessed pp2/pp6.
+- Under 1um default planar depth from Sentaurus documentation, provisional 3.6V J_OFF~1.824, J_ON~0.461 A/cm2 (2um Half planar model only). No more repetitive grep required unless future contradictory data.
+- NEXT fast read-only SVisual: `n2_end_des.tdr`, plot `hDensity` on logarithmic scale across four QWs and sidewall; use `eDensity` second only as needed to interpret whether QW4 high Radiative reflects carrier accumulation. Preserve exact field/ROI names, screenshots are qualitative, not proof of causality. Subsequently compare with broad model/experimental benchmark and separate protected 4um Full/2um Half reference.
+
 ## 2026-10-22 — JuSubin's immediate Project B-only track (USER-DEFINED OWNER SPLIT)
 - 명시된 조건부 분업: Baseline freeze 이후 Lee→Project A, JuSubin→Project B. 이전 JuSubin A/B 동시 준비 제안을 JuSubin B-only 우선으로 대체. Lee의 직접 서면/채팅 승인 및 오늘 Baseline freeze 미확인.
 - JuSubin NOW (no new run): read-only `CMP_BASELINE_2.0.0_V2/sde_dvs.cmd` and `pp1_dvs.cmd`: Bspan, Wedge, Wdmg, AlGaN and Edge/Dmg region material/geometry references; map sidewall relative to damaged 5nm strip and 4×QWs. Then review both electron/hole offsets, polarization orientation, transport, and build one-pilot + Al fraction/width DOE proposal in `members/JuSubin/PROJECT_B_PLAN_20261022.md`.

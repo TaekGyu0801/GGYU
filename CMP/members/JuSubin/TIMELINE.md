@@ -1,3 +1,8 @@
+## 2026-10-22 — Project B Bspan3 n31 preprocess not found; execution status requires SWB check (OBSERVED)
+- User ran Bash read-only command against cloned `/user/semi/semi437/CMP_B0/CMP_BASELINE_2.0.0_V2`: `grep: pp31_dvs.cmd: No such file or directory`. Because it was chained by `&&`, `ls -lh n31_msh.tdr` did not execute. Thus **pp31 absent is observed**, while n31 mesh presence/absence and job/scheduler state are not proved by this call.
+- Earlier user SWB screenshot showed `Bspan=3 [n31]:3` as a white/uncompleted-looking cell, in contrast to yellow completed Bspan1 n17. This suggests n31 has not completed, but screenshot may be stale; do not claim it has failed.
+- NEXT inspect current SWB Bspan3 n31 scheduler state and start SDE n31 only if not queued/running, verify Bspan=3 in preprocessed pp31 and new n31 mesh before enabling Bspan3 device node. Don't modify source, interrupt n24, or repeat a completed run.
+
 ## 2026-10-22 — Project B 실행 로그 1차 검증 (USER OBSERVED; NOT COMPLETE)
 - 사용자 Bash wrapper 실행 성공. 경로 `/user/semi/semi437/CMP_B0/CMP_BASELINE_2.0.0_V2`에서 `pp17_dvs.cmd:45 (define Bspan 1)` 확인. `n17_msh.tdr` 존재(2.0M, Oct22 15:29). Bspan1 SDE mesh file OBSERVED (new mesh provenance/timestamp relative to user start plausible; region-level material inspection remains).
 - n24_des.log last lines show Newton iterations: Rhs 2.63e10 → 5.25e8 → 2.00e4, iterations 0/1/2, no finish status. This means SDevice iteration recorded, not convergence completion or definite live PID. n30, n38, n44 log files absent on check. n31 pp31_dvs.cmd matching Bspan and n31_msh.tdr not found by command; SDE Bspan3 may be queued, not submitted or failed; do not label fail without SWB scheduler.

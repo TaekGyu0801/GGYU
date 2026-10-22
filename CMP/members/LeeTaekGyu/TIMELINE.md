@@ -1,3 +1,8 @@
+## 2026-10-22 — V2.1 n6 RadiativeRecombination SVisual 화면 관찰 (OBSERVED USER SCREENSHOT)
+- 사용자 제공 Sentaurus Visual T-2022.03 화면: plot title `n6_end_des`, field `RadiativeRecombination` (legend `cm^-3 s^-1`), 표시 최고치 약 5.02e24. 표시 범위 x(depth) 대략 0~0.45 um, y(lateral) 대략 1.2~2.0 um.
+- MQW 위치에 복수의 수평 방사재결합 띠가 관찰되고, x 약 0.26 um 부근 강한 띠는 기존 n2 QW4-dominant 정량 관찰 및 n6 QW PLT 적분과 정성적으로 양립. 이 이미지 단독으로 QW별 적분값, 전역 profile, Trap의 인과효과, n2/n6 절대 강도 차이 또는 실제 TDR 저장 바이어스는 확정할 수 없음.
+- 화면의 auto/color legend 최대치만으로 n2 그림과 강도 비교 금지. 다음 n2/n6 동일 ROI, 동일 scaling/legend로 비교하고 기존 PLT의 정량 차이는 별도로 제시; 이어 2D current/AreaFactor 검증 후 Full/Half 별도 비교. TCAD 파일/solver/run 변경 없음.
+
 ## 2026-10-21 — n2 QW Radiative SVisual 이미지 확인 (OBSERVED)
 - 사용자가 n2_des 화면에서 RadiativeRecombination 선택한 스크린샷 제공. 측벽 인접 lateral Y~1.2–2.0um, 깊이 X~0–0.45um 범위의 MQW 및 QW4 부근 강한 밴드가 보임. 이전 PLT QW4 방사 재결합 1.523625e23 / 전체 1.52410078e23 = 약 99.9688%와 정성적 일치.
 - 화면은 전체 폭이 아닌 측벽 근처 부분만 나타내고, 제목 n2_des만으로 최종 TDR 바이어스는 확인 불가. 물리적 모델 타당성 검증 완료 아님.

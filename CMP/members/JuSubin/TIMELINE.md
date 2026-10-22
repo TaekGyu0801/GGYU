@@ -1,3 +1,9 @@
+## 2026-10-22 — JuSubin Project B SDevice material-interface model declarations observed (SERVER OUTPUT, NO B RUN)
+- User provided read-only `grep -nEi 'AlGaN|Piezoelectric_Polarization|Thermionic|MoleFraction|BandOffset|Bandgap' pp2_des.cmd pp2_des.par | head -n 90` from actual server `CMP_BASELINE_2.0.0_V2`.
+- OBSERVED: `pp2_des.cmd` line21 `Piezoelectric_Polarization( strain activation=0.5 )`; lines24-26 `Physics (MaterialInterface="InGaN/GaN") { Thermionic }`, `AlGaN/GaN`, `AlGaN/InGaN`. Lines59-67 requested `ConductionBandEnergy`, `ValenceBandEnergy`, `BandGap`, `ElectronAffinity`, `xMoleFraction` plot outputs. `pp2_des.par` line112 `Material = "AlGaN" { Bandgap {...}` start, lines166/169/172 `ThermionicEmission { Formula = 1 }` under relevant interface sections (verify exact headers via expanded excerpt).
+- Inference limited: these are present in baseline preprocessed n2 deck with **Bspan=0**; they DO NOT confirm correctness or runtime application of newly introduced lateral AlGaN interfaces at Bspan>0, orientation-dependent polarization charge, model parameter suitability, or Project B performance.
+- NEXT READ-ONLY: `sed -n '1,34p' pp2_des.cmd` and `sed -n '108,176p' pp2_des.par` to inspect effective AlGaN Bandgap, electron affinity, alloy interpolation and all Thermionic context. No code changes and no Project B simulation until verified Common Baseline freeze.
+
 ## 2026-10-22 — JuSubin Project B active V2.1 Bspan/Edge code hooks verified (OBSERVED USER TERMINAL)
 - User ran READ-ONLY `grep -nEi 'Bspan|Wedge|Wdmg|AlGaN|Aluminum|Edge_|Dmg_' sde_dvs.cmd pp1_dvs.cmd | head -n 140` in actual school server directory `/user/semi/semi437/CMP_BASELINE_2.0.0_V2`; source and preprocessed SDE printouts matched semantic definitions.
 - OBSERVED `sde_dvs.cmd`: Wdmg=0.005um (line38); Wedge=`@Wedge@` line39; Bspan=`@Bspan@` line45; `Xd=Xs-Wdmg`, `Xe=Xd-Wedge` lines54–55. Actual `pp1_dvs.cmd` has Wedge=0.1um and Bspan=0 (lines39,45).

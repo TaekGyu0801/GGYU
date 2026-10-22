@@ -1,3 +1,8 @@
+## 2026-10-22 — n6 Radiative plot opened; controlled n2/n6 spatial comparison next
+- OBSERVED user n6 SVisual screenshot: `n6_end_des`, RadiativeRecombination, x depth~0–0.45um and y lateral~1.2–2.0um, MQW horizontal bands, legend max 5.02e24 cm^-3 s^-1.
+- NEXT FIRST: open/re-display n2 and n6 with identical ROI, plot field and shared logarithmic legend color limits. Do not infer intensity differences from two auto-scaled color palettes; rely on existing quantitative QW PLT outputs for magnitude ratios. If practical compare each QW region spatially, without claiming causal trap current suppression.
+- Then read-only validate 2D terminal current scaling/AreaFactor using runtime/manual; after Half gate, independent preserved 4um Full-vs-2um Half comparator. No TCAD edits/re-runs at this step.
+
 ## 2026-10-21 n2 Radiative 화면 확인
 - 사용자 SVisual n2_des RadiativeRecombination 측벽 근처 MQW 화면 확보. QW4 강한 띠는 기존 PLT n2 QW4 Rad 99.9688% 우세와 정성 일치; 이미지 색상만으로 전역 분포/정량 비율/최종 바이어스 확증 불가.
 - NEXT: n6_end_des.tdr에서 같은 범위/스칼라 확인. Auto legend가 다르면 색의 절대 강도 직접 비교 금지. 그후 current normalization 확인 및 Full/Half.

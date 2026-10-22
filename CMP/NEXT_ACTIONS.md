@@ -1,3 +1,7 @@
+## 2026-10-22 — When reporting IQE distinguish QW-only and trap-inclusive full-device ratios
+- Existing 3.6V QW-only three-channel radiative fractions are n2 66.9624%, n6 67.7744%; these are not absolute IQE. From n6 global Rad/SRH/Aug/Trap PLT integrals trap-inclusive Rad/(all)=44.40959%, model recombination fraction (conditional IQE proxy), with ~34.453% in Trap channel. n2 global integrals not directly extracted, proxy n2 ~66.95–66.96% (QW rates and near-zero trap), not exact global ratio.
+- Do not claim trap causes an equal-current IQE reduction from equal-voltage 3.6V split. Further full-device physics/current verification and Full/Half baseline gate remain pending. Avoid computing new "IQE" from only QW three-channel ratio, or interpreting QW4 99.97% distribution as a percentage-point IQE loss. No TCAD source/run changes.
+
 ## 2026-10-22 — JuSubin fast Project B execution plan (USER AUTHORIZED, NOT RUN)
 - SWB File > Save As V2.1 to new CMP_PROJECTB_1.0.0_ALBARRIER; confirm new active project and project name availability. In copied SWB parameter table only set Bspan=3; Wedge .1um, xAlB .15, Wdmg .005um, NtSide splits/physics unchanged. Do not edit generated pp1_dvs.cmd directly.
 - Run NEW SDE node first; verify preprocessed pp1_dvs.cmd Bspan=3 and new n1_msh.tdr timestamp; in SVisual verify Edge_QW1..4 and Edge_B0..4 AlGaN and Clean/Dmg baseline material, unchanged contacts. Old copied results do not establish B pilot completion.

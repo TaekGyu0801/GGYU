@@ -1,3 +1,7 @@
+## 2026-10-22 — V2.1 current normalization gate: explicit AreaFactor not found (OBSERVED, UNRESOLVED)
+- User terminal searched `pp2_des.cmd pp2_des.par n2_des.log n6_des.log` for `AreaFactor|current unit|length unit|A/cm|A/um`; only log line297 in both n2 and n6: `Use length unit of micrometer during currentplot integration.`
+- This documents CurrentPlot integration length, not terminal-current unit or device-area definition. Absence of printed explicit AreaFactor in searched files does not independently validate A/cm² for 4um circular LED. Verify n6 preprocessed cmd/par and coordinate/cylindrical settings, plus Sentaurus default 2D width and contact area. Prior 3.6V terminal raw values remain OBSERVED; absolute J UNRESOLVED. No code/run change.
+
 ## 2026-10-22 — V2.1 n6 radiative spatial plot captured (OBSERVED; COMPARISON PENDING)
 - Sentaurus Visual user screenshot shows `n6_end_des` with `RadiativeRecombination`, depth X~0–0.45um and lateral Y~1.2–2um. Horizontal MQW radiative bands, prominent deep band ~X0.26um; legend upper value ~5.02e24 cm^-3 s^-1.
 - Observation is spatial/qualitative only. Prior n2 screenshot exists, but common legend range/ROI comparison is not demonstrated; n6 screen alone does not establish causal spatial trap suppression, per-QW integrals, the bias stored in the TDR, calibrated current density, or matched-current IQE. Next controlled plotting + current units/AreaFactor + separate Full/Half validation. No code/run changes.

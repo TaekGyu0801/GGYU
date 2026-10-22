@@ -1,3 +1,8 @@
+## 2026-10-22 — 이택규 actual V2.1 SDE anode contact segmentation observed
+- User pasted `pp1_dvs.cmd` lines150–168. Anode explicitly assigned to three top p+ cap edges via midpoints in intervals [0,Xe], [Xe,Xd], [Xd,Xs] (comment: whole mesa top Clean+Edge+Dmg). Cathode active for prior observed Cath=0 on bottom edge centered Xs/2; outer shelf bottom extra only if Wshelf>0 (prior live Wshelf0).
+- Supports geometry/source contact coverage, but numerical Xs span and actual mesh edge-length should be checked before treating 2um×1um as calibrated electrode area. Published 2D AreaFactor default 1um and current scaling: https://ghzphy.github.io/Sentaurus_Training/sd/sd_3.html.
+- NEXT: read geometry-defining Xs/Xe/Xd (brief pp1 grep), then finish priority Half physical audit/Full vs Half. No TCAD modification or new run.
+
 ## 2026-10-22 — 이택규 n2/n6 AreaFactor override check negative, conditional planar J derived
 - User reported zero output from `grep -niE 'AreaFactor|Cylindrical|CoordinateSystem' pp2_des.cmd pp6_des.cmd pp2_des.par pp6_des.par`: no explicit 2D area/cylindrical overrides in scanned two preprocessed decks.
 - Prior n2/n6 logs `Use length unit of micrometer during currentplot integration` only describe integration convention. Published Sentaurus training describes 1um default depth in 2D; conditionally for 2um Half strip area A=2e-8cm²: I_n2=3.64728525e-8 -> J=1.82364 A/cm², I_n6=9.21970771e-9 -> J=0.460985 A/cm² at 3.6V.

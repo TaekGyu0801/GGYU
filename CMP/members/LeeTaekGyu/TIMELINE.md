@@ -1,3 +1,9 @@
+## 2026-10-22 — n2 Cutline_Y hDensity 4QW peaks resolved (OBSERVED IMAGE, PEAK VALUES ESTIMATED)
+- User Sentaurus Visual Cutline_Y plot screenshot `hDensity(C2(n2_end_des))`, lateral Y~1.3um, depth X~0.14–0.29um, log density Y-axis ~1e10–1e20 cm^-3.
+- Four local hDensity peaks correspond spatially to QW depths ~X0.190, 0.215, 0.240, 0.265um (assignments based on prior V2.1 epitaxy). Approximate plot-read peak values QW1 ~9e18, QW2 ~1e19, QW3 ~2e19, QW4 ~8e19 cm^-3. These are graphical estimates, NOT numerically extracted SVisual data; actual per-region integrals/peak measurements remain unverified. Visible increasing hole-density trend and highest QW4 peak at this interior Y cut.
+- Previous independent n2 PLT QW4 radiative integral ~99.9688% of four-QW total; high QW4 hole peak is consistent with, but does not uniquely explain, such strong integrated radiative localization. Radiative rate depends also on electrons, overlap, material coefficients and spatial integration; one lateral line cannot establish whole-area mechanism.
+- NEXT: same Y~1.3um and depth X~0.14–0.29um plot `eDensity`; compare e/h spatial peak localization without touching source/solver. No simulation edits.
+
 ## 2026-10-22 — Cutline hDensity peaks clipped
 - User SVisual screenshot: n2_end_des hDensity(C2) Cutline_Y at lateral Y~1.3um. Right plot X-axis fixed 0.14–0.29um displays MQW-related peaks, but log hole-density vertical axis max 1e17cm^-3 clips several peaks. QW4-relative hole levels and mechanism remain unresolved.
 - NEXT: Set right XY vertical axis min1e10 max1e20cm^-3 (log), keep depth X range; inspect new screenshot. No simulation or source changed.

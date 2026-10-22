@@ -1,3 +1,7 @@
+## 2026-10-22 — 이택규 n2 eDensity QW-range cutline observed; both carrier peaks deepest-highest qualitatively
+- User screenshot `eDensity(C2(n2_end_des))` along lateral Y~1.3um with depth X~0.14–0.29um: four sharp electron-density peaks around ~0.19,0.215,0.24,0.265um, visually highest at deepest peak, with concentration rising toward n-side beyond it. Previous hDensity cutline had deepest peak highest.
+- These are image-level qualitative patterns, not exported point values nor verified well-versus-barrier assignment. Extreme n2 QW4 integrated radiative fraction ~99.9688% remains unexplained quantitatively: local h/e peaks alone do not prove 2D recombination causality. Skip repeat zooming; next targeted physical plausibility/region-alignment check, then protected Full/Half validation. No source/runs changed.
+
 ## 2026-10-22 — 이택규 n2 eDensity existing Cutline_Y plotted; X depth zoom reset
 - Screenshot `eDensity(C2(n2_end_des))` shows electron density on same lateral Cutline_Y C2 (~1.3um) as preceding hDensity analysis. Plot horizontal depth axis reset to X~0–4.288um after field switch; QW1–4 near depth X0.17–0.27um not yet individually resolved. No QW4 electron concentration or injection mechanism conclusion from screenshot.
 - NEXT set right XY horizontal X depth fixed Min0.14 Max0.29um and inspect electron peaks. Preserve SDevice runs and source; do not claim causality yet.

@@ -1,3 +1,7 @@
+## 2026-10-22 — n2_end probe X=0.265um hDensity 4.96786e18 (OBSERVED screenshot; NO RUN)
+- 이택규가 SVisual Probe At 창에 X=0.265um를 입력, Apply하여 n2_end_des 3.6V의 Y=1.0um Cut Y 두 곡선 동일 깊이에서 측정함. hDensity(Curve_1)=4.96786e18 cm^-3, eDensity(Curve_2)=3.00217e17 cm^-3 (user screenshot). Pointwise h>e; this location by itself does not confirm or reject any QW4-averaged carrier-imbalance hypothesis. True QW4 center/region bounds are not independently verified. Data values from GUI probe, not newly run simulation.
+- NEXT: verify QW4 actual X bounds using Regions/material/mesh, then probe at verified center and several QW centers at same lateral Y; compare region-integrated recombination. No deck/model modification.
+
 ## 2026-10-22 — Lee narrow QW4-adjacent probe x0.262955 observation (OBSERVED, no new run)
 - User clicked near green electron-density peak in n2_end_des 3.6V Cut Y at Y=1.0um. Probe shows X=0.262955um, hDensity=1.3111e13 cm^-3, eDensity=3.20976e12 cm^-3. This sample is near/before narrow spike, not verified QW4 peak or well center. Mouse selection is inadequate for peak extraction until exact region coordinate established. Next inspect SVisual Probe At dialog for precise X probing. No TCAD changes. Issue #7 comment 6337912698.
 

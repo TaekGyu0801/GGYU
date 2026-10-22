@@ -1,5 +1,21 @@
 {
-  "juSubinV21PhysicalValidation20261015": {
+  "leeTaekGyuN6RadiativeMap20261022": {
+    "worker": "이택규",
+    "date": "2026-10-22",
+    "state": "OBSERVED_SCREENSHOT",
+    "source": "User-supplied Sentaurus Visual T-2022.03 n6 plot screenshot",
+    "datasetTitle": "n6_end_des",
+    "field": "RadiativeRecombination",
+    "roi": {
+      "depthXum": "~0–0.45",
+      "lateralYum": "~1.2–2.0"
+    },
+    "legendTopCm3PerSec": "~5.02e24",
+    "observed": "MQW radiative bands including pronounced stripe near depth x~0.26um",
+    "limits": "Qualitative image only; matched n2/n6 common legend, stored TDR bias, calibrated current density, causal trap mechanism and matched-current IQE unverified.",
+    "next": "Render n2/n6 on identical field, ROI and logarithmic color scale; verify AreaFactor/2D terminal current units, then independently validate Full/Half. No TCAD source/run changes."
+  },
+"juSubinV21PhysicalValidation20261015": {
     "worker": "주수빈",
     "status": "OBSERVED_N2_ALL_THREE_RECOMBINATION_INTEGRALS_N6_PENDING",
     "targetProject": "CMP_BASELINE_2.0.0_V2",

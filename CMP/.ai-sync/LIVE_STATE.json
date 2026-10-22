@@ -3628,5 +3628,33 @@
     "caveat": "Bspan>0 AlGaN replaces QW lateral edge, not external coating; QW active volume change and interface band/polarization unverified",
     "proposedPilot": "Isolated Bspan=3 screening geometry first, xAlB=0.15 Wedge=0.1um after freeze; Bspan=1 comparison candidate; no run approved or made",
     "next": "Read only inspect detailed xAlB/physics/material parameters and then wait for frozen baseline provenance before cloning/running."
+  },
+  "juSubinProjectBPhysicsDeclarations20261022": {
+    "worker": "주수빈",
+    "date": "2026-10-22",
+    "status": "OBSERVED_BASELINE_PP2_SDEVICE_DECLARATIONS_BSPAN0_ONLY",
+    "project": "CMP_BASELINE_2.0.0_V2",
+    "activeCode": "pp2_des.cmd",
+    "polarization": "Piezoelectric_Polarization(strain activation=0.5)",
+    "thermionicMaterialInterfaces": [
+      "InGaN/GaN",
+      "AlGaN/GaN",
+      "AlGaN/InGaN"
+    ],
+    "paramsFile": "pp2_des.par",
+    "thermionicFormula": "Formula=1 for displayed interface sections",
+    "plotScalars": [
+      "ConductionBandEnergy",
+      "ValenceBandEnergy",
+      "BandGap",
+      "ElectronAffinity",
+      "xMoleFraction"
+    ],
+    "unknowns": [
+      "actual AlGaN bandgap/electron affinity numerical parameters",
+      "lateral new-interface polarization applicability",
+      "Bspan>0 preprocessing/simulation outcome"
+    ],
+    "next": "Read pp2_des.cmd lines1-34 and pp2_des.par lines108-176; original code/runs untouched; Project B clone only after baseline freeze."
   }
 }

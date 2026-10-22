@@ -1,3 +1,7 @@
+## 2026-10-22 — n2 Cutline_Y created; XY depth-axis range now the only action
+- User screenshot shows successfully generated `Cutline_Y Plot` / `hDensity(C2(n2_end_des))` at lateral Y~1.3um. Right XY x-axis still 0..4.288um, so four-QW carrier peaks are compressed at left edge. The Axis Properties panel already exposes fixed Min0 and Max4.288 for horizontal X axis.
+- NEXT FIRST: change those fields to Min=0.14 and Max=0.29um, leave both Fixed checked, apply Enter. Send a screenshot of right XY plot, then compare hDensity peaks across QW1–4 and eDensity at the same cut only if needed. No new TCAD run.
+
 ## 2026-10-22 — Stop hDensity zoom loop; switch to MQW line profile
 - n2_end_des hDensity screenshot now resolves QW1–QW4 bands geometrically, but enormous logarithmic legend and lateral crop Y~1.0–1.65um mean per-QW hole density and sidewall gradients not established. Do not infer carrier accumulation or mechanism.
 - Next SVisual Select n2_end_des hDensity; choose Cut Y (constant lateral Y) around Y=1.3um, across X depth~0.14–0.29um; inspect resultant XY curve hole density vs depth for 4 wells. If needed display eDensity on same cut. Training source https://ghzphy.github.io/Sentaurus_Training/sv/sv_5.html. Preserve baseline.

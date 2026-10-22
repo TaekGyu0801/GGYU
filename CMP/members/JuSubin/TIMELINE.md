@@ -1,3 +1,8 @@
+## 2026-10-22 — 주수빈 Project B 단독 담당 방향 명확화 (USER DECISION; PREPARATION STARTED)
+- 사용자 2026-10-22 명시: 오늘 Baseline 최종 검증/확정이 이루어질 경우, **이택규는 Project A(GaN:C), 주수빈은 Project B(AlGaN)로 분리 진행**한다. 이는 사용자 제공 분업 계획이며 이택규와의 독립적 직접 합의는 현재 채팅에서 검증되지 않음. Baseline freeze 사실도 아직 미확인.
+- 주수빈의 오늘 당장 작업은 Project B-only 기하/재료/물리 모델 사전 확인과 한 가지 pilot 및 후속 조성·폭 DOE 설계. 독립 계획 문서 `members/JuSubin/PROJECT_B_PLAN_20261022.md` 작성(PROPOSED). 이전 A/B 양쪽 검토 제안보다 최신 사용자 지정 분담을 우선한다.
+- FIRST SERVER ACTION: `CMP_BASELINE_2.0.0_V2` SDE 코드에서 Bspan/Wedge/Wdmg, AlGaN/Edge/Dmg region 생성 및 활성 preprocessing READ-ONLY 검사. 소자 코드/런 변경 없음. Baseline 확정 후 별도 versioned `CMP_PROJECTB_1.0.0_ALBARRIER` 후보 구현/short smoke; 확정 전 장시간 run 금지.
+
 ## 2026-10-22 — 주수빈 Project A/B 설계 준비 착수 (USER-APPROVED DIRECTION; PROPOSED DESIGN)
 - 주수빈이 이택규와 Baseline V2.1 최종 검증을 중복하지 않고 Project A(GaN:C 고저항 측벽 Edge), Project B(측벽 AlGaN lateral heterobarrier) 구현 준비에 집중하기로 선택. 이택규와의 상호 역할 승인/전담 확정은 아직 아님.
 - GitHub Phase #3/#4/#5, AI_SHARED_MEMORY_PROTOCOL 및 선행문헌을 기반으로 독립 설계 준비 문서 `members/JuSubin/PROJECT_AB_PREPARATION_20261022.md` 작성. 실제 Sentaurus 소스/런/새 프로젝트 생성 없음.

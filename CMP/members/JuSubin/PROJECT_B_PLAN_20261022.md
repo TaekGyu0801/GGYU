@@ -1,3 +1,24 @@
+## 2026-10-22 — JuSubin GaN/InGaN vs AlGaN band-parameter audit (OBSERVED + DERIVED; NO PROJECT B RUN)
+
+### Direct server evidence (read-only)
+Source: `CMP_BASELINE_2.0.0_V2/pp2_des.par`, user terminal `sed -n '1,85p' pp2_des.par` on 2026-10-22. `LatticeParameters: X=(0,0,-1), Y=(1,0,0)`; `Material=GaN`: Eg0=3.4376 eV, Chi0=4.1000 eV, alpha=9.09e-4, beta=830, Tpar=300 K; `Material=InGaN`: Eg0=2.8569 eV, Chi0=4.5065 eV, alpha=8.09e-4, beta=799, Tpar=300 K. Both displayed ConstantMobility(300,10), Scharfetter taumax=1e-7, Radiative C=2e-11, Auger A=5e-31. Previous actual `pp2_des.par` output: `AlGaN` Eg0=3.7564 eV, Chi0=3.8768 eV, Tpar=300 K; actual preprocessed SDE `xIn=xEBL=xAlB=0.15`, `Wedge=0.1um`, `Bspan=0`, `Wdmg=0.005um`.
+
+### Conditional analytic estimates (not Sentaurus solved band structure)
+Using electron-affinity/Anderson vacuum-reference rule at 300K with `Ec=-Chi`, `Ev=-Chi-Eg` and neglecting electrostatic potential, strain-induced changes, interface charges, polarization and local carrier redistribution:
+- GaN: Ec=-4.1000 eV, Ev=-7.5376 eV
+- InGaN: Ec=-4.5065 eV, Ev=-7.3634 eV
+- AlGaN: Ec=-3.8768 eV, Ev=-7.6332 eV
+- Going from GaN into AlGaN: nominal electron upward Ec=+0.2232 eV, hole downward Ev=0.0956 eV.
+- Going from InGaN into AlGaN: nominal electron upward Ec=+0.6297 eV, hole downward Ev=0.2698 eV.
+Neither is the actual 2D lateral barrier under bias. Do not claim physically validated sidewall confinement from numbers alone. Recombination and strain/polarization are model-dependent.
+
+### Practical design decision
+- The `Bspan=3, xAlB=0.15, Wedge=0.1um` case is an INITIAL PROPOSED geometry/material-substitution screening candidate, not a proven optimal design and **not yet launched**; `Bspan=0` with same sidewall trap and frozen source/mesh is the proper control. `Bspan=1` is a candidate for localization-range sensitivity, after basic smoke.
+- `Bspan>0` changes material in the lateral 100nm QW Edge, i.e. 5% of 2um half QW lateral width; compare corrected active region integral and absolute radiative emission at matched current as well as defect trap SRH, band-edge lateral cutlines and current crowding.
+- Previously audited `AlGaN` params have fixed scalar Eg0/Chi0 without explicit composition-dependent interpolation visible in displayed section. Don't vary `xAlB` as if bandgap/affinity automatically recalibrate; inspect runtime mole-fraction interpolation in T-2022.03 effective material parameters before alloy sweeps.
+- No TCAD code, SDevice input, new SWB project or simulation modified. Must check final Baseline frozen status/source provenance before independent Project B clone.
+- Today's prep work is now sufficiently defined: await verifiable freeze; then clone preserved baseline into independently named Project B, run separate preprocess/SDE mesh smoke for Bspan=3, inspect AlGaN Edge region xMoleFraction and new lateral Ec/Ev and polarization before running 3.6V ON trap comparison.
+
 ## 2026-10-22 — 주수빈 Project B AlGaN material / interface parameter block read (OBSERVED; sweep model warning)
 - Source: user terminal `sed -n '108,176p' pp2_des.par` at school-server `CMP_BASELINE_2.0.0_V2` (existing Bspan=0 baseline). `Material="AlGaN"`: Bandgap `Eg0=3.7564eV`, `Chi0=3.8768eV`, `alpha=1.043e-3`, `beta=925`, `Tpar=300K`; ConstantMobility `mumax=300,10`; Scharfetter `taumin=0,0`, `taumax=1e-7,1e-7`, `Nref=1e16`, `gamma=1`; Radiative `C=2e-11`; Auger `A=5e-31,5e-31`; PDopant and pMagnesium ionization species definitions, each `E_0=0.2eV`; ThermionicEmission Formula1 specified for InGaN/GaN, AlGaN/GaN, AlGaN/InGaN interfaces. User text, not project B runtime evidence.
 - INTERPRETATION: `Eg0` at `Tpar=300K` is reference-temperature parameter according to older Sentaurus UG; actual polarization, band offsets (Ec/Ev), and carrier injection are NOT validated from these scalars. Doping-dependent Scharfetter lifetime reduction cannot be inferred from parameters alone without enabled recombination dependence. `xAlB=0.15` was observed in pp1_dvs.cmd previously, but this par block shows only scalar Eg0/Chi0 and no explicit mole-fraction interpolation terms; **do not sweep xAlB and assume the material bandgap/affinity follow x** without checking effective per-region material parameters and SDevice material DB/interpolation method. Prioritize x=.15 fixed for initial structural pilot and verify parameterization before Al-fraction DOE.

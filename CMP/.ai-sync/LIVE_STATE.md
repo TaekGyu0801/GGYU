@@ -1,3 +1,7 @@
+## 2026-10-22 — JuSubin Project B SDevice physical-model declaration observed (READ ONLY)
+- In original V2.1 `pp2_des.cmd` (Bspan=0 baseline), user confirmed `Piezoelectric_Polarization(strain activation=0.5)` and `Thermionic` blocks for InGaN/GaN, AlGaN/GaN and AlGaN/InGaN material interfaces. `pp2_des.par` contains AlGaN Bandgap block and `ThermionicEmission { Formula = 1 }` entries; content of Bandgap and full interface context not yet checked.
+- NEXT: `sed -n '1,34p' pp2_des.cmd` and `sed -n '108,176p' pp2_des.par`, read-only. Presence of declarations is NOT proof lateral Bspan>0 interface validity/polarization physics or performance. Keep baseline intact.
+
 ## 2026-10-22 — 이택규 hDensity Cutline_Y correctly created, awaiting graph X zoom
 - User SVisual T-2022.03 screenshot explicitly shows vertical C2 cutline through `n2_end_des` at lateral Y approximately 1.3um, with right `Cutline_Y Plot` and `hDensity(C2(n2_end_des))`. XY graph horizontal X axis = full device depth 0..4.288um, compresses active MQW around X~0.17–0.27um. The Axis Properties left panel shows Min=0 Max=4.288, Fixed both.
 - NEXT no more cutline setup: set that graph's horizontal axis Min0.14 Max0.29um to inspect each QW hole-density peak. Screenshot does not yet establish QW4 carrier accumulation or carrier mechanism. No TCAD source/run modification.

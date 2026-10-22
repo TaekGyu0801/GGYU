@@ -1,3 +1,6 @@
+## 2026-10-22 — User authorizes provisional independent Project B implementation (NOT RUN)
+- JuSubin instructed to begin independent Bspan=3 AlGaN lateral barrier project on cloned V2.1, assuming baseline operationally frozen to save time, without claiming final scientific freeze. Implementation runbook CMP/members/JuSubin/PROJECT_B_IMPLEMENTATION_RUNBOOK_20261022.md. No server run or new outputs observed.
+
 ## 2026-10-22 — 이택규 n2 same-cut eDensity and hDensity profile comparison (OBSERVED)
 - `eDensity(C2(n2_end_des))` at lateral Y~1.3um, depth X~0.14–0.29um, displays four sharp peaks near ~0.19/0.215/0.24/0.265um, deepest visually strongest; prior hDensity cutline deepest peak also strongest. Region alignment/exact peak numeric values unverified. This suggests deep-side carrier enrichment but cannot prove mechanism underlying the n2 integrated QW4 radiative fraction ~99.97%.
 - Remaining validation: well/interface mapping, electron-hole overlap and physical plausibility; retain existing Half outputs, later Full/Half protected comparator. No code/run changes.

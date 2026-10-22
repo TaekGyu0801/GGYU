@@ -3758,5 +3758,52 @@
     ],
     "interpretation": "QW4 has highest hole density peak on this one cut. This may correlate with previous n2 QW4 ~99.97% radiative integral but does not prove root cause; electron overlap and 2D integration unverified.",
     "next": "Inspect n2_end_des eDensity on the same Y-constant cut and depth ROI; retain protected existing runs."
+  },
+  "juSubinProjectBBandOffsetAudit20261022": {
+    "worker": "주수빈",
+    "date": "2026-10-22",
+    "status": "USER_OBSERVED_MATERIAL_PARAMS_AND_DERIVED_NOMINAL_BAND_OFFSETS",
+    "source": "CMP_BASELINE_2.0.0_V2/pp2_des.par lines 1-85; AlGaN lines 108-176 from preceding terminal output",
+    "materialParamsAtTpar300_eV": {
+      "GaN": {
+        "Eg0": 3.4376,
+        "Chi0": 4.1
+      },
+      "InGaN": {
+        "Eg0": 2.8569,
+        "Chi0": 4.5065
+      },
+      "AlGaN": {
+        "Eg0": 3.7564,
+        "Chi0": 3.8768
+      }
+    },
+    "nominalVacuumReferencedEnergies_eV": {
+      "GaN": {
+        "Ec": -4.1,
+        "Ev": -7.5376
+      },
+      "InGaN": {
+        "Ec": -4.5065,
+        "Ev": -7.3634
+      },
+      "AlGaN": {
+        "Ec": -3.8768,
+        "Ev": -7.6332
+      }
+    },
+    "nominalAlGaNBarrierMagnitude_eV": {
+      "fromGaN": {
+        "electron": 0.2232,
+        "hole": 0.0956
+      },
+      "fromInGaN": {
+        "electron": 0.6297,
+        "hole": 0.2698
+      }
+    },
+    "interpretation": "Anderson/electron-affinity-rule estimates using Ec=-Chi and Ev=-Chi-Eg at nominal Tpar only, not actual bias-dependent polarized lateral interface band profile",
+    "decision": "PROPOSED xAlB0.15 Wedge0.1um Bspan3 first isolated structural smoke after verified Baseline freeze; Bspan0 same-trap control; xAl composition sweep deferred until verified effective compositional physics",
+    "next": "Confirm final baseline freeze and immutable source/mesh provenance, then separate versioned Project B clone/preprocess/mesh/SVisual alloy map and first single-case simulation"
   }
 }

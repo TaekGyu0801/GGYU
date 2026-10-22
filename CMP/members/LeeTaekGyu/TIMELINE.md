@@ -1,3 +1,9 @@
+## 2026-10-22 — AreaFactor/Cylindrical/CoordinateSystem 검색 무출력 (USER-REPORTED OBSERVED) 및 잠정 2D J 계산
+- 사용자: `grep -niE 'AreaFactor|Cylindrical|CoordinateSystem' pp2_des.cmd pp6_des.cmd pp2_des.par pp6_des.par` 실행 후 검색 결과가 없었다고 보고함. 직전의 `CurrentPlot` 로그 'length unit of micrometer'만 출력된 사실과 별도로, 유효 두께를 명시적으로 바꾼 설정은 검사 대상 전처리 덱에서 확인되지 않음.
+- Sentaurus Device 2D 기본 out-of-plane 1um 유효 폭은 공개 Synopsys Sentaurus training 설명과 부합 (https://ghzphy.github.io/Sentaurus_Training/sd/sd_3.html). 단, 최신 T-2022.03 runtime/전체 프로젝트 경로 전부를 독립 검증한 것은 아님.
+- Half planar y폭 2um과 1um 유효 두께, 전체 2um 상단 anode 접촉 및 native current가 1um depth 대응이라는 가정하에 A=2×10^-8 cm². 기존 3.6V raw I_n2=3.64728525e-8, I_n6=9.21970771e-9에서 조건부 J_n2=1.823642625 A/cm², J_n6=0.4609853855 A/cm².
+- 이 값은 planar-half의 conditional equivalent current density; circular 4um device에서의 calibrated J, AreaFactor 완전 입증, physical IQE 검증이 아님. 다음 최소 단계: 원본 SDE에서 anode 접촉 span 확인, 이후 Half 물리 모델 우선순위 검토 및 별도 Full/Half gate. 시뮬레이션/코드 변경 없음.
+
 ## 2026-10-22 — V2.1 n2/n6 AreaFactor grep 결과 (OBSERVED SERVER OUTPUT)
 - 학교 서버 `/user/semi/semi437/CMP_BASELINE_2.0.0_V2`에서 `grep -niE 'AreaFactor|current unit|length unit|A/cm|A/um' pp2_des.cmd pp2_des.par n2_des.log n6_des.log` 실행. 결과는 `n2_des.log:297: Use length unit of micrometer during currentplot integration.` 및 `n6_des.log:297: ...` 2줄뿐.
 - 명시적 `AreaFactor`/terminal current unit 표기는 위 검색 파일에서 발견되지 않음. `CurrentPlot` integration length 단위 µm는 terminal current 단위 검증이 아님.

@@ -3805,5 +3805,16 @@
     "interpretation": "Anderson/electron-affinity-rule estimates using Ec=-Chi and Ev=-Chi-Eg at nominal Tpar only, not actual bias-dependent polarized lateral interface band profile",
     "decision": "PROPOSED xAlB0.15 Wedge0.1um Bspan3 first isolated structural smoke after verified Baseline freeze; Bspan0 same-trap control; xAl composition sweep deferred until verified effective compositional physics",
     "next": "Confirm final baseline freeze and immutable source/mesh provenance, then separate versioned Project B clone/preprocess/mesh/SVisual alloy map and first single-case simulation"
+  },
+  "leeTaekGyuN2ElectronCutlineUnzoomed20261022": {
+    "worker": "이택규",
+    "date": "2026-10-22",
+    "status": "OBSERVED_eDENSITY_CUTLINE_X_AXIS_RESET",
+    "source": "User SVisual screenshot",
+    "dataset": "n2_end_des",
+    "plot": "eDensity(C2(n2_end_des)) on existing Cutline_Y at lateral Y about 1.3um",
+    "observation": "XY plot horizontal depth X was reset to 0–4.288um on field change; four MQW peaks cannot be analyzed in this frame",
+    "next": "Set XY plot horizontal depth X min=0.14 max=0.29um and compare to earlier hDensity Cutline_Y",
+    "tcadModified": false
   }
 }

@@ -1,3 +1,7 @@
+## 2026-10-22 — n2 hDensity enlarged QW map still not quantitatively diagnostic (OBSERVED)
+- User screenshot n2_end_des hDensity log global legend ~1e-30–8.279e19 cm^-3, four QW strata visibly separated in depth X~0.17–0.27um, but camera ROI lateral Y~1.0–1.65um excludes actual sidewall. Image cannot establish QW4 hDensity dominance or reproduce specific per-well carrier densities; broad 50-order magnitude color legend is not numeric field extraction.
+- Next use Sentaurus Visual Cut Y at Y~1.3um to produce hDensity vs depth X along MQWs, then compare eDensity at same cut if needed. Existing PLT radiative QW4 dominance independent of untested carrier mechanism. No TCAD edits/reruns.
+
 ## 2026-10-22 — JuSubin Project B material-substitution, region and mole-profile code observed (OBSERVED USER TERMINAL, NO RUN)
 - 주수빈 학교 서버 실물 `CMP_BASELINE_2.0.0_V2/pp1_dvs.cmd` lines60–145 발췌: stack pCap0.020, pGaN0.120, EBL0.026, B0..B4(each0.022), QW1..4(each0.003), nMesa dEtch. base-mat: qw→InGaN, ebl→AlGaN, else→GaN.
 - `in-Bspan?` is exact layer-selection logic: 1→QW1..4, 2→QW1..4+B1..B3, 3→QW1..4+B0..B4. `edge-mat` sets selected Edge layers to AlGaN. `mC=(base-mat role)`, `mE=(edge-mat name role)`, `mD=(base-mat role)`: selected Edge material changes but Clean and Dmg host material stay as baseline. `rect 0..Xe, Xe..Xd, Xd..Xs` creates all three regions at each layer; `dope-region` uses original role-based host dopant in Edge.

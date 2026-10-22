@@ -1,3 +1,7 @@
+## 2026-10-22 — 이택규 hDensity Cutline_Y correctly created, awaiting graph X zoom
+- User SVisual T-2022.03 screenshot explicitly shows vertical C2 cutline through `n2_end_des` at lateral Y approximately 1.3um, with right `Cutline_Y Plot` and `hDensity(C2(n2_end_des))`. XY graph horizontal X axis = full device depth 0..4.288um, compresses active MQW around X~0.17–0.27um. The Axis Properties left panel shows Min=0 Max=4.288, Fixed both.
+- NEXT no more cutline setup: set that graph's horizontal axis Min0.14 Max0.29um to inspect each QW hole-density peak. Screenshot does not yet establish QW4 carrier accumulation or carrier mechanism. No TCAD source/run modification.
+
 ## 2026-10-22 — 이택규 n2 hDensity second zoom screenshot; QW4 concentration unresolved
 - User zoomed n2_end_des hDensity map, legend still ~1e-30–8.279e19 cm^-3 (log). Four MQW strata visible at X depth~0.17–0.27um; lateral Y shown~1.0–1.65um, not sidewall Y~2.0um. Color is not an absolute per-well density diagnostic with vast auto range. QW4 radiative dominance from earlier PLT remains separate observation; carrier localization cause unknown.
 - NEXT reduce back-and-forth zooming: SVisual Cut Y at constant lateral Y~1.3um for hDensity vs depth X crossing MQW, then eDensity if required. Official training https://ghzphy.github.io/Sentaurus_Training/sv/sv_5.html. No TCAD code/simulation modification.

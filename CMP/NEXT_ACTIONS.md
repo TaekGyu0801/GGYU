@@ -1,3 +1,8 @@
+## 2026-10-22 — AreaFactor explicit grep negative; verify 2D default scaling and geometry
+- OBSERVED n2/n6 logs line297 both say `Use length unit of micrometer during currentplot integration.`, and no `AreaFactor`/terminal A unit text was returned from the searched pp2 cmd/par and n2/n6 logs.
+- NEXT read-only single check across `pp2_des.cmd pp6_des.cmd pp2_des.par pp6_des.par` for `AreaFactor|Cylindrical|CoordinateSystem` and if needed confirm 2D planar runtime, effective out-of-plane width and anode effective lateral contact span. Consult T-2022.03 manual; older official guide documents default 1um effective width but must not assume project or real circular mesa equivalent area from this grep.
+- Preserve n2/n6 V2.1 outputs; no rerun. Only then report clearly labeled planar-equivalent conditional J, not validated circular microLED J.
+
 ## 2026-10-22 — n6 Radiative plot opened; controlled n2/n6 spatial comparison next
 - OBSERVED user n6 SVisual screenshot: `n6_end_des`, RadiativeRecombination, x depth~0–0.45um and y lateral~1.2–2.0um, MQW horizontal bands, legend max 5.02e24 cm^-3 s^-1.
 - NEXT FIRST: open/re-display n2 and n6 with identical ROI, plot field and shared logarithmic legend color limits. Do not infer intensity differences from two auto-scaled color palettes; rely on existing quantitative QW PLT outputs for magnitude ratios. If practical compare each QW region spatially, without claiming causal trap current suppression.

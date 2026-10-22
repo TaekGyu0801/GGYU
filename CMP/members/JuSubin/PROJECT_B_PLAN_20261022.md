@@ -1,3 +1,10 @@
+## 2026-10-22 — JuSubin Project B material-substitution, region and mole-profile code observed (OBSERVED USER TERMINAL, NO RUN)
+- 주수빈 학교 서버 실물 `CMP_BASELINE_2.0.0_V2/pp1_dvs.cmd` lines60–145 발췌: stack pCap0.020, pGaN0.120, EBL0.026, B0..B4(each0.022), QW1..4(each0.003), nMesa dEtch. base-mat: qw→InGaN, ebl→AlGaN, else→GaN.
+- `in-Bspan?` is exact layer-selection logic: 1→QW1..4, 2→QW1..4+B1..B3, 3→QW1..4+B0..B4. `edge-mat` sets selected Edge layers to AlGaN. `mC=(base-mat role)`, `mE=(edge-mat name role)`, `mD=(base-mat role)`: selected Edge material changes but Clean and Dmg host material stay as baseline. `rect 0..Xe, Xe..Xd, Xd..Xs` creates all three regions at each layer; `dope-region` uses original role-based host dopant in Edge.
+- `MF_AlB` constant `xMoleFraction=xAlB` in `mole-region` for AlGaN with role≠ebl; existing EBL uses separate `MF_EBL=xEBL`. **Actual numerical xAlB, xEBL, xIn and all other variables were NOT in lines60–145, still require earlier pp1_dvs.cmd header.**
+- Verified geometry is in-mesa host semiconductor Edge replacement, NOT added exterior conformal sidewall coating. Existing InGaN QW Edge area becomes AlGaN, potentially changing emissive area, carrier injection, band interfaces/polarization; unchanged 5nm Dmg physical region does not mean recombination unchanged under applied bias. No performance conclusion.
+- NEXT: READ-ONLY `sed -n '23,59p' pp1_dvs.cmd` plus `grep -nEi 'xAlB|xEBL|xIn|MF_AlB|define.*P' pp1_dvs.cmd` to verify active composition values and coordinate transform; no file edits, no Bspan>0 run until baseline freeze and isolated test. Bspan3 continuous MQW+all barriers is a **PROPOSED candidate**, not decided or demonstrated superior; Bspan1 limited-scope alternative.
+
 # Project B — Localized AlGaN Lateral Heterobarrier: JuSubin Day-1 plan (2026-10-22)
 
 - Worker: 주수빈 (ChatGPT-assisted)

@@ -13,7 +13,7 @@
     "interpretation": "CurrentPlot integration length unit does not define terminal current unit. No calibrated 4um circular LED current density conclusion.",
     "next": "Read-only check both pp2 and pp6 preprocessed .cmd/.par for AreaFactor, Cylindrical, CoordinateSystem; reconcile 2D effective width with actual contacts and T-2022.03 manual; avoid rerunning existing V2.1."
   },
-"leeTaekGyuN6RadiativeMap20261022": {
+  "leeTaekGyuN6RadiativeMap20261022": {
     "worker": "이택규",
     "date": "2026-10-22",
     "state": "OBSERVED_SCREENSHOT",
@@ -29,7 +29,7 @@
     "limits": "Qualitative image only; matched n2/n6 common legend, stored TDR bias, calibrated current density, causal trap mechanism and matched-current IQE unverified.",
     "next": "Render n2/n6 on identical field, ROI and logarithmic color scale; verify AreaFactor/2D terminal current units, then independently validate Full/Half. No TCAD source/run changes."
   },
-"juSubinV21PhysicalValidation20261015": {
+  "juSubinV21PhysicalValidation20261015": {
     "worker": "주수빈",
     "status": "OBSERVED_N2_ALL_THREE_RECOMBINATION_INTEGRALS_N6_PENDING",
     "targetProject": "CMP_BASELINE_2.0.0_V2",
@@ -3463,5 +3463,14 @@
     "pending": "Inspect SVisual TDR QW4 dominance and 2D current normalization before Full/Half validation",
     "codeChanged": false,
     "rerun": false
+  },
+  "juSubinProjectABPreparation20261022": {
+    "worker": "주수빈",
+    "date": "2026-10-22",
+    "status": "PROPOSED_DESIGN_ONLY",
+    "userDecision": "Prepare Project A GaN:C resistive edge and Project B AlGaN lateral heterobarrier while Lee works on Baseline V2.1 validation (Lee exclusive-role consent unverified)",
+    "designPlan": "CMP/members/JuSubin/PROJECT_AB_PREPARATION_20261022.md",
+    "firstAction": "Read-only SDE current Wedge/Bspan/Wdmg/Edge/Dmg geometry and materials from school server; then carbon compensation model and AlGaN band offsets/polarization; no code edits or runs.",
+    "baselineGate": "AreaFactor, full/half, mesh/model validation and frozen baseline pending"
   }
 }

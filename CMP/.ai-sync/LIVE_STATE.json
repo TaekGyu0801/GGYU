@@ -4051,5 +4051,37 @@
     },
     "interpretation": "Stack broadly matched; sidewall OFF/ON radiative decrease trend compatible with literature, but forward current-density level at 3.6V materially below Kou J20 at V3.23–3.48 and defect-induced current-direction differs near Kou Fig3. Not direct same-device validation because size 4um vs 20/60/100, damaged width 5nm vs 4um, trap physics, contact layout, Auger and simulator differ. Actual IQE, EL wavelength 445nm, and dominant QW4 mechanism unresolved. Do not label baseline frozen or a calibrated Project A mechanism.",
     "next": "Read-only J-V bias window and physics/transport/contacts review; matched-J n2/n6 analysis; evaluate extreme QW4/Auger; Full/Half protected comparison. Project A pilot can be isolated exploratory only."
+  },
+  "leeTaekGyuKouOAAndInjectionCorrection20261022": {
+    "worker": "이택규",
+    "project": "Project A GaN:C",
+    "date": "2026-10-22",
+    "status": "SOURCE_VERIFIED_TERMINOLOGY_CORRECTED",
+    "source": "https://doi.org/10.1364/OE.27.00A643",
+    "officialArticleOpenAccess": true,
+    "officialHTMLFullTextRead": true,
+    "directPDFReadClaim": false,
+    "kouLateralSizesUm": [
+      20,
+      60,
+      100
+    ],
+    "kouFourUmRefersTo": "n-GaN vertical thickness, not lateral mesa",
+    "kouQWCount": 4,
+    "cmpMesaWidthUm": 4,
+    "cmp3p6VConditionalJ_Acm2": {
+      "trapOff": 1.823642625,
+      "trapOn": 0.4609853855
+    },
+    "meaning": "CMP has nonzero terminal current and radiative recombination. Comparison with Kou ~20Acm2 at 3.23–3.48V flags low forward current density for distinct structures and trap implementations, but no proved poor QW carrier injection efficiency or zero injection.",
+    "unknownCause": [
+      "geometry and contacts",
+      "barrier transport",
+      "Mg hole activation",
+      "polarization",
+      "series resistance",
+      "trap model"
+    ],
+    "next": "Verify integrated or spatial QW electron/hole current injection, band/quasi-Fermi and voltage drops using existing outputs; do not assert a specific root cause. No simulation edits."
   }
 }

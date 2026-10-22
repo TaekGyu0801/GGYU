@@ -1,3 +1,7 @@
+## 2026-10-22 — Both n2_end carrier Cut Y coordinates confirmed Y=1.0um (USER-REPORTED; NO NEW RUN)
+- 이택규가 Sentaurus Visual n2_end_des의 hDensity(C1) 및 eDensity(C2) Cut Y를 모두 lateral Y=1.0um로 맞추었다고 명시함. 스크린샷에 두 곡선이 QW 영역 depth X~0.14–0.29um에서 겹쳐 보이며, 네 개 well-adjacent carrier peaks가 시각적으로 확인됨. 정확한 QW별 전자/정공 숫자 및 방사 재결합 분포의 인과는 아직 미확인.
+- NEXT: SVisual data probe/export로 같은 Y=1.0um, 각 QW 중심의 n/p 숫자를 확인하고 원래 QW 방사 적분과 대조. 독립 시뮬레이션, 코드/파라미터 수정 없음.
+
 ## 2026-10-22 — Lee 3.6V n2_end dual-carrier Cut Y plot observation (OBSERVED screenshot; NO RUN)
 - n2_end_des SVisual 3.6V Cutline_Y screenshot: red hDensity(C1), green eDensity(C2) plotted against depth X~0.14–0.29 um in log units cm^-3. Four well-adjacent peaks visible; electron background increases and hole background decreases with depth toward n side. Exact sample Y positions for distinct C1 and C2 are not yet verified; no per-well numerical values, band/polarization conclusions or explanation of 99.97% QW4 radiative share established.
 - Next: verify C1 and C2 have identical fixed Y near 1um, then extract n/p at QW1–4 with numerical probe and reconcile with QW radiative integrals. Existing deck/results unchanged. Issue #7 comment 6337505672.

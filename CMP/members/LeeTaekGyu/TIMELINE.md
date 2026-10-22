@@ -1,3 +1,6 @@
+## 2026-10-22 — Lee narrow QW4-adjacent probe x0.262955 observation (OBSERVED, no new run)
+- User clicked near green electron-density peak in n2_end_des 3.6V Cut Y at Y=1.0um. Probe shows X=0.262955um, hDensity=1.3111e13 cm^-3, eDensity=3.20976e12 cm^-3. This sample is near/before narrow spike, not verified QW4 peak or well center. Mouse selection is inadequate for peak extraction until exact region coordinate established. Next inspect SVisual Probe At dialog for precise X probing. No TCAD changes. Issue #7 comment 6337912698.
+
 ## 2026-10-22 — Probe x0.26177 n2_end 3.6V density (OBSERVED USER SCREENSHOT; NO NEW RUN)
 - Sentaurus Visual n2_end_des, Cut Y at user-confirmed lateral Y=1.0um, numerical Probe depth X=0.26177um: red hDensity(Curve_1)=2.63775e13 cm^-3; green eDensity(Curve_2)=2.11675e12 cm^-3; h/e=~12.46 at THIS coordinate. Probe screenshot directly shows these numerical values.
 - WARNING: the selected vertical probe appears left of the rightmost narrow carrier peak; no demonstrated exact QW4 material center. Therefore values cannot yet confirm/refute Claude-derived QW4 carrier densities or explain QW4 ~99.97% radiative integral. Numeric readout reflects a single lateral cut, not the QW region-integrated recombination.

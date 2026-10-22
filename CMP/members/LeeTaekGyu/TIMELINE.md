@@ -1,3 +1,8 @@
+## 2026-10-22 — Probe x0.26177 n2_end 3.6V density (OBSERVED USER SCREENSHOT; NO NEW RUN)
+- Sentaurus Visual n2_end_des, Cut Y at user-confirmed lateral Y=1.0um, numerical Probe depth X=0.26177um: red hDensity(Curve_1)=2.63775e13 cm^-3; green eDensity(Curve_2)=2.11675e12 cm^-3; h/e=~12.46 at THIS coordinate. Probe screenshot directly shows these numerical values.
+- WARNING: the selected vertical probe appears left of the rightmost narrow carrier peak; no demonstrated exact QW4 material center. Therefore values cannot yet confirm/refute Claude-derived QW4 carrier densities or explain QW4 ~99.97% radiative integral. Numeric readout reflects a single lateral cut, not the QW region-integrated recombination.
+- NEXT read-only: use Probe at highest rightmost peak, then verify against QW region boundary/center; retain both n/p values at identical x,y. No TCAD edits or new runs.
+
 ## 2026-10-22 — Both n2_end carrier Cut Y coordinates confirmed Y=1.0um (USER-REPORTED; NO NEW RUN)
 - 이택규가 Sentaurus Visual n2_end_des의 hDensity(C1) 및 eDensity(C2) Cut Y를 모두 lateral Y=1.0um로 맞추었다고 명시함. 스크린샷에 두 곡선이 QW 영역 depth X~0.14–0.29um에서 겹쳐 보이며, 네 개 well-adjacent carrier peaks가 시각적으로 확인됨. 정확한 QW별 전자/정공 숫자 및 방사 재결합 분포의 인과는 아직 미확인.
 - NEXT: SVisual data probe/export로 같은 Y=1.0um, 각 QW 중심의 n/p 숫자를 확인하고 원래 QW 방사 적분과 대조. 독립 시뮬레이션, 코드/파라미터 수정 없음.

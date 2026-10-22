@@ -1,3 +1,7 @@
+## 2026-10-22 — n2 eDensity MQW-range Cutline observed; cause of 99.97% QW4 radiative unresolved
+- User SVisual `eDensity(C2(n2_end_des))` screenshot at lateral Y~1.3um, depth X~0.14–0.29um, shows four pronounced peaks near X~0.19,0.215,0.24,0.265um, deep-most visually greatest. Prior same-cut hDensity deeper peak greatest; their exact alignment with InGaN wells or adjacent interfaces and peak magnitudes are not independently verified.
+- A single 1D line cannot establish 2D region-integrated radiative causality. Previously observed QW4 share ~99.9688% (more than ~3,000x QW1–3 sum) remains a material physical plausibility question. Do not assert mechanism, absolute IQE, or calibrated 4um circular J. No TCAD change.
+
 ## 2026-10-22 — JuSubin GaN/InGaN vs AlGaN band-parameter audit (OBSERVED + DERIVED; NO PROJECT B RUN)
 
 ### Direct server evidence (read-only)

@@ -1,3 +1,9 @@
+## 2026-10-22 — Lee Claude 독립 검토 후속 (PROPOSED; READ ONLY)
+1. n2_eq_des.tdr, n2_end_des.tdr 존재 및 SVisual 필드 이름부터 확인; y=1.0um x=0~0.40um Ec/Ev, polarization charge, QW별 n/p/QF cutline 점검.
+2. 실제 active 덱 vs SWB_PASTE SHA, n2/n6 gtree와 PLT 전체 I-V, 2D 단위, terminal current와 재결합 적분 전류 수지 확인.
+3. 동일 J에서 Trap ON/OFF 비교 및 Project A carbon 대비 같은 damage-ON control 구성. 기존 모델 보호.
+4. 모형 변경·단일 변수 민감도는 사용자 결정 후. 2D stripe와 square geometry 차이 검증 필요. Claude 판정 B는 확정 freeze가 아님.
+
 ## 2026-10-22 — Lee Project A: 4um Baseline reference framework and IQE metric audit (SOURCE-VERIFIED, MODEL_UNCALIBRATED)
 - USER concern is scientifically valid: CMP V2.1 is a self-designed **hybrid representative 4um mesa** model, NOT Kou 2019 model reproduction (Kou laterals 20/60/100um). Kou's 4-QW In0.15/3nm, barrier22nm, EBL26nm and vertical GaN doping/thickness can serve as design-source EPI; Wu 2023 5nm acceptor sidewall is separate physical starting assumption. Neither supplies size-matched 4um TCAD efficiency benchmark, and 4um pitch JBD != verified mesa.
 - DIRECT real-size literature: Chen et al ACS Applied Electronic Materials 2024 DOI 10.1021/acsaelm.4c01540 fabricated 4x4um² blue LEDs, nitrogen treatment light output +97.29% at J25A/cm² (relative optical output, NOT IQE). Wang et al Nature Communications 2023 DOI 10.1038/s41467-023-43472-z fabricated 3.5x3.5um² blue, **16 MQWs** and NBE, peak **EQE** 37.5% around J3A/cm² (NOT 4-QW IQE). Also Ryu&Geum Opt Express 2026 DOI 10.1364/OE.580848 gives size-dependent SRV/diffusion length IQE framework, no literal equal-parameter benchmark. Validated 4um physical existence/trends, not a single exact device/parameter ground truth.

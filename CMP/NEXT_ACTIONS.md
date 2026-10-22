@@ -1,3 +1,9 @@
+## 2026-10-22 — JuSubin fast Project B execution plan (USER AUTHORIZED, NOT RUN)
+- SWB File > Save As V2.1 to new CMP_PROJECTB_1.0.0_ALBARRIER; confirm new active project and project name availability. In copied SWB parameter table only set Bspan=3; Wedge .1um, xAlB .15, Wdmg .005um, NtSide splits/physics unchanged. Do not edit generated pp1_dvs.cmd directly.
+- Run NEW SDE node first; verify preprocessed pp1_dvs.cmd Bspan=3 and new n1_msh.tdr timestamp; in SVisual verify Edge_QW1..4 and Edge_B0..4 AlGaN and Clean/Dmg baseline material, unchanged contacts. Old copied results do not establish B pilot completion.
+- After SDE passes choose actual new-project NtSide=1e18 Trap ON split (do not assume node number) and run unchanged SDevice ramp to 3.6V. Compare with baseline under same current after 2D normalization validation. No xAlB sweep.
+- Detailed runbook CMP/members/JuSubin/PROJECT_B_IMPLEMENTATION_RUNBOOK_20261022.md. Baseline physics/freeze remains unverified; research pilot proceeds only by user scheduling assumption.
+
 ## 2026-10-22 — n2 eDensity same-cut QW-depth graph achieved; prioritize quantitative physics
 - User SVisual same lateral Cutline_Y Y≈1.3um eDensity depth X≈0.14–0.29um now resolves four peaks ~0.19/.215/.24/.265um, deepest strongest visually, similar qualitative hDensity pattern. Exact peak-to-QW mapping and electron-hole spatial overlap unmeasured, QW4 radiative share 99.97% not causally explained.
 - NEXT highest value: use existing QW-region definitions/integrals to verify physical region correspondence and broad reasonableness of extreme QW4 radiative localization, rather than repeat chart zoom/restarts. Existing n2/n6 3.6V PLT comparison and provisional planar J are available; separate protected 4um Full/2um Half comparator after Half physics gate. No current simulation rerun.

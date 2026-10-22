@@ -3865,5 +3865,27 @@
     ],
     "limits": "Matches well locations at screenshot precision only; integrated QW4 ~99.9688% radiative causality, e*h spatial overlap and calibrated device baseline remain unproven.",
     "tcadChanged": false
+  },
+  "juSubinProjectBImplementationGreenlight20261022": {
+    "worker": "주수빈",
+    "date": "2026-10-22",
+    "status": "USER_AUTHORIZED_PROVISIONAL_PILOT_NOT_RUN",
+    "decision": "Proceed to independent Project B pilot TODAY by operationally assuming baseline finalized; scientific baseline freeze, full/half, J and QW4 validations remain unverified",
+    "parent": "/user/semi/semi437/CMP_BASELINE_2.0.0_V2",
+    "newCandidate": "CMP_PROJECTB_1.0.0_ALBARRIER",
+    "implementationMethod": "SWB File > Save As clone followed by SWB Bspan=3 in clone only, original Bspan=0 untouched; SDE geometry/mesh first then one SDevice Trap ON 3.6V pilot if SDE validates",
+    "settings": {
+      "Bspan": 3,
+      "Wedge_um": 0.1,
+      "xAlB": 0.15,
+      "Wdmg_um": 0.005,
+      "NtSide_On_cm3": 1000000000000000000
+    },
+    "physicsChanged": false,
+    "cloneCreated": false,
+    "sdeExecuted": false,
+    "sdeviceExecuted": false,
+    "runbook": "CMP/members/JuSubin/PROJECT_B_IMPLEMENTATION_RUNBOOK_20261022.md",
+    "next": "User performs SWB Save As to new named project, changes Bspan=3 and executes SDE node; share verified new folder and pp1/SDE output. Do not claim results before observed output."
   }
 }

@@ -1,3 +1,7 @@
+## 2026-10-22 — n2 hole-density depth cutline zoom succeeded; vertical y range clipping next
+- User SVisual image: `n2_end_des` `hDensity(C2(...))` Cutline_Y at lateral Y≈1.3 µm. Depth horizontal X=0.14–0.29 µm as requested, with multiple QW-related oscillations. Right XY vertical log density axis top=1e17 cm^-3 visibly clips peaks; quantitative relative QW concentrations cannot be read yet.
+- NEXT: select right cutline plot's vertical axis (not horizontal depth axis); fix log density Min=1e10, Max=1e20 cm^-3, retain current X zoom. Compare peak heights after screenshot; no extra SVisual zoom loop, no TCAD rerun. Do not assert QW4 cause from clipped plot.
+
 ## 2026-10-22 — JuSubin Project B SDevice physical-model declaration observed (READ ONLY)
 - In original V2.1 `pp2_des.cmd` (Bspan=0 baseline), user confirmed `Piezoelectric_Polarization(strain activation=0.5)` and `Thermionic` blocks for InGaN/GaN, AlGaN/GaN and AlGaN/InGaN material interfaces. `pp2_des.par` contains AlGaN Bandgap block and `ThermionicEmission { Formula = 1 }` entries; content of Bandgap and full interface context not yet checked.
 - NEXT: `sed -n '1,34p' pp2_des.cmd` and `sed -n '108,176p' pp2_des.par`, read-only. Presence of declarations is NOT proof lateral Bspan>0 interface validity/polarization physics or performance. Keep baseline intact.

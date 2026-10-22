@@ -1,3 +1,8 @@
+## 2026-10-22 — V2.1 AreaFactor override negative search and provisional planar J (USER REPORTED; CONDITIONAL)
+- 사용자 후속 `grep -niE 'AreaFactor|Cylindrical|CoordinateSystem' pp2_des.cmd pp6_des.cmd pp2_des.par pp6_des.par` 무출력 보고. 두 노드 preprocessed decks에서 해당 명시적 override는 발견되지 않음. 기존 로그 `CurrentPlot` µm 메시지는 적분 단위일 뿐.
+- 일반적인 Sentaurus 2D default effective depth=1um (Synopsys training)과 simulated Half lateral contact width=2um 가정: effective planar area 2um²=2e-8cm². 3.6V n2 raw current 3.64728525e-8 => provisional J=1.823642625 A/cm²; n6 9.21970771e-9 => 0.4609853855 A/cm². 실제 원형 4um LED 성능/물리적 J 확정 아님. 상단 contact span, current units and comparator geometry must still be considered.
+- No TCAD edits or simulations. Next validate anode contact span read-only, then physical assessment and independent Full/Half comparator.
+
 ## 2026-10-22 — V2.1 current normalization gate: explicit AreaFactor not found (OBSERVED, UNRESOLVED)
 - User terminal searched `pp2_des.cmd pp2_des.par n2_des.log n6_des.log` for `AreaFactor|current unit|length unit|A/cm|A/um`; only log line297 in both n2 and n6: `Use length unit of micrometer during currentplot integration.`
 - This documents CurrentPlot integration length, not terminal-current unit or device-area definition. Absence of printed explicit AreaFactor in searched files does not independently validate A/cm² for 4um circular LED. Verify n6 preprocessed cmd/par and coordinate/cylindrical settings, plus Sentaurus default 2D width and contact area. Prior 3.6V terminal raw values remain OBSERVED; absolute J UNRESOLVED. No code/run change.

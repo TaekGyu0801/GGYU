@@ -1,3 +1,7 @@
+## 2026-10-22 — JuSubin Bspan3 immediate actionable gate after missing pp31
+- Observed actual `grep: pp31_dvs.cmd: No such file or directory` in copied SWB folder. Because command used `&&`, n31 mesh check did NOT run; mesh absence is unverified. Prior SWB screenshot n31 white vs n17 yellow suggests n31 not completed.
+- NOW directly inspect Bspan3 n31 SWB current state. If ready, run SDE branch n31 only, not full device; if queued/running, preserve. If failed, open run/preprocess log first. After SDE completion check `pp31_dvs.cmd` Bspan3 and `n31_msh.tdr`, then move to SVisual material and Bspan3 SDevice splits. No deck edits based on this symptom.
+
 ## 2026-10-22 — Literature benchmark discrepancy: next physical injection validation (Lee / Project A)
 - Worker reaffirmed: **이택규 Project A (carbon-induced high-resistivity GaN:C sidewall edge)**; 주수빈 Project B (AlGaN). Prevent mixing user ownership or claiming both are completed.
 - Primary reference Kou et al., *Impact of the surface recombination on InGaN/GaN-based blue micro-light emitting diodes*, Optics Express 27 A643-A653 (2019), DOI https://doi.org/10.1364/OE.27.00A643. Paper Section 2 vertical epitaxy: nGaN 4um donor 5e18 cm^-3, 4×In0.15Ga0.85N QW 3nm, barrier 22nm, EBL 26nm Al0.15Ga0.85N, pGaN 120nm, p-layer holes 3e17 cm^-3, p+ cap20nm, ~445nm. Most of intended V2.1 stack matches design dimensions, BUT actual pGaN free hole profile and optical ~445nm emission unverified; ours has changed contact/half setup and 4um nominal mesa.

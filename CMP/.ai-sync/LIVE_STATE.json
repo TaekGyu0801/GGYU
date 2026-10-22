@@ -3666,5 +3666,21 @@
     "depthXAxisBeforeZoom": "0 to 4.288um",
     "next": "Set fixed depth X axis min 0.14 max 0.29um, get QW1..4 hole density graph; eDensity if required",
     "limits": "Current 4.288um full depth plot compresses QWs; no QW-specific density conclusion; source/run unchanged"
+  },
+  "leeTaekGyuN2HoleCutlineAxisClipped20261022": {
+    "worker": "이택규",
+    "date": "2026-10-22",
+    "status": "OBSERVED_CUTLINE_X_ZOOMED_BUT_VERTICAL_PEAKS_CLIPPED",
+    "dataset": "n2_end_des",
+    "field": "hDensity",
+    "cutLateralYum": "~1.3",
+    "depthXAxisUm": [
+      0.14,
+      0.29
+    ],
+    "densityYAxisLogTopCm3": 100000000000000000,
+    "observation": "Multiple peaks in QW depth region x~0.17-0.27 um are clipped at vertical axis top, so QW4 hole density relative ranking remains unresolved.",
+    "next": "Set Cutline_Y Plot vertical log density Min1e10 Max1e20 cm^-3, retain depth X 0.14..0.29um; inspect peaks.",
+    "simulationChange": false
   }
 }

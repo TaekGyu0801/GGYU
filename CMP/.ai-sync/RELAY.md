@@ -1,3 +1,9 @@
+## 2026-10-22 — 주수빈 Project A/B preparation handoff (DESIGN ONLY; NO DEVICE MODIFICATION)
+- 작업자: 주수빈 / AI: ChatGPT. 사용자 선택: 이택규의 V2.1 Baseline 최종 검증과 겹치지 않게 A(GaN:C Edge) 및 B(AlGaN lateral barrier) 물리/영역/DOE 사전 준비. 이택규의 전담 역할 동의는 확인되지 않음.
+- 상세 설계 준비 계획: `CMP/members/JuSubin/PROJECT_AB_PREPARATION_20261022.md`. 관련 Phase Issues #3/#4/#5. 새 SWB 프로젝트/코드/런 없음; 기존 Baseline/PLT/TDR 절대 수정 금지.
+- 실물 코드 경로: 학교 서버 `/user/semi/semi437/CMP_BASELINE_2.0.0_V2/sde_dvs.cmd`, `pp1_dvs.cmd` (CURRENT GitHub copy와 런 일치 미확인). 첫 작업: 기존 Wedge/Bspan/Wdmg, Edge/Dmg와 재료 할당 read-only 확인. C 농도→고저항 자동 등치 금지, AlGaN polarization/band offsets 검토. Baseline normalisation/Full-vs-Half blocker 유지.
+- 이미 한 일: GitHub 현행 프로토콜, A/B Issues, 2020 GaN:C deep-acceptor and 2025 microLED sidewall confinement literature reviewed; 최초 계획 문서 저장. 실패한 구현 접근: 없음, 구현 전.
+
 ## 2026-10-21 — V2.1 n6 3.6V 전체 재결합/Trap 전류 수지 99.9990% 확인 (USER-OBSERVED PLT; UNIT CONSISTENCY INFERRED)
 - 작업자 이택규가 학교 서버 n6_des.plt 마지막 행에서 직접 추출해 제공: bias=3.6V; IntegrTrap_all eGapStatesRecombination = 1.98258247754075e22, IntegrSRH_all srhRecombination = 4.32337288643595e21, IntegrRad_all RadiativeRecombination = 2.55552035945039e22, IntegrAug_all AugerRecombination = 7.83993596604716e21 (raw PLT integral data).
 - 이전 같은 행 Ianode=9.21970771e-09, Icathode=-9.21970771e-09, displacement=0. Earlier n6 four-QW 3-channel sum raw Rad=2.55545394e22 SRH=4.31092452e21 Aug=7.83986116e21.

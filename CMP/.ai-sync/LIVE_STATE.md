@@ -1,3 +1,7 @@
+## 2026-10-22 — 이택규 n2 hole density overview image observed; zoom required
+- User screenshot SVisual T-2022.03 `n2_end_des` scalar `hDensity` (log legend about 1e-30..8.2788e19 cm^-3) entire lateral Y=0..2um; MQW vertical lines highly compressed in large X depth view.
+- Field is accessible but screenshot insufficient to establish QW-by-QW carrier concentration, QW4 mechanism or actual final saved bias. NEXT: axes X 0.14–0.29um, Y 0–2um, capture enlarged hDensity then match eDensity as needed; no edits/reruns.
+
 ## 2026-10-22 — JuSubin Project B active V2.1 Bspan/Edge code hooks verified (OBSERVED USER TERMINAL)
 - User ran READ-ONLY `grep -nEi 'Bspan|Wedge|Wdmg|AlGaN|Aluminum|Edge_|Dmg_' sde_dvs.cmd pp1_dvs.cmd | head -n 140` in actual school server directory `/user/semi/semi437/CMP_BASELINE_2.0.0_V2`; source and preprocessed SDE printouts matched semantic definitions.
 - OBSERVED `sde_dvs.cmd`: Wdmg=0.005um (line38); Wedge=`@Wedge@` line39; Bspan=`@Bspan@` line45; `Xd=Xs-Wdmg`, `Xe=Xd-Wedge` lines54–55. Actual `pp1_dvs.cmd` has Wedge=0.1um and Bspan=0 (lines39,45).

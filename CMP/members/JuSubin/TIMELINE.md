@@ -1,3 +1,8 @@
+## 2026-10-22 — 주수빈 Project B 즉시 구현 계획 승인 (USER DECISION, RUN PENDING)
+- User requests today completing Project B implementation while operationally assuming Baseline frozen; this is NOT evidence of scientific freeze. Parent CMP_BASELINE_2.0.0_V2 remains protected.
+- NEW separate SWB ProjectB: CMP_PROJECTB_1.0.0_ALBARRIER, Save As parent, change Bspan0→3 in SWB only, Wedge0.1um, xAlB0.15, Wdmg0.005um, existing traps/physics unchanged. First SDE mesh, verify newly generated mesh and AlGaN QW/Barrier Edge, then Trap ON 3.6V pilot. School server clone/run NOT YET OBSERVED.
+- Execution plan: CMP/members/JuSubin/PROJECT_B_IMPLEMENTATION_RUNBOOK_20261022.md. Preserve source and provenance, do not assert baseline calibration or actual IQE.
+
 ## 2026-10-22 — JuSubin GaN/InGaN vs AlGaN band-parameter audit (OBSERVED + DERIVED; NO PROJECT B RUN)
 
 ### Direct server evidence (read-only)

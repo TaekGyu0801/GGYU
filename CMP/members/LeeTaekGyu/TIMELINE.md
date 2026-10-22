@@ -1,3 +1,13 @@
+## 2026-10-22 — Claude V2.1 독립 검토 인계 (USER-SUPPLIED, PROPOSED, 새 RUN 없음)
+- 작업자 이택규, Project A. Claude 판정 B: 구조 유지 + 필수 검증, 확신 중간 이하. 이는 검토 의견이지 검증 완료/베이스라인 확정 아님.
+- Claude 주장 근거: SWB_PASTE SHA256 prefix SDE 907d267c, SDevice c01ab2c1, PAR 826b63c7, LOG #01/#02, T-2022.03 UG pp.58–59,253,473,580. 서버 active 덱 동일 여부 및 n2/n6 PLT/TDR 원문 Claude 미확인; Wang 2023 원문만 접근 보고. 이번 인계에서 원 보고서와 원시 로그를 별도 검증하지 않음.
+- 다른 크기의 Kou J=20A/cm2 사례로 우리 3.6V 저전류를 injection failure라 단정하는 과거 해석 기각 제안. n_id~2.3은 Claude 보고값으로 독립 재계산 전.
+- QW4 전체 방사 기여 약 99.97%, Auger QW 3채널 약 27.5%는 기존 결과; Claude는 QW4가 n측 우물이며 n~1.6e19, p~8e16cm^-3이라고 DERIVED 제시하나 유도 원문 미제공, 독립 검증 전. CAL4V QW1 98.7% 비교도 reviewer-reported.
+- QW 3채널 rad/(rad+SRH+Auger)은 gap-state trap loss를 직접 포함하지 않음. Claude UG pp.253/473/580에 SRHRecombination 및 eGapStates/hGapStatesRecombination 구분을 인용(페이지 자체 재검증 안함). 전류와 적분 단위, 보존 확인 후 같은 J에서 q×QW 방사 적분 / 단자 전류 지표 비교 제안; 실측 IQE로 표현 금지.
+- 5nm Dmg는 2um Half 폭의 0.25%지만 n6 전류 1/4은 gtree 및 수치/비선형 depletion 검증 필요. 폭만으로 전류 감소가 불가능하다고 단정하지 않음. 2D stripe P/A 0.5/um vs 4x4 square 1.0/um. Equivalent S~1e4cm/s는 가정 v_th=2e7cm/s에 의존한 도출값이며 보정 전.
+- READ ONLY 다음: 기존 n2_eq_des.tdr 및 n2_end_des.tdr 존재/필드명 확인 후 y=1.0um x=0~0.40um cutline으로 polarization charge sign, Ec/Ev, hDensity/eDensity, 우물별 n/p, QF 검증. 이어 n2/n6 PLT와 bl2_check.py 전류 수지/동일 J 검증; gtree 차이 및 full I-V; 필요하면 승인받고 단일 변수 민감도. 논문 전 2D geometry 보정 검토. Claude cutV21.tcl 스크립트는 인계에만 언급, 원문 제공 안됨.
+- 판정 변경 조건은 제안: polarization 부호 또는 밴드 오프셋 확정 오류면 C 재평가. Claude의 qR/I<0.9 조건은 보편적 leakage 임계값이 아니므로 자동 C 판정 금지. 기존 코드/서버 런 변경 없음.
+
 ## 2026-10-22 — Lee Project A: 4um Baseline reference framework and IQE metric audit (SOURCE-VERIFIED, MODEL_UNCALIBRATED)
 - USER concern is scientifically valid: CMP V2.1 is a self-designed **hybrid representative 4um mesa** model, NOT Kou 2019 model reproduction (Kou laterals 20/60/100um). Kou's 4-QW In0.15/3nm, barrier22nm, EBL26nm and vertical GaN doping/thickness can serve as design-source EPI; Wu 2023 5nm acceptor sidewall is separate physical starting assumption. Neither supplies size-matched 4um TCAD efficiency benchmark, and 4um pitch JBD != verified mesa.
 - DIRECT real-size literature: Chen et al ACS Applied Electronic Materials 2024 DOI 10.1021/acsaelm.4c01540 fabricated 4x4um² blue LEDs, nitrogen treatment light output +97.29% at J25A/cm² (relative optical output, NOT IQE). Wang et al Nature Communications 2023 DOI 10.1038/s41467-023-43472-z fabricated 3.5x3.5um² blue, **16 MQWs** and NBE, peak **EQE** 37.5% around J3A/cm² (NOT 4-QW IQE). Also Ryu&Geum Opt Express 2026 DOI 10.1364/OE.580848 gives size-dependent SRV/diffusion length IQE framework, no literal equal-parameter benchmark. Validated 4um physical existence/trends, not a single exact device/parameter ground truth.

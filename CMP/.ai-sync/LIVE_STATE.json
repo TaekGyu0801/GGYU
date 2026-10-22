@@ -9,7 +9,7 @@
     "uncertainty": "Numerical Xs in actual preprocessed geometry not yet displayed; default 2D effective 1um AreaFactor supported by Synopsys training, not a calibrated 4um circular-LED equivalent current density",
     "next": "Read-only confirm active Xs/Xd/Xe, then conclude planar conditional J validation and proceed to QW4 physical plausibility/Full-Half protected validation."
   },
-"leeTaekGyuAreaFactorNoOverrides20261022": {
+  "leeTaekGyuAreaFactorNoOverrides20261022": {
     "worker": "이택규",
     "date": "2026-10-22",
     "status": "OBSERVED_USER_REPORTED_NO_MATCHES; PROVISIONAL_PLANAR_2D_J",
@@ -33,7 +33,7 @@
     "caveat": "Not actual calibrated J for 4 um circular microLED; current unit convention, contact span and Full/Half equivalence require further check",
     "next": "Read actual SDE anode set-contact geometry then assess J/QW4 plausibility and run separate Full comparator after Half validation."
   },
-"leeTaekGyuAreaFactorGrep20261022": {
+  "leeTaekGyuAreaFactorGrep20261022": {
     "worker": "이택규",
     "date": "2026-10-22",
     "status": "OBSERVED_SEARCH_NO_EXPLICIT_AREAFACTOR; CURRENT_NORMALIZATION_UNRESOLVED",
@@ -3506,5 +3506,15 @@
     "designPlan": "CMP/members/JuSubin/PROJECT_AB_PREPARATION_20261022.md",
     "firstAction": "Read-only SDE current Wedge/Bspan/Wdmg/Edge/Dmg geometry and materials from school server; then carbon compensation model and AlGaN band offsets/polarization; no code edits or runs.",
     "baselineGate": "AreaFactor, full/half, mesh/model validation and frozen baseline pending"
+  },
+  "juSubinProjectBOwnership20261022": {
+    "date": "2026-10-22",
+    "worker": "주수빈",
+    "status": "USER_DEFINED_PLAN_PREPARATION_STARTED_NOT_RUN",
+    "plan": "Once Baseline frozen, LeeTaekGyu is assigned Project A(GaN:C) and JuSubin Project B(AlGaN lateral barrier); user states division, Lee direct acceptance not independently verified",
+    "baselineFreeze": "NOT_YET_VERIFIED",
+    "priority": "JuSubin Project B-only; earlier dual A/B preparation proposal superseded",
+    "sourcePlan": "CMP/members/JuSubin/PROJECT_B_PLAN_20261022.md",
+    "next": "Read-only verify actual V2.1 SDE Bspan Wedge Wdmg AlGaN Edge Dmg geometry and material assignments, then review Ec/Ev/strain/polarization and proposed pilot/DOE. Do not edit original baseline or launch simulations before freeze."
   }
 }

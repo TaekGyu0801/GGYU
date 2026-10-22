@@ -1,3 +1,8 @@
+## 2026-10-22 — 이택규 Xs formula, Wshelf0, Wedge0.1 actual preprocessed SDE observed; physical MQW gate next
+- User pasted pp1_dvs.cmd lines37 39 53–56: `Wshelf=0.0`, `Wedge=0.1`, `Xs=Wm/2`, `Xd=Xs-Wdmg`, `Xe=Xd-Wedge`, `Xend=Xs+Wshelf`. Earlier SDE lines154–158 set top anode all Clean+Edge+Dmg segments; n1_msh.log actual 2um Half width. 4um Wm numeric was not in this grep, but mesh width corroborates target 2um.
+- With no explicit AreaFactor/Cylindrical in n2/n6 processed files and published 2D default 1um depth, provisional planar J 3.6V=1.82364 A/cm2 (n2 OFF),0.460985 A/cm2 (n6 ON) from existing PLT currents. NOT validated circular-device J or any IQE. This minimal setup audit is sufficient to proceed rather than repeat greps.
+- NEXT SVisual n2_end_des hDensity across four QW to assess QW4 dominant radiative spatial distribution; optionally eDensity; then physical plausibility benchmark and independent Full/Half. No TCAD edits or reruns.
+
 ## 2026-10-22 — JuSubin assigned Project B after Baseline freeze; starts preflight now (USER DECISION, DESIGN ONLY)
 - Explicit user plan: after verified Baseline acceptance, Lee handles Project A GaN:C, JuSubin handles Project B AlGaN. Replaces earlier JuSubin dual-A/B preparation priority. Lee direct acceptance and final Baseline-freeze event not independently observed.
 - Today's JuSubin B work: inspect active V2.1 `Bspan` / Edge material and sidewall 5nm boundary in SDE, define actual proposed AlGaN insertion ROI, validate polarization, Ec/Ev, electron/hole access, develop initial pilot and width/composition sweep conditional on source evidence. Plan: `members/JuSubin/PROJECT_B_PLAN_20261022.md`. No Sentaurus edits/runs or terminal access by this AI.

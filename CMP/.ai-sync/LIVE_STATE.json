@@ -3682,5 +3682,41 @@
     "observation": "Multiple peaks in QW depth region x~0.17-0.27 um are clipped at vertical axis top, so QW4 hole density relative ranking remains unresolved.",
     "next": "Set Cutline_Y Plot vertical log density Min1e10 Max1e20 cm^-3, retain depth X 0.14..0.29um; inspect peaks.",
     "simulationChange": false
+  },
+  "juSubinProjectBAlGaNParAudit20261022": {
+    "worker": "주수빈",
+    "date": "2026-10-22",
+    "status": "OBSERVED_PARSOURCE_ONLY_BSPAN0",
+    "file": "CMP_BASELINE_2.0.0_V2/pp2_des.par",
+    "Bandgap": {
+      "Eg0_eV": 3.7564,
+      "Chi0_eV": 3.8768,
+      "alpha": 0.001043,
+      "beta_K": 925,
+      "Tpar_K": 300
+    },
+    "ConstantMobility": {
+      "electron": 300,
+      "hole": 10
+    },
+    "Scharfetter": {
+      "taumin": 0,
+      "taumax_s": 1e-7,
+      "Nref_cm3": 10000000000000000,
+      "gamma": 1
+    },
+    "RadiativeC_cm3_s": 2e-11,
+    "AugerA_cm6_s": 5e-31,
+    "ionizationSpecies": [
+      "pMagnesiumActiveConcentration",
+      "PDopantActiveConcentration"
+    ],
+    "interfacesWithThermionicFormula1": [
+      "InGaN/GaN",
+      "AlGaN/GaN",
+      "AlGaN/InGaN"
+    ],
+    "limits": "Scalar Eg0/Chi0 overrides shown with no explicit mole-fraction interpolation terms; changing xAlB alone may not vary effective bandgap/affinity. SRH lifetime at operating bias and lateral interface effects not verified. Baseline remains Bspan=0.",
+    "next": "Read-only compare GaN and InGaN Bandgap/Chi in pp2_des.par (sed -n '1,85p' pp2_des.par) then decide physically justified xAlB=0.15 and Bspan pilot only on isolated frozen-baseline clone."
   }
 }

@@ -1,3 +1,6 @@
+## 2026-10-22 — n2 eDensity cutline started
+- Observed SVisual eDensity(C2(n2_end_des)) on the existing Y~1.3um cutline. Right graph X-depth range reset to 0..4.288um on field change; QW peaks not yet resolved. Next set plot X fixed min0.14 max0.29um. No TCAD files/runs changed.
+
 ## 2026-10-22 — n2 Cutline_Y hDensity 4QW peaks resolved (OBSERVED IMAGE, PEAK VALUES ESTIMATED)
 - User Sentaurus Visual Cutline_Y plot screenshot `hDensity(C2(n2_end_des))`, lateral Y~1.3um, depth X~0.14–0.29um, log density Y-axis ~1e10–1e20 cm^-3.
 - Four local hDensity peaks correspond spatially to QW depths ~X0.190, 0.215, 0.240, 0.265um (assignments based on prior V2.1 epitaxy). Approximate plot-read peak values QW1 ~9e18, QW2 ~1e19, QW3 ~2e19, QW4 ~8e19 cm^-3. These are graphical estimates, NOT numerically extracted SVisual data; actual per-region integrals/peak measurements remain unverified. Visible increasing hole-density trend and highest QW4 peak at this interior Y cut.

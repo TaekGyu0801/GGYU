@@ -1,5 +1,15 @@
 {
-  "leeTaekGyuAreaFactorNoOverrides20261022": {
+  "leeTaekGyuContactSegments20261022": {
+    "worker": "이택규",
+    "date": "2026-10-22",
+    "status": "OBSERVED_SDE_CONTACT_SOURCE; Xs_NUMERIC_CONTACT_SPAN_PENDING",
+    "source": "User terminal pp1_dvs.cmd lines 150–168",
+    "anode": "three pCap top edges [0,Xe],[Xe,Xd],[Xd,Xs] mapped via P, midpoint edge-id",
+    "cathode": "Cath=0 branch bottom at Xs/2; shelf bottom optional if Wshelf>0 (prior observed Cath0/Wshelf0)",
+    "uncertainty": "Numerical Xs in actual preprocessed geometry not yet displayed; default 2D effective 1um AreaFactor supported by Synopsys training, not a calibrated 4um circular-LED equivalent current density",
+    "next": "Read-only confirm active Xs/Xd/Xe, then conclude planar conditional J validation and proceed to QW4 physical plausibility/Full-Half protected validation."
+  },
+"leeTaekGyuAreaFactorNoOverrides20261022": {
     "worker": "이택규",
     "date": "2026-10-22",
     "status": "OBSERVED_USER_REPORTED_NO_MATCHES; PROVISIONAL_PLANAR_2D_J",

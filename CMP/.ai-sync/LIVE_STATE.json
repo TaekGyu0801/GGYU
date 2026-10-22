@@ -1,5 +1,19 @@
 {
-  "leeTaekGyuN6RadiativeMap20261022": {
+  "leeTaekGyuAreaFactorGrep20261022": {
+    "worker": "이택규",
+    "date": "2026-10-22",
+    "status": "OBSERVED_SEARCH_NO_EXPLICIT_AREAFACTOR; CURRENT_NORMALIZATION_UNRESOLVED",
+    "targetProject": "CMP_BASELINE_2.0.0_V2",
+    "command": "grep -niE 'AreaFactor|current unit|length unit|A/cm|A/um' pp2_des.cmd pp2_des.par n2_des.log n6_des.log",
+    "observations": [
+      "n2_des.log:297: Use length unit of micrometer during currentplot integration.",
+      "n6_des.log:297: Use length unit of micrometer during currentplot integration.",
+      "No explicit AreaFactor or terminal current unit matched in searched files"
+    ],
+    "interpretation": "CurrentPlot integration length unit does not define terminal current unit. No calibrated 4um circular LED current density conclusion.",
+    "next": "Read-only check both pp2 and pp6 preprocessed .cmd/.par for AreaFactor, Cylindrical, CoordinateSystem; reconcile 2D effective width with actual contacts and T-2022.03 manual; avoid rerunning existing V2.1."
+  },
+"leeTaekGyuN6RadiativeMap20261022": {
     "worker": "이택규",
     "date": "2026-10-22",
     "state": "OBSERVED_SCREENSHOT",

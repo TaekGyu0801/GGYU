@@ -1,3 +1,8 @@
+## 2026-10-22 — Project B terminal diagnostic loop: `for: Command not found.`
+- Worker: 주수빈. Status: OBSERVED shell error, probable csh/tcsh compatibility; no TCAD error, simulation unaffected.
+- Server screenshot project: `/user/semi/semi437/CMP_B0/CMP_BASELINE_2.0.0_V2`. Bash `for n in ...; do ...; done` used in terminal; login shell emitted `for: Command not found.` before any intended loop checks.
+- Correction: use a Bash wrapper `bash -lc '<read-only commands>'`, ASCII-only command. Proposed fix, not yet user verified. No SDE/SDevice edits/restarts; next inspect node 17/31 preprocess/mesh and 24/30/38/44 device logs.
+
 ## 2026-10-21 — V2.1 mesh-quality warning: extreme minimum triangle angle / short edge (OBSERVED LOG; ROOT CAUSE UNRESOLVED)
 - `CMP_BASELINE_2.0.0_V2/n1_msh.log` user-provided: mesh generation succeeded and n1_msh.tdr saved; minAngle=0.0167024 degrees, maxAngle=128.367 degrees, min edgeLength=1.95312e-05 um (0.0195312nm) near (xdepth=0.0041875um, ylateral=1.89501um). `Xe=1.895um` in active Wedge0.1um, locating anomalously short edge near pCap Clean/Edge transition.
 - Extremely narrow or nearly degenerate elements may cause conditioning/mesh-independence problems; this is **not a proven solver failure or exact origin of past convergence stalls**. No material/geometry/solver edits and no Full simulation.

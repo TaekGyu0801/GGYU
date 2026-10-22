@@ -1,3 +1,7 @@
+## 2026-10-22 — 이택규 n2 QW hole density 1D peaks resolved in Cutline_Y (OBSERVED GRAPH)
+- SVisual screenshot `hDensity(C2(n2_end_des))`, Y lateral≈1.3um, depth X≈0.14–0.29um, log vertical axis 1e10..1e20 cm^-3 resolves 4 well-localized peaks around X~0.190, 0.215, 0.240, 0.265um. Rough screenshot estimates peaks ~9e18, 1e19, 2e19, 8e19 cm^-3 for QW1–4; graph reading only, not exported numeric values. QW4 highest hole-density peak on this line.
+- This qualitative carrier localization is consistent with prior QW4 radiative integral ~99.97% but is not a causal proof: carrier overlap/electrons and 2D regional averaging still needed. NEXT plot n2 `eDensity` along same Cutline_Y and depth ROI, no TCAD edits/runs.
+
 ## 2026-10-22 — 이택규 hDensity Cutline_Y depth ROI achieved, high peaks clipped
 - User SVisual screenshot: `n2_end_des` / `hDensity` vertical Cutline_Y C2 at lateral Y~1.3 µm; XY horizontal depth X fixed 0.14–0.29 µm, so QW-depth oscillations near X~0.17–0.27 µm are now visible. XY vertical density log axis top ~1e17 cm^-3 clips multiple peaks, bottom plotted very low. Neither QW-specific hole concentrations nor QW4 causal mechanism can be inferred from the present cropped peaks.
 - NEXT adjust **right XY vertical density** log-axis to Min1e10 Max1e20 cm^-3, leave horizontal depth X unchanged; collect screenshot and assess peaks, optionally eDensity same cut. Existing code and simulations unchanged.

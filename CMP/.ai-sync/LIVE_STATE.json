@@ -1,5 +1,29 @@
 {
-  "leeTaekGyuContactSegments20261022": {
+  "leeTaekGyuHalfXsGeometry20261022": {
+    "worker": "이택규",
+    "date": "2026-10-22",
+    "status": "OBSERVED_PREPROCESSED_GEOMETRY; PROVISIONAL_2D_J",
+    "source": "User terminal pp1_dvs.cmd lines37/39/53-56",
+    "definitions": {
+      "Wshelf_um": 0,
+      "Wedge_um": 0.1,
+      "Xs": "Wm/2",
+      "Xd": "Xs-Wdmg",
+      "Xe": "Xd-Wedge",
+      "Xend": "Xs+Wshelf"
+    },
+    "priorValidatedMeshLateralBBox_um": 2,
+    "contactEvidence": "Top anode three Clean/Edge/Dmg edges cover 0..Xs in source; earlier observed SDE lines154-158",
+    "conditionalModelArea_cm2": 2e-8,
+    "conditionalCurrentDensityA_cm2": {
+      "n2_off": 1.823642625,
+      "n6_on": 0.4609853855
+    },
+    "externalReference": "Sentaurus Training sd_3.html: default 2D effective width 1um",
+    "limits": "Not a confirmed physical current density for circular 4um full device, no experimental or matched-current IQE validation; numeric Wm/Wdmg not in this latest snippet",
+    "next": "No further redundant geometry grep; examine hDensity in SVisual at QW1..4 on n2_end, then eDensity if needed; physical plausibility check, separate Full/Half."
+  },
+"leeTaekGyuContactSegments20261022": {
     "worker": "이택규",
     "date": "2026-10-22",
     "status": "OBSERVED_SDE_CONTACT_SOURCE; Xs_NUMERIC_CONTACT_SPAN_PENDING",

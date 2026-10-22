@@ -3816,5 +3816,15 @@
     "observation": "XY plot horizontal depth X was reset to 0–4.288um on field change; four MQW peaks cannot be analyzed in this frame",
     "next": "Set XY plot horizontal depth X min=0.14 max=0.29um and compare to earlier hDensity Cutline_Y",
     "tcadModified": false
+  },
+  "leeTaekGyuN2ElectronCutlineQWRegion20261022": {
+    "worker": "이택규",
+    "date": "2026-10-22",
+    "state": "OBSERVED_SVISUAL_E_DENSITY_LINE; PHYSICAL_EXPLANATION_UNRESOLVED",
+    "plot": "eDensity(C2(n2_end_des)) on Cutline_Y, lateral Y~1.3um, depth X~0.14–0.29um",
+    "observed": "Four peaks approximately depth X0.19,0.215,0.24,0.265um. Deepest peak visually highest; density rises further toward n-side. Earlier hDensity same cut deepest peak highest.",
+    "limits": "No export numeric values, no exact region boundary match, single cut is not 2D integrated electron-hole overlap. QW4 ~99.9688% integrated radiative fraction remains unexplained; physical IQE/causality not established.",
+    "next": "Prioritize exact QW-region mapping and global physical plausibility with existing data; later protected Full/Half comparison. Avoid repeated zooming.",
+    "tcadSourceRunChanged": false
   }
 }

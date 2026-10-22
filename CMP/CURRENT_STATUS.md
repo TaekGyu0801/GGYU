@@ -1,3 +1,7 @@
+## 2026-10-22 — Team next-phase assignment specified; Project B preparation started (USER PLAN; NO NEW RUN)
+- User plan after Baseline freeze: 이택규 Project A(GaN:C); 주수빈 Project B(localized lateral AlGaN). Not evidence of completed freeze today, Lee's direct agreement, or any Project A/B simulation.
+- JuSubin now working on Project B read-only physical design prep, SDE Bspan/region mapping, electron/hole band-offset/polarization verification, minimum pilot/DOE plan; see `members/JuSubin/PROJECT_B_PLAN_20261022.md`. Existing V2.1 and Lee final validation remain untouched.
+
 ## 2026-10-22 — V2.1 anode/cathode contact source inspected (OBSERVED SDE, NUMERICAL SPAN STILL PENDING)
 - User `pp1_dvs.cmd` lines 150–168: anode contact assigned to three p+ cap top edges (Clean/Edge/Dmg), sampled at 0.5Xe, 0.5(Xe+Xd), 0.5(Xd+Xs); code notes "whole mesa top". Cathode branch with Cath!=1 assigns bottom edge midpoint 0.5Xs, optional extra shelf part only for Wshelf>0. Earlier observed Cath=0, Wshelf=0.
 - Confirms source intent and contact segmentation, not yet actual numerical Xs/Xe/Xd or post-mesh effective contact length. Planar 1um default depth and 2um top width yield provisional J_n2=1.82364 / J_n6=0.460985 A/cm2 at 3.6V (Synopsys training for AreaFactor default), not certified circular-device J. Need close Xs geometry with brief grep before advancing. Existing TCAD unchanged.

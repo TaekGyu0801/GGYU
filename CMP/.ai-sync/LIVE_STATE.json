@@ -1,5 +1,16 @@
 {
-  "leeTaekGyuHalfXsGeometry20261022": {
+  "leeTaekGyuN2HoleDensityOverview20261022": {
+    "worker": "이택규",
+    "date": "2026-10-22",
+    "status": "OBSERVED_USER_SCREENSHOT_NEEDS_ZOOM",
+    "target": "CMP_BASELINE_2.0.0_V2/n2_end_des.tdr",
+    "field": "hDensity",
+    "legendCmMinus3": "log approximately 1e-30 to 8.2788e19",
+    "observation": "Full 2um lateral strip plotted but X-depth axis spans far beyond active layer; QW1–4 too compressed for per-well carrier comparison.",
+    "interpretation": "Overall hole density max cannot be assigned to any QW. Extreme QW4 radiative localization cause not established.",
+    "next": "SVisual plot axes depth X 0.14–0.29um, lateral Y 0–2um for enlarged hDensity; same ROI eDensity second if needed. No TCAD code/simulation change."
+  },
+"leeTaekGyuHalfXsGeometry20261022": {
     "worker": "이택규",
     "date": "2026-10-22",
     "status": "OBSERVED_PREPROCESSED_GEOMETRY; PROVISIONAL_2D_J",

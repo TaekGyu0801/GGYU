@@ -1,3 +1,7 @@
+## 2026-10-22 — 이택규 n6 Trap ON SVisual Radiative 공간 화면 확보 (OBSERVED IMAGE)
+- V2.1 SVisual에서 `n6_end_des` RadiativeRecombination (x depth~0–0.45um, y lateral~1.2–2.0um) 사용자 스크린샷 확인. MQW radiative bands 및 약 x0.26um 강한 띠 표시; legend 최고치 약 5.02e24 cm^-3 s^-1.
+- 기존 n2 화면과 육안 비교하기 전에 color scale과 ROI를 동일하게 해야 함. 스크린샷만으로 trap 인과, 동일 전류 IQE/물리 보정, 저장 TDR 바이어스 확정 불가. 다음: n2/n6 공통 legend/ROI로 화면 비교 후 전류 정규화 및 별도 Full/Half 검증. No TCAD changes.
+
 ## 2026-10-21 — V2.1 n6 3.6V 전체 재결합/Trap 전류 수지 99.9990% 확인 (USER-OBSERVED PLT; UNIT CONSISTENCY INFERRED)
 - 작업자 이택규가 학교 서버 n6_des.plt 마지막 행에서 직접 추출해 제공: bias=3.6V; IntegrTrap_all eGapStatesRecombination = 1.98258247754075e22, IntegrSRH_all srhRecombination = 4.32337288643595e21, IntegrRad_all RadiativeRecombination = 2.55552035945039e22, IntegrAug_all AugerRecombination = 7.83993596604716e21 (raw PLT integral data).
 - 이전 같은 행 Ianode=9.21970771e-09, Icathode=-9.21970771e-09, displacement=0. Earlier n6 four-QW 3-channel sum raw Rad=2.55545394e22 SRH=4.31092452e21 Aug=7.83986116e21.

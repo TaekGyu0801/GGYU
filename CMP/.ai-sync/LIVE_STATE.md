@@ -1,3 +1,7 @@
+## 2026-10-22 — JuSubin assigned Project B after Baseline freeze; starts preflight now (USER DECISION, DESIGN ONLY)
+- Explicit user plan: after verified Baseline acceptance, Lee handles Project A GaN:C, JuSubin handles Project B AlGaN. Replaces earlier JuSubin dual-A/B preparation priority. Lee direct acceptance and final Baseline-freeze event not independently observed.
+- Today's JuSubin B work: inspect active V2.1 `Bspan` / Edge material and sidewall 5nm boundary in SDE, define actual proposed AlGaN insertion ROI, validate polarization, Ec/Ev, electron/hole access, develop initial pilot and width/composition sweep conditional on source evidence. Plan: `members/JuSubin/PROJECT_B_PLAN_20261022.md`. No Sentaurus edits/runs or terminal access by this AI.
+
 ## 2026-10-22 — 이택규 actual V2.1 SDE anode contact segmentation observed
 - User pasted `pp1_dvs.cmd` lines150–168. Anode explicitly assigned to three top p+ cap edges via midpoints in intervals [0,Xe], [Xe,Xd], [Xd,Xs] (comment: whole mesa top Clean+Edge+Dmg). Cathode active for prior observed Cath=0 on bottom edge centered Xs/2; outer shelf bottom extra only if Wshelf>0 (prior live Wshelf0).
 - Supports geometry/source contact coverage, but numerical Xs span and actual mesh edge-length should be checked before treating 2um×1um as calibrated electrode area. Published 2D AreaFactor default 1um and current scaling: https://ghzphy.github.io/Sentaurus_Training/sd/sd_3.html.

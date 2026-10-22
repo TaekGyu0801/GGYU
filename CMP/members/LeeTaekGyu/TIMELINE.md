@@ -1,3 +1,7 @@
+## 2026-10-22 — Lee 3.6V n2_end dual-carrier Cut Y plot observation (OBSERVED screenshot; NO RUN)
+- n2_end_des SVisual 3.6V Cutline_Y screenshot: red hDensity(C1), green eDensity(C2) plotted against depth X~0.14–0.29 um in log units cm^-3. Four well-adjacent peaks visible; electron background increases and hole background decreases with depth toward n side. Exact sample Y positions for distinct C1 and C2 are not yet verified; no per-well numerical values, band/polarization conclusions or explanation of 99.97% QW4 radiative share established.
+- Next: verify C1 and C2 have identical fixed Y near 1um, then extract n/p at QW1–4 with numerical probe and reconcile with QW radiative integrals. Existing deck/results unchanged. Issue #7 comment 6337505672.
+
 ## 2026-10-22 — Lee V2.1 n2_eq SVisual Cut Y conduction band (OBSERVED USER SCREENSHOT; NO RUN)
 - User opened n2_eq_des and n2_end_des in Sentaurus Visual, selected ConductionBandEnergy in equilibrium n2_eq and generated Cutline Y plot. Screenshot's horizontal depth X~0.145–0.285um, displayed energy trend with four repeated notches/well-like band features near X~0.19, 0.215, 0.24, 0.265um. These appear consistent with four QWs, but exact Cut Y coordinate and region labels are not visible in the 1D screenshot and therefore remain UNVERIFIED.
 - A tilted/sawtooth-looking Ec under equilibrium is NOT proof of correct polarization sign, band offsets or physical calibration. It does NOT explain the 3.6V QW4 99.97% radiative share on its own.

@@ -1,3 +1,8 @@
+## 2026-10-22 — Both 2D control decks have no explicit AreaFactor/Cylindrical settings (user report)
+- `pp2_des.cmd pp6_des.cmd pp2_des.par pp6_des.par` grep yielded no matches for `AreaFactor|Cylindrical|CoordinateSystem`. Default planar 2D effective out-of-plane 1um appears applicable based on published Sentaurus training; do not confuse with `CurrentPlot` integration µm.
+- Using 2um Half width gives conditional planar equivalent J at 3.6V n2 1.82364 A/cm², n6 0.46099 A/cm²; effective anode contact span and physical circular reference remain unverified.
+- NEXT FAST: one read-only check of active SDE anode-contact edges/span. Then evaluate physical J regime and QW4 concentration; only after Half audit proceed with protected 4um Full baseline vs Half at equal inputs. No rerun current Half.
+
 ## 2026-10-22 — 주수빈 Project A/B 설계 준비 우선 작업 (PROPOSED; 기존 Baseline 보존)
 - 주수빈은 별도 A/B 설계 준비를 시작함(사용자 선택). 이택규와의 독점 분담/승인으로 해석하지 말 것. 설계 문서: `members/JuSubin/PROJECT_AB_PREPARATION_20261022.md`.
 - JuSubin NEXT FIRST: 서버 기존 `CMP_BASELINE_2.0.0_V2/sde_dvs.cmd` 및 `pp1_dvs.cmd`에서 Wedge/Bspan/Wdmg, Edge/Dmg regions/material assignments를 READ-ONLY 검증 → GaN:C 투입 가능 영역과 AlGaN lateral barrier 대상 정의 → C compensation/trap 모델 및 AlGaN band-offset/polarization 모델 검토 → 최소 DOE 설계.

@@ -1,3 +1,7 @@
+## 2026-10-22 — 이택규 n2 same-cut eDensity and hDensity profile comparison (OBSERVED)
+- `eDensity(C2(n2_end_des))` at lateral Y~1.3um, depth X~0.14–0.29um, displays four sharp peaks near ~0.19/0.215/0.24/0.265um, deepest visually strongest; prior hDensity cutline deepest peak also strongest. Region alignment/exact peak numeric values unverified. This suggests deep-side carrier enrichment but cannot prove mechanism underlying the n2 integrated QW4 radiative fraction ~99.97%.
+- Remaining validation: well/interface mapping, electron-hole overlap and physical plausibility; retain existing Half outputs, later Full/Half protected comparator. No code/run changes.
+
 ## 2026-10-22 — 주수빈 Project B first nominal band-alignment preflight complete (OBSERVED+DERIVED; NO RUN)
 - Actual V2.1 pp2_des.par: GaN Eg0/Chi0 = 3.4376/4.1000 eV, InGaN 2.8569/4.5065 eV; previous AlGaN 3.7564/3.8768 eV, all Tpar300K. Corresponding nominal affinity-rule GaN→AlGaN electron/hole barriers 0.2232/0.0956 eV; InGaN→AlGaN 0.6297/0.2698 eV. This ignores polarization, charge, actual bending, heterointerface effects and bias; not validated TCAD Ec/Ev.
 - Initial Project B pilot geometry proposed after freeze: Bspan3, xAlB0.15, Wedge0.1um, Dmg0.005um unchanged; paired against same-Trap Bspan0 control at matched current. xAlB composition sweep deferred pending effective Eg/Chi model consistency. The 0.1um QW edge material-replacement portion is 5% of 2um half width.

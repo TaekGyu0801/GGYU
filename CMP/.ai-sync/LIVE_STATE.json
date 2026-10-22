@@ -4083,5 +4083,16 @@
       "trap model"
     ],
     "next": "Verify integrated or spatial QW electron/hole current injection, band/quasi-Fermi and voltage drops using existing outputs; do not assert a specific root cause. No simulation edits."
+  },
+  "juSubinProjectBSerialSWBClarification20261022": {
+    "worker": "주수빈",
+    "date": "2026-10-22",
+    "status": "USER_REPORTED_SEQUENTIAL_RUN; SCHEDULER_UNVERIFIED",
+    "activeClone": "/user/semi/semi437/CMP_B0/CMP_BASELINE_2.0.0_V2",
+    "report": "SWB is processing Bspan=0 then 1 then 3 in sequence. Missing pp31_dvs.cmd may mean SDE n31 has not been scheduled yet, not evidence of physics failure",
+    "correction": "Do not manually start n31 or duplicate any jobs while queue is progressing",
+    "observed": "n17_mesh.tdr 2MB present, Bspan1 preprocessed, n24 SDevice iteration logs; no later run completion established",
+    "workWhileRunning": "SVisual open preexisting n17_msh.tdr and inspect Edge_QW1-4 AlGaN vs Clean/Dmg InGaN, geometry/mesh; prepare matched-current ON branches n6/n30/n44 comparison",
+    "next": "User provides SVisual screenshot of n17_msh.tdr. Continue respecting existing SWB queue."
   }
 }

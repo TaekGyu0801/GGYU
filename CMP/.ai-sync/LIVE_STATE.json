@@ -10,7 +10,7 @@
     "interpretation": "Overall hole density max cannot be assigned to any QW. Extreme QW4 radiative localization cause not established.",
     "next": "SVisual plot axes depth X 0.14–0.29um, lateral Y 0–2um for enlarged hDensity; same ROI eDensity second if needed. No TCAD code/simulation change."
   },
-"leeTaekGyuHalfXsGeometry20261022": {
+  "leeTaekGyuHalfXsGeometry20261022": {
     "worker": "이택규",
     "date": "2026-10-22",
     "status": "OBSERVED_PREPROCESSED_GEOMETRY; PROVISIONAL_2D_J",
@@ -3576,5 +3576,22 @@
       "Ec/Ev, polarization and trap carrier-access outcomes"
     ],
     "next": "Read-only inspect pp1_dvs.cmd lines 65-145 and MF_AlB definition; no source/run changes"
+  },
+  "juSubinProjectBRegionMap20261022": {
+    "worker": "주수빈",
+    "date": "2026-10-22",
+    "status": "OBSERVED_SCHOOL_SERVER_PP1_DVS_60_145",
+    "source": "CMP_BASELINE_2.0.0_V2/pp1_dvs.cmd",
+    "stack": "pCap .020; pGaN .120; EBL .026; barriers B0-4 .022 each; QW1-4 .003 each; nMesa dEtch (um)",
+    "baselineMaterials": "QW InGaN; EBL AlGaN; other GaN",
+    "materialRule": "Clean and Dmg use base-mat; Edge uses AlGaN only if in-Bspan?; mole-region for AlGaN role non-EBL uses MF_AlB xMoleFraction=xAlB; EBL separate MF_EBL",
+    "mapping": {
+      "1": "Edge QW1..4",
+      "2": "Edge QW1..4 + B1..B3",
+      "3": "Edge QW1..4 + B0..B4"
+    },
+    "caveat": "Lateral edge semiconductor material replacement including QW edge, not external coating; no performance conclusion",
+    "unknown": "numerical xAlB xEBL xIn; coordinate P transformation; Bspan>0 mesh/physics",
+    "next": "Read-only sed -n '23,59p' pp1_dvs.cmd and grep xAlB,xEBL,xIn; preserve existing V2.1; no run until baseline frozen."
   }
 }

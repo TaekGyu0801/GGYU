@@ -1,3 +1,9 @@
+## 2026-10-22 — Project B 실행 로그 1차 검증 (USER OBSERVED; NOT COMPLETE)
+- 사용자 Bash wrapper 실행 성공. 경로 `/user/semi/semi437/CMP_B0/CMP_BASELINE_2.0.0_V2`에서 `pp17_dvs.cmd:45 (define Bspan 1)` 확인. `n17_msh.tdr` 존재(2.0M, Oct22 15:29). Bspan1 SDE mesh file OBSERVED (new mesh provenance/timestamp relative to user start plausible; region-level material inspection remains).
+- n24_des.log last lines show Newton iterations: Rhs 2.63e10 → 5.25e8 → 2.00e4, iterations 0/1/2, no finish status. This means SDevice iteration recorded, not convergence completion or definite live PID. n30, n38, n44 log files absent on check. n31 pp31_dvs.cmd matching Bspan and n31_msh.tdr not found by command; SDE Bspan3 may be queued, not submitted or failed; do not label fail without SWB scheduler.
+- Shell prior `for: Command not found` resolved as read-only diagnostic succeeds under `bash -lc '...'`. No TCAD edits or extra RUN performed by ChatGPT.
+- NEXT immediate: inspect SWB n31 SDE scheduler status. If already pending/queued/running, do not resubmit; if ready/not submitted, run SDE n31 *only* and verify new pp31 Bspan=3 + mesh, then analyze Bspan3. Preserve n24 and other jobs.
+
 ## 2026-10-22 — Project B read-only diagnostic command rejected by user shell (OBSERVED, NO TCAD EFFECT)
 - In screenshot-confirmed SWB project `/user/semi/semi437/CMP_B0/CMP_BASELINE_2.0.0_V2`, user pasted assistant Bash `for ... do ... done` command into login shell and observed `for: Command not found.`. This is a **shell command-compatibility error**, likely login csh/tcsh, not SDE/SDevice failure. No file modifications, simulation cancellation or changes reported.
 - Fix (PROPOSED, not yet user tested): wrap existing read-only inspection in `bash -lc '...'` using ASCII-only echo labels; inspect pp17/pp31 Bspan + n17/n31 mesh + n24/n30/n38/n44 device logs. Do not rerun SWB/alter code because of this shell error.

@@ -1,3 +1,8 @@
+## 2026-10-22 — 주수빈 Project A/B 설계 준비 우선 작업 (PROPOSED; 기존 Baseline 보존)
+- 주수빈은 별도 A/B 설계 준비를 시작함(사용자 선택). 이택규와의 독점 분담/승인으로 해석하지 말 것. 설계 문서: `members/JuSubin/PROJECT_AB_PREPARATION_20261022.md`.
+- JuSubin NEXT FIRST: 서버 기존 `CMP_BASELINE_2.0.0_V2/sde_dvs.cmd` 및 `pp1_dvs.cmd`에서 Wedge/Bspan/Wdmg, Edge/Dmg regions/material assignments를 READ-ONLY 검증 → GaN:C 투입 가능 영역과 AlGaN lateral barrier 대상 정의 → C compensation/trap 모델 및 AlGaN band-offset/polarization 모델 검토 → 최소 DOE 설계.
+- Gate: Baseline current normalization/Full-Half/mesh 물리 검증 전에는 A/B source를 임의 변경하거나 장시간 런, 절대 IQE 또는 개선 결론 확정 금지. 이택규 기존 n2/n6 트랙은 그대로 진행.
+
 ## 2026-10-22 — AreaFactor explicit grep negative; verify 2D default scaling and geometry
 - OBSERVED n2/n6 logs line297 both say `Use length unit of micrometer during currentplot integration.`, and no `AreaFactor`/terminal A unit text was returned from the searched pp2 cmd/par and n2/n6 logs.
 - NEXT read-only single check across `pp2_des.cmd pp6_des.cmd pp2_des.par pp6_des.par` for `AreaFactor|Cylindrical|CoordinateSystem` and if needed confirm 2D planar runtime, effective out-of-plane width and anode effective lateral contact span. Consult T-2022.03 manual; older official guide documents default 1um effective width but must not assume project or real circular mesa equivalent area from this grep.

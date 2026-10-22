@@ -1,3 +1,7 @@
+## 2026-10-22 — n2 hDensity Cutline_Y plot established
+- OBSERVED SVisual screenshot: a Cutline_Y Plot showing hDensity(C2(n2_end_des)) at lateral Y~1.3um is present. Graph depth X range 0..4.288um compresses the MQW peaks; left Axis Properties shows Min=0 and Max=4.288 as fixed. No per-QW hDensity values can yet be inferred.
+- NEXT: Set depth X axis Min=0.14 Max=0.29um for a QW-resolved hole-density line plot, then examine eDensity on the same cut if needed. TCAD sources/runs unchanged.
+
 ## 2026-10-22 — n2_end_des hDensity MQW enlarged image: color map insufficient for QW4 carrier causality
 - OBSERVED user SVisual image: n2_end_des hDensity color map, log color legend ~1e-30 to 8.279e19 cm^-3, four fine MQW layer strata resolved at X(depth)~0.17–0.27um. Displayed lateral Y only ~1.0–1.65um, not entire device or damaged sidewall near 2.0um; plot depth X~0–0.45um. Colors mostly orange in MQW with yellow lower n-GaN region.
 - QW-specific hDensity magnitudes or QW4 accumulation cannot be inferred from this nearly 50-decade legend. Previous PLT QW4 radiative ~99.97% remains OBSERVED; carrier mechanism UNRESOLVED. Do not repeat zoom, switch to read-only SVisual 1D Cut Y at lateral Y~1.3um (constant Y) for hDensity vs depth X crossing QW1–4, then optionally eDensity same cut. Plot action only, no source or simulations changed.

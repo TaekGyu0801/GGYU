@@ -1,3 +1,7 @@
+## 2026-10-22 — Verified V2.1 epi stack implies QW positions matching h/eDensity cutline peaks (DERIVED)
+- GitHub read of prior JuSubin pp1_dvs.cmd source observations: pCap.020, pGaN.120, EBL.026, B0..B4 .022, each QW .003um; with top X=0 yields QW1=.188-.191, QW2=.213-.216, QW3=.238-.241, QW4=.263-.266um. User plotted e/h density peaks ~.190/.215/.240/.265um coincide with these expected layer windows at graph resolution.
+- Geometry alignment supports well-localized peaks qualitatively. It does not independently validate exact peak e/h values, full-domain electron-hole overlap, or cause of extreme QW4-integrated Radiative dominance. Leave Half code/run untouched; next meaningful step is physics benchmark/Full-Half reference as planned.
+
 ## 2026-10-22 — 이택규 n2 eDensity QW-range cutline observed; both carrier peaks deepest-highest qualitatively
 - User screenshot `eDensity(C2(n2_end_des))` along lateral Y~1.3um with depth X~0.14–0.29um: four sharp electron-density peaks around ~0.19,0.215,0.24,0.265um, visually highest at deepest peak, with concentration rising toward n-side beyond it. Previous hDensity cutline had deepest peak highest.
 - These are image-level qualitative patterns, not exported point values nor verified well-versus-barrier assignment. Extreme n2 QW4 integrated radiative fraction ~99.9688% remains unexplained quantitatively: local h/e peaks alone do not prove 2D recombination causality. Skip repeat zooming; next targeted physical plausibility/region-alignment check, then protected Full/Half validation. No source/runs changed.

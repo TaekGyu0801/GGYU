@@ -3950,5 +3950,37 @@
     "sourceEditsNeededNow": false,
     "doNotInfer": "SDE Bspan3 finished, numerically converged SDevice, baseline scientifically frozen, original unaffected beyond distinct path",
     "next": "Read only inspect pp17_dvs.cmd/pp31_dvs.cmd for Bspan, n17_msh.tdr/n31_msh.tdr timestamps and n24/30/38/44_des.log process/error/finish before next intervention."
+  },
+  "juSubinProjectBRunStatus20261022": {
+    "worker": "주수빈",
+    "date": "2026-10-22",
+    "status": "OBSERVED_BSPAN1_SDE_MESH_BSPAN3_SCHEDULING_UNVERIFIED",
+    "project": "/user/semi/semi437/CMP_B0/CMP_BASELINE_2.0.0_V2",
+    "shellFix": "bash -lc read-only diagnostic successfully ran; prior for Command not found resolved",
+    "sde17": {
+      "preprocessedBspan": 1,
+      "mesh": "n17_msh.tdr",
+      "meshSize": "2.0M",
+      "timestamp": "Oct 22 15:29",
+      "status": "OUTPUT_EXISTS"
+    },
+    "sde31": {
+      "preprocessedBspan": null,
+      "mesh": false,
+      "status": "NO_PP31_BSPAN_MATCH_OR_MESH_FOUND; queued/not run/failure undetermined"
+    },
+    "sdevice24": {
+      "logExists": true,
+      "lastObservedIteration": 2,
+      "lastObservedRHS": 20000,
+      "finished": "UNVERIFIED",
+      "runCurrentPID": "UNVERIFIED"
+    },
+    "sdeviceLogsMissing": [
+      30,
+      38,
+      44
+    ],
+    "next": "Inspect copied SWB SDE n31 scheduler state first; if ready/unsubmitted select and Run SDE n31 only, else leave queued/running, capture failed node error; keep other SWB jobs untouched. After n31 mesh verify Bspan3 and material region."
   }
 }

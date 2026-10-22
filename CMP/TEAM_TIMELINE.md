@@ -1,3 +1,7 @@
+## 2026-10-22 — 이택규 V2.1 Half anode span relationships observed; planar J conditional gate completed
+- Actual `pp1_dvs.cmd` reveals Wshelf0, Wedge0.1um, Xs=Wm/2, Xd=Xs-Wdmg, Xe=Xd-Wedge, Xend=Xs+Wshelf. Earlier observed 2um lateral mesh bbox and 3 anode top edges cover the Half [0,Xs] in source. With no explicit AreaFactor/Cylindrical overrides in n2/n6 preprocessed decks, accepted 2D default thickness 1um from Sentaurus Training gives conditional planar equivalent J(3.6V)=1.82364 A/cm² (OFF),0.460985 A/cm² (ON). Numeric `Wm` itself was not printed in latest grep; raw mesh width 2um observed separately.
+- This is sufficient to move past repeated setup inspection, but not actual circular 4um geometry equivalence or physical calibration. Next evaluate QW4-extreme radiative spatial localization with carrier densities then Full/Half independent run. No code/run changes.
+
 ## 2026-10-22 — Baseline 완료 이후 역할 분담 방향 지정: Lee Project A / JuSubin Project B (USER-STATED PLAN)
 - 사용자가 Baseline 최종 확정 이후 이택규→Project A GaN:C, 주수빈→Project B AlGaN 독립 진행 방향 명시. 이택규의 직접 발언/수락으로 전환하여 인용하지 말 것. Baseline 2026-10-22 실제 freeze도 미확인.
 - JuSubin Project B 사전설계 즉시 시작: `members/JuSubin/PROJECT_B_PLAN_20261022.md`; 실행/코드 수정 없는 PROPOSED planning. 최초 검증은 기존 SDE Bspan/AlGaN Edge geometry read-only audit. A/B 최종 비교는 동일 frozen baseline 및 matched J에 조건부.

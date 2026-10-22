@@ -4100,5 +4100,49 @@
     "status": "Kou 20/60/100 um epitaxy applied to representative 4um mesa is a hypothesis, not automatically wrong; Kou 4um damage dead zone, I-V, IQE and contacts are not transferable. New comparator Wang 2023 Nature Communications actual 3.5um LED EQE peak at J~3A/cm2, different 16-QW. Prior current injection failure inference from Kou J20 benchmark withdrawn. No TCAD changes.",
     "next": "Validate 4um model current normalization/contact and sidewall traps; QW4 localization unresolved.",
     "source": "https://www.nature.com/articles/s41467-023-43472-z"
+  },
+  "leeTaekGyuHybridBaselineIQE20261022": {
+    "worker": "이택규",
+    "project": "A GaN:C sidewall",
+    "date": "2026-10-22",
+    "status": "HYBRID_BASELINE_UNCALIBRATED_PAPER_REFERENCE_FRAMEWORK_REVISED",
+    "modelIdentity": "Self-designed representative 4um mesa TCAD combining Kou2019 vertical EPI and Wu2023 5nm sidewall defect, not reproducing any single 4um experimentally reported device",
+    "real4umReferences": [
+      {
+        "doi": "10.1021/acsaelm.4c01540",
+        "year": 2024,
+        "size": "4x4um2",
+        "metric": "N2 treatment +97.29% light output at 25 A/cm2, not absolute IQE"
+      },
+      {
+        "doi": "10.1038/s41467-023-43472-z",
+        "year": 2023,
+        "size": "3.5x3.5um2",
+        "metric": "peak EQE 37.5% at J~3 A/cm2, different 16 QWs"
+      }
+    ],
+    "iqeDefinitions": {
+      "qwThreeChannel": "QWrad/(QWrad+QW_SRH+QW_Auger)",
+      "currentNormalized": "q*integral_QW_Rrad / I_in, matching TCAD units and verifying leakage/steady state",
+      "globalTrapInclusive": "IntegrRad_all/(IntegrRad_all+IntegrSRH_all+IntegrAug_all+IntegrTrap_all), current yield proxy only if currents balance",
+      "experimental": "EQE includes light extraction; cannot compare directly to simulated IQE"
+    },
+    "existingBiasV": 3.6,
+    "ratiosPercent": {
+      "n2QWThreeChannel": 66.9624,
+      "n6QWThreeChannel": 67.7744,
+      "n6GlobalTrapInclusive": 44.4096,
+      "n2CurrentNormalizedConditional": 66.9506
+    },
+    "geometryConcern": "2D planar 4um stripe sidewall P/A=2/4=0.5perum; 4x4um square P/A=4/4=1perum, factor2; Full2D symmetry not true 3D square",
+    "parameterConcerns": [
+      "NtSide1e18 cm-3 not experimentally calibrated",
+      "Et and sigma assumed",
+      "PolAct0.5 model assumption",
+      "QW4 radiative 99.97% unresolved",
+      "QW Auger ~27.5% at provisional low J"
+    ],
+    "next": "Document parameter provenance; choose consistent same-J current-normalized radiative/trap efficiency metric; audit geometry, area and QW4; protect separate Project A/B pilot; no automatic baseline freeze",
+    "dataSource": "Official cited Kou 2019, Wu 2023, Wang 2023 and Chen 2024 articles; CMP COMMON_BASELINE and PLT evidence"
   }
 }

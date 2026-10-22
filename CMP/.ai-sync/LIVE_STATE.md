@@ -1,3 +1,7 @@
+## 2026-10-22 — JuSubin Project A/B preparation started (PROPOSED DESIGN; NO TCAD RUN)
+- 주수빈의 사용자 결정: 이택규 Baseline V2.1 final checks와 중복 없이 Project A localized GaN:C resistive edge 및 Project B localized AlGaN lateral heterobarrier 사전 물리·설계 검토 시작. Lee's agreement to formal exclusive role assignment unconfirmed.
+- Written design/preflight plan: `members/JuSubin/PROJECT_AB_PREPARATION_20261022.md`. NEXT: read-only audit V2.1 `sde_dvs.cmd` / `pp1_dvs.cmd` Wedge/Bspan/Wdmg, Edge/Dmg materials; verify C model and AlGaN interfaces before SWB pilot. Baseline freeze, 2D AreaFactor and Full/Half gate still pending. No SDE/SDevice source, simulation or parameter change.
+
 ## 2026-10-22 — 이택규 AreaFactor/current-unit first read-only grep (OBSERVED)
 - User ran `grep -niE 'AreaFactor|current unit|length unit|A/cm|A/um' pp2_des.cmd pp2_des.par n2_des.log n6_des.log`; only n2/n6 log line297: `Use length unit of micrometer during currentplot integration.`
 - No explicit AreaFactor or terminal-current units in searched files, so current normalization and absolute J remain UNRESOLVED. IntegrationUnit is not terminal current unit. Next verify both n2/n6 preprocessed cmd/par for AreaFactor/Cylindrical/CoordinateSystem and effective 2D z-thickness/contact width, using T-2022.03 reference before physical J assertion. TCAD unchanged.

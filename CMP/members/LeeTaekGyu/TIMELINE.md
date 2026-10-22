@@ -1,3 +1,8 @@
+## 2026-10-22 — n2 QW eDensity Cutline_Y depth zoom observed (IMAGE; CAUSALITY UNRESOLVED)
+- User SVisual screenshot of `eDensity(C2(n2_end_des))` at existing lateral Y≈1.3um, graph depth X≈0.14–0.29um: four sharp eDensity peaks around X≈0.19/0.215/0.24/0.265um; the deepest peak looks highest and subsequent n-side concentration rises. Precise peak values/region attribution are NOT extracted; maxima may lie at QW interfaces/barriers, not proven inside wells.
+- Earlier same-cut hDensity also has highest deep peak. This supports qualitatively correlated deep-side electron/hole accumulation, not proof that QW4 dominates due to carrier overlap. Independent integrated n2 QW4 Radiative share ~99.9688% (QW4 about 3.2e3 times QW1–3 combined) remains unusually extreme and merits quantitative physics validation. Do not equate local cut peaks with 2D integrals or calibrated IQE.
+- To save time, do not repeat visual zoom. Next audit alignment with exact QW region boundaries and quantitative recombination/current benchmark; then protected independent Full/Half comparison. Original SDE/SDevice/run unchanged.
+
 ## 2026-10-22 — n2 eDensity cutline started
 - Observed SVisual eDensity(C2(n2_end_des)) on the existing Y~1.3um cutline. Right graph X-depth range reset to 0..4.288um on field change; QW peaks not yet resolved. Next set plot X fixed min0.14 max0.29um. No TCAD files/runs changed.
 

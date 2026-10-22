@@ -1,3 +1,8 @@
+## 2026-10-22 — n2_end_des hDensity MQW enlarged image: color map insufficient for QW4 carrier causality
+- OBSERVED user SVisual image: n2_end_des hDensity color map, log color legend ~1e-30 to 8.279e19 cm^-3, four fine MQW layer strata resolved at X(depth)~0.17–0.27um. Displayed lateral Y only ~1.0–1.65um, not entire device or damaged sidewall near 2.0um; plot depth X~0–0.45um. Colors mostly orange in MQW with yellow lower n-GaN region.
+- QW-specific hDensity magnitudes or QW4 accumulation cannot be inferred from this nearly 50-decade legend. Previous PLT QW4 radiative ~99.97% remains OBSERVED; carrier mechanism UNRESOLVED. Do not repeat zoom, switch to read-only SVisual 1D Cut Y at lateral Y~1.3um (constant Y) for hDensity vs depth X crossing QW1–4, then optionally eDensity same cut. Plot action only, no source or simulations changed.
+- Synopsys Sentaurus Visual Training section 5.3 Cutlines: https://ghzphy.github.io/Sentaurus_Training/sv/sv_5.html defines Cut Y as orthogonal cut at selected constant Y.
+
 ## 2026-10-22 — n2_end_des hDensity overview SVisual screenshot observed; QW-specific interpretation pending
 - User provided Sentaurus Visual T-2022.03 screenshot: dataset `n2_end_des`, scalar `hDensity` selected; logarithmic color legend approximately 1.0e-30 to 8.2788e19 cm^-3. Plot shows full 2um lateral width (Y horizontal) and excessive X vertical span with MQW layers compressed around X~0.17–0.27um.
 - OBSERVED: hDensity output exists and is visualized, but this full-depth overview is too coarse to quantify/compare hole densities in each QW or diagnose extreme QW4 Radiative localization. Legend global max is not QW-specific.

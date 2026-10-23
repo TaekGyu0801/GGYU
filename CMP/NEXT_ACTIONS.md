@@ -1,3 +1,9 @@
+## 2026-10-23 — Lee after completed band/QF SVisual first pass (NEXT READ ONLY)
+1. No more repetitive SVisual curves immediately: the same-cut 3.6V Ec/Ev/eQF/hQF overlay is observed and recorded, but does not identify why both electron and hole populations grow so much toward QW4.
+2. Next prioritize active preprocessed SDE/SDevice/parameter inspection for QW region positions, polarization orientation/sign, band offsets and carrier transport settings. Confirm results and current code correspondence; avoid guesses about cause.
+3. Audit n2/n6 terminal current and 2D effective width/area normalization; inspect full-device QW Rad/SRH/Auger/trap integrals and compare Trap ON/OFF at matched J. Do not treat 4um planar half as calibrated 4x4um square.
+4. Only then determine minimal controlled sensitivity validation and future Full4um/Half2um symmetry run on a protected copy. No baseline physical freeze and no new run/code edit from today's SVisual inspection.
+
 ## 2026-10-22 — Lee four-QW carrier center measurements complete (READ ONLY priority)
 - OBSERVED n2_end_des 3.6V, Y=1.0um h/e center probes for all four QWs (Lee TIMELINE for exact numerical values). Derived point n*p QW4/(QW1+QW2+QW3)≈3738.45; equal-B pointwise QW4 share 99.9733%, close to earlier QW4 integrated radiation 99.9688%. DO NOT equate center-point proxy with whole-device radiation or IQE.
 - NEXT 1: diagnose WHY both carrier densities rise ~300x by QW4, not repeat Probe: use existing n2_eq/n2_end Ec/Ev / QF / polarization-charge field profiles at lateral Y=1.0um, verifying correct field and material regions and QW1/QW4 alignment.

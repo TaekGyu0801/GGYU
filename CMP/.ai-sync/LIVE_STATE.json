@@ -1,5 +1,24 @@
 {
-  "leeTaekGyuN2HoleDensityZoom20261022": {
+  "leeTaekGyuFourEnergyCutline20261023": {
+    "worker": "이택규",
+    "date": "2026-10-23",
+    "status": "OBSERVED_SVISUAL_SCREENSHOT_NO_NEW_RUN; GUI_FIRST_PASS_COMPLETE; PHYSICAL_VALIDATION_UNRESOLVED",
+    "source": "Existing n2_end_des 3.6V and n2_eq_des equilibrium screenshot",
+    "depthRangeX_um": "approximately 0.14 to 0.29",
+    "lateralCutY_um": "1.0 from previous GUI setup; not individually reverified in final screenshot",
+    "overlays_3p6V": {
+      "Ec": "magenta",
+      "Ev": "cyan",
+      "eQuasiFermiEnergy": "red",
+      "hQuasiFermiEnergy": "blue"
+    },
+    "equilibrium": "green near-zero eQuasiFermiEnergy",
+    "observed": "Four well-associated band features and step-like biased electron/hole quasi-Fermi profiles; no quantitative barrier/sign inferred",
+    "notProven": "QW4 99.9688% radiative concentration mechanism, polarization orientation/sign, injection validity, 4um physical calibration",
+    "next": "No more repetitive GUI probes; read-only active deck polarization and QW mapping, 2D current normalization, full recombination current balance, matched-J n2/n6 comparison; Full/Half remains unresolved",
+    "modelOrRunModified": false
+  },
+"leeTaekGyuN2HoleDensityZoom20261022": {
     "worker": "이택규",
     "date": "2026-10-22",
     "state": "OBSERVED_SVISUAL_SCREENSHOT; CARRIER_MECHANISM_UNRESOLVED",

@@ -1,3 +1,8 @@
+## 2026-10-23 — Independent literature cross-check of n-side QW4 dominance (RESEARCH)
+- In existing V2.1 model QW4 is n-side, not p-side (CURRENT_STATUS.md previously records this explicitly). Thus p-side well dominant EL literature David 2008 DOI 10.1063/1.2839305; Bojarska-Cieślińska 2025 DOI 10.1038/s41598-025-86774-6 does NOT verify the n-side QW4 ~99.9688% simulated share.
+- Casu et al., Micromachines 2022 DOI 10.3390/mi13081266 reports a predominantly emitting n-side QW in two-wavelength hetero-composition InGaN LED, with limited electron injection to p-side QW; demonstrates physical possibility, not same device calibration. Han et al., IEEE JQE 2018 DOI 10.1109/JQE.2018.2790440 also emphasizes recombination rate effects beyond hole transport.
+- Interpretation remains UNRESOLVED; no new simulations/changes. First read-only model-specific QW mapping, 2D current/recombination balance, polarization sign/band injection audit, matched J.
+
 ## 2026-10-23 — Lee signed PE_Charge SVisual (OBSERVED)
 - With PE_Charge line plot made linear, existing n2_end_des at depth x=0.14..0.29um/lateral y=1um displays both positive and negative sharp spikes near QW heterointerfaces, broadly within +/-1e21 cm^-3. Exact interface and physical sign verification unresolved. No run/edit.
 

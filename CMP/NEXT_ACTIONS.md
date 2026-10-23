@@ -1,3 +1,8 @@
+## 2026-10-23 — Lee immediate PE_Charge plotting fix (READ ONLY)
+- User verified SVisual cutline PE_Charge on existing n2_end_des from X=0.14 to 0.29um at lateral Y=1.0um. Narrow charged interface-associated peaks visible, but 1D ordinate currently logarithmic and cannot reliably distinguish signed positive/negative spikes.
+- FIRST: set PE_Charge graph vertical axis to Linear and autoscale; record +/− signs at known well interfaces, if visible. No rerun/code edit.
+- THEN: assess whether actual model polarity is correctly configured and whether any interface polarization sign imbalance can be related to n2 QW4 carrier concentration; do not infer causation from one cut or conclude valid device without additional physics/current checks.
+
 ## 2026-10-23 — Lee V2.1 actual lattice axis parameter declarations verified (OBSERVED SERVER OUTPUT; NO RUN)
 - User ran read-only `grep -nEi -C 4 "LatticeParameters|Piezoelectric_Polarization|SpontaneousPolarization|Polarization" pp2_des.cmd pp2_des.par pp6_des.cmd pp6_des.par` in /user/semi/semi437/CMP_BASELINE_2.0.0_V2.
 - OBSERVED in both `pp2_des.par:1-4` and `pp6_des.par:1-4`: `LatticeParameters { X = (0, 0, -1) Y = (1, 0, 0) }`; both command files line21: `Piezoelectric_Polarization( strain activation=0.5 )`. Prior pp1_dvs.cmd line14 says Ga-polar c-axis points to -x. Thus actual preprocessed parameter vectors match the design COMMENT and n2/n6 match on these inspected lines.

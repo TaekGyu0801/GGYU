@@ -1,3 +1,8 @@
+## 2026-10-23 — Lee standalone SDevice 198-line source audit (NO RUN)
+- Static review of user-uploaded V2.1-related SDevice text confirms 13 Dmg+13 Edge traps and per-QW1..4 Clean/Edge/Dmg integrations for Radiative/SRH/Auger; runtime source provenance/region existence/physical model assumptions still unverified.
+- GitHub CMP/tcad/CURRENT/sdevice2_defect_on.cmd is older nonidentical source and must not be substituted for n2/n6 server preprocessed deck. QW4 n-side ~99.9688% and ~300x e/h concentration remain unresolved physically.
+- Independent review prompt prepared for user to copy to Claude, not sent. No code/runtime changes. Next read-only check active pp2/pp6 CMD/PAR and SDE, area/current/2D normalization, trap vs SRH balance, QW mapping and matched J.
+
 ## 2026-10-23 — Independent literature cross-check of n-side QW4 dominance (RESEARCH)
 - In existing V2.1 model QW4 is n-side, not p-side (CURRENT_STATUS.md previously records this explicitly). Thus p-side well dominant EL literature David 2008 DOI 10.1063/1.2839305; Bojarska-Cieślińska 2025 DOI 10.1038/s41598-025-86774-6 does NOT verify the n-side QW4 ~99.9688% simulated share.
 - Casu et al., Micromachines 2022 DOI 10.3390/mi13081266 reports a predominantly emitting n-side QW in two-wavelength hetero-composition InGaN LED, with limited electron injection to p-side QW; demonstrates physical possibility, not same device calibration. Han et al., IEEE JQE 2018 DOI 10.1109/JQE.2018.2790440 also emphasizes recombination rate effects beyond hole transport.

@@ -1,3 +1,7 @@
+## 2026-10-23 — Signed PE_Charge cutline verified (OBSERVED)
+- Existing n2_end_des SVisual, Cutline X=0.14..0.29um Y=1um: after disabling Log Scale on the graph y-axis, positive and negative PE_Charge spikes became visible across nominal MQW heterointerfaces. Graph ±1e21 cm^-3 range; precise numbers and physical sign correctness not established.
+- Visualization issue resolved. QW4 carrier accumulation cause, polarization sign validation, current-normalization and matched-J remain unresolved. No TCAD code/run changes. Next read-only existing results and actual current normalization.
+
 ## 2026-10-23 — Lee PE_Charge linear-axis visualization appears flat (OBSERVED screenshot; no run)
 - On existing n2_end_des PE_Charge Cutline_Y Plot after user unchecked y-axis Log.Scale, plot no longer shows large spikes and instead displays an almost horizontal red trace with no readable numeric y ticks in provided screenshot. Plot Properties Main was visible, not the axis min/max dialog. Prior logarithmic rendering showed narrow vertical spikes and 2D legend global range approximately ±1.23e21 cm^-3.
 - This is an axis/rendering limitation observation; do NOT interpret the flat line as zero polarization charge or validated polarity, nor assume the spikes have disappeared physically. Actual axis min/max and region-resolved signed cutline charge have not been verified.

@@ -1,3 +1,8 @@
+## 2026-10-23 — Lee Claude QW4 99.9688% independent review (PROPOSED, NO RUN)
+- User relayed Claude's independent static/analytic V2.1 audit; real server n2/n6 PLT/TDR were not supplied to Claude, and no new runs or code changes occurred. QW4 ~99.9688% radiation remains physics-unvalidated; Claude judges aggregation artifact less likely but cannot validate normality.
+- IMPORTANT correction: Claude explicitly retracts its prior inferred QW4 n~1.6e19/p~8e16; project SVisual center probe n=1.35190e18/p=1.13508e18 cm^-3 takes priority. Claude's 1.6e19 *effective n+p* and ratios are derived/hypothesized, not SVisual observation. Claude reports 199-line source Iterations=12 vs SWB_PASTE/log Iterations=20, deployed pp2/pp6 equivalence unverified.
+- Read-only next: inspect server pp2/pp6 actual CMD/PAR/physics, verify n2/n6 PLT recombination/current accounting, then full 3.6V/equilibrium TDR well depths, polarization signs and intra-QW density profiles. Separate proposed scripts qw4_plt_audit.py and qw4cut.tcl were mentioned but not delivered or run. Baseline freeze HOLD; do not conflate n-side concentration with validated physics.
+
 ## 2026-10-23 — Lee standalone SDevice 198-line source audit (NO RUN)
 - Static review of user-uploaded V2.1-related SDevice text confirms 13 Dmg+13 Edge traps and per-QW1..4 Clean/Edge/Dmg integrations for Radiative/SRH/Auger; runtime source provenance/region existence/physical model assumptions still unverified.
 - GitHub CMP/tcad/CURRENT/sdevice2_defect_on.cmd is older nonidentical source and must not be substituted for n2/n6 server preprocessed deck. QW4 n-side ~99.9688% and ~300x e/h concentration remain unresolved physically.

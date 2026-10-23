@@ -1,3 +1,9 @@
+## 2026-10-23 — Lee n2 3.6V PE_Charge Y=1.0um cutline screenshot (OBSERVED; READ ONLY)
+- User SVisual screenshot of existing `n2_end_des` PE_Charge confirms Cutline Properties endpoints (x1,y1)=(0.14,1.0)um and (x2,y2)=(0.29,1.0)um. It is a depth cut across the MQW at lateral Y=1um; no new calculation.
+- OBSERVED: narrow, tall PE_Charge plot spikes cluster around nominal heterointerface positions in active stack; 2D color legend displays positive and negative ranges of approximately 10^21 cm^-3. The Cutline_Y graph's vertical scale is logarithmic (tick labels 1e+21 down to tiny positive values), hence the signed interface charge cannot reliably be read from this 1D graph or attributed positive/negative by QW interface.
+- LIMIT: plotting nonzero PE_Charge is not proof of correct polarization sign, true crystal polarity, interfacial sheet charge magnitude, QW4 carrier-accumulation mechanism, or calibrated 4um physics; the colorbar limits are not local peak values.
+- NEXT SINGLE READ ONLY STEP: change vertical PE_Charge plot axis to Linear (disable Logarithmic), autoscale, and inspect positive vs negative spikes about zero at verified region interfaces before judging sign. Preserve the original deck and TDR.
+
 ## 2026-10-23 — Lee V2.1 actual lattice axis parameter declarations verified (OBSERVED SERVER OUTPUT; NO RUN)
 - User ran read-only `grep -nEi -C 4 "LatticeParameters|Piezoelectric_Polarization|SpontaneousPolarization|Polarization" pp2_des.cmd pp2_des.par pp6_des.cmd pp6_des.par` in /user/semi/semi437/CMP_BASELINE_2.0.0_V2.
 - OBSERVED in both `pp2_des.par:1-4` and `pp6_des.par:1-4`: `LatticeParameters { X = (0, 0, -1) Y = (1, 0, 0) }`; both command files line21: `Piezoelectric_Polarization( strain activation=0.5 )`. Prior pp1_dvs.cmd line14 says Ga-polar c-axis points to -x. Thus actual preprocessed parameter vectors match the design COMMENT and n2/n6 match on these inspected lines.

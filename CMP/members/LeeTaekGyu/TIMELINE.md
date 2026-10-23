@@ -1,3 +1,8 @@
+## 2026-10-23 — Lee hole quasi-Fermi SVisual (OBSERVED; NO RUN)
+- In SVisual, hQuasiFermiEnergy blue cutline was added beside prior 3.6V red eQuasiFermiEnergy and green equilibrium reference. At depth x approx 0.14–0.29 um, blue is visually around -3.6 to -3.0 eV and red around -1 to 0 eV, both showing step-like changes. Previous lateral cutline was Y=1.0 um; exact current curve properties are not displayed.
+- This confirms visually distinct electron/hole quasi-Fermi profiles, not the physical cause of QW4 carrier accumulation or correctness of polarization/band alignment. No numerical values exported. No code or simulation changes.
+- Next read-only: compare end-state conduction and valence band energies with both quasi-Fermi curves at identical coordinates; validate well and interface locations.
+
 ## 2026-10-23 — Lee n2 eq/final electron quasi-Fermi energy cutline (OBSERVED SCREENSHOT; NO NEW RUN)
 - User SVisual screenshot shows plots for n2_end_des (left, previously completed 3.6 V) and n2_eq_des (right, equilibrium) with electron quasi-Fermi energy color maps; lower Cutline_Y Plot overlays a red biased profile and green equilibrium profile across depth X about 0.14–0.29um. Previous cutline setup was lateral Y=1.0um; individual cutline-property dialogs are not displayed in this screenshot.
 - OBSERVED visually: equilibrium green eQuasiFermiEnergy nearly horizontal at approximately 0 eV in the displayed frame; 3.6V red curve climbs stepwise from approximately −1 eV on p-side to 0 eV toward n-side, with multiple sharp changes near nominal four-QW stack. These are rough readings from an image, not exact exported numbers.

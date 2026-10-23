@@ -1,3 +1,21 @@
+## 2026-10-23 — V2.1 n2 QW4 fine cutline results (이택규 OBSERVED-user + Claude DERIVED/HYPOTHESIS; NO NEW RUN)
+
+> **아래는 사용자가 요청한 Claude 인계 원문 7절을 그대로 수록한 것임.** 서버 SVisual TDR→CSV 출력과 awk 판독은 사용자/Claude 보고이며, 원본 TDR·CSV·분석 스크립트 자체를 이 GPT 세션에서 확보하여 재계산하지 않았음. 원문의 "배제", "원인 특정", "집계 오류 아님" 등은 **Claude의 판정**으로 기록하며 독립적인 CONFIRMED 검증으로 격상하지 않음.
+
+```text
+2026-10-23 (이택규 서버 출력 + Claude 해석, 새 시뮬레이션 없음) V2.1 n2 QW4 99.97% 집중 원인 특정
+- 방법: SVisual batch qw4cut.tcl로 n2_eq / n2_end TDR의 y=1.0um depth cutline을 csv로 export, awk로 판독.
+- 배제: 4 QW 모두 xMole 0.15, Eg 2.8569 eV. 평형 PE_Charge 부호는 Ga-polar 패턴. 우물 중심 Rad/np = 2.000e-11(=B). local J 1.8236 = 단자 J.
+- QW4 내부: n 9.1e19(p쪽 계면), p 8.3e19(n쪽 계면). 직접 적분 Rad 67.0 / Auger 27.6 / SRH 5.4%, Jrad 1.220 A/cm2 → 보고값 재현. 집계 오류 아님.
+- 3.6V QF: eQF가 장벽→우물 진입마다 ~0.24 eV 강하(합 0.97), hQF 0.23/0.22/0.18/0.02 eV(합 0.66). QF 분리 QW1-3 2.40-2.48 vs QW4 2.69 eV → QW4 집중의 직접 원인. ~1.6 eV가 계면에서 소모 → 높은 Vf와 같은 원인.
+- 해석(가설): 분극 계면 + Thermionic-only 고전 DD(터널링·양자보정 없음)의 결과. 설정 오류 미발견.
+- 10/22 Claude의 "QW4 n>>p" 역산 철회.
+- 판정 B 유지, Baseline 고정 보류. 미해결: 실행 덱 Iterations 12 vs 20 출처, n6 미확인, 분극 크기 적정성.
+- 다음(승인 필요): 계면 수송 모델 1변수 민감도(Heterointerface UG p.870 / 터널링 UG p.1070).
+```
+
+**후속 검증 경계:** 네 QW의 동일 조성/BandGap은 보고된 1D cutline 지점들의 비교 결과임. PE_Charge 부호가 설계한 Ga-polar 패턴과 일치한다는 보고는 분극 시트 크기·절대 물성의 검증을 뜻하지 않음. 접점 J와 단면 local J 일치는 보고된 검사점의 정규화 일치를 나타낼 뿐 모든 2D 전하수지를 증명하지 않음. QF 분리와 재결합 집중 사이 연관성 및 interface Thermionic 제약은 설명 가설로 유지하고, 실제 실행 데크 Iterations 12/20 차이와 n6 미확인 보존. 기존 n2 TDR은 10/14 생성물이며 **새 SDevice RUN 없음, 코드 변경 없음**.
+
 ## 2026-10-23 — Claude V2.1 QW4 99.9688% independent review handoff (USER-PROVIDED CLAUDE REPORT; PROPOSED, NO RUN)
 - Source: 2026-10-23 user-pasted Claude handoff. This is Claude's source/derivation/literature review, not independently re-executed TCAD or independently checked server output. Report/proposed tools live in Claude-local `cmp/QW4_REVIEW_20261023/` and were NOT provided to GPT; file SHA prefixes are Claude-reported only.
 - Claude reports attached SDevice 199-line text (`File {` line 1) differs from its `SWB_PASTE/sdevice_des_compact.cmd` only in line 174 `Iterations = 12` vs SWB_PASTE and LOG #02 setting 20. Claude says diff confirmed; GPT has NOT compared SWB file or actual preprocessed `pp2_des.cmd` / `pp6_des.cmd`. Runtime deck provenance UNRESOLVED.

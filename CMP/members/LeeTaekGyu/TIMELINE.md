@@ -1,3 +1,9 @@
+## 2026-10-23 — Lee 3.6V valence band versus hole quasi-Fermi overlay (OBSERVED screenshot; NO RUN)
+- In SVisual, user added the biased n2_end_des ValenceBandEnergy trace (cyan) to the same Cutline_Y plot carrying n2_end_des hQuasiFermiEnergy (blue), eQuasiFermiEnergy (red) and n2_eq_des equilibrium quasi-Fermi reference (green). Nominal depth X ~0.14–0.29 um; prior lateral Cutline Y=1.0 um, not reverified in shown properties.
+- OBSERVED visually: cyan valence-band trace exhibits four well-related upward features and varies with depth, while blue hole quasi-Fermi shows corresponding step-like changes. Vertical proximity between cyan/blue varies by position. No quantitative local energy gaps, layer labels, offsets or carrier concentrations can be extracted reliably from screenshot alone.
+- QW4 n/p ~300x QW1 observation and ~99.97% radiative concentration are not causally explained by this overlay; polarization correctness still UNRESOLVED. No simulation rerun or source edits.
+- User requested to limit repeated GUI checks. NEXT short read-only visual check: add biased n2_end_des ConductionBandEnergy to this graph to compare Ec/Ev/eQF/hQF at same Y and X, then summarize observations versus unresolved physics. Full calibration, current normalization, matched-J and Full/Half validation remain separate gates.
+
 ## 2026-10-23 — Lee hole quasi-Fermi SVisual (OBSERVED; NO RUN)
 - In SVisual, hQuasiFermiEnergy blue cutline was added beside prior 3.6V red eQuasiFermiEnergy and green equilibrium reference. At depth x approx 0.14–0.29 um, blue is visually around -3.6 to -3.0 eV and red around -1 to 0 eV, both showing step-like changes. Previous lateral cutline was Y=1.0 um; exact current curve properties are not displayed.
 - This confirms visually distinct electron/hole quasi-Fermi profiles, not the physical cause of QW4 carrier accumulation or correctness of polarization/band alignment. No numerical values exported. No code or simulation changes.

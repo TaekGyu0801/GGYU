@@ -1,3 +1,8 @@
+## 2026-10-23 — QW4 literature plausibility status clarification (UNRESOLVED)
+- **QW4 = n-side QW in V2.1**, as already recorded below. David et al. APL 2008 p-side QW dominance and Bojarska-Cieślińska et al. Sci Rep 2025 thick-barrier p-side dominance thus cannot validate modeled n2 QW4~99.9688% QW-radiative share. Do NOT conclude model is normal because p-side dominance has been published.
+- Counterexample: Casu et al., Micromachines 2022 DOI 10.3390/mi13081266 documented n-side well stronger than p-side in a two-different-In-content MQW, explained by deficient electron transport to p-side. Different wells/geometry/prejudice: does not establish our value/physical correctness. Literature cannot presently determine whether our n-side QW4 dominance is valid.
+- Current blocker remains QW4 99.97% extreme e+h concentration mechanism and calibrated physics. NEXT read-only verify model's exact stack/QW-integrals/current normalization/charge polarity, then consider minimal controlled sensitivity at matched J. No new RUN or source edit.
+
 ## 2026-10-23 — Lee PE_Charge signed spikes visualized (OBSERVED)
 - Linear SVisual PE_Charge cutline of existing n2_end_des at Y=1um shows both positive and negative sharp interface-associated spikes near four nominal QWs. Log-axis visualization issue resolved; polarity correctness, QW4 accumulation cause, and precise interface sheet charge remain unresolved. No code/run change.
 

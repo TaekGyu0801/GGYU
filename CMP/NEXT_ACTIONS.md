@@ -1,3 +1,9 @@
+## 2026-10-23 — Lee Claude QW4 review read-only validation sequence (CLAUDE PROPOSED)
+1. Verify exact preprocessed pp2_des.cmd/pp6_des.cmd and .par on /user/semi/semi437/CMP_BASELINE_2.0.0_V2; grep Iterations, compare CMD/PAR accounting for node parameter substitutions, check Radiative B/Auger C/SRH lifetimes/BandGap/polarization/Thermionic. Resolve attached Iterations=12 versus Claude SWB_PASTE/log=20 before causal analysis. READ ONLY.
+2. After obtaining/reviewing Claude's proposed qw4_plt_audit.py (CLAUDE-FOLDER ONLY; no server execution confirmed), use actual n2/n6 PLT for Rad/SRH/Auger/trap by QW & voltage, QW4 fraction, matched-current and q*QW Rad/I with correct 2D units and trap/SRH accounting. Reported script parser test was on SYNTHETIC DATA ONLY.
+3. After obtaining/reviewing Claude-proposed qw4cut.tcl (not confirmed present on server), export old n2 equilibrium/3.6V Y=1.0um X=0.14..0.30um plus QW1/QW4 fine cuts. Compare xMoleFraction/BandGap four wells, signed PE_Charge by named interface, e/h QF drops, intra-well electron/hole peaks using actual mesh. No new SDevice run.
+- Baseline physically unvalidated / freeze HOLD; only after error exclusion consider limited operational relative baseline with explicit caveats, not absolute experimental IQE or validated QW distribution.
+
 ## 2026-10-23 — Lee PE_Charge GUI check complete
 - Signed positive/negative PE_Charge spikes were visualized on linear cutline. Stop repeating GUI. Next READ ONLY verify active area/current normalization, original n2/n6 I-V and recombination budget at matched current. Detailed polarization sign versus named interfaces remains open; preserve V2.1 source.
 

@@ -1,3 +1,9 @@
+## 2026-10-23 — QW4 ~99.9688% radiation literature plausibility audit (ANALYSIS; NO RUN)
+- Existing n2 3.6V QW4 QW-radiative integral share ~99.9688%; QW4 n/p center ~303x/~331x QW1 are previously OBSERVED/DERIVED values, not new results.
+- Independently sourced literature: Ji et al., Optics Letters 38, 202 (2013), DOI 10.1364/OL.38.000202: low injection emission mainly from QWs near p-GaN due to limited hole penetration. Liu et al., J. Appl. Phys. 109, 093117 (2011), DOI 10.1063/1.3587176: EL recombination predominantly in p-side QWs. Ryu, Curr. Appl. Phys. 20, 1351 (2020), DOI 10.1016/j.cap.2020.09.005: MQW inhomogeneity can worsen droop.
+- Assessment: p-side-dominant QW is physically plausible if QW4 is p-side, but no cited benchmark establishes ~99.97% as normal for THIS 4um 4-QW V2.1 device; physical validity UNRESOLVED. QW4 fraction is NOT IQE. No code changes, simulation or calibrated validation.
+- NEXT: read-only check QW ordering relative to p-GaN, integrated radiative QW region mapping, exact current normalization and full-device recombination; then matched-current n2/n6 and targeted sensitivity tests only if justified.
+
 ## 2026-10-23 — Signed PE_Charge cutline verified (OBSERVED)
 - Existing n2_end_des SVisual, Cutline X=0.14..0.29um Y=1um: after disabling Log Scale on the graph y-axis, positive and negative PE_Charge spikes became visible across nominal MQW heterointerfaces. Graph ±1e21 cm^-3 range; precise numbers and physical sign correctness not established.
 - Visualization issue resolved. QW4 carrier accumulation cause, polarization sign validation, current-normalization and matched-J remain unresolved. No TCAD code/run changes. Next read-only existing results and actual current normalization.

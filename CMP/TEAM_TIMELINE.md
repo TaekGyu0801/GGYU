@@ -1,3 +1,6 @@
+## 2026-10-23 — Lee signed PE_Charge SVisual (OBSERVED)
+- With PE_Charge line plot made linear, existing n2_end_des at depth x=0.14..0.29um/lateral y=1um displays both positive and negative sharp spikes near QW heterointerfaces, broadly within +/-1e21 cm^-3. Exact interface and physical sign verification unresolved. No run/edit.
+
 ## 2026-10-23 — Lee n2 3.6V PE_Charge Y=1.0um cutline screenshot (OBSERVED; READ ONLY)
 - User SVisual screenshot of existing `n2_end_des` PE_Charge confirms Cutline Properties endpoints (x1,y1)=(0.14,1.0)um and (x2,y2)=(0.29,1.0)um. It is a depth cut across the MQW at lateral Y=1um; no new calculation.
 - OBSERVED: narrow, tall PE_Charge plot spikes cluster around nominal heterointerface positions in active stack; 2D color legend displays positive and negative ranges of approximately 10^21 cm^-3. The Cutline_Y graph's vertical scale is logarithmic (tick labels 1e+21 down to tiny positive values), hence the signed interface charge cannot reliably be read from this 1D graph or attributed positive/negative by QW interface.

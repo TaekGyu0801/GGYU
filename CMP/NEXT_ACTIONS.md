@@ -1,3 +1,6 @@
+## 2026-10-23 — Lee PE_Charge GUI check complete
+- Signed positive/negative PE_Charge spikes were visualized on linear cutline. Stop repeating GUI. Next READ ONLY verify active area/current normalization, original n2/n6 I-V and recombination budget at matched current. Detailed polarization sign versus named interfaces remains open; preserve V2.1 source.
+
 ## 2026-10-23 — Lee immediate PE_Charge plotting fix (READ ONLY)
 - User verified SVisual cutline PE_Charge on existing n2_end_des from X=0.14 to 0.29um at lateral Y=1.0um. Narrow charged interface-associated peaks visible, but 1D ordinate currently logarithmic and cannot reliably distinguish signed positive/negative spikes.
 - FIRST: set PE_Charge graph vertical axis to Linear and autoscale; record +/− signs at known well interfaces, if visible. No rerun/code edit.

@@ -1,4 +1,61 @@
 {
+  "leePLTFullMapping20261031": {
+    "worker": "이택규",
+    "date": "2026-10-31",
+    "status": "OBSERVED_SERVER_READ_ONLY_PLT_PARSER_SUCCESS; DERIVED; NO_NEW_RUN",
+    "project": "/user/semi/semi437/CMP_BASELINE_2.0.0_V2",
+    "source": "user-pasted precise terminal output of read-only Python mapping DF-ISE datasets to final row",
+    "n2": {
+      "anodeCurrent": 3.64728524885323e-8,
+      "cathodeCurrent": -3.64728524885323e-8,
+      "radAll": 1.52414203814656e+23,
+      "srhAll": 1.25722226677967e+22,
+      "augAll": 6.26570284700597e+22,
+      "trapAll": 1178830.32026416,
+      "qwRad": [
+        1884847120000000000,
+        2718762530000000000,
+        42986721000000000000,
+        1.52362488e+23
+      ],
+      "qw4Pct": 99.96877481383976
+    },
+    "n6": {
+      "anodeCurrent": 9.21970771341943e-9,
+      "cathodeCurrent": -9.21970771341943e-9,
+      "radAll": 2.55552035945039e+22,
+      "srhAll": 4.32337288643595e+21,
+      "augAll": 7.83993596604716e+21,
+      "trapAll": 1.98258247754075e+22,
+      "qwRad": [
+        2526014160000000,
+        59794782300000000,
+        1741130110000000000,
+        2.5552736e+22
+      ],
+      "qw4Pct": 99.99294273758203
+    },
+    "derived": {
+      "equalVoltageCurrentRatio": 0.25278274344783613,
+      "n2GlobalRadiativeSharePct": 66.95303576658964,
+      "n6GlobalRadiativeSharePct": 44.40958889792997,
+      "n6GlobalTrapSharePct": 34.453129069478436,
+      "conditionalQ_1eMinus12ClosureN2Pct": 99.9990402512726,
+      "conditionalQ_1eMinus12ClosureN6Pct": 99.99904051464009
+    },
+    "shellQuoteIssue": "resolved by interactive bash and standalone PY terminator",
+    "interpretation": "QW4 dominates both OFF/ON, not attributable solely to sidewall Trap; self-consistent current budget conditional on physical unit mapping, not proof of calibrated IQE or mechanism",
+    "unresolved": [
+      "QW4 physical cause",
+      "AreaFactor/2D scaling",
+      "matched-current comparison",
+      "Full/Half geometry validation"
+    ],
+    "baselineFreeze": "HOLD",
+    "newSimulation": false,
+    "sourceChanged": false,
+    "next": "Compare matched current in existing PLT and validate normalization before model sensitivity; approval for new RUN"
+  },
   "leeNodePLTReverify20261031": {
     "worker": "이택규",
     "date": "2026-10-31",

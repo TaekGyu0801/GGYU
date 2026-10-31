@@ -1,3 +1,8 @@
+## 2026-10-31 — n2/n6 실제 3.6V 완료·PLT 헤더/꼬리 재확인 (OBSERVED, NO RUN)
+- 학교 서버 터미널에서 `n2_des.sta`, `n6_des.sta` 둘 다 `done` 및 SDevice anode 최종 3.600V n2 `3.647E-08`, n6 `9.220E-09` 출력. 같은 전압의 원시 단자 전류는 ON/OFF=0.25281, 74.72% 감소. 전류 정규화/동일전류 IQE와 혼동 금지.
+- DF-ISE n2/n6 PLT 헤더에 12개 QW Clean/Edge/Dmg 방사·SRH·Auger 적분 및 global/Trap 데이터셋 존재. `head -25`·`tail -12`만으로 전체 마지막 값 위치를 독립 재매핑할 수 없으므로 다음엔 파일 자체를 읽기 전용으로 파싱해야 함. 꼬리에 n6 Trap-all `1.98258247754075e22`, n6 SRH-all `4.32337288643595e21`, n6 Aug-all `7.83993596604716e21`가 포함되어 이전 GitHub 연구 기록과 수치 일치. n2 SRH-all `1.25722226677967e22`, Aug-all `6.26570284700597e22`, Trap-all `1.17883032026416e6`도 기존 기록과 부합.
+- 기존 10/14 PLT 재확인, 새 시뮬레이션/수정 없음. QW4 ~99.97% 원인 여전히 검증되지 않음. NEXT 읽기 전용 정확한 PLT dataset별 최종 행 추출(2D 단위 확인), n2/n6 whole-device/QW 수지와 matched-current 타당성 검토.
+
 ## 2026-10-31 — V2.1 pp2/pp6 설정 원문 재확인 (OBSERVED USER TERMINAL; READ-ONLY)
 - 본인이 2026-10-31 학교 서버 `/user/semi/semi437/CMP_BASELINE_2.0.0_V2`에서 Bash 읽기 전용 검사를 실행하여 출력 제공. `pp2_des.cmd:174`와 `pp6_des.cmd:174` 모두 `Iterations = 12`. 별도 초기화 Coupled 반복값 200 및 100과 구분. 이전 Claude SWB_PASTE의 20이라는 기록과 달리 **현재 확인 가능한 pp2/pp6 전처리 CMD 설정은 12**이며, 당시 solver LOG와의 이력 대조는 아직 남음.
 - 공통 CMD: 분극 strain activation=0.5, InGaN/GaN·AlGaN/GaN·AlGaN/InGaN Thermionic 선언, CurrentPlot IntegrationUnit=um. 공통 PAR: ThermionicEmission Formula=1. 물리적 정당성/최종 로그 모델은 이 grep만으로 확정 불가.

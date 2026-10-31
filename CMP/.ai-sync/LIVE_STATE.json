@@ -1,4 +1,30 @@
 {
+  "leeN2RuntimeContactAreaFactor20261031": {
+    "worker": "이택규",
+    "date": "2026-10-31",
+    "status": "OBSERVED_USER_LOG; NO_NEW_RUN",
+    "model": "CMP_BASELINE_2.0.0_V2",
+    "source": "user-pasted grep output from n2_des.log",
+    "n2": {
+      "anode": {
+        "line": 237,
+        "contact": "Ohmic",
+        "areaFactor": 1
+      },
+      "cathode": {
+        "line": 238,
+        "contact": "Ohmic",
+        "areaFactor": 1
+      }
+    },
+    "n6AreaFactor": "NOT_IN_CURRENT_OUTPUT",
+    "geometry": "pp1_dvs.cmd output not in current message",
+    "limitation": "Runtime n2 contact area factor 1 does not prove effective out-of-plane 2D current normalization or half/full width scaling",
+    "next": "Read only n6_des.log area factor; pp1_dvs.cmd half lateral extents/contact geometry; compare T-2022.03 official guidance",
+    "baselineFreeze": "HOLD",
+    "newRun": false,
+    "sourceChanged": false
+  },
   "leeAreaFactorGrep20261031": {
     "worker": "이택규",
     "date": "2026-10-31",

@@ -1,3 +1,7 @@
+## 2026-10-31 — 이택규 n2 actual log anode/cathode area factor 1 (OBSERVED; NO RUN)
+- n2_des.log lines237/238 from direct user shell output: anode/cathode Ohmic `area factor : 1`. CMD/PAR grep previously yielded no explicit AreaFactor, but runtime contact factor now observed for **n2 only**; n6 still pending.
+- `AreaFactor=1` at contacts does NOT independently validate actual 2D current/out-of-plane scaling or full-vs-half effective area. No SDE geometry text supplied in this turn. QW4 physical cause and baseline freeze HOLD unchanged. NEXT READ ONLY n6 area-factor + pp1_dvs.cmd half width/contact geometry + official UG.
+
 ## 2026-10-31 — 이택규 literal AreaFactor/current-unit grep: no match in 6 active files (OBSERVED; NO RUN)
 - n2/n6 LOG+pp CMD/PAR grep only matched e/h/total CurrentDensity Vector plot requests and CurrentPlot IntegrationUnit=um. **No explicit AreaFactor/current-unit string** in inspected six files; implicit/default 2D terminal-current scaling remains UNRESOLVED and must not be inferred from absent literal. QW4 >99.97% at near-matched I and q*1e-12 current closure unchanged.
 - NEXT READ ONLY inspect pp1_dvs.cmd real lateral width and electrode extent, check n2/n6 runtime log geometry/units, consult T-2022.03 UG current-unit/AreaFactor definitions; physical Baseline freeze HOLD and original TCAD untouched.

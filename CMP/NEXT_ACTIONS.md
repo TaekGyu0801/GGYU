@@ -1,3 +1,8 @@
+## 2026-10-31 — Lee after n2/n6 STA/log/PLT head-tail (READ-ONLY NEXT; NO RUN)
+- DONE: n2/n6 status both `done`, at 3.600V anode log current n2 3.647e-08, n6 9.220e-09; ratio 0.25281. PLT DF-ISE includes per-QW Clean/Edge/Dmg Radiative/SRH/Auger, all-device channels and Trap-all. Tail is a *fragment of one last long numeric row*, not safely paired with truncated head; avoid field misalignment.
+- NEXT immediately: on server read-only parse `n2_des.plt` and `n6_des.plt` **full datasets + Data columns** and extract last-row precise `anode TotalCurrent`, `cathode TotalCurrent`, `IntegrRad_all`, `IntegrSRH_all`, `IntegrAug_all`, `IntegrTrap_all`, QW1-4 Radiative sum; check row-width and samples; compare global channels with conditional q×1e-12 conversion only after units/AreaFactor verification.
+- Then evaluate n2/n6 matched-J across bias; QW4 physical mechanism, model polarization magnitude, Full/Half baseline remain unresolved; no new simulation before user approval.
+
 ## 2026-10-31 — Lee immediate NEXT after actual pp2/pp6 grep (NO RUN)
 - **DONE (user server output):** both preprocessed CMD line174 main `Iterations=12` (not SWB_PASTE 20); 200/100 are separate Coupled initialization iterations. Both CMD have PolAct strain activation0.5, three Thermionic interfaces, IntegrationUnit=um; both PAR Formula1. Four old n2/n6 .plt/.tdr files exist.
 - **FIRST READ ONLY:** examine exact n2/n6 `n2_des.plt` / `n6_des.plt` text structure (`head`, `tail`, relevant key strings) plus n2/n6 `.log` for actual run completion/parameters; retain native 2D current units and dimensions before converting to A/cm2. Check AreaFactor/source-level scaling beyond the filtered grep. Do not treat lack of literal AreaFactor match as proof of value.

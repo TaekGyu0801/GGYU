@@ -1,3 +1,8 @@
+## 2026-10-31 — Bash/Python heredoc quoted delimiter left tcsh continuation prompt (OBSERVED SHELL ERROR, NOT TCAD)
+- Worker 이택규, AI ChatGPT. User school terminal showed `bash -lc 'cd /user/semi/semi437/CMP_BASELINE_2.0.0_V2 || exit 1` then `Unmatched '.` from interactive shell. Later `python3 - <<"PY"` started while still at home directory and the terminal printed repeated `?` continuation prompts; final delimiter entered `PY'` rather than exact `PY`, so block was not finished.
+- Consequence: PLT parsing **NOT EXECUTED/NOT VERIFIED**; no evidence of SDevice, PLT, model, or mesh error; no original simulation/source modification.
+- Remedy **PROPOSED, user confirmation pending**: `Ctrl+C`, run `bash` interactively and `cd /user/semi/semi437/CMP_BASELINE_2.0.0_V2`, then paste Python `python3 - <<'PY'` heredoc with terminating `PY` alone. This avoids nested outer shell quoting and tcsh interpolation problems. Await user's actual output before marking resolved.
+
 ## 2026-10-22 — Shell Bash for-loop diagnostic workaround verified (RESOLVED)
 - Previous `for: Command not found.` occurred because command required Bash syntax, terminal shell likely csh/tcsh. User successfully reran exact read-only check with `bash -lc '...'`; output showed SDE n17 and Device n24. This was a shell-only issue, no TCAD code or run error. Do not repeat remediation.
 

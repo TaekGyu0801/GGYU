@@ -1,3 +1,7 @@
+## 2026-10-31 — PLT parser 실행 중 tcsh 따옴표/Here-document 종료 문제 (OBSERVED, SHELL ONLY)
+- 사용자 터미널에서 외부 `bash -lc '` 명령이 닫히지 않아 `Unmatched '.` 표시. 이어 `python3 - <<"PY"`를 셸에서 입력하고 종료에 `PY'`를 사용하여 `?` continuation 프롬프트에서 멈춤. 실제 PLT 파싱 결과 없음.
+- ChatGPT가 `Ctrl+C` → Bash 진입(`bash`) → 프로젝트 디렉터리 이동 → `python3 - <<'PY'`와 종결 `PY`만 단독 입력하는 방법 제안. **실행 성공 아직 미확인**. 원본 n2/n6 PLT/TDR 및 소스 변경 없음; QW4 물리적 원인 미확정. Read-only PLT 감사 예정.
+
 ## 2026-10-31 — n2/n6 실제 3.6V 완료·PLT 헤더/꼬리 재확인 (OBSERVED, NO RUN)
 - 학교 서버 터미널에서 `n2_des.sta`, `n6_des.sta` 둘 다 `done` 및 SDevice anode 최종 3.600V n2 `3.647E-08`, n6 `9.220E-09` 출력. 같은 전압의 원시 단자 전류는 ON/OFF=0.25281, 74.72% 감소. 전류 정규화/동일전류 IQE와 혼동 금지.
 - DF-ISE n2/n6 PLT 헤더에 12개 QW Clean/Edge/Dmg 방사·SRH·Auger 적분 및 global/Trap 데이터셋 존재. `head -25`·`tail -12`만으로 전체 마지막 값 위치를 독립 재매핑할 수 없으므로 다음엔 파일 자체를 읽기 전용으로 파싱해야 함. 꼬리에 n6 Trap-all `1.98258247754075e22`, n6 SRH-all `4.32337288643595e21`, n6 Aug-all `7.83993596604716e21`가 포함되어 이전 GitHub 연구 기록과 수치 일치. n2 SRH-all `1.25722226677967e22`, Aug-all `6.26570284700597e22`, Trap-all `1.17883032026416e6`도 기존 기록과 부합.

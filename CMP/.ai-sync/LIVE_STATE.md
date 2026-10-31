@@ -1,3 +1,8 @@
+## 2026-10-31 — 이택규 n2/n6 area factor 1 + V2.1 Half geometry verified (OBSERVED/DERIVED; NO RUN)
+- Actual n2 and n6 logs anode/cathode Ohmic contact `area factor : 1`. SDE Wm4→Xs2um half; edge Wedge0.1um, damage Wdmg0.005um, Xe1.895, Xd1.995, Xs2; Wshelf0, Bspan0, Cath0 bottom; anode across three segmented top edges per source.
+- Sentaurus public tutorial says 2D native current A/um, default 1um out-of-plane. Assuming this convention, I2 at3.6V / 2e-8cm² =1.8236426A/cm²; I6 / 2e-8=0.4609854A/cm². **Conditional 2D-slice J**, not physical 4x4 square pixel calibration or Full/Half proof; T-2022.03 original UG not rechecked.
+- QW4 OFF/ON >99.97% unresolved mechanism, Baseline physical FREEZE HOLD. NEXT read-only actual mesh/symmetry plus official 2D semantics before Full reference design or new controlled transport experiment. No source/run modifications.
+
 ## 2026-10-31 — 이택규 n2 actual log anode/cathode area factor 1 (OBSERVED; NO RUN)
 - n2_des.log lines237/238 from direct user shell output: anode/cathode Ohmic `area factor : 1`. CMD/PAR grep previously yielded no explicit AreaFactor, but runtime contact factor now observed for **n2 only**; n6 still pending.
 - `AreaFactor=1` at contacts does NOT independently validate actual 2D current/out-of-plane scaling or full-vs-half effective area. No SDE geometry text supplied in this turn. QW4 physical cause and baseline freeze HOLD unchanged. NEXT READ ONLY n6 area-factor + pp1_dvs.cmd half width/contact geometry + official UG.

@@ -1,3 +1,8 @@
+## 2026-10-31 — 이택규 pp2/pp6 deployed source grep (OBSERVED USER TERMINAL; NO RUN)
+- Original V2.1 server pp2_des.cmd, pp6_des.cmd both show `Iterations=12` line174; separate Coupled initialization 200/100, not the main Iterations value. Earlier Claude SWB_PASTE 20 is *not* the verified preprocessed pp2/pp6 setting; full historic run-log linkage not independently rechecked.
+- Both CMD: Piezo strain activation0.5, three material-interface Thermionic declarations, IntegrationUnit=um. Both PAR: ThermionicEmission Formula1. Old n2/n6 .plt & end .tdr remain on disk dated Oct14. No new simulation or modification. Terminal grep does not establish effective AreaFactor.
+- PHYSICAL FREEZE HOLD. n-side QW4 ~99.9688% of QW radiative integral still UNRESOLVED. NEXT READ ONLY PLT/log structure + terminal/whole-device 4-channel current accounting, then matched-J comparison; no source edits/reruns.
+
 ## 2026-10-24 — JuSubin/Kou joint literature presentation plan (PROPOSED/WORKING SELECTION; NO TCAD RUN)
 - User uploaded 2nd-week 19-slide CMP presentation and Kou et al. (2019) Optics Express full 11-page PDF. For 2026-10-26 Monday CMP progress and 10/29 Thursday joint review (7 min each), 이택규 will cover Kou 2019. 주수빈 requests a complementary paper selection and PPT plan.
 - **Recommended working selection, not yet explicitly accepted by user:** Baek, W.J. et al., Nat Commun 14,1386 (2023), DOI 10.1038/s41467-023-36773-w. Updates earlier Zhao 2026 first-choice shortlist once Week-2 citations and uploaded Kou are considered. Joint narrative Kou sidewall problem -> Baek vertical QB/EBL mitigation -> CMP Project B lateral AlGaN edge is separate unvalidated design.

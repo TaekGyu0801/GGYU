@@ -1,3 +1,8 @@
+## 2026-10-31 — 이택규 full PLT parser SUCCESS: QW4 99.9688% OFF, 99.9929% ON (OBSERVED; NO RUN)
+- User executed in Bash read-only Python against existing 10/14 n2_des.plt/n6_des.plt. Final raw I: n2 3.64728524885323e-08, n6 9.21970771341943e-09. Four QW integrated Radiative QW4 fractions n2 **99.96877481383976%**, n6 **99.99294273758203%**. Thus OFF and ON both n-side QW4-dominated; not equal-current comparison.
+- Global 4-channel raw rates captured: n2 Rad 1.52414203814656e23 / SRH 1.25722226677967e22 / Aug 6.26570284700597e22 / Trap 1.17883032026416e6; n6 Rad 2.55552035945039e22 / SRH 4.32337288643595e21 / Aug 7.83993596604716e21 / Trap 1.98258247754075e22. Derived Radiative four-channel share n2~66.9530%, n6~44.4096%; n6 Trap~34.4531%. Numeric conditional q*1e-12 current closure ~99.99904% in each, physical calibration & effective unit still unresolved.
+- Previous tcsh heredoc quote prompt resolved via Bash and proper terminator. NO new model edit, solver run or outputs. Baseline physical FREEZE HOLD. Next READ ONLY compare at same current from PLT, 2D normalization/AreaFactor validation; QW4 physical cause UNRESOLVED.
+
 ## 2026-10-31 — Lee n2/n6 direct terminal and PLT confirmation (OBSERVED; NO NEW RUN)
 - Original V2.1 n2_des.sta / n6_des.sta both done; at 3.600V anode currents n2=3.647e-08, n6=9.220e-09 (as displayed, native unit), ON/OFF ratio 0.25281 at **equal V, not equal current**.
 - DF-ISE PLT metadata confirms per QW1-4 Clean/Edge/Dmg Rad/SRH/Auger and global channels/Trap-all; user pasted head25 & tail12, not the full label-to-final-row field mapping. Existing n2/n6 old 10/14 outputs; no new simulation or source edit. Old n6 total Trap-all 1.98258247754075e22 reappears in tail, consistent with October 21-22 documented audit.

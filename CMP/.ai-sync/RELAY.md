@@ -1,3 +1,7 @@
+## 2026-10-31 — Lee runtime contact area-factor n2 only (HANDOFF; NO RUN)
+- New user-provided grep n2_des.log line237: anode (Ohmic) area factor : 1; line238 cathode (Ohmic) area factor : 1. This is direct runtime contact setting evidence, unlike previous unsuccessful CMD/PAR literal grep. Do NOT treat as proof total current is physical A or as proof 2D effective width-to-full-4um conversion.
+- n6 equivalent lines not yet provided; SDE geometry/contact excerpts requested but not provided this turn. Next READ-ONLY check both, then official T-2022.03 2D current normalization before any physically stated J. QW4 extreme concentration remains UNRESOLVED, physical Baseline freeze HOLD. Original TCAD untouched.
+
 ## 2026-10-31 — Lee verified QW4 concentration at near-matched native current (HANDOFF; NO RUN)
 - In protected original V2.1 PLTs n6 3.6V I=9.21970771341943e−09/QW4 Rad share 99.99294273758203%. n2 bracketing I: 3.512V 8.63290391977055e−09/99.97314950045252%, 3.528V 1.10599185065263e−08/99.9725752700292%. Linear-in-I interpolation gives n2 bias~3.51586848V, QW4~99.97301066% at the n6 current; **DERIVED, not actually simulated exact matched-I**. Both OFF/ON overwhelmingly QW4-dominated; cause still UNKNOWN.
 - Do not keep repeating same QW4 percentage. Next first: READ-ONLY run-log/2D current scaling and AreaFactor/provenance check, then controlled one-variable transport sensitivity in isolated copy after Lee explicit authorization and reference verification. Baseline physical freeze remains HOLD; no code/runs changed.

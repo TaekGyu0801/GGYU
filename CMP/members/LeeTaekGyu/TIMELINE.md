@@ -1,3 +1,9 @@
+## 2026-10-31 — V2.1 pp2/pp6 설정 원문 재확인 (OBSERVED USER TERMINAL; READ-ONLY)
+- 본인이 2026-10-31 학교 서버 `/user/semi/semi437/CMP_BASELINE_2.0.0_V2`에서 Bash 읽기 전용 검사를 실행하여 출력 제공. `pp2_des.cmd:174`와 `pp6_des.cmd:174` 모두 `Iterations = 12`. 별도 초기화 Coupled 반복값 200 및 100과 구분. 이전 Claude SWB_PASTE의 20이라는 기록과 달리 **현재 확인 가능한 pp2/pp6 전처리 CMD 설정은 12**이며, 당시 solver LOG와의 이력 대조는 아직 남음.
+- 공통 CMD: 분극 strain activation=0.5, InGaN/GaN·AlGaN/GaN·AlGaN/InGaN Thermionic 선언, CurrentPlot IntegrationUnit=um. 공통 PAR: ThermionicEmission Formula=1. 물리적 정당성/최종 로그 모델은 이 grep만으로 확정 불가.
+- 기존 n2/n6 PLT 및 end TDR 네 파일 모두 존재(10/14 생성 시각, 크기 293K/295K/21M/23M). 새 RUN/소스 수정 없음. `AreaFactor` 검색 결과 없음; 실제 유효 전류 단위와 geometry scaling 미검증.
+- QW4 방사 비중 ~99.9688% 원인 여전히 UNRESOLVED; 물리적 Baseline freeze HOLD. NEXT는 로그/PLT 원자료(헤더와 최종 행) read-only 확인, full-device recombination·trap·전류 수지 및 matched-J 분석. 보호된 원본 파일 변경 금지.
+
 ## 2026-10-23 — V2.1 n2 QW4 fine cutline results (이택규 OBSERVED-user + Claude DERIVED/HYPOTHESIS; NO NEW RUN)
 
 > **아래는 사용자가 요청한 Claude 인계 원문 7절을 그대로 수록한 것임.** 서버 SVisual TDR→CSV 출력과 awk 판독은 사용자/Claude 보고이며, 원본 TDR·CSV·분석 스크립트 자체를 이 GPT 세션에서 확보하여 재계산하지 않았음. 원문의 "배제", "원인 특정", "집계 오류 아님" 등은 **Claude의 판정**으로 기록하며 독립적인 CONFIRMED 검증으로 격상하지 않음.

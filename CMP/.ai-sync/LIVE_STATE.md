@@ -1,3 +1,8 @@
+## 2026-10-31 — Lee n2/n6 direct terminal and PLT confirmation (OBSERVED; NO NEW RUN)
+- Original V2.1 n2_des.sta / n6_des.sta both done; at 3.600V anode currents n2=3.647e-08, n6=9.220e-09 (as displayed, native unit), ON/OFF ratio 0.25281 at **equal V, not equal current**.
+- DF-ISE PLT metadata confirms per QW1-4 Clean/Edge/Dmg Rad/SRH/Auger and global channels/Trap-all; user pasted head25 & tail12, not the full label-to-final-row field mapping. Existing n2/n6 old 10/14 outputs; no new simulation or source edit. Old n6 total Trap-all 1.98258247754075e22 reappears in tail, consistent with October 21-22 documented audit.
+- NEXT READ ONLY full PLT dataset-final-row extraction, global current budget including Trap, n2/n6 QW4 radiative shares, verify 2D unit/AreaFactor; baseline physical FREEZE HOLD, QW4~99.9688% cause unproven.
+
 ## 2026-10-31 — 이택규 pp2/pp6 deployed source grep (OBSERVED USER TERMINAL; NO RUN)
 - Original V2.1 server pp2_des.cmd, pp6_des.cmd both show `Iterations=12` line174; separate Coupled initialization 200/100, not the main Iterations value. Earlier Claude SWB_PASTE 20 is *not* the verified preprocessed pp2/pp6 setting; full historic run-log linkage not independently rechecked.
 - Both CMD: Piezo strain activation0.5, three material-interface Thermionic declarations, IntegrationUnit=um. Both PAR: ThermionicEmission Formula1. Old n2/n6 .plt & end .tdr remain on disk dated Oct14. No new simulation or modification. Terminal grep does not establish effective AreaFactor.

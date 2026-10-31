@@ -1,4 +1,43 @@
 {
+  "leeNodePLTReverify20261031": {
+    "worker": "이택규",
+    "date": "2026-10-31",
+    "status": "OBSERVED_USER_TERMINAL; NO_NEW_RUN",
+    "path": "/user/semi/semi437/CMP_BASELINE_2.0.0_V2",
+    "nodes": {
+      "n2": {
+        "sta": "done",
+        "anodeAt3p6V": 3.647e-8
+      },
+      "n6": {
+        "sta": "done",
+        "anodeAt3p6V": 9.22e-9
+      }
+    },
+    "derived": {
+      "n6ToN2SameV": 0.25281052920208386,
+      "reductionPct": 74.7189470797916
+    },
+    "fileShape": "DF-ISE xyplot; user only gave first 25 header lines + last 12 numeric tail lines; full mapping still needs read-only parse",
+    "reportedTailChannels": {
+      "n2SRH": 1.25722226677967e+22,
+      "n2Auger": 6.26570284700597e+22,
+      "n2Trap": 1178830.32026416,
+      "n6SRH": 4.32337288643595e+21,
+      "n6Auger": 7.83993596604716e+21,
+      "n6Trap": 1.98258247754075e+22
+    },
+    "caveats": [
+      "current unit/AreaFactor still unresolved",
+      "equal voltage is not matched current",
+      "global Rad and full field mapping must be pulled from complete PLT",
+      "QW4 causal mechanism still unresolved"
+    ],
+    "next": "read only complete n2/n6 PLT datasets plus last row, validate QW4 fraction and all 4 channel budget before matched-J",
+    "newSimulation": false,
+    "codeModified": false,
+    "baselineFreeze": "HOLD"
+  },
   "leeRuntimeSourceAudit20261031": {
     "worker": "이택규",
     "date": "2026-10-31",

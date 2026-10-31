@@ -1,3 +1,10 @@
+## 2026-10-31 — PLT 정확한 최종 행 추출 성공, n2/n6 QW4 수치 확정 (OBSERVED USER SERVER + DERIVED; NO RUN)
+- 앞선 tcsh `Unmatched '`/here-doc 문제를 `bash` 진입→`cd`→`python3 - <<'PY'` 정확한 종료로 해결. 원본 n2_des.plt와 n6_des.plt 읽기 전용 분석 수행.
+- 사용자 원본 파싱 결과: n2 3.6V `I_anode=3.64728524885323e-08`; Rad_all 1.52414203814656e23, SRH_all 1.25722226677967e22, Aug_all 6.26570284700597e22, Trap_all 1.17883032026416e6. QW1/2/3/4 Rad=1.88484712e18/2.71876253e18/4.29867210e19/1.52362488e23. QW4 비율 **99.96877481383976%**.
+- n6 3.6V `I_anode=9.21970771341943e-09`; Rad_all 2.55552035945039e22, SRH_all 4.32337288643595e21, Aug_all 7.83993596604716e21, Trap_all 1.98258247754075e22. QW1/2/3/4 Rad=2.52601416e15/5.97947823e16/1.74113011e18/2.55527360e22. QW4 비율 **99.99294273758203%**.
+- 연산: n6/n2 동전압 전류비 0.25278274; 글로벌 채널 재결합 비율 n2 Rad 66.9530%, SRH 5.5228%, Aug 27.5242%, Trap ~0%; n6 Rad 44.4096%, SRH 7.5131%, Aug 13.6242%, Trap 34.4531%. 조건부 `q×1e−12`을 적용하면 단자 전류 대비 4채널 합 n2=99.99904025%, n6=99.99904051%. 절대 IQE/2D 단위/AreaFactor 실증 아님.
+- 판정: QW4 지배는 Trap OFF에서도 존재하여 Trap만을 원인으로 볼 수 없음. 여전히 물리적 집중 원인 미해결; 실험 실행 없음, 물리 Baseline freeze HOLD. NEXT 기존 PLT에서 두 노드 동일 I 대상 비교, 이어 AreaFactor/모델 물리 민감도 결정.
+
 ## 2026-10-31 — PLT parser 실행 중 tcsh 따옴표/Here-document 종료 문제 (OBSERVED, SHELL ONLY)
 - 사용자 터미널에서 외부 `bash -lc '` 명령이 닫히지 않아 `Unmatched '.` 표시. 이어 `python3 - <<"PY"`를 셸에서 입력하고 종료에 `PY'`를 사용하여 `?` continuation 프롬프트에서 멈춤. 실제 PLT 파싱 결과 없음.
 - ChatGPT가 `Ctrl+C` → Bash 진입(`bash`) → 프로젝트 디렉터리 이동 → `python3 - <<'PY'`와 종결 `PY`만 단독 입력하는 방법 제안. **실행 성공 아직 미확인**. 원본 n2/n6 PLT/TDR 및 소스 변경 없음; QW4 물리적 원인 미확정. Read-only PLT 감사 예정.

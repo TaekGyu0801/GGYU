@@ -1,3 +1,7 @@
+## 2026-10-31 — 이택규 literal AreaFactor/current-unit grep: no match in 6 active files (OBSERVED; NO RUN)
+- n2/n6 LOG+pp CMD/PAR grep only matched e/h/total CurrentDensity Vector plot requests and CurrentPlot IntegrationUnit=um. **No explicit AreaFactor/current-unit string** in inspected six files; implicit/default 2D terminal-current scaling remains UNRESOLVED and must not be inferred from absent literal. QW4 >99.97% at near-matched I and q*1e-12 current closure unchanged.
+- NEXT READ ONLY inspect pp1_dvs.cmd real lateral width and electrode extent, check n2/n6 runtime log geometry/units, consult T-2022.03 UG current-unit/AreaFactor definitions; physical Baseline freeze HOLD and original TCAD untouched.
+
 ## 2026-10-31 — 이택규 current-bracket QW4 validation from existing PLT (OBSERVED + LINEAR DERIVED; NO NEW RUN)
 - n6 3.6V I=9.21970771341943e−09, QW4 share=99.99294273758203%. Nearest n2 3.512V I=8.63290391977055e−09 QW4=99.97314950045252%; next 3.528V I=1.10599185065263e−08 QW4=99.9725752700292%; n6 I lies between.
 - Linear-in-current n2 estimate at n6 I: alpha=0.2417800852, V~3.51586848V, QW4 share~99.97301066%; difference from n6 +0.01993207%p. Interpolation is not a new matched-current solver point. Both Trap OFF and ON maintain >99.97% QW4 Radiative localization. Trap-only causal claim unsupported.

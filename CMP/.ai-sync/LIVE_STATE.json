@@ -1,4 +1,40 @@
 {
+  "leeCurrentBracket20261031": {
+    "date": "2026-10-31",
+    "worker": "이택규",
+    "source": "user pasted direct read-only n2/n6 archived DF-ISE PLT Python result",
+    "status": "OBSERVED_BRACKETING; DERIVED_LINEAR_INTERPOLATION; NO_NEW_RUN",
+    "node6Reference": {
+      "voltage": 3.6,
+      "current": 9.21970771341943e-9,
+      "qw4Percent": 99.99294273758203
+    },
+    "node2Bracket": [
+      {
+        "voltage": 3.512,
+        "current": 8.63290391977055e-9,
+        "qw4Percent": 99.97314950045252,
+        "currentMismatchPct": -6.364668077218736
+      },
+      {
+        "voltage": 3.528,
+        "current": 1.10599185065263e-8,
+        "qw4Percent": 99.9725752700292,
+        "currentMismatchPct": 19.959535055850118
+      }
+    ],
+    "interpolationNotSimulation": {
+      "alpha": 0.24178008523355246,
+      "estimatedVoltage": 3.5158684813637366,
+      "estimatedQW4Percent": 99.97301066297183,
+      "deltaToNode6PctPoints": 0.019932074610196082
+    },
+    "meaning": "QW4 dominates both trap-off and trap-on at roughly matched current; trap activation not sole cause, model physics unvalidated",
+    "baselineFreeze": "HOLD",
+    "next": "READ ONLY 2D current units AreaFactor and source provenance before considering authorized one-variable interfacial transport sensitivity",
+    "codeChanged": false,
+    "simulationRerun": false
+  },
   "leePLTFullMapping20261031": {
     "worker": "이택규",
     "date": "2026-10-31",

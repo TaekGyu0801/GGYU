@@ -1,3 +1,9 @@
+## 2026-10-31 — Lee immediate NEXT after actual pp2/pp6 grep (NO RUN)
+- **DONE (user server output):** both preprocessed CMD line174 main `Iterations=12` (not SWB_PASTE 20); 200/100 are separate Coupled initialization iterations. Both CMD have PolAct strain activation0.5, three Thermionic interfaces, IntegrationUnit=um; both PAR Formula1. Four old n2/n6 .plt/.tdr files exist.
+- **FIRST READ ONLY:** examine exact n2/n6 `n2_des.plt` / `n6_des.plt` text structure (`head`, `tail`, relevant key strings) plus n2/n6 `.log` for actual run completion/parameters; retain native 2D current units and dimensions before converting to A/cm2. Check AreaFactor/source-level scaling beyond the filtered grep. Do not treat lack of literal AreaFactor match as proof of value.
+- **SECOND READ ONLY:** compare all-device + QW radiative/SRH/Auger/trap terms versus terminal anode/cathode current at shared bias and *matched J* where supported, with correct 2D conversion and trap accounting; verify QW4 concentration independence from aggregation.
+- **REMAINS BLOCKED:** exact QW4 physical cause, PolAct0.5 calibration, Full4um vs Half2um. New model sensitivity only in protected copy with user approval; baseline freeze HOLD. No new TCAD simulation/source changes.
+
 ## 2026-10-24 — Presentation tasks (주수빈 planning; not new device run)
 - 2026-10-26 Monday CMP progress: verify actual latest Bspan 0/1/3 SWB node statuses and only present OBSERVED mesh / finished logs; keep QW4 physics/baseline freeze disclaimer. Prepare distinct slides from Thursday paper review.
 - 2026-10-29 Thursday 14-minute joint PPT: 이택규 Kou 2019 7min, 주수빈 Baek W.J. et al., Nat Commun 14,1386 (2023), DOI 10.1038/s41467-023-36773-w, 7min (working selection; user approval pending). Use Baek Fig 1 structure, Fig 2 QB surface current/EQE, Fig 3 carrier/QW recombination Silvaco, Fig 4/5 EQE/Jmax metrics and constraints. State no direct proof of CMP AlGaN lateral Bspan benefit.

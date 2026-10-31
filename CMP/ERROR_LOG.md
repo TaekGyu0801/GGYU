@@ -1,3 +1,6 @@
+## 2026-10-31 — RESOLVED: interactive Bash heredoc PLT parser succeeded (OBSERVED)
+- Prior `Unmatched '.` and tcsh `?` continuation were purely shell input/quote issues. User entered `bash`, changed directory, ran `python3 - <<'PY'` and ended with standalone `PY`; parser successfully printed n2/n6 final PLT values, including QW4 fractions 99.96877481383976%/99.99294273758203%. The error did not affect SDevice and no file was modified.
+
 ## 2026-10-31 — Bash/Python heredoc quoted delimiter left tcsh continuation prompt (OBSERVED SHELL ERROR, NOT TCAD)
 - Worker 이택규, AI ChatGPT. User school terminal showed `bash -lc 'cd /user/semi/semi437/CMP_BASELINE_2.0.0_V2 || exit 1` then `Unmatched '.` from interactive shell. Later `python3 - <<"PY"` started while still at home directory and the terminal printed repeated `?` continuation prompts; final delimiter entered `PY'` rather than exact `PY`, so block was not finished.
 - Consequence: PLT parsing **NOT EXECUTED/NOT VERIFIED**; no evidence of SDevice, PLT, model, or mesh error; no original simulation/source modification.

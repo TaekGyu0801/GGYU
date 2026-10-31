@@ -1,3 +1,8 @@
+## 2026-10-31 — V2.1 전류 AreaFactor/단위 키워드 검색 (OBSERVED; 미해결)
+- 원본 학교 서버 터미널에서 n2/n6 LOG, pp2/pp6 CMD/PAR 6파일 검색. 검색 결과는 `eCurrentDensity/Vector`/`hCurrentDensity/Vector`/`TotalCurrentDensity/Vector` Plot 요청과 `CurrentPlot(IntegrationUnit=um)`뿐이며 `AreaFactor`, `A/cm`, `A/um`, `CurrentUnit` 직접 표기는 검출되지 않음.
+- 의미: 두 노드에서 동일한 출력 설정을 재확인했지만 `AreaFactor` 기본값/2D 유효 단자 전류 단위와 실제 전극 면적 **확정 불가**. QW4 집중 원인 및 Full/Half/물리 확정 보류. RUN/코드 수정 없음.
+- NEXT는 pp1_dvs.cmd 실제 half lateral 폭/접점 길이 읽기와 로그 헤더/공식 T-2022.03 UG 전류 스케일링 의미 검토. 플롯 요청을 물리적 면적 검증으로 오인하지 말 것.
+
 ## 2026-10-31 — 기존 PLT로 동일 전류 범위 n2/n6 QW4 비교 (OBSERVED + DERIVED, NO RUN)
 - 사용자 직접 실행 `n2_des.plt`/ `n6_des.plt` 읽기 전용 Python: n6 3.6V target 9.21970771341943e−09, QW4 99.99294273758203%; n2 3.512V I=8.63290391977055e−09, QW4=99.97314950045252%; 3.528V I=1.10599185065263e−08, QW4=99.9725752700292%. n2의 목표 전류 대비 오차 각각 −6.36467%, +19.95954%; target을 감쌈.
 - **수학적 보간(실제 계산점 아님)**: alpha=0.2417800852, n2 추정 동일전류 V=3.51586848V, QW4 방사 집중=99.97301066%. n6 실제 99.99294274%, 차이 약 +0.01993207%p. 동일 native current 기준 근사 비교에서도 양쪽 모두 QW4 >99.97%. Trap이 현상의 유일한 원인이라는 설명과 불일치, 특정 전압에만 국한된 결과 아님.

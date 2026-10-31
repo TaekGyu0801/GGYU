@@ -1,3 +1,8 @@
+## 2026-10-31 — n2 로그에서 contact AreaFactor=1 확인 (OBSERVED, NO RUN)
+- 실제 학교 서버 `n2_des.log` lines237–238: anode (Ohmic) `area factor : 1`, cathode (Ohmic) `area factor : 1`. 기존 CMD/PAR `AreaFactor` grep 미검출과 상충하지 않음: 현재 **n2 런타임 접점 스케일 값**을 직접 확인했음.
+- n6는 이 출력에서 확인되지 않음. 출력에 pp1_dvs.cmd geometry/contact 정의가 없어 Half 폭/전류밀도 환산은 미완료. QW4 99.97% 집중의 물리적 원인과 Baseline freeze는 여전히 UNRESOLVED/HOLD.
+- 신규 SDevice RUN/코드 변경 없음. 다음 읽기 전용: n6 로그 `area factor`, SDE half lateral geometry/contacts 원문 검증.
+
 ## 2026-10-31 — V2.1 전류 AreaFactor/단위 키워드 검색 (OBSERVED; 미해결)
 - 원본 학교 서버 터미널에서 n2/n6 LOG, pp2/pp6 CMD/PAR 6파일 검색. 검색 결과는 `eCurrentDensity/Vector`/`hCurrentDensity/Vector`/`TotalCurrentDensity/Vector` Plot 요청과 `CurrentPlot(IntegrationUnit=um)`뿐이며 `AreaFactor`, `A/cm`, `A/um`, `CurrentUnit` 직접 표기는 검출되지 않음.
 - 의미: 두 노드에서 동일한 출력 설정을 재확인했지만 `AreaFactor` 기본값/2D 유효 단자 전류 단위와 실제 전극 면적 **확정 불가**. QW4 집중 원인 및 Full/Half/물리 확정 보류. RUN/코드 수정 없음.

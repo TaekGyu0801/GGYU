@@ -1,3 +1,8 @@
+## 2026-10-31 — Lee runtime n2 contact area-factor confirmed; geometry/2D normalization NEXT
+- DONE (OBSERVED n2_des.log 237–238): both `anode` and `cathode` Ohmic runtime `area factor : 1`. Prior no-match of literal `AreaFactor` in CMD/PAR never established defaults; actual log narrows **n2 contact scale** only.
+- READ ONLY FIRST: `grep -ni 'area factor' n6_des.log` for n6 runtime contact scaling. Then actual `pp1_dvs.cmd` lateral half-width and anode/cathode edge coordinates (`sed -n '20,68p' pp1_dvs.cmd`, relevant contact definitions). Consult version-matched SDevice UG to distinguish 2D total-current units / out-of-plane depth / current-density conversion.
+- Retain matched-current QW4 concentration and conditional q×1e−12 current budget; do not conflate `area factor=1` with physically calibrated 4um full device. Baseline physical FREEZE HOLD, no new run/edit.
+
 ## 2026-10-31 — Lee after matched-current-bracketing from PLT (NO RUN)
 - DONE: n6 3.6V native current I=9.21970771341943e-09; n2 3.512V 8.63290391977055e-09 (QW4 99.9731495%) and 3.528V 1.10599185065263e-08 (99.9725753%) bracket target. By **linear interpolation only**, n2 matched-I QW4 ~99.97301066% at ~3.51586848V; n6 99.99294274%. Do not present interpolated n2 as an actual simulation or confuse same V with same I.
 - FIRST READ ONLY: verify active log/source effective 2D terminal current normalization and AreaFactor / width; check runtime linkage and device physics state. Earlier input had no explicit AreaFactor match in pp2/pp6, but that does not prove effective scaling.

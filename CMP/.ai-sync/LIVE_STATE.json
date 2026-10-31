@@ -1,4 +1,37 @@
 {
+  "leeAreaFactorGrep20261031": {
+    "worker": "이택규",
+    "date": "2026-10-31",
+    "status": "OBSERVED_USER_TERMINAL; NO_RUN",
+    "commandPattern": "AreaFactor|CurrentUnit|CurrentDensity|A/cm|A/um|IntegrationUnit|OutOfPlane|2D device",
+    "files": [
+      "n2_des.log",
+      "n6_des.log",
+      "pp2_des.cmd",
+      "pp6_des.cmd",
+      "pp2_des.par",
+      "pp6_des.par"
+    ],
+    "matched": [
+      "eCurrentDensity/Vector",
+      "hCurrentDensity/Vector",
+      "TotalCurrentDensity/Vector",
+      "CurrentPlot( IntegrationUnit = um )"
+    ],
+    "nonMatched": [
+      "AreaFactor",
+      "CurrentUnit",
+      "A/cm",
+      "A/um",
+      "OutOfPlane",
+      "2D device"
+    ],
+    "interpretation": "No explicit literal AreaFactor/current-unit setting observed in searched six files; effective 2D area scaling and native terminal current units not established",
+    "next": "Read only pp1_dvs.cmd half geometry/contact extent and n2/n6 log headers, verify T-2022.03 UG current/area normalization semantics",
+    "baselineFreeze": "HOLD",
+    "newRun": false,
+    "codeModified": false
+  },
   "leeCurrentBracket20261031": {
     "date": "2026-10-31",
     "worker": "이택규",

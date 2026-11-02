@@ -1,3 +1,8 @@
+## 2026-11-02 — POL0DIAG csh prompt recovery and PP file presence check (NO RUN)
+- User submitted terminal output: previous Bash-only loop failed `for: Command not found`, `do: Command not found`, `f: Undefined variable`, and shell now shows `else?`. This is a ChatGPT-supplied shell syntax incompatibility with csh/tcsh, not TCAD run failure.
+- **NEXT ONE STEP:** press `Ctrl+C` to cancel unfinished shell construct; at normal `$` prompt run `find . -maxdepth 1 -name 'pp*_des.cmd' -print` (read-only, csh-compatible). If no pp files, SWB preprocess-only path to be clarified; if files, inspect activation=0 and Iterations=12. No SDevice solver RUN until effective settings/diff verified.
+- Original V2 baseline remains protected, POL0DIAG PolAct=0 shown in SWB; saved SDevice source grep confirmed macro and Iterations=12. Other pp/SDE/PAR/mesh equivalence, prior same-current IQE_sim and predeclared thresholds still pending. Baseline B FREEZE HOLD.
+
 ## 2026-11-02 — POL0DIAG SDevice macro+Iterations12 grep PASS; next pp existence (OBSERVED; NO RUN)
 - User terminal confirmed `~/CMP_BASELINE_2.1.0_POL0DIAG/sdevice_des.cmd`: line39 `Piezoelectric_Polarization(strain activation=@PolAct@)`, line276 global `Iterations=12`. This fixes the previously identified unintended 20-vs-12 source difference.
 - **NEXT:** new project `ls -l pp2_des.cmd pp6_des.cmd` (read-only). If present, check effective `activation=0` and global `Iterations=12`; if absent, SWB **Preprocess only**, not solver run, before checking same. Further gate: original vs clone SDE/PAR/mesh/input differences only intended PolAct, existing n2/n6 matched-current IQE_sim, predeclared heuristic thresholds lock before diagnostic execution.

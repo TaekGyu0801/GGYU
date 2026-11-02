@@ -1,3 +1,8 @@
+## 2026-11-02 — Lee InN piezo formula assignment absent in block (OBSERVED; NO RUN)
+- OBSERVED from user executed awk with NR 525..645 over installed T-2022.03 MaterialDB/InN.par Piezoelectric_Polarization section: only a0=3.189 Angstrom (line639), a=3.54 Angstrom (line640), relax=0.1 (line641) matched; there was no explicit assignment formula = within the inspected 525–645 range. This confirms absence of literal formula assignment IN THAT BLOCK, not which default formula SDevice uses and not polarization-model inactivity.
+- Existing n2 source pp2_des.cmd has Piezoelectric_Polarization(strain activation=0.5) and DefaultParametersFromFile; archived n2 QW1–QW4 Px center matches +8.2162955e-7 C/cm2, but InGaN effective material coefficients/strain and default formula NOT VERIFIED. QW4 ~99.97% QW radiative share cause UNRESOLVED; baseline B physical FREEZE HOLD. No new simulation or any source/material/mesh editing.
+- NEXT READ ONLY: inspect unexamined opening of InN Piezoelectric_Polarization block lines 525–570, especially comment about formula default. Then determine actual T-2022.03 default and n2 runtime InGaN material parameter inheritance, without speculative model changes.
+
 ## 2026-11-02 — InN.par coordinate transform verified (OBSERVED; NO RUN)
 - User read InN.par lines 570–600: stress coordinates -> crystal coordinates -> piezo polarization -> simulation coordinates. No formula assignment in excerpt. Previous n2 lattice orientation X=(0,0,-1),Y=(1,0,0) should govern output Px sign, not the example orientation in file. Next: read-only check formula in InN.par lines 525–645. Baseline physical freeze HOLD; QW4 cause unresolved.
 

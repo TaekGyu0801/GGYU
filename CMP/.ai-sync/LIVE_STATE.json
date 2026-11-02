@@ -4870,5 +4870,111 @@
     "next": "Read-only nearest-center B0-B3/QW1-QW4 numerical values for n,p, Ec-eQF, hQF-Ev, JnX, JpX from qw4_36_depth.csv",
     "baselineFreeze": "HOLD",
     "newRun": false
+  },
+  "leeQW4BarrierCarrierCurrentSample20261102": {
+    "worker": "이택규",
+    "date": "2026-11-02",
+    "status": "OBSERVED_USER_TERMINAL_PLUS_ARITHMETIC_DERIVED; NO_NEW_RUN",
+    "source": "read-only python3 -c sampling original qw4_36_depth.csv at pp1_dvs.cmd derived region centers; Y=1um",
+    "points": [
+      {
+        "region": "B0",
+        "X_um": 0.17692187,
+        "n": 6810877400,
+        "p": 401803130000000,
+        "EcMinusEFn_eV": 0.507,
+        "FHpMinusEv_eV": 0.3012,
+        "JnX": 3.7401938e-9,
+        "JpX": 1.8236277
+      },
+      {
+        "region": "QW1",
+        "X_um": 0.18948437,
+        "n": 4844828600000000,
+        "p": 3156252300000000,
+        "EcMinusEFn_eV": 0.224,
+        "FHpMinusEv_eV": 0.2377,
+        "JnX": 0.000088535045,
+        "JpX": 1.823539
+      },
+      {
+        "region": "B1",
+        "X_um": 0.20204687,
+        "n": 5127631500,
+        "p": 513897140000000,
+        "EcMinusEFn_eV": 0.5144,
+        "FHpMinusEv_eV": 0.2948,
+        "JnX": 0.00019612255,
+        "JpX": 1.8234322
+      },
+      {
+        "region": "QW2",
+        "X_um": 0.21460937,
+        "n": 2810508100000000,
+        "p": 7956578400000000,
+        "EcMinusEFn_eV": 0.2381,
+        "FHpMinusEv_eV": 0.2138,
+        "JnX": 0.0003501559,
+        "JpX": 1.823278
+      },
+      {
+        "region": "B2",
+        "X_um": 0.22717187,
+        "n": 13421744000,
+        "p": 541661350000000,
+        "EcMinusEFn_eV": 0.4895,
+        "FHpMinusEv_eV": 0.2935,
+        "JnX": 0.0004408187,
+        "JpX": 1.8231819
+      },
+      {
+        "region": "QW3",
+        "X_um": 0.23947266,
+        "n": 23390056000000000,
+        "p": 15939417000000000,
+        "EcMinusEFn_eV": 0.1833,
+        "FHpMinusEv_eV": 0.1958,
+        "JnX": 0.0010522837,
+        "JpX": 1.822569
+      },
+      {
+        "region": "B3",
+        "X_um": 0.25229686,
+        "n": 75388606000,
+        "p": 1074648200000000,
+        "EcMinusEFn_eV": 0.4449,
+        "FHpMinusEv_eV": 0.2758,
+        "JnX": 0.0017767865,
+        "JpX": 1.8218269
+      },
+      {
+        "region": "QW4",
+        "X_um": 0.26459765,
+        "n": 1012322500000000000,
+        "p": 1518965600000000000,
+        "EcMinusEFn_eV": 0.0856,
+        "FHpMinusEv_eV": 0.0776,
+        "JnX": 0.96137367,
+        "JpX": 0.86228261
+      }
+    ],
+    "derived": {
+      "barrier_pOverN": [
+        58994.33,
+        100221.15,
+        40357,
+        14254.78
+      ],
+      "QW4ToQW3ElectronDensity": 43.28004,
+      "QW4ToQW3HoleDensity": 95.29618,
+      "B3_JnFractionPct": 0.097433,
+      "QW4_JnFractionPct": 52.716824,
+      "B3Jtotal": 1.8236036865,
+      "QW4Jtotal": 1.82365628
+    },
+    "caveat": "Spatial Jn partition is compatible with strong QW4 recombination sink; concentration/current pattern alone does not prove B3 barrier-limited injection/polarization mechanism. Y lateral current divergence not yet checked. Jx local field and QW4 prior rad integral distinct.",
+    "next": "Read-only sample qw4_36_qw4fine.csv across B3/QW4/B4 to locate electron current transitions, band/QF before causal experiments",
+    "freeze": "HOLD",
+    "newRun": false
   }
 }

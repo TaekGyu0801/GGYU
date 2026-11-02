@@ -1,3 +1,7 @@
+## 2026-11-02 — Lee live clone diff exposed unintended Iterations change (OBSERVED / NO RUN)
+- 실제 학교 서버 diff: original `CMP_BASELINE_2.0.0_V2/sdevice_des.cmd` global `Math Iterations=12`, POL0DIAG clone SDevice `Iterations=20`. 양쪽 `Piezoelectric_Polarization(strain activation=@PolAct@)` 동일; 출력된 나머지 차이는 주석/포맷(Trap 선언 줄바꿈 포함). 앞서 SWB Parameters의 clone PolAct=0 설정과 모순 없음. 파일 자체는 byte-identical이 아니므로 clone source 원본 동일성 gate 실패.
+- **Corrective action only proposed; user not yet confirmed execution:** backup new clone SDevice, copy original SDevice into clone, verify `cmp`, then preprocess confirm activation=0 and Iterations=12; full clone equivalence checks still needed. No new solver run or source edit by ChatGPT. Baseline physical B / FREEZE HOLD.
+
 ## 2026-11-02 — SDevice user-pasted file PolAct macro valid; solver Iterations discrepancy (OBSERVED, NO RUN)
 - Uploaded text `sdevice_des.cmd` shows `Piezoelectric_Polarization(strain activation=@PolAct@)` (line38): SWB PolAct=0 can substitute without changing SDevice physics source IF the actual clone references this file. Header explicitly labels file 2026-10-13 `PROPOSED / NOT RUN`, not a verified deployed final source.
 - Uploaded `Math Iterations=20` (line275) **conflicts with** prior 2026-10-31 server-observed original V2.1 processed n2/n6 `pp2_des.cmd` and `pp6_des.cmd` both `Iterations=12` (line174). Current clone's actual editable source and PP have not been inspected, so this is a **proven discrepancy between historical artifacts, not a proven new project error**.

@@ -1,3 +1,8 @@
+## 2026-11-02 — Lee parameter changed on shelf-free clone; full copy-paste SDevice delivered (USER-REPORTED, NO RUN VERIFIED)
+- 올바른 shelf-free `CMP_BASELINE_2.0.0_V2`를 다시 복사한 후 이택규가 SWB **파라미터 변경 완료**라고 보고. 새 복사본 실제 폴더명/PolAct=0/다른 파라미터 동일성은 화면/pp로 재확인 필요.
+- 기존 V2.1 SDevice와 기능상 동일한 전체 복붙 텍스트 제공: `activation=@PolAct@`, Math `Iterations=12` 포함. 코드를 실제 편집기에 적용했다는 사용자 응답은 아직 없음. Original V2.1 수정 금지.
+- NEXT: SDE Wshelf=0, mesh에 우측 shelf 없는지 먼저 확인; SWB 새 파라미터/pp `activation=0`/`Iterations=12`, SDE/PAR/mesh/solver/contacts 동일성 검사; 그다음 n2 Trap OFF 진단 및 n6 follow-up. 사용자 사전 결과 판정 gate 및 기존 matched-current IQE_sim 기준 계속 보류. Physical Baseline B/FREEZE HOLD.
+
 ## 2026-11-02 — POL0DIAG geometry blocker: likely copied shelf-retained V2_Copy (STOP/REBUILD CORRECT BASE)
 - User now states new POL0DIAG was copied from `CMP_BASELINE_2.0.0_V2_Copy` (or old Copy version) rather than shelf-free `CMP_BASELINE_2.0.0_V2`. SVisual `n1_msh` displayed right-side ledge/shelf Y≈2.0→2.5um; original V2.1 verified prior `Wshelf=0`, half lateral 2.0um. Wrong lineage is USER-REPORTED and image supports inconsistency; definitive new input code diff still pending.
 - **STOP** interpreting/scheduling this run as controlled PolAct diagnostic. Keep outputs for audit, **do not change frozen original**.

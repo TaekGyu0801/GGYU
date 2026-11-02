@@ -1,3 +1,8 @@
+## 2026-11-02 — 동일 QW/B 내부 분극 관측 후 활성화 및 수송 설정 감사 NEXT (OBSERVED; NO RUN)
+- DONE: n2 3.6V original depth CSV Y=1um: QW1–QW4 center `PE_Polarization-X=8.2162955e-07`, `xMoleFraction=0.15` all identical; B0–B4 centers `PE_Polarization-X=3.4e-06`, xMole=0 all identical. PE_Charge bulk center ≈0 (several ±5.8e3), distinct from previously observed QW4 interface ±1.2297757e21 local peaks.
+- CONCLUSION LIMITED: unusual QW4-only *bulk polarization magnitude/composition* not supported. Uniform polarization can still alter transport and QW-specific carrier populations; 8 interface effective sheet charges NOT measured and carrier bottleneck root cause unresolved.
+- FIRST NEXT READ ONLY: inspect `pp2_des.cmd` and `pp2_des.par` for actual `Piezoelectric_Polarization` `activation` `Fermi` `Thermionic`, lattice orientation and band offset; don't confuse syntax appearance with effective run settings. Then compare signed interface peaks at all 4 QWs. Baseline B/FREEZE HOLD; no new run or modification.
+
 ## 2026-11-02 — QW4 두 계면 분극 불연속·bipolar PE_Charge 확인 후 QW 간 비교 NEXT
 - DONE OBSERVED user `qw4_36_qw4fine.csv`: B3/QW4 x=.26300001 `PE_Charge=+1.2297757e21`, QW4/B4 x=.266 `PE_Charge=−1.2297757e21`; at each duplicated X polarization jumps GaN Px3.4e−6 ↔ InGaN Px8.2162955e−7. Derived conditional |ΔP|/q≈1.6092923e13 cm^-2 (P units C/cm²), **not verified effective activated sheet charge or PE_Charge integral**.
 - FIRST NEXT READ ONLY: sample all 4 QWs and adjoining B0-B4 at center depths in `qw4_36_depth.csv` for `PE_Polarization-X`, `PE_Charge`, `xMoleFraction`. If each QW has same jump, QW4-selective 99.97% recombination still needs explanation from transport/band filling; do not label polarity alone root cause.

@@ -5366,5 +5366,26 @@
     "newRun": false,
     "sourceModified": false,
     "baselineFreeze": "HOLD"
+  },
+  "leeMaterialDBPolarizationRead20261102": {
+    "worker": "이택규",
+    "date": "2026-11-02",
+    "status": "OBSERVED_USER_TERMINAL; NO_NEW_RUN",
+    "source": "Installed T-2022.03 MaterialDB grep, head -n 120",
+    "AlGaN_par": {
+      "formula": 1,
+      "relax": 0,
+      "psp_z0_C_per_cm2": -0.0000034,
+      "psp_z1_C_per_cm2": -0.000009,
+      "bowingB_psp_z1": -0.0000021,
+      "e31_0_C_per_cm2": -0.00005274,
+      "e33_0_C_per_cm2": 0.00008946
+    },
+    "GaN_par": "Piezoelectric_Polarization section exists; coefficient values not read",
+    "InGaN_par": "not read due to truncated output",
+    "crosscheck": "GaN barrier center Px magnitude matches AlGaN.par psp_z(0); actual runtime origin unresolved",
+    "next": "selective grep of assignment lines from GaN/InGaN/AlGaN without head",
+    "blocker": "QW4 99.97% focus root cause unresolved",
+    "baselineFreeze": "HOLD"
   }
 }

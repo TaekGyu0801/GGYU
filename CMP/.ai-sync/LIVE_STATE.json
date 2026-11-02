@@ -5121,5 +5121,83 @@
     "baselineFreeze": "HOLD",
     "sourceModified": false,
     "newRun": false
+  },
+  "leeQWAllCenterPolarizationComparison20261102": {
+    "worker": "이택규",
+    "date": "2026-11-02",
+    "source": "user's existing qw4_36_depth.csv nearest-center Python output",
+    "status": "OBSERVED_CENTER_SAMPLES; NO_NEW_RUN",
+    "qw": [
+      {
+        "id": "QW1",
+        "X_um": 0.18948437,
+        "Px": 8.2162955e-7,
+        "xMoleFraction": 0.15,
+        "PE_Charge": 0
+      },
+      {
+        "id": "QW2",
+        "X_um": 0.21460937,
+        "Px": 8.2162955e-7,
+        "xMoleFraction": 0.15,
+        "PE_Charge": 5755.116
+      },
+      {
+        "id": "QW3",
+        "X_um": 0.23947266,
+        "Px": 8.2162955e-7,
+        "xMoleFraction": 0.15,
+        "PE_Charge": 0
+      },
+      {
+        "id": "QW4",
+        "X_um": 0.26459765,
+        "Px": 8.2162955e-7,
+        "xMoleFraction": 0.15,
+        "PE_Charge": -5758.722
+      }
+    ],
+    "barriers": [
+      {
+        "id": "B0",
+        "X_um": 0.17692187,
+        "Px": 0.0000034,
+        "xMoleFraction": 0,
+        "PE_Charge": 0
+      },
+      {
+        "id": "B1",
+        "X_um": 0.20204687,
+        "Px": 0.0000034,
+        "xMoleFraction": 0,
+        "PE_Charge": 0
+      },
+      {
+        "id": "B2",
+        "X_um": 0.22717187,
+        "Px": 0.0000034,
+        "xMoleFraction": 0,
+        "PE_Charge": 0
+      },
+      {
+        "id": "B3",
+        "X_um": 0.25229686,
+        "Px": 0.0000034,
+        "xMoleFraction": 0,
+        "PE_Charge": -5953.4439
+      },
+      {
+        "id": "B4",
+        "X_um": 0.27742186,
+        "Px": 0.0000034,
+        "xMoleFraction": 0,
+        "PE_Charge": 5953.4439
+      }
+    ],
+    "derivedNominalDeltaP": 0.00000257837045,
+    "interpretation": "All four QW center composition and Px identical, all five GaN barrier centers identical. QW4-exclusive local material polarization is unsupported, but effective interface sheet and cumulative polarization-induced transport still not independently checked.",
+    "next": "Read-only pp2_des.cmd/par actual polarization activation and interface transport settings, then compare 8 QW interfaces",
+    "physicalFreeze": "HOLD",
+    "newRun": false
   }
 }

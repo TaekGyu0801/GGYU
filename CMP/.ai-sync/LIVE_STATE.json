@@ -5328,5 +5328,22 @@
     "freeze": "HOLD",
     "sourceChanged": false,
     "newRun": false
+  },
+  "leeMaterialDBRealPathConfirmed20261102": {
+    "worker": "이택규",
+    "date": "2026-11-02",
+    "status": "OBSERVED_USER_TERMINAL_MATERIALDB_DIRECTORY_EXISTS; NO_NEW_RUN",
+    "observedExecutable": "/user/tools/synopsys/sentaurus/T-2022.03/bin/sdevice",
+    "observedMaterialDB": "/user/tools/synopsys/sentaurus/T-2022.03/tcad/T-2022.03/lib/sdevice/MaterialDB",
+    "command": "find /user/tools/synopsys/sentaurus/T-2022.03 -maxdepth 8 -type d -name MaterialDB -print",
+    "provenance": "user pasted exact school-server shell output",
+    "notYetVerified": [
+      "GaN/InGaN/AlGaN file names and contents",
+      "default polarization coefficients",
+      "effective active values in n2 run"
+    ],
+    "next": "Read-only find -maxdepth 1 for matching GaN/InGaN/AlGaN material files then inspect blocks without modifying library or baseline",
+    "freeze": "HOLD",
+    "newRun": false
   }
 }

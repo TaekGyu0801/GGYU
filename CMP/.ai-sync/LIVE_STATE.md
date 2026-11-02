@@ -1,3 +1,7 @@
+## 2026-11-02 — Lee PolAct parameter edit observed in SWB screenshot (OBSERVED UI / NO RUN)
+- Worker 이택규 provided screenshot of copied `CMP_BASELINE_2.1.0_POL0DIAG` SWB table. Both parameter rows show **PolAct=0**: row1 NtSide=0, row2 NtSide=1e18. Shared visible settings Wedge=0.1, Bspan=0, NCEdge=0, V1=2.0, Vmax=3.6; NPlot=8 (row1) and 0 (row2). User states only PolAct changed, but without original side-by-side source/PP comparisons this is user report rather than independently verified diff.
+- Immediate next: inspect original-to-copy SDevice parameter binding and effective preprocessed source before starting solver; existing n2/n6 same-current IQE_sim and heuristic threshold approval still pending. This screenshot demonstrates UI PolAct=0, **not** actual solver execution or physical cause. No TCAD solver run yet reported. Baseline B / FREEZE HOLD, PolAct=0 diagnostic only, EBL global caveat.
+
 ## 2026-11-02 — Lee confirms SWB diagnostic copy created by manual project duplication (USER-REPORTED, NO RUN)
 - Worker 이택규: SWB에서 기존 `CMP_BASELINE_2.0.0_V2` 복사 후 `CMP_BASELINE_2.1.0_POL0DIAG` 이름의 새 프로젝트를 만들었다고 보고. 학교 서버 실물 파일이나 full SWB parameter table은 ChatGPT가 직접 확인하지 못함.
 - **PROGRESS:** copy/name step USER-REPORTED DONE. **NOT CONFIRMED:** `PolAct=0` 설정, other values identical, cloned node topology, pp diff, identical current baseline, new simulation or result. None reported executed; no code/solver changes by ChatGPT.

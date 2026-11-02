@@ -5406,5 +5406,27 @@
     "blocker": "QW4 99.97% cause unresolved",
     "baseline": "FREEZE_HOLD",
     "next": "READ ONLY inspect InGaN.par polarization model blocks"
+  },
+  "leeInGaNMaterialDBGrep20261102": {
+    "worker": "이택규",
+    "date": "2026-11-02",
+    "status": "OBSERVED_USER_TERMINAL; NO_NEW_RUN",
+    "source": "Installed Sentaurus T-2022.03 MaterialDB/InGaN.par read-only grep",
+    "matchedLines": [
+      132,
+      238,
+      242
+    ],
+    "matchedContent": [
+      "EnergyRelaxationTime comment",
+      "QWStrain section",
+      "StrainConstant eps or lattice constant comment"
+    ],
+    "directPolarizationModelCoefficients": "No grep matches to Piezoelectric_Polarization, psp_, e31, e33, d31, d33, relax in InGaN.par; not proof of runtime absence",
+    "existingQwPx_C_per_cm2": 8.2162955e-7,
+    "runtimePolarizationOrigin": "UNRESOLVED",
+    "QW4Causality": "UNRESOLVED",
+    "baselineFreeze": "HOLD",
+    "next": "Read only sed -n '225,285p' InGaN.par, inspect QWStrain context and defaults provenance"
   }
 }

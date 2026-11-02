@@ -1,3 +1,10 @@
+## 2026-11-02 — 이택규 QW4 집중 Claude 독립 재평가 후 다음 검증 순서 (PROPOSED, NOT RUN)
+- **CURRENT:** n2/n6 old 3.6V results QW4 Rad ~99.9688%/~99.9929%; Baseline 판정 B, 물리 FREEZE HOLD. 이번 메시지는 Claude 제안의 전달이며 신규 관측/서버 실행 없음. 인계 원문은 `members/LeeTaekGyu/TIMELINE.md`의 2026-11-02 Claude 섹션.
+- **FIRST READ ONLY:** 실제 기존 10/23 TDR cutline CSV가 서버에 존재하는지 확인한 뒤, (a) signed `PE_Charge`의 계면별 **면전하 밀도** cm^-2를 위치·단위·적분 범위·mesh에 맞게 검산, (b) QW3/QW4 양쪽 장벽 Ec/Ev와 e/h quasi-Fermi 낙차의 좌표·전류 상관 확인, (c) 실제 pp2/pp6 `.par` Chi0/Eg0/mumax 및 `.cmd` Fermi, polarization, Thermionic, `n2_des.log` 경고 확인. Claude가 언급한 `server_readonly_cmds_20261102.sh`는 **여기서 원본/서버 존재 확인되지 않음**, 그대로 실행하기 전 내용을 검토할 것.
+- **STUDY QUESTION:** Claude는 10/23의 장벽 표로 p/n~1e4–1e5, Ec−eQF~0.45–0.51eV, hQF−Ev~0.28–0.30eV를 재해석하여 전자 수송 병목 가설을 제시. 이는 **DERIVED / HYPOTHESIS**, raw CSV 및 전류밀도 분포/수송항으로 독립 입증되지 않았음. 예전 '계면 1.6eV 손실'은 Claude가 철회.
+- **IF 승인 및 UG 검증 후 ONLY:** 기존 소스/mesh 보호된 별도 SWB 복사 프로젝트에서 `Piezoelectric_Polarization( strain activation=0.5 )`의 activation을 0으로 변경하는 **진단 민감도** 후보 (NtSide=0, 나머지 설정 고정). 반드시 `activation=0`이 어떤 분극 성분을 제거하는지 T-2022.03 UG+실제 deck 확인; **전체 분극 OFF라고 전제하지 말 것**. QW4<80% / 장벽 n>100배 및 QW4>99% / Ec−eQF>0.4eV는 Claude의 자의적 작업 기준일 뿐 인과확정 기준 아님. 실험은 사용자 별도 승인 전 수행 금지.
+- **BASELINE GATE:** 전류·재결합·QF의 동일 전압 및 동일 전류 비교, Full/Half, mesh quality, 수렴 오차 및 단위 구분. Project A 상대 비교 운영 Baseline 제안은 아직 채택되지 않았고, Project B 효과 일반화 금지. 공식 UG 원문은 공개 GitHub에 올리지 않음.
+
 ## 2026-10-31 — Lee runtime n2 contact area-factor confirmed; geometry/2D normalization NEXT
 - DONE (OBSERVED n2_des.log 237–238): both `anode` and `cathode` Ohmic runtime `area factor : 1`. Prior no-match of literal `AreaFactor` in CMD/PAR never established defaults; actual log narrows **n2 contact scale** only.
 - READ ONLY FIRST: `grep -ni 'area factor' n6_des.log` for n6 runtime contact scaling. Then actual `pp1_dvs.cmd` lateral half-width and anode/cathode edge coordinates (`sed -n '20,68p' pp1_dvs.cmd`, relevant contact definitions). Consult version-matched SDevice UG to distinguish 2D total-current units / out-of-plane depth / current-density conversion.

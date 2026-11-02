@@ -1,3 +1,8 @@
+## 2026-11-02 — 3.6V QW1–4 동일 내부 Px/In 조성 확인 (OBSERVED USER TERMINAL; NO NEW RUN)
+- `qw4_36_depth.csv` X-depth Y=1um center nearest samples: QW1/QW2/QW3/QW4 all `Px=8.2162955e-07`, `xMoleFraction=0.15`; B0/B1/B2/B3/B4 all `Px=3.4e-06`, `xMoleFraction=0`. `PE_Charge` at region centers near 0 vs QW4 interface local peak ±1.2297757e21 previously observed.
+- Thus QW4 uniquely increased material composition / center polarization magnitude is contradicted; **does not exclude polarization/transport causality**, cumulative voltage profile, QW-to-QW carrier differences, or varying activated interface sheet. User-confirmed center CSV ≠ all eight interface charge measurement.
+- NEXT FIRST read-only actual `pp2_des.cmd/par` polarization activation, Fermi, Thermionic and band-offset checks, then interface-by-interface signed charge inspection. Baseline physical FREEZE HOLD, new run/source modification none.
+
 ## 2026-11-02 — n2 QW4 fine cutline local electron continuity nearly closes (OBSERVED + DERIVED; NO RUN)
 - Read-only user terminal, `qw4_36_qw4fine.csv`, Y=1µm, X=.26300001–.266um, N=24: ΔJnX=1.8216831695A/cm²; q∫Rad dx=1.2205564144284573, q∫Auger dx=.5018975294245672, q∫SRH dx=.09908575891169007, q∫TotalR dx=1.8215397088407301 A/cm². Calculated local depthwise closure=99.9921248293%; relative residual=0.0078751707%; channel percentages Rad 67.00685%, Auger 27.55348%, SRH 5.43967%.
 - Interpretation: QW4 local recombination sink quantitatively accounts for almost all depthwise Jn reduction at chosen Y. This does NOT prove why QW4 captures nearly all carriers vs QW1–3, or establish integrated 2D continuity because ∂JnY/∂Y unmeasured. No new run, baseline physical FREEZE HOLD.

@@ -4782,5 +4782,93 @@
     "next": "Read-only csv numeric X/Y ranges, numerical row count, current pp1_dvs.cmd MQW stack to identify actual barrier/QW coordinates; then sample and integrate interface charge after unit audit",
     "baselineFreeze": "HOLD",
     "warning": "No new simulator run, no physical cause confirmed, Claude hypotheses not validated"
+  },
+  "leeQW4CutlineBoundsAndStack20261102": {
+    "worker": "이택규",
+    "date": "2026-11-02",
+    "status": "OBSERVED_USER_TERMINAL_CSV_BOUNDS_PLUS_SOURCE_DERIVED_REGION_COORDINATES; NO_NEW_RUN",
+    "fileSearchResult": {
+      "eq_depth": {
+        "N": 392,
+        "X": [
+          0.13988867,
+          0.2973125
+        ],
+        "Y": 1
+      },
+      "bias36_depth": {
+        "N": 392,
+        "X": [
+          0.13988867,
+          0.2973125
+        ],
+        "Y": 1
+      },
+      "qw1fine": {
+        "N": 66,
+        "X": [
+          0.1800625,
+          0.19995312
+        ],
+        "Y": 1
+      },
+      "qw4fine": {
+        "N": 62,
+        "X": [
+          0.25543749,
+          0.27428126
+        ],
+        "Y": 1
+      }
+    },
+    "SDEStackSource": "pp1_dvs.cmd lines 60-100, P(lat,dep,z) => X is depth; stack top at 0",
+    "qwDepth_um": {
+      "QW1": [
+        0.188,
+        0.191
+      ],
+      "QW2": [
+        0.213,
+        0.216
+      ],
+      "QW3": [
+        0.238,
+        0.241
+      ],
+      "QW4": [
+        0.263,
+        0.266
+      ]
+    },
+    "barrierDepth_um": {
+      "B0": [
+        0.166,
+        0.188
+      ],
+      "B1": [
+        0.191,
+        0.213
+      ],
+      "B2": [
+        0.216,
+        0.238
+      ],
+      "B3": [
+        0.241,
+        0.263
+      ],
+      "B4": [
+        0.266,
+        0.288
+      ]
+    },
+    "terminalInputError": "Repeated concatenated python3 -c command produced SyntaxError, immediately rerun successful; not device error",
+    "caveats": [
+      "previous older cutline QW location reports could differ by 0.020um, verify source before comparing",
+      "no QW1-4 quasi-Fermi/current values were computed in current user output"
+    ],
+    "next": "Read-only nearest-center B0-B3/QW1-QW4 numerical values for n,p, Ec-eQF, hQF-Ev, JnX, JpX from qw4_36_depth.csv",
+    "baselineFreeze": "HOLD",
+    "newRun": false
   }
 }

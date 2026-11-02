@@ -5053,5 +5053,39 @@
     "newRun": false,
     "codeChanged": false,
     "baselineFreeze": "HOLD"
+  },
+  "leeQW4DepthwiseContinuityClosure20261102": {
+    "worker": "이택규",
+    "date": "2026-11-02",
+    "status": "OBSERVED_USER_TERMINAL_PLUS_DERIVED_ARITHMETIC; NO_NEW_RUN",
+    "source": "qw4_36_qw4fine.csv, existing 3.6V n2, Y=1um single depth cutline",
+    "x_um": [
+      0.26300001,
+      0.266
+    ],
+    "points": 24,
+    "qTimesUmToCm": 1.602176634e-23,
+    "deltaJn_A_per_cm2": 1.8216831695,
+    "channelQint_A_per_cm2": {
+      "Radiative": 1.2205564144284573,
+      "Auger": 0.5018975294245672,
+      "SRH": 0.09908575891169007,
+      "TotalRecombination": 1.8215397088407301
+    },
+    "derived": {
+      "channelSum": 1.8215397027647144,
+      "differenceTotalVsChannelSum": 6.076015690581471e-9,
+      "absoluteContinuityResidual_A_per_cm2": 0.00014346065926984508,
+      "relativeResidualPct": 0.007875170703214047,
+      "depthwiseClosurePct": 99.99212482929678,
+      "radiativeFractionPct": 67.0068518684804,
+      "augerFractionPct": 27.553477258202975,
+      "srhFractionPct": 5.439670539751808
+    },
+    "interpretation": "Observed local net recombination nearly equals depthwise electron current change in QW4, indicating strong local recombination sink but not proving root cause of QW4 preference or 2D global continuity (missing JnY divergence).",
+    "next": "Sample PE_Charge signed peaks and PE_Polarization-X near QW4 interfaces; audit physical units/position before sheet density integration; no polar run without approval.",
+    "physicalFreeze": "HOLD",
+    "newRun": false,
+    "sourceModified": false
   }
 }

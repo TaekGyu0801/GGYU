@@ -5315,5 +5315,18 @@
     "freeze": "HOLD",
     "newRun": false,
     "codeChanged": false
+  },
+  "leeSentaurusExecutablePath20261102": {
+    "worker": "이택규",
+    "date": "2026-11-02",
+    "status": "OBSERVED_USER_TERMINAL_PATH; NO_NEW_RUN",
+    "envQuery": "env | grep -E '^(STROOT|STRELEASE)=' returned no output",
+    "command": "which sdevice",
+    "observedExecutable": "/user/tools/synopsys/sentaurus/T-2022.03/bin/sdevice",
+    "caveat": "Executable path confirmed, not MaterialDB library path; cannot infer physical coefficients or applied origin without opening defaults",
+    "next": "Read-only find under /user/tools/synopsys/sentaurus/T-2022.03 -maxdepth 8 -type d -name MaterialDB; then read actual GaN and InGaN polarization coefficients",
+    "freeze": "HOLD",
+    "sourceChanged": false,
+    "newRun": false
   }
 }

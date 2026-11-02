@@ -5345,5 +5345,26 @@
     "next": "Read-only find -maxdepth 1 for matching GaN/InGaN/AlGaN material files then inspect blocks without modifying library or baseline",
     "freeze": "HOLD",
     "newRun": false
+  },
+  "leeMaterialDBGaNFilesFound20261102": {
+    "worker": "이택규",
+    "date": "2026-11-02",
+    "status": "OBSERVED_USER_TERMINAL_MATERIAL_FILE_PATHS; NO_RUN",
+    "materialDB": "/user/tools/synopsys/sentaurus/T-2022.03/tcad/T-2022.03/lib/sdevice/MaterialDB",
+    "filesFound": [
+      "AlGaN.par",
+      "InGaN.par",
+      "GaN.par",
+      "AlInGaN.par"
+    ],
+    "notYetRead": [
+      "piezoelectric material polarization coefficient blocks",
+      "psp_z/e31/e33/a0/relax actual numbers",
+      "runtime override/provenance"
+    ],
+    "next": "Read-only grep polarization constants in GaN.par/InGaN.par/AlGaN.par MaterialDB and reconcile with n2 output",
+    "newRun": false,
+    "sourceModified": false,
+    "baselineFreeze": "HOLD"
   }
 }

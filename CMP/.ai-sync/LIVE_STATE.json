@@ -5199,5 +5199,59 @@
     "next": "Read-only pp2_des.cmd/par actual polarization activation and interface transport settings, then compare 8 QW interfaces",
     "physicalFreeze": "HOLD",
     "newRun": false
+  },
+  "leeN2SourcePhysicsVerified20261102": {
+    "worker": "이택규",
+    "date": "2026-11-02",
+    "status": "OBSERVED_USER_TERMINAL_SOURCE_GREP_PLUS_PUBLIC_DOCUMENTATION; NO_RUN",
+    "cmd": "pp2_des.cmd",
+    "par": "pp2_des.par",
+    "sourceObserved": {
+      "Fermi": true,
+      "DefaultParametersFromFile": true,
+      "IncompleteIonization": true,
+      "Recombination": [
+        "SRH",
+        "Radiative",
+        "Auger"
+      ],
+      "Piezoelectric_Polarization": {
+        "mode": "strain",
+        "activation": 0.5
+      },
+      "ThermionicMaterialInterfaces": [
+        "InGaN/GaN",
+        "AlGaN/GaN",
+        "AlGaN/InGaN"
+      ],
+      "ThermionicEmissionFormula": 1,
+      "LatticeParameters": {
+        "X": [
+          0,
+          0,
+          -1
+        ],
+        "Y": [
+          1,
+          0,
+          0
+        ]
+      }
+    },
+    "publicTrainingContext": {
+      "url": "https://ghzphy.github.io/Sentaurus_Training/sd/sd_16.html",
+      "facts": [
+        "activation scales interface charge from abrupt polarization discontinuity, not merely piezoelectric strain component",
+        "Fermi statistics is paired with Thermionic Formula=1 in the tutorial",
+        "lattice UCS orientation X=(0,0,-1), Y=(1,0,0) is illustrated"
+      ],
+      "caveat": "Not independent check of proprietary installed T-2022.03 manual or actual effective n2 applied polarization sheet at each QW interface"
+    },
+    "derivedConditionalEffectiveSheet_cm2": 8046461280498.24,
+    "derivedCaveat": "Assumes uniform factor 0.5 acts on nominal full ΔP/q≈1.609292256099648e13cm-2 at QW4; not measured effective sheet",
+    "next": "Read-only extract Chi0 Eg0 mumax and material polarization parameter blocks from pp2_des.par; check imported defaults; do not run activation sweep without user approval",
+    "baselineFreeze": "HOLD",
+    "newRun": false,
+    "sourceModified": false
   }
 }

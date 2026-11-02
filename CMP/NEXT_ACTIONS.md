@@ -1,3 +1,10 @@
+## 2026-11-02 — Lee PolAct 진단 진행 의사 확인 및 사전 검증 단계 (PROPOSED, NO RUN)
+- 이택규 질문: “일단 수정해서 돌려볼까?” — 진단 실험 추진 의향으로 해석하되 **실제 학교 서버 실행이나 원본/복사본 수정이 수행됐다고 기록하지 않음**.
+- ChatGPT 권고: 이전 Claude 판정 gate(1%/80%, 0.1%/99%, Project A ±25%)를 결과 확인 전에 고정하는 방향. 사용자로부터 gate 숫자 최종 채택 답변은 아직 없음.
+- 실행 범위 권고: n2(NtSide=0) 먼저 smoke/비교 확인 후 n6(NtSide=1e18) 순차 진행. 양쪽 조건의 결과가 있어야 Project A 동일 전류 Trap 비교 가능하며 사용자 실행 범위 최종 확정은 아직 없음.
+- **NEXT READ ONLY**: 학교 서버에서 원본 CMP_BASELINE_2.0.0_V2의 `sdevice_des.cmd`, `pp2_des.cmd`, `pp6_des.cmd` 실제 PolAct 바인딩/적용 확인. 기존 n2/n6 .plt 동일 전류 IQE_sim 기준 계산. 원본 프로젝트 변경하지 않음.
+- 그 다음 SWB 프로젝트 복사본/이름 확인, 복사본 파라미터만 PolAct 0.5→0 설정, preprocessed pp에서 의도된 activation 변화만 있는지 diff 확인한 후 새 노드 실행. Global activation의 EBL 영향 때문에 원인 단독 확정 불가. 현재 **어떤 코드 변경/시뮬레이션도 실행하지 않았음**. Baseline B/FREEZE HOLD 계속.
+
 ## 2026-11-02 — 사용자 결정 대기: 이택규 PolAct 진단 실험 (NO RUN / FREEZE HOLD)
 - **결정 1 [미선택]:** 실험 전 Claude 제안 판정 기준을 **그대로 채택**하거나 **값 수정(수정 수치 기록)**. H1: QW1 중심 JnX/J≥1% 및 QW4 방사비중<80%. H2: JnX/J<0.1% 및 QW4>99%. 그 사이/혼합: 양쪽 기여 또는 원인 판정 보류. 문헌 검증 값이 아닌 사전 설정용 heuristic.
 - **Project A 사전 기준(제안, 미승인):** 동일 전류 `IQE_sim=q∫Rad_QW/I`의 Trap OFF→ON 감소율이 PolAct=0.5 및 0에서 같은 부호, 상대 차이 ±25% 이내. 감소율/상대차 산식 및 오차 정의는 사용자 결정 전 명시 필요.

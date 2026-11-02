@@ -5718,5 +5718,12 @@
     "baselineFreeze": "HOLD",
     "sourceChanged": false,
     "newSimulation": false
+  },
+  "leeClaudeReview20261102": {
+    "worker": "이택규",
+    "status": "PROPOSED_NOT_SENT; NO_RUN",
+    "currentBlocker": "QW4 four-QW radiative focusing root cause unresolved",
+    "next": "Claude independent GO/NO-GO review and one discriminating controlled-test design; do not run without permission",
+    "baselineFreeze": "HOLD"
   }
 }

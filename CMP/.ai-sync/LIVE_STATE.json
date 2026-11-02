@@ -5501,5 +5501,37 @@
     "newSimulation": false,
     "codeChanged": false,
     "next": "Read-only inspect InN.par piezo block 605–645 and runtime parameter provenance"
+  },
+  "leeInNPiezoStrainDefaults20261102": {
+    "worker": "이택규",
+    "date": "2026-11-02",
+    "status": "OBSERVED_SOURCE_AND_CONDITIONAL_DERIVED; NO_NEW_RUN",
+    "file": "Installed Sentaurus T-2022.03 MaterialDB/InN.par 600–645",
+    "polarization": {
+      "psp_z_C_per_cm2": -0.0000042,
+      "e31_C_per_cm2": -0.000048586,
+      "e33_C_per_cm2": 0.00010629
+    },
+    "piezoCoefficients": {
+      "d31_cm_per_V": -3.5e-10,
+      "d33_cm_per_V": 7.6e-10
+    },
+    "stiffness_Pa": {
+      "c11": 223000000000,
+      "c12": 115000000000,
+      "c13": 92000000000,
+      "c33": 224000000000
+    },
+    "simplifiedStrainParams": {
+      "a0_Angstrom": 3.189,
+      "a_Angstrom": 3.54,
+      "relax": 0.1
+    },
+    "inNOnly_strain_IfSimplifiedModel": -0.08923728813559323,
+    "caution": "Do not apply pure InN strain directly to InGaN x=0.15. Active runtime alloy interpolation / formula and overrides not yet verified. Piezo contribution may partly cancel spontaneous P but is not quantitatively verified. QW4 causality still UNRESOLVED.",
+    "baselineFreeze": "HOLD",
+    "newSolverRun": false,
+    "sourceEdit": false,
+    "next": "Read InN.par polarization formula and actual n2 effective InGaN piezo parameter sourcing read-only"
   }
 }

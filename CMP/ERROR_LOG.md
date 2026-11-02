@@ -1,3 +1,7 @@
+## 2026-11-02 — POL0DIAG live diff confirms unintended Math Iterations 20 (OBSERVED / PRE-RUN)
+- 이택규 실제 서버 `diff -u` 출력: 원본 `CMP_BASELINE_2.0.0_V2/sdevice_des.cmd` `Iterations = 12` vs 새 `CMP_BASELINE_2.1.0_POL0DIAG/sdevice_des.cmd` `Iterations = 20`. 분극 매크로 `activation=@PolAct@`는 동일. 나머지 출력 차이는 주석/개행 및 Trap 구문의 멀티라인 포맷이며 실행 모델 차이로 단정할 근거 없음.
+- **원인/상태:** 복제본이 원본과 byte-identical 코드가 아니라는 점 확인; 한 변수 실험 전 수정 필요. 솔버 오류 아님, 아직 새 실험 없음. **FIX PROPOSED (NOT APPLIED):** clone SDevice 파일 백업 후 원본 파일을 clone에 복사, `cmp` 및 preprocessed `pp`에서 Iterations=12/activation=0 검증. `PolAct=0`은 SWB table에 설정된 상태, 원본 유지.
+
 ## 2026-11-02 — Potential PolAct diagnostic copy config mismatch (20 vs 12) (PRE-RUN, UNRESOLVED)
 - User-provided V2 SDevice text: source header `PROPOSED / NOT RUN` (2026-10-13); global Math `Iterations=20` at line275; `Piezoelectric_Polarization(strain activation=@PolAct@)` line38.
 - GitHub historic direct server read-only (2026-10-31): original V2.1 `pp2_des.cmd` and `pp6_des.cmd` global `Iterations=12` at line174. **Risk:** if user copies older unexecuted template to new POL0DIAG project, more than polarization changes; invalidates one-variable comparison. No proof live clone actually contains 20.

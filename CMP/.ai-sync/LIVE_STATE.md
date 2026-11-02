@@ -1,3 +1,15 @@
+## 2026-11-02 밤 — Lee / Claude V2.1 Baseline independent decision (USER-FORWARDED, NO RUN)
+- PROVENANCE: 이택규가 전달한 2026-11-02 밤 Claude 의사결정 요약. Claude 보고 기준 GitHub main `7a3cacd` (22:25 KST)까지 확인, Issue #7은 접근 거부로 미확인. 이번 ChatGPT 기록 시 Claude의 UG 원문/학교 서버를 직접 재검증하지 않았으며 UG 텍스트는 복제하지 않음.
+- DECISION: Baseline 판정 **B 유지 / physical FREEZE HOLD**. 수치적 자기일관성은 기존 실행 기록상 양호하나 MQW 캐리어 분포의 물리 원인은 **UNRESOLVED**. 정상 Baseline 승인도 폐기도 아님. 새로운 시뮬레이션, 코드·mesh·MaterialDB 변경 없음.
+- EVIDENCE / DERIVED: 기존 n2/n6 결과에서 QW4가 4QW 방사 재결합을 99.9688% / 99.9929% 차지함(IQE 아님). QW1 중심 JnX=8.85e-5 A/cm², 현 위치 국소 총 J≈1.82 A/cm²에서 약 0.005%. QW4 이전 수송/재결합 분배의 강한 불균형은 관측되지만 원인 분리 실패. Claude는 관측 패턴이 일반적인 p측 발광/정공 병목 기대와 반대라고 해석함(실험 경향의 일반화는 별도 검증 필요).
+- POLARIZATION (CLAUDE DERIVED, NOT DIRECT INTEGRAL): 기존 출력 QW Px=+8.216e-7, barrier Px=+3.4e-6 C/cm². UG 식1085로 보고된 q_PE=-activation·∇P에 activation=0.5를 대입한 이상적 계면 sheet 크기 ≈0.5×(3.4e-6−8.216e-7)/q ≈8.05e12 cm⁻². 부호의 Ga-polar 일치 여부와 실제 적용 모델/계면 조건은 Claude 해석이며 완전한 독립 검증 아님. **오전 QW4_PLAN_20261102의 CSV PE_Charge sheet 수치적 적분 단계는 이 의사결정에서 불필요로 대체(SUPERSEDED);** MaterialDB 계수 상속 추적도 중단 권고.
+- COMPETING HYPOTHESES (UNRESOLVED): H1 강한 분극 계면 전하로 인한 전자 장벽; H2 classical drift-diffusion의 즉시 포획과 70:30 offset에 의한 우물 집중. 원인/인과관계 확정 금지.
+- PROPOSED CHOICE B: 이택규가 **명시적으로 승인한 후에만** 원본 보존된 복사본에서 global PolAct 0.5→0 단일변수 대조; n2 Trap OFF와 n6 Trap ON 2개 조건 (자원 부족 시 n2 우선). Global activation은 EBL 등 다른 계면에도 영향을 주므로 완전한 원인 분리 실험이 아니며 PolAct=0은 진단용으로만, 물리 Baseline 후보로 사용하지 않음.
+- CLAUDE HEURISTIC GATES (NOT VALIDATED): n2 QW1 JnX/J ≥1% 및 QW4 방사 비중 <80%면 분극 기여 우세 가설 지지; JnX/J <0.1% 및 QW4>99%면 DD 즉시 포획 가설 지지. 그 외 혼합/불확정; 어느 결과도 단독으로 인과 확증하지 않음.
+- PROJECT A CONDITIONAL (PROPOSED ONLY): 동일 주입 전류 IQE_sim의 Trap 감소 효과가 PolAct 0.5와 0에서 부호가 같고 상대차가 사전 설정 제안 허용범위 ±25% 이내일 경우에만 제한적 임시 Baseline(C) 전환 논의. QW 분포/절대 IQE/Vf 주장 금지. Project B에는 자동 적용 금지.
+- NEXT (READ ONLY FIRST): (1) 기존 n2/n6 .plt에서 **동일 전류 기준 IQE_sim** 재검산; (2) 복사본의 preprocessed `pp` 차이가 예정된 PolAct 변경만인지 검토(Claude가 제안한 '21행' diff 주장 검증 필요). 실행 승인/복사본 실제 생성 여부는 아직 확인되지 않음.
+- LIVE decision now supersedes the earlier 'ask Claude to assess' pending step; no simulation authorization was given.
+
 ## 2026-11-02 — Claude independent reassessment proposed (Lee, NO RUN)
 - User requests independent review before more TCAD testing. Current blocker: QW4 anomalous 4QW radiative dominance with unresolved cause. Stop repetitive CSV queries; review a single decisive controlled-test design and Baseline B go/no-go for Project A. Candidate polarization activation 0.5-to-0 on protected copy only if user approves. No execution or baseline edits. Relay details in .ai-sync/RELAY.md.
 

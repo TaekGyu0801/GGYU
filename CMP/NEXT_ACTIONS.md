@@ -1,3 +1,8 @@
+## 2026-11-02 — After Lee reports pasting full POL0DIAG SDevice (USER-REPORTED, PRE-RUN)
+- 이택규가 clone `CMP_BASELINE_2.1.0_POL0DIAG` SDevice에 전체 입력을 복붙하여 `Iterations=12` 복원했다고 **보고**. 아직 디스크 코드/pp 또는 실제 실행 로그를 확인하지 않음. SWB 두 행 PolAct=0은 이전 화면에서 직접 확인됨.
+- **NOW NEXT (READ ONLY):** clone 저장 파일의 `Piezoelectric_Polarization(strain activation=@PolAct@)`, global `Math Iterations=12` grep 출력 확인. 이후 preprocess-only를 통해 clone n2/n6 유효 `activation=0`, `Iterations=12`, 나머지 SDE/PAR/Solve/mesh 동일성 확인. 새 실험 전에 기존 n2/n6 동일 전류 IQE_sim baseline 확보 및 Claude heuristic thresholds 사전 선택/기록 필요.
+- **NO RUN / B FREEZE HOLD**. 원본 프로젝트 변경 금지, PolAct=0은 global EBL effect가 있는 진단 전용.
+
 ## 2026-11-02 — Minimal copy-paste Math block offered to restore Iterations=12 (PROPOSED, NOT APPLIED)
 - 사용자 요청: 자동 cp 명령 대신 SWB SDevice 편집기에 직접 복붙할 수 있는 코드 제공.
 - ChatGPT는 사용자 제공 실제 diff의 유일한 기능적 SDevice 차이(원본 `Iterations=12`, 복사본 `Iterations=20`)를 수정하기 위해 **Math 블록만 원본과 동일한 값**으로 교체하는 코드 제시. 나머지 original/clone diff는 주석/포맷 차이로 확인됨. Polarization line `Piezoelectric_Polarization(strain activation=@PolAct@)`은 유지, SWB Parameters는 PolAct=0(사용자 화면 관측).

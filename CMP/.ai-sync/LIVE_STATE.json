@@ -1,4 +1,58 @@
 {
+  "leeClaudeNightDecision20261102": {
+    "worker": "이택규",
+    "date": "2026-11-02",
+    "source": "User-forwarded Claude 2026-11-02 night independent decision; GPT has not independently read new UG or school-server output",
+    "status": "DECISION_RECORDED; PHYSICAL_CAUSE_UNRESOLVED; NO_NEW_RUN",
+    "decision": "Baseline B / physical FREEZE HOLD; numerical consistency, MQW carrier physics unvalidated",
+    "claudeRead": {
+      "main": "7a3cacd",
+      "issue7": "403_NOT_READ_BY_CLAUDE"
+    },
+    "measurementsFromPriorRuns": {
+      "qw1JnX_A_per_cm2": 0.0000885,
+      "localTotalJ_A_per_cm2": 1.82,
+      "qw1ElectronShareApproxPercent": 0.005,
+      "qwPx_C_per_cm2": 8.216e-7,
+      "barrierPx_C_per_cm2": 0.0000034
+    },
+    "derived": {
+      "interfacePolarizationSheet_cm2": "approx 8.0e12 (activation 0.5; UG eq.1085; not numerically integrated CSV)",
+      "provenance": "Claude calculation; conditional on interface convention"
+    },
+    "hypotheses": [
+      "H1 polarization interface sheet induces electron barrier",
+      "H2 classical drift-diffusion immediate capture + 70:30 offset"
+    ],
+    "superseded": "Earlier QW4_PLAN_20261102 PE_Charge CSV sheet integration step is not required for current decision; material inheritance chase paused",
+    "proposedExperiment": {
+      "type": "protected_copy_single_variable",
+      "polActChange": "0.5 to 0",
+      "nodes": [
+        "n2 Trap OFF first",
+        "n6 Trap ON second if feasible"
+      ],
+      "permission": "REQUIRES_EXPLICIT_LEE_APPROVAL; NOT RUN",
+      "caveat": "global activation also changes EBL interface charge; PolAct=0 diagnostic only"
+    },
+    "proposedHeuristicCriteria": {
+      "H1": "QW1 JnX/J >=1% AND QW4 share <80%",
+      "H2": "QW1 JnX/J <0.1% AND QW4 share >99%",
+      "limitations": "heuristics, not proven causality"
+    },
+    "projectAConditional": {
+      "compare": "same-current IQE_sim trap reduction at PolAct 0.5 and 0",
+      "gate": "same sign, proposed relative difference <=25%",
+      "outcome": "may discuss temporary Baseline C with caveats; no claims on QW distribution, absolute IQE, Vf",
+      "projectB": "separate validation"
+    },
+    "readOnlyNext": [
+      "same-current IQE_sim from pre-existing n2/n6 .plt",
+      "compare protected-copy pp diff; Claude's 21-line claim still unverified"
+    ],
+    "noCodeChanges": true,
+    "noNewSolverRun": true
+  },
   "leeClaudeQW4Reassessment20261102": {
     "worker": "이택규",
     "date": "2026-11-02",

@@ -1,3 +1,9 @@
+## 2026-11-02 — 기존 V2.1 Mesh 최소각/최소 Edge 위험 재확인 (OBSERVED SERVER READ ONLY; NO RUN)
+- 사용자 학교 서버에서 `grep -niE 'minAngle|maxAngle|edgeLength|warning|vertices|elements' n1_msh.log | tail -n 50` 실행: `62533 vertices`, `123917 elements`, `minAngle: 0.0167024`, `maxAngle: 128.367`, `min edgeLength: 1.95312e-05 [near (0.0041875 1.89501)]` (units um from V2.1 mesh context). 최소 Edge 길이 산술 환산 `0.0195312 nm`.
+- 사용자가 제공한 메시 로그는 기존 2026-10-21 `ERROR_LOG.md`의 동일 결과와 일치하는 **재확인**, 새로운 메시 생성/소스 변경/solver 오류 발견 아님. near 좌표는 SDE x(depth)=0.0041875um, y(lateral)=1.89501um; Xe=1.895um Clean/Edge 경계 인접. 최소 **각도**의 위치가 최소 **길이**의 위치와 같다는 증거는 없음.
+- 극단적 최소 각도·짧은 Edge는 메시 품질 검사 대상으로 유지하지만 QW4 99.97% 집중 원인 또는 계산 수렴 문제의 직접 원인이라 단정하지 않음. Full/Half 수치적/물리적 동등성 아직 미검증, Baseline freeze HOLD.
+- NEXT: 기존 `n1_msh.tdr` SVisual 시각화에서 중심 절단선 및 Clean/Edge 전이 구간의 실제 triangle/경계 라벨 읽기 전용 점검. 필요 시 메시 품질 민감도는 후속 보호된 별도 실험으로만 수행.
+
 ## 2026-11-02 — V2.1 Half 중심선/전극 소스 및 메시 파일 존재 직접 확인 (OBSERVED; NO RUN)
 - 이택규 실제 서버 출력: `sed -n '20,68p' pp1_dvs.cmd` 및 `sed -n '145,170p' pp1_dvs.cmd`. `P(lat dep z)=(position dep lat z)`이므로 SDE x=depth, y=lateral; `Wm=4.0um`, `Xs=2.0um`, `Wshelf=0`, `Cath=0`, `Wdmg=0.005um`, `Wedge=0.1um`. 상단 anode는 Clean/Edge/Dmg 세 구간 각각 `set-contact`, 아래 cathode는 yBot에서 가로 위치 `Xs/2`를 선택해 지정; 중심선 측면 y=0의 contact 선언은 출력된 전체 contacts 블록에 없음.
 - `ls -lh n1_msh.tdr`: 기존 파일 `-rw-r--r-- ... 2.0M Oct 14 13:43` OBSERVED. **파일 존재가 메시 형상, 경계 라벨, 품질 또는 Full/Half 동등성 검증을 뜻하지 않음.**

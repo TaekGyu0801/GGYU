@@ -1,3 +1,7 @@
+## 2026-11-02 — Lee QW4 bipolar polarization sheet signature observed (OBSERVED / CONDITIONAL DERIVED; NO RUN)
+- Lee 기존 n2 3.6V fine cutline `qw4_36_qw4fine.csv`에서 B3/QW4 x=.26300001 signed PE_Charge +1.2297757e21, QW4/B4 x=.266 negative −1.2297757e21, paired P_x 3.4e−6(GaN) / 8.2162955e−7(InGaN) with duplicate x at each interface.
+- Unit C/cm²를 가정한 분극 점프 |ΔP|=2.57837045e−6 C/cm² ⇒ 등가 sheet |ΔP|/q≈1.6093e13 cm^-2. 실제 유효 interface activation/PE_Charge spatial integral은 미검증. 분극의 양단 이중부호 패턴 확인일 뿐 QW4 집중의 근본 원인 확인 아님. Next verify all QW ΔP and active settings, no model run/edits; Baseline HOLD. Detailed Lee timeline.
+
 ## 2026-11-02 — Lee 3.6V QW4 local electron continuity check closes 99.9921% (OBSERVED/DERIVED, NO RUN)
 - 이택규 `qw4_36_qw4fine.csv` Y=1µm, x=.26300001–.266µm의 24개 샘플 read-only trapezoid 확인: ΔJnX=1.8216831695 A/cm², q∫TotalRdx=1.8215397088407301 A/cm² (closure=99.99212483%; residual=0.00787517% of ΔJn). Net local recombination fractions Rad=67.00685%, Auger=27.55348%, SRH=5.43967%; channel sum total matched ~6.08e-9A/cm².
 - 관찰: QW4 내 높은 순 재결합 sink와 depthwise electron current drop가 내부 수지에 일치. 원인 분극/오프셋/계면 수송 **미확정**; 이는 n2 전체 4QW Rad의 QW4 99.9688%와 서로 다른 비율. 2D Y-flux divergence 미포함, same-Y local validation. Next PE_Charge signed spike+units, parameters read-only, freeze HOLD. Lee timeline detailed source.

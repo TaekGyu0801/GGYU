@@ -1,3 +1,13 @@
+## 2026-11-02 — 이택규 Claude → ChatGPT QW4 전자수송 병목 가설 검증 인수인계 (PROPOSED; NO NEW RUN)
+- **작업자/AI:** 이택규, Claude 재평가를 ChatGPT가 전달받아 GitHub에 보존. Claude는 `8553f64`까지 열람했고 Issue #7은 403으로 미열람했다고 보고. ChatGPT는 Issue #7을 실제로 읽음.
+- **정확한 blocker:** 2D Half V2.1 Trap OFF n2 QW4 99.9687748%, Trap ON n6 99.9929427%로 QW 방사 집중; 실제 물리 원인 미확정. 서브 blocker: 분극 sheet 면밀도/계면 모델·전류 수송 조건, 2D/Full-Half 물리 보정과 mesh 품질.
+- **기존 근거:** 2026-10-14 n2/n6 old PLT/TDR, 사용자 10/23 QF/cutline 보고, 10/31 PLT 파서, 11/02 AreaFactor=1·Wm4/Xs2·mesh log. Claude는 10/23 표에서 B0–B3 장벽 p/n~1e4–1e5와 Ec-eQF~0.45–0.51eV 등을 DERIVED하고 우물 간 전자 전달 병목을 **가설**로 제안. Raw CSV 직접 검증 및 단일변수 run 증거 없음.
+- **정정/실패한 접근:** Claude 10/23의 약 1.6eV '계면 손실' 주장은 이중 계산으로 철회. QF 분리와 집중의 동행을 직접 인과로 표현하지 말 것. `Heterointerface` 단독 첫 실험 비권장(Claude UG p.59 보고).
+- **현재 관련 서버/코드:** `/user/semi/semi437/CMP_BASELINE_2.0.0_V2` 안의 `pp1_dvs.cmd`, `pp2_des.cmd`, `pp6_des.cmd`, `pp2_des.par`, `pp6_des.par`, `n2_des.log`, `n2_des.plt`, `n6_des.plt`, 원본 eq/end TDR, 구 CSV(존재 확인 필요). GitHub 공개 `CMP/tcad/CURRENT/*`을 현 서버 실행본으로 단정 금지.
+- **다음 첫 순서 (READ ONLY):** 실제 10/23 CSV 및 `server_readonly_cmds_20261102.sh` 원본/경로 확인. 절차 검토 후 PE_Charge interface volume-to-sheet integration, B3/QW4 Ec/Ev/QF step, pp2/pp6 PAR Chi0/Eg0/mumax, 실제 Fermi/thermionic/polarization 및 로그 warning 읽기.
+- **신규 실험 제안, 실행 전 승인 필수:** protected copy, SAME mesh, NtSide=0, `strain activation 0.5→0`, 그 외 변수 고정. T-2022.03 UG에서 이것이 piezo only인지 total polarization인지 먼저 확인. Claude의 제안 판별 수치(QW4 80%, n 100× 등)는 미검증 경험적 gate로만 기록. **새 시뮬레이션/원본 코드 변경 없음.**
+- **변경 금지:** Common Baseline의 Kou epi, 4um design, 5nm damage, Nt/Et/sigma, contacts/physics를 임의 변경하거나 Project A/B의 공정적 우위가 확정됐다고 주장하지 말 것. Baseline 물리 FREEZE HOLD.
+
 ## 2026-10-31 — Lee runtime contact area-factor n2 only (HANDOFF; NO RUN)
 - New user-provided grep n2_des.log line237: anode (Ohmic) area factor : 1; line238 cathode (Ohmic) area factor : 1. This is direct runtime contact setting evidence, unlike previous unsuccessful CMD/PAR literal grep. Do NOT treat as proof total current is physical A or as proof 2D effective width-to-full-4um conversion.
 - n6 equivalent lines not yet provided; SDE geometry/contact excerpts requested but not provided this turn. Next READ-ONLY check both, then official T-2022.03 2D current normalization before any physically stated J. QW4 extreme concentration remains UNRESOLVED, physical Baseline freeze HOLD. Original TCAD untouched.

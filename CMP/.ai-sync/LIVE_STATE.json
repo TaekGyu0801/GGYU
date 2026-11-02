@@ -5474,5 +5474,32 @@
     "qw4RootCause": "UNRESOLVED",
     "baselineFreeze": "HOLD",
     "next": "read-only check InN.par polarization block and model inheritance"
+  },
+  "leeInNPolarCoefficients20261102": {
+    "worker": "이택규",
+    "date": "2026-11-02",
+    "status": "OBSERVED_SOURCE plus CONDITIONAL_DERIVED; NO_RUN",
+    "installedFile": "T-2022.03 MaterialDB/InN.par",
+    "inN": {
+      "psp_z_C_per_cm2": -0.0000042,
+      "e31_C_per_cm2": -0.000048586,
+      "e33_C_per_cm2": 0.00010629,
+      "a_Angstrom": 3.54,
+      "relax": 0.1
+    },
+    "gaNReference": {
+      "psp_z_C_per_cm2": -0.0000034,
+      "e31_C_per_cm2": -0.00005274,
+      "e33_C_per_cm2": 0.00008946
+    },
+    "qwInFraction": 0.15,
+    "interpolated_spontaneous_If_linear_C_per_cm2": -0.00000352,
+    "n2_observed_QW_Px_C_per_cm2": 8.2162955e-7,
+    "difference_If_orientation_flip_C_per_cm2": 0.00000269837045,
+    "caution": "Effective runtime InGaN interpolation/piezoelectric strain not verified; difference not confirmed piezo contribution; QW4 cause unresolved",
+    "baselineFreeze": "HOLD",
+    "newSimulation": false,
+    "codeChanged": false,
+    "next": "Read-only inspect InN.par piezo block 605–645 and runtime parameter provenance"
   }
 }

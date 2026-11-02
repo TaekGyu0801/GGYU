@@ -1,3 +1,7 @@
+## 2026-11-02 — Lee pasted full SDevice into new shelf-free POL0 clone (USER-REPORTED, NO RUN VERIFIED)
+- 사용자: 잘못된 shelf 포함 복사본을 중단하고 정확한 `CMP_BASELINE_2.0.0_V2`를 새 복사한 프로젝트에서 PolAct=0 SWB 파라미터 및 GPT 전체 SDevice 코드 붙여넣기까지 완료했다고 보고. 원본 SDE와 PAR는 수정 없이 유지한 것으로 설명. 실제 clone 유효 SDevice/geometry 증거는 추가 확인 전.
+- **NEXT MINIMAL:** 새 SDE mesh에 옆 턱이 없는지 확인 (올바른 원본에는 Wshelf=0). 그다음 n2 NtSide=0 우선 실행하여 pp `activation=0` / `Iterations=12` 및 solver convergence 확인; n6는 후속. PolAct=0은 진단 전용 (EBL 포함 global); 기존 baseline과 정확히 단일 변수 비교할 수 있는지는 소스/PP 동일성 검증 필요. 새로운 결과/성공은 아직 없음. Baseline B/FREEZE HOLD.
+
 ## 2026-11-02 — Lee parameter changed on shelf-free clone; full copy-paste SDevice delivered (USER-REPORTED, NO RUN VERIFIED)
 - 올바른 shelf-free `CMP_BASELINE_2.0.0_V2`를 다시 복사한 후 이택규가 SWB **파라미터 변경 완료**라고 보고. 새 복사본 실제 폴더명/PolAct=0/다른 파라미터 동일성은 화면/pp로 재확인 필요.
 - 기존 V2.1 SDevice와 기능상 동일한 전체 복붙 텍스트 제공: `activation=@PolAct@`, Math `Iterations=12` 포함. 코드를 실제 편집기에 적용했다는 사용자 응답은 아직 없음. Original V2.1 수정 금지.

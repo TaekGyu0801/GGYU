@@ -1,3 +1,8 @@
+## 2026-11-02 — Lee InGaN MaterialDB polarization grep found no direct matching entries (OBSERVED; NO RUN)
+- 이택규 학교 서버에서 설치된 T-2022.03 MaterialDB/InGaN.par를 읽기 전용 grep -nEi 'Piezoelectric_Polarization|psp_|relax|e31|e33|d31|d33|strain' 실행. 실제 출력은 line132 주석 EnergyRelaxationTime, line238 QWStrain, line242 주석 StrainConstant eps(formula=1) or lattice constant 3곳뿐이다. 검색어와 일치하는 명시적 Piezoelectric_Polarization/psp/e31/e33/relax 정의는 이 파일의 이번 검색에서 발견되지 않음 (OBSERVED). QWStrain의 구체 내용·분극 모델과의 연결은 아직 미확인.
+- InGaN.par 직접 정의 부재 != 실제 SDevice 런타임에서 InGaN 분극 비활성. 기존 n2 3.6V cutline QW1–QW4 모두 Px=+8.2162955e-07 C/cm2 관찰. 물성 상속, 혼합물 interpolation, 명령/기본 물성 중 어떤 출처인지는 아직 검증되지 않음; QW4 약99.97% 집중 원인은 UNRESOLVED. Baseline B physical FREEZE HOLD; 새 simulation 및 source 변경 없음.
+- 다음 READ ONLY: sed -n '225,285p' /user/tools/synopsys/sentaurus/T-2022.03/tcad/T-2022.03/lib/sdevice/MaterialDB/InGaN.par 로 QWStrain 원문(블록 경계·의미) 확인. 이후 런타임 분극 파라미터 계승 출처 확인; 단일 변수 실험 승인 전 실시 금지.
+
 ## 2026-11-02 — GaN polarization file audit (Lee, OBSERVED; NO RUN)
 - GaN.par polarization block: formula=1, relax=0, psp_z=-3.4000e-06, e31=-5.2740e-05, e33=+8.9460e-05 C/cm^2, a0=a=3.189 Å (user server grep).
 - InGaN polarization block and runtime coefficient origin unverified; investigate read-only. QW4 causality unresolved, baseline FREEZE HOLD.

@@ -1,3 +1,10 @@
+## 2026-11-02 — 기존 QW4 cutline CSV 헤더/3.6V 표본 직접 검증 (OBSERVED SERVER OUTPUT; NO RUN)
+- `wc -l qw4_*.csv`: `qw4_36_depth.csv`=395, `qw4_36_qw1fine.csv`=69, `qw4_36_qw4fine.csv`=65, `qw4_eq_depth.csv`=395, total 924 lines. 각 파일은 SVisual 첫 행 변수 헤더와 둘째 `none`/SELECTED 메타데이터 행을 포함하므로 실제 자료행은 각 393/67/63/393으로 추산(빈 줄 여부 등 전체 파일 미검증).
+- `head -n 6`의 eq/3.6V depth CSV에서 `PE_Charge`, `PE_Polarization-X`, `ConductionBandEnergy`, `ValenceBandEnergy`, `eQuasiFermiEnergy`, `hQuasiFermiEnergy`, `eDensity`, `hDensity`, `eCurrentDensity-X`, `hCurrentDensity-X`, `TotalCurrentDensity-X`, `X`, `Y`, `Distance` 열 확인. 실제 n2 3.6V depth cutline 표본 `X=0.14,Y=1`에서 `TotalCurrentDensity-X≈1.8236326`; 이전 2D 조건부 J=1.8236426244 A/cm²와 수치적으로 거의 같아 내부 교차검증을 지지하지만 공식 단위/4×4um 해석 별도.
+- eq와 3.6V CSV 첫 표본 `PE_Charge=-5.5020169e20` (출력 열의 **미적분된 국소 값**, 계면 sheet cm^-2 아니므로 직접 사용 금지). 계면 signed charge density 분석은 `X` 좌표의 물리적 단위·순서, 급변 영역 구간 및 volumetric PE_Charge 단위 확인 후에만 시도.
+- CURRENT BLOCKER: QW4 Rad n2 99.9688%/n6 99.9929% 물리 원인 UNRESOLVED. Claude 전자 수송 병목 가설 NOT CONFIRMED. PROPOSED `PolAct 0.5→0` 수정/실험 승인·실행 없음.
+- NEXT READ ONLY: 네 CSV 데이터행 좌표 X/Y min-max와 sample position, SDE QW stack 위치 확인 → 같은 위치 Ec/Ev/e/h QF/current 및 PE 계면 적분의 유효성 확인. 서버 파일 변경 없음.
+
 ## 2026-11-02 — QW4 cutline CSV 4개 실제 서버 파일 존재 확인 (OBSERVED USER TERMINAL; NO RUN)
 - 이택규가 `/user/semi/semi437/CMP_BASELINE_2.0.0_V2`에서 `find . -maxdepth 4 -type f -name 'qw4*.csv' -print` 실행: `./qw4_eq_depth.csv`, `./qw4_36_qw1fine.csv`, `./qw4_36_depth.csv`, `./qw4_36_qw4fine.csv` 네 파일 **존재 확인**. 이 결과만으로 열 구성, 출처 TDR, 변수 단위, 계면 전하 적분 결과, 내용 무결성은 검증되지 않음.
 - `find . -maxdepth 4 -type f -name 'server_readonly_cmds_20261102.sh' -print` 출력이 비어 있어 **해당 프로젝트 디렉터리의 탐색 깊이 4까지** 스크립트 발견되지 않음. 서버 전체에 없다는 의미가 아님. 클로드 제공 스크립트를 실행했다고 가정하지 말 것.

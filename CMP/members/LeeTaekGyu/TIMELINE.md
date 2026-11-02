@@ -1,3 +1,8 @@
+## 2026-11-02 — Lee SWB diagnostic PolAct=0 parameter table verified by screenshot (OBSERVED, NO RUN)
+- User sent SWB Parameters screenshot for copied project `CMP_BASELINE_2.1.0_POL0DIAG`, stating only PolAct changed. **Screenshot OBSERVED:** two rows; `PolAct=0` in both, row 1 `NtSide=0` (Trap OFF) and row 2 `NtSide=1e18` (Trap ON), both `Wedge=0.1`, `Bspan=0`, `NCEdge=0`, `V1=2.0`, `Vmax=3.6`; `NPlot=8` (row1), `0` (row2). This verifies displayed UI values ONLY, not original-to-copy full comparison or actual processed SDevice activation.
+- New progress: PolAct displayed as zero in both SWB parameter rows. **UNVERIFIED:** whether `@PolAct@` is bound inside actual SDevice source, preprocessed `pp2_des.cmd`/`pp6_des.cmd` values, other input/PAR/SDE diff, run results, same-current IQE_sim, and Claude proposed gate adoption. No new solver execution reported.
+- NEXT READ ONLY: inspect new `sdevice_des.cmd` for actual `Piezoelectric_Polarization` and activation references; verify SWB preprocessing and source/pp diff before solver. Keep source `CMP_BASELINE_2.0.0_V2` untouched, physical Baseline B/FREEZE HOLD. PolAct=0 remains diagnostic only (global EBL interface effect).
+
 ## 2026-11-02 — Lee creates manual SWB PolAct diagnostic copy (USER-REPORTED, NOT RUN)
 - 이택규 보고: 학교 서버 SWB에서 기존 `CMP_BASELINE_2.0.0_V2` 프로젝트를 복사한 다음 이름을 `CMP_BASELINE_2.1.0_POL0DIAG`으로 지정하여 신규 프로젝트를 만들었음. SWB 프로젝트 실제 생성은 **사용자 보고 OBSERVED**, GPT가 서버 폴더/덱 SHA/파라미터를 직접 확인한 것은 아님.
 - 현재까지 확인 가능한 범위: 프로젝트 복사 및 명명 단계. 실제 `PolAct=0` 적용, 노드/소스/물성/mesh 원본과 동일성, preprocess pp diff, 새 TCAD solver run, 결과 **미확인/NOT RUN**.

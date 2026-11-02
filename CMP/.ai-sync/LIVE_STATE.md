@@ -1,3 +1,8 @@
+## 2026-11-02 — Lee confirms full SDevice paste into shelf-free clone (USER-REPORTED, NO RUN VERIFIED)
+- 이택규가 이번에는 `CMP_BASELINE_2.0.0_V2`(shelf-free, NOT `_Copy`)를 복사한 뒤 SWB `PolAct=0`으로 바꾸고 GPT가 제공한 **전체 SDevice 코드**를 새 복사본에 붙여넣었다고 확인. 이 변경은 **사용자 보고 완료**, 실제 서버 복제본 디스크의 저장본, 정확한 SWB 새 이름 및 pp 결과는 아직 직접 열람하지 않음.
+- 제공 코드의 의도: `Piezoelectric_Polarization(strain activation=@PolAct@)`, Math global `Iterations=12`, 기타 Physics/Trap/CurrentPlot/Solve 원본과 같은 구성. SDE 및 PAR는 복제 원본 그대로 두도록 안내. 사용자가 올바른 원본을 복제했는지는 입력 선택 보고 기준이며 **새 mesh에서 shelf 미존재 재확인 필요**.
+- NEXT 최소 게이트: 새 SDE mesh가 shelf-free (Wshelf=0)인지 확인 후 n2 진단 실행; 생성 pp의 activation=0 및 Iterations=12 확인. 본 메시지에서 새 solver 완료/결과 보고 없음. 원본 Baseline B / physical FREEZE HOLD 유지.
+
 ## 2026-11-02 — Lee reports PolAct parameter changed in new shelf-free clone; full SDevice source supplied (USER-REPORTED, NO VERIFIED RUN)
 - 이택규가 `_Copy`가 아닌 원본 `CMP_BASELINE_2.0.0_V2`에서 다시 만든 보호 복사본의 **SWB PolAct 파라미터를 변경했다**고 보고. 변경된 정확한 UI/실제 pp 값은 새 복사본에서 아직 독립 확인하지 않음.
 - 사용자 요구에 맞춰 **전체 SDevice 복붙용 코드** 제공: 이전 학교 서버 원본과 동일한 실행 명령/수치 설정을 유지하도록 구성, global Physics `Piezoelectric_Polarization(strain activation=@PolAct@)` 유지, `Math Iterations=12`, Fermi/Thermionic/Trap/CurrentPlot/Solve 및 V1/Vmax/NPlot 매크로 유지. 새 소스 전체를 실제로 붙여넣거나 실행했는지는 아직 미보고. 기존 코드와의 동일성은 **실행 파일의 pp diff로 검증 필요**, source-only 형식 차이 해석 주의.

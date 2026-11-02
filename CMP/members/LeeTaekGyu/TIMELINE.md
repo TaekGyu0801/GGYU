@@ -1,3 +1,16 @@
+## 2026-11-02 — Claude 독립 의사결정 기록 (사용자 전달 원문; NO RUN)
+
+2026-11-02 밤 (Claude 독립 의사결정, 새 실행 없음) V2.1 Baseline 판정과 다음 작업
+- 판정 B 유지: 수치 일관성(2D A/um UG p.58/120, 재결합 수지 99.999%, ΔJn=q∫R 99.99%, Rad/np=2e-11 QW1=QW4, x=0.15) 충족. MQW 캐리어 분포는 물리 미검증. 정상 선언도 폐기도 아님.
+- 분극 크기(DERIVED): QW Px +8.216e-7, 장벽 Px +3.4e-6 C/cm2, UG 식1085 q_PE=-activation·∇P → 우물 계면 sheet ≈ 0.5×2.578e-6/q ≈ 8.0e12 cm^-2, 부호 Ga-polar 일치. MaterialDB 상속 추적 중단 권고(런타임 값이 출력 Px로 결정됨).
+- 직접 원인(OBSERVED): QW1 중심 JnX 8.85e-5 = 전체 1.82 A/cm2의 0.005%. 전자는 QW4를 거의 못 넘고 정공은 QW4까지 전 전류 운반 → 만나는 곳이 QW4뿐. 실험 경향(정공 병목, p쪽 발광)과 반대.
+- 기전(가설): H1 분극 sheet 8e12가 장벽 전도대 상승 / H2 고전 DD 즉시 포획 + 70:30 오프셋으로 깊은 전자 우물. 미구분.
+- 결정: 선택지 B. 보호 복사본에서 PolAct 0.5→0 단일 변수, n2·n6 조건 두 노드(여력 없으면 n2 먼저). 주의: global activation이라 EBL 계면 전하도 0이 됨. PolAct=0은 진단용, Baseline 후보 아님.
+- 판정 기준(Claude 작업 기준): QW1 JnX/J ≥1% & QW4<80% → 분극 주원인 / JnX/J<0.1% & QW4>99% → 고전 DD 포획 주원인.
+- Project A 진행 조건: 동일 전류 IQE_sim의 Trap 감소율이 PolAct 0.5와 0에서 같은 부호, 상대 차이 사전 허용범위(제안 ±25%) 이내 → 제한사항 명시 임시 Baseline(C)으로 진행. QW 분포·절대 IQE·Vf는 주장 금지. Project B는 별도 확인.
+- 실행 전 읽기 전용 2개: (1) 기존 n2/n6 plt로 동일 전류 IQE_sim (2) 복사본 pp diff가 21행뿐인지.
+- FREEZE HOLD 유지.
+
 ## 2026-11-02 — Lee requests independent Claude decision review before next TCAD run (HANDOFF PROPOSED, NO RUN)
 - Worker Lee requested a concise independent Claude reassessment because extensive read-only QW4 audits have become repetitive. ChatGPT proposes STOP additional data-gathering for now, classify physically-verified vs unexplained evidence, and request Claude to decide whether a single controlled sensitivity test is actually informative and whether provisional Project A work can proceed.
 - Evidence already available: n2 QW4 fraction of four QW radiative ~99.9688%; n6 ~99.9929% (not IQE). Existing n2 3.6V Y=1um QW1 vs QW4 pointwise n ratio~208.95, p ratio~481.26, n*p~100558; Rad/(n*p) both ~2e-11 cm3/s. Fine CSV electron-current-versus-q-integrated-recombination consistency QW1~99.9994% and QW4~99.9921% across well+adjacent barrier ranges. QW4 focusing causal physics remains unresolved. B2 broad-window ΔeQF=0.25042766eV cannot alone prove bottleneck.

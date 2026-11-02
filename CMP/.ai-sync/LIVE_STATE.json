@@ -5651,5 +5651,30 @@
     "newSimulation": false,
     "codeChanged": false,
     "next": "read-only compare local radiative rate normalized by n*p and interwell transport profiles; approved protected sensitivity run only later"
+  },
+  "leeQW1QW4RadiativePerNp20261102": {
+    "worker": "이택규",
+    "date": "2026-11-02",
+    "status": "OBSERVED_USER_TERMINAL_AND_DERIVED; NO_NEW_RUN",
+    "source": "Archived n2 3.6V at Y=1um: qw4_36_qw1fine.csv QW1 center and qw4_36_qw4fine.csv QW4 center",
+    "qw1": {
+      "radiative_cm3_per_s": 305830030000000000000,
+      "radiative_over_np_cm3_per_s": 2.000000011528524e-11
+    },
+    "qw4": {
+      "radiative_cm3_per_s": 3.075366e+25,
+      "radiative_over_np_cm3_per_s": 1.999999930276919e-11
+    },
+    "derived": {
+      "radiativeRatio": 100558.01256665344,
+      "npRatio": 100558.01665190354,
+      "normalizedRatio": 0.9999999593741977
+    },
+    "interpretation": "At the two central points high QW4 radiative rate is quantitatively consistent with much larger n*p, not increased pointwise radiative coefficient. Cause of carrier focusing not identified.",
+    "limitation": "Only two local center samples, not whole-well model coefficient validation or transport causation",
+    "baselineFreeze": "HOLD",
+    "newRun": false,
+    "sourceChanged": false,
+    "next": "Read-only compare interwell band and electron/hole transport profiles; sensitivity on protected copy only after explicit approval"
   }
 }

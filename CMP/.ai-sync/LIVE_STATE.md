@@ -1,3 +1,7 @@
+## 2026-11-02 — school server sdevice executable path confirmed; default MaterialDB not yet found (OBSERVED, NO NEW RUN)
+- User actual `which sdevice` = `/user/tools/synopsys/sentaurus/T-2022.03/bin/sdevice`. Env query `env | grep -E '^(STROOT|STRELEASE)='` had no output. Installation executable path verified, but release MaterialDB pathname and actual GaN/InGaN polarization parameters are still unverified.
+- NEXT READ ONLY find MaterialDB dirs within `/user/tools/synopsys/sentaurus/T-2022.03` (maxdepth8) and inspect source parameter files after confirmation. No simulation, no source edit; Baseline physical FREEZE HOLD.
+
 ## 2026-11-02 — active n2 par polarization constants not explicit; MaterialDB read-only audit pending (OBSERVED/PUBLIC DOC; NO RUN)
 - User's `pp2_des.par` grep `Piezoelectric|Strain|e31|e33|Psp|Relax|Lattice|Polarization|a0` shows only global `LatticeParameters`. No polarization-specific coefficient override found in preprocessed PAR; not proof polarization absent, because `pp2_des.cmd` has `DefaultParametersFromFile` and `Piezoelectric_Polarization(strain activation=0.5)`; n2 CSV has Px and interface PE_Charge.
 - Public Sentaurus Training Ch16 §16.4.4 confirms GaN/AlGaN/InGaN polarization material defaults from `$STROOT/tcad/$STRELEASE/lib/sdevice/MaterialDB/`. Actual installed T-2022.03 default numerical constants and n2 runtime origin NOT yet opened. QW4 origin remains unresolved.

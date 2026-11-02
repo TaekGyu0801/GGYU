@@ -1,3 +1,9 @@
+## 2026-11-02 — QW4 fine Jn/JP profile indicates strong sink, not proven B3 bottleneck (OBSERVED/DERIVED; NO RUN)
+- USER-OBSERVED `qw4_36_qw4fine.csv` x=.26250389 B3 JnX=.0017779541 JpX=1.8218258 Rad=9.6067543e14; x=.26355079/.26459765/.26551366 within QW4 JnX=.33616893/.96137367/1.5101376 and Rad≈(2.44–3.08)e25; x=.26656055 B4 JnX=1.8234614 JpX=.0003014948 Rad=7.47e18. Jtot≈1.8236 throughout.
+- DERIVED QW4 boundaries JnX change = 1.8216834459 A/cm², 99.90249565% of B4-side JnX; this is single cutline current drop, NOT QW4's 99.97% QW-integrated radiative share. Due to 2D ∂JnY/∂Y contribution and possible carrier capture, do not label this 'barrier blockade' or fully recombination-matched without continuity check.
+- FIRST NEXT READ ONLY: QW4 fine CSV x in [.263,.266] sorted numerical grid, trapezoid `q∫(Radiative,Auger,srh,TotalRecombination)dx` with x µm→cm, compare with JnX from QW4 edge-nearest rows and report sampling/2D lateral error. Confirm `TotalRecombination` includes activated terms.
+- THEN PE_Charge units/sheet and source polarization/thermionic band model. Approval only before any PolAct copy run. Baseline FREEZE HOLD.
+
 ## 2026-11-02 — n2 3.6V 장벽 p/n·Jx 실제 검산 완료: QW4 국소 전류 분포 세밀 검사 NEXT (OBSERVED/DERIVED, NO RUN)
 - DONE user read-only CSV extraction: B0/B1/B2/B3 local p/n≈5.90e4/1.00e5/4.04e4/1.43e4, Ec−eQF≈0.507/0.5144/0.4895/0.4449eV; Claude 10/23 derived table corroborated to precision of nearest-depth sample. QW3→QW4 n rises 43.28×, p rises 95.30×; QW4 center JnX .96137367 vs B3 JnX .0017767865, while JnX+JpX remains ~1.8236. These indicate strong QW4 recombination sink/flux transfer, **not proof that B3 band barrier is the cause**.
 - FIRST READ ONLY: finer QW4 file `qw4_36_qw4fine.csv` sample `JnX/JpX/Jtotal/PE_Charge/Ec−eQF` at x~.260/.2625/.2635/.2645/.2655/.2665/.270µm; check coordinate and same-source sample. Look for within-well vs interface jumps and spatial current continuity.

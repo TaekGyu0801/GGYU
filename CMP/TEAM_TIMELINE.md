@@ -1,3 +1,6 @@
+## 2026-11-02 — Lee QW1–4 center polarization and In fraction match (OBSERVED; NO RUN)
+- 기존 n2 3.6V `qw4_36_depth.csv` Y=1um read-only samples: QW1..QW4 all `PE_Polarization-X=8.2162955e−7`, `xMoleFraction=0.15`; B0..B4 all `PE_Polarization-X=3.4e−6`, `xMoleFraction=0`. QW4 only larger *bulk P/indium composition* hypothesis is contradicted at center points; QW4-selective radiative recombination cause unresolved. Actual effective interface sheets at all 8 interfaces and cumulative transport fields not yet checked. Next pp2/pp6 polarization + thermionic model read-only audit. Baseline physical freeze HOLD; no run/source changes. Details Lee TIMELINE.
+
 ## 2026-11-02 — Lee QW4 bipolar polarization sheet signature observed (OBSERVED / CONDITIONAL DERIVED; NO RUN)
 - Lee 기존 n2 3.6V fine cutline `qw4_36_qw4fine.csv`에서 B3/QW4 x=.26300001 signed PE_Charge +1.2297757e21, QW4/B4 x=.266 negative −1.2297757e21, paired P_x 3.4e−6(GaN) / 8.2162955e−7(InGaN) with duplicate x at each interface.
 - Unit C/cm²를 가정한 분극 점프 |ΔP|=2.57837045e−6 C/cm² ⇒ 등가 sheet |ΔP|/q≈1.6093e13 cm^-2. 실제 유효 interface activation/PE_Charge spatial integral은 미검증. 분극의 양단 이중부호 패턴 확인일 뿐 QW4 집중의 근본 원인 확인 아님. Next verify all QW ΔP and active settings, no model run/edits; Baseline HOLD. Detailed Lee timeline.

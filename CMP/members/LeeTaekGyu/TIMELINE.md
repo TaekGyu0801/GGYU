@@ -1,3 +1,9 @@
+## 2026-11-02 — V2.1 Half 중심선/전극 소스 및 메시 파일 존재 직접 확인 (OBSERVED; NO RUN)
+- 이택규 실제 서버 출력: `sed -n '20,68p' pp1_dvs.cmd` 및 `sed -n '145,170p' pp1_dvs.cmd`. `P(lat dep z)=(position dep lat z)`이므로 SDE x=depth, y=lateral; `Wm=4.0um`, `Xs=2.0um`, `Wshelf=0`, `Cath=0`, `Wdmg=0.005um`, `Wedge=0.1um`. 상단 anode는 Clean/Edge/Dmg 세 구간 각각 `set-contact`, 아래 cathode는 yBot에서 가로 위치 `Xs/2`를 선택해 지정; 중심선 측면 y=0의 contact 선언은 출력된 전체 contacts 블록에 없음.
+- `ls -lh n1_msh.tdr`: 기존 파일 `-rw-r--r-- ... 2.0M Oct 14 13:43` OBSERVED. **파일 존재가 메시 형상, 경계 라벨, 품질 또는 Full/Half 동등성 검증을 뜻하지 않음.**
+- 공개 Sentaurus training의 2D 기본 1um 면외 폭 및 구버전 Device UG의 비접촉 외곽 Neumann 설명은 참고 근거에 한함. 실제 설치 T-2022.03의 유효 경계조건/전류 단위 및 mesh의 경계는 별도 확인 필요.
+- NEXT READ ONLY `n1_msh.log` mesh quality 및 실제 `n1_msh.tdr` SVisual의 중심 y=0 경계, 전극 라벨을 확인. 기존 mesh minimum triangle angle 경고(10/21 기록)의 소자 품질 영향 미해결. 모델/메시/출력 변경 없음, Baseline HOLD.
+
 ## 2026-11-02 — 2D Half 전류밀도 정규화 산술 재현 (OBSERVED USER TERMINAL + CONDITIONAL DERIVED; NO RUN)
 - 이택규가 실제 학교 서버 `/user/semi/semi437/CMP_BASELINE_2.0.0_V2`에서 n2_des.log, n6_des.log를 grep하여 anode/cathode 모두 runtime `area factor : 1` 재확인. 첫 grep은 명령어 두 개가 붙어 `n6_des.loggrep` 오류가 났지만 동일 명령의 나머지 출력으로 두 노드 결과 정상 확보. TCAD 오류 아님.
 - 실제 `pp1_dvs.cmd` grep에서 Wm=4.0um, Wshelf=0, Wdmg=0.005um, Wedge=0.1um, Xs=Wm/2=2.0um, Xd=Xs-Wdmg, Xe=Xd-Wedge 및 상단 세 anode/하단 cathode 소스 정의 재확인.

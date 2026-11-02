@@ -1,3 +1,8 @@
+## 2026-11-02 — Lee tentative PolAct test go-ahead (PROPOSED; NO RUN)
+- 이택규가 “일단 수정해서 돌려볼까?”라고 제안. ChatGPT는 **원본 보호 복사본에 한정된 통제 진단**을 권장. 대화만으로는 Claude gate 숫자 최종 채택 및 n2/n6 범위 최종 확정은 아직 미확인.
+- 다음 조치: **서버 원본 덱의 PolAct 실제 바인딩 읽기 전용 확인** → 기존 PLT 동일 전류 IQE_sim → SWB 보호 복사 → PolAct만 0.5→0 → pp diff 검증 → n2부터 실행, n6는 이후 비교를 위해 필요. 원본/물성/mesh/접점/solver 변경 금지, global EBL 영향 기록.
+- USER CHOICE still needed to lock proposed heuristic (H1 QW1 JnX/J≥1% and QW4<80%; H2 <0.1% and QW4>99%; Project A ±25%) and scope. No school-server access from this ChatGPT; no source edits, no solver run, no claimed completion. Baseline B physical FREEZE HOLD.
+
 ## 2026-11-02 — 사용자 결정 대기: PolAct 진단 실험 사전 결정 2건 (이택규, Claude 전달 / NO RUN)
 - **현재 상태:** PENDING_USER_DECISION / PROPOSED / UNRESOLVED. 이택규는 (1) 실험 전 판정 기준, (2) 실행 범위를 아직 선택하지 않았음. PolAct 변경 승인·실험 실행·코드 변경 **모두 없음**. V2.1 Baseline 판정 B 및 physical FREEZE HOLD 유지.
 - **배경(기존 결과):** n2 기존 분석에서 QW1 중심 JnX/J≈0.005%, QW4가 전체 4QW 방사 재결합의 약 99.97%를 차지함(절대 IQE 아님). 원인 H1(분극 장벽) vs H2(고전 drift-diffusion 즉시 포획) 미확정. PolAct=0은 비물리적 **진단용**이고 Baseline 후보가 아님.

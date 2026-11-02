@@ -1,3 +1,7 @@
+## 2026-11-02 — sdevice actual path confirmed; MaterialDB directory search NEXT (OBSERVED/PROPOSED)
+- User `which sdevice` on school server gave `/user/tools/synopsys/sentaurus/T-2022.03/bin/sdevice`. Environment `STROOT`/`STRELEASE` exported values were not present; installation executable is nevertheless locatable. Path to MaterialDB still NOT VERIFIED.
+- FIRST NEXT READ ONLY `find /user/tools/synopsys/sentaurus/T-2022.03 -maxdepth 8 -type d -name MaterialDB -print` to locate installed release MaterialDB. Then check GaN/InGaN polarization coefficients via file read and compare effective model parameters; if no result check symlinks/alternate install root rather than asserting absent. No new run/deck edit. Baseline FREEZE HOLD.
+
 ## 2026-11-02 — Environment lookup empty; use sdevice executable location for MaterialDB discovery (OBSERVED + PROPOSED)
 - READ ONLY `env | grep -E '^(STROOT|STRELEASE)='` yielded no lines at school server. Means exported STROOT/STRELEASE absent in current environment, not absence of Sentaurus or MaterialDB. Earlier Bash-style fallback failed due likely csh syntax.
 - FIRST NEXT READ ONLY `which sdevice`. If path found, derive candidate versioned install MaterialDB location and inspect existing file without change. If not found, check module/PATH separately, don't assume no installation. No actual run and Baseline B FREEZE HOLD.

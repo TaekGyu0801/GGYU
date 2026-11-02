@@ -1,3 +1,9 @@
+## 2026-11-02 — Lee selects manual SWB project creation and paste (PROPOSED, NO RUN)
+- 이택규: “내가 그냥 직접 만들어서 코드랑 파라미터 넣을게.” 작업 방식은 **SWB 신규 프로젝트 직접 생성 + 기존 V2.1 원본 SDE/SDevice/PAR 코드 및 파라미터 복사 입력**으로 변경. 실제 신규 프로젝트 생성, 파일 입력, 시뮬레이션 수행은 보고되지 않음.
+- 새 프로젝트 임시 이름 제안: `CMP_BASELINE_2.1.0_POL0DIAG` (실제 학교 서버 내 중복 및 부모 프로젝트 검증 전 확정명 아님). 원본 `CMP_BASELINE_2.0.0_V2` 절대 수정 금지. 새로 짜는 코드가 아니라 원본 전체 원문 복사 후 SWB PolAct만 0.5→0 단일 변수 변경; NtSide=0 먼저, NtSide=1e18은 이후 필요 시.
+- 실제 SWB 원본에서 `activation=@PolAct@` 바인딩, 모든 다른 파라미터·물성·Solve·Math·mesh·Electrode·모델이 동일한지 검사. 입력 후 preprocess 생성 pp(원본 대 신규)의 정상화된 실제 조건 diff가 activation만 변경되었는지 검증 전 solver 시작 금지. 직접 수작업 복붙은 다른 입력 누락 위험이 존재.
+- 실험 판정 thresholds/Project A 25% 허용범위는 아직 이택규의 수치 확정 응답 없음. 기존 n2/n6 PLT 동일 전류 IQE_sim 읽기 전용 산출도 미수행. PolAct=0은 진단 전용(EBL global effect), Baseline B physical FREEZE HOLD, 실제 코드 수정/실험 없음.
+
 ## 2026-11-02 — Lee PolAct 진단 진행 의사 확인 및 사전 검증 단계 (PROPOSED, NO RUN)
 - 이택규 질문: “일단 수정해서 돌려볼까?” — 진단 실험 추진 의향으로 해석하되 **실제 학교 서버 실행이나 원본/복사본 수정이 수행됐다고 기록하지 않음**.
 - ChatGPT 권고: 이전 Claude 판정 gate(1%/80%, 0.1%/99%, Project A ±25%)를 결과 확인 전에 고정하는 방향. 사용자로부터 gate 숫자 최종 채택 답변은 아직 없음.

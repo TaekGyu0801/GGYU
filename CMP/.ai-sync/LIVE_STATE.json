@@ -5387,5 +5387,24 @@
     "next": "selective grep of assignment lines from GaN/InGaN/AlGaN without head",
     "blocker": "QW4 99.97% focus root cause unresolved",
     "baselineFreeze": "HOLD"
+  },
+  "leeGaNPolar20261102": {
+    "worker": "이택규",
+    "status": "OBSERVED_NO_NEW_RUN",
+    "source": "User pasted 2026-11-02 grep of installed T-2022.03 GaN.par",
+    "gaN": {
+      "formula": 1,
+      "relax": 0,
+      "psp_z": -0.0000034,
+      "e31": -0.00005274,
+      "e33": 0.00008946,
+      "a0_A": 3.189,
+      "a_A": 3.189
+    },
+    "inGaNPolarCoefficients": "UNVERIFIED",
+    "n2GaNBarrierPx": "Previous +3.4e-6 magnitude matches default psp_z",
+    "blocker": "QW4 99.97% cause unresolved",
+    "baseline": "FREEZE_HOLD",
+    "next": "READ ONLY inspect InGaN.par polarization model blocks"
   }
 }

@@ -1,3 +1,8 @@
+## 2026-11-02 — Lee reports applying full POL0DIAG SDevice replacement with Iterations12 (USER-REPORTED; NOT VERIFIED; NO RUN)
+- 이택규가 ChatGPT가 제공한 `sdevice_des.cmd` 전체 복붙 버전(기존 업로드 SDevice를 기준으로 Math `Iterations=20`을 `12`로 수정, 기타 Physics/Trap/Plot/CurrentPlot/Solve 구문 유지)을 새 `CMP_BASELINE_2.1.0_POL0DIAG` 프로젝트에 **직접 바꿨다**고 보고. 서버 실제 저장 내용, preprocessed `pp2_des.cmd`/`pp6_des.cmd`, 변경 diff는 아직 다시 관찰되지 않음.
+- 기존 사용자 스크린샷에서 clone 두 SWB 행 `PolAct=0` 확인, source 매크로 `activation=@PolAct@` 존재. **No solver run/result reported**. 원본 `CMP_BASELINE_2.0.0_V2`은 변경하지 않는 통제 조건 유지, Baseline B physical FREEZE HOLD.
+- NEXT READ ONLY: clone 실제 `sdevice_des.cmd`의 `Piezoelectric_Polarization`과 global `Iterations` 조회하여 저장 확인. 그 다음 SDevice preprocess/effective `activation=0`, `Iterations=12` 및 원본 대비 의도하지 않은 차이가 없는지 검증; 기존 n2/n6 .plt 동일 전류 IQE_sim 검토와 사전 해석 기준 확정 전 solver 시작 금지.
+
 ## 2026-11-02 — POL0DIAG actual source diff confirms Math 20 vs original 12 (OBSERVED / NO RUN)
 - 이택규가 실제 학교 서버에서 `diff -u ~/CMP_BASELINE_2.0.0_V2/sdevice_des.cmd ~/CMP_BASELINE_2.1.0_POL0DIAG/sdevice_des.cmd` 및 clone grep을 실행해 출력 제공. 원본 global `Math Iterations=12`, 복제본 `Math Iterations=20`인 **실제 차이 확인**. 나머지 diff는 표시된 범위에서 주석/줄바꿈/압축된 Trap 블록의 포맷 차이이며, `Piezoelectric_Polarization(strain activation=@PolAct@)` 실행 구문은 양쪽 동일. 복제본 헤더의 2026-10-13 `PROPOSED / NOT RUN` 설명은 현재 원본 출처를 나타내지 않음.
 - **제안(아직 미실행):** 새 프로젝트 SDevice 파일을 백업한 후 원본 `sdevice_des.cmd`를 복제본에 `cp -p`로 교체해 byte-identical `cmp` 확인. 이때 변경되는 파일은 새 복제본 SDevice뿐이고, 원본은 유지. SWB 파라미터 `PolAct=0` 유지 및 이후 pp activation=0, Iterations=12 확인 필수. 복사본 SDE/PAR/나머지 파라미터 일치 및 같은전류 IQE_sim, 기준값 lock 미완료. 새 solver run/수정 실행 증거 없음. Baseline B / FREEZE HOLD.

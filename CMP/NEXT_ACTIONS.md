@@ -1,3 +1,8 @@
+## 2026-11-02 — POL0DIAG SDevice macro+Iterations12 grep PASS; next pp existence (OBSERVED; NO RUN)
+- User terminal confirmed `~/CMP_BASELINE_2.1.0_POL0DIAG/sdevice_des.cmd`: line39 `Piezoelectric_Polarization(strain activation=@PolAct@)`, line276 global `Iterations=12`. This fixes the previously identified unintended 20-vs-12 source difference.
+- **NEXT:** new project `ls -l pp2_des.cmd pp6_des.cmd` (read-only). If present, check effective `activation=0` and global `Iterations=12`; if absent, SWB **Preprocess only**, not solver run, before checking same. Further gate: original vs clone SDE/PAR/mesh/input differences only intended PolAct, existing n2/n6 matched-current IQE_sim, predeclared heuristic thresholds lock before diagnostic execution.
+- No solver run/result; original `CMP_BASELINE_2.0.0_V2` protected; Baseline B/FREEZE HOLD.
+
 ## 2026-11-02 — After Lee reports pasting full POL0DIAG SDevice (USER-REPORTED, PRE-RUN)
 - 이택규가 clone `CMP_BASELINE_2.1.0_POL0DIAG` SDevice에 전체 입력을 복붙하여 `Iterations=12` 복원했다고 **보고**. 아직 디스크 코드/pp 또는 실제 실행 로그를 확인하지 않음. SWB 두 행 PolAct=0은 이전 화면에서 직접 확인됨.
 - **NOW NEXT (READ ONLY):** clone 저장 파일의 `Piezoelectric_Polarization(strain activation=@PolAct@)`, global `Math Iterations=12` grep 출력 확인. 이후 preprocess-only를 통해 clone n2/n6 유효 `activation=0`, `Iterations=12`, 나머지 SDE/PAR/Solve/mesh 동일성 확인. 새 실험 전에 기존 n2/n6 동일 전류 IQE_sim baseline 확보 및 Claude heuristic thresholds 사전 선택/기록 필요.

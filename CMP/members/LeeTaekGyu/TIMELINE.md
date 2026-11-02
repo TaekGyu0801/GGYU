@@ -1,3 +1,8 @@
+## 2026-11-02 — Lee creates manual SWB PolAct diagnostic copy (USER-REPORTED, NOT RUN)
+- 이택규 보고: 학교 서버 SWB에서 기존 `CMP_BASELINE_2.0.0_V2` 프로젝트를 복사한 다음 이름을 `CMP_BASELINE_2.1.0_POL0DIAG`으로 지정하여 신규 프로젝트를 만들었음. SWB 프로젝트 실제 생성은 **사용자 보고 OBSERVED**, GPT가 서버 폴더/덱 SHA/파라미터를 직접 확인한 것은 아님.
+- 현재까지 확인 가능한 범위: 프로젝트 복사 및 명명 단계. 실제 `PolAct=0` 적용, 노드/소스/물성/mesh 원본과 동일성, preprocess pp diff, 새 TCAD solver run, 결과 **미확인/NOT RUN**.
+- NEXT: 복제 프로젝트 SWB Parameters 표에서 `PolAct` 기존 0.5 → 0만 변경하고 `NtSide` 등 타 변수를 보존하는지 화면으로 확인. 실행 전 원본/복사본 입력 및 pp diff, 기존 n2/n6 동일 전류 IQE_sim, 사전 판정 게이트를 확인. 원본 `CMP_BASELINE_2.0.0_V2` 보호; Baseline B/FREEZE HOLD 유지.
+
 ## 2026-11-02 — Claude 독립 의사결정 기록 (사용자 전달 원문; NO RUN)
 
 2026-11-02 밤 (Claude 독립 의사결정, 새 실행 없음) V2.1 Baseline 판정과 다음 작업

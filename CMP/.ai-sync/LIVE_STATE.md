@@ -1,3 +1,7 @@
+## 2026-11-02 — actual Sentaurus T-2022.03 MaterialDB directory located (OBSERVED, NO RUN)
+- User's `find ... -maxdepth 8 -type d -name MaterialDB` from server returned `/user/tools/synopsys/sentaurus/T-2022.03/tcad/T-2022.03/lib/sdevice/MaterialDB`. This confirms installed MaterialDB directory. No data files or polarization material coefficients read yet.
+- NEXT READ ONLY list GaN/InGaN/AlGaN files in that exact directory, then inspect actual polarization coefficients and provenance vs n2 CSV. QW4 root cause UNRESOLVED; Baseline B physical FREEZE HOLD; no run/deck changes.
+
 ## 2026-11-02 — school server sdevice executable path confirmed; default MaterialDB not yet found (OBSERVED, NO NEW RUN)
 - User actual `which sdevice` = `/user/tools/synopsys/sentaurus/T-2022.03/bin/sdevice`. Env query `env | grep -E '^(STROOT|STRELEASE)='` had no output. Installation executable path verified, but release MaterialDB pathname and actual GaN/InGaN polarization parameters are still unverified.
 - NEXT READ ONLY find MaterialDB dirs within `/user/tools/synopsys/sentaurus/T-2022.03` (maxdepth8) and inspect source parameter files after confirmation. No simulation, no source edit; Baseline physical FREEZE HOLD.

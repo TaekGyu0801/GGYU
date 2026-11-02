@@ -5612,5 +5612,44 @@
     "newRun": false,
     "sourceChanged": false,
     "next": "Read only compare center electron/hole densities, QF offsets, currents and recombination across QW1/QW4"
+  },
+  "leeQW1QW4CenterCarrierComparison20261102": {
+    "worker": "이택규",
+    "date": "2026-11-02",
+    "status": "OBSERVED_USER_TERMINAL plus DERIVED; NO_NEW_RUN",
+    "model": "archived n2 3.6V Y=1um fine CSV",
+    "qw1": {
+      "x_um": 0.18948437,
+      "eDensity_cm3": 4844828600000000,
+      "hDensity_cm3": 3156252300000000,
+      "EcMinusEQF_eV": 0.22401485,
+      "HQFMinusEv_eV": 0.2376784,
+      "JnX_A_per_cm2": 0.000088535045,
+      "JpX_A_per_cm2": 1.823539
+    },
+    "qw4": {
+      "x_um": 0.26459765,
+      "eDensity_cm3": 1012322500000000000,
+      "hDensity_cm3": 1518965600000000000,
+      "EcMinusEQF_eV": 0.08558352,
+      "HQFMinusEv_eV": 0.0775602,
+      "JnX_A_per_cm2": 0.96137367,
+      "JpX_A_per_cm2": 0.86228261
+    },
+    "derived": {
+      "nRatioQW4overQW1": 208.9490843907254,
+      "pRatio": 481.2560770252746,
+      "nTimesPRatio": 100558.01665190354,
+      "EcMinusEQFDecrease_eV": 0.13843133,
+      "HQFMinusEvDecrease_eV": 0.1601182,
+      "JnFractionQW1_percent": 0.0048548863898249545,
+      "JnFractionQW4_percent": 52.71682391815633
+    },
+    "limitations": "local depthwise samples only; does not identify physical root cause of QW4 recombination concentration or prove 2D continuity",
+    "blocker": "QW4 physics causality unresolved",
+    "baselineFreeze": "HOLD",
+    "newSimulation": false,
+    "codeChanged": false,
+    "next": "read-only compare local radiative rate normalized by n*p and interwell transport profiles; approved protected sensitivity run only later"
   }
 }

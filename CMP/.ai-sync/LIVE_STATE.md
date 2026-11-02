@@ -1,3 +1,7 @@
+## 2026-11-02 — installed T-2022.03 GaN-family MaterialDB file names confirmed (OBSERVED; NO RUN)
+- In verified `/user/tools/synopsys/sentaurus/T-2022.03/tcad/T-2022.03/lib/sdevice/MaterialDB`, user actual `find -maxdepth 1` located `GaN.par`, `InGaN.par`, `AlGaN.par`, `AlInGaN.par`. Library content not yet opened, so numeric default polarization constants and effective n2 run origin remain UNVERIFIED.
+- NEXT read only grep installed GaN/InGaN/AlGaN polarization blocks. No simulation or source modification, baseline physical FREEZE HOLD.
+
 ## 2026-11-02 — actual Sentaurus T-2022.03 MaterialDB directory located (OBSERVED, NO RUN)
 - User's `find ... -maxdepth 8 -type d -name MaterialDB` from server returned `/user/tools/synopsys/sentaurus/T-2022.03/tcad/T-2022.03/lib/sdevice/MaterialDB`. This confirms installed MaterialDB directory. No data files or polarization material coefficients read yet.
 - NEXT READ ONLY list GaN/InGaN/AlGaN files in that exact directory, then inspect actual polarization coefficients and provenance vs n2 CSV. QW4 root cause UNRESOLVED; Baseline B physical FREEZE HOLD; no run/deck changes.

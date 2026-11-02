@@ -1,3 +1,10 @@
+## 2026-11-02 — n2 3.6V QW4 내부 ΔJn 및 q∫Rdx 99.9921% 폐합 확인 (OBSERVED + DERIVED; NO NEW RUN)
+- 이택규 실제 학교 서버에서 기존 `qw4_36_qw4fine.csv`(Y=1µm)을 Python DictReader로 read-only 분석. 숫자 sample X=[0.26300001,0.266] µm(실제 데이터 경계, 총 N=24개), 정상상태 n2 3.6V 조건. q×1e−4=1.602176634e−23 (길이 µm를 cm로 변환) 적용, trapezoid로 q∫Rdx 계산.
+- USER OBSERVED ΔJnX = 1.8216831695 A/cm². q∫Radiative dx=1.2205564144284573, q∫Auger dx=0.5018975294245672, q∫SRH dx=0.09908575891169007, q∫TotalRecombination dx=1.8215397088407301 A/cm². 채널 합=1.8215397027647144 (total−sum=6.0760157e−9 A/cm²).
+- DERIVED continuity closure q∫TotalRdx / ΔJnX = 99.99212482929678%, absolute residual ΔJnX−q∫Rdx=0.00014346065926984508 A/cm², relative residual=0.007875170703214047%. Local QW4 integrated totalR channel proportions Radiative=67.0068518684804%, Auger=27.553477258202975%, SRH=5.439670539751808%.
+- IMPORTANT interpretation: For this **single Y=1µm depth cutline**, QW4 electron-current variation is nearly explained by local net total-recombination rate. This is strong internal numerical-consistency evidence for intense QW4 recombination sink. It does **not prove physical origin** of 4QW QW4 99.9688% radiative share (distinct denominator), rule out carrier transport bottleneck, validate 2D full-area integration, or prove exact global 2D continuity: lateral JnY divergence not independently measured; residual may also reflect interpolation/rounding/numerical sampling. Baseline verdict B; physical FREEZE HOLD.
+- NEXT READ ONLY: inspect signed `PE_Charge` / `PE_Polarization-X` near QW4 x≈0.263 and 0.266µm; verify quantity/unit interpretation and integration support before deriving interface sheet cm^-2. Independently inspect pp2_des.cmd/par polarization, thermionic and band offsets. No source/mesh edit, no simulator run, no approval for PolAct perturbation.
+
 ## 2026-11-02 — QW4 fine CSV 3.6V에서 B3→QW4→B4 전류 재분배 직접 확인 (OBSERVED + DERIVED; NO RUN)
 - 이택규 사용자 실제 학교 서버 `qw4_36_qw4fine.csv` read-only `python3 -c` 출력(Y=1um) 7개 cutline depth 표본:
   - X=0.26014844 (B3): JnX 0.0017772979, JpX 1.8218264, Jtotal 1.8236037, Ec−eQF 0.3734eV, Rad 1.3475925e15.

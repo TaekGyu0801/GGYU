@@ -1,3 +1,10 @@
+## 2026-11-02 — Lee MaterialDB env lookup used Bash substitution in csh-like shell (OBSERVED CMD ERROR; FIX PROPOSED)
+- **Context:** 이택규, school server, `CMP_BASELINE_2.0.0_V2`; read-only checking `STROOT` and `STRELEASE` to locate material database.
+- **Error OBSERVED:** `Bad : modifier in $ (-).` after `printf 'STROOT=%s\nSTRELEASE=%s\n' "${STROOT:-미설정}" "${STRELEASE:-미설정}"`. User pasted escaped Korean replacement text but the syntax failure itself concerns `:-`.
+- **Cause/diagnosis:** Bash-style `${VAR:-fallback}` parameter substitution not accepted in csh/tcsh-style shell; shell family is a high-confidence interpretation of error message, not independently checked.
+- **Fix PROPOSED NOT YET VERIFIED:** `env | grep -E '^(STROOT|STRELEASE)='` (does not use `${...}`). If no output, check executable path separately. Error is **not** TCAD solver/physical baseline failure; no simulation or files were modified.
+- **Next:** user to return output from portable environment query, then inspect actual MaterialDB defaults without writing to source project.
+
 ## 2026-10-31 — RESOLVED: interactive Bash heredoc PLT parser succeeded (OBSERVED)
 - Prior `Unmatched '.` and tcsh `?` continuation were purely shell input/quote issues. User entered `bash`, changed directory, ran `python3 - <<'PY'` and ended with standalone `PY`; parser successfully printed n2/n6 final PLT values, including QW4 fractions 99.96877481383976%/99.99294273758203%. The error did not affect SDevice and no file was modified.
 

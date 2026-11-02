@@ -1,3 +1,8 @@
+## 2026-11-02 — Lee screenshot verifies PolAct=0 in both SWB nodes; pre-run check next (OBSERVED / NO RUN)
+- Copied project `CMP_BASELINE_2.1.0_POL0DIAG` screenshot shows n2-equivalent `NtSide=0` and n6-equivalent `NtSide=1e18`, both **PolAct=0**, `Wedge=0.1`, `Bspan=0`, `NCEdge=0`, `V1=2.0`, `Vmax=3.6`; NPlot=8/0 respectively. User reports only PolAct edited; comparison to original not independently proven.
+- **NEXT SINGLE READ-ONLY ACTION:** inspect SDevice source `Piezoelectric_Polarization` / `activation` / `PolAct` binding in copied project. Then preprocess new nodes without solving and compare effective `pp` vs original (normalize filenames/node IDs; confirm only intended activation difference), verify clone source/PAR/input, existing n2/n6 same-current IQE_sim and user approval of heuristic gates before solver run.
+- PolAct UI change ≠ proof actual solver uses PolAct=0; **NO RUN** and Baseline B/FREEZE HOLD. Original protected. Global activation affects EBL too.
+
 ## 2026-11-02 — Lee reports new SWB project CMP_BASELINE_2.1.0_POL0DIAG created (USER-REPORTED, NO RUN)
 - 이택규는 SWB에서 `CMP_BASELINE_2.0.0_V2`를 복사하고 `CMP_BASELINE_2.1.0_POL0DIAG` 이름으로 프로젝트를 만들었다고 보고. 서버의 실제 입력/설정 일치 여부 및 실행 결과는 검증 전.
 - **NEXT ONE STEP:** 새 복사본 프로젝트의 SWB Parameters 표에서 `PolAct=0.5`를 `0`으로만 바꾸고, 다른 파라미터/노드 구조는 유지한 채 표 스크린샷으로 확인. 원본 변경 금지. Run 아직 금지.

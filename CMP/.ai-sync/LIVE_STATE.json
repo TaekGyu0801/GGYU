@@ -5565,5 +5565,20 @@
     "sourceChange": false,
     "solverRun": false,
     "next": "Read only InN.par lines 525..570 documentation of default formula, then effective runtime parameters"
+  },
+  "leeInNStrainEquationAndPause20261102": {
+    "worker": "이택규",
+    "date": "2026-11-02",
+    "status": "OBSERVED_SOURCE; NO_RUN",
+    "source": "User pasted InN.par lines 525–570",
+    "strainPzEquation": "psp_z + 2*d31*strain*(c11+c12-2*c13^2/c33)",
+    "strainEquation": "(1-relax)*(a0-a)/a",
+    "formulaAssignment": "not observed in inspected 525–645 block",
+    "inGaNRuntimeCoefficients": "UNVERIFIED",
+    "qw4RootCause": "UNRESOLVED",
+    "baselineFreeze": "HOLD",
+    "next": "Pause repeated material default greps; next session prioritize decisive read-only QW4 transport/root-cause verification and actual runtime model origin; sensitivity only with explicit approval",
+    "newSimulation": false,
+    "sourceEdit": false
   }
 }

@@ -5676,5 +5676,47 @@
     "newRun": false,
     "sourceChanged": false,
     "next": "Read-only compare interwell band and electron/hole transport profiles; sensitivity on protected copy only after explicit approval"
+  },
+  "leeTransportWindowReview20261102": {
+    "worker": "이택규",
+    "date": "2026-11-02",
+    "status": "OBSERVED_USER_CSV + PROPOSED_WORKFLOW; NO_NEW_RUN",
+    "input": "archived n2 3.6V depth CSV, Y=1um",
+    "ranges": {
+      "B1": {
+        "x_um": [
+          0.191,
+          0.213
+        ],
+        "N": 44,
+        "dEQF_eV": 0.01090327000000002,
+        "maxEcMinusEQF_eV": 0.61493831
+      },
+      "B2": {
+        "x_um": [
+          0.216,
+          0.238
+        ],
+        "N": 47,
+        "dEQF_eV": 0.25042766,
+        "maxEcMinusEQF_eV": 0.594776913
+      },
+      "B3": {
+        "x_um": [
+          0.241,
+          0.263
+        ],
+        "N": 43,
+        "dEQF_eV": 0.00991758000000001,
+        "maxEcMinusEQF_eV": 0.5580799700000001
+      }
+    },
+    "caveat": "Manually chosen intervals not region-bounded; dEQF is not direct transport barrier measurement; larger B2 delta does not prove B2 causes QW4 focusing",
+    "keyExistingFacts": "QW4 99.97% radiative concentration; QW1/QW4 local continuity closes; QW4 209x n and 481x p; both centers Rad/(np)~2e-11 cm3/s",
+    "workflowDecision": "Stop repetitive material/CSV greps; develop one decisive protected-copy single-parameter polarization activation sensitivity if user explicitly approves and tool semantics verified; no run currently",
+    "blocker": "QW4 localization physical cause unresolved; baseline physics not validated",
+    "baselineFreeze": "HOLD",
+    "sourceChanged": false,
+    "newSimulation": false
   }
 }

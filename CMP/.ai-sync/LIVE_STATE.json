@@ -5253,5 +5253,50 @@
     "baselineFreeze": "HOLD",
     "newRun": false,
     "sourceModified": false
+  },
+  "leeBandOffsetsFromActivePar20261102": {
+    "worker": "이택규",
+    "date": "2026-11-02",
+    "status": "OBSERVED_USER_TERMINAL_PAR_VALUES_PLUS_DERIVED_BAND_OFFSETS; NO_NEW_RUN",
+    "file": "pp2_des.par",
+    "materialParams": {
+      "GaN": {
+        "Eg0_eV": 3.4376,
+        "Chi0_eV": 4.1,
+        "mumax": [
+          300,
+          10
+        ]
+      },
+      "InGaN": {
+        "Eg0_eV": 2.8569,
+        "Chi0_eV": 4.5065,
+        "mumax": [
+          300,
+          10
+        ]
+      },
+      "AlGaN": {
+        "Eg0_eV": 3.7564,
+        "Chi0_eV": 3.8768,
+        "mumax": [
+          300,
+          10
+        ]
+      }
+    },
+    "derived": {
+      "DeltaEg_GaNMinusInGaN_eV": 0.5807,
+      "DeltaEc_GaNBarrier_eV": 0.4065,
+      "DeltaEv_GaNBarrier_eV": 0.1742,
+      "electronOffsetSharePct": 70.00172205958326,
+      "holeOffsetSharePct": 29.99827794041674
+    },
+    "interpretation": "Nominal material parameters give 70:30 conduction/valence band offset, corroborating Claude source-level claim. Distinct from bias-dependent Ec-eQF barrier values; cause of QW4 radiative concentration not proven.",
+    "jobExit": "svisual n1_msh.tdr background job finished; no device simulation triggered",
+    "next": "Read-only audit actual pp2_des.par polarization/strain material blocks or inherited defaults, then design controlled protected-copy activation sensitivity only if explicitly authorized",
+    "physicalFreeze": "HOLD",
+    "sourceChanged": false,
+    "newRun": false
   }
 }

@@ -1,3 +1,8 @@
+## 2026-11-02 — 기존 3.6V cutline에서 B0–B3 전자 결핍 및 QW4 전류 성분 급변 직접 관찰 (OBSERVED/DERIVED; NO RUN)
+- 이택규 사용자 터미널 `qw4_36_depth.csv` center-nearest samples (Y=1µm) B0–B3 p/n≈5.9e4, 1.002e5, 4.04e4, 1.43e4; Ec−eQF 0.5070/0.5144/0.4895/0.4449eV and hQF−Ev 0.3012/0.2948/0.2935/0.2758eV. CLAUDE electron scarcity DATA PATTERN corroborated (not cause).
+- QW3 n2.339e16/p1.594e16, QW4 n1.0123e18/p1.5190e18 cm^-3; QW4/QW3 n≈43.28, p≈95.30. B3 JnX~0.0017768 / JpX~1.8218269; QW4 center JnX~0.96137367 / JpX~0.86228261. Jtotal ~1.8236 throughout. Spatial re-partition of carrier currents is consistent with strong QW4 recombination sink. **Cause not separated:** barrier transport limitation vs in-well capture/recombination; do not label electron bottleneck CONFIRMED.
+- NEXT READ ONLY: QW4 fine CSV values near .260-.270um to check near-interface current changes and energy; later PE_Charge integrated signed sheet with validated units. Baseline verdict B/FREEZE HOLD, no new run/deck changes.
+
 ## 2026-11-02 — QW4 3.6V cutline numeric coverage + current stack boundaries verified (OBSERVED; NO RUN)
 - `qw4_eq_depth.csv` N392/X0.13988867–0.2973125/Y1; `qw4_36_depth.csv` N392/same; `qw4_36_qw1fine.csv` N66/X0.1800625–0.19995312/Y1; `qw4_36_qw4fine.csv` N62/X0.25543749–0.27428126/Y1. Numeric row filter `r['X'] not in ('none','')` executed successfully after a concatenated-command shell SyntaxError.
 - Latest user `pp1_dvs.cmd` top→bottom thickness yields QW1 .188–.191, QW2 .213–.216, QW3 .238–.241, QW4 .263–.266um, adjacent B0–B4 boundaries derived from stack (Y=1 depth cutline covers wells and barriers). Old claimed QW coordinates from 10/12 may be shifted by .020um; do not conflate without verifying dataset version.

@@ -1,3 +1,7 @@
+## 2026-11-02 — Sentaurus MaterialDB installed directory verified; identify GaN and InGaN files NEXT (OBSERVED/PROPOSED)
+- User actual school server `find` output confirms `/user/tools/synopsys/sentaurus/T-2022.03/tcad/T-2022.03/lib/sdevice/MaterialDB`; executable `/user/tools/synopsys/sentaurus/T-2022.03/bin/sdevice`. Thus no need for unset STROOT/STRELEASE. Existence of GaN/InGaN individual files and numeric coefficients remains NOT YET VERIFIED.
+- NEXT READ ONLY shell: `find /user/tools/synopsys/sentaurus/T-2022.03/tcad/T-2022.03/lib/sdevice/MaterialDB -maxdepth 1 -type f \( -iname '*gan*' -o -iname '*ingan*' -o -iname '*algan*' \) -print` then check any matched .par files' psp_z/e31/e33/a0/relax, compare with actual `PE_Polarization-X`. Do not edit default DB or source model; physical baseline HOLD.
+
 ## 2026-11-02 — sdevice actual path confirmed; MaterialDB directory search NEXT (OBSERVED/PROPOSED)
 - User `which sdevice` on school server gave `/user/tools/synopsys/sentaurus/T-2022.03/bin/sdevice`. Environment `STROOT`/`STRELEASE` exported values were not present; installation executable is nevertheless locatable. Path to MaterialDB still NOT VERIFIED.
 - FIRST NEXT READ ONLY `find /user/tools/synopsys/sentaurus/T-2022.03 -maxdepth 8 -type d -name MaterialDB -print` to locate installed release MaterialDB. Then check GaN/InGaN polarization coefficients via file read and compare effective model parameters; if no result check symlinks/alternate install root rather than asserting absent. No new run/deck edit. Baseline FREEZE HOLD.

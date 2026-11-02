@@ -1,3 +1,8 @@
+## 2026-11-02 — Lee confirms SWB diagnostic copy created by manual project duplication (USER-REPORTED, NO RUN)
+- Worker 이택규: SWB에서 기존 `CMP_BASELINE_2.0.0_V2` 복사 후 `CMP_BASELINE_2.1.0_POL0DIAG` 이름의 새 프로젝트를 만들었다고 보고. 학교 서버 실물 파일이나 full SWB parameter table은 ChatGPT가 직접 확인하지 못함.
+- **PROGRESS:** copy/name step USER-REPORTED DONE. **NOT CONFIRMED:** `PolAct=0` 설정, other values identical, cloned node topology, pp diff, identical current baseline, new simulation or result. None reported executed; no code/solver changes by ChatGPT.
+- NEXT: user to open SWB Parameters of new project, change only PolAct 0.5→0, show parameter screenshot. Preserve original. Run after pre-run checks including pp diff, same-current n2/n6 IQE_sim, and locked heuristic gates. Baseline physical B / FREEZE HOLD.
+
 ## 2026-11-02 — Lee chooses manual SWB source transfer (PROPOSED / NO RUN)
 - User explicitly wants to **create new SWB project manually and paste code/parameters** rather than use an automatic copy workflow. No evidence this manual work has started or any run completed. Protected original `CMP_BASELINE_2.0.0_V2` untouched.
 - Recommended approach: paste complete existing V2.1 SDE, SDevice, PAR inputs and clone all SWB parameters/topology unchanged except PolAct 0.5→0; first NtSide=0 n2 diagnostic, n6 NtSide=1e18 after verified baseline comparison. Candidate name `CMP_BASELINE_2.1.0_POL0DIAG` subject to server collision check, not claimed to exist. Verify runtime source actually binds `activation=@PolAct@` (Claude-reported line 21 unverified) and diff corresponding preprocessed source before solver. Need existing n2/n6 PLT same-current IQE_sim read-only baseline first.

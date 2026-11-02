@@ -1,3 +1,10 @@
+## 2026-11-02 — V2.1 cutline 네 CSV 수치 범위 및 MQW 깊이 배치 직접 검증 (OBSERVED; NO NEW RUN)
+- 이택규 학교 서버에서 `sed -n '60,100p' pp1_dvs.cmd` 확인: 적층 top→bottom pCap 0.020, pGaN 0.120, EBL 0.026, B0 0.022, QW1 0.003, B1 0.022, QW2 0.003, B2 0.022, QW3 0.003, B3 0.022, QW4 0.003, B4 0.022 µm. `P(lat dep z)=(position dep lat z)`로 깊이는 CSV X, 가로는 CSV Y. 적층이 X=0부터 누적된다는 소스 정의에 따라 QW1 X=0.188–0.191, QW2=0.213–0.216, QW3=0.238–0.241, QW4=0.263–0.266 µm, B0=0.166–0.188, B1=0.191–0.213, B2=0.216–0.238, B3=0.241–0.263, B4=0.266–0.288 µm (DERIVED FROM SOURCE).
+- 사용자 실제 `python3 -c` CSV DictReader 출력: `qw4_eq_depth.csv` N=392 X=0.13988867–0.2973125 Y=1.0, `qw4_36_depth.csv` N=392 X=0.13988867–0.2973125 Y=1.0, `qw4_36_qw1fine.csv` N=66 X=0.1800625–0.19995312 Y=1.0, `qw4_36_qw4fine.csv` N=62 X=0.25543749–0.27428126 Y=1.0. 각 fine 범위는 해당 QW와 양옆 B 영역 일부를 포함한다. CSV 행 수는 메타데이터/빈 값 필터 후 실제 숫자 행 수.
+- 첫 긴 Python 구문은 입력 세 번이 붙어 `SyntaxError`가 발생했으나 바로 재입력해 정상 수행. **터미널 입력 오류이며 물리 시뮬레이션 오류 아님.** 원본 파일 수정/새 run 없음.
+- 과거 일부 보고의 QW 좌표(~0.168/0.243um)는 현재 source-derived QW1~4보다 0.020um 앞에 있으므로 동일 구조/좌표계인지 비교 시 주의. 현재 출처는 `pp1_dvs.cmd` 실제 스택; CSV composition과 연관 확인 필요. **이 차이를 원인 규명으로 단정하지 않음.**
+- NEXT READ ONLY: 현재 `qw4_36_depth.csv`에서 B0–B3/QW1–QW4 중심점 실제 X와 e/h density, Ec-eQF, hQF-Ev, e/h current-X를 함께 추출해 Claude 전자 interwell bottleneck 가설 검토; 이후 PE_Charge 단위/계면 적분 검증. FREEZE HOLD.
+
 ## 2026-11-02 — 기존 QW4 cutline CSV 헤더/3.6V 표본 직접 검증 (OBSERVED SERVER OUTPUT; NO RUN)
 - `wc -l qw4_*.csv`: `qw4_36_depth.csv`=395, `qw4_36_qw1fine.csv`=69, `qw4_36_qw4fine.csv`=65, `qw4_eq_depth.csv`=395, total 924 lines. 각 파일은 SVisual 첫 행 변수 헤더와 둘째 `none`/SELECTED 메타데이터 행을 포함하므로 실제 자료행은 각 393/67/63/393으로 추산(빈 줄 여부 등 전체 파일 미검증).
 - `head -n 6`의 eq/3.6V depth CSV에서 `PE_Charge`, `PE_Polarization-X`, `ConductionBandEnergy`, `ValenceBandEnergy`, `eQuasiFermiEnergy`, `hQuasiFermiEnergy`, `eDensity`, `hDensity`, `eCurrentDensity-X`, `hCurrentDensity-X`, `TotalCurrentDensity-X`, `X`, `Y`, `Distance` 열 확인. 실제 n2 3.6V depth cutline 표본 `X=0.14,Y=1`에서 `TotalCurrentDensity-X≈1.8236326`; 이전 2D 조건부 J=1.8236426244 A/cm²와 수치적으로 거의 같아 내부 교차검증을 지지하지만 공식 단위/4×4um 해석 별도.

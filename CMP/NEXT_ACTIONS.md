@@ -1,3 +1,8 @@
+## 2026-11-02 — QW4 CSV 존재 확인 후 데이터 구조 파악 NEXT (OBSERVED USER FILE SEARCH; READ ONLY)
+- 실제 V2.1 서버 `find` 결과에서 `qw4_eq_depth.csv`, `qw4_36_depth.csv`, `qw4_36_qw1fine.csv`, `qw4_36_qw4fine.csv` 네 파일 존재 확인. 클로드의 `server_readonly_cmds_20261102.sh`는 해당 폴더 4단계까지 검색에서 **미발견**. 스크립트 실행 불필요; 새 solver run 불필요.
+- IMMEDIATE: shell-compatible `wc -l qw4_*.csv`, `head -n 6 qw4_eq_depth.csv`, `head -n 6 qw4_36_depth.csv` 출력으로 원자료 헤더/변수/단위·좌표 열 파악. 실제 헤더 확인 전 PE_Charge 면밀도를 가정 계산하지 말 것. 첫 두 CSV를 확인한 뒤 QW1/4 fine CSV도 점검.
+- 이후 실측 coordinate와 column layout을 기준으로 signed PE_Charge 깊이 적분→cm^-2 (원본 출력 단위 확인 필수), QW3/4 quasi-Fermi 강하 검산. `PolAct` 변경 제안은 승인 이전 **NOT RUN**, Baseline FREEZE HOLD.
+
 ## 2026-11-02 — 이택규 QW4 집중 Claude 독립 재평가 후 다음 검증 순서 (PROPOSED, NOT RUN)
 - **CURRENT:** n2/n6 old 3.6V results QW4 Rad ~99.9688%/~99.9929%; Baseline 판정 B, 물리 FREEZE HOLD. 이번 메시지는 Claude 제안의 전달이며 신규 관측/서버 실행 없음. 인계 원문은 `members/LeeTaekGyu/TIMELINE.md`의 2026-11-02 Claude 섹션.
 - **FIRST READ ONLY:** 실제 기존 10/23 TDR cutline CSV가 서버에 존재하는지 확인한 뒤, (a) signed `PE_Charge`의 계면별 **면전하 밀도** cm^-2를 위치·단위·적분 범위·mesh에 맞게 검산, (b) QW3/QW4 양쪽 장벽 Ec/Ev와 e/h quasi-Fermi 낙차의 좌표·전류 상관 확인, (c) 실제 pp2/pp6 `.par` Chi0/Eg0/mumax 및 `.cmd` Fermi, polarization, Thermionic, `n2_des.log` 경고 확인. Claude가 언급한 `server_readonly_cmds_20261102.sh`는 **여기서 원본/서버 존재 확인되지 않음**, 그대로 실행하기 전 내용을 검토할 것.

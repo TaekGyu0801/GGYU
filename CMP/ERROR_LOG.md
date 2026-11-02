@@ -1,3 +1,8 @@
+## 2026-11-02 — Potential PolAct diagnostic copy config mismatch (20 vs 12) (PRE-RUN, UNRESOLVED)
+- User-provided V2 SDevice text: source header `PROPOSED / NOT RUN` (2026-10-13); global Math `Iterations=20` at line275; `Piezoelectric_Polarization(strain activation=@PolAct@)` line38.
+- GitHub historic direct server read-only (2026-10-31): original V2.1 `pp2_des.cmd` and `pp6_des.cmd` global `Iterations=12` at line174. **Risk:** if user copies older unexecuted template to new POL0DIAG project, more than polarization changes; invalidates one-variable comparison. No proof live clone actually contains 20.
+- Resolution pending: compare actual old/new editable SDevice source and preprocessed values; enforce identical solver controls. This is **not a solver failure** and no new run is reported. Original Baseline B / FREEZE HOLD.
+
 ## 2026-11-02 — Lee MaterialDB env lookup used Bash substitution in csh-like shell (OBSERVED CMD ERROR; FIX PROPOSED)
 - **Context:** 이택규, school server, `CMP_BASELINE_2.0.0_V2`; read-only checking `STROOT` and `STRELEASE` to locate material database.
 - **Error OBSERVED:** `Bad : modifier in $ (-).` after `printf 'STROOT=%s\nSTRELEASE=%s\n' "${STROOT:-미설정}" "${STRELEASE:-미설정}"`. User pasted escaped Korean replacement text but the syntax failure itself concerns `:-`.

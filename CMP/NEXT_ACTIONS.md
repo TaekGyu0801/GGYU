@@ -1,3 +1,8 @@
+## 2026-11-02 — Minimal copy-paste Math block offered to restore Iterations=12 (PROPOSED, NOT APPLIED)
+- 사용자 요청: 자동 cp 명령 대신 SWB SDevice 편집기에 직접 복붙할 수 있는 코드 제공.
+- ChatGPT는 사용자 제공 실제 diff의 유일한 기능적 SDevice 차이(원본 `Iterations=12`, 복사본 `Iterations=20`)를 수정하기 위해 **Math 블록만 원본과 동일한 값**으로 교체하는 코드 제시. 나머지 original/clone diff는 주석/포맷 차이로 확인됨. Polarization line `Piezoelectric_Polarization(strain activation=@PolAct@)`은 유지, SWB Parameters는 PolAct=0(사용자 화면 관측).
+- **사용자 적용 전**: 편집 실행 증거/결과 없음. 적용 후 clone SDevice의 `Iterations=12` 및 preprocess `activation=0` 확인, 다른 입력/물성/PAR·mesh 비교, 같은전류 IQE_sim 및 판정 기준 고정 전 solver RUN 금지. 원본 보존, B/FREEZE HOLD.
+
 ## 2026-11-02 — Lee next fix: restore clone SDevice source byte-for-byte (NO RUN)
 - **OBSERVED:** 실제 원본/복사본 `sdevice_des.cmd` diff에서 solver `Iterations=12 → 20` unintended 변화. 분극 `activation=@PolAct@`는 원본과 복사본 동일; 앞서 SWB 표시값은 복사본 PolAct=0.
 - **NEXT ONLY (PROPOSED, NOT YET EXECUTED):** clone의 `sdevice_des.cmd`를 `.bak`으로 보존하고 원본 `CMP_BASELINE_2.0.0_V2/sdevice_des.cmd`를 clone의 같은 이름에 복사한 후 `cmp`로 바이트 동일 확인. 다음 preprocessed pp에서 clone activation=0, Iterations=12 확인. SDE/PAR 및 다른 SWB parameters/mesh 동일성, 기존 PLT 동일전류 IQE_sim, Claude threshold 잠금 등 추가 gate 미완료. solver Run 금지, B/FREEZE HOLD.

@@ -5533,5 +5533,18 @@
     "newSolverRun": false,
     "sourceEdit": false,
     "next": "Read InN.par polarization formula and actual n2 effective InGaN piezo parameter sourcing read-only"
+  },
+  "leeInNPiezoCoordTransform20261102": {
+    "worker": "이택규",
+    "source": "InN.par lines 570-600 actual user server output",
+    "status": "OBSERVED_DOC_ONLY; NO_NEW_RUN",
+    "modelDescription": "stress system -> crystal system -> polarization via strain/stress -> simulation system",
+    "formulaAssignment": "NOT IN EXCERPT; NOT YET VERIFIED",
+    "activeN2LatticeOrientation": "X=(0,0,-1), Y=(1,0,0) from earlier pp2_des.par",
+    "next": "READ ONLY inspect formula assignments in InN.par polarization block 525-645",
+    "QW4Causality": "UNRESOLVED",
+    "baseline": "B/FREEZE_HOLD",
+    "newRun": false,
+    "sourceChanged": false
   }
 }

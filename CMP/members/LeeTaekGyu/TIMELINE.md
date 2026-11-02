@@ -1,3 +1,8 @@
+## 2026-11-02 — POL0DIAG stored SDevice grep confirms PolAct macro and Iterations12 (OBSERVED READ ONLY; NO RUN)
+- User terminal in `~/CMP_BASELINE_2.1.0_POL0DIAG` after manually pasting complete SDevice: `grep -nE 'Piezoelectric_Polarization|^[[:space:]]*Iterations[[:space:]]*=' sdevice_des.cmd` output: **line39** `Piezoelectric_Polarization( strain activation=@PolAct@ )`; **line276** `Iterations = 12`. This confirms saved SDevice source contains the macro and the restored global Math iteration count (previous copy 20 vs original 12).
+- **Not yet verified:** effective new preprocessed `pp2_des.cmd` / `pp6_des.cmd` activation=0; clone SDE/PAR/mesh equivalence; original vs clone effective input diff; same-current prior IQE_sim; user threshold lock; actual solver result. No new solver run reported. Baseline B physical FREEZE HOLD.
+- NEXT read-only: check whether `pp2_des.cmd`/`pp6_des.cmd` exist in new project (`ls -l`), then inspect effective activation and Iterations, using SWB preprocess-only if absent. Run not yet authorized from these checks.
+
 ## 2026-11-02 — Lee reports applying full POL0DIAG SDevice replacement with Iterations12 (USER-REPORTED; NOT VERIFIED; NO RUN)
 - 이택규가 ChatGPT가 제공한 `sdevice_des.cmd` 전체 복붙 버전(기존 업로드 SDevice를 기준으로 Math `Iterations=20`을 `12`로 수정, 기타 Physics/Trap/Plot/CurrentPlot/Solve 구문 유지)을 새 `CMP_BASELINE_2.1.0_POL0DIAG` 프로젝트에 **직접 바꿨다**고 보고. 서버 실제 저장 내용, preprocessed `pp2_des.cmd`/`pp6_des.cmd`, 변경 diff는 아직 다시 관찰되지 않음.
 - 기존 사용자 스크린샷에서 clone 두 SWB 행 `PolAct=0` 확인, source 매크로 `activation=@PolAct@` 존재. **No solver run/result reported**. 원본 `CMP_BASELINE_2.0.0_V2`은 변경하지 않는 통제 조건 유지, Baseline B physical FREEZE HOLD.

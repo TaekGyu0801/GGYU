@@ -1,3 +1,7 @@
+## 2026-11-02 — T-2022.03 MaterialDB real directory found (OBSERVED USER SHELL; NO RUN)
+- 이택규 school server `which sdevice` confirmed twice: `/user/tools/synopsys/sentaurus/T-2022.03/bin/sdevice`. `find /user/tools/synopsys/sentaurus/T-2022.03 -maxdepth 8 -type d -name MaterialDB -print` returned exactly `/user/tools/synopsys/sentaurus/T-2022.03/tcad/T-2022.03/lib/sdevice/MaterialDB`. This establishes actual directory existence, not yet GaN/InGaN files, coefficient values, or effective run-time parameter provenance.
+- **NEXT READ ONLY (PROPOSED, NOT YET RUN):** `find /user/tools/synopsys/sentaurus/T-2022.03/tcad/T-2022.03/lib/sdevice/MaterialDB -maxdepth 1 -type f \( -iname '*gan*' -o -iname '*ingan*' -o -iname '*algan*' \) -print`, then read actual material polarization coefficient blocks and compare with n2 CSV polar data without editing installed library or baseline. No new simulation, baseline physical FREEZE HOLD.
+
 ## 2026-11-02 — Sentaurus executable real installation path confirmed, MaterialDB location next (OBSERVED, NO RUN)
 - 이택규 학교 서버 `which sdevice` 실제 출력: `/user/tools/synopsys/sentaurus/T-2022.03/bin/sdevice`. 이전 환경변수 조회 `env | grep -E '^(STROOT|STRELEASE)='`는 출력 없었지만, 실행 파일의 위치는 PATH를 통해 확인됨. 이 결과는 설치된 실행 파일 위치만 확인하며 MaterialDB 실제 경로 또는 해당 파일 내용까지 증명하지 않음.
 - NEXT READ ONLY: `find /user/tools/synopsys/sentaurus/T-2022.03 -maxdepth 8 -type d -name MaterialDB -print`. 검색 결과 후 해당 GaN/InGaN/AlGaN 기본 분극 물성 파일명·값을 읽고 기존 n2 PE_Polarization-X와 물성 관계 검토. Sentaurus 원본/시뮬레이션/mesh 수정 없음. Baseline physical FREEZE HOLD.

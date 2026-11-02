@@ -4976,5 +4976,82 @@
     "next": "Read-only sample qw4_36_qw4fine.csv across B3/QW4/B4 to locate electron current transitions, band/QF before causal experiments",
     "freeze": "HOLD",
     "newRun": false
+  },
+  "leeQW4FineCutlineFluxRepartition20261102": {
+    "worker": "이택규",
+    "date": "2026-11-02",
+    "status": "OBSERVED_USER_TERMINAL_SAMPLES_AND_ARITHMETIC_DERIVED; NO_NEW_RUN",
+    "model": "CMP_BASELINE_2.0.0_V2",
+    "file": "qw4_36_qw4fine.csv",
+    "bias_V": 3.6,
+    "lateralY_um": 1,
+    "sample": [
+      {
+        "x_um": 0.26014844,
+        "Jn": 0.0017772979,
+        "Jp": 1.8218264,
+        "Jtot": 1.8236037,
+        "EcMinusEFn_eV": 0.3734,
+        "Rad": 1347592500000000
+      },
+      {
+        "x_um": 0.26250389,
+        "Jn": 0.0017779541,
+        "Jp": 1.8218258,
+        "Jtot": 1.8236037,
+        "EcMinusEFn_eV": 0.352,
+        "Rad": 960675430000000
+      },
+      {
+        "x_um": 0.26355079,
+        "Jn": 0.33616893,
+        "Jp": 1.4871776,
+        "Jtot": 1.8233466,
+        "EcMinusEFn_eV": 0.0008,
+        "Rad": 2.4382434e+25
+      },
+      {
+        "x_um": 0.26459765,
+        "Jn": 0.96137367,
+        "Jp": 0.86228261,
+        "Jtot": 1.8236563,
+        "EcMinusEFn_eV": 0.0856,
+        "Rad": 3.075366e+25
+      },
+      {
+        "x_um": 0.26551366,
+        "Jn": 1.5101376,
+        "Jp": 0.31358008,
+        "Jtot": 1.8237176,
+        "EcMinusEFn_eV": 0.1603,
+        "Rad": 2.4777785e+25
+      },
+      {
+        "x_um": 0.26656055,
+        "Jn": 1.8234614,
+        "Jp": 0.0003014948,
+        "Jtot": 1.8237629,
+        "EcMinusEFn_eV": 0.3675,
+        "Rad": 7470000500000000000
+      },
+      {
+        "x_um": 0.27009374,
+        "Jn": 1.8234663,
+        "Jp": 0.00029702933,
+        "Jtot": 1.8237634,
+        "EcMinusEFn_eV": 0.3054,
+        "Rad": 8552720300000000000
+      }
+    ],
+    "derived": {
+      "B4minusB3_Jn": 1.8216834459,
+      "percentOfB4Jn": 99.90249565469277,
+      "localInterpretation": "compatible with concentrated QW4 recombination sink; does not isolate electron barrier root cause"
+    },
+    "caveat": "Single Y=1um cutline in 2D device. ∂JnY/∂Y and other transport effects not resolved. This is not integrated radiative QW4 share. Exact source T-2022.03 units not directly rechecked.",
+    "next": "Read-only trapezoidal q∫Rdx for QW4 and compare same-sample ∆JnX; then PE_Charge sheet audit",
+    "newRun": false,
+    "codeChanged": false,
+    "baselineFreeze": "HOLD"
   }
 }

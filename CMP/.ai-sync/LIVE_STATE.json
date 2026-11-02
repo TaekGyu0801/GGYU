@@ -5546,5 +5546,24 @@
     "baseline": "B/FREEZE_HOLD",
     "newRun": false,
     "sourceChanged": false
+  },
+  "leeInNFormulaAbsentAssignment20261102": {
+    "worker": "이택규",
+    "date": "2026-11-02",
+    "status": "OBSERVED_USER_TERMINAL; NO_NEW_RUN",
+    "file": "T-2022.03 installed MaterialDB/InN.par Piezoelectric_Polarization NR 525..645",
+    "matchedAssignmentLines": {
+      "639": "a0=3.189 Angstrom",
+      "640": "a=3.54 Angstrom",
+      "641": "relax=0.1"
+    },
+    "formulaAssignment": "NOT PRESENT IN 525..645; effective default and runtime formula unknown",
+    "polarizationModelInactive": "NOT IMPLIED",
+    "runtimeInGaNProvenance": "UNRESOLVED",
+    "baselineFreeze": "HOLD",
+    "qw4RootCause": "UNRESOLVED",
+    "sourceChange": false,
+    "solverRun": false,
+    "next": "Read only InN.par lines 525..570 documentation of default formula, then effective runtime parameters"
   }
 }

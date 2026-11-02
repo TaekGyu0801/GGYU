@@ -1,3 +1,8 @@
+## 2026-11-02 — Lee chooses manual SWB source transfer (PROPOSED / NO RUN)
+- User explicitly wants to **create new SWB project manually and paste code/parameters** rather than use an automatic copy workflow. No evidence this manual work has started or any run completed. Protected original `CMP_BASELINE_2.0.0_V2` untouched.
+- Recommended approach: paste complete existing V2.1 SDE, SDevice, PAR inputs and clone all SWB parameters/topology unchanged except PolAct 0.5→0; first NtSide=0 n2 diagnostic, n6 NtSide=1e18 after verified baseline comparison. Candidate name `CMP_BASELINE_2.1.0_POL0DIAG` subject to server collision check, not claimed to exist. Verify runtime source actually binds `activation=@PolAct@` (Claude-reported line 21 unverified) and diff corresponding preprocessed source before solver. Need existing n2/n6 PLT same-current IQE_sim read-only baseline first.
+- User has not yet explicitly locked Claude's proposed heuristic gate thresholds or confirmed final scope; no server action by ChatGPT, NO CODE CHANGE / NO RUN. PolAct=0 diagnostic only (EBL interface also changes); baseline verdict B/FREEZE HOLD.
+
 ## 2026-11-02 — Lee tentative PolAct test go-ahead (PROPOSED; NO RUN)
 - 이택규가 “일단 수정해서 돌려볼까?”라고 제안. ChatGPT는 **원본 보호 복사본에 한정된 통제 진단**을 권장. 대화만으로는 Claude gate 숫자 최종 채택 및 n2/n6 범위 최종 확정은 아직 미확인.
 - 다음 조치: **서버 원본 덱의 PolAct 실제 바인딩 읽기 전용 확인** → 기존 PLT 동일 전류 IQE_sim → SWB 보호 복사 → PolAct만 0.5→0 → pp diff 검증 → n2부터 실행, n6는 이후 비교를 위해 필요. 원본/물성/mesh/접점/solver 변경 금지, global EBL 영향 기록.

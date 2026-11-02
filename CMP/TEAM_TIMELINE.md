@@ -1,3 +1,8 @@
+## 2026-11-02 — Lee 3.6V cutline carrier deficit and QW4 Jn/Jp redistribution verified (OBSERVED; NO RUN)
+- 이택규 기존 n2 `qw4_36_depth.csv`, Y=1um 한 cutline에서 B0–B3 barrier center n/p, Ec-eQF, hQF-Ev, electron/hole Jx 실제 추출. B0–B3 p/n 약 5.90e4/1.002e5/4.04e4/1.43e4, Ec-eQF 약 .507/.5144/.4895/.4449eV: Claude 10/23 전자 부족 패턴 재검산 일치.
+- QW3→QW4 n local ratio ≈43.28×, p≈95.30×, B3 JnX .00177679/JpX 1.82183에서 QW4 midpoint JnX .961374/JpX .862283; JnX+JpX local≈1.8236 유지. QW4 중심부로 갈수록 electron current portion 급증: QW4에서 강한 recombination sink 정황과 일관, **B3 barrier가 직접 근본 원인인지는 미확정**(Y 방향 전류 포함 2D/수송 경계 검토 필요).
+- Next Lee read only QW4 fine CSV B3/QW4/B4 current profile & bands, thereafter PE_Charge sheet unit audit; No new run/edits, physical Baseline FREEZE HOLD. 개인 detailed table은 Lee TIMELINE 2026-11-02 참조.
+
 ## 2026-10-31 — Lee n2 runtime contact area factor=1 observed (OBSERVED USER LOG, READ ONLY, NO RUN)
 - 이택규 학교 서버 `CMP_BASELINE_2.0.0_V2/n2_des.log`에서 `grep -niE 'dimension|2d|2-d|area factor|device width' n2_des.log | head -n 40` 결과를 직접 제공: **line237** `"anode" : 0.0000e+00 V (Ohmic), area factor : 1`; **line238** `"cathode" : 0.0000e+00 V (Ohmic), area factor : 1`.
 - This resolves the previous **absence of a literal AreaFactor match in the inspected n2 CMD/PAR** by confirming anode/cathode *runtime contact area factors* both 1 in n2. It does NOT alone confirm native 2D terminal-current units, effective out-of-plane depth, lateral half-width, or Half/Full scaling; **n6 contact area factor not supplied in this message**.

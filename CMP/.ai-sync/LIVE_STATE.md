@@ -1,3 +1,7 @@
+## 2026-11-02 — Lee says full SDevice copy-paste applied in POL0DIAG (USER-REPORTED; NO RUN)
+- Worker 이택규: 새 `CMP_BASELINE_2.1.0_POL0DIAG` SWB SDevice 입력을 ChatGPT가 앞서 제공한 **전체 복붙 버전**으로 바꿨다고 보고. 이 버전은 사용자 제공 SDevice 내용에서 global `Iterations=20`만 기존 실행원본과 같이 `12`로 수정한 것. 디스크 실제 파일, preprocess/solver 설정, 전체 원본과 차이의 재검증은 **PENDING**.
+- SWB의 `PolAct=0` (n2-equivalent NtSide=0 / n6-equivalent NtSide=1e18) UI는 이전 스크린샷에서 관측. NEXT: clone 저장 입력 grep 확인 후 preprocess only / effective pp activation=0, Math Iterations=12, 나머지 입력 동일성 검사; 동일전류 IQE_sim baseline 및 사전 분석 gate 채택 확인. No new TCAD solver execution, no final physical model acceptance. Baseline B FREEZE HOLD.
+
 ## 2026-11-02 — Lee asks for copy-paste SDevice Math fix, patch provided not yet applied (PROPOSED, NO RUN)
 - Worker 이택규는 새 POL0DIAG SDevice를 직접 편집하겠다고 하며 복붙 코드를 요청. ChatGPT 제공 변경은 `Math { ... Iterations = 12 ... }` 블록이며 기존 복제본의 `Iterations=20`을 원본 실행 deck `12`로 복원하기 위한 목적. 다른 Math 옵션은 기존 사용자 첨부 파일과 동일하게 유지.
 - `Piezoelectric_Polarization(strain activation=@PolAct@)`은 이미 매크로 연결되어 수정 없음, SWB 복제본 PolAct=0은 UI에서 확인한 값. **아직 사용자 적용, preprocess, solver run 보고 없음.** SDE/PAR/복제본 물성 및 실제 pp 비교 미확인. Original protected. Baseline B/FREEZE HOLD.

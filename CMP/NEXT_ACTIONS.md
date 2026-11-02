@@ -1,3 +1,7 @@
+## 2026-11-02 23:33 — Lee intends to run new POL0DIAG n2 (USER INTENT; NO EXECUTION VERIFIED)
+- User wants to start testing `CMP_BASELINE_2.1.0_POL0DIAG` without further preprocess steps and asks if safe. New clone SWB PolAct=0 and stored SDevice macro/Iterations12 observed; actual source/PAR/SDE/mesh equivalence and pp effective settings remain unverified. Do NOT claim simulation has run or guarantee scientific single-variable equivalence.
+- Recommended n2 (`NtSide=0`) first; once produced, check `pp2_des.cmd` for `activation=0` and `Iterations=12`, then `n2_des.log` convergence and file/parameter provenance, followed by n6 if appropriate. Missing preprocessed pp files before running is not an error by itself. Global PolAct=0 also modifies EBL heterointerface and cannot be adopted as physical Baseline. Prior same-current IQE_sim and H1/H2 thresholds still need sign-off before result interpretation. Original V2 baseline protected.
+
 ## 2026-11-02 — Confirmed POL0DIAG top-level pp absent; preprocessing next (READ ONLY / NO RUN)
 - 학교 서버에서 `~/CMP_BASELINE_2.1.0_POL0DIAG`를 정확히 대상으로 `find . -maxdepth 1 -name 'pp*_des.cmd' -print` 두 차례, 빈 출력. **현 프로젝트 최상위에서 아직 pp 전처리 산출물 발견되지 않음**, 잘못 만든 소자라는 뜻은 아님; 전체 하위폴더 검색/전처리 수행 여부는 미확인.
 - NEXT: SWB 새 프로젝트 n2 노드와 의존성(SDE mesh), 복사한 SDevice / PAR / SWB parameter 연결 확인 → 가능한 경우 SWB n2 **preprocess-only** 실행 → `pp2_des.cmd` 등 유효 입력에서 `Piezoelectric_Polarization(strain activation=0)`, `Iterations=12` 및 원본 대비 기타 동일 조건 확인 → 이후 solver 진단 실행 결정. n6 후속. 원본 V2 불변, Baseline B FREEZE HOLD.

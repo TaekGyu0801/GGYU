@@ -1,3 +1,9 @@
+## 2026-11-02 — Cutline X/Y coverage 검증 완료, 장벽 중심 전자·정공 전류/밴드 값 채취 NEXT (OBSERVED / PROPOSED)
+- 새 서버 측정: 3.6V depth/eq CSV 각각 392 filtered numeric rows, X=0.13988867–0.2973125um, Y=1.0um; QW1fine 66 rows X=0.1800625–0.19995312, QW4fine 62 rows X=0.25543749–0.27428126, Y=1.0um. pasted long Python 한 번 문장 접합 SyntaxError 후 동일 코드 재실행 성공; solver error 아님.
+- `pp1_dvs.cmd` 원문 stack pCap 20nm/pGaN 120nm/EBL26nm/B0~B4 each22nm/QW1~4 each3nm; coordinate x(depth) 누적에서 QW1=.188-.191, QW2=.213-.216, QW3=.238-.241, QW4=.263-.266um. B0=.166-.188, B1=.191-.213, B2=.216-.238, B3=.241-.263, B4=.266-.288um.
+- FIRST READ ONLY: `qw4_36_depth.csv`의 B0–B3 및 QW1–4 중심 최근접 샘플 실제 X, e/hDensity, Ec, eQF, Ev, hQF, e/hCurrentDensity-X를 함께 채취하고, raw sampled ratio와 band energy detuning이 Claude의 B0-B3 p/n 1e4–1e5 및 Ec−eQF .45–.51 eV 주장과 맞는지 검증. 민감도 실험/소스 수정 금지.
+- SECOND: PE_Charge interface signed volume-to-sheet integration only after sorted depth/units/extent verified; old report coordinates shifted by 20nm 여부는 provenance 검증 필요. FREEZE HOLD.
+
 ## 2026-11-02 — QW4 실제 CSV 스키마 확인 완료; 좌표 범위 및 QW 좌표 매핑 NEXT (OBSERVED READ ONLY)
 - eq/3.6V depth `head -n 6`으로 field `PE_Charge`, `PE_Polarization-X`, Ec/Ev, e/h QuasiFermiEnergy, e/h Density, e/h CurrentDensity-X, X/Y/Distance 존재 확인. 각각 첫 줄 variable header, 둘째 줄 `none` metadata 행 -> 수치 파싱 시 건너뛸 것.
 - `wc -l`: depth eq/3.6V 각 395행, qw1fine 69행, qw4fine 65행. User 3.6V 표본 `TotalCurrentDensity-X~1.8236326` near conditional J~1.8236426; PE_Charge -5.502e20 value는 **local value**이고 cm^-2 sheet 적분 결과 아님.

@@ -5087,5 +5087,39 @@
     "physicalFreeze": "HOLD",
     "newRun": false,
     "sourceModified": false
+  },
+  "leeQW4PolarInterfaceChargeJump20261102": {
+    "worker": "이택규",
+    "date": "2026-11-02",
+    "status": "OBSERVED_USER_PASTED_NUMERIC_CSV_SAMPLES_PLUS_CONDITIONAL_PHYSICAL_DERIVATION; NO_RUN",
+    "file": "qw4_36_qw4fine.csv",
+    "Y_um": 1,
+    "interfaces": [
+      {
+        "name": "B3/QW4",
+        "X_um": 0.26300001,
+        "PE_Charge_peak": 1.2297757e+21,
+        "Px_B3_C_per_cm2": 0.0000034,
+        "Px_QW4_C_per_cm2": 8.2162955e-7
+      },
+      {
+        "name": "QW4/B4",
+        "X_um": 0.266,
+        "PE_Charge_peak": -1.2297757e+21,
+        "Px_QW4_C_per_cm2": 8.2162955e-7,
+        "Px_B4_C_per_cm2": 0.0000034
+      }
+    ],
+    "derived": {
+      "nominalPolarizationJump_C_per_cm2": 0.00000257837045,
+      "nominalEquivalentSheet_Carriers_per_cm2": 16092922560996.48,
+      "charge_C": 1.602176634e-19,
+      "signs": "B3/QW4 positive, QW4/B4 negative under rho=-div(P)"
+    },
+    "interpretation": "Opposite signed polarization peaks at opposite QW4 interfaces and jump consistent with constitutive polarization; NOT independent measured/activated interface sheet density. Apparent repeated X discontinuity and activation scaling require source/model check; PE_Charge local spike cannot be read as sheet cm-2.",
+    "next": "Read only sample Px and material fraction at B0-B4/QW1-QW4 center positions and source activation; do not yet assign QW4 selective dominance to polarization",
+    "baselineFreeze": "HOLD",
+    "sourceModified": false,
+    "newRun": false
   }
 }

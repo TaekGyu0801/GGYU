@@ -1,3 +1,8 @@
+## 2026-11-02 — QW4 cutline CSV 4개 실제 서버 파일 존재 확인 (OBSERVED USER TERMINAL; NO RUN)
+- 이택규가 `/user/semi/semi437/CMP_BASELINE_2.0.0_V2`에서 `find . -maxdepth 4 -type f -name 'qw4*.csv' -print` 실행: `./qw4_eq_depth.csv`, `./qw4_36_qw1fine.csv`, `./qw4_36_depth.csv`, `./qw4_36_qw4fine.csv` 네 파일 **존재 확인**. 이 결과만으로 열 구성, 출처 TDR, 변수 단위, 계면 전하 적분 결과, 내용 무결성은 검증되지 않음.
+- `find . -maxdepth 4 -type f -name 'server_readonly_cmds_20261102.sh' -print` 출력이 비어 있어 **해당 프로젝트 디렉터리의 탐색 깊이 4까지** 스크립트 발견되지 않음. 서버 전체에 없다는 의미가 아님. 클로드 제공 스크립트를 실행했다고 가정하지 말 것.
+- **NEXT READ ONLY:** `wc -l qw4_*.csv`, `head -n 6 qw4_eq_depth.csv`, `head -n 6 qw4_36_depth.csv` 로 CSV 레이아웃/데이터 열·단위 확인. 이후에만 PE_Charge→interface sheet density, 장벽 Ec/eQF 검토. Baseline physical FREEZE HOLD, 수정/새 시뮬레이션 없음.
+
 ## 2026-11-02 — Claude 독립 재평가 인계 수신 (PROPOSED, 새 RUN/수정 없음)
 
 아래 코드 블록은 사용자가 전달한 **Claude 인계 6절을 원문 그대로 보존**한다. 별도 인용으로, 이번 ChatGPT가 해당 CSV/UG 원본을 직접 재검산했다는 의미가 아니다. 클로드가 주장한 전자 수송 병목·원인 순위·`PolAct` 조절 후 예측 결과는 검증되지 않은 해석/작업 가설이다.

@@ -1,3 +1,7 @@
+## 2026-11-02 — Lee grep find issued in home, not new POL0DIAG project (OBSERVED READ ONLY / NO RUN)
+- User new shell prompt at home `[semi437@ssudisu3 ~]$` and ran `find . -maxdepth 1 -name 'pp*_des.cmd' -print`, with blank output. This does NOT determine whether `CMP_BASELINE_2.1.0_POL0DIAG` has preprocessed pp files, as command was run in wrong directory.
+- Next command supplied: `cd ~/CMP_BASELINE_2.1.0_POL0DIAG && find . -maxdepth 1 -name 'pp*_des.cmd' -print`; await results before deciding preprocess-only. Current actual source macro and Iterations=12 confirmed previously, SWB PolAct=0 screenshot reported; no effective pp confirmation or solver run. Baseline B/FREEZE HOLD.
+
 ## 2026-11-02 — Lee school shell csh syntax issue recovered by Ctrl-C plan (ERROR, NO RUN)
 - User terminal at `CMP_BASELINE_2.1.0_POL0DIAG` rejects ChatGPT-provided Bash `for/do/done` and `$f` with `for: Command not found`, `do: Command not found`, `f: Undefined variable`; `else?` prompt indicates unfinished csh/tcsh input. This reflects incorrect assistant command for the environment; no TCAD run failure or file change.
 - Assistant advised `Ctrl+C` and read-only shell-neutral `find . -maxdepth 1 -name 'pp*_des.cmd' -print`. No returned `find` output yet. Effective clone pp activation / solver values not yet established. Baseline B FREEZE HOLD.

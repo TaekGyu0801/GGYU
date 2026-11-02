@@ -5298,5 +5298,22 @@
     "physicalFreeze": "HOLD",
     "sourceChanged": false,
     "newRun": false
+  },
+  "leePolarizationDefaultMaterialDBPending20261102": {
+    "worker": "이택규",
+    "date": "2026-11-02",
+    "source": "user server grep in pp2_des.par",
+    "status": "OBSERVED_NOT_EXPLICITLY_SPECIFIED; NO_RUN",
+    "materialParameterGrep": "Piezoelectric|Strain|e31|e33|Psp|Relax|Lattice|Polarization|a0",
+    "matches": [
+      "LatticeParameters X=(0,0,-1),Y=(1,0,0)"
+    ],
+    "physicalSource": "pp2_des.cmd: DefaultParametersFromFile and Piezoelectric_Polarization(strain activation=0.5)",
+    "publicDocumentation": "https://ghzphy.github.io/Sentaurus_Training/sd/sd_16.html §16.4.4: polarization model default material parameters loaded from $STROOT/tcad/$STRELEASE/lib/sdevice/MaterialDB/",
+    "interpretation": "Absent explicit polarization constants in user's preprocessed par does not mean polarization omitted; concrete actual material defaults not yet read. Existing simulated Px and PE_Charge nonzero.",
+    "next": "Read-only print STROOT STRELEASE then inspect installed GaN/InGaN MaterialDB polarization blocks and n2_des.log path/warnings",
+    "freeze": "HOLD",
+    "newRun": false,
+    "codeChanged": false
   }
 }

@@ -1,3 +1,8 @@
+## 2026-11-02 — 이택규 QW4 기존 cutline CSV 네 파일 발견 (OBSERVED, NO RUN)
+- 학교 서버 `CMP_BASELINE_2.0.0_V2` 안에서 사용자 `find -maxdepth 4` 결과 기존 `qw4_eq_depth.csv`, `qw4_36_depth.csv`, `qw4_36_qw1fine.csv`, `qw4_36_qw4fine.csv` **파일 존재** 확인. **데이터 열·단위·값 및 출처 검증은 미완료**.
+- `server_readonly_cmds_20261102.sh`는 동일 검색 범위에서 미발견. 이번 작업에서는 새 simulation/코드 변경/CSV 파싱 없음.
+- NEXT READ ONLY CSV `wc -l`와 head 구조 확인 후 PE_Charge sheet integral 및 QW3/QW4 quasi-Fermi 후보 수송 병목 검산. 99.97% QW4 집중은 이전 PLT 결과이며 원인 UNRESOLVED. Baseline FREEZE HOLD.
+
 ## 2026-11-02 — 이택규 Claude QW4 독립 재평가 수신 (PROPOSED/HYPOTHESIS; NO NEW RUN)
 - User forwarded Claude's reassessment dated 2026-11-02. Claude says it reviewed GitHub through commit `8553f64` but Issue #7 was inaccessible (403). ChatGPT subsequently fetched latest GitHub and Issue #7; verbatim Claude section 6 is preserved in Lee TIMELINE (2026-11-02).
 - Claimed UG confirmations (not independently re-opened by ChatGPT): T-2022.03 p58/120 2D A/um, p193 Iterations, p871 Formula1/Fermi condition, p1003 activation, p1072 LED interface sheet example. Existing n2/n6 AreaFactor=1 and Wm4/Xs2 are confirmed from user server on 11/02, but native A/um semantics from the official UG remain **Claude-reported** and 4x4um pixel calibration/Full-Half are NOT proven.

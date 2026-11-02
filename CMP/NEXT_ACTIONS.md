@@ -1,3 +1,8 @@
+## 2026-11-02 — Lee reports new SWB project CMP_BASELINE_2.1.0_POL0DIAG created (USER-REPORTED, NO RUN)
+- 이택규는 SWB에서 `CMP_BASELINE_2.0.0_V2`를 복사하고 `CMP_BASELINE_2.1.0_POL0DIAG` 이름으로 프로젝트를 만들었다고 보고. 서버의 실제 입력/설정 일치 여부 및 실행 결과는 검증 전.
+- **NEXT ONE STEP:** 새 복사본 프로젝트의 SWB Parameters 표에서 `PolAct=0.5`를 `0`으로만 바꾸고, 다른 파라미터/노드 구조는 유지한 채 표 스크린샷으로 확인. 원본 변경 금지. Run 아직 금지.
+- **PRE-RUN GATES:** 원본/복사본의 유효 입력·mesh·contacts·solver·PAR를 비교하고 preprocess `pp` diff에서 activation에 따른 차이만 확인; 기존 n2/n6 .plt 동일전류 IQE_sim 기준 계산; Claude 제안 H1/H2/Project A 판정 기준 사전 최종 확정 후 진단 n2(Trap OFF), 필요 시 n6(Trap ON). `PolAct=0`은 EBL 계면 분극까지 바꾸는 비물리적 진단 전용, Baseline 후보 아님. B/FREEZE HOLD.
+
 ## 2026-11-02 — Lee selects manual SWB project creation and paste (PROPOSED, NO RUN)
 - 이택규: “내가 그냥 직접 만들어서 코드랑 파라미터 넣을게.” 작업 방식은 **SWB 신규 프로젝트 직접 생성 + 기존 V2.1 원본 SDE/SDevice/PAR 코드 및 파라미터 복사 입력**으로 변경. 실제 신규 프로젝트 생성, 파일 입력, 시뮬레이션 수행은 보고되지 않음.
 - 새 프로젝트 임시 이름 제안: `CMP_BASELINE_2.1.0_POL0DIAG` (실제 학교 서버 내 중복 및 부모 프로젝트 검증 전 확정명 아님). 원본 `CMP_BASELINE_2.0.0_V2` 절대 수정 금지. 새로 짜는 코드가 아니라 원본 전체 원문 복사 후 SWB PolAct만 0.5→0 단일 변수 변경; NtSide=0 먼저, NtSide=1e18은 이후 필요 시.

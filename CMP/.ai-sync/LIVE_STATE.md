@@ -1,3 +1,8 @@
+## 2026-11-02 23:33 KST — Lee plans to run POL0DIAG after manual setup (USER INTENT, NOT YET RUN)
+- 이택규: “그냥 돌릴게 문제 없겠지?” — 보호 복사 프로젝트 `CMP_BASELINE_2.1.0_POL0DIAG`를 직접 실행하려는 의사 표현. 실제 Run 클릭/solver 진행/결과는 아직 보고되지 않았음.
+- GPT 설명: SWB PolAct=0 screenshot과 저장 SDevice `Piezoelectric_Polarization(strain activation=@PolAct@)` 및 `Math Iterations=12`는 확인됨. 복제본 전체 SDE/PAR/mesh/노드 연결/실효 pp 차이와 기존 n2/n6 동일 전류 IQE_sim, Claude 진단 판정 기준 사전 확정은 아직 미확인. 그래서 '문제 없음' 보증 불가. 기존 blank `find pp*_des.cmd`는 해당 폴더 최상위에 preprocessed CMD가 없다는 뜻; SWB 전처리 전이라면 정상일 수 있음.
+- 권장 실행 범위는 보호 복사본 n2 `NtSide=0` 먼저, n6 `NtSide=1e18`은 n2 정상 확인 뒤. 시작된 경우 생성 `pp2_des.cmd`의 activation=0, Iterations=12 확인, `n2_des.log` 수렴 여부와 바이어스 범위 확인. PolAct=0은 **global** (EBL 포함) 비물리적 진단용이며 원본 Baseline B physical FREEZE HOLD 유지. 연구결과/성공은 아직 없음.
+
 ## 2026-11-02 — POL0DIAG root lacks pp CMD files before preprocessing (OBSERVED READ ONLY; NO RUN)
 - 이택규가 프로젝트 폴더 `~/CMP_BASELINE_2.1.0_POL0DIAG`에서 `find . -maxdepth 1 -name 'pp*_des.cmd' -print`를 두 번 실행했으며 모두 출력 없음. **확인된 사실은 해당 폴더 최상위에 pp CMD 파일이 현재 없다는 것뿐**; SWB 전처리를 수행하지 않았거나 생성물이 다른 폴더에 있을 가능성은 아직 구분되지 않음. 파일/파라미터 복붙 실패나 solver 오류의 근거가 아님.
 - 설명: `sdevice_des.cmd`와 SWB parameter는 소스, `ppN_des.cmd`는 통상 SWB preprocess 산출물. 새 프로젝트에 자동으로 존재할 필요 없음. 다음 권고: 복제한 SWB 노드 연결 상태 점검 후 n2 조건 preprocess만 실행하고 생성물에서 실제 `activation=0`과 `Iterations=12` 확인. Preprocess-only 메뉴의 정확한 사용법은 사용자 SWB 설치 UI에서 검증 전. 원본 프로젝트 불변, 실제 solver 실행 보고 없음. Baseline B physical FREEZE HOLD.

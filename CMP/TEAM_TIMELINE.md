@@ -1,3 +1,8 @@
+## 2026-11-02 — Lee QW4 fine current and recombination profile confirms extreme local sink (OBSERVED; NO RUN)
+- 이택규 기존 `qw4_36_qw4fine.csv` cutline Y=1um에서 B3 JnX=.0017779541, QW4 interior JnX=.3362/.9614/1.5101, B4 JnX=1.8234614. QW4 interior radiative density 2.44–3.08e25, B3 9.61e14, B4 7.47e18; Jtotal across ~1.8236.
+- B4→B3 JnX 감소 =1.8216834459 A/cm² (~99.9025%), **local current attenuation**이지 QW radiative fraction 99.97%와 다른 지표. Strong recombination sink pattern supports capture within QW4 but **B3 electron barrier as underlying cause remains hypothetical**, 2D lateral flows unresolved.
+- Next read-only same CSV QW4 trapezoid q∫R dx vs ∆Jn, then polarization sheet/physics audit; no new runs/deck modification, baseline hold. Detailed numbers and caveats in Lee personal TIMELINE.
+
 ## 2026-11-02 — Lee 3.6V cutline carrier deficit and QW4 Jn/Jp redistribution verified (OBSERVED; NO RUN)
 - 이택규 기존 n2 `qw4_36_depth.csv`, Y=1um 한 cutline에서 B0–B3 barrier center n/p, Ec-eQF, hQF-Ev, electron/hole Jx 실제 추출. B0–B3 p/n 약 5.90e4/1.002e5/4.04e4/1.43e4, Ec-eQF 약 .507/.5144/.4895/.4449eV: Claude 10/23 전자 부족 패턴 재검산 일치.
 - QW3→QW4 n local ratio ≈43.28×, p≈95.30×, B3 JnX .00177679/JpX 1.82183에서 QW4 midpoint JnX .961374/JpX .862283; JnX+JpX local≈1.8236 유지. QW4 중심부로 갈수록 electron current portion 급증: QW4에서 강한 recombination sink 정황과 일관, **B3 barrier가 직접 근본 원인인지는 미확정**(Y 방향 전류 포함 2D/수송 경계 검토 필요).

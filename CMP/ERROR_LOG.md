@@ -1,3 +1,8 @@
+## 2026-11-02 — Wrong shelf-retained V2_Copy apparently used for POL0DIAG (OBSERVED SCREENSHOT + USER REPORT; BLOCKER)
+- Screenshot `n1_msh` in current POL0DIAG workflow shows n-GaN-like right-side ledge extending lateral beyond 2.0um (~2.5um), with 124583 elements / 60163 nodes. Existing accepted V2.1 source had `Wshelf=0` and half width `Xs=2um` (prior server output and GitHub notes); protrusion is incompatible with intended shelf-free geometry.
+- 이택규 says he appears to have copied **`CMP_BASELINE_2.0.0_V2_Copy`** (shelf retaining old comparison), not the intended `CMP_BASELINE_2.0.0_V2`. This explains geometry qualitatively but must be confirmed with new SDE source/dataset provenance. Earlier GPT assertion that image was normal is **RETRACTED**. PolAct=0 cannot remove etched structural shelf.
+- **Mitigation (pending):** stop present clone experiment, preserve existing outputs, re-clone proper `CMP_BASELINE_2.0.0_V2` original to distinct new SWB project; PolAct-only edit and pre-run mesh/source/pp verification. No model results validated; original protected.
+
 ## 2026-11-02 — ChatGPT bash for-loop incompatible with school csh/tcsh prompt (OBSERVED; GUIDANCE ERROR)
 - 이택규가 `CMP_BASELINE_2.1.0_POL0DIAG` 터미널에서 ChatGPT 제공 Bash `for f in ...; do ...; done`을 실행: `for: Command not found.`, `do: Command not found.`, `f: Undefined variable.`, 이후 `else?` 보조 프롬프트. 이 서버 로그인 쉘은 csh/tcsh 계열 문법으로 관측됨; 당시 ChatGPT 명령어가 호환되지 않았음. **TCAD solver 오류 아님**, 파일/파라미터 변경 및 새 시뮬레이션 없음.
 - CORRECTION: `Ctrl+C`로 미완성 `else?` 구문을 취소하고 정상 프롬프트 복귀. bash 문법 없이 읽기 전용 `find . -maxdepth 1 -name 'pp*_des.cmd' -print` 한 줄로 기존 전처리 파일 존재 여부 확인 요청. 결과 아직 미제공; 새 프로젝트 pp 파일 존재 여부 미확정.

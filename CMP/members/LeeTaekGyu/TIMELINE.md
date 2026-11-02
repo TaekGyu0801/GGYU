@@ -1,3 +1,19 @@
+## 2026-11-02 — Claude 독립 재평가 인계 수신 (PROPOSED, 새 RUN/수정 없음)
+
+아래 코드 블록은 사용자가 전달한 **Claude 인계 6절을 원문 그대로 보존**한다. 별도 인용으로, 이번 ChatGPT가 해당 CSV/UG 원본을 직접 재검산했다는 의미가 아니다. 클로드가 주장한 전자 수송 병목·원인 순위·`PolAct` 조절 후 예측 결과는 검증되지 않은 해석/작업 가설이다.
+
+```text
+2026-11-02 (Claude 독립 재평가, PROPOSED, 새 실행 없음) V2.1 QW4 99.97% 집중 검증 계획
+- GitHub 8553f64까지 열람, Issue #7 미열람(403). UG p.58/120(2D 전류 A/um), p.193(Iterations), p.871(Formula=1은 Fermi 전제, 덱에 Fermi 있음), p.1003(activation), p.1072(LED 예제 QW sheet ±1e12) 재확인.
+- 새 관찰(DERIVED): 장벽 B0-B3에서 p가 n보다 1e4-1e5배 많음(Ec-eQF 0.45-0.51 eV vs hQF-Ev 0.28-0.30 eV). 이 모델의 우물 간 병목은 전자 → n쪽 QW4 집중을 직접 설명. 실험 경향(정공 병목, p쪽 우세)과 반대.
+- Claude 10/23 정정: "1.6 eV 계면 손실"은 이중 계산(올바른 qV-ΔQF: QW4 0.91, QW1 1.20 eV), "QF 분리가 원인"은 동어반복, "정공은 잘 통과"는 단순화.
+- 우선순위: 분극 sheet 크기 = Thermionic+깊은 전자 우물 > 터널링 부재 > 나머지(주입/메시/Half/집계는 반대 증거).
+- 다음: (1) 읽기 전용 CSV로 계면 sheet 면밀도(cm^-2) 적분, QF 강하 위치, par 오프셋·이동도 (2) 승인 후 PolAct 0.5→0 단일 변수 진단 run(복사 프로젝트, 같은 메시).
+- 판정 B 유지, FREEZE 보류.
+```
+
+검토 메모 (ChatGPT, PROPOSED): `strain activation=0`의 효과가 압전 분극만인지 전체 계면 분극인지 공식 T-2022.03 UG 및 실제 전처리 덱을 대조해야 한다. `Iterations=12`가 수렴 한계인지 여부는 solver convergence log 검증과 별개다. QW4 80%·전자 100배 기준은 Claude가 제안한 탐색적 임계값이며 물리적 입증 기준이 아니다. 기존 소스/메시/실행 변경 없고 FREEZE HOLD 유지.
+
 ## 2026-11-02 — 기존 V2.1 Mesh 최소각/최소 Edge 위험 재확인 (OBSERVED SERVER READ ONLY; NO RUN)
 - 사용자 학교 서버에서 `grep -niE 'minAngle|maxAngle|edgeLength|warning|vertices|elements' n1_msh.log | tail -n 50` 실행: `62533 vertices`, `123917 elements`, `minAngle: 0.0167024`, `maxAngle: 128.367`, `min edgeLength: 1.95312e-05 [near (0.0041875 1.89501)]` (units um from V2.1 mesh context). 최소 Edge 길이 산술 환산 `0.0195312 nm`.
 - 사용자가 제공한 메시 로그는 기존 2026-10-21 `ERROR_LOG.md`의 동일 결과와 일치하는 **재확인**, 새로운 메시 생성/소스 변경/solver 오류 발견 아님. near 좌표는 SDE x(depth)=0.0041875um, y(lateral)=1.89501um; Xe=1.895um Clean/Edge 경계 인접. 최소 **각도**의 위치가 최소 **길이**의 위치와 같다는 증거는 없음.

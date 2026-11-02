@@ -1,3 +1,9 @@
+## 2026-11-02 — n2 3.6V 장벽 p/n·Jx 실제 검산 완료: QW4 국소 전류 분포 세밀 검사 NEXT (OBSERVED/DERIVED, NO RUN)
+- DONE user read-only CSV extraction: B0/B1/B2/B3 local p/n≈5.90e4/1.00e5/4.04e4/1.43e4, Ec−eQF≈0.507/0.5144/0.4895/0.4449eV; Claude 10/23 derived table corroborated to precision of nearest-depth sample. QW3→QW4 n rises 43.28×, p rises 95.30×; QW4 center JnX .96137367 vs B3 JnX .0017767865, while JnX+JpX remains ~1.8236. These indicate strong QW4 recombination sink/flux transfer, **not proof that B3 band barrier is the cause**.
+- FIRST READ ONLY: finer QW4 file `qw4_36_qw4fine.csv` sample `JnX/JpX/Jtotal/PE_Charge/Ec−eQF` at x~.260/.2625/.2635/.2645/.2655/.2665/.270µm; check coordinate and same-source sample. Look for within-well vs interface jumps and spatial current continuity.
+- SECOND: signed PE_Charge to sheet density with unit and interface bounds verified, then actual pp2/par polarization, Chi0/Eg0/mobility model check. Any copy-model `PolAct` sensitivity requires independent Lee approval; Baseline physical FREEZE HOLD, no new RUN.
+- Provenance: Lee user-pasted 2026-11-02 `python3 -c` output of `qw4_36_depth.csv`. No independent server access by ChatGPT and no solver or source edit.
+
 ## 2026-11-02 — Cutline X/Y coverage 검증 완료, 장벽 중심 전자·정공 전류/밴드 값 채취 NEXT (OBSERVED / PROPOSED)
 - 새 서버 측정: 3.6V depth/eq CSV 각각 392 filtered numeric rows, X=0.13988867–0.2973125um, Y=1.0um; QW1fine 66 rows X=0.1800625–0.19995312, QW4fine 62 rows X=0.25543749–0.27428126, Y=1.0um. pasted long Python 한 번 문장 접합 SyntaxError 후 동일 코드 재실행 성공; solver error 아님.
 - `pp1_dvs.cmd` 원문 stack pCap 20nm/pGaN 120nm/EBL26nm/B0~B4 each22nm/QW1~4 each3nm; coordinate x(depth) 누적에서 QW1=.188-.191, QW2=.213-.216, QW3=.238-.241, QW4=.263-.266um. B0=.166-.188, B1=.191-.213, B2=.216-.238, B3=.241-.263, B4=.266-.288um.

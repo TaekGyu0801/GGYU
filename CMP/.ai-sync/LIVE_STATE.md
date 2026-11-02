@@ -1,3 +1,8 @@
+## 2026-11-02 — n2 QW4 fine cutline local electron continuity nearly closes (OBSERVED + DERIVED; NO RUN)
+- Read-only user terminal, `qw4_36_qw4fine.csv`, Y=1µm, X=.26300001–.266um, N=24: ΔJnX=1.8216831695A/cm²; q∫Rad dx=1.2205564144284573, q∫Auger dx=.5018975294245672, q∫SRH dx=.09908575891169007, q∫TotalR dx=1.8215397088407301 A/cm². Calculated local depthwise closure=99.9921248293%; relative residual=0.0078751707%; channel percentages Rad 67.00685%, Auger 27.55348%, SRH 5.43967%.
+- Interpretation: QW4 local recombination sink quantitatively accounts for almost all depthwise Jn reduction at chosen Y. This does NOT prove why QW4 captures nearly all carriers vs QW1–3, or establish integrated 2D continuity because ∂JnY/∂Y unmeasured. No new run, baseline physical FREEZE HOLD.
+- IMMEDIATE READ ONLY: signed PE_Charge and PE_Polarization-X sampling near x=.263/.266um, validate units before sheet integration; check actual polarization/thermionic/band offset settings. PolAct perturbation still unapproved.
+
 ## 2026-11-02 — 3.6V QW4 fine CSV 직접 관찰: 높은 재결합과 큰 depth Jn 교환 (OBSERVED/DERIVED, NO RUN)
 - User cutline `qw4_36_qw4fine.csv` Y=1um. B3 near x=.26250389: Jn=.0017779541, Jp=1.8218258, Ec−eQF=.352, Rad=9.6067543e14. QW4 x=.26355079/.26459765/.26551366: Jn=.33616893/.96137367/1.5101376, Rad=2.4382434e25/3.075366e25/2.4777785e25. B4 near x=.26656055: Jn=1.8234614, Jp=.0003014948, Ec−eQF=.3675, Rad=7.4700005e18. All Jtotal~1.8236 A/cm².
 - DERIVED local JnX(B4−B3)=1.8216834459 A/cm² (~99.9025% B4 JnX). Consistent with intense QW4 recombination sink, **not independent proof of electron interwell bottleneck / polarization / thermionic causal mechanism**. 2D lateral J divergence makes one X cutline insufficient for full recombination current budget.

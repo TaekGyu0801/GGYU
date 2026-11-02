@@ -1,3 +1,12 @@
+## 2026-11-02 — 사용자 결정 대기: PolAct 진단 실험 사전 결정 2건 (이택규, Claude 전달 / NO RUN)
+- **현재 상태:** PENDING_USER_DECISION / PROPOSED / UNRESOLVED. 이택규는 (1) 실험 전 판정 기준, (2) 실행 범위를 아직 선택하지 않았음. PolAct 변경 승인·실험 실행·코드 변경 **모두 없음**. V2.1 Baseline 판정 B 및 physical FREEZE HOLD 유지.
+- **배경(기존 결과):** n2 기존 분석에서 QW1 중심 JnX/J≈0.005%, QW4가 전체 4QW 방사 재결합의 약 99.97%를 차지함(절대 IQE 아님). 원인 H1(분극 장벽) vs H2(고전 drift-diffusion 즉시 포획) 미확정. PolAct=0은 비물리적 **진단용**이고 Baseline 후보가 아님.
+- **결정 1 — 판정 기준값을 실험 전에 고정할지/수정할지 (사용자 선택 대기):** Claude 제안 *heuristic, 문헌 검증 기준 아님*. H1 지지: QW1 중심 JnX/J ≥1% **AND** QW4 방사비중 <80%. H2 지지: QW1 중심 JnX/J <0.1% **AND** QW4 방사비중 >99%. 둘 사이 또는 혼합 결과: 양쪽 기여 가능/판정 보류. Project A 임시 진행 제안: 동일 전류 기준 IQE_sim=q∫Rad_QW/I 에서 Trap OFF→ON 감소율의 부호가 PolAct 0.5와 0에서 같고 상대 차이가 **사전 제안 ±25% 이내**. 상대차의 분모·전류 기준·오차 정의는 검증 및 사전 명시 필요. 선택지: **제안 그대로 채택 / 값 수정 및 새 수치 명기**, 둘 중 아직 **미선택**. 기준이 맞더라도 물리 인과관계가 실험 하나로 증명되지는 않음.
+- **결정 2 — 실행 범위 (사용자 선택 대기):** (가) 보호 복사본에서 n2(NtSide=0, Trap OFF)와 n6(NtSide=1e18, Trap ON) **두 노드**를 동일 설정으로 진단: H1/H2 평가 + Project A 민감도까지, 연산 부담 증가(Claude 표현 약 2배, 실제 서버 시간 미확인); (나) n2 **한 노드부터**: 초기 원인 평가만, Project A 진행 판단에는 n6 추가가 필요. Claude는 (가) 권고, 자원 부족 시 (나); **이택규 결정 없음**.
+- **어느 선택에도 적용되는 고정 조건:** 원본 `CMP_BASELINE_2.0.0_V2` 변경 금지. SWB 보호 복사본에서 **PolAct만 0.5→0**. Claude 보고에 따르면 덱 21행 `activation=@PolAct@` 사용(실제 pp/덱 행번호 미재검증); 메시, 전극, par, Thermionic·Formula=1, Fermi, 재결합 모델, Math(Iterations=12), Solve 램프 등은 동일하게 유지. 실행 전 원본/복사본 preprocessed pp 차이가 활성화 변경 한 줄만인지 실제 diff 확인. Global activation이므로 QW와 **EBL** 계면 전하가 함께 달라지는 해석 한계 기록.
+- **실행 전 READ ONLY:** 기존 n2/n6 .plt로 **동일 전류** IQE_sim 기준값을 계산. 새로운 TCAD 실행 없이 가능하지만 이 메시지에서는 아직 계산하지 않음.
+- **상위 기록과 일관성:** 11/02 밤 Claude Baseline 선택지 B는 '진단 실험 계획을 검토'한다는 의미이며 이택규의 세부 기준·범위 선택과 실행 승인을 대신하지 않음. 이 두 결정과 명시적 실행 승인이 없는 한 어떤 노드도 돌리지 말 것.
+
 ## 2026-11-02 밤 — Lee / Claude V2.1 Baseline independent decision (USER-FORWARDED, NO RUN)
 - PROVENANCE: 이택규가 전달한 2026-11-02 밤 Claude 의사결정 요약. Claude 보고 기준 GitHub main `7a3cacd` (22:25 KST)까지 확인, Issue #7은 접근 거부로 미확인. 이번 ChatGPT 기록 시 Claude의 UG 원문/학교 서버를 직접 재검증하지 않았으며 UG 텍스트는 복제하지 않음.
 - DECISION: Baseline 판정 **B 유지 / physical FREEZE HOLD**. 수치적 자기일관성은 기존 실행 기록상 양호하나 MQW 캐리어 분포의 물리 원인은 **UNRESOLVED**. 정상 Baseline 승인도 폐기도 아님. 새로운 시뮬레이션, 코드·mesh·MaterialDB 변경 없음.

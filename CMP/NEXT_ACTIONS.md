@@ -1,3 +1,7 @@
+## 2026-11-02 — Environment lookup empty; use sdevice executable location for MaterialDB discovery (OBSERVED + PROPOSED)
+- READ ONLY `env | grep -E '^(STROOT|STRELEASE)='` yielded no lines at school server. Means exported STROOT/STRELEASE absent in current environment, not absence of Sentaurus or MaterialDB. Earlier Bash-style fallback failed due likely csh syntax.
+- FIRST NEXT READ ONLY `which sdevice`. If path found, derive candidate versioned install MaterialDB location and inspect existing file without change. If not found, check module/PATH separately, don't assume no installation. No actual run and Baseline B FREEZE HOLD.
+
 ## 2026-11-02 — default MaterialDB polarization coefficients must be checked on server (OBSERVED/PROPOSED; NO RUN)
 - `pp2_des.par` grep for `Piezoelectric|Strain|e31|e33|Psp|Relax|Lattice|Polarization|a0` returned only LatticeParameters X=(0,0,-1),Y=(1,0,0). No locally explicit polarization model parameter block found (search limited to these terms); `Piezoelectric_Polarization(strain activation=0.5)` and `DefaultParametersFromFile` are active in cmd, Px/PE_Charge appear in existing output.
 - Public Sentaurus Training §16.4.4 explicitly points to `$STROOT/tcad/$STRELEASE/lib/sdevice/MaterialDB/` for GaN/AlGaN/InGaN default polarization coefficients. Do not infer concrete installed coefficients without reading files.

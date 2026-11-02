@@ -1,3 +1,7 @@
+## 2026-11-02 — Lee 3.6V QW4 local electron continuity check closes 99.9921% (OBSERVED/DERIVED, NO RUN)
+- 이택규 `qw4_36_qw4fine.csv` Y=1µm, x=.26300001–.266µm의 24개 샘플 read-only trapezoid 확인: ΔJnX=1.8216831695 A/cm², q∫TotalRdx=1.8215397088407301 A/cm² (closure=99.99212483%; residual=0.00787517% of ΔJn). Net local recombination fractions Rad=67.00685%, Auger=27.55348%, SRH=5.43967%; channel sum total matched ~6.08e-9A/cm².
+- 관찰: QW4 내 높은 순 재결합 sink와 depthwise electron current drop가 내부 수지에 일치. 원인 분극/오프셋/계면 수송 **미확정**; 이는 n2 전체 4QW Rad의 QW4 99.9688%와 서로 다른 비율. 2D Y-flux divergence 미포함, same-Y local validation. Next PE_Charge signed spike+units, parameters read-only, freeze HOLD. Lee timeline detailed source.
+
 ## 2026-11-02 — Lee QW4 fine current and recombination profile confirms extreme local sink (OBSERVED; NO RUN)
 - 이택규 기존 `qw4_36_qw4fine.csv` cutline Y=1um에서 B3 JnX=.0017779541, QW4 interior JnX=.3362/.9614/1.5101, B4 JnX=1.8234614. QW4 interior radiative density 2.44–3.08e25, B3 9.61e14, B4 7.47e18; Jtotal across ~1.8236.
 - B4→B3 JnX 감소 =1.8216834459 A/cm² (~99.9025%), **local current attenuation**이지 QW radiative fraction 99.97%와 다른 지표. Strong recombination sink pattern supports capture within QW4 but **B3 electron barrier as underlying cause remains hypothetical**, 2D lateral flows unresolved.

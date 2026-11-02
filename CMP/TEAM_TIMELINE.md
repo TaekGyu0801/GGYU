@@ -1,3 +1,6 @@
+## 2026-11-02 — Lee confirms 70:30 GaN/InGaN nominal band offsets from active PAR (OBSERVED+DERIVED, NO RUN)
+- Actual `pp2_des.par` GaN Eg0=3.4376/Chi0=4.1000eV, InGaN Eg0=2.8569/Chi0=4.5065eV, AlGaN Eg0=3.7564/Chi0=3.8768eV, mobility parameters mumax=(300,10) for all. Derived ΔEg=.5807eV, ΔEc=.4065eV, ΔEv=.1742eV (70:30 split). Flat-band material offset ≠ barrier local Ec−eQF (.445–.5144eV), and it doesn't alone prove electron transport bottleneck or QW4 root cause. SVisual job closed; no new simulation or code changes. Physical Baseline freeze HOLD. Next verify polar/strain model parameter settings.
+
 ## 2026-11-02 — Lee QW1–4 center polarization and In fraction match (OBSERVED; NO RUN)
 - 기존 n2 3.6V `qw4_36_depth.csv` Y=1um read-only samples: QW1..QW4 all `PE_Polarization-X=8.2162955e−7`, `xMoleFraction=0.15`; B0..B4 all `PE_Polarization-X=3.4e−6`, `xMoleFraction=0`. QW4 only larger *bulk P/indium composition* hypothesis is contradicted at center points; QW4-selective radiative recombination cause unresolved. Actual effective interface sheets at all 8 interfaces and cumulative transport fields not yet checked. Next pp2/pp6 polarization + thermionic model read-only audit. Baseline physical freeze HOLD; no run/source changes. Details Lee TIMELINE.
 

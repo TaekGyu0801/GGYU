@@ -1,3 +1,8 @@
+## 2026-11-02 — Lee reports new shelf-free clone PolAct parameter change; full SDevice source requested (USER-REPORTED, PRE-RUN)
+- 이택규는 잘못된 shelf-retained Copy를 중단 후 원본 V2.1 복사본의 SWB 파라미터를 변경했다고 보고; **새 복사본 코드/실효 pp/메시 검증 및 solver 실행은 미확인**.
+- ChatGPT가 요청에 따라 전체 `sdevice_des.cmd` 교체용 실행 코드 전달. 기존 사용자-provided V2 입력과 이전 원본/복사본 diff에 근거하여 분극 `activation=@PolAct@`, global Math Iterations12, 나머지 물리모델/Trap/Plot/CurrentPlot/Solve 제어를 원본 V2.1과 맞춘 버전; 독립적으로 새 프로젝트 디스크 파일의 정확한 byte equivalence를 검증한 것은 아님. SWB PolAct=0이면 자동 치환되므로 별도의 polarization 키워드 수정 불필요.
+- 다음: 실제 적용·shelf-free mesh·preprocessed pp 활성값/Iterations 검증 후 실행. 이전 물리 모델 판정 B/FREEZE HOLD 유지.
+
 ## 2026-11-02 — Lee halted shelf clone and duplicated intended V2.1 (USER-REPORTED PROGRESS)
 - 사용자가 기존 shelf 포함 `CMP_BASELINE_2.1.0_POL0DIAG`을 멈추고, `CMP_BASELINE_2.0.0_V2_Copy`가 아닌 원본 `CMP_BASELINE_2.0.0_V2`를 다시 복사했다고 설명. 실제 SWB 새 프로젝트는 아직 rename/parameter/mesh 검증 전. 중단된 실행 결과/완료 상태 미제공, 과학적 결과 없음.
 - GPT 다음 제안: 별도 이름 `CMP_BASELINE_2.1.0_POL0NOSHELF`(제안, 미확인), 원본 코드/물성 보존, 양 노드 PolAct 0.5→0 파라미터만 변경 후 Parameters 화면, shelf 없는 n1_msh, pp activation=0/Iterations=12 확인. 원본 보호, Baseline B/FREEZE HOLD.

@@ -1,3 +1,7 @@
+## 2026-11-02 — Lee halted shelf clone and duplicated intended V2.1 (USER-REPORTED PROGRESS)
+- 사용자가 기존 shelf 포함 `CMP_BASELINE_2.1.0_POL0DIAG`을 멈추고, `CMP_BASELINE_2.0.0_V2_Copy`가 아닌 원본 `CMP_BASELINE_2.0.0_V2`를 다시 복사했다고 설명. 실제 SWB 새 프로젝트는 아직 rename/parameter/mesh 검증 전. 중단된 실행 결과/완료 상태 미제공, 과학적 결과 없음.
+- GPT 다음 제안: 별도 이름 `CMP_BASELINE_2.1.0_POL0NOSHELF`(제안, 미확인), 원본 코드/물성 보존, 양 노드 PolAct 0.5→0 파라미터만 변경 후 Parameters 화면, shelf 없는 n1_msh, pp activation=0/Iterations=12 확인. 원본 보호, Baseline B/FREEZE HOLD.
+
 ## 2026-11-02 — Lee catches wrong shelf geometry lineage in POL0DIAG (USER-REPORTED + IMAGE; NO VALID PHYSICS RESULT)
 - 이택규가 SVisual `n1_msh` 캡처 후 lateral 오른쪽 돌출 '턱'이 있음을 지적. 화면은 2um half mesa 경계를 넘어 약 2.5um까지 red n-GaN-like 영역이 연장되는 shelf-like shape (Elements=124583, Points=60163); 이런 형상은 이전 작업용 V2.1 원본 `Wshelf=0`과 맞지 않음.
 - 사용자 본인 추정/설명: POL0DIAG을 제대로 된 `CMP_BASELINE_2.0.0_V2`가 아닌 예전 `CMP_BASELINE_2.0.0_V2_Copy`에서 복사한 것 같음. 기존 원본 V2.1이 shelf 제거 구조로 채택된 것은 이전 2026-10-15 보고/2026-10-22 실측 파일에 기록되어 있음. 정확한 clone SDE/mesh 경로는 아직 재검증 전.

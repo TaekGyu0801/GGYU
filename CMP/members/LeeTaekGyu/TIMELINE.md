@@ -1,3 +1,10 @@
+## 2026-11-02 — 2D Half 전류밀도 정규화 산술 재현 (OBSERVED USER TERMINAL + CONDITIONAL DERIVED; NO RUN)
+- 이택규가 실제 학교 서버 `/user/semi/semi437/CMP_BASELINE_2.0.0_V2`에서 n2_des.log, n6_des.log를 grep하여 anode/cathode 모두 runtime `area factor : 1` 재확인. 첫 grep은 명령어 두 개가 붙어 `n6_des.loggrep` 오류가 났지만 동일 명령의 나머지 출력으로 두 노드 결과 정상 확보. TCAD 오류 아님.
+- 실제 `pp1_dvs.cmd` grep에서 Wm=4.0um, Wshelf=0, Wdmg=0.005um, Wedge=0.1um, Xs=Wm/2=2.0um, Xd=Xs-Wdmg, Xe=Xd-Wedge 및 상단 세 anode/하단 cathode 소스 정의 재확인.
+- 본인이 터미널에서 `python3 -c`로 기존 3.6V PLT 원시 anode I를 대입해 직접 계산: 면외 폭 1um 가정 시 A=2.0e-8 cm2, n2 J=1.8236426244266148 A/cm2, n6 J=0.4609853856709715 A/cm2, 동일 전압 감소율=74.72172565521639%. 이는 **기존 수치의 산술 재현**이며 새로운 시뮬레이션이나 새로운 PLT 추출이 아님.
+- 교육용 Sentaurus 2D 기본 면외 폭 1um 설명과 일치하나 공식 T-2022.03 원문 대조, 실제 mesh 대칭 경계 및 Full/Half 동등성, 4x4um 실제 정사각형 pixel 물리 calibration은 미완료. 위 J는 CONDITIONAL 2D slice J임.
+- 다음은 기존 `pp1_dvs.cmd` 대칭 절단선/접점 경계 및 mesh의 실제 형상 읽기 전용 확인. Baseline freeze HOLD; 소스/메시/시뮬레이션 변경 없음.
+
 ## 2026-10-31 — n2 로그에서 contact AreaFactor=1 확인 (OBSERVED, NO RUN)
 - 실제 학교 서버 `n2_des.log` lines237–238: anode (Ohmic) `area factor : 1`, cathode (Ohmic) `area factor : 1`. 기존 CMD/PAR `AreaFactor` grep 미검출과 상충하지 않음: 현재 **n2 런타임 접점 스케일 값**을 직접 확인했음.
 - n6는 이 출력에서 확인되지 않음. 출력에 pp1_dvs.cmd geometry/contact 정의가 없어 Half 폭/전류밀도 환산은 미완료. QW4 99.97% 집중의 물리적 원인과 Baseline freeze는 여전히 UNRESOLVED/HOLD.

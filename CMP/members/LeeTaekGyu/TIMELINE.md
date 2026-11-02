@@ -1,3 +1,7 @@
+## 2026-11-02 — Sentaurus executable real installation path confirmed, MaterialDB location next (OBSERVED, NO RUN)
+- 이택규 학교 서버 `which sdevice` 실제 출력: `/user/tools/synopsys/sentaurus/T-2022.03/bin/sdevice`. 이전 환경변수 조회 `env | grep -E '^(STROOT|STRELEASE)='`는 출력 없었지만, 실행 파일의 위치는 PATH를 통해 확인됨. 이 결과는 설치된 실행 파일 위치만 확인하며 MaterialDB 실제 경로 또는 해당 파일 내용까지 증명하지 않음.
+- NEXT READ ONLY: `find /user/tools/synopsys/sentaurus/T-2022.03 -maxdepth 8 -type d -name MaterialDB -print`. 검색 결과 후 해당 GaN/InGaN/AlGaN 기본 분극 물성 파일명·값을 읽고 기존 n2 PE_Polarization-X와 물성 관계 검토. Sentaurus 원본/시뮬레이션/mesh 수정 없음. Baseline physical FREEZE HOLD.
+
 ## 2026-11-02 — STROOT/STRELEASE 환경변수 읽기 시 shell syntax 오류 (OBSERVED, NO RUN)
 - User terminal in CMP_BASELINE_2.0.0_V2: prior assistant command with Bash-style fallback for environment variables failed with `Bad : modifier in $ (-).`.
 - Diagnosis: this shell error is consistent with csh/tcsh treating Bash fallback expansion as invalid. Exact shell not independently identified. This is not a Sentaurus solver error or evidence that MaterialDB is missing.

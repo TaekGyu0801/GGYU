@@ -1,3 +1,8 @@
+## 2026-11-02 — QW4 3.6V cutline numeric coverage + current stack boundaries verified (OBSERVED; NO RUN)
+- `qw4_eq_depth.csv` N392/X0.13988867–0.2973125/Y1; `qw4_36_depth.csv` N392/same; `qw4_36_qw1fine.csv` N66/X0.1800625–0.19995312/Y1; `qw4_36_qw4fine.csv` N62/X0.25543749–0.27428126/Y1. Numeric row filter `r['X'] not in ('none','')` executed successfully after a concatenated-command shell SyntaxError.
+- Latest user `pp1_dvs.cmd` top→bottom thickness yields QW1 .188–.191, QW2 .213–.216, QW3 .238–.241, QW4 .263–.266um, adjacent B0–B4 boundaries derived from stack (Y=1 depth cutline covers wells and barriers). Old claimed QW coordinates from 10/12 may be shifted by .020um; do not conflate without verifying dataset version.
+- Next read only: sample the current CSV at B0–B3 and QW1–QW4 centers for electron/hole current, density, Ec−eQF and hQF−Ev before judging electron interwell bottleneck. The `PolAct` diagnostic remains PROPOSED and unapproved, Baseline physical FREEZE HOLD.
+
 ## 2026-11-02 — 실제 cutline CSV 헤더와 첫 수치 행 확인 (OBSERVED USER TERMINAL, NO RUN)
 - 4 CSV wc -l: eq_depth 395, 36_depth 395, qw1fine 69, qw4fine 65; headers include metadata row `none` and fields for signed PE_Charge, PE_Polarization-X, Ec, Ev, e/h QuasiFermiEnergy, n/p, e/hCurrentDensity-X, X/Y/Distance.
 - 3.6V depth sample X=0.14um Y=1um TotalCurrentDensity-X~1.8236326 (numeric match to previously calculated conditional 2D J~1.8236426), PE_Charge=-5.5020169e20 is local field, **not** integrated sheet cm^-2.

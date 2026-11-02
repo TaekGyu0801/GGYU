@@ -1,3 +1,11 @@
+## 2026-11-02 — 사용자 결정 대기: 이택규 PolAct 진단 실험 (NO RUN / FREEZE HOLD)
+- **결정 1 [미선택]:** 실험 전 Claude 제안 판정 기준을 **그대로 채택**하거나 **값 수정(수정 수치 기록)**. H1: QW1 중심 JnX/J≥1% 및 QW4 방사비중<80%. H2: JnX/J<0.1% 및 QW4>99%. 그 사이/혼합: 양쪽 기여 또는 원인 판정 보류. 문헌 검증 값이 아닌 사전 설정용 heuristic.
+- **Project A 사전 기준(제안, 미승인):** 동일 전류 `IQE_sim=q∫Rad_QW/I`의 Trap OFF→ON 감소율이 PolAct=0.5 및 0에서 같은 부호, 상대 차이 ±25% 이내. 감소율/상대차 산식 및 오차 정의는 사용자 결정 전 명시 필요.
+- **결정 2 [미선택]:** (가) n2 NtSide=0 + n6 NtSide=1e18 두 노드를 함께 진단(Claude 추천; 시간 약 2배라는 추정, 실제 시간 미검증); (나) n2만 우선 진단하고 Project A 판단 시 n6 추가.
+- **모든 선택에서 고정:** 원본 `CMP_BASELINE_2.0.0_V2` 보존, SWB 보호 복사본에서 PolAct **0.5→0만 변경**. Claude가 보고한 덱 21행 `activation=@PolAct@`는 실행 전 실제 덱/pp에서 재확인. 메시·전극·par·Thermionic/Formula=1·Fermi·재결합·Math(Iterations=12)·Solve 램프 동일. 원본과 복사본 pp diff가 활성화 설정 **한 줄만** 달라지는지 검증. Global activation은 EBL 계면에도 영향을 주며 PolAct=0은 진단용, Baseline 후보가 아님.
+- **실행 전 READ ONLY:** 기존 n2/n6 .plt로 동일 전류 `IQE_sim` 기준값을 계산. 아직 계산·복사·실험을 수행하지 않았으며 **이택규 승인도 없음**. Baseline B / FREEZE HOLD 유지.
+- 기존 11/02 오전 QW4 계획의 CSV sheet 적분 단계는 밤 Claude 결정에 따라 불필요(SUPERSEDED); 이 결정 대기 단계로 대체.
+
 ## 2026-11-02 — Lee requests independent Claude decision review before next TCAD run (HANDOFF PROPOSED, NO RUN)
 - Worker Lee requested a concise independent Claude reassessment because extensive read-only QW4 audits have become repetitive. ChatGPT proposes STOP additional data-gathering for now, classify physically-verified vs unexplained evidence, and request Claude to decide whether a single controlled sensitivity test is actually informative and whether provisional Project A work can proceed.
 - Evidence already available: n2 QW4 fraction of four QW radiative ~99.9688%; n6 ~99.9929% (not IQE). Existing n2 3.6V Y=1um QW1 vs QW4 pointwise n ratio~208.95, p ratio~481.26, n*p~100558; Rad/(n*p) both ~2e-11 cm3/s. Fine CSV electron-current-versus-q-integrated-recombination consistency QW1~99.9994% and QW4~99.9921% across well+adjacent barrier ranges. QW4 focusing causal physics remains unresolved. B2 broad-window ΔeQF=0.25042766eV cannot alone prove bottleneck.

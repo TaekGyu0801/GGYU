@@ -5454,5 +5454,25 @@
     "solverRun": false,
     "sourceChange": false,
     "next": "Inspect InGaN.par component/endpoint interpolation comments and installed InN.par Piezoelectric_Polarization read-only"
+  },
+  "leeInGaNEndpoints20261102": {
+    "worker": "이택규",
+    "status": "OBSERVED_SOURCE; QWStrain_MAPPING_UNRESOLVED; NO_RUN",
+    "file": "T-2022.03 MaterialDB/InGaN.par",
+    "endpoints": {
+      "x0": "GaN",
+      "x1": "InN"
+    },
+    "defaultInterpolation": "P(x)=(1-x)P(GaN)+xP(InN) where no explicit override",
+    "xMoleFraction_QW": 0.15,
+    "qwStrain_a0_Angstrom": {
+      "index0": 3.548,
+      "index1": 3.189
+    },
+    "discrepancy": "QWStrain a0 endpoints reverse GaN/InN header convention; source/model details and runtime activation unverified",
+    "runtimePolarizationOrigin": "UNRESOLVED",
+    "qw4RootCause": "UNRESOLVED",
+    "baselineFreeze": "HOLD",
+    "next": "read-only check InN.par polarization block and model inheritance"
   }
 }

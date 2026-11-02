@@ -1,3 +1,7 @@
+## 2026-11-02 — Lee school shell csh syntax issue recovered by Ctrl-C plan (ERROR, NO RUN)
+- User terminal at `CMP_BASELINE_2.1.0_POL0DIAG` rejects ChatGPT-provided Bash `for/do/done` and `$f` with `for: Command not found`, `do: Command not found`, `f: Undefined variable`; `else?` prompt indicates unfinished csh/tcsh input. This reflects incorrect assistant command for the environment; no TCAD run failure or file change.
+- Assistant advised `Ctrl+C` and read-only shell-neutral `find . -maxdepth 1 -name 'pp*_des.cmd' -print`. No returned `find` output yet. Effective clone pp activation / solver values not yet established. Baseline B FREEZE HOLD.
+
 ## 2026-11-02 — Lee direct terminal confirms POL0DIAG saved source Iterations12 (OBSERVED; NO RUN)
 - New project `~/CMP_BASELINE_2.1.0_POL0DIAG`, user-executed source grep: `39: Piezoelectric_Polarization( strain activation=@PolAct@ )`, `276: Iterations = 12`. The SDevice edit to restore original V2.1 numerical iterations **is now verified in saved source**, not merely user report.
 - Prior SWB screenshot showed both project rows PolAct=0, but effective preprocessed pp activation remains unverified. Next `ls -l pp2_des.cmd pp6_des.cmd` and inspect pp (preprocess-only if missing). SDE/PAR/mesh equivalence, existing IQE_sim and thresholds still open; no new TCAD solver run reported; Baseline B FREEZE HOLD.

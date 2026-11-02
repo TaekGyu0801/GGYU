@@ -4710,5 +4710,30 @@
     },
     "caveat": "Center-only Bnp proxy is not 2D recombination integral, causality or calibrated IQE. Nominal centers derived from source layering; GUI region label not re-probed.",
     "next": "Use existing equilibrium/bias Ec, Ev, quasi-Fermi and polarization charge profiles at matched Y=1.0um to investigate both-carrier accumulation toward QW4. No new run or code edits."
+  },
+  "leeQW4CsvFilesFound20261102": {
+    "worker": "이택규",
+    "date": "2026-11-02",
+    "status": "OBSERVED_USER_TERMINAL_FILE_SEARCH; NO_RUN",
+    "project": "/user/semi/semi437/CMP_BASELINE_2.0.0_V2",
+    "filesFound": [
+      "qw4_eq_depth.csv",
+      "qw4_36_qw1fine.csv",
+      "qw4_36_depth.csv",
+      "qw4_36_qw4fine.csv"
+    ],
+    "notFoundWithinSearchScope": "server_readonly_cmds_20261102.sh (find maxdepth4)",
+    "verifiedOnly": "file paths in user terminal output",
+    "notVerified": [
+      "actual CSV schema",
+      "numeric values",
+      "unit mapping",
+      "provenance and completeness",
+      "server-wide script absence"
+    ],
+    "next": "Read-only wc -l and head -n 6 on eq/depth CSV before integration or QF computation",
+    "baselineFreeze": "HOLD",
+    "simulationRun": false,
+    "codeChanged": false
   }
 }

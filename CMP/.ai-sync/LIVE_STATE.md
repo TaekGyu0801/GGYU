@@ -1,3 +1,8 @@
+## 2026-11-02 — 실제 cutline CSV 헤더와 첫 수치 행 확인 (OBSERVED USER TERMINAL, NO RUN)
+- 4 CSV wc -l: eq_depth 395, 36_depth 395, qw1fine 69, qw4fine 65; headers include metadata row `none` and fields for signed PE_Charge, PE_Polarization-X, Ec, Ev, e/h QuasiFermiEnergy, n/p, e/hCurrentDensity-X, X/Y/Distance.
+- 3.6V depth sample X=0.14um Y=1um TotalCurrentDensity-X~1.8236326 (numeric match to previously calculated conditional 2D J~1.8236426), PE_Charge=-5.5020169e20 is local field, **not** integrated sheet cm^-2.
+- NEXT (READ ONLY) verify min/max X/Y for CSV cutlines and actual pp1_dvs.cmd MQW stack, then band/QF/current profile and signed interface polarization charge calculation with validated units and sorted points. Claude electron bottleneck hypothesis and polar-sensitivity run remain PROPOSED; physical baseline FREEZE HOLD.
+
 ## 2026-11-02 — 이택규 QW4 기존 cutline CSV 네 파일 발견 (OBSERVED, NO RUN)
 - 학교 서버 `CMP_BASELINE_2.0.0_V2` 안에서 사용자 `find -maxdepth 4` 결과 기존 `qw4_eq_depth.csv`, `qw4_36_depth.csv`, `qw4_36_qw1fine.csv`, `qw4_36_qw4fine.csv` **파일 존재** 확인. **데이터 열·단위·값 및 출처 검증은 미완료**.
 - `server_readonly_cmds_20261102.sh`는 동일 검색 범위에서 미발견. 이번 작업에서는 새 simulation/코드 변경/CSV 파싱 없음.

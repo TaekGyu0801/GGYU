@@ -1,3 +1,7 @@
+## 2026-11-02 — Lee installed AlGaN polarization coefficients observed — follow-up READ ONLY
+- Worker 이택규 actual school-server read-only grep of installed T-2022.03 MaterialDB *GaN.par (output truncated by head -n 120): AlGaN.par Piezoelectric_polarization block line1017; formula=1 line1076; relax=0.0 line1078; psp_z(0)=-3.4000e-06, psp_z(1)=-9.0000e-06, B(psp_z(1))=-2.10e-06, C(psp_z(1))=0; e31(0)=-5.2740e-05, e33(0)=8.9460e-05 C/cm^2. GaN.par polarization section heading line737 observed but numeric coefficients not within pasted output; InGaN.par numeric coefficients not within pasted output.
+- NEXT READ ONLY: grep assignment lines for psp_z, e31, e33, a0, a, relax and formula in GaN.par, InGaN.par, AlGaN.par WITHOUT head truncation; check InGaN x=0.15 and runtime provenance. No physics perturbation without approval.
+
 ## 2026-11-02 — MaterialDB material files found, polarization coefficients NEXT (OBSERVED; NO RUN)
 - READ ONLY user `find` in confirmed T-2022.03 MaterialDB gave `GaN.par`, `InGaN.par`, `AlGaN.par`, `AlInGaN.par`. Files' presence confirmed; numerical polarization parameters/effective settings NOT yet viewed.
 - FIRST NEXT READ ONLY: grep psp_z/e31/e33/a0/relax/Piezoelectric_Polarization in installed material files, no copies or writes. Interpret overrides in n2 cmd/par and possible runtime release defaults after collecting exact source rows. Current physical baseline B/FREEZE HOLD, cause QW4 ~99.97% unresolved.

@@ -1,3 +1,7 @@
+## 2026-11-02 — MaterialDB material files found, polarization coefficients NEXT (OBSERVED; NO RUN)
+- READ ONLY user `find` in confirmed T-2022.03 MaterialDB gave `GaN.par`, `InGaN.par`, `AlGaN.par`, `AlInGaN.par`. Files' presence confirmed; numerical polarization parameters/effective settings NOT yet viewed.
+- FIRST NEXT READ ONLY: grep psp_z/e31/e33/a0/relax/Piezoelectric_Polarization in installed material files, no copies or writes. Interpret overrides in n2 cmd/par and possible runtime release defaults after collecting exact source rows. Current physical baseline B/FREEZE HOLD, cause QW4 ~99.97% unresolved.
+
 ## 2026-11-02 — Sentaurus MaterialDB installed directory verified; identify GaN and InGaN files NEXT (OBSERVED/PROPOSED)
 - User actual school server `find` output confirms `/user/tools/synopsys/sentaurus/T-2022.03/tcad/T-2022.03/lib/sdevice/MaterialDB`; executable `/user/tools/synopsys/sentaurus/T-2022.03/bin/sdevice`. Thus no need for unset STROOT/STRELEASE. Existence of GaN/InGaN individual files and numeric coefficients remains NOT YET VERIFIED.
 - NEXT READ ONLY shell: `find /user/tools/synopsys/sentaurus/T-2022.03/tcad/T-2022.03/lib/sdevice/MaterialDB -maxdepth 1 -type f \( -iname '*gan*' -o -iname '*ingan*' -o -iname '*algan*' \) -print` then check any matched .par files' psp_z/e31/e33/a0/relax, compare with actual `PE_Polarization-X`. Do not edit default DB or source model; physical baseline HOLD.

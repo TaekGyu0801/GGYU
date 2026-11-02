@@ -1,3 +1,9 @@
+## 2026-11-02 — QW4 실제 CSV 스키마 확인 완료; 좌표 범위 및 QW 좌표 매핑 NEXT (OBSERVED READ ONLY)
+- eq/3.6V depth `head -n 6`으로 field `PE_Charge`, `PE_Polarization-X`, Ec/Ev, e/h QuasiFermiEnergy, e/h Density, e/h CurrentDensity-X, X/Y/Distance 존재 확인. 각각 첫 줄 variable header, 둘째 줄 `none` metadata 행 -> 수치 파싱 시 건너뛸 것.
+- `wc -l`: depth eq/3.6V 각 395행, qw1fine 69행, qw4fine 65행. User 3.6V 표본 `TotalCurrentDensity-X~1.8236326` near conditional J~1.8236426; PE_Charge -5.502e20 value는 **local value**이고 cm^-2 sheet 적분 결과 아님.
+- FIRST READ ONLY: `X`/`Y` bounds and step/duplication check for 4 CSVs; current `pp1_dvs.cmd` QW1–4 stack coordinate intervals, then `PE_Charge` layer-interface integration only when units and data ordering verified. Do not execute/find replacement for missing Claude script.
+- NO NEW RUN; existing Baseline FREEZE HOLD; transport bottleneck hypothesis remains NOT CONFIRMED.
+
 ## 2026-11-02 — QW4 CSV 존재 확인 후 데이터 구조 파악 NEXT (OBSERVED USER FILE SEARCH; READ ONLY)
 - 실제 V2.1 서버 `find` 결과에서 `qw4_eq_depth.csv`, `qw4_36_depth.csv`, `qw4_36_qw1fine.csv`, `qw4_36_qw4fine.csv` 네 파일 존재 확인. 클로드의 `server_readonly_cmds_20261102.sh`는 해당 폴더 4단계까지 검색에서 **미발견**. 스크립트 실행 불필요; 새 solver run 불필요.
 - IMMEDIATE: shell-compatible `wc -l qw4_*.csv`, `head -n 6 qw4_eq_depth.csv`, `head -n 6 qw4_36_depth.csv` 출력으로 원자료 헤더/변수/단위·좌표 열 파악. 실제 헤더 확인 전 PE_Charge 면밀도를 가정 계산하지 말 것. 첫 두 CSV를 확인한 뒤 QW1/4 fine CSV도 점검.

@@ -1,3 +1,10 @@
+## 2026-11-02 — Lee CSV B0–B3 전자 부족 검산 및 QW4 전류 분배 확인 후 Claude/GPT 인수인계 (OBSERVED)
+- **Worker:** 이택규. **AI:** GPT. **Blocker:** V2.1 QW4 방사재결합 n2 99.9688% (old 3.6V) 원인 불명, Baseline physical FREEZE HOLD. Claude 11/02 전자 interwell transport bottleneck 제안에 대해 데이터 패턴만 검증.
+- **New observed:** n2 3.6V cutline `qw4_36_depth.csv` Y=1um, B0/B1/B2/B3 p/n ≈5.90e4/1.002e5/4.04e4/1.43e4, Ec−eQF=.507/.5144/.4895/.4449eV; QW3 n2.339e16/p1.594e16; QW4 n1.0123e18/p1.5190e18. B3 JnX .0017767865/JpX 1.8218269, QW4 midpoint JnX .96137367/JpX .86228261, local Jtot≈1.8236. QW4 region is strong carrier current re-partition area (consistent with recombination sink). This does NOT prove barrier is root-cause rather than recombination sink effect. Original files/solver unchanged.
+- **Reference path:** `/user/semi/semi437/CMP_BASELINE_2.0.0_V2` `qw4_36_depth.csv`, `qw4_36_qw4fine.csv`, `pp1_dvs.cmd`.
+- **NEXT READ ONLY:** sample `qw4_36_qw4fine.csv` at X=.260/.2625/.2635/.2645/.2655/.2665/.270um for JnX, JpX, total, Ec−eQF, radiative recombination and coordinate bounds. Then assess 2D Y-current component and actual signed PE_Charge sheet units.
+- **Do not change:** original Common Baseline source/mesh/physics; `PolAct` one-variable trial not yet authorized. Experiment proposal only, no new run.
+
 ## 2026-11-02 — 이택규 Claude → ChatGPT QW4 전자수송 병목 가설 검증 인수인계 (PROPOSED; NO NEW RUN)
 - **작업자/AI:** 이택규, Claude 재평가를 ChatGPT가 전달받아 GitHub에 보존. Claude는 `8553f64`까지 열람했고 Issue #7은 403으로 미열람했다고 보고. ChatGPT는 Issue #7을 실제로 읽음.
 - **정확한 blocker:** 2D Half V2.1 Trap OFF n2 QW4 99.9687748%, Trap ON n6 99.9929427%로 QW 방사 집중; 실제 물리 원인 미확정. 서브 blocker: 분극 sheet 면밀도/계면 모델·전류 수송 조건, 2D/Full-Half 물리 보정과 mesh 품질.

@@ -1,3 +1,7 @@
+## 2026-11-02 — Lee asks for copy-paste SDevice Math fix, patch provided not yet applied (PROPOSED, NO RUN)
+- Worker 이택규는 새 POL0DIAG SDevice를 직접 편집하겠다고 하며 복붙 코드를 요청. ChatGPT 제공 변경은 `Math { ... Iterations = 12 ... }` 블록이며 기존 복제본의 `Iterations=20`을 원본 실행 deck `12`로 복원하기 위한 목적. 다른 Math 옵션은 기존 사용자 첨부 파일과 동일하게 유지.
+- `Piezoelectric_Polarization(strain activation=@PolAct@)`은 이미 매크로 연결되어 수정 없음, SWB 복제본 PolAct=0은 UI에서 확인한 값. **아직 사용자 적용, preprocess, solver run 보고 없음.** SDE/PAR/복제본 물성 및 실제 pp 비교 미확인. Original protected. Baseline B/FREEZE HOLD.
+
 ## 2026-11-02 — Lee live clone diff exposed unintended Iterations change (OBSERVED / NO RUN)
 - 실제 학교 서버 diff: original `CMP_BASELINE_2.0.0_V2/sdevice_des.cmd` global `Math Iterations=12`, POL0DIAG clone SDevice `Iterations=20`. 양쪽 `Piezoelectric_Polarization(strain activation=@PolAct@)` 동일; 출력된 나머지 차이는 주석/포맷(Trap 선언 줄바꿈 포함). 앞서 SWB Parameters의 clone PolAct=0 설정과 모순 없음. 파일 자체는 byte-identical이 아니므로 clone source 원본 동일성 gate 실패.
 - **Corrective action only proposed; user not yet confirmed execution:** backup new clone SDevice, copy original SDevice into clone, verify `cmp`, then preprocess confirm activation=0 and Iterations=12; full clone equivalence checks still needed. No new solver run or source edit by ChatGPT. Baseline physical B / FREEZE HOLD.

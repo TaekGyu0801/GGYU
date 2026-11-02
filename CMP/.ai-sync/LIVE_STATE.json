@@ -4735,5 +4735,52 @@
     "baselineFreeze": "HOLD",
     "simulationRun": false,
     "codeChanged": false
+  },
+  "leeQW4CsvSchemaObserved20261102": {
+    "worker": "이택규",
+    "date": "2026-11-02",
+    "status": "OBSERVED_USER_PASTED_CSV_HEAD_AND_COUNTS; NO_RUN",
+    "run": false,
+    "files": {
+      "qw4_eq_depth.csv": {
+        "lines": 395
+      },
+      "qw4_36_depth.csv": {
+        "lines": 395,
+        "firstData": {
+          "X": 0.14,
+          "Y": 1,
+          "TotalCurrentDensity_X": 1.8236326,
+          "PE_Charge": -550201690000000000000
+        }
+      },
+      "qw4_36_qw1fine.csv": {
+        "lines": 69
+      },
+      "qw4_36_qw4fine.csv": {
+        "lines": 65
+      }
+    },
+    "format": "CSV first header row, second metadata/none row, subsequent numeric rows; 393/393/67/63 nominal rows pending total content validation",
+    "observedFields": [
+      "PE_Charge",
+      "PE_Polarization-X",
+      "ConductionBandEnergy",
+      "ValenceBandEnergy",
+      "eQuasiFermiEnergy",
+      "hQuasiFermiEnergy",
+      "eDensity",
+      "hDensity",
+      "eCurrentDensity-X",
+      "hCurrentDensity-X",
+      "TotalCurrentDensity-X",
+      "X",
+      "Y",
+      "Distance"
+    ],
+    "interpretation": "3.6V cutline Jx about 1.8236326 numerically consistent with previous conditional 1.8236426 A/cm². PE_Charge is local density, not interface sheet charge; unit and integration must be checked.",
+    "next": "Read-only csv numeric X/Y ranges, numerical row count, current pp1_dvs.cmd MQW stack to identify actual barrier/QW coordinates; then sample and integrate interface charge after unit audit",
+    "baselineFreeze": "HOLD",
+    "warning": "No new simulator run, no physical cause confirmed, Claude hypotheses not validated"
   }
 }

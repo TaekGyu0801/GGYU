@@ -5428,5 +5428,31 @@
     "QW4Causality": "UNRESOLVED",
     "baselineFreeze": "HOLD",
     "next": "Read only sed -n '225,285p' InGaN.par, inspect QWStrain context and defaults provenance"
+  },
+  "leeInGaNQWStrainAudit20261102": {
+    "worker": "이택규",
+    "status": "OBSERVED_USER_SOURCE; NO_RUN",
+    "date": "2026-11-02",
+    "source": "Installed T-2022.03 MaterialDB/InGaN.par lines225-285",
+    "model": "QWStrain: strain-dependent quantum-well subband energy shift, not Piezoelectric_Polarization",
+    "a0_endpoints_angstrom": [
+      3.548,
+      3.189
+    ],
+    "eps_endpoints": [
+      0,
+      0
+    ],
+    "a_c_endpoints_eV": [
+      -4.08,
+      -4.08
+    ],
+    "formula": "comment requires formula 2 for wurtzite; actual active value/model not verified",
+    "materialPolarizationCoefficients": "No InGaN explicit polarization assignment in prior grep, inherited/default origin not verified",
+    "QW4Causality": "UNRESOLVED",
+    "baselineFreeze": "HOLD",
+    "solverRun": false,
+    "sourceChange": false,
+    "next": "Inspect InGaN.par component/endpoint interpolation comments and installed InN.par Piezoelectric_Polarization read-only"
   }
 }

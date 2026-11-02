@@ -1,3 +1,16 @@
+## 2026-11-02 — QW4 fine CSV 3.6V에서 B3→QW4→B4 전류 재분배 직접 확인 (OBSERVED + DERIVED; NO RUN)
+- 이택규 사용자 실제 학교 서버 `qw4_36_qw4fine.csv` read-only `python3 -c` 출력(Y=1um) 7개 cutline depth 표본:
+  - X=0.26014844 (B3): JnX 0.0017772979, JpX 1.8218264, Jtotal 1.8236037, Ec−eQF 0.3734eV, Rad 1.3475925e15.
+  - X=0.26250389 (B3): JnX 0.0017779541, JpX 1.8218258, Jtotal 1.8236037, Ec−eQF 0.3520eV, Rad 9.6067543e14.
+  - X=0.26355079 (QW4): JnX 0.33616893, JpX 1.4871776, Jtotal 1.8233466, Ec−eQF 0.0008eV, Rad 2.4382434e25.
+  - X=0.26459765 (QW4): JnX 0.96137367, JpX 0.86228261, Jtotal 1.8236563, Ec−eQF 0.0856eV, Rad 3.075366e25.
+  - X=0.26551366 (QW4): JnX 1.5101376, JpX 0.31358008, Jtotal 1.8237176, Ec−eQF 0.1603eV, Rad 2.4777785e25.
+  - X=0.26656055 (B4): JnX 1.8234614, JpX 0.0003014948, Jtotal 1.8237629, Ec−eQF 0.3675eV, Rad 7.4700005e18.
+  - X=0.27009374 (B4): JnX 1.8234663, JpX 0.00029702933, Jtotal 1.8237634, Ec−eQF 0.3054eV, Rad 8.5527203e18.
+- DERIVED between near-QW boundaries: B4 Jn−B3 Jn =1.8216834459 A/cm²; fraction relative to B4 Jn 99.90249565%. This is **local depthwise Jn change across QW4 at Y=1um**, NOT QW4 99.9688% of QW radiative PLT-integrals. Total Jx near ~1.8236. In-well Rad ~(2.4–3.1)e25 cm^-3s^-1 versus adjacent barrier local rates much smaller. Compatible with severe QW4 electron-hole recombination sink and near-total electron flux attenuation toward p side.
+- CAUSALITY NOT CONFIRMED: 2D electron continuity includes lateral derivative ∂JnY/∂Y; center-line ∆JnX alone cannot be assigned 100% to recombination, nor prove that B3 potential barrier, polar sheet or thermionic transport caused it. Strong QW4 recombination may explain low upstream electron current. Must distinguish flux-consumption observation from root cause.
+- NEXT READ ONLY: from all numeric rows of `qw4_36_qw4fine.csv`, evaluate QW4 X=.263–.266um approx `q∫ TotalRecombination dx` (µm→cm 1e-4), compare to ∆JnX and channel decomposition Rad/Auger/SRH with Y-current caveat; then PE_Charge signed sheet integration & exact model parameter checks. Existing V2.1 source/mesh and solver not modified, Baseline B physical FREEZE HOLD.
+
 ## 2026-11-02 — 3.6V B0–B3/QW1–QW4 장벽 중심 전자·정공 수송 수치 직접 검산 (OBSERVED USER TERMINAL + DERIVED; NO NEW RUN)
 - 이택규가 기존 `qw4_36_depth.csv`를 read-only Python DictReader로 열고 SDE `pp1_dvs.cmd` layer-center 인근 최근접 좌표의 `eDensity`, `hDensity`, `Ec-eQuasiFermiEnergy`, `hQuasiFermiEnergy-Ev`, `eCurrentDensity-X`, `hCurrentDensity-X`를 추출해 실제 터미널 결과 제공. 실제 X (µm): B0=.17692187, QW1=.18948437, B1=.20204687, QW2=.21460937, B2=.22717187, QW3=.23947266, B3=.25229686, QW4=.26459765; 공통 cutline Y=1µm.
 - 장벽별 n/p (cm^-3), Ec−eQF (eV), hQF−Ev (eV), JnX/JpX (CSV 출력): B0 n6.8108774e9 / p4.0180313e14 / 0.5070 / 0.3012 / Jn3.7401938e-9 / Jp1.8236277; B1 n5.1276315e9 / p5.1389714e14 / 0.5144 / 0.2948 / Jn0.00019612255 / Jp1.8234322; B2 n1.3421744e10 / p5.4166135e14 / 0.4895 / 0.2935 / Jn0.0004408187 / Jp1.8231819; B3 n7.5388606e10 / p1.0746482e15 / 0.4449 / 0.2758 / Jn0.0017767865 / Jp1.8218269. DERIVED p/n≈58994,100221,40357,14255. Claude 10/23 'p/n~1e4–1e5, Ec−eQF~.45–.51' broadly matches (B1 .5144 slightly beyond rounded .51).

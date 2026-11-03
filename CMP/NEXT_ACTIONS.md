@@ -1,3 +1,8 @@
+## 2026-11-03 — Wu2023PHY immediate next from actual n21 3.713V log
+- RUN IN PROGRESS at n21 new CMP_WU_Copy. Last accepted 3.713V contact currents: anode electron=1.374e-5, hole=1.885e-29, total=1.374e-5 raw; next step calculating. Wait for 5V finish, do NOT relabel as physical LED functioning.
+- When done: record actual 5V terminal e/h, `Curve trace finished` and TDR saved. Read generated clean 5V TDR: pGaN `AcceptorConcentration` / `hDensity`/hole quasi-Fermi, nGaN donor/eDensity, QW1–4 eDensity/hDensity, BandEdges, radiative and SRH maps. Electron dominated anode current raises critical injection concern.
+- No code edits or trap ON comparisons until clean QW electron/hole injection verified. Current 2D raw units unverified.
+
 ## 2026-11-03 21:45:44 KST — Wu2023PHY CMP_WU_Copy n21 SDevice stopped on MISSING PARAMETER FILE (OBSERVED / CAUSE CONFIRMED)
 - User pasted exact `tail -n 100 CMP_WU_Copy/n21_des.log`: mesh successfully read and 33 semiconductor regions / 40006 triangle elements were enumerated, doping grid `n1_msh.tdr` successfully read. Immediately after `Reading parameter file 'pp21_des.par' ...` message `Cannot open parameter file 'pp21_des.par' !` causes SDevice exit. Log grep line808 shows same. **This is first confirmed blocker; not yet a physics/solver convergence problem**.
 - Nonfatal Plot alias warnings: SRHRecombination and eAmorphousRecombination/eAmorphousTrappedCharge aliases in old runtime. They are unrelated to this stop.

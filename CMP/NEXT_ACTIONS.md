@@ -1,3 +1,7 @@
+## 2026-11-03 — Wu2023 pp21_des.par Mg ionization species confirmed: next command and SDE-only gate
+- Actual school pp21_des.par confirmed GaN Ionization Species(MagnesiumActiveConcentration) E0=0.15 alpha0 g4, which is NOT Mg acceptor registration; E0 is generic rather than Wu sourced. First check actual school pp21_des.cmd Physics IncompleteIonization switch and other effective parameter linkage via grep.
+- Then in isolated project copy use documented project-local datexcodes Mg acceptor mapping chemical=MagnesiumConcentration, active=MagnesiumActiveConcentration, ionized=MagnesiumMinusConcentration (never modify installed global file); verify real SWB working-directory application. Run SDE mesh-only first to verify negative pGaN net doping; then clean SDevice QW holes/rec. Keep n21/n25 5V outputs archived.
+
 ## 2026-11-03 — Wu2023 school pp1_dvs MgActive-only confirmed: next validation gate
 - READ school's actual pp21_des.par ionization Species/parameters and effective runtime SWB working-directory overrides (SDE pp1_dvs.cmd line61 confirmed MgActive-only p-GaN). Default installed Mg acceptor mapping commented out, local/home datexcodes absent at checked locations.
 - Prepare *isolated*, project-scoped datexcodes mapping using verified installed GaN example (do not edit global library). Run only SDE mesh to confirm negative pGaN DopingConcentration (vs 2e19 MgActive chemical/active profile). After mapping gate, run OFF SDevice and examine acceptor, holes, QW rates; preserve prior n21/n25.

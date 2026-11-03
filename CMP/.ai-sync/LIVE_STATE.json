@@ -6984,5 +6984,49 @@
     "observation": "eGapStatesRecombination selectable, hGapStatesRecombination absent in SVisual list",
     "interpretation": "Missing h field does not imply zero hole/trap recombination; output may be unrequested or unavailable. Actual pp25 Plot and data read pending.",
     "next": "Integrate eGapStatesRecombination for eight DmgL/R_QW1-4 regions; verify Result Field updated from Radiative. Inspect pp25_des.cmd Plot tokens for e/h GapStates using read-only grep. Avoid trap-inclusive IQE until physical accounting."
+  },
+  "juSubinWuONn25GapStates8DamagedQW20261104": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04",
+    "status": "OBSERVED_EGAPSTATES_8_QW_NONZERO_HGAP_NOT_PLOTTED_TRAP_IQE_UNRESOLVED",
+    "node": 25,
+    "biasV": 5,
+    "trapONNtSide": 1000000000000000000,
+    "field": "eGapStatesRecombination",
+    "units": "s^-1*um^-1",
+    "regions": [
+      "DmgL_QW1",
+      "DmgL_QW2",
+      "DmgL_QW3",
+      "DmgL_QW4",
+      "DmgR_QW1",
+      "DmgR_QW2",
+      "DmgR_QW3",
+      "DmgR_QW4"
+    ],
+    "regionValues": [
+      680249000000,
+      697310400000,
+      5709345000000,
+      13655250000000,
+      680495900000,
+      697520100000,
+      5709368000000,
+      13654350000000
+    ],
+    "totalFromSVisual": 41483880000000,
+    "integratedDomainUm2": 0.0001200013,
+    "perQW": [
+      1360744900000,
+      1394830500000,
+      11418713000000,
+      27309600000000
+    ],
+    "hGapStatesPlotMissing": true,
+    "preprocessedOnLine219": "eGapStatesRecombination eTrappedCharge TotalTrapConcentration",
+    "trapInclusiveIQEValidated": false,
+    "provisionalSingleAddedLossIQEPercent": 66.0431824,
+    "provisionalOnly": true,
+    "next": "Check OFF n21 eGapStates same 8 regions if saved, then all ON damaged trap regions; verify Plot and trap region mapping; hGapStates requires separate future output run if necessary."
   }
 }

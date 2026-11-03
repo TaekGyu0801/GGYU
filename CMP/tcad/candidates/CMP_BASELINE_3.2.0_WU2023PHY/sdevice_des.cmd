@@ -216,7 +216,7 @@ Plot {
   ConductionBandEnergy ValenceBandEnergy
   Doping DonorConcentration AcceptorConcentration
   RadiativeRecombination SRHRecombination AugerRecombination
-  eGapStatesRecombination eTrappedCharge TotalTrapConcentration
+  eGapStatesRecombination hGapStatesRecombination eTrappedCharge TotalTrapConcentration
 }
 Math {
   Extrapolate

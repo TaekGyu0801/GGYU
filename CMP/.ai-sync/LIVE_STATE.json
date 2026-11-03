@@ -1,4 +1,22 @@
 {
+  "juSubinWu10SVisualSmoke20261103": {
+    "worker": "주수빈 Wu workstream (school screenshot; chat identity not independently reconfirmed)",
+    "date": "2026-11-03",
+    "status": "LOW_BIAS_SMOKE_PLOT_OBSERVED_PHYSICS_NOT_VALIDATED",
+    "schoolProject": "/user/semi/semi437/tmp/myproject/CMP_WU",
+    "parameters": {
+      "NtSide": 0,
+      "PolAct": 0,
+      "Vstop": 0.1
+    },
+    "observation": "SVisual1 I-V/J-V plot shown 0->0.1V with dataset BaselineData 6; previous undefined-material-model issue no longer visibly blocks. School n2_des log finish not separately reviewed.",
+    "currentAt0p1VApprox": "8.5e-31 A/um visually estimated; effectively zero",
+    "jDisplayedAt0p1VApprox": "2.1e-23 A/cm2 from screen; not calibrated",
+    "processingIssue": "SVisual1 inherited Wmesa=4um from CMP4 baseline; Wu candidate Wmesa=10um; J displayed ~2.5x too large if A/um and AreaFactor=1. Correction is proposed only, not applied to server.",
+    "jCorrectedApproxConditional": "8.5e-24 A/cm2",
+    "gitRepoREADMECommit": "08a0208cf6d7ca29fc784cbb64bb56e0d97b51e0",
+    "next": "Verify n2_des.log finished to 0.1V, edit school SVisual1 Wmesa 4->10 and rerun SVisual only; verify actual SDevice current unit; later NtSide 1e18 and high-bias physics."
+  },
   "juSubinWu10RuntimeUndefinedModels20261103": {
     "worker": "주수빈 (CMP_WU workstream; chat identity not independently verified)",
     "date": "2026-11-03",

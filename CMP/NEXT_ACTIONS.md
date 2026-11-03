@@ -1,3 +1,6 @@
+## 2026-11-04 ~00:55 KST — Wu MgFix OFF n21 TDR acceptor holes electrons radiative observed (NEXT VALIDATION)
+- New n21 SVisual TDR maps visually validate pGaN AcceptorConcentration max2e19, global hDensity max1.165e20, eDensity max1.359e20, localized MQW RadiativeRecombination max3.434e29 (screen color legend; NOT QW-integrated). First verify exact 5V output and normal finish with tail of n21_des.log. Then sample QW1–4 carrier density and integrate Rad/SRH/Auger by region under identical definitions; investigate uneven lower-QW emission and high global carriers. Do not equate colored peak with IQE, or assumed 2D current normalization with actual J. Hold n25 until clean OFF properly evaluated.
+
 ## 2026-11-04 ~00:47 KST — Wu MgFix OFF n21 SVisual full 0-5V IV curve observed: verify 5V log and physical output
 1. Read NEW post-MgFix CMP_WU_Copy/n21_des.log final ~50 lines; require actual 5.0V voltage, e/h/total terminal currents, Curve trace finished, newly dated SDevice simulation finished and output TDR (SVisual NtSide=0 IV plot now spans 0–5 V).
 2. Inspect NEW n21_des.tdr pGaN AcceptorConcentration and hDensity vs old absent acceptor/hole, QW1–4 eDensity/hDensity and RadiativeRecombination/SRH/Auger; quantify consistent region integrals and assess holes reaching QWs before ON.

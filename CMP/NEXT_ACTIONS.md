@@ -1,3 +1,8 @@
+## 2026-11-03 ~20:46 KST — JuSubin Kou4 SDE-only NEXT (PROPOSED)
+- New source committed `CMP/tcad/candidates/CMP_BASELINE_3.1.0_KOU4FULL/sde_dvs.cmd` and README. **NO server run, no SDevice yet**.
+- JuSubin first: separate SWB `CMP_BASELINE_3.1.0_KOU4FULL`→ SDE-only preprocess/mesh→ verify region/material/contacts/5nm strips/QW widths/mesh → send logs. After pass construct Kou-specific SDevice; do not blindly reuse Wu/Wu-traps or old Kou V2. Wu candidate remains separate.
+- Common model comparison at matched 4µm and validated J/2D normalisation; baseline selection remains OPEN.
+
 ## 2026-11-03 ~17:43 KST — 주수빈: Wu10 Full2D **NEW PROPOSED CODE** SDE-only first validation
 - **Owner 주수빈; distinct from Lee's continuing POL0NOSHELF gate below.** User directed starting code, new candidate source actually committed: `CMP/tcad/candidates/CMP_BASELINE_3.0.0_WU10FULL/{sde_dvs.cmd,sdevice_des.cmd,README.md}`. Source code creation confirmed by GitHub; **not preprocessed, mesh-generated or school-server simulated**.
 - **IMMEDIATE NEXT for JuSubin:** on actual school server, create a separate SWB project `CMP_BASELINE_3.0.0_WU10FULL` only after checking folder/name conflicts, paste full `sde_dvs.cmd` as SDE input, preprocess/build **SDE alone**; inspect region/material names, 5nm dual damage strips, QW3nm/8nm barrier widths, contacted outer boundaries, mole fraction0.08, mesh min-angle/min-edge, doping and x vertical/y lateral. Show SDE log and `pp1_dvs.cmd` before running SDevice.

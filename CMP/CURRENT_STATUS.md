@@ -1,3 +1,9 @@
+## 2026-11-03 — JuSubin Kou paper-size correction / 20um 3D SDE candidate (CODE COMMITTED / NOT RUN)
+- Previous `CMP_BASELINE_3.1.0_KOU4FULL` using CMP4um/5nm is NOT Kou-paper geometry; leave files unchanged for separate CMP4 target only. Paper actually simulates 20,60,100um square and 4um sidewall damaged ring; smallest clean core =12×12/20×20=36%.
+- New original source `CMP/tcad/candidates/CMP_BASELINE_4.0.0_KOU20FULL3D/sde_dvs.cmd` + README: 3D Full square, 4um border, 4nm? **CORRECT QW=3nm** ×4 In0.15GaN, 22nm QB, EBL26nm pAl0.15, pGaN120nm, p+20nm, nGaN4um Si5e18. 5QB assumed; total depth4.288um. 117 cuboids. Code-only, no SDE mesh, simulator or solver output.
+- UNRESOLVED paper reproduction: pPlus Mg input1e19 is PILOT; p-layers specified as hole 3e17 (not Mg chemical); top/bottom full Ohmic pilot not paper 4um p-contact; quantum physics/traps absent and old Kou4 SDevice incompatible.
+- NEXT JuSubin: new SWB Kou20 SDE-only preprocess & mesh, region/contact and 3D resource audit; compatible SDevice only after gate.
+
 ## 2026-11-03 — 주수빈 Kou4 SDevice pilot code added (CODE COMMITTED, NOT RUN)
 - `CMP/tcad/candidates/CMP_BASELINE_3.1.0_KOU4FULL/sdevice_des.cmd` added; matching Full2D SDE region names with SWB `NtSide`, `PolAct`, `Vstop`. One SDevice can run separate clean and damaged parameter splits; no SDevice2/SVisual2 required for first smoke.
 - Initial proposed syntax/solver smoke AFTER SDE mesh pass: NtSide=0, PolAct=0, Vstop=0.1. Not an LED operating-point or physics validation.

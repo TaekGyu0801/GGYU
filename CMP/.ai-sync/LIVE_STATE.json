@@ -1,4 +1,19 @@
 {
+  "juSubinWuTrapON1e18SVisualIVTo5V20261104": {
+    "worker": "주수빈",
+    "eventDateKST": "2026-11-04 ~01:49",
+    "project": "CMP_WU_Copy",
+    "condition": "NtSide=1e18 Trap ON",
+    "status": "USER_REPORTED_ON_FINISHED_SVISUAL_IV_0_TO5V_OBSERVED_POSTMG_FRESHNESS_SOLVER_LOG_PENDING",
+    "plotDataset": "BaselineData_26",
+    "figureEndpointRawCurrentApprox": 0.0025,
+    "figureCurrentUnit": "A/um ASSUMED chart label",
+    "figureNormalizedJUnit": "A/cm2 ASSUMED chart label",
+    "n25PostMgFixFinal5VLogVerified": false,
+    "postMgFixOnRadiativeSRHAugerVerified": false,
+    "comparisonWithPostMgFixOffValid": false,
+    "next": "Obtain n25_des.log tail 45 and stat n25/n21 output timestamps; pp25 trap Conc; verify 5V final, refreshed current mapping, acceptor, QW integration and matched-current ON/OFF."
+  },
   "juSubinWuN21ActivePolarizationPhysicsGrep20261104": {
     "worker": "주수빈",
     "dateKST": "2026-11-04",

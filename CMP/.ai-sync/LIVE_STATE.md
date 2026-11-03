@@ -1,3 +1,7 @@
+## 2026-11-04 — Wu2023 SDE rerun user-reported after local Mg datexcodes (USER-REPORTED SDE EXECUTION; PHYSICS UNCONFIRMED)
+- User reports SDE fully rerun after creating project-local CMP_WU_Copy/datexcodes.txt with uncommented MagnesiumConcentration acceptor mapping. Only report is available; no SDE log or fresh n1_msh signed DopingConcentration verified. Original SDevice 5V results remain not electrically validated.
+- NEXT: open fresh n1_msh.tdr in SVisual and inspect pGaN signed DopingConcentration and nGaN positive doping; if pGaN zero inspect actual working-dir mapping/source chemical vs active species; if negative then check new SDevice OFF acceptor and holes before ON. Do not claim fixed until observed.
+
 ## 2026-11-04 — Wu2023 project-local Mg acceptor map and mesh backup verified (OBSERVED, MESH FIX NOT YET VERIFIED)
 - In school CMP_WU_Copy the user verified datexcodes.txt 3.5 KB with lines35–39 active Mg chemical→active→ionized doping=acceptor for GaN, and backup n1_msh_before_MgFix.tdr 962 KB. This verifies local mapping content and backup, but NOT that SDE/SWB loads it.
 - Next SDE mesh-only run then check pGaN DopingConcentration <0 and nGaN ~+5e18; SDevice 5V OFF/ON not to be run until validated; prior n21/n25 output preserved. School simulation no new execution in provided log.

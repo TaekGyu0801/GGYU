@@ -1,3 +1,8 @@
+## 2026-11-03 — Wu2023 local/home datexcodes absent (OBSERVED; effective runtime mapping UNRESOLVED)
+- User executed ls -l /user/semi/semi437/tmp/myproject/CMP_WU_Copy/datexcodes.txt ~/datexcodes.txt; both reported No such file or directory. The user shell is currently in ~, not project directory. This establishes absence at these two tested paths only, not all SWB runtime/working-directory overrides.
+- Earlier T-2022.03 installed official GaN_AlGaN_Polarization example contains Mg acceptor doping linkage; does not imply active Wu mapping. SDE mesh MgActive2e19, net doping~0, SDevice acceptor0 remain blocker.
+- NEXT read-only: grep 'Magnesium' in installed default /user/tools/synopsys/sentaurus/T-2022.03/tcad/T-2022.03/lib/datexcodes.txt; then inspect SDE pp1_dvs.cmd and actual SWB runtime files before proposing minimal mapping fix. No new run/code edit.
+
 ## 2026-11-03 — Wu2023 installed GaN Mg acceptor mapping inspected (OBSERVED / ROOT CAUSE UNRESOLVED)
 - User read T-2022.03 Applications_Library/Power/GaN/GaN_AlGaN_Polarization/datexcodes.txt lines 1–65. Official example Variables includes MagnesiumConcentration, MagnesiumChemicalConcentration with 'doping = acceptor (active = MagnesiumActiveConcentration; ionized = MagnesiumMinusConcentration; material = AlN, GaN, AlGaN, InGaAs, InGaAsP, InP)'. MagnesiumActiveConcentration itself is listed separately as active Mg.
 - The mapping positively exists in this **installed example**, but does NOT establish it is loaded in the user's CMP_WU_Copy SDE/SDevice runs. Source mesh pGaN MgActive2e19 yet net DopingConcentration~0 and SDevice AcceptorConcentration~0 remain known; mapping/chemical-versus-active source path is under investigation.

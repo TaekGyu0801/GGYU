@@ -1,3 +1,7 @@
+## 2026-11-04 — Wu2023 project-local Mg acceptor map and mesh backup verified (OBSERVED, MESH FIX NOT YET VERIFIED)
+- In school CMP_WU_Copy the user verified datexcodes.txt 3.5 KB with lines35–39 active Mg chemical→active→ionized doping=acceptor for GaN, and backup n1_msh_before_MgFix.tdr 962 KB. This verifies local mapping content and backup, but NOT that SDE/SWB loads it.
+- Next SDE mesh-only run then check pGaN DopingConcentration <0 and nGaN ~+5e18; SDevice 5V OFF/ON not to be run until validated; prior n21/n25 output preserved. School simulation no new execution in provided log.
+
 ## 2026-11-03 — Wu2023 school SDevice IncompleteIonization switch matches Mg Species (OBSERVED; MG ACCEPTOR BLOCKER PERSISTS)
 - School pp21_des.cmd Physics includes IncompleteIonization(Dopants="MagnesiumActiveConcentration") line29 and File Parameter="pp21_des.par" line16. Actual pp21_des.par GaN Ionization Species("MagnesiumActiveConcentration") E0 0.15, alpha0, g4. Therefore switch/species are aligned; missing switch is ruled out.
 - School pp1_dvs.cmd applies MgActive2e19 in pGaN. Installed default lib/datexcodes ordinary Mg acceptor mapping commented; project/home local overrides not present at tested paths; mesh net doping 0 and SDevice acceptor0. Isolated project-local datexcodes mapping remains next test. No code/run change; 5V terminal current does not validate LED emission.

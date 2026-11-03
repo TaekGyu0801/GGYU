@@ -1,4 +1,23 @@
 {
+  "juSubinWuPostMgOFFSVisualIV5VScreenshot20261104": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04 ~00:47",
+    "project": "CMP_WU_Copy",
+    "status": "USER_REPORTED_N21_OFF_FINISHED_SVISUAL_IV_PLOT_0_TO_5V_OBSERVED_FINAL_LOG_UNVERIFIED",
+    "screenshot": "SVisual BaselineData_22 NtSide=0 red IV curve",
+    "approxTurnOnVoltageRangeV": [
+      3.2,
+      3.4
+    ],
+    "visualEndpointCurrentRawApprox": 0.0026,
+    "visualCurrentUnit": "A/um ASSUMED label",
+    "visualJApproxAcm2": 25000,
+    "actualCurrentNormalizationVerified": false,
+    "lastDirectNumericSolverVoltageV": 4.332,
+    "final5VLogVerified": false,
+    "tdrPhysicallyValidated": false,
+    "next": "tail fresh n21_des.log confirm exact 5V and normal finish; open new n21_des.tdr inspect pGaN acceptor/free holes, QW e/h and integrated Rad/SRH/Auger; defer n25"
+  },
   "juSubinWuPostMgN21Converged4332VHolesRestored20261104": {
     "worker": "주수빈",
     "dateKST": "2026-11-04",

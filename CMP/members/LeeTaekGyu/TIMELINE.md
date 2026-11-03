@@ -1,3 +1,9 @@
+## 2026-11-03 — PolAct=0 POL0NOSHELF n6 finished; n2 output exists (OBSERVED terminal, NOT YET VALIDATED n2)
+- 작업자: 이택규 / AI: ChatGPT. 학교 서버의 실제 디렉터리 `/user/semi/semi437/CMP_BASELINE_2.1.0_POL0NOSHELF`를 `find`로 확인한 뒤 해당 디렉터리에서 출력 확인.
+- **OBSERVED:** `n2_des.log` 338K (2026-11-03 01:52), `n2_des.plt` 293K (01:52); `n6_des.log` 340K (04:38), `n6_des.plt` 293K (04:38), 모두 실제 `ls -lh`에 존재. `n6_des.log`는 `Curve trace finished.`, `Sentaurus Device simulation finished (Date: Tue Nov 3 04:38:53 2026 KST)`, `Good Bye!` 출력으로 solver 정상 종료 직접 확인.
+- **UNRESOLVED:** `grep ... | tail -25`는 n6 최후 부분만 보여 `n2`의 정상 종료를 입증하지 않음. 두 노드 최종 전압 3.6V/전류/재결합 및 실제 pp `activation=0`, `Iterations=12`, 메시 `Wshelf=0`, 원본과 단일변수 일치 모두 검증 전. n6 완료는 물리적 타당성 검증 완료가 아님.
+- **NEXT READ ONLY:** `tail -n 12 n2_des.log; tail -n 12 n6_des.log; grep -nE 'Piezoelectric_Polarization|Iterations[[:space:]]*=' pp2_des.cmd pp6_des.cmd` 확인. 이후 원본 PolAct=0.5와 비교해 QW1–4 Rad share, 단자 전류 및 가능한 동일 전류 재결합 비율 평가. Common Baseline physical B/FREEZE HOLD; 서버 원본 소자 무변경.
+
 ## 2026-11-03 — Lee reports PolAct=0 simulation runs finished (USER-REPORTED, RESULTS UNVERIFIED)
 - 작업자: 이택규. 사용자 직접 보고: "그 우리 polact 0 했던거 다 돌아갔어". 전날 shelf-free `CMP_BASELINE_2.0.0_V2`로부터 새 복사하고 PolAct=0 / SDevice Iterations=12 적용했다고 보고한 진단 시험을 가리킴.
 - **검증 수준:** USER-REPORTED run completion. 현재 세션에서 학교 서버 `n2/n6` 로그/PLT, 실제 복사본 이름, shelf-free 메시 형상, 실효 pp activation=0 및 Iterations=12 직접 확인하지 못함. 정상 수렴/3.6V 도달/재결합 분포/결과 수치는 아직 미확정.

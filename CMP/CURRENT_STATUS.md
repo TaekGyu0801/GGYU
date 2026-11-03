@@ -1,3 +1,8 @@
+## 2026-11-03 — Wu2023PHY first school run attempted at Vstop=5, ERROR REPORTED
+- USER: directly launched new Wu physics candidate with Vstop=5, skipping separate 0.1V run; then reported screenshot error. Exact school node/log and PP/parameter substitution not verified. Status **BLOCKED/UNRESOLVED**, not a successful run.
+- Old Wu10 n21/n25 5V outputs and GitHub candidate source unchanged. No new verified current or solver conclusion.
+- NEXT: read failing node text log before any code fix, identify first error and compare PP/par to committed source.
+
 ## 2026-11-03 — Wu2023 physics-first source candidate 3.2.0 created, NOT VALIDATED
 - **Code available:** `CMP/tcad/candidates/CMP_BASELINE_3.2.0_WU2023PHY/` (SDE, SDevice, sdevice.par, SVisual, README); parent 3.0.0 and school runs untouched.
 - **Change:** Wu 2023 reported Mg nominal2e19 as pGaN nominal substitutional assumption, Mg IncompleteIonization ON with preliminary par E0=0.15, full polarization and assumed c-axis orientation; field-dependence PooleFrenkel and Thermionic as *additional unverified modeling choices*; nSi explicit species. Exact Wu field trapping implementation, contacts, pGaN thickness, EBL, ionization calibration unresolved.

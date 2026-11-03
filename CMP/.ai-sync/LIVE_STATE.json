@@ -1,4 +1,18 @@
 {
+  "juSubinWuSchoolIncompleteIonizationSwitchConfirmed20261103": {
+    "worker": "주수빈",
+    "status": "OBSERVED_SDEVICE_IONIZATION_SWITCH_MATCHES_PARAMETER",
+    "schoolProject": "CMP_WU_Copy",
+    "schoolCmd": "pp21_des.cmd",
+    "schoolPhysics": "IncompleteIonization(Dopants=\"MagnesiumActiveConcentration\")",
+    "schoolParameter": "pp21_des.par",
+    "parameterSpecies": "MagnesiumActiveConcentration",
+    "parameterE0eV": 0.15,
+    "rootHypothesis": "default ordinary Mg acceptor mapping commented in datexcodes; mesh pGaN net doping zero",
+    "next": "isolated project-local datexcodes mapping; re-mesh only and check negative pGaN net doping, then OFF SDevice",
+    "codeModified": false,
+    "simulationRerun": false
+  },
   "juSubinWuSchoolMgIonizationParVerified20261103": {
     "worker": "주수빈",
     "status": "OBSERVED_IONIZATION_PARAMETER_ONLY_MAGNESIUM_ACCEPTOR_MAPPING_NOT_RESOLVED",

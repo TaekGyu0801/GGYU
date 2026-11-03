@@ -1,36 +1,40 @@
 {
-  "juSubinWu2026VsWu2023PaperFidelityEBL20261103": {
+  "juSubinWu2023OnlySourceCorrection20261103": {
     "date": "2026-11-03",
     "worker": "주수빈",
-    "type": "RESEARCH_DECISION_AND_SOURCE_AUDIT",
-    "status": "OBSERVED_PAPER_SOURCE_MISMATCH_PROPOSED_CODE_REVISION_NOT_RUN",
-    "currentWu10Candidate": "CMP/tcad/candidates/CMP_BASELINE_3.0.0_WU10FULL",
-    "currentWu10Source": "Zhuang Wu et al., 2023, DOI 10.1016/j.micrna.2023.207542",
-    "alternateWuSource": "Lili Wu et al., 2026, DOI 10.1088/1361-6463/ae7c7d",
-    "wu2026PublisherPreviewEvidence": [
-      "configuration00 undamaged reference has EBL, separate no-EBL control shown",
-      "2D axisymmetric model",
-      "Dam1 EBL Al fraction gradient 0.150 to 0",
-      "Dam2 MQWs well In fraction 0.150 to 0.145, barrier In fraction 0.050 to 0.055"
+    "source": "Zhuang Wu et al. 2023; DOI 10.1016/j.micrna.2023.207542; ScienceDirect publisher indexed Methods excerpt",
+    "status": "SOURCE_CORRECTED_PAPER_EVIDENCE_VERIFIED_NO_NEW_RUN",
+    "userInstruction": "Wu model must independently follow original Wu2023; disregard wrongly linked other-paper research summary",
+    "sourceVerified": {
+      "mesaUm": 10,
+      "nGaNThicknessUm": 3.9,
+      "SiConcentrationCm3": 5000000000000000000,
+      "QWCount": 4,
+      "QWInFraction": 0.08,
+      "QWThicknessNm": 3,
+      "GaNBarrierThicknessNm": 8,
+      "MgChemicalDopingCm3": 20000000000000000000,
+      "damageStripNmEachSide": 5,
+      "physics": [
+        "piezoelectric polarization",
+        "Mg incomplete ionization",
+        "local electric field-related trap capturing",
+        "Radiative",
+        "SRH",
+        "Auger"
+      ]
+    },
+    "EBL": "Unknown: accessible published paper excerpt does not confirm presence, absence, or thickness. Verify original Fig.1(a) before making SDE changes.",
+    "currentModelDeviations": [
+      "PolAct=0 smoke",
+      "Mg incomplete ionization omitted",
+      "MgActive3e17 provisional unlike reported chemical Mg2e19",
+      "tEBL=0 unverified",
+      "simplified blanket Ohmic"
     ],
-    "currentWu10CodePilot": [
-      "full planar 10um",
-      "In0.08 QW and GaN barriers",
-      "tEBL=0",
-      "PolAct=0",
-      "MgActive=3e17 provisional",
-      "blanket top/bottom Ohmic"
-    ],
-    "userDecision": "Independent Wu paper-based baseline, not reuse/repair old V2 or strip EBL/polarization to evade prior issue",
-    "blockers": [
-      "source-paper identity must be made explicit",
-      "Wu2026 full Methods/Fig1 and supplemental for exact stack, EBL thickness/contact and physics not verified",
-      "no physical root cause for old Wu10 tiny currents confirmed"
-    ],
-    "next": "Preserve existing old Wu10 outputs, inspect saved n21/n25 read-only; if Wu2026 target, create separate paper-faithful EBL-containing axisymmetric candidate, adopt referenced alloy and boundary/physics, reinstate justified polarization; do not borrow Kou EBL 26nm; validate clean current before defect splits.",
-    "source": "ResearchGate/publisher preview DOI 10.1088/1361-6463/ae7c7d; GitHub Wu10 README/source; user instruction",
-    "schoolSourceChanged": false,
-    "simulationRun": false
+    "previousPaperBasedRedesign": "RETRACTED; not authorized to transplant any EBL, geometry, composition or transport settings from wrong paper",
+    "outputStatus": "CMP_WU 5V n21 clean raw I3.025e-29 and n25 ON raw I5.810e-19, numerical solved; no physical injection validation",
+    "next": "Preserve outputs; inspect Wu2023 Fig1 and TDR/PP material mapping; create isolated Wu2023 version after physics provenance checks; no unintended EBL insertion/removal."
   },
   "juSubinWu10Both5VFinishLogsConfirmed20261103": {
     "date": "2026-11-03",

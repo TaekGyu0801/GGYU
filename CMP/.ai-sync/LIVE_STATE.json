@@ -7028,5 +7028,13 @@
     "provisionalSingleAddedLossIQEPercent": 66.0431824,
     "provisionalOnly": true,
     "next": "Check OFF n21 eGapStates same 8 regions if saved, then all ON damaged trap regions; verify Plot and trap region mapping; hGapStates requires separate future output run if necessary."
+  },
+  "juSubinWuOFFn21GapStatesPlotConfirmed20261104": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04",
+    "status": "OBSERVED_USER_GREP",
+    "evidence": "pp21_des.cmd:219 eGapStatesRecombination eTrappedCharge TotalTrapConcentration",
+    "interpretation": "OFF and ON preprocessed Plot request eGapStates; OFF saved TDR field existence and numeric rate unconfirmed pending SVisual integration",
+    "next": "Use n21_des eGapStatesRecombination same 8 damaged QW regions as ON and compare. No run or code change."
   }
 }

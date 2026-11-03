@@ -1,3 +1,9 @@
+## 2026-11-04 — 주수빈 Wu MgFix OFF n21 중앙 hDensity Cutline 확인 (OBSERVED / 해석 잠정)
+- SVisual screenshot: `CMP_WU_Copy/n21_des`, 5V post-MgFix, NtSide=0, central depth cutline C1 at Y≈5µm. hDensity log plot x≈0.10–0.19µm shows four narrow MQW peaks at x≈0.132/0.143/0.153/0.164µm, maxima roughly 4e19/6e19/7e19/1e20 cm^-3 (visual reading only, unverified point/region values). p-side x≈0.10µm ~1e18, n-side x≈0.18–0.19µm ~1e15–1e16, qualitative decreasing background away from MQW.
+- Prior eDensity C1 also had four peaks, generally increasing toward deeper well; thus both carrier populations are appreciable around MQW and QW4 peak is largest in these 1D plots. However e/h peak spatial overlap, per-well averages, and causality of QW4 dominant Rad (91.03%) / Auger (95.42%) are NOT proven from peaks alone. Some concentrations near 1e20 cm^-3 merit physical/injection normalization review.
+- Previous identical 12-QW-integral 5V three-channel model IQE=66.2156% (not Wu-calibrated); no new simulator run, code changes or quantitative extracted cutline table.
+- NEXT: show eDensity and hDensity on same Y=5µm cutline with depth x≈0.12–0.17µm and log density axis; compare peak positions/overlap vs well boundaries. Audit AreaFactor/current density and lower-current injection conditions before new post-MgFix NtSide1e18 trap ON matched-current split.
+
 ## 2026-11-04 — Wu n21 central eDensity Cutline image
 - OBSERVED SVisual `CMP_WU_Copy`, n21_des, C1 depth direction at lateral Y≈5 µm, logarithmic eDensity graph. Narrow peaks in MQW X≈0.12–0.17 µm approach order 1e20 cm^-3. The image lacks sufficient x-resolution for QW-specific values. No interpretation of cause established. NEXT zoom x=0.115–0.175 µm and inspect hDensity on same C1.
 

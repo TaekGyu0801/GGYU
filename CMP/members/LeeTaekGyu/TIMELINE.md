@@ -1,3 +1,8 @@
+## 2026-11-03 — POL0NOSHELF n2 PLT DF-ISE header/footer confirmed (OBSERVED READ ONLY)
+- 이택규 사용자 제공 학교 서버 출력, 현재 Bash 셸에서 `/user/semi/semi437/CMP_BASELINE_2.1.0_POL0NOSHELF` 경로로 이동한 뒤 `head -n 28 n2_des.plt; tail -n 8 n2_des.plt` 성공. `DF-ISE text`, `Info {type=xyplot, datasets=[...]}` 구문과 마지막 데이터 구간 `Data` 숫자 및 `}` 닫힘 확인.
+- 헤더에 `anode OuterVoltage`, `anode TotalCurrent`, `IntegrRad_Clean_QW1`/Edge/Dmg 등 QW1–4 별 세 영역 방사재결합 필드, `IntegrSRH_*`, `IntegrAug_*`, `IntegrTrap_*` 실제 존재 확인. 이전 홈 디렉터리에서의 No such file 오류는 경로 문제였고 파일 부재나 TCAD 오류가 아니었음.
+- **아직 QW1–4 비율, 전류값 미산출.** 해당 PLT의 전체 컬럼 이름과 `Data` 숫자 갯수 나눗셈이 일치하는지 검증하며 마지막 레코드 합산하도록 Bash heredoc 파서 제안. 사용자 실행 및 출력 대기. 원본 TCAD 변경 없음. Baseline physical FREEZE HOLD.
+
 ## 2026-11-03 — POL0NOSHELF Python here-document failed in tcsh prompt (OBSERVED; GPT INSTRUCTION ERROR)
 - **OBSERVED:** 이택규는 `/user/semi/semi437/CMP_BASELINE_2.1.0_POL0NOSHELF` 에서 GPT가 준 `python3 - <<'PY'`와 다중행 Python 코드를 그대로 붙여넣었고, `tcsh/csh` 스타일 `?` continuation prompt가 모든 줄과 종결 `PY` 후에도 지속됨. 따라서 Python PLT 파서 **실행 완료/결과 출력 증거 없음**. 이는 SDevice solver 오류 또는 PLT 파일 손상 증거가 아님.
 - **CAUSE/RESPONSIBILITY:** 과거 동일 `?`/here-doc 입력 문제를 기록했는데도 GPT가 Bash 셸 진입 확인 없이 Bash 지향 heredoc을 제공한 안내 오류. Python 구문 자체의 오류로 단정할 수 없음.

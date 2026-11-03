@@ -1,0 +1,30 @@
+* Wu 2023 candidate sdevice.par — ASSUMPTIONS until T-2022.03 run
+* x=device depth top p -> bottom n, assume Ga-polar c-axis pointing up.
+* Orientation source: Sentaurus III-N example (must verify Wu polarity).
+LatticeParameters {
+  X = (0, 0, -1)
+  Y = (1, 0, 0)
+}
+
+* Generic III-N Mg incomplete-ionization E_0 model, not Wu's parameter.
+* Confirm Mg is active acceptor in installed datexcodes.txt.
+Material = "GaN" {
+  Ionization {
+    Species ("MagnesiumActiveConcentration") {
+      E_0   = 0.15
+      alpha = 0.0
+      g     = 4.0
+      Xsec  = 1.0e-12
+    }
+  }
+}
+
+* Additional interface model — not verified Wu exact model.
+Thermionic {
+  Formula = 1
+}
+
+* Field-dependent trapping proxy, not Wu parameter calibration.
+PooleFrenkel {
+  epsPF = 9.5 , 9.5
+}

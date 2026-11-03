@@ -1,4 +1,23 @@
 {
+  "juSubinWuN21ActivePolarizationPhysicsGrep20261104": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04",
+    "project": "CMP_WU_Copy",
+    "node": 21,
+    "status": "OBSERVED_PREPROCESSED_PHYSICS_POLARIZATION_MG_IONIZATION_FIELD_PLOT",
+    "evidence": [
+      "pp21_des.cmd:6 'Full polarization ON; orientation in sdevice.par' comment",
+      "pp21_des.cmd:28 Piezoelectric_Polarization( strain )",
+      "pp21_des.cmd:29 IncompleteIonization( Dopants=\"MagnesiumActiveConcentration\" )",
+      "pp21_des.cmd:213 Potential SpaceCharge ElectricField/Vector"
+    ],
+    "polActLiteralFound": false,
+    "areaFactorLiteralFound": false,
+    "polarizationChargePolarityVerified": false,
+    "currentNormalizationVerified": false,
+    "note": "No PolAct/AreaFactor matches in two searched preprocessed files, does not validate orientation/absolute current. Previous carrier peak offset observed; physical mechanism unresolved.",
+    "next": "Inspect pp21_des.cmd Physics/Electrode and pp21_des.par lattice params, n21_des.log dimension/area factor; evaluate carrier overlap then fresh Mg fixed NtSide1e18 ON."
+  },
   "juSubinWuMgFixOFFn21CarrierOverlay20261104": {
     "worker": "주수빈",
     "dateKST": "2026-11-04",

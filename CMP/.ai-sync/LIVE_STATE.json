@@ -1,4 +1,20 @@
 {
+  "juSubinWu10NtSide1e18LowBiasPlot20261103": {
+    "worker": "주수빈 Wu workstream (identity not independently reconfirmed)",
+    "status": "OBSERVED_SVISUAL_PLOT_SDEVICE_FINISH_NOT_YET_CONFIRMED",
+    "schoolProject": "/user/semi/semi437/tmp/myproject/CMP_WU",
+    "parameters": {
+      "NtSide": 1000000000000000000,
+      "PolAct": 0,
+      "Vstop": 0.1
+    },
+    "svisualDataset": "BaselineData 12",
+    "visualCurrentAt0p1VApprox": "4e-22 A/um",
+    "visualJAt0p1VApprox": "1e-14 A/cm2, still 4um-scaled; 10um correction pending",
+    "zeroBiasFeature": "Near-0V vertical spike up to ~6.5e-22 A/um; physical/numerical cause unknown",
+    "comparison": "Prior logged clean NtSide0 current 8.387e-31 at 0.1V; these are near-zero low-bias currents, not LED validation",
+    "next": "Read trap-ON SDevice log end and first V/I pairs from PLT; fix Wu SVisual1 Wmesa=10 only; ensure current units and physical bias."
+  },
   "juSubinWu10SDevice0p1VFinishConfirmed20261103": {
     "worker": "주수빈 Wu workstream (current-user identity not revalidated)",
     "status": "OBSERVED_SDEVICE_SMOKE_FINISHED_0p1V_NOT_PHYSICAL_VALIDATION",

@@ -1,3 +1,12 @@
+## 2026-11-03 — Wu2023 source upgrade handoff (PROPOSED / UNRUN)
+- **Worker:** 주수빈; ChatGPT. User instructed full revision to follow 2023 Wu (Zhuang Wu et al.) as closely as source supports; NEVER use 2026 Lili Wu references.
+- **Actual source path:** `CMP/tcad/candidates/CMP_BASELINE_3.2.0_WU2023PHY/`, five new files. Prior candidate `CMP_BASELINE_3.0.0_WU10FULL` and school `CMP_WU` n21/n25 unchanged.
+- **Code additions:** full polarization, pMg nominal 2e19 with Mg IncompleteIonization; nSi explicit species, custom sdevice.par LatticeParameters/Ionization/Thermionic/PF, field-dependent PooleFrenkel proxy for 22 trap regions, adjustable TrapEt/Sigma. SDE geometry W10/In0.08 QW3nm/QB8nm/nGaN3.9/5nm strips preserved.
+- **Read-only evidence:** 2023 publisher methods excerpt; public Sentaurus III-N/trap examples. JS source check balanced parentheses, 22 trap regions, SWB macro names present. **No actual T-2022.03 parse, mesh, numerical run, current/IQE result.**
+- **Blocker/unknown:** pGaN thickness120nm and EBL0 are still pilot; Wu full Fig1 absent; contacts full-width unverified, Mg chemical-to-substitutional fraction, datexcodes and LatticeParameters polarity unknown; Thermionic and PF are choices, not exact Wu proven. Do not claim paper clone.
+- **First next step:** import new files into a *separate* school SWB project, verify `@parameter@` and actual pp par, 33 active region geometry, Mg/nSi donor/acceptor maps, T-2022.03 warnings. Only then clean Nt0 Vstop0.1→5; if zero current inspect profile and contact; do NOT immediately run ON.
+- **Do NOT change:** previous CMP_WU n21_des.tdr, n25_des.tdr, old Wu10 source, Kou branch, protected CMP4/V2. 
+
 ## 2026-11-03 — CORRECTION: Wu (2023) paper-only baseline implementation (user confirmed, source checked) — HANDOFF
 - 작업자: 주수빈, AI: ChatGPT. Previous different-paper-based Wu redesign/EBL assumptions are RETRACTED by user clarification.
 - Intended paper: Zhuang Wu et al. 2023 DOI 10.1016/j.micrna.2023.207542. Publisher excerpt confirms 10um, nGaN 3.9um Si5e18, four InGaN wells xIn0.08, well3nm/GaN QB8nm, pGaN Mg2e19, 5nm sidewall traps, piezoelectric polarization, Mg incomplete ionization, local field capture, Rad/SRH/Auger. Excerpt does NOT establish presence/absence of EBL.

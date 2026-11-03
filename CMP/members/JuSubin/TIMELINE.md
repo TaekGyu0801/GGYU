@@ -1,3 +1,9 @@
+## 2026-11-03 ~20:46 KST — JuSubin Kou4 Full2D SDE candidate created (PROPOSED / NOT RUN)
+- USER DECISION: Wu and Kou candidates separately run, then choose final Baseline based on validated simulation quality; this chat concentrates on Kou.
+- CODE COMMITTED: `CMP/tcad/candidates/CMP_BASELINE_3.1.0_KOU4FULL/sde_dvs.cmd` and `README.md`; independent Full 2D 4µm CMP Kou-derived stack (4×3nm In0.15GaN QW, 5×22nm GaN QB, 4µm nGaN, symmetric 5nm trap-host strips); original old shelf deck not copied.
+- PROVISIONAL and NOT Kou exact published replication: pGaN 0.12um, EBL absent, active Mg 3e17, donor 5e18, background 1e15, full-top/bottom Ohmic contacts, 5nm damaged strips; SDevice, trap model and calibrated physical defaults are not created/verified. No school-server run, mesh nor results observed.
+- NEXT: create independent school SWB project, SDE-only preprocess and build, inspect effective geometry/contacts/QWs/mesh and logs, then Kou-specific SDevice after SDE pass. Wu candidate unchanged; physical Baseline not fixed; matched-4um geometry/J comparison needed.
+
 ## 2026-11-03 ~20:46 KST — Simplify Wu10 SWB node count for time; keep distinct clean/damaged data (USER PROPOSED / NO RUN)
 - **Worker:** 주수빈. Asked whether SDevice2 and SVisual2 are essential or can be omitted due to time.
 - **GPT recommendation:** For first clean smoke use SWB **SDE → SDevice** only; no SVisual script necessary, visualize completed .tdr/.plt manually later. A separate SDevice2 is **not required**: existing single SDevice cmd uses `@NtSide@`, so run `NtSide=0` Clean first, and after model checks run `NtSide=1e18` Damaged with separate SWB parameter split/experiment or preserved separate job outputs, ensuring matched physical inputs and saved individual files. **Do not omit the damaged test itself**: Clean/Trap ON current-matched comparison is mandatory before calling it a sidewall-loss Baseline. `NtSide=1e18` remains pilot CMP value, not confirmed Wu density.

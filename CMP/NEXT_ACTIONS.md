@@ -1,3 +1,8 @@
+## 2026-11-04 — Next after Wu OFF n21 12-region SRH integration (IN PROGRESS)
+- DONE/OBSERVED: 5V fresh post-MgFix n21 finished and saved; 12-QW-region integrated SRH =6.102184e14 s^-1 um^-1. Derived QW1 0.1053%, QW2 0.0993%, QW3 19.6986%, QW4 80.0968%, dominated by QW4; sidewall DmgL/R ~0.1003% with NtSide0, near their cross-section fraction, NOT a trap ON conclusion.
+- NEXT IMMEDIATE: SVisual n21_des field RadiativeRecombination, **same exact Clean_QW1-4,DmgL_QW1-4,DmgR_QW1-4** integrate and save per-region numbers. Next AugerRecombination same selection. Sum matching QW segments, calculate IQE with consistent definitions, evaluate rate field sign and QW spatial carrier balance.
+- PENDING: current 2D AreaFactor/unit checks, baseline vs Wu paper validity, *new post-MgFix* n25 NtSide1e18 trap ON followed by matched-current comparison; prior pre-MgFix ON n25 invalid for controlled split.
+
 ## 2026-11-04 — Wu post-MgFix n21 clean 5V log CHECK PASSED (NEXT PHYSICAL GATES)
 1. DONE (OBSERVED): user `n21_des.log` 5.000V, anode e1.695e-4 / h2.399e-3 / total2.569e-3 raw; error .696, curve finished, fresh TDR saved, normal exit 2026-11-03 23:58:02 KST.
 2. NEXT: compute QW1–4 (Clean and DmgL/R consistently) **region integrals** of RadiativeRecombination, SRH, Auger from fresh OFF `n21_des.tdr`, with field sign/unit and region boundaries checked. Ratio of global maxima is not IQE. Inspect QW spatial eDensity/hDensity profiles and highly concentrated stripes.

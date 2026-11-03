@@ -5966,15 +5966,16 @@
   "juSubinKou4Candidate20261103": {
     "worker": "주수빈",
     "date": "2026-11-03",
-    "status": "PROPOSED_CODE_CREATED_SDE_ONLY_NOT_RUN",
+    "status": "PROPOSED_CODE_CREATED_SDE_AND_SDEVICE_NOT_RUN",
     "project": "CMP_BASELINE_3.1.0_KOU4FULL",
     "files": [
       "CMP/tcad/candidates/CMP_BASELINE_3.1.0_KOU4FULL/sde_dvs.cmd",
-      "CMP/tcad/candidates/CMP_BASELINE_3.1.0_KOU4FULL/README.md"
+      "CMP/tcad/candidates/CMP_BASELINE_3.1.0_KOU4FULL/README.md",
+      "CMP/tcad/candidates/CMP_BASELINE_3.1.0_KOU4FULL/sdevice_des.cmd"
     ],
     "geometry": "CMP Kou-derived 4um Full 2D 4x3nm In0.15 QW, 5x22nm GaN QB, 4um nGaN, 5nm symmetric Dmg strips",
     "provisional": "p/EBL/doping/contacts, traps and SDevice unresolved; not a Kou paper reproduction",
-    "next": "SWB independent SDE mesh first; audit actual log/pp/contacts prior to SDevice",
+    "next": "SDE mesh first, then clean SDevice smoke NtSide=0 PolAct=0 Vstop=0.1; Kou surface SRH not reproduced",
     "wuCandidate": "preserved",
     "baselineSelected": false
   }

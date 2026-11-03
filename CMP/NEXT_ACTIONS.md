@@ -1,3 +1,7 @@
+## 2026-11-03 — Wu2023 school pp1_dvs MgActive-only confirmed: next validation gate
+- READ school's actual pp21_des.par ionization Species/parameters and effective runtime SWB working-directory overrides (SDE pp1_dvs.cmd line61 confirmed MgActive-only p-GaN). Default installed Mg acceptor mapping commented out, local/home datexcodes absent at checked locations.
+- Prepare *isolated*, project-scoped datexcodes mapping using verified installed GaN example (do not edit global library). Run only SDE mesh to confirm negative pGaN DopingConcentration (vs 2e19 MgActive chemical/active profile). After mapping gate, run OFF SDevice and examine acceptor, holes, QW rates; preserve prior n21/n25.
+
 ## 2026-11-03 — Wu2023 Mg net-doping map diagnostic (OBSERVED)
 - User SVisual n1_msh DopingConcentration plot: p-GaN blue near 0; n-GaN +5e18 cm^-3. Earlier same n1_msh showed p-GaN MagnesiumActiveConcentration 2e19 cm^-3.
 - Mg field exists but does not contribute to net p-type doping; SDevice AcceptorConcentration 0 and hDensity near zero are consistent. Dopant-species mapping is suspected, exact definition not yet inspected.

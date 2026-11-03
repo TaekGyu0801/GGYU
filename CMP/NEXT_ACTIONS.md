@@ -1,3 +1,7 @@
+## 2026-11-03 — Wu2023 school SDevice IncompleteIonization switch matches Mg Species: next controlled fix
+- No SDevice Physics or GaN Ionization Species change needed at this gate: pp21_des.cmd and pp21_des.par both reference MagnesiumActiveConcentration (confirmed actual school files). Missing Mg acceptor registration is most probable.
+- Preserve original school n1_msh.tdr and 5V n21/n25. Use isolated Wu test project and project-local datexcodes from installed official GaN example; don't modify global lib. Run SDE/mesh only, check top pGaN negative DopingConcentration and nGaN positive5e18, then new OFF SDevice holes/Acceptor. Treat unverified runtime dir and 5V physics as unresolved until tested.
+
 ## 2026-11-03 — Wu2023 pp21_des.par Mg ionization species confirmed: next command and SDE-only gate
 - Actual school pp21_des.par confirmed GaN Ionization Species(MagnesiumActiveConcentration) E0=0.15 alpha0 g4, which is NOT Mg acceptor registration; E0 is generic rather than Wu sourced. First check actual school pp21_des.cmd Physics IncompleteIonization switch and other effective parameter linkage via grep.
 - Then in isolated project copy use documented project-local datexcodes Mg acceptor mapping chemical=MagnesiumConcentration, active=MagnesiumActiveConcentration, ionized=MagnesiumMinusConcentration (never modify installed global file); verify real SWB working-directory application. Run SDE mesh-only first to verify negative pGaN net doping; then clean SDevice QW holes/rec. Keep n21/n25 5V outputs archived.

@@ -1,3 +1,8 @@
+## 2026-11-03 — Wu2023PHY direct Vstop=5 run attempted; SWB ERROR reported (UNRESOLVED)
+- User stated standalone 0.1V too slow, chose Vstop5 and launched; afterward supplied error screenshot. The exact error text, node, SWB PP and log not available here, so **DO NOT CLAIM WHAT FAILED OR THAT A FIX IS APPLIED**.
+- Current independent GitHub source `CMP/tcad/candidates/CMP_BASELINE_3.2.0_WU2023PHY` unchanged; earlier parent and prior Wu10 5V n21/n25 outputs preserved.
+- Need recent affected school `n*_des.log`, `n*_dvs.log`, `n*_msh.log` and `pp*_des.cmd/.par`. Stop further reruns until actual first error identified. 0→5V ramp does not skip 0.1V region.
+
 ## 2026-11-03 — Wu 2023 physics-first candidate SOURCE CREATED on GitHub (PROPOSED / NO SCHOOL RUN)
 - **New source:** `CMP/tcad/candidates/CMP_BASELINE_3.2.0_WU2023PHY/` (SDE/SDevice/par/SVisual1/README), parent 3.0.0 unchanged, separate 3.2.0 version. Full Sentaurus T-2022.03 compile/run NOT performed.
 - **Paper-grounded inputs:** W10um, nGaN3.9um Si5e18, 4x In0.08GaN QW3nm with 8nm GaN barriers, Mg nominal2e19, bilateral 5nm acceptor trap strips; piezo, Mg incomplete ionization, field-related trapping, radiative/SRH/Auger.

@@ -1,3 +1,9 @@
+## 2026-11-03 — 주수빈 Kou4 SDevice pilot code added (CODE COMMITTED, NOT RUN)
+- `CMP/tcad/candidates/CMP_BASELINE_3.1.0_KOU4FULL/sdevice_des.cmd` added; matching Full2D SDE region names with SWB `NtSide`, `PolAct`, `Vstop`. One SDevice can run separate clean and damaged parameter splits; no SDevice2/SVisual2 required for first smoke.
+- Initial proposed syntax/solver smoke AFTER SDE mesh pass: NtSide=0, PolAct=0, Vstop=0.1. Not an LED operating-point or physics validation.
+- Uses provisional CMP volumetric 5nm trap-host regions and inherited pilot physics; Kou original surface recombination formulation NOT reproduced. EBL/pGaN/contacts/Mg/MaterialDB and current normalization remain blockers. No server run or parser verification.
+- NEXT: SDE preprocess/mesh audit, then SDevice clean smoke log and effective PP inspection. Do not claim baseline freeze.
+
 ## 2026-11-03 ~20:46 KST — 주수빈: Kou4 Full2D 독립 SDE 신규 후보 생성 (PROPOSED, NOT RUN)
 - 사용자 결정: Wu와 Kou의 두 후보를 독립 제작/실행하고 검증 결과로 최종 Baseline 선택. 본 방은 Kou 전용. 별도 Wu 후보는 그대로 유지.
 - 새 GitHub 코드: `CMP/tcad/candidates/CMP_BASELINE_3.1.0_KOU4FULL/sde_dvs.cmd`, `README.md`. CMP가 기존에 Kou 기반으로 기록한 4µm Full2D, In0.15 QW 4×3nm, QB 5×22nm, nGaN 4µm, 좌우 5nm Dmg geometry. 이전 shelf 포함 원본을 그대로 복제하지 않은 새 독립 구조 후보.

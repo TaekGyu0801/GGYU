@@ -1,3 +1,9 @@
+## 2026-11-03 ~22:57 KST — CMP_WU_Copy n21 5V hDensity map inspected (OBSERVED screenshot; cause UNRESOLVED)
+- Sentaurus Visual screenshot of n21_des.tdr at clean 5V has `hDensity` selected with logarithmic color scale. Displayed auto range ~3.79136e-39 to 1 cm^-3. Apparent hole density throughout p-GaN / QW / n-GaN is orders below functional p-type injection; confirm this is not a manual plot range/clipping.
+- Corroborating existing n21 5V anode terminal current: electron=2.884e-5 raw, hole=3.696e-27 raw. Nonzero total electrical current DOES NOT validate QW bipolar injection or radiative LED operation.
+- Root cause not yet established. Single immediate read-only step: uncheck hDensity in SVisual and display `AcceptorConcentration` across pGaN with its automatic range. If absent/zero inspect `MagnesiumActiveConcentration` / `datexcodes.txt` species, preprocessed SDE, and `pp21_des.par`; if present check Mg incomplete-ionization, band profiles and contacts. Do not prematurely modify physics or run trap-ON.
+- No new simulation or code change.
+
 ## 2026-11-03 ~22:53 KST — Wu2023PHY clean 5V SVisual1 plots shown (OBSERVED USER SCREENSHOT; NOT physical injection validation)
 - Screenshot from school `CMP_WU_Copy` Sentaurus Visual T-2022.03 shows data `BaselineData_22` and two red curves labeled `NtSide=0`: left anode terminal current against anode voltage 0→5V, right width-normalized |J| from nominal 10um plot script. Both display smooth increasing response with visible rise ~2.5–3V, final ordinate approx 2.88e-5 raw left and 2.88e2 A/cm² right.
 - SDevice log already separately verified clean n21 5V total raw current +2.884e-5, electron +2.884e-5, hole +3.696e-27, normal finish at 22:02:35, n21_des.tdr saved. Plot confirms SVisual visualization, not calibrated 2D→J scaling or evidence of radiative emission.

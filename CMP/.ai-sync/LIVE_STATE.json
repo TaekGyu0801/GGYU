@@ -1,4 +1,56 @@
 {
+  "juSubinWu2023PhysicsCandidate320Created20261103": {
+    "date": "2026-11-03",
+    "worker": "주수빈",
+    "status": "PROPOSED_GITHUB_CODE_CREATED_TARGET_SENTaurus_NOT_RUN",
+    "project": "CMP_BASELINE_3.2.0_WU2023PHY",
+    "sourceDirectory": "CMP/tcad/candidates/CMP_BASELINE_3.2.0_WU2023PHY",
+    "parent": "CMP_BASELINE_3.0.0_WU10FULL",
+    "files": [
+      "sde_dvs.cmd",
+      "sdevice_des.cmd",
+      "sdevice.par",
+      "svisual1_iv.tcl",
+      "README.md"
+    ],
+    "sourceCommits": [
+      "b6acbf4",
+      "570f1e2",
+      "ebade69",
+      "760c570",
+      "0225a13"
+    ],
+    "paperDOI": "10.1016/j.micrna.2023.207542",
+    "verifiedPaperInputs": {
+      "mesaUm": 10,
+      "nGaNUm": 3.9,
+      "SiCm3": "5e18",
+      "QWCount": 4,
+      "QWIn": 0.08,
+      "QWNm": 3,
+      "GaNBarrierNm": 8,
+      "MgNominalCm3": "2e19",
+      "sidewallDamageNm": 5
+    },
+    "newPhysics": [
+      "IncompleteIonization Mg (parameter E0=0.15 pilot)",
+      "Piezoelectric_Polarization strain full ON assumed c-axis",
+      "Thermionic heterointerface model choice",
+      "PooleFrenkel field-related trap proxy",
+      "TrapEt/TrapSigmaN/TrapSigmaP SWB parameterization"
+    ],
+    "uncertain": [
+      "P-GaN120nm, EBL0, 5 barriers, full-width ideal contacts",
+      "Mg substitutional/chemical mapping, installed datexcodes",
+      "TrapEt0.75 and sigma1e-15 pilot, PF epsilon9.5 pilot",
+      "c-axis and mobility/quantum/B/C material parameters",
+      "original Wu trap physics exact field response"
+    ],
+    "staticAudit": "source checks only: 22 unique trap regions, balanced parens, expected SWB macro names",
+    "execution": "NO school SWB or TCAD run, no plots or new LED currents",
+    "priorRun": "Old CMP_WU n21 OFF 5V 3.025e-29 raw and n25 ON 5V 5.810e-19 raw preserved; uncalibrated",
+    "next": "Open separate school SWB; preprocess SDE and SDevice par, verify real donors/acceptors and contacts; clean Nt0 0.1V then 5V QW injection; only afterward ON. Obtain Wu original Fig1."
+  },
   "juSubinWu2023OnlySourceCorrection20261103": {
     "date": "2026-11-03",
     "worker": "주수빈",

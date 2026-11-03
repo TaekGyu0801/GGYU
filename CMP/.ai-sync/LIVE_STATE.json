@@ -1,4 +1,36 @@
 {
+  "juSubinWuMgFixOFFn21QWSRHIntegral20261104": {
+    "worker": "주수빈",
+    "eventDateKST": "2026-11-04",
+    "project": "CMP_WU_Copy",
+    "node": 21,
+    "condition": "MgFix Trap OFF NtSide=0 n21 final 5V",
+    "status": "OBSERVED_12_REGION_QW_SRH_INTEGRALS_IQE_UNVERIFIED",
+    "field": "srhRecombination",
+    "integralUnits": "s^-1*um^-1",
+    "sumAllQW12RegionsReported": 610218400000000,
+    "domainUm2": 0.1199999,
+    "QW1": {
+      "total": 642508382500,
+      "percent": 0.1052915367
+    },
+    "QW2": {
+      "total": 605984869800,
+      "percent": 0.099306219
+    },
+    "QW3": {
+      "total": 120204240230000,
+      "percent": 19.69855882
+    },
+    "QW4": {
+      "total": 488765716100000,
+      "percent": 80.09684342
+    },
+    "DmgLeftRightCombined": 612204582300,
+    "DmgLeftRightPercent": 0.10032548,
+    "note": "Derived from user-provided Clean_QW1-4,DmgL_QW1-4,DmgR_QW1-4 integration, roundoff agreement with reported total. Dmg SRH in NtSide=0 not proof of traps active. Absolute IQE requires matching Radiative and Auger region integrals.",
+    "next": "Integrate identical 12 QW regions RadiativeRecombination then AugerRecombination, assess spatial carrier balance and current normalization; only then new MgFix NtSide1e18 ON matched-current comparison"
+  },
   "juSubinWuMgFixOFFn21Final5VVerified20261104": {
     "worker": "주수빈",
     "eventDateKST": "2026-11-04",

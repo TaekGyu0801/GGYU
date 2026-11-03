@@ -1,3 +1,7 @@
+## 2026-11-03 — Wu2023 school SDevice IncompleteIonization switch matches Mg Species (OBSERVED; MG ACCEPTOR BLOCKER PERSISTS)
+- School pp21_des.cmd Physics includes IncompleteIonization(Dopants="MagnesiumActiveConcentration") line29 and File Parameter="pp21_des.par" line16. Actual pp21_des.par GaN Ionization Species("MagnesiumActiveConcentration") E0 0.15, alpha0, g4. Therefore switch/species are aligned; missing switch is ruled out.
+- School pp1_dvs.cmd applies MgActive2e19 in pGaN. Installed default lib/datexcodes ordinary Mg acceptor mapping commented; project/home local overrides not present at tested paths; mesh net doping 0 and SDevice acceptor0. Isolated project-local datexcodes mapping remains next test. No code/run change; 5V terminal current does not validate LED emission.
+
 ## 2026-11-03 — Wu2023 pp21_des.par Mg ionization species confirmed (OBSERVED, physics fix pending)
 - Actual school CMP_WU_Copy/pp21_des.par grep shows Material="GaN" Ionization Species("MagnesiumActiveConcentration") E_0=0.15 alpha=0 g=4. E0 is generic III-N setting, not confirmed Wu parameter. This sets ionization parameters but does not activate Mg dopant acceptor mapping.
 - Actual school's pp1_dvs.cmd MgActive2e19 and default installed lib/datexcodes Mg chemical→active acceptor link commented out; pGaN net doping0 and SDevice acceptor0 persist. NEXT: verify pp21_des.cmd Physics IncompleteIonization and test a project-scoped Mg acceptor mapping in isolated SDE mesh, validate negative pGaN signed net doping BEFORE re-running 5V. No code/run modification.

@@ -1,4 +1,42 @@
 {
+  "juSubinWuPostMgFixTrapONn25Final5VConfirmed20261104": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04 01:00:20",
+    "device": "CMP_WU_Copy",
+    "node": 25,
+    "condition": "postMgFix NtSide=1e18 trap ON",
+    "status": "OBSERVED_FINAL_5V_ON_SOLVER_TDR_FRESH_CONFIRMED_IQE_PENDING",
+    "last5VError": 0.0011827,
+    "anodeElectronCurrentRaw": 0.000169,
+    "anodeHoleCurrentRaw": 0.002397,
+    "anodeTotalCurrentRaw": 0.002566,
+    "cathodeTotalCurrentRaw": -0.002566,
+    "baselineOFF5VAnodeTotalRaw": 0.002569,
+    "relativeCurrentDifferencePercentApprox": -0.116776956,
+    "latestOutputLogTimestampKST": "2026-11-04 01:00:20",
+    "latestTDRTimestampKST": "2026-11-04 01:00:20",
+    "wallclockSec": 3690.63,
+    "numericalCurveTraceFinished": true,
+    "n25TDRSaved": true,
+    "onTrapConcentrationShown": 1000000000000000000,
+    "fullTrapRegionsVerified": false,
+    "offOnIQECompared": false,
+    "n21AnodeAndCathodeAreaFactor": 1,
+    "current2DNormalizationVerified": false,
+    "polarizationCmd": "Piezoelectric_Polarization(strain)",
+    "latticeX": [
+      0,
+      0,
+      -1
+    ],
+    "latticeY": [
+      1,
+      0,
+      0
+    ],
+    "latticeOrientationWuValidated": false,
+    "next": "Check on trap conc region coverage and fresh ON 12 QW SRH Radiative Auger integrals from n25_des.tdr; calculate IQE, compare sidewall clean components and matched injected current, audit current normalization."
+  },
   "juSubinWuTrapON1e18SVisualIVTo5V20261104": {
     "worker": "주수빈",
     "eventDateKST": "2026-11-04 ~01:49",

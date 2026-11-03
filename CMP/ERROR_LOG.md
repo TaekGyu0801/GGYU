@@ -1,3 +1,8 @@
+## 2026-11-03 — Kou 원문 재현 후보에 CMP 4um/5nm 수치를 잘못 사용 (GPT RESEARCH DESIGN ERROR / CORRECTED CODE)
+- Previous ChatGPT made new `CMP_BASELINE_3.1.0_KOU4FULL` with Wm=4um, Wdamage=5nm and disabled 26nm EBL, falsely serving a Kou-paper-code request. These are CMP target/synthetic values, NOT Kou original tested chip/damage geometry.
+- User pointed out mismatch. Primary Kou 2019 Section 2: 20x20,60x60,100x100um2 chips; damaged border 4um. Created new separate `CMP_BASELINE_4.0.0_KOU20FULL3D` SDE and documented remaining assumptions; did not overwrite old code.
+- Error corrected in new **PROPOSED code only**; no T-2022.03 parser or run validation. Existing old Kou4 SDevice incompatible. NEXT: school SDE-only geometry/mesh validation.
+
 ## 2026-11-03 — POL0NOSHELF Python here-document failed in tcsh prompt (OBSERVED; GPT INSTRUCTION ERROR)
 - **OBSERVED:** 이택규는 `/user/semi/semi437/CMP_BASELINE_2.1.0_POL0NOSHELF` 에서 GPT가 준 `python3 - <<'PY'`와 다중행 Python 코드를 그대로 붙여넣었고, `tcsh/csh` 스타일 `?` continuation prompt가 모든 줄과 종결 `PY` 후에도 지속됨. 따라서 Python PLT 파서 **실행 완료/결과 출력 증거 없음**. 이는 SDevice solver 오류 또는 PLT 파일 손상 증거가 아님.
 - **CAUSE/RESPONSIBILITY:** 과거 동일 `?`/here-doc 입력 문제를 기록했는데도 GPT가 Bash 셸 진입 확인 없이 Bash 지향 heredoc을 제공한 안내 오류. Python 구문 자체의 오류로 단정할 수 없음.

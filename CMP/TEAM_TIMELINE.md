@@ -1,3 +1,10 @@
+## 2026-11-03 ~20:46 KST — 주수빈: Kou4 Full2D 독립 SDE 신규 후보 생성 (PROPOSED, NOT RUN)
+- 사용자 결정: Wu와 Kou의 두 후보를 독립 제작/실행하고 검증 결과로 최종 Baseline 선택. 본 방은 Kou 전용. 별도 Wu 후보는 그대로 유지.
+- 새 GitHub 코드: `CMP/tcad/candidates/CMP_BASELINE_3.1.0_KOU4FULL/sde_dvs.cmd`, `README.md`. CMP가 기존에 Kou 기반으로 기록한 4µm Full2D, In0.15 QW 4×3nm, QB 5×22nm, nGaN 4µm, 좌우 5nm Dmg geometry. 이전 shelf 포함 원본을 그대로 복제하지 않은 새 독립 구조 후보.
+- 미검증/임시: pGaN0.12µm, EBL OFF, active Mg3e17, n donor5e18, background1e15, full Ohmic contacts 및 damage strips는 발표 논문의 완전 복제 아님. Surface SRH physics, SDevice/PAR 미작성, SDE 미실행; Kou의 원 논문 실제 소자 폭과 CMP 4µm 대표 크기를 혼동하지 말 것.
+- 비교 방법: 각 후보 SDE/mesh/solver → QW1–4 distribution/transport → 동일 J에서 Clean/Trap-on radiative loss 검증. 10µm Wu와4µm Kou 결과를 그대로 '논문 우열'로 비교하지 않고 공통 4µm scaling 등 형평성 평가 필요.
+- **NEXT 주수빈:** 서버 SWB 새 프로젝트 이름 중복 확인→Kou SDE 단독 preprocess/mesh 빌드→log, pp1, mesh/contacts/QW/5nm geometry 확인→통과 시 SDevice 작성. 실제 학교 서버 실행 증거 없음.
+
 ## 2026-11-03 ~17:43 KST — JuSubin Wu10 Full2D candidate code committed (CODE CREATED / NOT RUN / COMMON BASELINE UNCHANGED)
 - 주수빈 user explicitly requested first Wu-based code. GitHub committed new independently authored `CMP/tcad/candidates/CMP_BASELINE_3.0.0_WU10FULL/{sde_dvs.cmd,sdevice_des.cmd,README.md}`. Full 10µm Cartesian 2D with Wu-derived In0.08 4×3nm QW / 5×8nm GaN QB, nGaN3.9um, dual5nm trap-host edge, regionwise 22 Dmg traps with SWB NtSide, PolAct and Vstop; SDE QW/edge fine mesh.
 - **RESEARCH-CRITICAL LIMITATION:** this is a **PROPOSED Wu-inspired smoke-test shell**, not completed Wu replica, physically calibrated model, or school-run result. Unknown published pGaN/EBL/contacts and traps deliberately substituted with **explicit** pilot assumptions (pGaN0.120um, active Mg3e17, EBL OFF, all-top/bottom ohmic, trap Ev+0.75, σ1e−15 and Nt1e18) and physics simplifications (Mg incomplete-ionization OFF and PolAct0 smoke). Original paper Mg2e19 is chemical, cannot call it active3e17. Do not present as publication-ready. No unverified code changes to Lee's current decks.

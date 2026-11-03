@@ -1,3 +1,8 @@
+## 2026-11-04 — JuSubin Wu MgFix NtSide=0 n21 5V solver CONFIRMED (OBSERVED USER n21_des.log)
+- Final accepted t=1 / 5.000V, Newton error 6.9604e-01, anode electron1.695e-4, hole2.399e-3, total2.569e-3 RAW (hole fraction~93.4%); cathode total-2.569e-3. `Curve trace finished`, `Writing plot 'n21_des.tdr' ... done`, `simulation finished` Tue Nov3 23:58:02 KST, wallclock1589.90s. Older 4.332V tail was incomplete snapshot and superseded.
+- The prior SVisual pGaN acceptor/hole/electron maps and MQW radiative and SRH maps corroborate restored carriers and nonzero recombination, but **QW-integrated IQE and actual 2D current density still UNRESOLVED**. Old pre-Mg ON n25 results cannot be compared to this corrected OFF run.
+- NEXT QW1-4 Clean/Dmg integral Radiative/SRH/Auger at 5V and QW carrier profiles; verify J normalization and Wu paper fidelity; then **new** fixed-Mg ON n25 NtSide=1e18 matched-current comparison. No new source edit or simulation initiated by ChatGPT.
+
 ## 2026-11-04 ~00:55 KST — Wu MgFix OFF n21 TDR acceptor holes electrons radiative observed (OBSERVED, numerical final log and rates pending)
 - OBSERVED user SVisual screenshots of post-MgFix CMP_WU_Copy/n21_des.tdr: top pGaN AcceptorConcentration red, legend max 2.000e19 cm^-3 (old pre-fix SDevice acceptor=0). Global hDensity max 1.16504e20 cm^-3, eDensity max 1.35933e20 cm^-3. These are global extrema, not QW-specific averages.
 - RadiativeRecombination global legend maximum 3.43425e29 cm^-3 s^-1 with strong thin red stripes in MQW toward x≈0.15–0.165um (lower wells); visually nonzero QW radiative recombination is confirmed but per-QW rates/IQE and uniformity are NOT. Color scales may be nonlinear; large peaks should be interrogated using regionwise integration.

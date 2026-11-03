@@ -1,3 +1,7 @@
+## 2026-11-04 — Wu post-Mg n21 advanced to 4.332V and hole current restored (PRIOR LOCAL NEWTON STALL RECOVERED; FINAL UNRESOLVED)
+- Earlier t≈0.64 Newton step failed/reduced. New n21 tail shows progressed and converged at t=.866477/4.332V, error .24308<1, so earlier local stall is not terminal failure. 4.332V anode e=7.286e-5, h=1.415e-3, total1.488e-3 raw. Next t=.886477/4.432V in Newton iterations with no final result yet.
+- n21_des.err tail InGaN e/h DOSMass 'computed by side materials GaN,InN': likely material interpolation notices, not evidence of fatal solver error. Earlier datexcodes species-redefined warnings and potential significance unresolved. Avoid editing files during solve.
+
 ## 2026-11-04 ~00:43 KST — Wu post-Mg SDevice n21 Newton step reduction screenshot (OBSERVED; NOT FINAL FAILED)
 - New post-Mg n21 SWB SDevice screenshot: Newton 35 iterations exhausted; solver reports "Newton didn't converge, trying again with smaller step" at quasistationary t=0.637961 to0.642158 (stepsize0.004197), error still ~3.44e3 after iteration 5. SWB status running; no final error/5V output yet.
 - n21_des.err bottom includes datexcodes variable redefined warnings MgActive, MgChemical, MgMinus, nSiliconActive after project-local full GaN example file was copied. Possible duplicate definitions, but cannot attribute nonlinear convergence failure to these warnings without evidence.

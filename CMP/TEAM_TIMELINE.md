@@ -1,3 +1,8 @@
+## 2026-11-04 ~00:55 KST — Wu MgFix OFF n21 TDR acceptor holes electrons radiative observed (OBSERVED SCREENSHOTS)
+- OBSERVED user SVisual screenshots of post-MgFix CMP_WU_Copy/n21_des.tdr: top pGaN AcceptorConcentration red, legend max 2.000e19 cm^-3 (old pre-fix SDevice acceptor=0). Global hDensity max 1.16504e20 cm^-3, eDensity max 1.35933e20 cm^-3. These are global extrema, not QW-specific averages.
+- RadiativeRecombination global legend maximum 3.43425e29 cm^-3 s^-1 with strong thin red stripes in MQW toward x≈0.15–0.165um (lower wells); visually nonzero QW radiative recombination is confirmed but per-QW rates/IQE and uniformity are NOT. Color scales may be nonlinear; large peaks should be interrogated using regionwise integration.
+- Interpretation: SDevice Mg acceptor recognized and carrier populations increased after mapping fix. Still NO proof of quantitatively calibrated LED or Wu paper reproduction, no QW regional rate integrals, final 5V terminal log absent. NEXT inspect final newly dated n21_des.log and 5V contact components; then QW1–4 e/h cutlines and Clean/Dmg QW region integrals Rad/SRH/Auger, current normalization, baseline validation before ON n25.
+
 ## 2026-11-04 ~00:47 KST — Wu MgFix OFF n21 SVisual full 0-5V IV curve observed (OBSERVED SCREENSHOT)
 - 주수빈 reports post-MgFix n21 NtSide=0 run complete; SVisual BaselineData_22 curve from 0 to ~5V, turn-on ~3.2–3.4V, visual raw endpoint ~2.6e-3 (axis A/um assumed), plotted J ~2.5e4 A/cm2 ASSUMED unvalidated. New 5V solver log, exact terminal current and QW carrier/rates not yet provided; next verify log then fresh TDR physical validation. Not a baseline acceptance or validated current density.
 

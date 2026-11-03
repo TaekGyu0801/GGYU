@@ -7051,5 +7051,20 @@
     "rerunPerformed": false,
     "savedTDRContainsNewField": false,
     "next": "Make same one-line Plot change to school SWB SDevice source, protect previous outputs and run OFF n21/ON n25 SDevice (new nodes preferably), verify both PP Plot and SVisual field, integrate h and e separately."
+  },
+  "juSubinWu20261104SkipHGapStatesRerun": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04",
+    "status": "DECISION_REJECTED_RERUN_GITHUB_CANDIDATE_REVERTED",
+    "requestedHGapStatesRerun": false,
+    "existingN21AndN25Unchanged": true,
+    "schoolSDeviceModification": false,
+    "gitCandidatePlotReverted": true,
+    "revertCommit": "c3fb0806a2961d65cdcc647a8ebeea76e4367999",
+    "reason": "SDevice simulation time too long; user opts to analyze saved outputs",
+    "knownOnEightDamagedQWEGapStates": 41483880000000,
+    "hGapStatesMeasured": false,
+    "completeTrapInclusiveIQEValidated": false,
+    "next": "Integrate OFF n21 eGapStates in same 8 DmgL/R QW regions; integrate ON n25 eGapStates across all damaged trap regions; compare 5V only with caveats. No new run."
   }
 }

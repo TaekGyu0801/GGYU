@@ -1,4 +1,32 @@
 {
+  "juSubinWu2023Clean3713VCurrent20261103": {
+    "date": "2026-11-03",
+    "worker": "주수빈",
+    "project": "/user/semi/semi437/tmp/myproject/CMP_WU_Copy",
+    "codeCandidate": "CMP_BASELINE_3.2.0_WU2023PHY",
+    "node": 21,
+    "status": "OBSERVED_ACCEPTED_3P713V_STEP_5V_SWEEP_IN_PROGRESS",
+    "quasistationaryAcceptedT": 0.742621,
+    "lastVoltageV": 3.713,
+    "anodeElectronCurrentRaw": 0.00001374,
+    "anodeHoleCurrentRaw": 1.885e-29,
+    "anodeTotalCurrentRaw": 0.00001374,
+    "cathodeElectronCurrentRaw": -0.00001374,
+    "cathodeHoleCurrentRaw": 2.334e-40,
+    "cathodeTotalCurrentRaw": -0.00001374,
+    "newtonError": 0.17198,
+    "nextStepStarted": {
+      "fromT": 0.742621,
+      "toT": 0.762621
+    },
+    "warnings": [
+      "Electronic-dominated anode current; cannot infer QW hole density solely from contact partition",
+      "5V completion and current units not established",
+      "Physical Wu replication not validated"
+    ],
+    "next": "Allow clean run to continue to 5V; confirm final solver/TDR and inspect pGaN activated acceptor/hDensity and QW1-4 carriers/bands/recombination; do not modify during run",
+    "codeChange": "NONE"
+  },
   "juSubinWu2023MissingPP21ParameterConfirmed20261103": {
     "dateKST": "2026-11-03 21:45:44",
     "worker": "주수빈",

@@ -1,3 +1,8 @@
+## 2026-11-03 — Wu2023 Mg net-doping map diagnostic (OBSERVED)
+- User SVisual n1_msh DopingConcentration plot: p-GaN blue near 0; n-GaN +5e18 cm^-3. Earlier same n1_msh showed p-GaN MagnesiumActiveConcentration 2e19 cm^-3.
+- Mg field exists but does not contribute to net p-type doping; SDevice AcceptorConcentration 0 and hDensity near zero are consistent. Dopant-species mapping is suspected, exact definition not yet inspected.
+- Next: read local and installed datexcodes.txt magnesium donor/acceptor definitions before editing; require negative p-GaN net doping in re-meshed copy, then test SDevice. No code modified.
+
 ## 2026-11-03 22:13:17 KST — Wu2023PHY Trap ON n25 5V solver normal finish CONFIRMED (OBSERVED USER LOG)
 - School project `/user/semi/semi437/tmp/myproject/CMP_WU_Copy`; user pasted `n25_des.log` tail. Actual 5.000E+00V anode electron `2.858E-05`, hole `2.384E-20`, conduction `2.858E-05` raw native units; cathode electron `-2.858E-05`, hole `-4.223E-29`, conduction `-2.858E-05`.
 - Last Bank/Rose solver converged error 8.4932E-01 (<1). `Curve trace finished`, `Writing plot 'n25_des.tdr' ... done`, `Sentaurus Device simulation finished` Tue Nov 3 22:13:17 KST, wallclock 530.09s, CPU 529.57s, peak757MB; licenses returned. Thus Trap ON 5V SDevice completion **now directly verified**, replacing earlier screenshot-only/solved-unconfirmed status.

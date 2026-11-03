@@ -1,3 +1,9 @@
+## 2026-11-03 — Wu2023 physics-first source candidate 3.2.0 created, NOT VALIDATED
+- **Code available:** `CMP/tcad/candidates/CMP_BASELINE_3.2.0_WU2023PHY/` (SDE, SDevice, sdevice.par, SVisual, README); parent 3.0.0 and school runs untouched.
+- **Change:** Wu 2023 reported Mg nominal2e19 as pGaN nominal substitutional assumption, Mg IncompleteIonization ON with preliminary par E0=0.15, full polarization and assumed c-axis orientation; field-dependence PooleFrenkel and Thermionic as *additional unverified modeling choices*; nSi explicit species. Exact Wu field trapping implementation, contacts, pGaN thickness, EBL, ionization calibration unresolved.
+- **Validation:** JS/static source check only, no Sentaurus preprocess, no school SDE/SDevice or new 5V results; scientific baseline still HOLD. Old n21/n25 raw currents 3.025e-29/5.810e-19 persist only as prior results.
+- **Next:** separate SWB import; build SDE, confirm actual donor/acceptor species, preprocess par+SDevice, clean Nt0 low-bias and controlled higher bias, inspect QW carriers; THEN ON, no premature baseline freeze.
+
 ## 2026-11-03 — CORRECTION: Wu (2023) paper-only baseline implementation (user confirmed, source checked)
 - **Source of truth:** Zhuang Wu et al. (2023), DOI 10.1016/j.micrna.2023.207542. Previous incorrect-paper-based EBL/axisymmetric/alloy redesign direction is withdrawn and must not guide this Wu baseline.
 - **2023 paper excerpt VERIFIED:** 10um width; nGaN 3.9um Si5e18; 4x In0.08 GaN MQWs 3nm well/8nm barrier; pGaN Mg2e19 chemical; 5nm sidewall acceptor traps. Physics expressly includes piezoelectric polarization, Mg incomplete ionization, field-related trapping and radiative/SRH/Auger.

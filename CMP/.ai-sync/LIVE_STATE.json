@@ -1,4 +1,22 @@
 {
+  "juSubinWuSchoolSDEMgActiveOnlyAndDefaultMappingCommented20261103": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-03",
+    "project": "CMP_WU_Copy",
+    "status": "OBSERVED_MGACTIVE_ONLY_SDE_AND_DEFAULT_MG_ACCEPTOR_COMMENTED_FIX_UNRUN",
+    "schoolSDE": "pp1_dvs.cmd",
+    "line25": "PMgActive 2e19",
+    "line61": "place-field MagnesiumActiveConcentration",
+    "line68": "pGaN uses PMgActive",
+    "defaultDatexcodes": "lib/datexcodes.txt MagnesiumConcentration doping=acceptor commented out; pMagnesium distinct built-in species",
+    "installedExample": "GaN_AlGaN_Polarization/datexcodes.txt activates chemical→active→ionized Mg acceptor mapping",
+    "projectAndHomeDatexcodes": "absent at paths tested",
+    "physicalBlocker": "pGaN mesh MgActive=2e19, net DopingConcentration=0; SDevice AcceptorConcentration=0 and negligible holes",
+    "rootCause": "strongly suspected missing Mg acceptor mapping; effective runtime override / par not yet confirmed",
+    "next": "read school's pp21_des.par Mg species; use isolated project-local mapping in separate run copy, verify pGaN net doping negative before device run",
+    "codeModified": false,
+    "simulationRerun": false
+  },
   "juSubinWu2023TrapON5VActualSolverConfirmed20261103": {
     "worker": "주수빈",
     "dateKST": "2026-11-03 22:13:17",

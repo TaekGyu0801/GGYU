@@ -1,3 +1,9 @@
+## 2026-11-03 — PolAct=0 POL0NOSHELF n6 finished; n2 output exists (OBSERVED terminal, NOT YET VALIDATED n2)
+- 작업자: 이택규 / AI: ChatGPT. 학교 서버의 실제 디렉터리 `/user/semi/semi437/CMP_BASELINE_2.1.0_POL0NOSHELF`를 `find`로 확인한 뒤 해당 디렉터리에서 출력 확인.
+- **OBSERVED:** `n2_des.log` 338K (2026-11-03 01:52), `n2_des.plt` 293K (01:52); `n6_des.log` 340K (04:38), `n6_des.plt` 293K (04:38), 모두 실제 `ls -lh`에 존재. `n6_des.log`는 `Curve trace finished.`, `Sentaurus Device simulation finished (Date: Tue Nov 3 04:38:53 2026 KST)`, `Good Bye!` 출력으로 solver 정상 종료 직접 확인.
+- **UNRESOLVED:** `grep ... | tail -25`는 n6 최후 부분만 보여 `n2`의 정상 종료를 입증하지 않음. 두 노드 최종 전압 3.6V/전류/재결합 및 실제 pp `activation=0`, `Iterations=12`, 메시 `Wshelf=0`, 원본과 단일변수 일치 모두 검증 전. n6 완료는 물리적 타당성 검증 완료가 아님.
+- **NEXT READ ONLY:** `tail -n 12 n2_des.log; tail -n 12 n6_des.log; grep -nE 'Piezoelectric_Polarization|Iterations[[:space:]]*=' pp2_des.cmd pp6_des.cmd` 확인. 이후 원본 PolAct=0.5와 비교해 QW1–4 Rad share, 단자 전류 및 가능한 동일 전류 재결합 비율 평가. Common Baseline physical B/FREEZE HOLD; 서버 원본 소자 무변경.
+
 ## 2026-11-02 — Lee pasted full SDevice into new shelf-free POL0 clone (USER-REPORTED, NO RUN VERIFIED)
 - 사용자: 잘못된 shelf 포함 복사본을 중단하고 정확한 `CMP_BASELINE_2.0.0_V2`를 새 복사한 프로젝트에서 PolAct=0 SWB 파라미터 및 GPT 전체 SDevice 코드 붙여넣기까지 완료했다고 보고. 원본 SDE와 PAR는 수정 없이 유지한 것으로 설명. 실제 clone 유효 SDevice/geometry 증거는 추가 확인 전.
 - **NEXT MINIMAL:** 새 SDE mesh에 옆 턱이 없는지 확인 (올바른 원본에는 Wshelf=0). 그다음 n2 NtSide=0 우선 실행하여 pp `activation=0` / `Iterations=12` 및 solver convergence 확인; n6는 후속. PolAct=0은 진단 전용 (EBL 포함 global); 기존 baseline과 정확히 단일 변수 비교할 수 있는지는 소스/PP 동일성 검증 필요. 새로운 결과/성공은 아직 없음. Baseline B/FREEZE HOLD.

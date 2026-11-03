@@ -1,4 +1,15 @@
 {
+  "juSubinWuSdeRerunReportedPendingMeshValidation20261104": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04",
+    "status": "USER_REPORTED_SDE_RERUN_MESH_SIGN_NOT_YET_VERIFIED",
+    "project": "CMP_WU_Copy",
+    "localMagnesiumAcceptorFileVerified": true,
+    "reportedSdeRerun": true,
+    "sdeLogProvided": false,
+    "freshMeshSignedNetDopingVerified": false,
+    "next": "SVisual n1_msh.tdr pGaN DopingConcentration signed negative; nGaN +5e18; do not rerun SDevice until confirmed"
+  },
   "juSubinWuMgMappingBackupVerified20261104": {
     "worker": "주수빈",
     "dateKST": "2026-11-04",

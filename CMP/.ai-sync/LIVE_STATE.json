@@ -1,4 +1,21 @@
 {
+  "juSubinWu2023MissingPP21ParameterConfirmed20261103": {
+    "dateKST": "2026-11-03 21:45:44",
+    "worker": "주수빈",
+    "project": "/user/semi/semi437/tmp/myproject/CMP_WU_Copy",
+    "candidate": "CMP_BASELINE_3.2.0_WU2023PHY",
+    "node": 21,
+    "status": "OBSERVED_ROOT_CAUSE_CONFIRMED_MISSING_PP21_DES_PAR_NOT_FIXED",
+    "evidence": [
+      "n21_des.log: Reading parameter file 'pp21_des.par'",
+      "n21_des.log: Cannot open parameter file 'pp21_des.par' !",
+      "n21_des.log mesh read success 33 regions 40006 triangles",
+      "n21_des.log n1_msh.tdr doping grid loaded"
+    ],
+    "next": "Configure SWB first SDevice tool -> Edit Input > Parameter, paste candidate sdevice.par, save and preprocess to create pp21_des.par; verify file exists, rerun n21 only. Later check 2nd SDevice tool parameter setup.",
+    "otherUnresolved": "Further parameter-file syntax/ionization/polarization/thermionic/PF not yet parsed; mesh min-angle 0.037deg caution",
+    "codeModified": false
+  },
   "juSubinWu2023Direct5VErrorReported20261103": {
     "date": "2026-11-03",
     "worker": "주수빈",

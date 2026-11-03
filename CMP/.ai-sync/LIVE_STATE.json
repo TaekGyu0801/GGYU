@@ -7172,5 +7172,25 @@
     "noNewSDeviceRuns": true,
     "trapInclusiveIQEValidated": false,
     "next": "Integrate same 14 non-QW damaged regions in OFF n21 TDR eGapStatesRecombination; then complete all-22 comparison using same field and 5V. Do not claim trap-inclusive IQE or interpret QW percentage as total physical recombination."
+  },
+  "juSubinWuOFFn21DopingIntegration20261104": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04",
+    "status": "OBSERVED_USER_SVISUAL_SIGNED_DOPING_FIELD_NOT_EGAPSTATES",
+    "node": 21,
+    "field": "DopingConcentration",
+    "regionsCount": 33,
+    "totalIntegrated": 193984600,
+    "integralUnits": "um^-1",
+    "domainUm2": 40.72,
+    "pGaNCleanIntegral": -1014793,
+    "pGaNCleanAreaUm2": 1.1988,
+    "nGaNCleanIntegral": 194805000,
+    "nGaNCleanAreaUm2": 38.961,
+    "barrierNetDopingPositive": true,
+    "QWNetDopingZero": true,
+    "polarityPAndNConsistent": true,
+    "trapOFFNonQWEGapStatesPending": true,
+    "next": "Use n21_des field eGapStatesRecombination; select only DmgL/R_pGaN, Barrier0-4, nGaN (14 regions); compare to ON 3.950639e11 s^-1 um^-1. No rerun."
   }
 }

@@ -1,3 +1,9 @@
+## 2026-11-03 ~22:00 KST — Wu10 vs 기존 V2.1 주입모델 비교 (주수빈 코드 진단, 새 실행 없음)
+- Wu10 clean/Trap ON 5V raw I 각각 3.025e-29 / 5.810e-19, 수치 수렴 완료했으나 정상 LED 전류 주입 미검증.
+- 이택규 V2.1 POL0NOSHELF의 3.6V PolAct0 raw I는 clean 4.80713937e-6 / ON 4.54183989e-6; QW4 radiative share 99.889% / 99.964%. 서로 다른 bias/geometry/물성/전류 normalization이므로 직접 정량 대조 불가; V2.1 QW4 국소화 ≠ Wu10 거의 무전류 현상.
+- Wu10 SDE/SDevice GitHub 원본과 CMP4 기준 정적 비교: 10um Full2D, In0.08, QB8nm, EBL0, 단순 전면 top/bottom Ohmic, default MaterialDB, IncompleteIonization 없음, PolAct0. 기존 CMP4/V2는 4um Half, In0.15, QB22nm, EBL26nm, custom .par/incomplete ionization 이력. 여러 변수가 동시에 달라짐. 어떤 단일 변경이 원인인지는 아직 미확인. Wu의 OFF부터 극저전류이므로 단순 Trap 원인 아님.
+- 다음: Wu n21/n25 저장 TDR의 실제 doping 및 e/h densities·bands·quasi-Fermi 진단, 학교 pp21 및 MaterialDB 런타임 확인 후 최소 한 변수 변경. 기존 코드/실험 보호.
+
 ## 2026-11-03 21:00:31 KST — CMP_WU OFF+ON 5V both actual solver logs verified (OBSERVED)
 - **Direct school runtime evidence:** user pasted `n21_des.log` tail for Wu10 clean `NtSide=0, PolAct=0, Vstop=5`. At `5.000E+00 V` anode electron `2.596E-29`, hole `4.286E-30`, total `3.025E-29` (log raw current units), cathode total `-3.025E-29`. Final solver `Error smaller than 1` (1.1212E-12), `Curve trace finished`, `n21_des.tdr` written, simulation finished Tue Nov 3 21:00:31 KST, wallclock 56.91 s, CPU 56.80 s, peak 638 MB. SDevice licenses returned.
 - **Matched-V comparison with prior directly verified n25 Trap ON (1e18):** 5V ON anode total `5.810E-19` (electron `1.722E-29`, hole `5.810E-19`), cathode `-5.810E-19`, finished 20:58:41 KST, wallclock 361.62s, peak 640MB. Conditional same-voltage I_ON/I_OFF ≈ `1.921E+10`, but both tiny currents and OFF numerical floor make this **not interpretable as calibrated sidewall LED performance**. Hole component ON/OFF ≈`1.356E+11`, electron ON is ~0.66× OFF. Terminal composition alone doesn't prove QW carrier absence.

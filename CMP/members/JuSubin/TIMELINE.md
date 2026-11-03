@@ -1,3 +1,8 @@
+## 2026-11-04 — Wu MgFix n21 Trap OFF 5V Auger-integral / IQE (OBSERVED + DERIVED)
+- SVisual same 12 QW regions: AugerRecombination integrated 4.442221e15 [s^-1*um^-1]. Prior Rad=9.902518e15, SRH=6.102184e14 in identical regions (all 5V, post-MgFix, NtSide=0).
+- Calculated MQW three-term IQE 66.2156%, with SRH share4.0804%, Auger share29.7040%. QW1 48.13%, QW2 59.03%, QW3 73.27%, QW4 65.60%; QW4 hosts 91.03% of Rad and 95.42% of Auger, strong imbalance requiring e/h map interpretation.
+- This is model-internal 5V recombination metric, NOT validated physical/Wu-paper IQE or current density. NEXT inspect QW e/h cutlines and current normalization; do not compare old preMgFix n25 ON with new postMgFix n21 OFF. New ON later at same physics and matched J. No code or new simulation.
+
 ## 2026-11-04 — JuSubin Wu MgFix OFF n21 5V QW Radiative integral received; two-channel ratio calculated (OBSERVED + DERIVED, AUGER PENDING)
 - Worker 주수빈; supplied SVisual Field Integration of `RadiativeRecombination` on the same 12 QW regions (`Clean_QW1-4`, `DmgL_QW1-4`, `DmgR_QW1-4`) in `CMP_WU_Copy/n21_des`, post-MgFix NtSide=0, 5V. Reported `Total Integral=9.902518e15 [s^-1*um^-1]`, `Total Domain=1.199999e-1 [um^2]`. Printed 12-region sum 9.90251758326e15, agrees by rounding.
 - Per-QW radiative sums derived (Clean+L+R): QW1 7.395981904e11 (0.00746879% of total), QW2 1.0810392696e12 (0.01091681%), QW3 8.860310308e14 (8.947533%), QW4 9.014665915e15 (91.034081%). Rad distribution highly concentrated in QW4; QW3+4 ~99.9816%. Cause unresolved (transport, field/polarization, carrier population etc.); NOT automatically a simulator bug.

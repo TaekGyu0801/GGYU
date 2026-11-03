@@ -1,3 +1,11 @@
+## 2026-11-03 — Claude independent PolAct=0 review recommends provisional Baseline B / Project A CONDITIONAL GO (USER-FORWARDED CLAUDE DECISION; NO NEW RUN)
+- **Source/provenance:** 이택규가 2026-11-03 Claude 독립 검토 문장을 전달. Claude는 main `817fa2d` (11/03 10:08 KST) 및 Issue #7 최신까지 읽었다고 보고했으나 GitHub push 권한 거부로 직접 기록하지 못했다고 함. 이 문장은 **Claude 해석/권고**이며 학교 서버에서 새 실행·코드 수정 없음. 원문은 `CMP/members/LeeTaekGyu/TIMELINE.md` 2026-11-03 항목에 그대로 보존.
+- **OBSERVED prior run, NOT new:** 보호 복사 `CMP_BASELINE_2.1.0_POL0NOSHELF`, pp n2/n6 `PolAct=0`/`Iterations=12`, 3.6V PLT; PolAct0.5 대비 I 131.8×/492.6×, PolAct0에서도 QW4 share OFF 99.88898644%, ON 99.96413545%. 단, 전체 코드 수동 복붙으로 원본 대비 실제 PP/PAR/mesh 단일변수 일치 검증 없음.
+- **Claude's CONDITIONAL INTERPRETATION (NOT CONFIRMED):** 분극은 주입/Vf 민감도에는 주요하지만 QW4 집중의 유일 필요조건이라는 H1은 약화; 고전 DD가 3nm QW 첫 우물 포획을 과장한다는 H2는 미검증 가설이며 ΔEc≈0.41eV 수치의 런타임 검증 근거는 별도 확인 필요. `J≈240/227 A/cm²`는 이전 2D 폭 정규화 가정에 따른 환산값이지 검증된 4×4um 사각 픽셀 실측 J 아님.
+- **RECOMMENDATION ONLY:** Claude는 선택지 B, `PolAct=0.5` 물리 기준을 확정하지 않은 **임시 Baseline**, Project A `CONDITIONAL GO` 제안. 지금 허용 가능한 작업은 Project A 덱 준비; 물리적 해석/보고/Project A 효과 주장에는 (1) read-only 덱/mesh diff 유효성 게이트, (2) 같은 전류에서 Trap 효과 방향 동일 & 제안 ±25% 이내 여부, (3) QW4 집중/고전 모델 한계 명시 필요. ±25%는 검증된 물리 상수가 아닌 Claude 제안 작업 기준. 사용자/팀이 최종 채택했다고 확정하지 말 것.
+- **NEXT single action (READ ONLY):** 두 프로젝트 간 메시 md5, `pp1_dvs.cmd` diff, `pp2/pp6_des.par` diff, `pp2/pp6_des.cmd` diff `-w -B`로 실제 단일변수 시험 유효성을 확인. 그 뒤(게이트 통과 시) PLT 전체 공통 전류 범위를 확인하여 `polact_compare.py` 같은전류 IQE_sim/Trap loss(정의 명시) 및 QW 분포를 계산. 같은 전압 Trap loss 3.3% vs ~34%를 같은 전류의 차이로 오독 금지.
+- **Baseline physical verdict:** 기존 B/FREEZE HOLD 유지; Project B 별도 판정; 이후 H2 band-offset 단일변수 실험은 사용자 사전 승인 필요.
+
 ## 2026-11-03 — PolAct=0 both PLTs parsed: QW4 still >99.88% while current rises strongly (OBSERVED + DERIVED)
 - **작업자:** 이택규. **Source:** user pasted real Bash/Python DF-ISE `n2_des.plt`/`n6_des.plt` final-row extraction in `/user/semi/semi437/CMP_BASELINE_2.1.0_POL0NOSHELF` (2026-11-03, pp previously verified `activation=0`, global Iterations12, both runs finished). Final `anode OuterVoltage=3.600000 V` for both.
 - **OBSERVED PolAct=0, Trap OFF n2:** native anode current `4.80713937e-06`; total QW integrated radiative rates: QW1 `7.53686944e18`, QW2 `4.48979847e20`, QW3 `1.98055890e22`, QW4 `1.82316579e25`; QW4 fraction `99.88898644%`.

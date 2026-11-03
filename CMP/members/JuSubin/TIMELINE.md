@@ -1,3 +1,10 @@
+## 2026-11-03 ~22:53 KST — Wu2023PHY clean 5V SVisual1 plots shown (OBSERVED USER SCREENSHOT; NOT physical injection validation)
+- Screenshot from school `CMP_WU_Copy` Sentaurus Visual T-2022.03 shows data `BaselineData_22` and two red curves labeled `NtSide=0`: left anode terminal current against anode voltage 0→5V, right width-normalized |J| from nominal 10um plot script. Both display smooth increasing response with visible rise ~2.5–3V, final ordinate approx 2.88e-5 raw left and 2.88e2 A/cm² right.
+- SDevice log already separately verified clean n21 5V total raw current +2.884e-5, electron +2.884e-5, hole +3.696e-27, normal finish at 22:02:35, n21_des.tdr saved. Plot confirms SVisual visualization, not calibrated 2D→J scaling or evidence of radiative emission.
+- **IMPORTANT:** right `J` assumes native 2D current A/um, width 10um, AreaFactor1; do not present as measured device or 3D pixel J. p-side current almost exclusively electrons, so direct QW hole and radiative verification is still mandatory.
+- **NEXT:** reuse existing n21_des.tdr in SVisual 2D view; first inspect hDensity on logarithmic scale across pGaN and QW1–4, then AcceptorConcentration, eDensity, bands/quasi-Fermi and Radiative/SRH distributions. Preserve clean result; do not run trap-on until actual QW electron/hole injection assessed.
+- No new school code modification or re-run, GitHub source unchanged.
+
 ## 2026-11-03 22:02:35 KST — Wu2023PHY clean n21 5V numerical finish CONFIRMED (user log)
 - School CMP_WU_Copy/n21_des.log shows anode5V; electron2.884e-5, hole3.696e-27, total2.884e-5 raw; cathode total-2.884e-5 raw.
 - Newton convergence 0.20186; Curve trace finished; n21_des.tdr saved; solver normal finish, 460.97s wallclock, 765MB peak.

@@ -1,4 +1,19 @@
 {
+  "juSubinWuSchoolMgIonizationParVerified20261103": {
+    "worker": "주수빈",
+    "status": "OBSERVED_IONIZATION_PARAMETER_ONLY_MAGNESIUM_ACCEPTOR_MAPPING_NOT_RESOLVED",
+    "schoolProject": "CMP_WU_Copy",
+    "file": "pp21_des.par",
+    "ionizationSpecies": "MagnesiumActiveConcentration",
+    "E_0_eV": 0.15,
+    "alpha": 0,
+    "g": 4,
+    "parameterProvenance": "generic III-N, not Wu paper specific",
+    "interpretation": "ionization parameters do not automatically register magnesium acceptor; global Mg chemical acceptor mapping commented out; mesh pGaN net doping0",
+    "next": "read school pp21_des.cmd IncompleteIonization physics; isolate project local datexcodes, re-mesh to validate negative net pGaN, then clean SDevice",
+    "codeModified": false,
+    "simulationRerun": false
+  },
   "juSubinWuSchoolSDEMgActiveOnlyAndDefaultMappingCommented20261103": {
     "worker": "주수빈",
     "dateKST": "2026-11-03",

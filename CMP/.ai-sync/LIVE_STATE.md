@@ -1,3 +1,10 @@
+## 2026-11-03 — Wu 2023 physics-first candidate SOURCE CREATED on GitHub (PROPOSED / NO SCHOOL RUN)
+- **New source:** `CMP/tcad/candidates/CMP_BASELINE_3.2.0_WU2023PHY/` (SDE/SDevice/par/SVisual1/README), parent 3.0.0 unchanged, separate 3.2.0 version. Full Sentaurus T-2022.03 compile/run NOT performed.
+- **Paper-grounded inputs:** W10um, nGaN3.9um Si5e18, 4x In0.08GaN QW3nm with 8nm GaN barriers, Mg nominal2e19, bilateral 5nm acceptor trap strips; piezo, Mg incomplete ionization, field-related trapping, radiative/SRH/Auger.
+- **New code:** p input 2e19 `MagnesiumActiveConcentration` (nominal substitutional **assumption**, not real holes), explicit nSi donor species, `IncompleteIonization`, full piezo (crystal axis orientation from separate par), `Thermionic` and `PooleFrenkel` as **NOT-paper-verified proxies**, `TrapEt/SigmaN/SigmaP` SWB parameterization.
+- **Blockers:** no Fig1 verification for EBL/pGaN thickness/contact; Mg species+ionization, c-axis polarity and MaterialDB untested; PF model != verified Wu method; actual clean 5V injection unknown. Old Wu10 n21/n25 saved logs only, no new SWB changes.
+- **NEXT:** new independent SWB project, mesh/PP/par/Mg-acceptor gate → clean low bias/5V QW carriers/bands/injection → Trap ON at matched current; preserve all older runs.
+
 ## 2026-11-03 — CORRECTION: Wu (2023) paper-only baseline implementation (user confirmed, source checked)
 - **CORRECTED SOURCE:** Zhuang Wu et al., *Physical mechanisms on the size-effect in GaN-based Micro-LEDs* (2023), DOI 10.1016/j.micrna.2023.207542; ignore erroneous different-paper-based implementation assumptions in earlier entries.
 - **VERIFIED PUBLISHER EXCERPT:** 10um, nGaN3.9um Si5e18, four In0.08 InGaN QWs 3nm, GaN QB8nm, pGaN Mg doping2e19 chemical, sidewall acceptor traps within 5nm; physical models piezoelectric polarization, Mg incomplete ionization, field-related trap capture, Rad/SRH/Auger. EBL status unresolved in accessible excerpt; MUST inspect Fig1 before modifying.

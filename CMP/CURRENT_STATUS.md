@@ -1,3 +1,7 @@
+## 2026-11-04 ~00:47 KST — Wu MgFix OFF n21 SVisual full 0-5V IV curve observed (OBSERVED PLOT; PHYSICAL BASELINE UNVALIDATED)
+- After local GaN Mg acceptor datexcodes mapping and SDE pGaN net doping sign repair, user reports post-fix Trap OFF n21 finished and supplies SVisual BaselineData_22 NtSide=0 current-voltage plot spanning 0–5V, visual turn-on ~3.2–3.4V. Plotted endpoint around 2.6e-3 raw (A/um assumed) and conditional J near 2.5e4 A/cm2 must NOT be treated as real current density without geometry/AreaFactor verification.
+- 5V final SDevice logfile/TDR completion and exact currents still require direct log check; last directly verified 4.332V electron7.286e-5/hole1.415e-3 raw. QW hole density, radiative/SRH/Auger and IQE remain blocker. Do not run ON n25 or declare Wu baseline validated until OFF injection physics checked.
+
 ## 2026-11-04 — Wu post-Mg n21 advanced to 4.332V and hole current restored (OBSERVED INTERMEDIATE POST-MG SDEVICE)
 - 주수빈 CMP_WU_Copy clean n21 SDevice after Mg mapping successfully converged at 4.332V (t=.866477), anode electron7.286e-5, hole1.415e-3, total1.488e-3 raw, cathode total-1.488e-3, Newton error.24308. Prior Newton backtracking overcame; next 4.432V underway. This is strong indication p-type current component now physically represented but NO 5V finish and no direct QW holes/Radiative/SRH yet. Old pre-fix outputs were backed up. Continue OFF only, verify fresh 5V and QW validation before n25 ON.
 

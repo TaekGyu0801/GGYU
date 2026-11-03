@@ -1,5 +1,42 @@
 {
-  "leeClaudePol0Review20261103": {
+  "juSubinWu10CodeCandidate20261103": {
+    "worker": "주수빈",
+    "date": "2026-11-03",
+    "status": "CODE_CREATED_PROPOSED_NOT_RUN",
+    "project": "CMP_BASELINE_3.0.0_WU10FULL",
+    "files": [
+      "CMP/tcad/candidates/CMP_BASELINE_3.0.0_WU10FULL/sde_dvs.cmd",
+      "CMP/tcad/candidates/CMP_BASELINE_3.0.0_WU10FULL/sdevice_des.cmd",
+      "CMP/tcad/candidates/CMP_BASELINE_3.0.0_WU10FULL/README.md"
+    ],
+    "structure": {
+      "widthUm": 10,
+      "full2D": true,
+      "damageEdgeNm": 5,
+      "nGaNUm": 3.9,
+      "inMoleFraction": 0.08,
+      "qwCount": 4,
+      "qwNm": 3,
+      "gaNBarrierCount": 5,
+      "barrierNm": 8
+    },
+    "provenance": "Wu-inspired measured structural inputs, other pGaN EBL contacts Mg-active and Trap parameters are PILOT assumptions, not paper reconstruction",
+    "cleanSmoke": {
+      "NtSide": 0,
+      "PolAct": 0,
+      "Vstop": 0.1,
+      "status": "NOT_RUN"
+    },
+    "blockers": [
+      "Wu original full contacts p-GaN EBL and sidewall trap model not verified",
+      "SDE syntax mesh MaterialDB not locally run",
+      "Mg chemical vs active and polarization validation needed",
+      "old QW4 issue remains separate"
+    ],
+    "nextForJuSubin": "Create separate SWB project, preprocess/build SDE only, inspect geometry contact mesh and pp before SDevice",
+    "baselineFrozen": "Existing common 4um/5nm and Lee work untouched"
+  },
+"leeClaudePol0Review20261103": {
     "worker": "이택규",
     "source": "2026-11-03 user-forwarded Claude independent review; exact block in LeeTaekGyu/TIMELINE.md",
     "sourceType": "CLAUDE_RECOMMENDATION_NOT_NEW_RUN",

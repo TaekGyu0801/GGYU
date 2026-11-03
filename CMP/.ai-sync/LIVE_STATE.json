@@ -1,4 +1,21 @@
 {
+  "juSubinWuPostMgN21NewtonBacktrackScreenshot20261104": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04 ~00:43",
+    "status": "OBSERVED_RUNNING_SDEVICE_N21_LOCAL_NEWTON_NONCONVERGENCE_FINAL_OUTCOME_UNKNOWN",
+    "project": "CMP_WU_Copy",
+    "node": 21,
+    "screenshot": "SWB SDevice n21_des.out and .err panes",
+    "lastTStart": 0.637961,
+    "lastTEnd": 0.642158,
+    "lastStepsize": 0.004197,
+    "lastErrorShown": 3440,
+    "previousAttempt": "Newton iterations larger than 35; trying smaller step",
+    "errWarnings": "local datexcodes.txt variables redefined incl MgActive, MgConcentration/MgChemical/MgMinus, nSiliconActive; fatality/causality unverified",
+    "meshResult": "pGaN net signed negative ~-2e19 already verified",
+    "next": "read live out/err/log tails to assess step progress, terminal failure vs eventual 5V success; avoid changing runtime files while solving",
+    "postFix5VSuccess": false
+  },
   "juSubinWuPreFixSdeviceBackupVerified20261104": {
     "worker": "주수빈",
     "dateKST": "2026-11-04",

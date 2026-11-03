@@ -1,3 +1,9 @@
+## 2026-11-03 — 주수빈 Kou4 SDevice pilot code added (CODE COMMITTED, NOT RUN)
+- `CMP/tcad/candidates/CMP_BASELINE_3.1.0_KOU4FULL/sdevice_des.cmd` added; matching Full2D SDE region names with SWB `NtSide`, `PolAct`, `Vstop`. One SDevice can run separate clean and damaged parameter splits; no SDevice2/SVisual2 required for first smoke.
+- Initial proposed syntax/solver smoke AFTER SDE mesh pass: NtSide=0, PolAct=0, Vstop=0.1. Not an LED operating-point or physics validation.
+- Uses provisional CMP volumetric 5nm trap-host regions and inherited pilot physics; Kou original surface recombination formulation NOT reproduced. EBL/pGaN/contacts/Mg/MaterialDB and current normalization remain blockers. No server run or parser verification.
+- NEXT: SDE preprocess/mesh audit, then SDevice clean smoke log and effective PP inspection. Do not claim baseline freeze.
+
 ## 2026-11-03 ~20:46 KST — JuSubin Kou4 Full2D SDE candidate created (PROPOSED / NOT RUN)
 - USER DECISION: Wu and Kou candidates separately run, then choose final Baseline based on validated simulation quality; this chat concentrates on Kou.
 - CODE COMMITTED: `CMP/tcad/candidates/CMP_BASELINE_3.1.0_KOU4FULL/sde_dvs.cmd` and `README.md`; independent Full 2D 4µm CMP Kou-derived stack (4×3nm In0.15GaN QW, 5×22nm GaN QB, 4µm nGaN, symmetric 5nm trap-host strips); original old shelf deck not copied.

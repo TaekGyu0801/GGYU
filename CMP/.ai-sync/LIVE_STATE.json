@@ -7235,5 +7235,20 @@
     "trapInclusiveIQEValidated": false,
     "noSDeviceRerunsByUserDecision": true,
     "next": "Summarize complete eGapStates comparisons; inspect existing eTrappedCharge/TotalTrapConcentration for plot localization and trap implementation if needed, assess e/h recombination accounting and output definitions; matched-current and physical J units remain unresolved."
+  },
+  "juSubinWuOFFn21TotalTrapConcentrationScreenshot20261104": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04",
+    "status": "OBSERVED_OFF_TOTAL_TRAP_FIELD_BROAD_HIGH_VALUES_MEANING_UNRESOLVED",
+    "dataset": "n21_des",
+    "NtSide": 0,
+    "field": "TotalTrapConcentration",
+    "legendMaxCm3": 20000000000000000000,
+    "visibleNearSidewallYUmApprox": [
+      0,
+      0.32
+    ],
+    "finding": "Broad high displayed TotalTrapConcentration in OFF; cannot conclude these are deliberately added sidewall NtSide traps",
+    "next": "Examine n25 ON same field and comparable fixed scale/viewport, cross-check eTrappedCharge and pp25 region definitions without rerunning SDevice."
   }
 }

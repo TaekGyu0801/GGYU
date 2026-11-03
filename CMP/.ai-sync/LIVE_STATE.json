@@ -1,4 +1,24 @@
 {
+  "juSubinWu2023TrapON5VPlot20261103": {
+    "date": "2026-11-03",
+    "worker": "주수빈",
+    "schoolProject": "/user/semi/semi437/tmp/myproject/CMP_WU_Copy",
+    "candidate": "CMP_BASELINE_3.2.0_WU2023PHY",
+    "status": "USER_REPORT_TRAP_ON_FINISHED_AND_SVISUAL_5V_GRAPH_OBSERVED_SOLVER_LOG_UNCONFIRMED",
+    "trap": "NtSide=1e18",
+    "plotDataset": "BaselineData_26",
+    "plot5VCurrentRawApprox": "2.8e-5 (screenshot)",
+    "plotCurrentDensityApprox": "2.8e2 A/cm2 CONDITIONAL on 2D A/um, AreaFactor=1, width10um",
+    "comparison": "Clean n21 5V 2.884e-5 raw; similar IV shape not a sidewall-loss or IQE result",
+    "criticalExistingBlocker": "Clean n21_des.tdr AcceptorConcentration zero and hDensity approx <=1cm^-3; p-hole injection physically invalid until source mesh Mg / acceptor mapping established",
+    "evidenceMissing": [
+      "Trap-ON n25_des.log final normal completion/terminal e and h",
+      "Trap-ON TDR pGaN and MQW carrier maps",
+      "n1_msh.tdr MagnesiumActiveConcentration"
+    ],
+    "next": "Get n25_des.log tail and n1_msh.tdr Mg profile before interpreting ON/OFF",
+    "codeChanges": "none"
+  },
   "juSubinWu2023ZeroAcceptorSVisual20261103": {
     "date": "2026-11-03",
     "worker": "주수빈",

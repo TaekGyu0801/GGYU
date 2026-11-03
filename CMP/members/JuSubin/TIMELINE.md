@@ -1,3 +1,8 @@
+## 2026-11-03 — Wu2023 installed GaN examples contain Mg species entries (OBSERVED; mapping not yet inspected)
+- User ran read-only grep over T-2022.03 Applications_Library/Power/GaN example datexcodes.txt files. Installed GaN_AlGaN_Polarization, GaN_AlGaN_Polz_Calculated, GaN_Fin-HEMT, GaN_HEMT_FermiStat, and pGate_HEMT_CC examples contain MagnesiumActiveConcentration and MagnesiumConcentration references. pGate_HEMT sample itself yielded no Magnesium match.
+- This verifies installed example definitions exist but does NOT prove acceptor attribute, local Wu project application, or root cause. Existing source mesh pGaN MgActive2e19 yet DopingConcentration~0 and SDevice AcceptorConcentration~0 remain blocker.
+- NEXT READ ONLY: inspect first 65 lines of installed GaN_AlGaN_Polarization/datexcodes.txt for magnesium doping=acceptor(material=...) and compare current CMP_WU_Copy local/home datexcodes with active mesh/SDevice preprocessing. No code edits, no new runs.
+
 ## 2026-11-03 — Wu2023 Mg net-doping map diagnostic (OBSERVED)
 - User SVisual n1_msh DopingConcentration plot: p-GaN blue near 0; n-GaN +5e18 cm^-3. Earlier same n1_msh showed p-GaN MagnesiumActiveConcentration 2e19 cm^-3.
 - Mg field exists but does not contribute to net p-type doping; SDevice AcceptorConcentration 0 and hDensity near zero are consistent. Dopant-species mapping is suspected, exact definition not yet inspected.

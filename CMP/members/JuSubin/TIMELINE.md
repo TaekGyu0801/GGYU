@@ -1,3 +1,7 @@
+## 2026-11-04 — Wu2023 SDE rerun user-reported after local Mg datexcodes (USER-REPORTED RUN; mesh result UNVERIFIED)
+- User states "SDE 새로 다 돌렸어" after verifying CMP_WU_Copy/datexcodes.txt active GaN magnesium acceptor mapping and backup n1_msh_before_MgFix.tdr. No SDE log, new mesh timestamp, DopingConcentration screenshot or actual signed net doping output supplied yet.
+- Do NOT treat mapping fix as validated; cannot establish SDE picked up project local datexcodes nor that pGaN net doping is negative. Next direct check: SVisual fresh n1_msh.tdr DopingConcentration in pGaN 0..0.12um (sign and range), nGaN +5e18; optionally SDE log/timestamp if stale. No SDevice rerun until net acceptor verified.
+
 ## 2026-11-04 — Wu2023 project-local Mg acceptor map and mesh backup verified (OBSERVED; mapping application untested)
 - User terminal verified /user/semi/semi437/tmp/myproject/CMP_WU_Copy/datexcodes.txt exists (3.5 KB, ls timestamp Nov3 23:12) and n1_msh_before_MgFix.tdr mesh backup exists (962 KB, same timestamp). Source command used cp -n, so creation time vs prior existence was not independently established; current presence and contents verified.
 - grep confirms project's datexcodes.txt lines26–40: MagnesiumConcentration/MagnesiumChemicalConcentration has UNCOMMENTED doping=acceptor(active=MagnesiumActiveConcentration, ionized=MagnesiumMinusConcentration, material includes GaN). Default installed lib declaration is commented; local version is active.

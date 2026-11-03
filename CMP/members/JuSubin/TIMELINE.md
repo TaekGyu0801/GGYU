@@ -1,3 +1,7 @@
+## 2026-11-03 — Wu2023 school SDevice IncompleteIonization switch matches Mg Species (OBSERVED; mapping fix pending)
+- User provided actual CMP_WU_Copy/pp21_des.cmd. File lines 11–16: Grid=n1_msh.tdr, Plot=n21_des.tdr, Parameter=pp21_des.par. Global Physics lines22–30 include Recombination(SRH Radiative Auger), Piezoelectric_Polarization(strain), IncompleteIonization(Dopants="MagnesiumActiveConcentration"), Thermionic. Actual school pp21_des.par GaN Ionization Species("MagnesiumActiveConcentration") E_0=0.15 alpha=0 g=4; species matches switch.
+- Thus SDevice switch and ionization parameter species names DO MATCH; source mesh is still unrecognized acceptor (pGaN MgActive2e19 but net doping0). Installed default datexcodes chemical Mg acceptor link is commented out; local project/home mapping absent at tested paths. Next isolated, project-local datexcodes mapping; SDE mesh-only re-run and pGaN negative doping, nGaN retained 5e18; only then clean SDevice. No new simulation or code changes in user's school project.
+
 ## 2026-11-03 — pp21_des.par Mg ionization parameters found (OBSERVED)
 - School output grep confirms GaN Ionization Species("MagnesiumActiveConcentration"), E_0=0.15 eV, alpha=0, g=4 in CMP_WU_Copy/pp21_des.par. Parameter header says generic III-N model, not Wu paper value.
 - This parameter set does not itself create an Mg acceptor mapping. Default T-2022.03 datexcodes ordinary magnesium acceptor declaration is commented. School SDE places MgActive2e19, original mesh pGaN net DopingConcentration=0 and SDevice AcceptorConcentration=0.

@@ -1,4 +1,27 @@
 {
+  "juSubinWuMgMappingBackupVerified20261104": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04",
+    "status": "OBSERVED_LOCAL_MAGNESIUM_ACCEPTOR_MAPPING_AND_MESH_BACKUP_PRESENT",
+    "schoolProject": "CMP_WU_Copy",
+    "localDatexcodes": {
+      "exists": true,
+      "sizeKB": 3.5,
+      "acceptorMappingUncommented": true,
+      "chemical": "MagnesiumConcentration",
+      "active": "MagnesiumActiveConcentration",
+      "ionized": "MagnesiumMinusConcentration",
+      "materialIncludesGaN": true
+    },
+    "meshBackup": {
+      "path": "n1_msh_before_MgFix.tdr",
+      "exists": true,
+      "sizeKB": 962
+    },
+    "unverified": "whether SWB/SDE loaded local datexcodes and achieved negative pGaN DopingConcentration",
+    "next": "run SDE only, verify signed pGaN net doping negative and nGaN positive 5e18, no SDevice until confirmed",
+    "newRun": false
+  },
   "juSubinWuSchoolIncompleteIonizationSwitchConfirmed20261103": {
     "worker": "주수빈",
     "status": "OBSERVED_SDEVICE_IONIZATION_SWITCH_MATCHES_PARAMETER",

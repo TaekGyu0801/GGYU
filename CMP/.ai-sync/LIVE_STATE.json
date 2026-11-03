@@ -1,4 +1,19 @@
 {
+  "juSubinWu2023Direct5VErrorReported20261103": {
+    "date": "2026-11-03",
+    "worker": "주수빈",
+    "projectContext": "CMP_BASELINE_3.2.0_WU2023PHY",
+    "status": "USER_REPORTED_5V_RUN_AND_SCREENSHOT_ERROR_UNRESOLVED",
+    "vstop": 5,
+    "separate0p1Run": "SKIPPED_BY_USER_TIME_CHOICE",
+    "actualQuasistationaryRange": "0-to-5V with intermediate steps, not skipping <0.1V",
+    "errorEvidence": "Screenshot user reported; no first-error text or failed node/PP/log verified",
+    "schoolCodeMatch": "NOT_VERIFIED",
+    "completion": "NOT_CONFIRMED",
+    "newCurrent": "NONE",
+    "next": "Find recent n*_des.log or n*_dvs.log and pp*_des.cmd/par; inspect first error/unknown parameter; minimal fix only after evidence",
+    "codeChanges": "NONE for this failure follow-up"
+  },
   "juSubinWu2023PhysicsCandidate320Created20261103": {
     "date": "2026-11-03",
     "worker": "주수빈",

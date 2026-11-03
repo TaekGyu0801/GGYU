@@ -1,3 +1,7 @@
+## 2026-11-03 — Wu2023 pp21_des.par Mg ionization species confirmed (OBSERVED, physics fix pending)
+- Actual school CMP_WU_Copy/pp21_des.par grep shows Material="GaN" Ionization Species("MagnesiumActiveConcentration") E_0=0.15 alpha=0 g=4. E0 is generic III-N setting, not confirmed Wu parameter. This sets ionization parameters but does not activate Mg dopant acceptor mapping.
+- Actual school's pp1_dvs.cmd MgActive2e19 and default installed lib/datexcodes Mg chemical→active acceptor link commented out; pGaN net doping0 and SDevice acceptor0 persist. NEXT: verify pp21_des.cmd Physics IncompleteIonization and test a project-scoped Mg acceptor mapping in isolated SDE mesh, validate negative pGaN signed net doping BEFORE re-running 5V. No code/run modification.
+
 ## 2026-11-03 — Wu2023 school pp1_dvs MgActive-only confirmed (OBSERVED; no fix/run yet)
 - Actual school /user/semi/semi437/tmp/myproject/CMP_WU_Copy/pp1_dvs.cmd grep: PMgActive 2e19, 'place-field ... MagnesiumActiveConcentration' only; pGaN assigned. Installed default T-2022.03 lib/datexcodes.txt Mg acceptor declaration commented out, official GaN_AlGaN_Polarization example enables Mg acceptor mapping, and no datexcodes present at school project root or home.
 - n1_msh pGaN MgActive=2e19 but net DopingConcentration~0, SDevice AcceptorConcentration=0/hDensity near0. Mg mapping root cause very likely, but actual runtime overrides and ionization par require check. Existing 5V n21/n25 solver runs numerically completed, physical validation still blocked.

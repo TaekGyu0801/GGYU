@@ -1,8 +1,14 @@
-# CMP_BASELINE_3.0.0_WU10FULL — Wu-inspired candidate, **low-bias smoke visually observed; physics unvalidated**
+# CMP_BASELINE_3.0.0_WU10FULL — Wu-inspired candidate, **0.1V NtSide0 solver smoke finish observed; physics unvalidated**
 
 **This code is an original clean-sheet structure and model-integration smoke-test candidate. It is NOT a verified reproduction of Wu et al. 2023 and NOT the adopted CMP Common Baseline.**
 
 Paper: Wu et al., *Physical mechanisms on the size-effect in GaN-based Micro-LEDs*, Micro and Nanostructures 177, 207542 (2023), DOI https://doi.org/10.1016/j.micrna.2023.207542 .
+
+## 2026-11-03 20:30:09 KST — confirmed SDevice low-bias completion (verified user terminal log)
+
+`n2_des.log` final 35 lines supplied by user: step `t=0.984303 -> 1`, anode `0.1 V`, electron `7.544E-31`, hole `8.430E-32`, total current `+8.387E-31`, cathode `-8.387E-31` (raw output units); `Curve trace finished`; `n2_des.tdr` written; `Sentaurus Device simulation finished` Tue Nov 3 20:30:09 KST. Memory 632 MB; 423.72 s wallclock; 41.39 s CPU. This **confirms solver finished the clean 0.1V smoke**, but not LED injection, NtSide1e18, physical Wu reproduction or reliable J units.
+
+SVisual1 screenshot displayed plotting; previously shared script used 4um normalization, which is incorrect for Wu10 10um width if A/um and AreaFactor=1 (needs 10um, and independent unit audit). School SVisual code update not yet independently confirmed.
 
 ## 2026-11-03 21:20 KST — school CMP_WU low-bias smoke observation
 

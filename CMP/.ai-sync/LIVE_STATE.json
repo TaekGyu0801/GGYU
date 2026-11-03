@@ -1,4 +1,25 @@
 {
+  "juSubinWuMgFixOFFn21CarrierOverlay20261104": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04",
+    "device": "CMP_WU_Copy",
+    "node": 21,
+    "voltageV": 5,
+    "condition": "post-MgFix NtSide=0",
+    "state": "OBSERVED_2D_SVISUAL_CENTER_CUTLINE_E_H_PEAK_OFFSET_ROOT_UNRESOLVED",
+    "cutlineLateralYUmApprox": 5,
+    "blueField": "hDensity",
+    "redField": "eDensity",
+    "observed": "Each MQW shows blue hDensity peak to smaller X p-side, red eDensity peak to larger X n-side. Both carriers large in QW1-4, QW4 peaks around 1e20 cm^-3.",
+    "peakOffsetsQuantified": false,
+    "overlapQuantified": false,
+    "polarizationSwitchConfirmed": false,
+    "carrierFidelityValidated": false,
+    "priorMQWIQE3channelPercent": 66.2156,
+    "priorQW4RadiativeSharePercent": 91.0341,
+    "priorQW4AugerSharePercent": 95.4245,
+    "next": "Read actual school pp21_des.cmd/.par Physics polarization PolAct AreaFactor before attributing separation; evaluate QW e/h spatial overlap; then new postMgFix trap ON matched J."
+  },
   "juSubinWuMgFixOFFn21HoleDensityCutline20261104": {
     "worker": "주수빈",
     "dateKST": "2026-11-04",

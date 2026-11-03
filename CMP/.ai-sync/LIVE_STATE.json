@@ -1,4 +1,27 @@
 {
+  "leePol0Run20261103": {
+    "worker": "이택규",
+    "date": "2026-11-03",
+    "evidence": "user pasted live terminal ls and n6 log tail",
+    "project": "/user/semi/semi437/CMP_BASELINE_2.1.0_POL0NOSHELF",
+    "n2": {
+      "log": "exists 338K Nov3 01:52",
+      "plt": "exists 293K Nov3 01:52",
+      "finished": "UNVERIFIED"
+    },
+    "n6": {
+      "log": "exists 340K Nov3 04:38",
+      "plt": "exists 293K Nov3 04:38",
+      "finished": "OBSERVED n6 log Curve trace finished; Sentaurus Device simulation finished Tue Nov 3 04:38:53 KST; Good Bye"
+    },
+    "blockers": [
+      "n2 full termination unverified",
+      "actual pp activation/Iterations and shelf-free mesh/univariate comparison unverified",
+      "QW4 localization physical mechanism unresolved"
+    ],
+    "next": "read-only tail both logs and grep effective pp; then compare 0.5 vs 0 QW radiative share and matched-current metrics",
+    "baseline": "physical B/FREEZE HOLD; no code changes"
+  },
   "leeClaudeNightDecision20261102": {
     "worker": "이택규",
     "date": "2026-11-02",

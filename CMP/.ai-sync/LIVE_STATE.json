@@ -1,4 +1,33 @@
 {
+  "juSubinWuMgFixONn25QWSRH20261104": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04",
+    "node": 25,
+    "condition": "post-MgFix NtSide=1e18, 5V",
+    "field": "srhRecombination",
+    "status": "OBSERVED_INTEGRAL_DERIVED_DECREASE_EXPLICIT_TRAP_RATES_PENDING",
+    "units": "s^-1*um^-1",
+    "onTotal": 608682400000000,
+    "offTotal": 610218400000000,
+    "totalPctChange": -0.2517131571,
+    "onClean": 608084818300000,
+    "offClean": 609606245000000,
+    "cleanPctChange": -0.249575314,
+    "onDmgLR": 597549913600,
+    "offDmgLR": 612204582300,
+    "dmgPctChange": -2.393753514,
+    "perQWPctChange": [
+      -0.4875662459,
+      -1.3390028538,
+      -0.6429196329,
+      -0.1538606075
+    ],
+    "trapGapStatesIntegrated": false,
+    "onAugerIntegrated": false,
+    "trapInclusiveIQEValidated": false,
+    "note": "SRH field by itself may exclude separate eGapStatesRecombination/hGapStatesRecombination trap-mediated terms; do not conclude reduced total nonradiative loss or full ON IQE.",
+    "next": "Check n25_des.tdr eGapStatesRecombination/hGapStatesRecombination, integrate individually in all damaged regions (especially QW); then n25 Auger 12QW, estimate complete trap-inclusive accounting, compare matched current."
+  },
   "juSubinWuPostMgFixTrapONn25Final5VConfirmed20261104": {
     "worker": "주수빈",
     "dateKST": "2026-11-04 01:00:20",

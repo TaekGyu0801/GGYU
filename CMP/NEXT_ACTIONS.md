@@ -1,3 +1,8 @@
+## 2026-11-04 — Wu post-MgFix n21 clean 5V log CHECK PASSED (NEXT PHYSICAL GATES)
+1. DONE (OBSERVED): user `n21_des.log` 5.000V, anode e1.695e-4 / h2.399e-3 / total2.569e-3 raw; error .696, curve finished, fresh TDR saved, normal exit 2026-11-03 23:58:02 KST.
+2. NEXT: compute QW1–4 (Clean and DmgL/R consistently) **region integrals** of RadiativeRecombination, SRH, Auger from fresh OFF `n21_des.tdr`, with field sign/unit and region boundaries checked. Ratio of global maxima is not IQE. Inspect QW spatial eDensity/hDensity profiles and highly concentrated stripes.
+3. THEN: audit 2D AreaFactor/current normalization and Wu 2023 pilot physics/paper-fidelity before calling baseline validated. If OFF accepted, rerun fixed-Mg NtSide=1e18 ON (old pre-fix n25 unusable for causal comparison), verify 5V then compare at matched injected current, not voltage-only.
+
 ## 2026-11-04 ~00:55 KST — Wu MgFix OFF n21 TDR acceptor holes electrons radiative observed (NEXT VALIDATION)
 - New n21 SVisual TDR maps visually validate pGaN AcceptorConcentration max2e19, global hDensity max1.165e20, eDensity max1.359e20, localized MQW RadiativeRecombination max3.434e29 (screen color legend; NOT QW-integrated). First verify exact 5V output and normal finish with tail of n21_des.log. Then sample QW1–4 carrier density and integrate Rad/SRH/Auger by region under identical definitions; investigate uneven lower-QW emission and high global carriers. Do not equate colored peak with IQE, or assumed 2D current normalization with actual J. Hold n25 until clean OFF properly evaluated.
 

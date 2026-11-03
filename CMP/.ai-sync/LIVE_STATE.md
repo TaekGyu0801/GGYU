@@ -1,3 +1,7 @@
+## 2026-11-04 — Wu2023 pre-fix n21 n25 SDevice output backup verified (OBSERVED, SDEVICE NEXT)
+- User ls output verifies CMP_WU_Copy/preMgFix_SDevice_backup contains pre-fix n21 and n25 des log/plt/tdr pairs (six files totaling ~15MB). SDE Mg acceptor net doping fix previously visually confirmed in new n1_msh.tdr (pGaN≈-2e19 vs old zero; nGaN≈+5e18). No post-fix SDevice run evidence yet.
+- CURRENT BLOCKER: free holes and QW radiative/SRH after Mg fix not verified. NEXT: n21 OFF SDevice only, inspect log and fresh AcceptorConcentration/hDensity/QW carrier+rate; n25 ON stays unrun pending clean validity.
+
 ## 2026-11-04 ~00:09 KST — Wu2023 SDE pGaN negative net doping verified after local Mg map (SDE OBSERVED, SDEVICE BLOCKER PERSISTS)
 - SVisual screenshot n1_msh DopingConcentration after user SDE rerun with local datexcodes Mg acceptor mapping: top pGaN visually ≈-2e19 cm^-3 (blue scale min), bottom nGaN ≈+5e18 cm^-3 (red max). This closes mesh-stage Mg recognition blocker; former pGaN signed net doping≈0 was incorrect. Free-hole density and SDevice p-injection are NOT established by signed net doping.
 - Most recent actual work: project-local Mg acceptor map and original mesh backup present, SDE rerun user-reported, fresh mesh doping directly visually inspected. Current blocker: post-fix OFF SDevice acceptor/hDensity/QW carrier+rate verification (old 5V n21/n25 results were pre-fix). Next backup old n21/n25 output before any SDevice reruns, then run OFF-only clean n21 against refreshed mesh, not ON n25; preserve Wu2023 epitaxy/physics.

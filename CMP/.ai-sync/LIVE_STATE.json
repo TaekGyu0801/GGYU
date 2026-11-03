@@ -1,4 +1,21 @@
 {
+  "juSubinWu2023MgSDEMeshConfirmed20261103": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-03 ~23:05",
+    "project": "CMP_WU_Copy",
+    "source": "n1_msh.tdr SVisual screenshot",
+    "status": "OBSERVED_MAGNESIUM_ACTIVE_PROFILE_PRESENT_MG_RECOGNITION_BLOCKER_UNRESOLVED",
+    "meshField": "MagnesiumActiveConcentration",
+    "pGaNMgCm3": 20000000000000000000,
+    "pGaNRangeUm": "x 0 to ~0.120",
+    "belowPRegionMg": "near zero",
+    "deviceAcceptorConcentrationCm3": "0 across n21 5V SDevice TDR screenshot",
+    "deviceHoleDensityMaxCm3Approx": 1,
+    "interpretation": "SDE Mg profile exists; test n1_msh net DopingConcentration sign; likely dopant species/recognition/incomplete ionization, exact root not yet confirmed",
+    "next": "SVisual n1_msh DopingConcentration across pGaN, inspect GaN Mg acceptor datexcodes mapping and pp21_des.par before minimal patch",
+    "codeChange": "none",
+    "simulationChange": "none"
+  },
   "juSubinWu2023TrapON5VPlot20261103": {
     "date": "2026-11-03",
     "worker": "주수빈",

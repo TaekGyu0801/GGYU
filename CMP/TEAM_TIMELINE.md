@@ -1,3 +1,6 @@
+## 2026-11-04 ~00:47 KST — Wu MgFix OFF n21 SVisual full 0-5V IV curve observed (OBSERVED SCREENSHOT)
+- 주수빈 reports post-MgFix n21 NtSide=0 run complete; SVisual BaselineData_22 curve from 0 to ~5V, turn-on ~3.2–3.4V, visual raw endpoint ~2.6e-3 (axis A/um assumed), plotted J ~2.5e4 A/cm2 ASSUMED unvalidated. New 5V solver log, exact terminal current and QW carrier/rates not yet provided; next verify log then fresh TDR physical validation. Not a baseline acceptance or validated current density.
+
 ## 2026-11-04 — Wu post-Mg n21 advanced to 4.332V and hole current restored (OBSERVED INTERMEDIATE RESULT)
 - 주수빈 Wu n21 OFF after Mg mapping: 4.332V converged (error 0.243), anode e=7.286e-05, h=1.415e-03, total=1.488e-03 raw, cathode total=-1.488e-03. Previously 5V all-electron due missing acceptor mapping; post-fix anode hole fraction ~95.1% at 4.332V. Now computing 4.432V; 5V finish and QW recombination not yet verified. Do not infer IQE or compare voltages quantitatively. Preserve old pre-fix outputs, ON n25 still not run.
 

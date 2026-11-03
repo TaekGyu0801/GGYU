@@ -1,3 +1,10 @@
+## 2026-11-03 — CMP_WU_Copy n21 SDevice failure path isolated (OBSERVED USER TERMINAL / ROOT CAUSE UNRESOLVED)
+- User's latest `find -mmin -60` output identifies the new school project at `/user/semi/semi437/tmp/myproject/CMP_WU_Copy`: latest `n21_des.log` (mtime 1793709944.632), earlier `n1_dvs.log` (1793709765.376), `n1_msh.log` (1793709765.298).
+- SWB screenshot from same run reported n21 SDevice failed; SWB project window showed SDE node present. SDE log files existing does **not** establish successful mesh, exact node exit status, or physics validity.
+- User's broad `find ... | xargs grep -niE 'error|fatal|undefined|unknown|failed|syntax|not found' | tail -n 40` produced many `Error smaller than 1` normal Newton convergence messages from **older CMP_WU**; only `CMP_WU_Copy/n21_des.log` lines 73/136/199/200/291 (`Absolute error`, `RelErrControl`, `Relative error`) appeared in this last-40 output. **This truncated grep is NOT evidence no fatal message elsewhere**. First failure text and end of n21 log still UNSEEN.
+- Diagnostic command requested: `cd /user/semi/semi437/tmp/myproject/CMP_WU_Copy; tail -n 100 n21_des.log; ls -lh *21*des*; grep -niE 'error:|fatal|undefined|unknown|syntax|cannot|warning|abort|failed' n21_des.log | head -n 30`.
+- Code correction pending exact first error; do not alter unrelated `CMP_WU` old n21/n25 runs or repeat 5V sweep. No fix/solver success can be claimed from current evidence.
+
 ## 2026-11-03 — Wu2023PHY direct 5V user-reported SWB error (UNRESOLVED)
 - USER REPORTED execution with Vstop=5 after skipping standalone 0.1V run, then showed a screenshot indicating error. Exact first-error message, node/stage, school log, effective preprocessed inputs NOT yet independently inspected.
 - No verified root cause, no server patch, no solver pass. Newly added Mg ionization/par, PooleFrenkel/Thermionic, dopant species and SWB substitution are diagnostic checks **only**, not proven causes.

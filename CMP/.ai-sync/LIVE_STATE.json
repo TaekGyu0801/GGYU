@@ -1,4 +1,27 @@
 {
+  "juSubinWu10SVisual1TenUmCorrectionAndAudit20261103": {
+    "worker": "주수빈 Wu workstream (inferred from available shared project context, chat worker not independently re-identified)",
+    "date": "2026-11-03",
+    "status": "PROPOSED_SVISUAL_10UM_FIX_COMMITTED_DRYRUN_ONLY; SDE_SDEVICE_SOURCE_AUDITED; 0P1V_CLEAN_RUNTIME_CONFIRMED",
+    "files": {
+      "sv": "CMP/tcad/candidates/CMP_BASELINE_3.0.0_WU10FULL/svisual1_iv.tcl",
+      "sde": "CMP/tcad/candidates/CMP_BASELINE_3.0.0_WU10FULL/sde_dvs.cmd",
+      "sdevice": "CMP/tcad/candidates/CMP_BASELINE_3.0.0_WU10FULL/sdevice_des.cmd"
+    },
+    "svCodeCommit": "a504f60476e546e655b8592d92a6f68cb7c859f0",
+    "fix": "Old SVisual1 4um J normalization replaced with Wu-specific 10um, preserves raw CSV and 0V spike",
+    "conditionalFormula": "J_Acm2=abs(I_A_per_um)*1e8/10.0 only if 2D current unit A/um and AreaFactor=1 are confirmed",
+    "sdeAudit": "Full2D 10um width, dual0.005um damaged strips, 4xQW3nm In0.08, 5xGaN barriers8nm, nGaN3.9um, pGaN0.12um, no EBL; p Mg active and contacts pilot not paper exact",
+    "sdeviceAudit": "DefaultParametersFromFile global; Fermi, mobility, SRH/Rad/Auger, PolAct, trap EtEv+0.75 1e-15 sections; clean0/0/0.1 final n2 log 0.1V +8.387e-31 current finished at 2026-11-03 20:30:09 KST, ON SVisual plot only",
+    "pending": [
+      "new SVisual1 actual Sentaurus execution not verified",
+      "real PP/mesh/species/alloy, physical contact model, Mg incomplete-ionization, polarization not validated",
+      "2D current units and area factor",
+      "0V ON spike and ON SDevice log",
+      "meaningful injection high-bias/QW/IQE"
+    ],
+    "next": "Run only SVisual1 Wu10 10um Tcl using existing PLT, inspect axes/CSV and ON 0V points; verify units and finish. Leave SDE/SDevice unchanged pending physical audit; Wu/Kou final baseline still unselected."
+  },
   "juSubinWu10NtSide1e18LowBiasPlot20261103": {
     "worker": "주수빈 Wu workstream (identity not independently reconfirmed)",
     "status": "OBSERVED_SVISUAL_PLOT_SDEVICE_FINISH_NOT_YET_CONFIRMED",

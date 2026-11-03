@@ -1,4 +1,22 @@
 {
+  "juSubinWuMgFixOFFSDeviceTDRAcceptorCarrierRadObserved20261104": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04 ~00:55",
+    "project": "CMP_WU_Copy",
+    "node": 21,
+    "condition": "MgFix, NtSide=0, clean Trap OFF",
+    "state": "OBSERVED_SDEVICE_ACCEPTOR_AND_CARRIERS_AND_MQW_RADIATIVE_NONZERO_IQE_UNVERIFIED",
+    "evidence": "Five SVisual screenshots of n21_des.tdr",
+    "pGaNAcceptorMaxCm3": 20000000000000000000,
+    "globalHoleDensityMaxCm3": 116504000000000000000,
+    "globalElectronDensityMaxCm3": 135933000000000000000,
+    "globalRadiativeRecombinationMaxCm3s": 3.43425e+29,
+    "spatialObservation": "high RadiativeRecombination in thin QW stripes especially deeper wells",
+    "quantification": "Screenshot color legend maxima only, not regionwise QW values/integrals",
+    "final5VLogConfirmed": false,
+    "qwIQEConfirmed": false,
+    "next": "Confirm 5V terminal currents and normal finish in new n21_des.log; integrate QW Radiative/SRH/Auger, probe QW carrier densities and current normalization; do not yet run ON n25"
+  },
   "juSubinWuPostMgOFFSVisualIV5VScreenshot20261104": {
     "worker": "주수빈",
     "dateKST": "2026-11-04 ~00:47",

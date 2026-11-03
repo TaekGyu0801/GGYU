@@ -1,3 +1,8 @@
+## 2026-11-04 ~00:47 KST — Wu MgFix OFF n21 SVisual full 0-5V IV curve observed: verify 5V log and physical output
+1. Read NEW post-MgFix CMP_WU_Copy/n21_des.log final ~50 lines; require actual 5.0V voltage, e/h/total terminal currents, Curve trace finished, newly dated SDevice simulation finished and output TDR (SVisual NtSide=0 IV plot now spans 0–5 V).
+2. Inspect NEW n21_des.tdr pGaN AcceptorConcentration and hDensity vs old absent acceptor/hole, QW1–4 eDensity/hDensity and RadiativeRecombination/SRH/Auger; quantify consistent region integrals and assess holes reaching QWs before ON.
+3. Keep preMgFix backups and n25 OFF split unrun. Plot A/um and width-normalized A/cm2 both labelled assumed; audit current normalization before absolute J, Wu paper quantitative comparisons or baseline acceptance.
+
 ## 2026-11-04 — Wu post-Mg n21 advanced to 4.332V and hole current restored (NEXT)
 - n21 POST-Mg rerun is advancing. Last accepted 4.332V/t=.866477 error.24308, total raw1.488e-3 (anode hole1.415e-3, electron7.286e-5); next step 4.432V not yet converged in supplied tail. Do not stop/restart while progressing. Check final 5V solver completion and fresh TDR/log date after run.
 - Then inspect pGaN AcceptorConcentration/hDensity, QW1-4 eDensity/hDensity, QW Rad/SRH/Auger and carrier balance; nominal magnesium and terminal current are not proof of free-hole/QW emission. Avoid n25 until n21 physically validated. .err reported InGaN DOSMass calculated from GaN/InN, not proven fatal; monitor other real errors.

@@ -1,4 +1,50 @@
 {
+  "juSubinWuMgFixOFFn21ThreeChannelIQE20261104": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04",
+    "project": "CMP_WU_Copy",
+    "node": 21,
+    "voltageV": 5,
+    "condition": "post-MgFix NtSide=0",
+    "status": "OBSERVED_AUGER_INTEGRALS_DERIVED_THREE_CHANNEL_IQE_UNCALIBRATED",
+    "units": "s^-1*um^-1",
+    "totalSRH": 610218400000000,
+    "totalRadiative": 9902518000000000,
+    "totalAuger": 4442221000000000,
+    "IQEPercent": 66.2156189431,
+    "SRHPercent": 4.0803757216,
+    "AugerPercent": 29.7040053353,
+    "QW1": {
+      "srh": 642508382500,
+      "rad": 739598190400,
+      "auger": 154575739040,
+      "IQEPercent": 48.12954406
+    },
+    "QW2": {
+      "srh": 605984869800,
+      "rad": 1081039269600,
+      "auger": 144228553520,
+      "IQEPercent": 59.03277433
+    },
+    "QW3": {
+      "srh": 120204240230000,
+      "rad": 886031030800000,
+      "auger": 202953728900000,
+      "IQEPercent": 73.27481732
+    },
+    "QW4": {
+      "srh": 488765716100000,
+      "rad": 9014665915000000,
+      "auger": 4238968801000000,
+      "IQEPercent": 65.5974621
+    },
+    "qw4RadiativeSharePercent": 91.03408138,
+    "qw4AugerSharePercent": 95.42452935,
+    "validatedPhysicalOperatingPoint": false,
+    "verifiedCurrentDensity": false,
+    "postMgTrapONRerun": false,
+    "next": "Inspect QW1-4 eDensity/hDensity cutlines (center and edge), audit 2D current unit/AreaFactor and paper fidelity, then rerun postMgFix NtSide1e18 and matched current comparison."
+  },
   "juSubinWuMgFixOFFn21QWRadiativeIntegral20261104": {
     "worker": "주수빈",
     "dateKST": "2026-11-04",

@@ -1,4 +1,27 @@
 {
+  "juSubinWuPostMgN21Converged4332VHolesRestored20261104": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04",
+    "project": "CMP_WU_Copy",
+    "node": 21,
+    "run": "post-MgFix clean Trap OFF",
+    "status": "OBSERVED_INTERMEDIATE_4P332V_CONVERGED_5V_UNCONFIRMED",
+    "lastConvergedT": 0.866477,
+    "lastConvergedAnodeV": 4.332,
+    "lastBankRoseError": 0.24308,
+    "anodeElectronCurrentRaw": 0.00007286,
+    "anodeHoleCurrentRaw": 0.001415,
+    "anodeTotalCurrentRaw": 0.001488,
+    "cathodeTotalCurrentRaw": -0.001488,
+    "approxAnodeHoleCurrentFraction": 0.951,
+    "nextAttemptT": 0.886477,
+    "nextAttemptAnodeVApprox": 4.432,
+    "full5VConfirmed": false,
+    "sdevicePhysicalQWValidation": false,
+    "priorLocalNewtonBacktrack": "recovered to 4.332V",
+    "errorPaneNotes": "InGaN eDOSMass/hDOSMass computed by GaN/InN side materials; default project datexcodes redefined warning earlier, causality unknown",
+    "next": "monitor 5V and verify QW holes/radiative/SRH/Auger after run; no ON yet"
+  },
   "juSubinWuPostMgN21NewtonBacktrackScreenshot20261104": {
     "worker": "주수빈",
     "dateKST": "2026-11-04 ~00:43",

@@ -1,3 +1,8 @@
+## 2026-11-04 ~00:43 KST — Wu post-Mg SDevice n21 Newton step reduction screenshot (OBSERVED, SOLVER RUNNING)
+- User SWB screenshot of new post-Mg n21 SDevice: Newton step exceeds 35 iterations at one step and retreats to smaller quasistationary step (t=.637961→.642158, step=.004197); current iterations show large error ~3.44e3. This is local Newton convergence failure/backtracking, no final job failure or new 5V result yet.
+- Error pane contains 'datexcodes.txt ... variable ... redefined' warnings (Mg and nSilicon species) consistent with copy of full GaN example mapping alongside built-in defaults; causality not established. SDE pGaN negative net doping is already observed; SDevice bipolar injection still unverified.
+- NEXT immediate read-only live n21_des.out/.err/.log and assess whether t advances/stepsize collapses; if failure confirmed, diagnose runtime mapping collisions and solver; do not modify running files or n25.
+
 ## 2026-11-04 — Wu2023 pre-fix n21 n25 SDevice output backup verified (OBSERVED, SDEVICE NEXT)
 - User ls output verifies CMP_WU_Copy/preMgFix_SDevice_backup contains pre-fix n21 and n25 des log/plt/tdr pairs (six files totaling ~15MB). SDE Mg acceptor net doping fix previously visually confirmed in new n1_msh.tdr (pGaN≈-2e19 vs old zero; nGaN≈+5e18). No post-fix SDevice run evidence yet.
 - CURRENT BLOCKER: free holes and QW radiative/SRH after Mg fix not verified. NEXT: n21 OFF SDevice only, inspect log and fresh AcceptorConcentration/hDensity/QW carrier+rate; n25 ON stays unrun pending clean validity.

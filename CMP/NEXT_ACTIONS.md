@@ -1,3 +1,10 @@
+## 2026-11-03 — Wu2023 candidate 3.2.0 next gate (PROPOSED/UNRUN)
+- P0 Open new SWB project named `CMP_BASELINE_3.2.0_WU2023PHY`, import SDE/SDevice/sdevice.par/SVisual from GitHub candidate README. Do NOT overwrite school `CMP_WU` or old results.
+- P0 SDE mesh/PP check: n-GaN donor `nSiliconActiveConcentration`, pGaN `MagnesiumActiveConcentration` really appear as donor/acceptor. Verify 3nm QW/5nm edges/contact p to n, no orphan regions. At present 33 active material partitions with EBL0.
+- P0 SDevice `@parameter@` check for valid .par and `LatticeParameters`, Mg Ionization, `Thermionic`/PF syntax on T-2022.03. SWB params: NtSide0, Vstop0.1 then 5 after gate, TrapEt0.75, TrapSigmaN/P1e-15. New version has no PolAct parameter.
+- P1 If syntax and doping verified, clean 5V e/hDensity, bands, quasi Fermi, current vectors, QW recombination and current unit; if near 0, diagnose contact/species/heterointerface before Trap ON. Later match-current Trap ON, PF control and current normalization.
+- P1 Acquire Wu 2023 full Fig1 and methods: pGaN thickness, EBL, contacts, trap Et and sigma, actual field-trapping model, c-axis, quantum transport. Do not assert that pilot values are Wu reported.
+
 ## 2026-11-03 — CORRECTION: Wu (2023) paper-only baseline implementation (user confirmed, source checked): revised priority
 - P0 SOURCE: Only Zhuang Wu et al. 2023 (10.1016/j.micrna.2023.207542) is the intended Wu baseline. Prior redesign recommendations using a different paper are withdrawn.
 - P0 Geometry: retain paper-supported W10um, nGaN3.9um, Si5e18, 4 In0.08 QW3nm, 8nm GaN barrier and 5nm sidewalls. Verify actual paper Fig1(a) EBL/other vertical layers/contacts (unconfirmed); no borrowing from Kou or old V2.

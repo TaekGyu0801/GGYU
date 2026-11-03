@@ -1,3 +1,9 @@
+## 2026-11-03 — POL0NOSHELF Python here-document failed in tcsh prompt (OBSERVED; GPT INSTRUCTION ERROR)
+- **OBSERVED:** 이택규는 `/user/semi/semi437/CMP_BASELINE_2.1.0_POL0NOSHELF` 에서 GPT가 준 `python3 - <<'PY'`와 다중행 Python 코드를 그대로 붙여넣었고, `tcsh/csh` 스타일 `?` continuation prompt가 모든 줄과 종결 `PY` 후에도 지속됨. 따라서 Python PLT 파서 **실행 완료/결과 출력 증거 없음**. 이는 SDevice solver 오류 또는 PLT 파일 손상 증거가 아님.
+- **CAUSE/RESPONSIBILITY:** 과거 동일 `?`/here-doc 입력 문제를 기록했는데도 GPT가 Bash 셸 진입 확인 없이 Bash 지향 heredoc을 제공한 안내 오류. Python 구문 자체의 오류로 단정할 수 없음.
+- **FIX GUIDANCE (NOT YET USER-VERIFIED):** `Ctrl+C`로 dangling shell 입력 취소, `bash` 단독 입력 후 Bash prompt를 확인. 다시 복잡한 parser를 무작정 실행하기 전에 `head -n 28 n2_des.plt; tail -n 8 n2_des.plt`로 실제 DF-ISE PLT 형태 확인하여 올바른 파서를 제공. 이후 Bash에서 heredoc 사용하거나 단순 호환 명령 제공.
+- **NO TCAD CHANGE:** 기존 PolAct=0의 n2/n6 종료·pp activation=0/Iterations12 OBSERVED 상태 유지. QW 수치 아직 새로 얻지 않음.
+
 ## 2026-11-02 — Wrong shelf-retained V2_Copy apparently used for POL0DIAG (OBSERVED SCREENSHOT + USER REPORT; BLOCKER)
 - Screenshot `n1_msh` in current POL0DIAG workflow shows n-GaN-like right-side ledge extending lateral beyond 2.0um (~2.5um), with 124583 elements / 60163 nodes. Existing accepted V2.1 source had `Wshelf=0` and half width `Xs=2um` (prior server output and GitHub notes); protrusion is incompatible with intended shelf-free geometry.
 - 이택규 says he appears to have copied **`CMP_BASELINE_2.0.0_V2_Copy`** (shelf retaining old comparison), not the intended `CMP_BASELINE_2.0.0_V2`. This explains geometry qualitatively but must be confirmed with new SDE source/dataset provenance. Earlier GPT assertion that image was normal is **RETRACTED**. PolAct=0 cannot remove etched structural shelf.

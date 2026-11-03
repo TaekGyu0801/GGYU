@@ -1,4 +1,26 @@
 {
+  "juSubinWu10NtSide1e18FiveVLogConfirmed20261103": {
+    "date": "2026-11-03",
+    "status": "OBSERVED_ON_5V_NUMERICAL_COMPLETION_PHYSICS_UNVALIDATED",
+    "project": "CMP_WU",
+    "node": 25,
+    "parameters": {
+      "NtSide": "1e18",
+      "PolAct": 0,
+      "Vstop": 5
+    },
+    "logDateKST": "2026-11-03 20:58:41",
+    "anodeRawCurrent": 5.81e-19,
+    "anodeElectronRawCurrent": 1.722e-29,
+    "anodeHoleRawCurrent": 5.81e-19,
+    "cathodeRawCurrent": -5.81e-19,
+    "wallclockSeconds": 361.62,
+    "peakMemoryMB": 640,
+    "finalNewtonError": 0.061829,
+    "plotTDR": "n25_des.tdr",
+    "physicsValidated": false,
+    "next": "Inspect clean NtSide0 n21_des.log 5V result; examine n25 carrier bands QW recombination, near0V spike and dimensional units"
+  },
   "juSubinWu10NtSide1e18FiveVPlot20261103": {
     "worker": "주수빈 Wu candidate workstream (not independently reconfirmed)",
     "status": "OBSERVED_SVISUAL_NtSide1e18_0to5V_PLOT_SOLVER_LOG_PENDING",

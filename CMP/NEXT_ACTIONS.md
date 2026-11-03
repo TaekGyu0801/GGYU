@@ -1,3 +1,8 @@
+## 2026-11-04 ~00:43 KST — Wu post-Mg SDevice n21 Newton step reduction screenshot (READ-ONLY DIAGNOSIS)
+1. With post-Mg n21 SDevice running, examine live n21_des.out, .err, .log tails. Screenshot shows Newton >35 iterations then smaller step t=.637961→.642158 and datexcodes duplicate-var warnings. This is a local convergence failure, not final whole-run failure.
+2. If step t advances steadily and solver ultimately writes 5V TDR, inspect pGaN acceptor/holes and MQW rates. If t stalls and step repeatedly shrinks or final failure, avoid brute-force retries: inspect specific convergence failure and project-local datexcodes duplicate redefinitions before any source/physics changes.
+3. Do not run Trap ON n25; preserve pre-fix SDevice backup and corrected SDE mesh.
+
 ## 2026-11-04 — Wu n21 post-MgFix OFF validation checklist agreed (PROPOSED CHECKS)
 - AFTER new clean n21 OFF SDevice, confirm new execution time and 5V solver completion (not stale Nov 3 22:02:35 log), fresh TDR saved.
 - Inspect pGaN SDevice AcceptorConcentration and hDensity; compare old Acceptor=0, hDensity~1cm^-3. Then QW1–4 eDensity/hDensity, carrier transport and Rad/SRH/Auger rates in same QW volumes, compute consistent IQE only if meaningful positive recombination; nonzero free holes not equal to Mg nominal dose.

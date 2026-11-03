@@ -1,3 +1,9 @@
+## 2026-11-04 — Wu MgFix OFF 5V three-channel QW IQE calculated; physical validation before ON
+- All 12 exact MQW regions at 5V: Rad9.902518e15 / SRH6.102184e14 / Auger4.442221e15 s^-1 um^-1 => DERIVED internal 3-channel IQE **66.2156%** (Rad 66.2156, SRH4.0804, Auger29.7040%). QW1 48.13%, QW2 59.03%, QW3 73.27%, QW4 65.60%; QW4 contributes 91.034% Rad and 95.425% Auger, so physical spatial injection imbalance remains suspect/not established.
+- NEXT 1: read-only same `n21_des.tdr` inspect QW1-4 and lateral QW cuts for `eDensity/hDensity`; identify whether p/n bipolar injection broadly reaches MQW or deep QW4 dominance comes from field/high carrier accumulation. Compare center and near sidewall.
+- NEXT 2: verify actual 2D `AreaFactor`, width10um normalization and current density; do not treat 5V Raw2.569e-3 as physical 3D current without evidence. Consider targeted lower/matched-current IQE, not single 5V point.
+- NEXT 3: only after OFF physical review, rerun **post-MgFix** n25 NtSide=1e18 ON using same baseline settings; old n25 pre-fix physically invalid comparator. Compare at same injected J, analyze SRH sidewall separately. Validate Wu2023 paper details before declaring baseline finalized.
+
 ## 2026-11-04 — Wu MgFix OFF n21 radiative integration complete; AUGER integration NEXT
 - OBSERVED Radiative 12 QW regions total9.902518e15 s^-1 um^-1; previous SRH same 12 regions total6.102184e14 s^-1 um^-1. Derived two-channel Rad/(Rad+SRH)=94.1954%, **not final IQE** because Auger pending. QW4 alone 91.0341% of all Rad. Investigate unusual per-QW distribution and physical carrier balance before accepting baseline.
 - NEXT IMMEDIATE: Select field `AugerRecombination` in SVisual saved clean `n21_des` 5V, and integrate exactly same 12 Clean_QW1-4, DmgL_QW1-4, DmgR_QW1-4. Record per-region and total values, units and signs. If field unavailable or signed unexpectedly, inspect SDevice Plot/Physics before calculating IQE.

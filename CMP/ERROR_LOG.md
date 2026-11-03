@@ -777,3 +777,9 @@ Do not change baseline physics parameters while diagnosing this.
 
 - Assistant provided Bash assignment `DB=/...` and Bash `for m in ...; do` while user's current shell reports C-shell-family errors (`Command not found`, `Undefined variable`). Read-only `sed -n '330,350p' n2_des.log` worked. No MaterialsDB parameter values were retrieved; no simulation/model/source error from this incident.
 - Corrected with one literal-path C-shell-compatible command `grep -niE 'SRH|Radiative|Auger|taun0|taup0|Scharfetter' /user/tools/synopsys/sentaurus/T-2022.03/tcad/current/lib/sdevice/MaterialDB/InGaN.par | head -n 70`. After output verify effective parameter selection/material DB and exact status of `Use Si parameters`. Do not rerun/modify TCAD.
+
+## 2026-11-04 02:26 KST — Wu CMP_WU_Copy n29 NtSide1e17 convergence hotspot — numerical failure after 2.420V (OBSERVED / UNRESOLVED)
+- Wu post-Mg school project `/user/semi/semi437/tmp/myproject/CMP_WU_Copy`, node n29, SWB NtSide=1e17 (user screenshot). Last accepted anode 2.420E+00 V, pseudo-time t=0.484021. 35 coupled Newton iterations repeated while 3.77-6.00 error oscillated; further bias-step halving continued until below MinStep at 7.9926e-11. NOT a successful 5V run.
+- Hotspots: hole max C-norm at (0.161~0.1615,9.995117) um; poisson/electron at (0.1650273,10.0) um. GitHub candidate SDE maps to QW4 start/Barrier4 at right 5nm damaged stripe but exact school PP geometry remains to be verified.
+- Hypotheses not proven: carrier/trap/stiff nonlinear transport near QW4-sidewall, junction mesh/interface. Explicitly no claim that trap strength itself alone causes nonconvergence. `n29_des.err` not supplied. No code edits/rerun.
+- NEXT: inspect school `pp29_des.cmd` `pp1_dvs.cmd` and `n29_des.err`, then if desired isolated numerical-only solver test; preserve n21/n25 outputs.

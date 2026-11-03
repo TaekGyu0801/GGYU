@@ -1,3 +1,8 @@
+## 2026-11-03 — pp21_des.par Mg ionization parameters found (OBSERVED)
+- School output grep confirms GaN Ionization Species("MagnesiumActiveConcentration"), E_0=0.15 eV, alpha=0, g=4 in CMP_WU_Copy/pp21_des.par. Parameter header says generic III-N model, not Wu paper value.
+- This parameter set does not itself create an Mg acceptor mapping. Default T-2022.03 datexcodes ordinary magnesium acceptor declaration is commented. School SDE places MgActive2e19, original mesh pGaN net DopingConcentration=0 and SDevice AcceptorConcentration=0.
+- Next: verify actual SDevice Physics IncompleteIonization; isolate project-local datexcodes Mg mapping, rerun mesh-only and check negative pGaN net doping before 5V SDevice. No code or simulation changed.
+
 ## 2026-11-03 — Wu2023 school pp1_dvs MgActive-only confirmed (OBSERVED; mapping correction not yet applied)
 - User actually ran grep against school /user/semi/semi437/tmp/myproject/CMP_WU_Copy/pp1_dvs.cmd: line25 PMgActive=2.0e19; line61 (place-field rname "MagnesiumActiveConcentration" pval); lines68–69 apply to pGaN and potential EBL. No MagnesiumConcentration/PDopant entry in the displayed grep output.
 - Installed T-2022.03 default lib/datexcodes.txt ordinary MagnesiumConcentration doping=acceptor clause is commented; installed GaN_AlGaN_Polarization example maps MagnesiumConcentration chemical→MagnesiumActiveConcentration acceptor. This is strong evidence of why n1_msh pGaN MagnesiumActive2e19 exists but net doping0 and SDevice acceptor0. Effective runtime override and device par ionization still must be confirmed; no conclusion that repaired physical LED is validated.

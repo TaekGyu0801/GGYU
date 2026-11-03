@@ -5966,7 +5966,7 @@
   "juSubinKou4Candidate20261103": {
     "worker": "주수빈",
     "date": "2026-11-03",
-    "status": "PROPOSED_CODE_CREATED_SDE_AND_SDEVICE_NOT_RUN",
+    "status": "REJECTED_AS_KOU_PAPER_REPRODUCTION_PRESERVED_ONLY_FOR_SEPARATE_CMP4",
     "project": "CMP_BASELINE_3.1.0_KOU4FULL",
     "files": [
       "CMP/tcad/candidates/CMP_BASELINE_3.1.0_KOU4FULL/sde_dvs.cmd",
@@ -5978,5 +5978,21 @@
     "next": "SDE mesh first, then clean SDevice smoke NtSide=0 PolAct=0 Vstop=0.1; Kou surface SRH not reproduced",
     "wuCandidate": "preserved",
     "baselineSelected": false
+  },
+  "juSubinKou20Full3DCandidate20261103": {
+    "worker": "주수빈",
+    "date": "2026-11-03",
+    "status": "PROPOSED_CODE_CREATED_SDE_ONLY_NOT_RUN",
+    "project": "CMP_BASELINE_4.0.0_KOU20FULL3D",
+    "files": [
+      "CMP/tcad/candidates/CMP_BASELINE_4.0.0_KOU20FULL3D/sde_dvs.cmd",
+      "CMP/tcad/candidates/CMP_BASELINE_4.0.0_KOU20FULL3D/README.md"
+    ],
+    "paperGeometry": "20x20um2 smallest paper chip, damaged ring 4um all sides, central12x12=36%",
+    "paperEpi": "nGaN4um n=5e18, four In0.15 3nm QWs, GaN 22nm QB, pAl0.15 EBL26nm, pGaN120nm, p+GaN20nm",
+    "assumptions": "5 QB assumed; pPlus MgActive1e19 PILOT; hole concentration3e17 approximated as MgActive; full top/bottom contacts pilot; no Schrodinger/quantum or traps",
+    "runtime": "NOT RUN. No 3D SDE mesh or Sentaurus solver test",
+    "next": "SDE-only new SWB geometry/contacts/mesh feasibility gate; Kou20-specific SDevice after pass",
+    "commonBaselineModified": false
   }
 }

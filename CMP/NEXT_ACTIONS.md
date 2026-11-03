@@ -1,3 +1,7 @@
+## 2026-11-04 — Wu2023 pre-fix n21 n25 SDevice output backup verified (BACKUP GATE PASSED; NEXT n21 OFF ONLY)
+- User verified six pre-fix n21/n25 SDevice .log/.plt/.tdr files stored in CMP_WU_Copy/preMgFix_SDevice_backup (~15 MB). Previous output preserved as comparison evidence; no post-MgFix SDevice run yet.
+- NEXT run only clean Trap OFF n21 SDevice on refreshed n1_msh.tdr, not n25. After run check normal 5V numerical completion; examine SDevice acceptor and free holes and QW recombination before claiming device validity or performing ON split.
+
 ## 2026-11-04 ~00:09 KST — Wu2023 SDE pGaN negative net doping verified after local Mg map: next execution gate
 1. SDE mesh doping gate PASSED (user SVisual screenshot n1_msh pGaN≈-2e19 / nGaN≈+5e18 cm^-3). Do not repeat datexcodes debugging unless new SDevice evidence demands it.
 2. BACKUP old pre-fix n21/n25 5V TDR/PLT/log files (they remain useful as failure-control evidence); verify backups.

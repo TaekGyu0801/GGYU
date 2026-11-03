@@ -1,3 +1,9 @@
+## 2026-11-03 — Lee reports PolAct=0 simulation runs finished (USER-REPORTED, RESULTS UNVERIFIED)
+- 작업자: 이택규. 사용자 직접 보고: "그 우리 polact 0 했던거 다 돌아갔어". 전날 shelf-free `CMP_BASELINE_2.0.0_V2`로부터 새 복사하고 PolAct=0 / SDevice Iterations=12 적용했다고 보고한 진단 시험을 가리킴.
+- **검증 수준:** USER-REPORTED run completion. 현재 세션에서 학교 서버 `n2/n6` 로그/PLT, 실제 복사본 이름, shelf-free 메시 형상, 실효 pp activation=0 및 Iterations=12 직접 확인하지 못함. 정상 수렴/3.6V 도달/재결합 분포/결과 수치는 아직 미확정.
+- **NEXT (read-only):** 새 프로젝트 루트에서 `pwd; ls -lh n2_des.log n6_des.log n2_des.plt n6_des.plt 2>&1; grep -iE 'finished|good bye|didn.t converge|error' n2_des.log n6_des.log | tail -25` 실행 결과 받아 완료 여부 확인. pp2/pp6의 activation=0, Iterations=12 및 shelf-free 구조를 검증한 후 0.5 대 0의 QW1–QW4 재결합 비율, 단자 전류 및 동일 전류 IQE_sim 비교.
+- baseline physical FREEZE HOLD 유지. 원본 소자/코드 변경 없음.
+
 ## 2026-11-02 — Lee reports new shelf-free clone PolAct parameter change; full SDevice source requested (USER-REPORTED, PRE-RUN)
 - 이택규는 잘못된 shelf-retained Copy를 중단 후 원본 V2.1 복사본의 SWB 파라미터를 변경했다고 보고; **새 복사본 코드/실효 pp/메시 검증 및 solver 실행은 미확인**.
 - ChatGPT가 요청에 따라 전체 `sdevice_des.cmd` 교체용 실행 코드 전달. 기존 사용자-provided V2 입력과 이전 원본/복사본 diff에 근거하여 분극 `activation=@PolAct@`, global Math Iterations12, 나머지 물리모델/Trap/Plot/CurrentPlot/Solve 제어를 원본 V2.1과 맞춘 버전; 독립적으로 새 프로젝트 디스크 파일의 정확한 byte equivalence를 검증한 것은 아님. SWB PolAct=0이면 자동 치환되므로 별도의 polarization 키워드 수정 불필요.

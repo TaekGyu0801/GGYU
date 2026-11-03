@@ -1,4 +1,34 @@
 {
+  "juSubinWu10SDevice0p1VFinishConfirmed20261103": {
+    "worker": "주수빈 Wu workstream (current-user identity not revalidated)",
+    "status": "OBSERVED_SDEVICE_SMOKE_FINISHED_0p1V_NOT_PHYSICAL_VALIDATION",
+    "schoolProject": "/user/semi/semi437/tmp/myproject/CMP_WU",
+    "node": "n2",
+    "parameters": {
+      "NtSide": 0,
+      "PolAct": 0,
+      "Vstop": 0.1
+    },
+    "logFinishKST": "2026-11-03 20:30:09",
+    "terminalEvidence": [
+      "Curve trace finished.",
+      "Writing plot 'n2_des.tdr' ... done.",
+      "Sentaurus Device simulation finished"
+    ],
+    "currentRawAnode": 8.387e-31,
+    "currentRawCathode": -8.387e-31,
+    "wallclockSeconds": 423.72,
+    "cpuSeconds": 41.39,
+    "peakMemoryMB": 632,
+    "physicalBaselineValidated": false,
+    "missing": [
+      "2D current unit AreaFactor check",
+      "Wu10 SVisual Wmesa 4->10 change",
+      "NtSide 1e18 run",
+      "high-bias transport and QW validation"
+    ],
+    "next": "Change Wu10 SVisual postprocess Wmesa=10 only; confirm raw unit; then ON smoke and physical-meaningful bias checks."
+  },
   "juSubinWu10SVisualSmoke20261103": {
     "worker": "주수빈 Wu workstream (school screenshot; chat identity not independently reconfirmed)",
     "date": "2026-11-03",

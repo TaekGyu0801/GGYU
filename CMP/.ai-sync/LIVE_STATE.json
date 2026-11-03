@@ -1,4 +1,43 @@
 {
+  "juSubinWu10Both5VFinishLogsConfirmed20261103": {
+    "date": "2026-11-03",
+    "status": "OBSERVED_OFF_ON_5V_SOLVER_COMPLETE_PHYSICS_UNVALIDATED",
+    "project": "CMP_WU",
+    "parameters": {
+      "PolAct": 0,
+      "Vstop": 5,
+      "trapOffNtSide": "0",
+      "trapOnNtSide": "1e18"
+    },
+    "cleanNode21": {
+      "finishedKST": "2026-11-03 21:00:31",
+      "electron": 2.596e-29,
+      "hole": 4.286e-30,
+      "total": 3.025e-29,
+      "cathode": -3.025e-29,
+      "wallclockS": 56.91,
+      "peakMemoryMB": 638,
+      "tdr": "n21_des.tdr"
+    },
+    "damagedNode25": {
+      "finishedKST": "2026-11-03 20:58:41",
+      "electron": 1.722e-29,
+      "hole": 5.81e-19,
+      "total": 5.81e-19,
+      "cathode": -5.81e-19,
+      "wallclockS": 361.62,
+      "peakMemoryMB": 640,
+      "tdr": "n25_des.tdr"
+    },
+    "onOffRaw5VRatio": 19206611570,
+    "interpretation": "Both reach 5V, tiny current: no evidence of normal LED turn-on; ON hole-dominated; ON/OFF ratio cannot establish defect physics in numerical-floor regime",
+    "blocked": [
+      "2D current actual units and AreaFactor",
+      "pilot Mg/EBL/contact and PolAct0 physics",
+      "QW electron/hole carrier distribution and recombination, ON 0V PLT spike"
+    ],
+    "next": "Read-only inspect n21_des.tdr vs n25_des.tdr at same bias: QW e/hDensity, bands, SRH/Rad/eGapStates; check near-zero-V ON plot raw points. No parameter edits or new runs yet."
+  },
   "juSubinWu10NtSide1e18FiveVLogConfirmed20261103": {
     "date": "2026-11-03",
     "status": "OBSERVED_ON_5V_NUMERICAL_COMPLETION_PHYSICS_UNVALIDATED",

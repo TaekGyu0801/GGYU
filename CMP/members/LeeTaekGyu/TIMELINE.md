@@ -1,3 +1,13 @@
+2026-11-03 (Claude 독립 검토, 새 실행 없음) PolAct=0 결과 판정과 Baseline/Project A 결정
+- 유효성 단서: POL0NOSHELF는 GPT 전체 SDevice 코드를 붙여 넣은 덱(activation 줄이 원본 21행 → 새 22행). 원본 대비 pp/par/메시 diff 미실시 → 단일 변수 실험으로 확정 불가. 아래 판정은 조건부.
+- 조건부 판정: 분극은 주입·Vf를 지배(3.6V 전류 132x/493x, J≈240/227 A/cm2)하지만 QW4 집중의 필요조건은 아님(99.89/99.96%). 우물 간 감소비 OFF: QW3/QW4 1.1e-3, QW2/QW3 2.3e-2, QW1/QW2 1.7e-2(DERIVED).
+- H1(분극이 분포 원인): 대부분 반증(조건부). H1(분극이 Vf 원인): 강하게 지지. H2(고전 DD): 강화됐지만 직접 검증 없음. 구체화 가설: 양자 보정 없는 고전 DD가 3 nm 우물의 전자 깊이를 과대평가(ΔEc≈0.41 eV) → 첫 우물 포획.
+- 정정: 11/02 Claude 문턱값(1%, 80%, ±25%)은 작업 기준이지 물리값 아님. 분포가 안 바뀌었으므로 ±25% 비교는 "QW 분포 민감도"가 아니라 "분극·Vf 민감도"만 시험함.
+- 같은 전압 Trap 손실(POL0 3.3% vs PolAct0.5 약 34%)은 전류가 100배 이상 달라 비교 불가 → 같은 전류 비교 필수.
+- 권고: 선택지 B(제한사항 명시, PolAct 0.5 임시 Baseline으로 Project A 병행). Project A = CONDITIONAL GO: 덱 준비는 지금, 해석·보고는 (1) 유효성 게이트 통과 (2) 같은 전류 Trap 손실이 PolAct 0.5/0에서 같은 부호·±25% 이내 (3) QW4 집중을 모델 한계로 명시 후.
+- 다음 하나: 유효성 게이트(읽기 전용, bash): 메시 md5, pp1_dvs diff, pp2/pp6 par diff, pp2/pp6 cmd diff -w -B. 통과 시 polact_compare.py로 같은 전류 비교(우물 간 감소비, IQE_sim, Trap 손실).
+- 나중(승인 필요): H2 직접 시험으로 밴드 오프셋 비율 단일 변수. FREEZE HOLD, 판정 B 유지.
+
 ## 2026-11-03 — PolAct=0 both PLTs parsed: QW4 still >99.88% while current rises strongly (OBSERVED + DERIVED)
 - **작업자:** 이택규. **Source:** user pasted real Bash/Python DF-ISE `n2_des.plt`/`n6_des.plt` final-row extraction in `/user/semi/semi437/CMP_BASELINE_2.1.0_POL0NOSHELF` (2026-11-03, pp previously verified `activation=0`, global Iterations12, both runs finished). Final `anode OuterVoltage=3.600000 V` for both.
 - **OBSERVED PolAct=0, Trap OFF n2:** native anode current `4.80713937e-06`; total QW integrated radiative rates: QW1 `7.53686944e18`, QW2 `4.48979847e20`, QW3 `1.98055890e22`, QW4 `1.82316579e25`; QW4 fraction `99.88898644%`.

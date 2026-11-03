@@ -1,3 +1,6 @@
+## 2026-11-04 ~00:09 KST — Wu2023 SDE pGaN negative net doping verified after local Mg map (OBSERVED)
+- Worker 주수빈; project CMP_WU_Copy. SVisual n1_msh DopingConcentration pGaN ≈-2e19 cm^-3 and nGaN ≈+5e18 cm^-3 after project-local GaN Mg acceptor mapping and SDE rerun. This resolves SDE mesh-stage acceptor recognition blocker that previously yielded pGaN net doping zero. New SDevice injection and light emission remain unvalidated. Next backup old 5V n21/n25, OFF SDevice only and inspect pGaN/QW holes/rates.
+
 ## 2026-11-03 22:13:17 KST — Wu2023PHY Trap ON n25 5V solver normal finish CONFIRMED (OBSERVED USER LOG)
 - School project `/user/semi/semi437/tmp/myproject/CMP_WU_Copy`; user pasted `n25_des.log` tail. Actual 5.000E+00V anode electron `2.858E-05`, hole `2.384E-20`, conduction `2.858E-05` raw native units; cathode electron `-2.858E-05`, hole `-4.223E-29`, conduction `-2.858E-05`.
 - Last Bank/Rose solver converged error 8.4932E-01 (<1). `Curve trace finished`, `Writing plot 'n25_des.tdr' ... done`, `Sentaurus Device simulation finished` Tue Nov 3 22:13:17 KST, wallclock 530.09s, CPU 529.57s, peak757MB; licenses returned. Thus Trap ON 5V SDevice completion **now directly verified**, replacing earlier screenshot-only/solved-unconfirmed status.

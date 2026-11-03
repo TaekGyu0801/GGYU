@@ -7250,5 +7250,18 @@
     ],
     "finding": "Broad high displayed TotalTrapConcentration in OFF; cannot conclude these are deliberately added sidewall NtSide traps",
     "next": "Examine n25 ON same field and comparable fixed scale/viewport, cross-check eTrappedCharge and pp25 region definitions without rerunning SDevice."
+  },
+  "juSubinWuONn25TotalTrapConcentrationScreenshot20261104": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04",
+    "status": "OBSERVED_ON_TOTALTRAP_SCALAR_MAX21E18_NOT_YET_LOCALIZATION_PROOF",
+    "dataset": "n25_des",
+    "NtSide": 1000000000000000000,
+    "field": "TotalTrapConcentration",
+    "displayLegendMaxCm3": 21000000000000000000,
+    "offN21LegendMaxCm3": 20000000000000000000,
+    "screenshotAutoscaleNotIdentical": true,
+    "interpretation": "The displayed upper range difference of 1e18 is suggestive but not proof sidewall trap implementation or equivalent coordinate concentrations; broad red signal may include other species.",
+    "next": "Integrate n25 TotalTrapConcentration for DmgL_QW1 and Clean_QW1 individually, retain integral and domain and compute per-region average; optionally OFF n21 same regions. Do not rerun SDevice."
   }
 }

@@ -6956,5 +6956,25 @@
     "deltaPercent": -0.329896,
     "iqeOnConfirmed": false,
     "next": "ON n25 12-QW SRH and Auger integrals"
+  },
+  "juSubinWuMgFixONn25QWAugerAnd3TermIQE20261104": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04",
+    "node": 25,
+    "condition": "post-MgFix NtSide=1e18 5V",
+    "status": "OBSERVED_AUGER_DERIVED_3TERM_IQE_TRAP_SPECIFIC_LOSS_UNRESOLVED",
+    "onAugerTotal": 4424524000000000,
+    "offAugerTotal": 4442221000000000,
+    "onRadiativeTotal": 9869850000000000,
+    "onConventionalSRHTotal": 608682400000000,
+    "offRadiativeTotal": 9902518000000000,
+    "offConventionalSRHTotal": 610218400000000,
+    "off3termIQEPercent": 66.2156216,
+    "on3termIQEPercent": 66.227019,
+    "deltaPercentagePoints": 0.01139746,
+    "explicitGapStatesMeasured": false,
+    "matchedCurrent": false,
+    "normalizationVerified": false,
+    "next": "Check eGapStatesRecombination and hGapStatesRecombination separately in n25 TDR, signs and trap regions; reconcile accounting and current."
   }
 }

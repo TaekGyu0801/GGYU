@@ -1,4 +1,19 @@
 {
+  "juSubinWuMeshSignedNetDopingRecovered20261104": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04 ~00:09",
+    "status": "OBSERVED_SDE_MESH_PGAN_NEGATIVE_DOPING_CONFIRMED_SDEVICE_UNVERIFIED",
+    "source": "User SVisual screenshot of CMP_WU_Copy n1_msh DopingConcentration",
+    "pGaNNetDopingApproxCm3": -20000000000000000000,
+    "nGaNNetDopingApproxCm3": 5000000000000000000,
+    "sourceValues": "color legend visual estimates, not exact point-probed",
+    "priorPgaNNetDopingCm3": 0,
+    "appliedChange": "project local datexcodes Mg acceptor mapping; user SDE rerun, old mesh backup",
+    "interpretation": "SDE Mg acceptor recognition restored, free hole density and LED physics NOT yet verified",
+    "currentBlocker": "post-fix clean OFF SDevice pGaN and QW carrier / recombination validity",
+    "next": "backup old n21/n25 log/tdr/plt; OFF only SDevice n21 against fixed mesh, check AcceptorConcentration hDensity and QW rates; do not run ON until OFF validated",
+    "newPostFixSDeviceRun": false
+  },
   "juSubinWuSdeRerunReportedPendingMeshValidation20261104": {
     "worker": "주수빈",
     "dateKST": "2026-11-04",

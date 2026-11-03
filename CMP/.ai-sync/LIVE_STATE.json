@@ -1,4 +1,23 @@
 {
+  "juSubinWuPreFixSdeviceBackupVerified20261104": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04",
+    "status": "OBSERVED_BACKUP_SIX_FILES_POSTFIX_DEVICE_NOT_RUN",
+    "directory": "CMP_WU_Copy/preMgFix_SDevice_backup",
+    "files": [
+      "n21_des.log",
+      "n21_des.plt",
+      "n21_des.tdr",
+      "n25_des.log",
+      "n25_des.plt",
+      "n25_des.tdr"
+    ],
+    "totalApproxMB": 15,
+    "verification": "user ls output, not bytewise hashes",
+    "previousMeshAcceptorFix": "user screenshot pGaN negative net doping ~-2e19 cm^-3",
+    "next": "run only clean n21 Trap OFF SDevice against fresh n1_msh.tdr; inspect contacts, SDevice AcceptorConcentration, hDensity, QW rates",
+    "postFixSDeviceRunConfirmed": false
+  },
   "juSubinWuMeshSignedNetDopingRecovered20261104": {
     "worker": "주수빈",
     "dateKST": "2026-11-04 ~00:09",

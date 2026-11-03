@@ -1,3 +1,11 @@
+## 2026-11-03 — 주수빈 Kou 원문 수치 재검토 / 20um Full3D SDE 코드 신규 작성 (PROPOSED, NOT RUN)
+- 사용자 정정: 기존 Kou4 4um mesa/5nm 손상 폭은 CMP 임의 목표였으며 Kou 논문 재현 모델에 쓰면 안 됨. 기존 `CMP_BASELINE_3.1.0_KOU4FULL`은 **Kou 원문 재현 용도로 철회**, 단 과거 CMP4 후보로는 보존.
+- 문헌 확인: Kou 2019 Optics Express DOI 10.1364/OE.27.00A643 Section2 Fig1: 20×20/60×60/100×100um², 측벽 손상 안쪽 폭 4um, 20um 소자는 Clean core 12×12=36%; nGaN4um Si5e18, QW4×3nm In0.15, QB22nm, EBL26nm pAl0.15, pGaN120nm, p+ contact GaN20nm, pGaN/EBL hole3e17.
+- **새 독립 코드 실제 GitHub 커밋 (시뮬레이션 미실행):** `CMP/tcad/candidates/CMP_BASELINE_4.0.0_KOU20FULL3D/sde_dvs.cmd` (commit 55d431d)와 README (9d9deba). 20×20 square 3D damage ring, central 12×12, 13층 × 9타일 =117 cuboids; 5개 QB를 가정한 수직 총 두께 4.288um. Scheme 괄호 정적 체크만 완료.
+- 중요한 미확인: 원문에서 고농도 p+ Mg 구체값 없음 → pPlusPilot1e19 가정; p/EBL hole3e17 ≠ MgActive3e17 실제 동치 아님; 전면 상/하 Ohmic contact는 임시이며 원문 Fig7 p-contact 4um 그림과 다름; 4 QW에 GaN barrier 5개 배치 가정, 실제 원문 확인 필요. 3D SDE Mesh/SDevice/트랩/양자모델/Sentaurus 호환성 실행 미확인. 기존 Kou4 SDevice는 새 코드에 호환되지 않음.
+- **NEXT:** SWB에서 신규 `CMP_BASELINE_4.0.0_KOU20FULL3D` SDE만 전처리/mesh; 117 region, 4um ring, QW/EBL/p+ 층, contact, 3D mesh 요소수/메모리 검증. 3D 자원 문제가 크면 사용자에게 2D 근사 시 36%→60% 면적 차이를 명시 후 분리 진행. SDE 통과 이후 Kou20에 맞는 SDevice 제작.
+- 보호: Wu10 후보, 이택규 POL0 프로젝트, `CMP/COMMON_BASELINE.md` 미변경. 현재 최종 Baseline은 미선정.
+
 ## 2026-11-03 — 주수빈 Kou4 SDevice pilot code added (CODE COMMITTED, NOT RUN)
 - `CMP/tcad/candidates/CMP_BASELINE_3.1.0_KOU4FULL/sdevice_des.cmd` added; matching Full2D SDE region names with SWB `NtSide`, `PolAct`, `Vstop`. One SDevice can run separate clean and damaged parameter splits; no SDevice2/SVisual2 required for first smoke.
 - Initial proposed syntax/solver smoke AFTER SDE mesh pass: NtSide=0, PolAct=0, Vstop=0.1. Not an LED operating-point or physics validation.

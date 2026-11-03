@@ -1,4 +1,31 @@
 {
+  "juSubinWuMgFixOFFn21QWRadiativeIntegral20261104": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04",
+    "project": "CMP_WU_Copy",
+    "node": 21,
+    "condition": "post-MgFix clean NtSide=0, 5V",
+    "status": "OBSERVED_12_QW_RADIATIVE_INTEGRALS_DERIVED_TWO_CHANNEL_RATIO_AUGER_NOT_MEASURED",
+    "units": "s^-1*um^-1",
+    "reportedRadiativeTotal": 9902518000000000,
+    "printedSumRadiative": 9902517583260000,
+    "reportedSRHTotal": 610218400000000,
+    "QW1Radiative": 739598190400,
+    "QW2Radiative": 1081039269600,
+    "QW3Radiative": 886031030800000,
+    "QW4Radiative": 9014665915000000,
+    "QW4RadiativePercent": 91.0340814,
+    "twoChannelRadOverRadPlusSRHPercent": 94.1954364,
+    "twoChannelQWPercents": [
+      53.512385,
+      64.079656,
+      88.054062,
+      94.856956
+    ],
+    "augerRegionIntegralAvailable": false,
+    "iqeValidated": false,
+    "next": "Collect AugerRecombination integrals from exact same 12 QW regions on n21_des and calculate provisional three-channel IQE; inspect QW carriers and 2D normalization, then fresh fixed-Mg ON matched-J split."
+  },
   "juSubinWuMgFixOFFn21QWSRHIntegral20261104": {
     "worker": "주수빈",
     "eventDateKST": "2026-11-04",

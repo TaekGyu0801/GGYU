@@ -1,3 +1,6 @@
+## 2026-11-04 — Wu post-Mg n21 advanced to 4.332V and hole current restored (OBSERVED INTERMEDIATE RESULT)
+- 주수빈 Wu n21 OFF after Mg mapping: 4.332V converged (error 0.243), anode e=7.286e-05, h=1.415e-03, total=1.488e-03 raw, cathode total=-1.488e-03. Previously 5V all-electron due missing acceptor mapping; post-fix anode hole fraction ~95.1% at 4.332V. Now computing 4.432V; 5V finish and QW recombination not yet verified. Do not infer IQE or compare voltages quantitatively. Preserve old pre-fix outputs, ON n25 still not run.
+
 ## 2026-11-04 ~00:09 KST — Wu2023 SDE pGaN negative net doping verified after local Mg map (OBSERVED)
 - Worker 주수빈; project CMP_WU_Copy. SVisual n1_msh DopingConcentration pGaN ≈-2e19 cm^-3 and nGaN ≈+5e18 cm^-3 after project-local GaN Mg acceptor mapping and SDE rerun. This resolves SDE mesh-stage acceptor recognition blocker that previously yielded pGaN net doping zero. New SDevice injection and light emission remain unvalidated. Next backup old 5V n21/n25, OFF SDevice only and inspect pGaN/QW holes/rates.
 

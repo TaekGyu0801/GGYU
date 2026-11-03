@@ -1,3 +1,8 @@
+## 2026-11-03 — Wu2023 school pp1_dvs MgActive-only confirmed (OBSERVED; no fix/run yet)
+- Actual school /user/semi/semi437/tmp/myproject/CMP_WU_Copy/pp1_dvs.cmd grep: PMgActive 2e19, 'place-field ... MagnesiumActiveConcentration' only; pGaN assigned. Installed default T-2022.03 lib/datexcodes.txt Mg acceptor declaration commented out, official GaN_AlGaN_Polarization example enables Mg acceptor mapping, and no datexcodes present at school project root or home.
+- n1_msh pGaN MgActive=2e19 but net DopingConcentration~0, SDevice AcceptorConcentration=0/hDensity near0. Mg mapping root cause very likely, but actual runtime overrides and ionization par require check. Existing 5V n21/n25 solver runs numerically completed, physical validation still blocked.
+- NEXT: inspect actual school pp21_des.par species, add controlled project-scoped mapping in separate copy after runtime resolution check; re-mesh signed negative pGaN net doping before OFF SDevice; preserve 5V prior outputs. No file or solver edit in user session.
+
 ## 2026-11-03 — Wu2023 Mg net-doping map diagnostic (OBSERVED)
 - User SVisual n1_msh DopingConcentration plot: p-GaN blue near 0; n-GaN +5e18 cm^-3. Earlier same n1_msh showed p-GaN MagnesiumActiveConcentration 2e19 cm^-3.
 - Mg field exists but does not contribute to net p-type doping; SDevice AcceptorConcentration 0 and hDensity near zero are consistent. Dopant-species mapping is suspected, exact definition not yet inspected.

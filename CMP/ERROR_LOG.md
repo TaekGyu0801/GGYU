@@ -1,3 +1,8 @@
+## 2026-11-03 — Wu2023PHY direct 5V user-reported SWB error (UNRESOLVED)
+- USER REPORTED execution with Vstop=5 after skipping standalone 0.1V run, then showed a screenshot indicating error. Exact first-error message, node/stage, school log, effective preprocessed inputs NOT yet independently inspected.
+- No verified root cause, no server patch, no solver pass. Newly added Mg ionization/par, PooleFrenkel/Thermionic, dopant species and SWB substitution are diagnostic checks **only**, not proven causes.
+- NEXT: get newest relevant n*_des.log/n*_dvs.log and pp*_des.cmd/par; extract first Error/FATAL/UNDEFINED with 15 nearby lines; only then modify one proven syntax/species and rerun.
+
 ## 2026-11-03 — Wu10 SVisual1 4um→10um correction, SDE/SDevice1 independent static audit (PROPOSED FIX)
 - **User request:** deliver corrected SVisual1 specifically for the Wu 10um candidate and verify preceding SDE/SDevice1 source. Avoid mixing with older CMP4um transfer ZIP, which contains a different epistack.
 - **Code actually COMMITTED:** `CMP/tcad/candidates/CMP_BASELINE_3.0.0_WU10FULL/svisual1_iv.tcl` (new, commit `a504f60`), SVisual1 v1.1 with `Wmesa=10.0` instead of old `4.0`, unique Wu10 IV/JV/CSV names and source voltage/current preserved (including 0 V anomaly). This corrects geometric normalization **conditional on** raw 2D `A/um`, `AreaFactor=1`: J=abs(I)*1e8/10, 0.4× old displayed 4um-normalized J. Material SDE/SDevice source unchanged. Tcl basic syntax and derived data validated in local **mock** T-2022.03 visual-command simulation, NOT actual Sentaurus new-code execution.

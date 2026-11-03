@@ -6976,5 +6976,13 @@
     "matchedCurrent": false,
     "normalizationVerified": false,
     "next": "Check eGapStatesRecombination and hGapStatesRecombination separately in n25 TDR, signs and trap regions; reconcile accounting and current."
+  },
+  "juSubinWuONGapStateFieldAvailability20261104": {
+    "worker": "주수빈",
+    "status": "USER_REPORTED_SVISUAL_FIELD_AVAILABILITY",
+    "node": 25,
+    "observation": "eGapStatesRecombination selectable, hGapStatesRecombination absent in SVisual list",
+    "interpretation": "Missing h field does not imply zero hole/trap recombination; output may be unrequested or unavailable. Actual pp25 Plot and data read pending.",
+    "next": "Integrate eGapStatesRecombination for eight DmgL/R_QW1-4 regions; verify Result Field updated from Radiative. Inspect pp25_des.cmd Plot tokens for e/h GapStates using read-only grep. Avoid trap-inclusive IQE until physical accounting."
   }
 }

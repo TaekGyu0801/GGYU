@@ -1,3 +1,8 @@
+## 2026-11-03 — 주수빈 Wu2023 independent candidate SOURCE CREATED (PROPOSED/UNRUN)
+- New independent GitHub directory `CMP/tcad/candidates/CMP_BASELINE_3.2.0_WU2023PHY/` contains SDE/SDevice/par/SVisual/README, paper-reported 10um/4QW In0.08/3nm/8nm/nGaN3.9um/nSi5e18/Mg nominal2e19/5nm edges. Independent 3.0.0 parent unchanged; no school server modification or simulation.
+- Physics enabled: piezo, Mg incomplete ionization, field-dependent trap PooleFrenkel proxy, plus Thermionic heterointerface candidate, species mapping and c-axis orientation in par. These additional transport/field approximations NOT claimed as exact Wu settings.
+- Remaining blocker: verified ionized dopant species/contacts/EBL/pGaN thickness and 5V injection, Wu Fig1 & full Methods. Current 5V n21/n25 old ultra-low raw I remain uncalibrated. New candidate requires T-2022.03 PP and mesh and injection tests.
+
 ## 2026-11-03 — CORRECTION: Wu (2023) paper-only baseline implementation (user confirmed, source checked)
 - 주수빈 정정: 다른 논문에 기반한 Wu baseline 비교/재설계 지시는 철회. 기준은 Zhuang Wu 2023, DOI 10.1016/j.micrna.2023.207542. 직전 잘못된 출처의 EBL 관련 판단·변경 지시는 반영하지 않음.
 - Wu2023 원문 검색 발췌 확인: 10um, nGaN3.9um Si5e18, 4xIn0.08QW3nm, GaN barrier8nm, Mg2e19 (화학 도핑값), 좌우5nm sidewall acceptor trap; piezoelectric polarization, Mg incomplete ionization, field-related capture, Rad/SRH/Auger. EBL은 확인한 발췌에서 존재/부재 불명이며 Fig1 확인 필요.

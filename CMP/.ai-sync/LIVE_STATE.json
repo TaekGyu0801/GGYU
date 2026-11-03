@@ -1,4 +1,35 @@
 {
+  "juSubinWu2023TrapON5VActualSolverConfirmed20261103": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-03 22:13:17",
+    "project": "CMP_WU_Copy",
+    "candidate": "CMP_BASELINE_3.2.0_WU2023PHY",
+    "node": 25,
+    "NtSide": "1e18 cm^-3",
+    "status": "OBSERVED_TRAP_ON_5V_NORMAL_FINISH_PHYSICAL_IQE_UNVALIDATED",
+    "anodeVoltageV": 5,
+    "anodeElectronCurrentRaw": 0.00002858,
+    "anodeHoleCurrentRaw": 2.384e-20,
+    "anodeTotalCurrentRaw": 0.00002858,
+    "cathodeElectronCurrentRaw": -0.00002858,
+    "cathodeHoleCurrentRaw": -4.223e-29,
+    "cathodeTotalCurrentRaw": -0.00002858,
+    "solverError": 0.84932,
+    "curveTraceFinished": true,
+    "tdr": "n25_des.tdr",
+    "wallclockSeconds": 530.09,
+    "peakMemoryMB": 757,
+    "comparisonWithClean": {
+      "cleanNode": 21,
+      "cleanTotalCurrentRaw5V": 0.00002884,
+      "onMinusOffCurrentRaw": -2.6e-7,
+      "onRelativeChangePercentApprox": -0.9029,
+      "interpretation": "same-voltage native-terminal-current change only; not sidewall IQE or radiative loss"
+    },
+    "physicalBlocker": "n21 SDevice acceptor 0 and hDensity max~1cm^-3 despite n1_msh pGaN MgActive 2e19cm^-3; investigate dopant species mapping",
+    "next": "SVisual n1_msh signed DopingConcentration, installed/local datexcodes GaN Mg acceptor and effective pp21_des.par; QW hole density/rec before interpreting trap effects",
+    "newCodeChanges": false
+  },
   "juSubinWu2023MgSDEMeshConfirmed20261103": {
     "worker": "주수빈",
     "dateKST": "2026-11-03 ~23:05",

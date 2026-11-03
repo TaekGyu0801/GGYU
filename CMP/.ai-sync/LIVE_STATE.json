@@ -36,7 +36,7 @@
     "nextForJuSubin": "Create separate SWB project, preprocess/build SDE only, inspect geometry contact mesh and pp before SDevice",
     "baselineFrozen": "Existing common 4um/5nm and Lee work untouched"
   },
-"leeClaudePol0Review20261103": {
+  "leeClaudePol0Review20261103": {
     "worker": "이택규",
     "source": "2026-11-03 user-forwarded Claude independent review; exact block in LeeTaekGyu/TIMELINE.md",
     "sourceType": "CLAUDE_RECOMMENDATION_NOT_NEW_RUN",
@@ -5962,5 +5962,20 @@
     "currentBlocker": "QW4 four-QW radiative focusing root cause unresolved",
     "next": "Claude independent GO/NO-GO review and one discriminating controlled-test design; do not run without permission",
     "baselineFreeze": "HOLD"
+  },
+  "juSubinKou4Candidate20261103": {
+    "worker": "주수빈",
+    "date": "2026-11-03",
+    "status": "PROPOSED_CODE_CREATED_SDE_ONLY_NOT_RUN",
+    "project": "CMP_BASELINE_3.1.0_KOU4FULL",
+    "files": [
+      "CMP/tcad/candidates/CMP_BASELINE_3.1.0_KOU4FULL/sde_dvs.cmd",
+      "CMP/tcad/candidates/CMP_BASELINE_3.1.0_KOU4FULL/README.md"
+    ],
+    "geometry": "CMP Kou-derived 4um Full 2D 4x3nm In0.15 QW, 5x22nm GaN QB, 4um nGaN, 5nm symmetric Dmg strips",
+    "provisional": "p/EBL/doping/contacts, traps and SDevice unresolved; not a Kou paper reproduction",
+    "next": "SWB independent SDE mesh first; audit actual log/pp/contacts prior to SDevice",
+    "wuCandidate": "preserved",
+    "baselineSelected": false
   }
 }

@@ -7066,5 +7066,52 @@
     "hGapStatesMeasured": false,
     "completeTrapInclusiveIQEValidated": false,
     "next": "Integrate OFF n21 eGapStates in same 8 DmgL/R QW regions; integrate ON n25 eGapStates across all damaged trap regions; compare 5V only with caveats. No new run."
+  },
+  "juSubinWuOFFONGapStates8DmgQW20261104": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04",
+    "status": "OBSERVED_5V_OFF_ON_EGAPSTATES_CONTRAST_DERIVED_RATIO_TRAP_IQE_UNRESOLVED",
+    "biasV": 5,
+    "regions": [
+      "DmgL_QW1",
+      "DmgL_QW2",
+      "DmgL_QW3",
+      "DmgL_QW4",
+      "DmgR_QW1",
+      "DmgR_QW2",
+      "DmgR_QW3",
+      "DmgR_QW4"
+    ],
+    "units": "s^-1*um^-1",
+    "totalDomainUm2": 0.0001200013,
+    "trapOFFn21Total": 0.00004230682,
+    "trapOFFn21RegionValues": [
+      7.304905e-7,
+      7.087208e-7,
+      0.000005836181,
+      0.00001387832,
+      7.305117e-7,
+      7.090642e-7,
+      0.000005836364,
+      0.00001387717
+    ],
+    "trapONn25Total": 41483880000000,
+    "ONtoOFFRatio": 980548289850000000,
+    "perQWOFF": [
+      0.0000014610022,
+      0.000001417785,
+      0.000011672545,
+      0.00002775549
+    ],
+    "perQWON": [
+      1360744900000,
+      1394830500000,
+      11418713000000,
+      27309600000000
+    ],
+    "noRerun": true,
+    "hGapStatesUnobserved": true,
+    "trapInclusiveIQEValidated": false,
+    "next": "Using existing ON n25 TDR integrate eGapStates over 14 non-QW damaged regions or all 22 trap-bearing damage regions; compare to 8-QW subtotal and optionally OFF n21; verify trap accounting, matched injection and width-normalization."
   }
 }

@@ -1,3 +1,8 @@
+## 2026-11-03 ~17:43 KST — JuSubin Wu10 Full2D **CODE CREATED** (GitHub confirmed), SDE/SDevice NOT RUN
+- **Worker:** 주수빈. New independent original code candidate `CMP/tcad/candidates/CMP_BASELINE_3.0.0_WU10FULL` with `sde_dvs.cmd`, `sdevice_des.cmd`, `README.md` actually committed in GitHub. Width10µm, nGaN3.9µm, 4×In0.08 QW3nm + 5×GaN QB8nm, dual5nm Dmg regions; NtSide/PolAct/Vstop SWB parameterized.
+- **STATUS:** CODE CREATED / PROPOSED only, no server preprocessing, SDE mesh, SDevice execution, calibration or Wu replication. All pGaN/EBL/contact/Mg-active/trap assumptions explicitly provisional; `PolAct=0, Vstop=0.1` is low-voltage smoke-only.
+- **JuSubin NEXT:** new independent SWB project from scratch -> SDE-only build and effective PP/mesh/contact/composition audit; stop if any geometry/syntax discrepancy. No common Baseline4µm/5nm replacement or interruption of Lee's POL0 read-only gate; earlier physical B/FREEZE HOLD remains.
+
 ## 2026-11-03 — Claude independent review received: provisional Baseline B, Project A CONDITIONAL GO (USER-FORWARDED ANALYSIS, NO RUN)
 - 이택규가 Claude PolAct=0 독립 검토를 전달. Claude reports read GitHub main `817fa2d` (11/03 10:08 KST) and Issue #7 latest; Claude's own push denied. GPT received the text, but did not independently inspect Claude's private chat or new TCAD data. **Verbatim TIMELINE entry**: `CMP/members/LeeTaekGyu/TIMELINE.md`.
 - **Underlying observed data:** same-3.6V PolAct0.5→0 raw currents 131.8× OFF / 492.6× ON; PolAct0 QW4 share OFF 99.88898644%, ON 99.96413545%. Strict single-variable causality **UNVERIFIED** because full SDevice manually pasted and preprocessed command/par/mesh equivalence not checked.

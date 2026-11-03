@@ -1,4 +1,22 @@
 {
+  "juSubinWu10NtSide1e18FiveVPlot20261103": {
+    "worker": "주수빈 Wu candidate workstream (not independently reconfirmed)",
+    "status": "OBSERVED_SVISUAL_NtSide1e18_0to5V_PLOT_SOLVER_LOG_PENDING",
+    "project": "/user/semi/semi437/tmp/myproject/CMP_WU",
+    "dataset": "BaselineData_26",
+    "parameters": {
+      "NtSide": "1e18",
+      "PolAct": 0,
+      "Vstop": 5
+    },
+    "visualIAt5VApprox": "5.8e-19 A/um assumed",
+    "visualJAt5VApprox": "5.8e-12 A/cm2 assumed",
+    "widthNormalization": "J/I~1e7 compatible with Wu10 width 10um but raw 2D units/AreaFactor unverified",
+    "lowBiasAnomaly": "narrow spike near zero V persists",
+    "physicalBaselinePassed": false,
+    "unverified": "5V n25 solver finish/log, physical LED injection, trap impact, accurate 2D current mapping",
+    "next": "tail -n 45 /user/semi/semi437/tmp/myproject/CMP_WU/n25_des.log then inspect 0V raw PLT and voltage/high bias physics"
+  },
   "juSubinWu10HigherBias5VRunning20261103": {
     "worker": "주수빈 Wu10 project flow; current chat identity not separately reidentified",
     "date": "2026-11-03",

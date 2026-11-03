@@ -1,3 +1,7 @@
+## 2026-11-04 — Wu n21 e/h cutline overlay readout NEXT
+- OBSERVED at Y≈5um, four MQW hDensity (blue, p-side of each well) and eDensity (red, n-side) high density peaks separated; highest near QW4 around 1e20 cm^-3. This suggests spatial separation but not its physical cause; QW4 91% Rad and 95% Auger localization still UNRESOLVED.
+- NEXT FIRST READ-ONLY: inspect actual preprocessed `pp21_des.cmd` / `pp21_des.par` for Piezoelectric_Polarization/PolAct and AreaFactor/Physics; avoid claiming QCSE or correct current density until settings confirmed. Then evaluate QW spatial overlap quantitatively and optional lower/matched-current bias; corrected new NtSide1e18 ON only after clean accepted.
+
 ## 2026-11-04 — Wu n21 hole-density cutline observed; NEXT e/h overlap and J normalization
 - OBSERVED SVisual C1 center Y≈5µm hDensity QW peaks x≈0.132/0.143/0.153/0.164µm, roughly 4e19 to1e20 cm^-3. Earlier eDensity also peaked across four QWs. These are image-read peak approximations, not QW-averaged or quantified spatial overlap. Strong QW4 Rad/Auger concentration remains causal UNRESOLVED.
 - NEXT: overlay eDensity and hDensity from same C1 on matched X=0.12–0.17µm and log Y axis, compare QW region boundaries and carrier overlap; then audit 2D raw I, AreaFactor and operating current before rerunning post-MgFix NtSide1e18 ON matched J. IQE5V 66.2156% is model-internal, not calibrated literature confirmation.

@@ -1,3 +1,9 @@
+## 2026-11-03 — CORRECTION: Wu (2023) paper-only baseline implementation (user confirmed, source checked) — HANDOFF
+- 작업자: 주수빈, AI: ChatGPT. Previous different-paper-based Wu redesign/EBL assumptions are RETRACTED by user clarification.
+- Intended paper: Zhuang Wu et al. 2023 DOI 10.1016/j.micrna.2023.207542. Publisher excerpt confirms 10um, nGaN 3.9um Si5e18, four InGaN wells xIn0.08, well3nm/GaN QB8nm, pGaN Mg2e19, 5nm sidewall traps, piezoelectric polarization, Mg incomplete ionization, local field capture, Rad/SRH/Auger. Excerpt does NOT establish presence/absence of EBL.
+- School outputs: Wu10 n21/n25 5V OFF/ON numerical solver complete; almost zero currents, unknown root cause; no new deck run. Source of truth Wu10 candidate in CMP/tcad/candidates/CMP_BASELINE_3.0.0_WU10FULL.
+- NEXT: preserve existing runs, verify Wu2023 Fig1 EBL/contacts before structural edits, inspect clean n21 TDR doping/carriers/bands/PP and material params; then propose isolated Wu-only model implementing supported piezo and Mg ionization. Never transplant older baseline values or prior erroneous-paper geometry.
+
 ## HANDOFF 2026-11-03 — Wu reference-paper discrepancy and EBL/PolAct reset (paper audit; no new simulation)
 - 작업자: 주수빈 / AI: ChatGPT / status OBSERVED paper/source inconsistency, PROPOSED redesign; no new RUN.
 - Issue: Existing Wu10 candidate based on Zhuang Wu2023 uses EBL0, PolAct0 and planar10um; Lili Wu2026 Fig caption identifies Configuration00 EBL-present, separate no-EBL control, axisymmetric2D, MQW In0.15/QB In0.05 and EBL Al0.15. Both Wu papers must not be conflated. The 5V n21/n25 almost-zero current is observed but no causal proof ties it to EBL/PolAct.

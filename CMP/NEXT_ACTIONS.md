@@ -1,3 +1,8 @@
+## 2026-11-04 — Wu MgFix OFF n21 radiative integration complete; AUGER integration NEXT
+- OBSERVED Radiative 12 QW regions total9.902518e15 s^-1 um^-1; previous SRH same 12 regions total6.102184e14 s^-1 um^-1. Derived two-channel Rad/(Rad+SRH)=94.1954%, **not final IQE** because Auger pending. QW4 alone 91.0341% of all Rad. Investigate unusual per-QW distribution and physical carrier balance before accepting baseline.
+- NEXT IMMEDIATE: Select field `AugerRecombination` in SVisual saved clean `n21_des` 5V, and integrate exactly same 12 Clean_QW1-4, DmgL_QW1-4, DmgR_QW1-4. Record per-region and total values, units and signs. If field unavailable or signed unexpectedly, inspect SDevice Plot/Physics before calculating IQE.
+- THEN QW-specific + whole-MQW `Rad/(Rad+SRH+Auger)` with consistent regions; investigate QW4 domination and e/h profiles, 2D AreaFactor normalization, calibrate vs Wu2023. Do not compare old pre-Mg ON n25 with corrected OFF; new ON run later.
+
 ## 2026-11-04 — Next after Wu OFF n21 12-region SRH integration (IN PROGRESS)
 - DONE/OBSERVED: 5V fresh post-MgFix n21 finished and saved; 12-QW-region integrated SRH =6.102184e14 s^-1 um^-1. Derived QW1 0.1053%, QW2 0.0993%, QW3 19.6986%, QW4 80.0968%, dominated by QW4; sidewall DmgL/R ~0.1003% with NtSide0, near their cross-section fraction, NOT a trap ON conclusion.
 - NEXT IMMEDIATE: SVisual n21_des field RadiativeRecombination, **same exact Clean_QW1-4,DmgL_QW1-4,DmgR_QW1-4** integrate and save per-region numbers. Next AugerRecombination same selection. Sum matching QW segments, calculate IQE with consistent definitions, evaluate rate field sign and QW spatial carrier balance.

@@ -1,3 +1,8 @@
+## 2026-11-04 — JuSubin Wu 5V MgFix OFF QW radiative integral OBSERVED
+- Saved n21_des.tdr: RadiativeRecombination across Clean_QW1–4 and DmgL/R_QW1–4 totals 9.902518e15 s^-1 um^-1. Earlier matched SRH total6.102184e14. Calculated radiative share of these two terms 94.1954%, **not final IQE** (Auger pending).
+- QW4 contributes 91.0341% of total Radiative. Per-QW carrier density and physical calibration remain unresolved.
+- NEXT: same QW regions integrate AugerRecombination; evaluate IQE and QW balance, validate current normalization, eventually rerun corrected trap ON n25 for matched-current comparison.
+
 ## 2026-11-04 ~01:xx KST — JuSubin Wu post-MgFix OFF n21 5V 12-region QW SRH integrals received (OBSERVED USER SVISUAL; distribution DERIVED)
 - User supplied SVisual Field Integration for `CMP_WU_Copy/n21_des`, field `srhRecombination`, post-MgFix NtSide=0, final accepted 5V (confirmed by fresh n21_des.log). **12 QW regions**, Clean_QW1-4 + DmgL_QW1-4 + DmgR_QW1-4; reported Total Integral **6.102184e14 [s^-1*um^-1]** and Total Domain **1.199999e-01 [um^2]**. Local regionwise integral sum from printed digits 6.102184495823e14 (rounding agrees).
 - Per-QW totals, adding Clean+L+R (derived from exact supplied printed values): QW1 6.425083825e11 (~0.10529% of sum), QW2 6.059848698e11 (~0.09931%), QW3 1.2020424023e14 (~19.69856%), QW4 4.887657161e14 (~80.09684%). QW3+QW4 ~99.7954% of MQW SRH integral; uneven QW injection/recombination requires inspection and is not proof of a defect alone.

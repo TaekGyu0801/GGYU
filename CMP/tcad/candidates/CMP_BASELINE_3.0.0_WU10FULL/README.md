@@ -1,8 +1,16 @@
-# CMP_BASELINE_3.0.0_WU10FULL — Wu-inspired candidate, **PROPOSED / NOT RUN**
+# CMP_BASELINE_3.0.0_WU10FULL — Wu-inspired candidate, **low-bias smoke visually observed; physics unvalidated**
 
 **This code is an original clean-sheet structure and model-integration smoke-test candidate. It is NOT a verified reproduction of Wu et al. 2023 and NOT the adopted CMP Common Baseline.**
 
 Paper: Wu et al., *Physical mechanisms on the size-effect in GaN-based Micro-LEDs*, Micro and Nanostructures 177, 207542 (2023), DOI https://doi.org/10.1016/j.micrna.2023.207542 .
+
+## 2026-11-03 21:20 KST — school CMP_WU low-bias smoke observation
+
+**OBSERVED (user screenshot, school SWB; not an independent server log audit):** `/user/semi/semi437/tmp/myproject/CMP_WU` with `NtSide=0, PolAct=0, Vstop=0.1` produced a plotted SVisual1 I–V and J–V curve to ~0.1 V after the school's SDevice command was re-preprocessed to include `DefaultParametersFromFile`. Screenshot shows `BaselineData 6`, a red `NtSide=0` curve, and ~8.5e-31 A/um output at 0.1 V (approximate visual reading). Initial `UNDEFINED model` and licence-checkout roadblocks no longer prevented **this** smoke stage. Full SDevice success/solver completion, physical validity, high-bias transport, matched-current trap loss, `NtSide=1e18` branch and valid IQE are **NOT established** by the plot alone. The low-bias ~zero current is expected to be uninformative for LED turn-on.
+
+**Normalization problem (PROPOSED correction, no SWB file changed by GitHub):** the SVisual1 script shared earlier in chat uses `set Wmesa 4.0`, while Wu10 SDE mesa width is **10.0 um**. Under a validated `A/um` raw 2D current, `AreaFactor=1` and uniform stripe-depth convention, physical area-normalized J should use `Wmesa=10.0`: `J[A/cm2]=abs(I_2D[A/um])*1e8/10.0`. The currently displayed J curve (~2.1e-23 A/cm2 at 0.1V) scales like 4um normalization; if those assumptions hold it is 2.5x too high and corrected estimated J ~8.5e-24 A/cm2. Verify actual dimensional units/output/log before scientific use. Only SVisual postprocess requires update, not SDE or SDevice. This Wu-specific fix must **not** change the separately protected common CMP4um baseline's width. No Wu paper equivalence or Baseline Freeze claim.
+
+NEXT: (1) check the school's SDevice log finish/0.1 V completion, (2) correct Wu SVisual1 `Wmesa` 4→10 and rerun **only SVisual** (no additional SDevice licence), (3) once relevant, run `NtSide=1e18` matched pilot smoke and gradual higher-bias physical validation, and inspect meaningful QW injection/recombination before adopting a baseline.
 
 ## 1. Files and SWB roles
 

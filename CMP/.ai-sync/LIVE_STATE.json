@@ -7286,5 +7286,23 @@
     "result": "Clean_QW1 no plotted trap concentration, DmgL_QW1 has 1e18 cm^-3 exactly matching NtSide ON setpoint, local spatial placement validated.",
     "limitation": "Not yet checked all 22 damaged regions or OFF same DmgL QW1; hGapStates missing and full trap-inclusive IQE not validated.",
     "next": "Optionally compare OFF DmgL_QW1 and ON DmgR_QW1/representative damaged barrier, without SDevice rerun."
+  },
+  "juSubinWuOFFn21TrapDensityDmgLQW1Verified20261104": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04",
+    "status": "OBSERVED_OFF_REGION_INTEGRALS_DERIVED_NTSIDE_OFF_NEAR_ZERO_COMPARED_TO_ON",
+    "field": "TotalTrapConcentration",
+    "offDataset": "n21_des",
+    "onDataset": "n25_des",
+    "offDmgLQW1IntegralUmMinus1": 1.499996e-17,
+    "offDmgLQW1AreaUm2": 0.00001499996,
+    "offDmgLQW1MeanCm3": 1,
+    "offCleanQW1MeanCm3": 0,
+    "onDmgLQW1MeanCm3": 1000000000000000000,
+    "onCleanQW1MeanCm3": 0,
+    "meanDensityONOFFRatio": 1000000000000000000,
+    "caveat": "OFF 1 cm^-3 is a nonzero numeric residual of unverified origin. Only DmgL_QW1/clean-QW1 local trap concentration sampled; not entire 22 damaged regions. Complete trap-inclusive IQE unverified.",
+    "noSDeviceRerun": true,
+    "next": "Optional n25 DmgR_QW1 TotalTrapConcentration integral for right-side confirmation, synthesize trap placement/eGapStates evidence without rerun."
   }
 }

@@ -6918,5 +6918,14 @@
     "runtime": "NOT RUN. No 3D SDE mesh or Sentaurus solver test",
     "next": "SDE-only new SWB geometry/contacts/mesh feasibility gate; Kou20-specific SDevice after pass",
     "commonBaselineModified": false
+  },
+  "juSubinWuTrapONn25Radiative20261104": {
+    "worker": "주수빈",
+    "status": "OBSERVED",
+    "radOn": 9869850000000000,
+    "radOff": 9902518000000000,
+    "deltaPercent": -0.329896,
+    "iqeOnConfirmed": false,
+    "next": "ON n25 12-QW SRH and Auger integrals"
   }
 }

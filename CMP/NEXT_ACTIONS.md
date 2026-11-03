@@ -1,3 +1,8 @@
+## 2026-11-04 — Wu ON n25 SRH decreases (not trap loss proof); GapStates fields are NEXT
+- ON `srhRecombination` across 12 QW regions6.086824e14 vs OFF6.102184e14 s^-1 um^-1: −0.2517%; DmgL+R −2.3938%, Clean −0.2496% at 5V. NOT a reason to conclude trap reduces recombination.
+- PRIORITY NEXT: check `eGapStatesRecombination` / `hGapStatesRecombination` saved Scalars in n25_des.tdr, integrate individually for DmgL/R_QW1-4 and ideally entire 22 damaged trap regions. Compare e/h separately, not sum, and inspect signs. These fields can capture explicit trap recombination missing from ordinary SRH field. If unavailable, verify actual pp25_des.cmd Plot list before proposing new run; no speculative code changes.
+- Continue `AugerRecombination` n25 same 12 QWs for three-channel ON IQE, label 3-term proxy until explicit trap rates accounted; matched current, 2D normalization, Wu-paper calibration remain pending.
+
 ## 2026-11-04 — Wu ON n25 Radiative integration; SRH and Auger NEXT
 - New post-MgFix ON n25 Rad=9.869850e15 s^-1 um^-1 vs OFF n21 9.902518e15 (-0.32990%, 5V only). DmgL+R Rad -3.921%. ON 5V I differs -0.1168% from OFF.
 - Next in fresh n25_des.tdr integrate srhRecombination then AugerRecombination over same Clean_QW1-4, DmgL_QW1-4, DmgR_QW1-4. Preserve 12 per-region values; compare MQW IQE and local sidewall SRH, then matched-current and AreaFactor checks. No final baseline claim yet.

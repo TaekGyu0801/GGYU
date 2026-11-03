@@ -1,3 +1,6 @@
+## 2026-11-04 — Wu n21 central eDensity Cutline image
+- OBSERVED SVisual `CMP_WU_Copy`, n21_des, C1 depth direction at lateral Y≈5 µm, logarithmic eDensity graph. Narrow peaks in MQW X≈0.12–0.17 µm approach order 1e20 cm^-3. The image lacks sufficient x-resolution for QW-specific values. No interpretation of cause established. NEXT zoom x=0.115–0.175 µm and inspect hDensity on same C1.
+
 ## 2026-11-04 — Wu MgFix n21 Trap OFF 5V Auger-integral / IQE (OBSERVED + DERIVED)
 - SVisual same 12 QW regions: AugerRecombination integrated 4.442221e15 [s^-1*um^-1]. Prior Rad=9.902518e15, SRH=6.102184e14 in identical regions (all 5V, post-MgFix, NtSide=0).
 - Calculated MQW three-term IQE 66.2156%, with SRH share4.0804%, Auger share29.7040%. QW1 48.13%, QW2 59.03%, QW3 73.27%, QW4 65.60%; QW4 hosts 91.03% of Rad and 95.42% of Auger, strong imbalance requiring e/h map interpretation.

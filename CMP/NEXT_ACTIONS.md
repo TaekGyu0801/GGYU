@@ -1,3 +1,8 @@
+## 2026-11-04 — Wu n21 post-MgFix OFF validation checklist agreed (PROPOSED CHECKS)
+- AFTER new clean n21 OFF SDevice, confirm new execution time and 5V solver completion (not stale Nov 3 22:02:35 log), fresh TDR saved.
+- Inspect pGaN SDevice AcceptorConcentration and hDensity; compare old Acceptor=0, hDensity~1cm^-3. Then QW1–4 eDensity/hDensity, carrier transport and Rad/SRH/Auger rates in same QW volumes, compute consistent IQE only if meaningful positive recombination; nonzero free holes not equal to Mg nominal dose.
+- Inspect anode/cathode e/h current partitions for restoration vs pre-fix all-electron raw 2.884e-5, but avoid forcing a specific new current or IQE target. If results abnormal investigate actual SDevice datexcodes, effective ionization/contacts/bands before ON. After OFF passes, ON NtSide split, matched-current comparison, normalization, Wu paper-fidelity validation.
+
 ## 2026-11-04 — Wu2023 pre-fix n21 n25 SDevice output backup verified (BACKUP GATE PASSED; NEXT n21 OFF ONLY)
 - User verified six pre-fix n21/n25 SDevice .log/.plt/.tdr files stored in CMP_WU_Copy/preMgFix_SDevice_backup (~15 MB). Previous output preserved as comparison evidence; no post-MgFix SDevice run yet.
 - NEXT run only clean Trap OFF n21 SDevice on refreshed n1_msh.tdr, not n25. After run check normal 5V numerical completion; examine SDevice acceptor and free holes and QW recombination before claiming device validity or performing ON split.

@@ -7036,5 +7036,20 @@
     "evidence": "pp21_des.cmd:219 eGapStatesRecombination eTrappedCharge TotalTrapConcentration",
     "interpretation": "OFF and ON preprocessed Plot request eGapStates; OFF saved TDR field existence and numeric rate unconfirmed pending SVisual integration",
     "next": "Use n21_des eGapStatesRecombination same 8 damaged QW regions as ON and compare. No run or code change."
+  },
+  "juSubinWu20261104hGapStatesPlotPatch": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04",
+    "status": "GITHUB_CANDIDATE_CODE_PATCHED_SCHOOL_SWB_NOT_EDITED_NOT_RUN",
+    "githubCandidatePath": "CMP/tcad/candidates/CMP_BASELINE_3.2.0_WU2023PHY/sdevice_des.cmd",
+    "githubCommit": "f457da1b5ad17ab080038e9813a748b791c64f7b",
+    "change": "Add hGapStatesRecombination next to eGapStatesRecombination in Plot section only",
+    "sourceFieldSupported": true,
+    "schoolSWBProject": "CMP_WU_Copy",
+    "schoolSourcesModified": false,
+    "generatedPPModified": false,
+    "rerunPerformed": false,
+    "savedTDRContainsNewField": false,
+    "next": "Make same one-line Plot change to school SWB SDevice source, protect previous outputs and run OFF n21/ON n25 SDevice (new nodes preferably), verify both PP Plot and SVisual field, integrate h and e separately."
   }
 }

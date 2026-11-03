@@ -7304,5 +7304,29 @@
     "caveat": "OFF 1 cm^-3 is a nonzero numeric residual of unverified origin. Only DmgL_QW1/clean-QW1 local trap concentration sampled; not entire 22 damaged regions. Complete trap-inclusive IQE unverified.",
     "noSDeviceRerun": true,
     "next": "Optional n25 DmgR_QW1 TotalTrapConcentration integral for right-side confirmation, synthesize trap placement/eGapStates evidence without rerun."
+  },
+  "juSubinWuONn25RightQW1NtSideDensityVerified20261104": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04",
+    "status": "OBSERVED_N25_DMG_RIGHT_QW1_TRAP_DENSITY_CONFIRMED",
+    "dataset": "n25_des",
+    "trapCondition": "NtSide=1e18",
+    "field": "TotalTrapConcentration",
+    "region": "DmgR_QW1",
+    "integralUmMinus1": 15.0003,
+    "domainUm2": 0.0000150003,
+    "meanUmMinus3": 1000000,
+    "meanCmMinus3": 1000000000000000000,
+    "comparison": {
+      "onDmgLQW1MeanCm3": 1000000000000000000,
+      "onCleanQW1MeanCm3": 0,
+      "offDmgLQW1MeanCm3": 1,
+      "offCleanQW1MeanCm3": 0
+    },
+    "validationBoundary": "Region-averaged concentrations confirmed for left/right damaged QW1 and center clean QW1; NOT all 22 damaged regions",
+    "trapInclusiveIQEValidated": false,
+    "hGapStatesNotSaved": true,
+    "noSDeviceRerun": true,
+    "next": "Summarize local Trap placement and all-22 eGapStates rate contrast; if needed inspect representative other layers read-only, quantify caveats before calling Wu baseline validated."
   }
 }

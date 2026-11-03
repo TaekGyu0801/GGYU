@@ -1,3 +1,8 @@
+## 2026-11-03 — Wu2023PHY Vstop=5 error; immediate diagnosis
+- No separate Vstop0.1 run required when 0→5 Quasistationary input already launched; do not restart blindly.
+- User screenshot reports error in first new candidate run. P0: find latest school SWB `n*_des.log` or `n*_dvs.log` / `n*_msh.log`; inspect first error and `pp*_des.cmd` / `pp*_des.par`. Do not infer failure root from screenshot alone.
+- Only after exact error: fix minimal offending file while preserving 3.0.0 parent and 3.2.0 current revision history; retest preprocess/SDE/SDevice as appropriate. For successful 5V sweep, evaluate clean QW carriers and current, NOT just solver completion.
+
 ## 2026-11-03 — Wu2023 candidate 3.2.0 next gate (PROPOSED/UNRUN)
 - P0 Open new SWB project named `CMP_BASELINE_3.2.0_WU2023PHY`, import SDE/SDevice/sdevice.par/SVisual from GitHub candidate README. Do NOT overwrite school `CMP_WU` or old results.
 - P0 SDE mesh/PP check: n-GaN donor `nSiliconActiveConcentration`, pGaN `MagnesiumActiveConcentration` really appear as donor/acceptor. Verify 3nm QW/5nm edges/contact p to n, no orphan regions. At present 33 active material partitions with EBL0.

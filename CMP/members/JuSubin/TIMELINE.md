@@ -1,3 +1,8 @@
+## 2026-11-03 — Wu10 Clean5V n21 full solver success confirmed
+- OBSERVED n21_des.log: NtSide0, PolAct0, Vstop5, anode=5.000V, electron2.596e-29, hole4.286e-30, total3.025e-29 raw, cathode -3.025e-29. Curve trace finished, n21_des.tdr saved, finished at 21:00:31 KST, 56.91s wallclock, peak638MB.
+- Earlier OBSERVED n25_des.log: NtSide1e18 PolAct0 Vstop5, anode total5.810e-19 (electron1.722e-29, hole5.810e-19), finished 20:58:41 KST, 361.62s.
+- Both 5V numerical sweeps complete; I_ON/I_OFF=1.921e10, dominated by tiny hole current in ON, not proof of working LED. Raw A/um unit/area-factor and physical Mg/polarization/contacts/EBL remain unvalidated. Stop additional parameter runs until existing TDR QW carrier/band/recombination distributions and ON 0V spike examined.
+
 ## 2026-11-03 20:58:41 KST — CMP_WU n25 NtSide=1e18 5V solver completed (OBSERVED log)
 - User pasted actual school `/user/semi/semi437/tmp/myproject/CMP_WU/n25_des.log` tail. Final anode 5.000E+00 V, electron 1.722E-29, hole 5.810E-19, total 5.810E-19 (SDevice raw units); cathode total -5.810E-19. Thus terminal current is hole-dominated (hole/electron ≈3.37e10), but this does NOT independently prove absence of MQW electrons.
 - Final Newton solve converged (error 6.1829E-02 < 1), `Curve trace finished`, `Writing plot 'n25_des.tdr' ... done`, simulation finished 2026-11-03 20:58:41 KST; wallclock 361.62s, CPU 149.23s, peak memory 640 MB. `sdevice`, `sdevice-traps`, `sdevice-hetero` checked in. **Confirmed 5V numerical completion for ON only**, not a working microLED/Wu physical reference.

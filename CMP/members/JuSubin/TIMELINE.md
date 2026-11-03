@@ -1872,3 +1872,9 @@ Neither is the actual 2D lateral barrier under bias. Do not claim physically val
 - **0→5 V linear goal 기준 대응 전압:** 4.0, 4.2, 4.4, 4.6, 4.7, 4.8, 4.85, 4.9, 4.925, 4.95, 4.975 V.
 - **5.0 V:** 기존 `Plot="@tdrdat@"` 최종 TDR을 사용하므로 중복 intermediate 5 V 저장은 생략.
 - **중요:** 현재 이미 약 2일째 실행 중인 Final run은 중단하지 않음. v1.2는 다음 NtSide/A-B run부터 적용.
+
+## 2026-11-04 02:26 KST — Wu CMP_WU_Copy n29 NtSide1e17 convergence hotspot (OBSERVED / ROOT UNRESOLVED)
+- 작업자: 주수빈; AI: ChatGPT. 사용자가 제공한 실제 n29_des.out에서 마지막 accepted anode 2.420E+00 V, Quasistationary pseudo-time t=0.484021 확인. 이후 여러 연속 전압 단계에서 Newton 35회 소진, step을 4.1904e-05→1.5985e-10 등 계속 절반으로 감소; 최종 step 7.9926e-11 < MinStep로 종료. SDevice job 종료는 5V 완료가 아님.
+- Newton 반복 마지막 21~35에서 global error 약 3.77~6.00으로 진동. max C-norm hole 좌표 (x≈0.1610~0.1615,y=9.995117)um, Poisson/electron error 좌표 (0.1650273,10.0)um. QW4/Barrier4의 우측 손상 측벽에 해당할 가능성 큼: GitHub Wu3.2 candidate SDE상 QW4 x=.161-.164, Barrier4 x=.164-.172, right damage y=9.995-10.0; 학교 pp1 geometry 동일 여부는 미확인.
+- 직접 원인은 정공 방정식을 포함한 coupled Newton 비수렴, 근본 물리/수치 원인은 UNRESOLVED. NtSide=1e17이 반드시 비물리적이거나 잘못된 값이라고 판단하지 않음. 제출된 n29_des.err tail 결과 없음.
+- 변경: 학교 코드·GitHub deck·n21/n25 5V 저장 자료 변경 없음. 다음: 학교 pp29_des.cmd/pp1_dvs.cmd의 실제 geometry/solver/trap parameter, n29_des.err, 마지막 accepted 상태의 sidewall QW4/Barrier4 근처 정공/전위/트랩 분포를 가능한 한 비실행 방식으로 확인.

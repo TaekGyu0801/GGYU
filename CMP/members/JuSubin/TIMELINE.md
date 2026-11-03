@@ -1,3 +1,7 @@
+## 2026-11-04 — Wu2023 post-fix n21 tail still from Nov03 22:02 pre-fix (OBSERVED, no new SDevice result)
+- User printed CMP_WU_Copy/n21_des.log tail after pre-fix backups. Log retains "Sentaurus Device simulation finished" Tue Nov 3 22:02:35 KST, electron current 2.884e-05, hole 3.696e-27 at 5 V; identical to pre-Mg-fix n21 results.
+- Thus no post-fix OFF SDevice run has been confirmed. SDE fresh mesh pGaN signed net doping ≈-2e19 and nGaN≈+5e18 still verified. NEXT manually run n21 Trap OFF against fresh n1_msh.tdr in SWB, ensuring a newly dated log, then analyze acceptors, free hole density and QW recombination. n25 ON not yet.
+
 ## 2026-11-04 — Wu2023 pre-fix n21 n25 SDevice output backup verified (OBSERVED BACKUP; POST-FIX SDEVICE NOT RUN)
 - User terminal command in school CMP_WU_Copy created/listed preMgFix_SDevice_backup, containing six files: n21_des.log 187K, n21_des.plt 30K, n21_des.tdr 7.1M; n25_des.log 192K, n25_des.plt 30K, n25_des.tdr 7.4M; total ~15M. Observed list verifies existence of backup copies (not independent bytewise hashes).
 - Corrected SDE mesh pGaN DopingConcentration≈-2e19 and nGaN≈+5e18 previously observed after project-local Mg datexcodes mapping. POST-FIX SDevice still not run per user evidence; physical hole injection, QW recombination unverified.

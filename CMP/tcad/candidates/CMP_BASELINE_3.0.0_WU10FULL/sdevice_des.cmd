@@ -19,6 +19,7 @@ Electrode {
   { Name="cathode" Voltage=0.0 }
 }
 Physics {
+  DefaultParametersFromFile
   Fermi
   Mobility( DopingDependence HighFieldSaturation )
   Recombination( SRH Radiative Auger )

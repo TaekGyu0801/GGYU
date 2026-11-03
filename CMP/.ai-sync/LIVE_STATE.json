@@ -7263,5 +7263,28 @@
     "screenshotAutoscaleNotIdentical": true,
     "interpretation": "The displayed upper range difference of 1e18 is suggestive but not proof sidewall trap implementation or equivalent coordinate concentrations; broad red signal may include other species.",
     "next": "Integrate n25 TotalTrapConcentration for DmgL_QW1 and Clean_QW1 individually, retain integral and domain and compute per-region average; optionally OFF n21 same regions. Do not rerun SDevice."
+  },
+  "juSubinWuONn25TrapSpatialDensityValidation20261104": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04",
+    "status": "OBSERVED_REGION_INTEGRALS_DERIVED_TRAP_DENSITY_MATCH",
+    "dataset": "n25_des",
+    "field": "TotalTrapConcentration",
+    "unitsIntegral": "um^-1",
+    "regions": {
+      "Clean_QW1": {
+        "integral": 0,
+        "domainUm2": 0.02996991,
+        "averageCm3": 0
+      },
+      "DmgL_QW1": {
+        "integral": 14.99996,
+        "domainUm2": 0.00001499996,
+        "averageCm3": 1000000000000000000
+      }
+    },
+    "result": "Clean_QW1 no plotted trap concentration, DmgL_QW1 has 1e18 cm^-3 exactly matching NtSide ON setpoint, local spatial placement validated.",
+    "limitation": "Not yet checked all 22 damaged regions or OFF same DmgL QW1; hGapStates missing and full trap-inclusive IQE not validated.",
+    "next": "Optionally compare OFF DmgL_QW1 and ON DmgR_QW1/representative damaged barrier, without SDevice rerun."
   }
 }

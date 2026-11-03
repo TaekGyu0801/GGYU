@@ -1,4 +1,35 @@
 {
+  "juSubinWu10HigherBias5VRunning20261103": {
+    "worker": "주수빈 Wu10 project flow; current chat identity not separately reidentified",
+    "date": "2026-11-03",
+    "status": "OBSERVED_HIGHER_BIAS_RUN_IN_PROGRESS_NO_PASS",
+    "schoolProject": "/user/semi/semi437/tmp/myproject/CMP_WU",
+    "screenSWBSplits": {
+      "NtSide": [
+        0,
+        1000000000000000000,
+        100000000000000000
+      ],
+      "PolAct": 0,
+      "Vstop": [
+        0.1,
+        5
+      ]
+    },
+    "visibleNode": "n25",
+    "currentPseudoTimeApprox": 0.203799,
+    "lastVoltageVApprox": 1.019,
+    "lastAnodeRawCurrentApprox": 5.602e-21,
+    "interpretation": "Quasistationary 0->5V in progress, Newton accepted earlier step and advancing; no 3/4/5V completion",
+    "decision": "Keep current 5V run; if nonconvergence/long delay inspect last accepted voltage, step cutbacks, error; consider new 4V then 3V run, not automatic restart/resume",
+    "doNotClaim": [
+      "final 5V success",
+      "QW injection, IQE or working LED",
+      "physical Wu reproduction",
+      "school code edited remotely"
+    ],
+    "next": "Monitor actual n25_des.log accepted bias progression/step failure; avoid abort/restart without evidence and preserve outputs."
+  },
   "juSubinWu10SVisual1TenUmCorrectionAndAudit20261103": {
     "worker": "주수빈 Wu workstream (inferred from available shared project context, chat worker not independently re-identified)",
     "date": "2026-11-03",

@@ -1,3 +1,9 @@
+## 2026-11-03 — CMP_WU_Copy SDevice rerun now executing after parameter-file creation (USER REPORT; completion unverified)
+- Earlier n21 SDevice fatal: missing `pp21_des.par`; SDE mesh 33 regions and 40006 triangles had loaded.
+- User viewed Sentaurus SWB "Create Parameter File" dialog for missing `sdevice.par`, was instructed to choose "Create Empty File", paste project `CMP_BASELINE_3.2.0_WU2023PHY/sdevice.par`, and save. User then said "오 돌아가고 있어" (run is running). **User-reported RUNNING, not independently verified that pp21_des.par populated correctly or that 5V has been achieved.**
+- No new SDevice log / solver convergence / terminal current has been shown. No Github code changes.
+- NEXT: while run continues, monitor `/user/semi/semi437/tmp/myproject/CMP_WU_Copy/n21_des.log`; wait for actual `Curve trace finished`, final anode5.000V current and TDR write / exit before declaring complete; if error appears extract first fatal. Beware mesh quality min angle ~0.037 degrees later.
+
 ## 2026-11-03 21:45:44 KST — Wu2023PHY CMP_WU_Copy n21 SDevice stopped on MISSING PARAMETER FILE (OBSERVED / CAUSE CONFIRMED)
 - User pasted exact `tail -n 100 CMP_WU_Copy/n21_des.log`: mesh successfully read and 33 semiconductor regions / 40006 triangle elements were enumerated, doping grid `n1_msh.tdr` successfully read. Immediately after `Reading parameter file 'pp21_des.par' ...` message `Cannot open parameter file 'pp21_des.par' !` causes SDevice exit. Log grep line808 shows same. **This is first confirmed blocker; not yet a physics/solver convergence problem**.
 - Nonfatal Plot alias warnings: SRHRecombination and eAmorphousRecombination/eAmorphousTrappedCharge aliases in old runtime. They are unrelated to this stop.

@@ -1,3 +1,8 @@
+## 2026-11-03 22:02:35 KST — Wu2023PHY clean n21 5V numerical finish CONFIRMED (user log)
+- School CMP_WU_Copy/n21_des.log shows anode5V; electron2.884e-5, hole3.696e-27, total2.884e-5 raw; cathode total-2.884e-5 raw.
+- Newton convergence 0.20186; Curve trace finished; n21_des.tdr saved; solver normal finish, 460.97s wallclock, 765MB peak.
+- Numerical run confirmed, NOT a physically valid Wu replication. Nearly all terminal current is electronic; pGaN and QW hole density and radiative rate not yet measured. Check TDR carriers, doping, bands, radiative/SRH before ON or baseline freeze. No code change.
+
 ## 2026-11-03 — CMP_WU_Copy Wu2023PHY n21 clean sweep reaches 3.713V with finite electron-dominated current (USER LOG OBSERVED, 5V STILL RUNNING)
 - User pasted active `/user/semi/semi437/tmp/myproject/CMP_WU_Copy/n21_des.log` tail. Accepted Quasistationary step `t=0.722621 -> 0.742621` (Vstop5 -> anode 3.713E+00 V), Bank/Rose coupled Poisson+electron+hole solved after 3 Newton iterations; final criterion `Error smaller than 1 (1.7198E-01)`. Next step `t=0.742621 -> 0.762621` was IN PROGRESS when log captured (iteration 2 shown). No full 5V completion, TDR, IV/JV, EQE confirmed.
 - Direct log at 3.713V: anode electron current `+1.374E-05`, hole `+1.885E-29`, conduction `+1.374E-05` (raw SDevice current units); cathode electron `-1.374E-05`, hole `+2.334E-40`, conduction `-1.374E-05`. Current continuity total terminal signs match. Existing prior Wu10 (DIFFERENT source, PolAct0 etc) clean 5V raw total 3.025E-29. Numerical magnitude increase indicates injection/transport change but cannot be quantified as paper fidelity improvement across differing physics and bias/geometry or verified as functioning LED.

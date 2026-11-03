@@ -1,3 +1,8 @@
+## 2026-11-04 — JuSubin CANCELLED overnight simulation proposal (REJECTED / NOT RUN)
+- USER DECISION: "아니다 이건 하지 말자. 취소해줘ㅈ" — prior optional overnight `hGapStatesRecombination`-only ON rerun proposal is **CANCELLED**. Do not execute or schedule it, do not restart `n29`, and do not modify SDevice/SWB/code.
+- ChatGPT had not run or scheduled any school-server simulation. Previously completed `CMP_WU_Copy` n21 OFF and n25 ON TDR/results remain unchanged.
+- 2026-11-05 LeeTaekGyu handoff remains **read-only review of saved Wu outputs** and independent assessment of rate accounting/current normalization/physics; any future rerun needs a fresh deliberate user decision. The preceding overnight PROPOSED entry is superseded by this cancellation.
+
 ## 2026-11-04 — JuSubin overnight optional rerun proposal (PROPOSED / NOT RUN)
 - 작업자 주수빈 asked what to leave running overnight before LeeTaekGyu resumes 2026-11-05. No new run or source modification has been performed by ChatGPT.
 - RECOMMENDATION: only if school server's **actual successful post-MgFix** `CMP_WU_Copy` ON deck can be safely duplicated in a new SWB experiment (no overwrite of `n21/n25`): keep exact existing geometry/physics/solver, `NtSide=1e18 cm^-3`, `Vstop=5V`, and add **Plot output only** `hGapStatesRecombination` to the real SDevice code. Check new `pp*_des.cmd` contains the field and the job parses/advances before leaving. Source keyword corroborated by Synopsys Sentaurus training and historical user-guide entries; exact T-2022.03 current school deck is NOT yet supplied/verified in this chat.

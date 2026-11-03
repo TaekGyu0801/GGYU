@@ -1,3 +1,7 @@
+## 2026-11-04 — Wu post-Mg n21 advanced to 4.332V and hole current restored (NEXT)
+- n21 POST-Mg rerun is advancing. Last accepted 4.332V/t=.866477 error.24308, total raw1.488e-3 (anode hole1.415e-3, electron7.286e-5); next step 4.432V not yet converged in supplied tail. Do not stop/restart while progressing. Check final 5V solver completion and fresh TDR/log date after run.
+- Then inspect pGaN AcceptorConcentration/hDensity, QW1-4 eDensity/hDensity, QW Rad/SRH/Auger and carrier balance; nominal magnesium and terminal current are not proof of free-hole/QW emission. Avoid n25 until n21 physically validated. .err reported InGaN DOSMass calculated from GaN/InN, not proven fatal; monitor other real errors.
+
 ## 2026-11-04 ~00:43 KST — Wu post-Mg SDevice n21 Newton step reduction screenshot (READ-ONLY DIAGNOSIS)
 1. With post-Mg n21 SDevice running, examine live n21_des.out, .err, .log tails. Screenshot shows Newton >35 iterations then smaller step t=.637961→.642158 and datexcodes duplicate-var warnings. This is a local convergence failure, not final whole-run failure.
 2. If step t advances steadily and solver ultimately writes 5V TDR, inspect pGaN acceptor/holes and MQW rates. If t stalls and step repeatedly shrinks or final failure, avoid brute-force retries: inspect specific convergence failure and project-local datexcodes duplicate redefinitions before any source/physics changes.

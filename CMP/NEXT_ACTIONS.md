@@ -1,3 +1,7 @@
+## 2026-11-04 — Wu ON n25 Radiative integration; SRH and Auger NEXT
+- New post-MgFix ON n25 Rad=9.869850e15 s^-1 um^-1 vs OFF n21 9.902518e15 (-0.32990%, 5V only). DmgL+R Rad -3.921%. ON 5V I differs -0.1168% from OFF.
+- Next in fresh n25_des.tdr integrate srhRecombination then AugerRecombination over same Clean_QW1-4, DmgL_QW1-4, DmgR_QW1-4. Preserve 12 per-region values; compare MQW IQE and local sidewall SRH, then matched-current and AreaFactor checks. No final baseline claim yet.
+
 ## 2026-11-04 — Wu post-MgFix n25 NtSide1e18 TRAP ON 5V FINISHED; next region integrals
 - CONFIRMED log 2026-11-04 01:00:20 KST n25 5V final error1.1827e-3, saved `n25_des.tdr`, anode RAW e1.690e-4/h2.397e-3/total2.566e-3, wallclock3690.63s. Post-MgFix OFF n21 earlier 5V total2.569e-3; matched-voltage raw current difference -0.1168% APPROX from rounded log, not SRH or IQE loss. Actual new ON run verified, older pre-fix ON cannot be used.
 - NEXT IMMEDIATE: verify count/region coverage of ON `Conc=1e18` traps (current grep output truncated); in SVisual open fresh `n25_des.tdr`, check p-GaN Acceptor/hDensity if needed then integrate SRH, Radiative, Auger using EXACT SAME Clean_QW1–4,DmgL_QW1–4,DmgR_QW1–4 as OFF at 5V. Collect individual integrals for clean/sidewall distinction and total MQW IQE.

@@ -1,4 +1,37 @@
 {
+  "juSubinWu2026VsWu2023PaperFidelityEBL20261103": {
+    "date": "2026-11-03",
+    "worker": "주수빈",
+    "type": "RESEARCH_DECISION_AND_SOURCE_AUDIT",
+    "status": "OBSERVED_PAPER_SOURCE_MISMATCH_PROPOSED_CODE_REVISION_NOT_RUN",
+    "currentWu10Candidate": "CMP/tcad/candidates/CMP_BASELINE_3.0.0_WU10FULL",
+    "currentWu10Source": "Zhuang Wu et al., 2023, DOI 10.1016/j.micrna.2023.207542",
+    "alternateWuSource": "Lili Wu et al., 2026, DOI 10.1088/1361-6463/ae7c7d",
+    "wu2026PublisherPreviewEvidence": [
+      "configuration00 undamaged reference has EBL, separate no-EBL control shown",
+      "2D axisymmetric model",
+      "Dam1 EBL Al fraction gradient 0.150 to 0",
+      "Dam2 MQWs well In fraction 0.150 to 0.145, barrier In fraction 0.050 to 0.055"
+    ],
+    "currentWu10CodePilot": [
+      "full planar 10um",
+      "In0.08 QW and GaN barriers",
+      "tEBL=0",
+      "PolAct=0",
+      "MgActive=3e17 provisional",
+      "blanket top/bottom Ohmic"
+    ],
+    "userDecision": "Independent Wu paper-based baseline, not reuse/repair old V2 or strip EBL/polarization to evade prior issue",
+    "blockers": [
+      "source-paper identity must be made explicit",
+      "Wu2026 full Methods/Fig1 and supplemental for exact stack, EBL thickness/contact and physics not verified",
+      "no physical root cause for old Wu10 tiny currents confirmed"
+    ],
+    "next": "Preserve existing old Wu10 outputs, inspect saved n21/n25 read-only; if Wu2026 target, create separate paper-faithful EBL-containing axisymmetric candidate, adopt referenced alloy and boundary/physics, reinstate justified polarization; do not borrow Kou EBL 26nm; validate clean current before defect splits.",
+    "source": "ResearchGate/publisher preview DOI 10.1088/1361-6463/ae7c7d; GitHub Wu10 README/source; user instruction",
+    "schoolSourceChanged": false,
+    "simulationRun": false
+  },
   "juSubinWu10Both5VFinishLogsConfirmed20261103": {
     "date": "2026-11-03",
     "status": "OBSERVED_OFF_ON_5V_SOLVER_COMPLETE_PHYSICS_UNVALIDATED",

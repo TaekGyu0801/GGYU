@@ -1,4 +1,5 @@
 {
+  "leePol0FinishedVerified20261103": {"worker":"이택규","date":"2026-11-03","status":"OBSERVED n2/n6 solver termination and effective pp PolAct=0/Iterations=12","project":"/user/semi/semi437/CMP_BASELINE_2.1.0_POL0NOSHELF","n2":{"finished":"2026-11-03 01:52:08 KST","goodBye":true,"wallclockSeconds":9809.91,"peakMemoryGB":2.41},"n6":{"finished":"2026-11-03 04:38:53 KST","goodBye":true},"effectivePp":{"n2PolAct":0,"n6PolAct":0,"globalIterationsN2":12,"globalIterationsN6":12,"initialCoupledIterations":[200,100]},"unverified":["n2/n6 3.6V achieved final voltage/current","actual no-shelf mesh and baseline-vs-copy deck diff","new QW1-4 Rad and matched-current IQE_sim"],"next":"Read-only PLT extraction for QW Rad share and I-V and compare PolAct .5 vs 0; verify mesh/deck equivalence","baseline":"physical B/FREEZE HOLD"},
   "leePol0Run20261103": {
     "worker": "이택규",
     "date": "2026-11-03",

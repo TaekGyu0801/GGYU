@@ -1,3 +1,9 @@
+## 2026-11-03 — Wu2023PHY Vstop=5 direct run attempt, ERROR screenshot reported (USER REPORTED / ERROR TEXT UNVERIFIED)
+- User chose Vstop=5 (rather than separate 0.1V smoke) due to execution time and initiated school SWB run. This is a Quasistationary ramp to 5V, NOT bypass of all low-bias increments.
+- User subsequently attached SWB screenshot reporting an error. Exact failed node, parser/error text and active school PP/par location were not available as plain-text log in the current turn; failure is reported, **root cause UNRESOLVED**, no confirmation 5V reached.
+- New GitHub candidate context: CMP_BASELINE_3.2.0_WU2023PHY; exact school file/PP match unverified. Avoid assuming error is from Mg/PooleFrenkel/Thermionic until log shows it. No new code patch and no claim of correction.
+- NEXT: use recent n*_des.log, n*_dvs.log or n*_msh.log to locate first error and preprocessed code line; if SDevice, inspect pp*_des.par and Mg/nSi species. Do not repeat long run before diagnosing.
+
 ## 2026-11-03 — Wu 2023 physics-first candidate source CREATED (PROPOSED, NO SCHOOL RUN)
 - USER DIRECTION: revise entire Wu candidate as far as the 2023 paper actually supports, not by transplanting old V2 or wrong Wu 2026 model.
 - CODE CREATED in new isolated `CMP_BASELINE_3.2.0_WU2023PHY`: SDE, SDevice, sdevice.par, SVisual1 and README. Commits b6acbf4, 570f1e2, ebade69, 760c570, 0225a13. Parent 3.0.0 source and school CMP_WU n21/n25 preserved.

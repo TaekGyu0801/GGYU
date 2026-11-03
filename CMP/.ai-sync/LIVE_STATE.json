@@ -7192,5 +7192,48 @@
     "polarityPAndNConsistent": true,
     "trapOFFNonQWEGapStatesPending": true,
     "next": "Use n21_des field eGapStatesRecombination; select only DmgL/R_pGaN, Barrier0-4, nGaN (14 regions); compare to ON 3.950639e11 s^-1 um^-1. No rerun."
+  },
+  "juSubinWuAll22OffOnEGapStates20261104": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04",
+    "status": "OBSERVED_OFF_N21_NONQW_EGAP_INTEGRAL_DERIVED_22_REGION_OFF_ON_COMPLETE_IQE_UNRESOLVED",
+    "field": "eGapStatesRecombination",
+    "unit": "s^-1*um^-1",
+    "biasV": 5,
+    "offN21": {
+      "eightDamagedQW": 0.00004230682,
+      "fourteenNonQW": 3.798444e-7,
+      "all22": 0.0000426866644,
+      "nonQWDomainUm2": 0.04060046,
+      "nonQWValues": [
+        1.932145e-9,
+        1.778112e-9,
+        3.728998e-9,
+        8.145429e-9,
+        9.929364e-8,
+        6.561472e-8,
+        9.432686e-9,
+        1.932189e-9,
+        1.775716e-9,
+        3.729097e-9,
+        8.135554e-9,
+        9.929368e-8,
+        6.56195e-8,
+        9.432901e-9
+      ]
+    },
+    "onN25": {
+      "eightDamagedQW": 41483880000000,
+      "fourteenNonQW": 395063900000,
+      "all22": 41878943900000
+    },
+    "onToOff22Ratio": 981077919500000000,
+    "onQWSharePercent": 99.0566526679,
+    "offQWSharePercent": 99.1101567542,
+    "sameVoltageNotSameCurrent": true,
+    "hGapStatesNotSaved": true,
+    "trapInclusiveIQEValidated": false,
+    "noSDeviceRerunsByUserDecision": true,
+    "next": "Summarize complete eGapStates comparisons; inspect existing eTrappedCharge/TotalTrapConcentration for plot localization and trap implementation if needed, assess e/h recombination accounting and output definitions; matched-current and physical J units remain unresolved."
   }
 }

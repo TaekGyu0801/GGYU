@@ -1,3 +1,8 @@
+## 2026-11-04 ~00:09 KST — Wu2023 SDE pGaN negative net doping verified after local Mg map: next execution gate
+1. SDE mesh doping gate PASSED (user SVisual screenshot n1_msh pGaN≈-2e19 / nGaN≈+5e18 cm^-3). Do not repeat datexcodes debugging unless new SDevice evidence demands it.
+2. BACKUP old pre-fix n21/n25 5V TDR/PLT/log files (they remain useful as failure-control evidence); verify backups.
+3. Run ONLY fresh clean NtSide=0 SDevice n21 against newly generated n1_msh.tdr; DO NOT run ON n25 yet. Check 5V log convergence/current, new TDR pGaN AcceptorConcentration and hDensity, and QW carrier densities and Radiative/SRH integrals. If clean hole injection remains missing, investigate ionization/contact/bands before NtSide ON. Neither free holes nor IQE confirmed yet.
+
 ## 2026-11-04 — Wu2023 SDE rerun user-reported after local Mg datexcodes: verification gate
 - User reports SDE executed after installing local Mg acceptor datexcodes in CMP_WU_Copy, with old mesh backup present. No numerical fresh mesh output yet supplied. Immediately inspect NEW n1_msh.tdr SVisual DopingConcentration pGaN 0..0.12um sign (requires negative) and nGaN +5e18. If still zero check runtime local datexcodes pickup and species chemical/active linkage, NOT SDevice rerun. If negative, validate newly calculated SDevice OFF hole density/AcceptorConcentration and QW recombination before ON.
 

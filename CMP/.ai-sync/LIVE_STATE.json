@@ -1,4 +1,22 @@
 {
+  "juSubinWu10RuntimeUndefinedModels20261103": {
+    "worker": "주수빈 (CMP_WU workstream; chat identity not independently verified)",
+    "date": "2026-11-03",
+    "status": "OBSERVED_RUNTIME_ERROR_PROPOSED_GITHUB_CODE_FIX_NOT_RERUN",
+    "schoolProject": "/user/semi/semi437/tmp/myproject/CMP_WU",
+    "schoolNode": "n2",
+    "parameters": {
+      "NtSide": 0,
+      "PolAct": 0,
+      "Vstop": 0.1
+    },
+    "license": "sdevice and sdevice-traps returned after checkout; no longer blocked for this run",
+    "runtimeError": "UNDEFINED Bandgap/eDOSMass/hDOSMass/Scharfetter/Auger/RadiativeRecombination/ConstantMobility/DopingDependence for GaN/InGaN",
+    "proposedFix": "Add DefaultParametersFromFile in global Physics; no -CheckUndefinedModels; verify MaterialDB GaN.par InGaN.par; school node still requires manual patch",
+    "source": "CMP/tcad/candidates/CMP_BASELINE_3.0.0_WU10FULL/sdevice_des.cmd",
+    "codeCommit": "066bbc312661703a9d5fae9ff1afb1db47fad031",
+    "next": "Apply minimal edit to live school SDevice; inspect pp2_des.cmd & installed defaults, rerun 0.1V smoke; report first remaining undefined"
+  },
   "juSubinWu10CodeCandidate20261103": {
     "worker": "주수빈",
     "date": "2026-11-03",

@@ -1,4 +1,24 @@
 {
+  "juSubinWu2023ZeroAcceptorSVisual20261103": {
+    "date": "2026-11-03",
+    "worker": "주수빈",
+    "schoolProject": "/user/semi/semi437/tmp/myproject/CMP_WU_Copy",
+    "file": "n21_des.tdr",
+    "status": "OBSERVED_ACCEPTOR_CONCENTRATION_ZERO_ROOT_CAUSE_UNRESOLVED",
+    "svisualAcceptorRangeCm3": {
+      "min": 0,
+      "max": 0
+    },
+    "context": {
+      "previousHoleDensityMaxCm3Approx": 1,
+      "anodeElectronRaw5V": 0.00002884,
+      "anodeHoleRaw5V": 3.696e-27
+    },
+    "interpretation": "p-side electrically active acceptors not appearing in SDevice output; cannot infer whether SDE Mg profile missing or datexcodes/incomplete ionization not recognized without source mesh inspection",
+    "next": "In SVisual open n1_msh.tdr and view MagnesiumActiveConcentration top pGaN, inspect actual range. If present, audit installed datexcodes GaN acceptor mapping/pp21_des.par; if absent, pp1_dvs.cmd profile placement and species.",
+    "sourceCodeModified": false,
+    "newSimulation": false
+  },
   "juSubinWu2023Clean5VCompleted20261103": {
     "dateKST": "2026-11-03 22:02:35",
     "worker": "주수빈",

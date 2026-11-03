@@ -1,3 +1,8 @@
+## 2026-11-04 ~00:43 KST — Wu post-Mg SDevice n21 Newton step reduction screenshot (OBSERVED; NOT FINAL FAILED)
+- New post-Mg n21 SWB SDevice screenshot: Newton 35 iterations exhausted; solver reports "Newton didn't converge, trying again with smaller step" at quasistationary t=0.637961 to0.642158 (stepsize0.004197), error still ~3.44e3 after iteration 5. SWB status running; no final error/5V output yet.
+- n21_des.err bottom includes datexcodes variable redefined warnings MgActive, MgChemical, MgMinus, nSiliconActive after project-local full GaN example file was copied. Possible duplicate definitions, but cannot attribute nonlinear convergence failure to these warnings without evidence.
+- NEXT: inspect live .out/.err final tail and .log, check whether t progresses/step collapses and first real fatal error. Do not edit active files; previous 5V n21/n25 outputs backed up.
+
 ## 2026-11-04 ~00:09 KST — Wu2023 SDE pGaN negative net doping verified after local Mg map (SDE MESH BLOCKER RESOLVED; SDEVICE UNRESOLVED)
 - Prior error: MgActive 2e19 species in SDE mesh but pGaN DopingConcentration=0 and SDevice Acceptor=0. Default installed T-2022.03 ordinary magnesium acceptor mapping in lib/datexcodes.txt was commented. User added project-local datexcodes with active GaN Mg chemical→active mapping and reran SDE.
 - User's new SVisual n1_msh signed DopingConcentration screenshot: top pGaN dark blue at legend -2e19 cm^-3, bottom nGaN red +5e18 cm^-3. Mesh-stage net doping issue now visually resolved. This does NOT confirm SDevice acceptor, ionization, free holes, or QW recombination; next preserve old outputs and test clean OFF SDevice against new mesh. No SDevice rerun reported.

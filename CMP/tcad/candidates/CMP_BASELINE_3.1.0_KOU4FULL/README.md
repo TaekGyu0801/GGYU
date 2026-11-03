@@ -21,3 +21,9 @@ A separate **full 2D 4µm planar stripe** candidate to compare independently wit
 
 ## Naming / protection
 `CMP_BASELINE_3.1.0_KOU4FULL` is a separate proposed candidate; protected original V2.1 Kou-source baseline and Wu candidate remain untouched. No new school-server run or solution result exists here.
+
+## SDevice candidate (2026-11-03; code only)
+- `sdevice_des.cmd` now exists; **NOT RUN** and not T-2022.03 parser-validated. Uses SWB node parameters `NtSide`, `PolAct`, `Vstop` and matching `DmgL_*/DmgR_*` SDE region names. Reuses an audited CMP/Wu pilot equation and solver scaffold, not Kou's calibrated physics.
+- SDE → SDevice only is sufficient for first smoke; no separate SDevice2/SVisual2 required. Keep clean and damaged runs as separate parameter splits with preserved outputs.
+- First only after SDE pass: `NtSide=0`, `PolAct=0`, `Vstop=0.1`. Physical run and ON/OFF comparison require literature-specific surface recombination mechanism, p/EBL/contact, material parameters, 2D area convention and QW injection audits. In particular 5nm **bulk** traps are not mathematically identical to a Kou surface recombination velocity condition.
+- A missing `sdevice.par` is intentional for this syntax smoke; built-in MaterialDB values are **not validated**.

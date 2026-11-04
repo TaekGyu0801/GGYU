@@ -1,3 +1,8 @@
+## 2026-11-04 — Lee n21-first data collection sequence (PROPOSED, no run)
+- User requested an efficient workflow: finish all useful n21 Trap OFF inspections before switching to n25 Trap ON. Preserve already collected values, avoid repeating measurements.
+- NEXT read-only: on saved n21_des, collect RadiativeRecombination Integrals/Domains for QW1–4 exact Clean_QW*, DmgL_QW*, DmgR_QW* regions (12 distinct regions; avoid composite region entries with '+'), ideally in a single SVisual Field Integration multi-selection; then repeat for srhRecombination and AugerRecombination. Record all names and units and inspect rate-accounting constraints. Later do matching n25 fields once. 5-V same-bias values are available; full current normalization and trap-inclusive IQE remain unverified.
+- No new SDevice run or code changes. Previously canceled hGap-only overnight rerun remains canceled.
+
 ## 2026-11-04 Lee — next after bilateral QW4 eGapStates checks
 - OBSERVED: n21 OFF and n25 ON eGapStatesRecombination DmgL_QW4 and DmgR_QW4 integrals are now available; do not repeat the four checks.
 - NEXT READ ONLY: quantify saved QW4 RadiativeRecombination, SRHRecombination and AugerRecombination per region, and verify trap versus SRH rate accounting against authorized T-2022.03 manual before deriving IQE. Missing hGapStates field remains an analysis limitation. No runs or code edits; existing cancellation of optional rerun remains in effect.

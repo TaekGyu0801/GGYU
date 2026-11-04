@@ -1,5 +1,32 @@
 {
-  "leeWuN25DmgRBarrier4Trap20261104": {
+  "juSubinWuPp25PhysicsExcerpt20261104": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04",
+    "source": "school CMP_WU_Copy pp25_des.cmd lines 1-48,159-177",
+    "status": "OBSERVED_CONFIGURATION_AND_UNRESOLVED_PHYSICS",
+    "tempK": 300,
+    "globalPhysics": [
+      "Fermi",
+      "Mobility(DopingDependence HighFieldSaturation)",
+      "Recombination(SRH Radiative Auger)",
+      "Piezoelectric_Polarization(strain)",
+      "IncompleteIonization(MagnesiumActiveConcentration)",
+      "Thermionic"
+    ],
+    "qw4Regions": [
+      "DmgL_QW4",
+      "DmgR_QW4"
+    ],
+    "trap": "Acceptor Level FromValBand EnergyMid=0.75 Conc=1e18 eXsection=1e-15 hXsection=1e-15 PooleFrenkel",
+    "trapSpatialType": "volume trap within damaged 5nm region, not direct interface-trap statement",
+    "headerSaysNotRunButLogsShowExecuted": true,
+    "trapPairRateValidated": false,
+    "exactT202203ManualRead": false,
+    "newSimulation": false,
+    "codeEdited": false,
+    "next": "Verify e/h gap-state net rate accounting from local T-2022.03 guide, preserve previous n21/n25 and canceled hGap rerun"
+  },
+"leeWuN25DmgRBarrier4Trap20261104": {
     "worker": "이택규",
     "dateKST": "2026-11-04",
     "node": 25,

@@ -7572,5 +7572,21 @@
     "hasRecombinationIntegralsInPLT": false,
     "newSimulation": false,
     "next": "Read-only analysis of saved n21/n25 recombination fields and Sentaurus rate accounting; do not rerun after cancellation"
+  },
+  "leeWuN25DmgLQW4EGapStates20261104": {
+    "worker": "이택규",
+    "dateKST": "2026-11-04",
+    "dataset": "n25_des",
+    "field": "eGapStatesRecombination",
+    "region": "DmgL_QW4",
+    "integralPerUmS": 13655250000000,
+    "domainUm2": 0.00001500003,
+    "positive": true,
+    "cleanQW4IntegralPerUmS": 0,
+    "status": "OBSERVED_SCREENSHOT",
+    "fullTrapIQEValidated": false,
+    "newSimulation": false,
+    "sourceEdit": false,
+    "next": "Saved n25 DmgR_QW4 eGapStatesRecombination single-region Field Integration, then read-only OFF comparison and rate-accounting review"
   }
 }

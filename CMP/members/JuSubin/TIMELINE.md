@@ -1,3 +1,7 @@
+## 2026-11-04 — JuSubin n25 central C1 CSV export verified (OBSERVED / QW NUMERICAL ANALYSIS PENDING)
+- 작업자 주수빈 학교 CMP_WU_Copy에서 SVisual Export XY Data 변수 `X,eDensity,hDensity,RadiativeRecombination`를 `WU_n25_C1_QW_carrier_rad.csv`로 저장한 뒤 직접 터미널 `head -n 12 WU_n25_C1_QW_carrier_rad.csv` 결과를 제공함. CSV header 정확히 네 변수, 두 번째 행 `none,none,none,none`(수치 아님; 분석시 제외), 첫 수치 행 X=0, 뒤 X=.0318125..0.12um etc. X~0.12 이하 시작 부분은 QW 비교 범위가 아니라 p측/Barrier0 영역에 해당함. 전체 CSV는 아직 직접 확인하지 않았으며 QW별 e/h/Rad 피크/평균값은 미측정.
+- NEXT (READ-ONLY): 저장된 CSV에서 QW1 X=[.128,.131), QW2 [.139,.142), QW3 [.150,.153), QW4 [.161,.164) 샘플 각각 n, mean(eDensity), mean(hDensity), mean(Radiative), max peak 및 n*p 비교. 1D 중앙 cutline의 평균/피크는 2D 영역 적분이나 IQE가 아님. 기존 n21/n25 저장/취소 hGap rerun 보존.
+
 ## 2026-11-04 JuSubin C1 Variables export four fields available (OBSERVED / EXPORT PENDING)
 - 학교 SVisual `Export XY Data` > `Variables` 스크린샷에서 dataset `C1(n25_des)` 확인. Available Variables에 `X`, `eDensity`, `hDensity`, `RadiativeRecombination`이 보이는 것이 확인됨. `Variables to Export`는 아직 비어 있음; 파일/CSV 저장이나 QW별 수치 추출은 아직 수행되지 않음.
 - NEXT: 네 변수를 오른쪽으로 전송하고 Export 버튼으로 저장 형식 확인 후 중앙 Y≈5 um cutline 데이터만 저장하여 QW1..4 정량 비교. TDR, 기존 n21/n25 solver 결과와 취소된 hGap rerun은 그대로 보존.

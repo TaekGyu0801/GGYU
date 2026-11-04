@@ -1,3 +1,8 @@
+## 2026-11-04 — JuSubin local T-2022.03 SDevice manual path confirmed 2026-11-04 (OBSERVED / STEP 2)
+- Worker 주수빈 executed school `bash -lc 'find /user/tools/synopsys/sentaurus/T-2022.03 -type f -iname "sdevice_ug.pdf" 2>/dev/null | head -n 5'` and returned the actual installed document path: `/user/tools/synopsys/sentaurus/T-2022.03/tcad/T-2022.03/manuals/PDFManual/data/sdevice_ug.pdf`.
+- This verifies on-school-host existence of the **T-2022.03 SDevice UG** (subject to file contents/version title check), not yet the meaning of SRH/eGapStates/hGapStates or net pair rate accounting. PDF not copied to GitHub (proprietary source).
+- NEXT (READ ONLY): check availability of local `pdftotext`, `pdfgrep`, `pdfinfo` tools using `bash -lc 'for p in pdftotext pdfgrep pdfinfo; do command -v "$p" || true; done'`; then locate exact version-matched field definitions and infer only supported trap/SRH bookkeeping. No new solver run, deck change, or change to canceled hGap run.
+
 ## 2026-11-04 — JuSubin shell redirect for official T-2022.03 manual search 2026-11-04 (OBSERVED / RESOLVED COMMAND ONLY)
 - 작업자 주수빈; 학교 `CMP_WU_Copy`에서 official `sdevice_ug.pdf` 위치 확인을 위해 `find /user/tools/synopsys/sentaurus/T-2022.03 -type f -iname 'sdevice_ug.pdf' 2>/dev/null | head -n 5` 실행을 시도했으나 터미널이 `Ambiguous output redirect.` 반환. This is consistent with csh/tcsh not accepting Bash-style `2>/dev/null`; actual default shell not independently verified.
 - A shell-independent invocation `bash -lc 'find /user/tools/synopsys/sentaurus/T-2022.03 -type f -iname "sdevice_ug.pdf" 2>/dev/null | head -n 5'` was provided. User has not yet supplied output; PDF presence and version-specific trap accounting remain UNRESOLVED.

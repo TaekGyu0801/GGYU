@@ -7966,5 +7966,31 @@
       "Evaluate Wu numerical proxy fidelity and QW4 radiative concentration before approving baseline"
     ],
     "canceledHGapRerunStillCanceled": true
+  },
+  "leeWuPp25All22TrapUniform20261104": {
+    "worker": "이택규",
+    "dateKST": "2026-11-04",
+    "status": "OBSERVED_DECLARATION_UNIFORMITY",
+    "source": "school CMP_WU_Copy pp25_des.cmd grep output",
+    "totalRegionBlocks": 22,
+    "regionGroups": {
+      "pGaN": 2,
+      "Barrier0to4": 10,
+      "QW1to4": 8,
+      "nGaN": 2
+    },
+    "trapType": "Acceptor Level FromValBand",
+    "energyMidEv": 0.75,
+    "concentrationCm3": 1000000000000000000,
+    "eXsectionCm2": 1e-15,
+    "hXsectionCm2": 1e-15,
+    "pooleFrenkel": true,
+    "all22PrintedSettingsUniform": true,
+    "newRun": false,
+    "sourceEdit": false,
+    "trapInclusiveIQEValidated": false,
+    "versionMatchedRateAccountingValidated": false,
+    "canceledHGapRerunStillCanceled": true,
+    "next": "Review exact T-2022.03 electron/hole trap versus SRH rate accounting; assess Wu physical fidelity and 2D current normalization, preserve n21/n25"
   }
 }

@@ -1,3 +1,6 @@
+## 2026-11-04 — Lee Wu runtime grid/doping input check
+- OBSERVED: School `CMP_WU_Copy` n21/n25 logs both show `Grid file: n1_msh.tdr` (241), `Reading grid` (697), `Reading doping` (805), same path. This confirms runtime path matching, not byte-for-byte identity at each execution. Earlier normalized CMD and full PAR comparison both passed, and both solvers finished. No rerun or code change. NEXT saved n25 QW4/Barrier4 TotalTrapConcentration integration; full IQE unresolved.
+
 ## 2026-11-04 — Lee Wu n21/n25 solver completion and mesh mtime validated (OBSERVED / read-only)
 - Worker: 이택규. Actual school Bash command under `/user/semi/semi437/tmp/myproject/CMP_WU_Copy`: `stat -c '%n | %s bytes | %y' n1_msh.tdr n21_des.log n25_des.log; grep -E 'Curve trace finished|Sentaurus Device simulation finished|Good Bye' n21_des.log n25_des.log | tail -n 10`.
 - `n1_msh.tdr`: 984164 bytes, last modified 2026-11-03 23:17:11.223700114 +0900. `n21_des.log` 284309 bytes, mtime 2026-11-03 23:58:02.616861738 +0900. `n25_des.log` 441702 bytes, mtime 2026-11-04 01:00:20.441108178 +0900.

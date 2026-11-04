@@ -7621,5 +7621,39 @@
     "derivedLeftAndRightSumPerUmS": 27309600000000,
     "fullTrapLossVerified": false,
     "iqeValidated": false
+  },
+  "leeWuQw4OffOnBilateralEGapComparison20261104": {
+    "worker": "이택규",
+    "dateKST": "2026-11-04",
+    "field": "eGapStatesRecombination",
+    "unitsIntegral": "s^-1*um^-1",
+    "n21Off": {
+      "DmgL_QW4": {
+        "integral": 0.00001387832,
+        "domainUm2": 0.00001500003
+      },
+      "DmgR_QW4": {
+        "integral": 0.00001387717,
+        "domainUm2": 0.00001500037
+      }
+    },
+    "n25On": {
+      "DmgL_QW4": {
+        "integral": 13655250000000,
+        "domainUm2": 0.00001500003
+      },
+      "DmgR_QW4": {
+        "integral": 13654350000000,
+        "domainUm2": 0.00001500037
+      }
+    },
+    "derivedSumOff": 0.00002775549,
+    "derivedSumOn": 27309600000000,
+    "status": "OBSERVED_FIELDS_AND_DERIVED_SUMS",
+    "fullTrapLossValidated": false,
+    "iqeValidated": false,
+    "newSimulation": false,
+    "sourceModified": false,
+    "next": "Read-only SRH/Radiative/Auger accounting and confirm no double count before computing IQE"
   }
 }

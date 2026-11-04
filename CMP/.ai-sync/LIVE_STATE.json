@@ -1,4 +1,23 @@
 {
+  "leeWuN25CleanQW4Trap20261104": {
+    "worker": "이택규",
+    "dateKST": "2026-11-04",
+    "project": "CMP_WU_Copy",
+    "node": 25,
+    "field": "TotalTrapConcentration",
+    "region": "Clean_QW4",
+    "status": "OBSERVED_INTEGRAL_DERIVED_REGION_MEAN",
+    "integralUmInverse": 0,
+    "domainUmSquared": 0.02997006,
+    "derivedMeanCm3": 0,
+    "qw4LeftMeanCm3": 1000000000000000000,
+    "qw4RightMeanCm3": 1000000000000000000,
+    "qw4TrioSpotCheckComplete": true,
+    "all22DamagedRegionConcentrationProven": false,
+    "trapInclusiveIQEValidated": false,
+    "newSimulation": false,
+    "next": "Consider saved n25 DmgL/R_Barrier4 integration then assess trap/SRH/eGapStates rate accounting without a rerun"
+  },
   "leeWuN25DmgRQW4Trap20261104": {
     "worker": "이택규",
     "dateKST": "2026-11-04",

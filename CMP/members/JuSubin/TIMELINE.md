@@ -1,3 +1,8 @@
+## 2026-11-04 JuSubin Wu n25 actual electrode area factor 1 (OBSERVED; 2D current density STILL UNRESOLVED)
+- Worker 주수빈 provided read-only school `bash -lc 'sed -n "215,270p" n25_des.log'` output from `CMP_WU_Copy`. Log "Default device parameters > Electrodes" reports `anode : 0.0000e+00 V (Ohmic), area factor : 1` and `cathode : 0.0000e+00 V (Ohmic), area factor : 1`. It also reports `Grid file: n1_msh.tdr`, `ModelParameters file: pp25_des.par`, `Current file: n25_des.plt`, `Plot file: n25_des.tdr`.
+- This **confirms applied electrode area factor = 1 in saved ON run**, despite no explicit AreaFactor grep match in pp25 commands. It does **not** verify whether the terminal current uses A, A/um or another simulator reporting convention, nor does it convert a 2D cross-section to the physical 4-um mesa area. Prior n25 raw 5-V total current 2.56639709344131e-03 must not be labeled calibrated A/cm2.
+- NEXT READ ONLY: retrieve exact installed T-2022.03 SDevice User Guide wording on 2D device terminal current units, electrode `AreaFactor`, and any out-of-plane depth convention. Then inspect actual active contact geometry and determine scaling before reporting J. No simulation or code changes; keep canceled hGap rerun canceled.
+
 ## 2026-11-04 — 주수빈: Wu n25 전류 정규화 설정 검색 (OBSERVED)
 - 학교 출력에서 pp25_des.cmd:214와 n25_des.log:643–644의 eCurrentDensity/Vector, hCurrentDensity/Vector만 확인. 검색한 pp25_des.cmd/par와 n25_des.log에서 AreaFactor, CurrentUnit, 2D/dimension 일치 항목 없음. 전류밀도 Plot 항목만으로 단자 전류 환산/AreaFactor 기본값을 판단할 수 없음.
 - 다음: n25_des.log 접촉 정보 확인 및 T-2022.03 2D 전류 단위 확인(읽기 전용). n21/n25 재실행·수정 없음.

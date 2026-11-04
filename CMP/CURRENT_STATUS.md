@@ -1,3 +1,8 @@
+## 2026-11-04 — Lee Wu Trap ON DmgL_QW4 average Nt verified in saved SVisual (OBSERVED / DERIVED)
+- Worker 이택규, school saved `CMP_WU_Copy/n25_des` Trap ON. User screenshot of Sentaurus Field Integration: Field `TotalTrapConcentration`, only Region `DmgL_QW4 (InGaN)` selected. OBSERVED Integral = 1.500003e+01 [um^-1]; Domain = 1.500003e-05 [um^2].
+- DERIVED mean = 15.00003 / 1.500003e-5 = 1.000000e6 um^-3 = **1.000000e18 cm^-3**, consistent with target `NtSide=1e18`. This extends earlier direct ON QW1 left/right region checks to ON QW4 LEFT. It is an area-average; no proof of region-wise uniformity beyond this average. QW4 right / clean and Barrier4 remain unmeasured in this turn. This is trap CONCENTRATION evidence, not proof of trap-caused net recombination or complete IQE.
+- No SDevice rerun, input edit or output modification. NEXT read-only SVisual saved n25 `DmgR_QW4` `TotalTrapConcentration` Integral/Domain; optionally `Clean_QW4` and `DmgL/R_Barrier4` before moving to rate accounting.
+
 ## 2026-11-04 — Lee Wu n21/n25 runtime grid and doping reads confirmed (OBSERVED)
 - Worker: 이택규, school `/user/semi/semi437/tmp/myproject/CMP_WU_Copy`. Direct read-only `grep -niE 'n1_msh.tdr|reading grid|grid file|reading mesh' n21_des.log n25_des.log | head -n 30` supplied.
 - Both `n21_des.log` and `n25_des.log` show at line 241 `Grid file: n1_msh.tdr`, line 697 `Reading grid 'n1_msh.tdr' ...`, and line 805 `Reading doping 'n1_msh.tdr' (TDR format) ...`. Thus BOTH solver logs confirm loading mesh and doping from the same *file pathname*. Prior `stat` showed mesh mtime 2026-11-03 23:17:11 before OFF/ON solver completions (23:58:02 / 2026-11-04 01:00:20); both log runs finished normally.

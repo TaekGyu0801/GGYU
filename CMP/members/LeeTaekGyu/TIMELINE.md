@@ -1,3 +1,9 @@
+## 2026-11-04 — Lee Wu recombination Plot declarations inspected (OBSERVED, read-only)
+- Worker 이택규. User school `grep -niE 'eGapStatesRecombination|hGapStatesRecombination|SRHRecombination|RadiativeRecombination|AugerRecombination|CurrentPlot|Integr' pp21_des.cmd pp25_des.cmd | head -n 80` in CMP_WU_Copy.
+- OBSERVED: both preprocessed CMDs line 218: `RadiativeRecombination SRHRecombination AugerRecombination`; line 219: `eGapStatesRecombination eTrappedCharge TotalTrapConcentration`. No `hGapStatesRecombination`, `CurrentPlot`, or `Integr*` appeared in the grep output. Both have the same listed rate output requests, but this does not itself confirm each field exists in saved TDR or establish correct recombination accounting.
+- INTERPRETATION: `eGapStatesRecombination` alone must not be treated as full trap-inclusive nonradiative loss; `SRHRecombination` plus `eGapStatesRecombination` may not be summed for an IQE calculation until definitions and double-counting are verified. No school rerun or code change. Respect cancellation of extra hGap rerun.
+- NEXT read-only: inspect full Plot block context and saved n21/n25 TDR fields in SVisual. Identify availability/units before region-integrating and assessing trap contributions, with no code changes.
+
 ## 2026-11-04 — Lee Wu n21/n25 5.0 V PLT final-row current comparison (OBSERVED / DERIVED)
 - Worker: 이택규. Direct school CMP_WU_Copy terminal evidence: `tail -n 12 n21_des.plt`, `tail -n 12 n25_des.plt`. Both files end at `time=1` and `anode OuterVoltage=5.00000000000000 V` with 17-column DF-ISE datasets including time and anode/cathode terminal values.
 - OBSERVED OFF n21 (5 V): anode TotalCurrent=2.56859586549120e-03, eCurrent=1.69539310159551e-04, hCurrent=2.39905655533165e-03; corresponding cathode TotalCurrent=-2.56859586549119e-03.

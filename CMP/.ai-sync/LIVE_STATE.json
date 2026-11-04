@@ -7550,5 +7550,27 @@
     "hGapStatesNotSaved": true,
     "noSDeviceRerun": true,
     "next": "Summarize local Trap placement and all-22 eGapStates rate contrast; if needed inspect representative other layers read-only, quantify caveats before calling Wu baseline validated."
+  },
+  "leeWuPltCurrentComparison20261104": {
+    "worker": "이택규",
+    "dateKST": "2026-11-04",
+    "status": "OBSERVED_TERMINAL_CURRENTS_DERIVED_RELATIVE_DIFFERENCE",
+    "experiment": "CMP_WU_Copy",
+    "biasV": 5,
+    "offNode": 21,
+    "onNode": 25,
+    "offAnodeTotalCurrentNative": 0.0025685958654912,
+    "onAnodeTotalCurrentNative": 0.00256639709344131,
+    "offAnodeElectronCurrentNative": 0.000169539310159551,
+    "onAnodeElectronCurrentNative": 0.000168952709999954,
+    "offAnodeHoleCurrentNative": 0.00239905655533165,
+    "onAnodeHoleCurrentNative": 0.00239744438344136,
+    "absoluteCurrentReductionNative": 0.0000021987720498898612,
+    "relativeCurrentReductionPercent": 0.08560210188882258,
+    "raw2DCurrentNormalizationConfirmed": false,
+    "trapInclusiveIQEValidated": false,
+    "hasRecombinationIntegralsInPLT": false,
+    "newSimulation": false,
+    "next": "Read-only analysis of saved n21/n25 recombination fields and Sentaurus rate accounting; do not rerun after cancellation"
   }
 }

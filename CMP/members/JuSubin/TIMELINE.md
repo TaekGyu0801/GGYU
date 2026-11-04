@@ -1,3 +1,7 @@
+## 2026-11-04 JuSubin C1 Variables export four fields available (OBSERVED / EXPORT PENDING)
+- 학교 SVisual `Export XY Data` > `Variables` 스크린샷에서 dataset `C1(n25_des)` 확인. Available Variables에 `X`, `eDensity`, `hDensity`, `RadiativeRecombination`이 보이는 것이 확인됨. `Variables to Export`는 아직 비어 있음; 파일/CSV 저장이나 QW별 수치 추출은 아직 수행되지 않음.
+- NEXT: 네 변수를 오른쪽으로 전송하고 Export 버튼으로 저장 형식 확인 후 중앙 Y≈5 um cutline 데이터만 저장하여 QW1..4 정량 비교. TDR, 기존 n21/n25 solver 결과와 취소된 hGap rerun은 그대로 보존.
+
 ## 2026-11-04 JuSubin n25 C1 center hDensity QW peaks (OBSERVED / QUANTITATIVE CAUSE UNRESOLVED)
 - Worker 주수빈 school SVisual screenshot: saved `CMP_WU_Copy/n25_des` Trap ON with central Y≈5um vertical X-directed cutline C1. Right panel `hDensity(C1(n25_des))` shows 4 narrow hole-density peaks at approximately X=0.129,0.140,0.151,0.162um corresponding to QW1–QW4. Horizontal plot X≈0.12–0.175um and log vertical scale.
 - Visually, QW4 hole peak does not appear overwhelmingly larger than other QW peaks, but no numeric peak/region values or precise n*p product were extracted. Existing earlier eDensity C1 screenshot likewise shows 4 QW peaks. **Do not attribute ~91% QW4 radiative integration to holes alone, or infer IQE from these screenshots.**

@@ -1,3 +1,7 @@
+## 2026-11-04 — Wu n21 Trap OFF QW1–4 radiative map, 12 regions (OBSERVED / DERIVED)
+- 이택규 school SVisual n21_des 5 V RadiativeRecombination: selected 12 exact Clean/DmgL/DmgR QW1–4 regions; Total Integral=9.902518e15 s^-1 um^-1; Total Domain=1.199999e-01 um2. Representative QW4: Clean 9.005734e15, DmgL 4.466154e12, DmgR 4.465761e12. Derived QW4 91.0341% of QW1–4 radiative integral total, QW3 8.9475%. All 12 numbers in Lee TIMELINE and LIVE_STATE.json. This is radiative distribution, not IQE; no new run/code edit.
+- NEXT finish read-only n21 12-region SRH and Auger integrals using same multi-select, then perform corresponding n25 measurements only once. hGap missing and rate double-counting unresolved.
+
 ## 2026-11-04 Lee Wu DmgL_QW4 SRH rate comparison (OBSERVED / DERIVED)
 - 이택규 screenshots, saved 5 V TDRs: n21_des OFF srhRecombination Integral 2.450705e11 s^-1 um^-1; n25_des ON same field/region 2.397133e11; Domain 1.500003e-05 um2 in both. ON change -5.3572e9 s^-1 um^-1, -2.19% relative to OFF (derived). In the same region previously observed ON eGapStatesRecombination much larger than OFF. Numerical SRH decrease does not prove total nonradiative recombination decrease. Double counting and hole-trap accounting not validated. No new solver runs, no code edit. NEXT verify official rate definitions, then read-only quantify radiative/auger for valid comparison, no canceled rerun.
 

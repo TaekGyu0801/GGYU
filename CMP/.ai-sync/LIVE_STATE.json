@@ -1,4 +1,41 @@
 {
+  "leeWuPp21Pp25ReadOnly20261104": {
+    "worker": "이택규",
+    "eventDateKST": "2026-11-04",
+    "project": "CMP_WU_Copy",
+    "status": "OBSERVED_PP21_PP25_EFFECTIVE_TRAP_DECLARATIONS_READ_ONLY",
+    "source": "USER school terminal ls + grep -nE pp21_des.cmd pp25_des.cmd",
+    "pp21": {
+      "node": 21,
+      "trapConcentrationCm3": 0,
+      "trapDeclarations": 22,
+      "tdrFile": "n21_des.tdr",
+      "tdrExists": true
+    },
+    "pp25": {
+      "node": 25,
+      "trapConcentrationCm3": 1000000000000000000,
+      "trapDeclarations": 22,
+      "tdrFile": "n25_des.tdr",
+      "tdrExists": true
+    },
+    "commonPhysics": [
+      "Piezoelectric_Polarization(strain)",
+      "IncompleteIonization(Dopants=MagnesiumActiveConcentration)"
+    ],
+    "trapCrossSectionsCm2": {
+      "electron": 1e-15,
+      "hole": 1e-15
+    },
+    "plotFieldAvailable": "eGapStatesRecombination",
+    "hGapStatesPlotSaved": false,
+    "ppFullDiffChecked": false,
+    "finalSolverTerminationRecheckedThisTurn": false,
+    "onlyTrapDifferenceConfirmed": false,
+    "all22TDRTrapValuesVerified": false,
+    "trapInclusiveIQEValidated": false,
+    "next": "diff -u pp21_des.cmd pp25_des.cmd; then check pp21/25 parameter and mesh effective equivalence, no rerun"
+  },
   "juSubinWuMgFixONn25QWSRH20261104": {
     "worker": "주수빈",
     "dateKST": "2026-11-04",

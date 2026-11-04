@@ -1,3 +1,8 @@
+## 2026-11-04 — Lee Wu n25 DmgL_Barrier4 trap regional mean (OBSERVED / DERIVED)
+- Worker: 이택규. Saved `CMP_WU_Copy/n25_des` Field Integration screenshot, `TotalTrapConcentration` selected only `DmgL_Barrier4 (GaN)`. OBSERVED Integral = `3.996001e+01 [um^-1]`, Domain = `4.000001e-05 [um^2]`. DERIVED regional mean = (39.96001 / 4.000001e-5) * 1e12 = approx `9.990e17 cm^-3`, 0.1% below nominal ON NtSide=1e18 cm^-3. Reason for difference NOT confirmed; avoid exact-equality claims.
+- The ON left Barrier4 has near-target local average trap concentration, extending prior QW1/QW4 trap spot checks. This does NOT prove within-region uniformity, all 22 regions, or trap-inclusive IQE. No solver rerun or school code edit.
+- NEXT read-only: saved n25 DmgR_Barrier4 regional Integral/Domain; afterward stop repetitive trap placement checks and focus on trap vs SRH rate accounting and current normalization.
+
 ## 2026-11-04 — Lee Wu n25 Clean_QW4 trap concentration zero (OBSERVED / DERIVED)
 - Worker: 이택규. Screenshot of school saved `CMP_WU_Copy/n25_des` Field Integration, `TotalTrapConcentration`, only `Clean_QW4 (InGaN)` selected. Integral = **0.000000e+00 [um^-1]**; Domain = **2.997006e-02 [um^2]**. Regional mean = 0 cm^-3.
 - Alongside previously measured `DmgL_QW4` mean=1e18 and `DmgR_QW4` mean=1e18 cm^-3, the measured **QW4 left-damaged / clean-center / right-damaged regional averages** match the intended ON trap placement. Earlier QW1 left/right and clean spot checks agree. Other damaged layers, within-region uniformity and full trap-inclusive IQE remain unverified.

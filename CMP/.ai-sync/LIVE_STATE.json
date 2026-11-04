@@ -1,4 +1,37 @@
 {
+  "leeWuNormalTerminationAndMeshMtime20261104": {
+    "worker": "이택규",
+    "dateKST": "2026-11-04",
+    "project": "CMP_WU_Copy",
+    "status": "OBSERVED_OFF_ON_SOLVER_CURVE_TRACE_FINISHED",
+    "mesh": {
+      "path": "n1_msh.tdr",
+      "sizeBytes": 984164,
+      "mtimeKST": "2026-11-03 23:17:11.223700114 +0900",
+      "sameGridPathInPpCmd": true,
+      "sameRuntimeSnapshotProven": false
+    },
+    "off": {
+      "node": 21,
+      "logSizeBytes": 284309,
+      "terminatedKST": "2026-11-03 23:58:02",
+      "curveTraceFinished": true,
+      "goodBye": true
+    },
+    "on": {
+      "node": 25,
+      "logSizeBytes": 441702,
+      "terminatedKST": "2026-11-04 01:00:20",
+      "curveTraceFinished": true,
+      "goodBye": true
+    },
+    "completeNormalizedCmdSame": true,
+    "parameterFilesIdentical": true,
+    "physicalBaselineValidated": false,
+    "trapInclusiveIQEValidated": false,
+    "noRerun": true,
+    "next": "Read n21/n25 mesh file load log provenance; then sample QW4 and Barrier4 TotalTrapConcentration using saved TDR only."
+  },
   "leeWuParEquality20261104": {
     "worker": "이택규",
     "dateKST": "2026-11-04",

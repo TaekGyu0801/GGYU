@@ -1,4 +1,21 @@
 {
+  "leeWuN25DmgLBarrier4Trap20261104": {
+    "worker": "이택규",
+    "dateKST": "2026-11-04",
+    "node": 25,
+    "field": "TotalTrapConcentration",
+    "region": "DmgL_Barrier4",
+    "integralUmInverse": 39.96001,
+    "domainUmSquared": 0.00004000001,
+    "derivedAverageCm3": 999000000000000000,
+    "nominalCm3": 1000000000000000000,
+    "relativeDifferencePct": -0.1,
+    "status": "OBSERVED_INTEGRAL_DERIVED_AVERAGE",
+    "differenceCauseVerified": false,
+    "trapInclusiveIQEValidated": false,
+    "newSimulation": false,
+    "next": "Read saved n25 DmgR_Barrier4 integration, then stop repeated spot checks and inspect rate accounting"
+  },
   "leeWuN25CleanQW4Trap20261104": {
     "worker": "이택규",
     "dateKST": "2026-11-04",

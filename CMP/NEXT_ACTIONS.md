@@ -1,3 +1,9 @@
+## 2026-11-04 — Lee Wu validation gates after pp25 Physics grep (READ ONLY)
+- COMPLETED: OFF/ON 5V solve and selected QW 12-region Radiative/SRH/Auger comparisons; n25 eGap ON integrated, representative trap concentrations, pp command/par comparison, n25 global SRH/Radiative/Auger and 22 regional Trap+PooleFrenkel blocks confirmed.
+- FIRST NEXT: one read-only command `sed -n '1,48p;159,177p' pp25_des.cmd` to see model header/global physics and exact QW4 trap type, level, concentration, cross sections, PF. Review against T-2022.03 reference (guide original not accessible through repository). No rerun/code edit.
+- THEN: resolve whether electron trap field equals net electron-hole trap pair loss under actual simulation options; correct denominator vs lifetime SRH, radiative, Auger; distinguish illustrative 12-QW proxy (66.04% hypothetical ON) from validated whole-device IQE. Cross-check QW4 >90% radiative concentration and Wu proxy fidelity before selecting physical baseline; consider exact current-density scaling/matched current only when quantitative comparison requires it.
+- Canceled hGap-only overnight rerun remains canceled. Never silently restart.
+
 ## 2026-11-04 — Wu physical trap-rate audit: targeted read-only checks
 - DOCUMENTED from historical Synopsys guides (K-2015.06 / O-2018.06) and Sentaurus Training: `SRHRecombination` is from separate SRH lifetime model; explicit trap outputs `eGapStatesRecombination` and `hGapStatesRecombination` are electron/hole trap rates. This supports distinct rate sources but does not settle exact T-2022.03 net pair loss or runtime effective options.
 - NEXT ask school operator for read-only actual `pp21_des.cmd`/`pp25_des.cmd` Physics/Traps/TrapFilling/Tunneling inspection, and verify precise definitions from installed T-2022.03 official manual. Source changes and extra simulation not authorized. Compare saved observations with correct formula; do not claim conditional 66.04% scenario is established IQE.

@@ -1,3 +1,7 @@
+## 2026-11-04 — 이택규 Wu SRH/Trap rate-accounting documentary check (DOCUMENTED / PROVISIONAL)
+- Older official Sentaurus Device Guides (K-2015.06/O-2018.06) and Synopsys Training separately define lifetime-SRH and explicit e/h trap recombination terms, strengthening the case that SRH field is not the entire trap-loss contribution. Exact T-2022.03 Wu runtime output definitions, net e/h balance, and double-count-free IQE remain UNRESOLVED. No new run/code change.
+- Derived illustrative 12-QW 5V recombination proxy: OFF 3-channel 66.2156%, ON 3-channel 66.2270%, hypothetical ON 3-channel+electron gap-rate 66.0432%. These are NOT approved physical IQE values; hole gap field missing, non-QW rate channels and full OFF trap field unquantified. Next read-only verify exact physical deck and installed-version rules. Individual data and sources in Lee TIMELINE, LIVE_STATE, Issue #7.
+
 ## 2026-11-04 Lee Wu right Barrier4 observation
 - User SVisual n25 ON TotalTrapConcentration, DmgR_Barrier4: Integral 3.996092e+01 um^-1, Domain 4.000092e-05 um2. Mean 9.990e17 cm^-3 (about 0.1 percent below ON nominal 1e18). Left Barrier4 had similar average. Representative QW1/QW4 left and right traps and clean QW centers had already been checked. This is not a complete IQE or full 22-region uniformity proof. No new runs or source edits. Next investigate recombination accounting and trap-inclusive IQE with saved data only.
 

@@ -7655,5 +7655,22 @@
     "newSimulation": false,
     "sourceModified": false,
     "next": "Read-only SRH/Radiative/Auger accounting and confirm no double count before computing IQE"
+  },
+  "leeWuN25DmgLQW4Srh20261104": {
+    "worker": "이택규",
+    "dateKST": "2026-11-04",
+    "status": "OBSERVED_SCREENSHOT",
+    "dataset": "n25_des",
+    "field": "srhRecombination",
+    "region": "DmgL_QW4",
+    "integralS1Um1": 239713300000,
+    "domainUm2": 0.00001500003,
+    "priorSameRegionEGapStatesIntegralS1Um1": 13655250000000,
+    "numericalEGapOverSRHRatio": 56.96492434921216,
+    "rateOverlapVerified": false,
+    "trapInclusiveIqEValidated": false,
+    "newSimulation": false,
+    "codeChanged": false,
+    "next": "n21_des OFF DmgL_QW4 srhRecombination saved Field Integration; confirm official rate definitions before IQE"
   }
 }

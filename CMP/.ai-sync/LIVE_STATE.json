@@ -7588,5 +7588,38 @@
     "newSimulation": false,
     "sourceEdit": false,
     "next": "Saved n25 DmgR_QW4 eGapStatesRecombination single-region Field Integration, then read-only OFF comparison and rate-accounting review"
+  },
+  "leeWuN21OffDmgLQW4EGap20261104": {
+    "worker": "이택규",
+    "dateKST": "2026-11-04",
+    "status": "OBSERVED_SCREENSHOT_WITH_DERIVED_RATIO",
+    "offDataset": "n21_des",
+    "onDataset": "n25_des",
+    "region": "DmgL_QW4",
+    "field": "eGapStatesRecombination",
+    "offIntegralPerUmS": 0.00001387832,
+    "onIntegralPerUmS": 13655250000000,
+    "domainUm2": 0.00001500003,
+    "derivedOnOverOffRatio": 983926728883611300,
+    "offNumericallyNonzero": true,
+    "fullTrapLossVerified": false,
+    "iqeValidated": false,
+    "newRun": false,
+    "sourceChanges": false,
+    "next": "Measure n21 DmgR_QW4 eGapStates saved field, verify recombination accounting with official manual before IQE"
+  },
+  "leeWuN25RightDmgRQW4EGap20261104": {
+    "worker": "이택규",
+    "dateKST": "2026-11-04",
+    "status": "OBSERVED_SCREENSHOT",
+    "dataset": "n25_des",
+    "field": "eGapStatesRecombination",
+    "region": "DmgR_QW4",
+    "integralPerUmS": 13654350000000,
+    "domainUm2": 0.00001500037,
+    "leftRegionIntegralPerUmS": 13655250000000,
+    "derivedLeftAndRightSumPerUmS": 27309600000000,
+    "fullTrapLossVerified": false,
+    "iqeValidated": false
   }
 }

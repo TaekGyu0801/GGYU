@@ -1,3 +1,6 @@
+## 2026-11-04 Lee Wu DmgL_QW4 eGapStates region integration (OBSERVED)
+- Saved n25_des (Trap ON) SVisual screenshot: eGapStatesRecombination, DmgL_QW4 only; Integral +1.365525e13 s^-1 um^-1, Domain 1.500003e-05 um2. Earlier Clean_QW4 same rate integral=0. This proves nonzero electron gap-state recombination field integral in left damaged QW4, not full trap recombination or IQE. No rerun/edit. NEXT inspect DmgR_QW4 same field, then compare against saved OFF and establish rate accounting before IQE.
+
 ## 2026-11-04 — Lee Wu n21/n25 5.0 V PLT final-row current comparison (OBSERVED / DERIVED)
 - Worker: 이택규. Direct school CMP_WU_Copy terminal evidence: `tail -n 12 n21_des.plt`, `tail -n 12 n25_des.plt`. Both files end at `time=1` and `anode OuterVoltage=5.00000000000000 V` with 17-column DF-ISE datasets including time and anode/cathode terminal values.
 - OBSERVED OFF n21 (5 V): anode TotalCurrent=2.56859586549120e-03, eCurrent=1.69539310159551e-04, hCurrent=2.39905655533165e-03; corresponding cathode TotalCurrent=-2.56859586549119e-03.

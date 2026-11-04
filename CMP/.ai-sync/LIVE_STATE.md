@@ -1,3 +1,6 @@
+## 2026-11-04 — Lee Wu n21 OFF DmgL_QW4 radiative integral recorded
+- School SVisual screenshot: n21_des Trap OFF, RadiativeRecombination, DmgL_QW4 only, Integral 4.466154e12 [s^-1*um^-1], Domain 1.500003e-05 [um^2]. Existing n25 ON same field/region 4.297888e12. DERIVED (ON-OFF)/OFF = approx -3.77% at same 5 V, not full IQE. No new run or code edit. To reduce repetitive dataset switching, finish collecting needed n21 fields before n25. Suggested n21 exact QW region Radiative/SRH/Auger integrals (not merged '+' regions), followed by equivalent n25. Physical rate accounting/possible double counting and missing hGap remain UNRESOLVED.
+
 ## 2026-11-04 — Lee Wu n25 left-QW4 RadiativeRecombination (OBSERVED)
 - SVisual screenshot of saved Trap ON n25_des at 5 V: DmgL_QW4 Field RadiativeRecombination integral +4.297888e12 s^-1 um^-1; Domain 1.500003e-05 um2. Previously same n25 region SRH +2.397133e11, eGapStates +1.365525e13 (integral units identical). Do not naively sum to IQE; rate field definition/overlap and hGap component remain UNRESOLVED. No rerun/code change. NEXT saved n21 OFF DmgL_QW4 RadiativeRecombination read-only, then official field accounting.
 

@@ -1,4 +1,29 @@
 {
+  "leeWuRuntimeGridDopingReads20261104": {
+    "worker": "이택규",
+    "dateKST": "2026-11-04",
+    "status": "OBSERVED_SAME_RUNTIME_GRID_AND_DOPING_PATH",
+    "project": "CMP_WU_Copy",
+    "off21": {
+      "gridLine": 241,
+      "gridReadLine": 697,
+      "dopingReadLine": 805,
+      "gridFile": "n1_msh.tdr"
+    },
+    "on25": {
+      "gridLine": 241,
+      "gridReadLine": 697,
+      "dopingReadLine": 805,
+      "gridFile": "n1_msh.tdr"
+    },
+    "sameFilePathConfirmed": true,
+    "sameRuntimeMeshByteSnapshotNotProven": true,
+    "normalizedCmdIdentical": true,
+    "parByteIdentical": true,
+    "simulationRerun": false,
+    "trapInclusiveIQEValidated": false,
+    "next": "SVisual saved n25 TotalTrapConcentration Integrals and Domain for DmgL_QW4/DmgR_QW4/Clean_QW4 then Barrier4; no rerun"
+  },
   "leeWuNormalTerminationAndMeshMtime20261104": {
     "worker": "이택규",
     "dateKST": "2026-11-04",

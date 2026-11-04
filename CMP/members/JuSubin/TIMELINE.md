@@ -1,3 +1,7 @@
+## 2026-11-04 — JuSubin n25 eDensity C1 X-axis zoom confirmed (OBSERVED / CAUSE NOT YET ESTABLISHED)
+- 작업자 주수빈 학교 SVisual screenshot: saved `CMP_WU_Copy/n25_des` Trap ON에서 중앙 Y≈5 um C1 cutline의 `eDensity(C1(n25_des))` 그래프 X축이 이제 약 0.12–0.175 um로 확대됨. QW1,2,3,4에 대응하는 약 X=0.129, 0.140, 0.151, 0.162 um 주변에 전자 밀도 피크 4개가 시각적으로 나타남. 그래프는 로그 스케일이며 픽셀 이미지뿐이므로 각 피크 수치와 상대 피크 비율을 아직 정확히 추출하지 못함. QW4의 ≈91% radiative integrated share가 전자 농도 우세 때문이라고 결론 내릴 수 없음.
+- 왼쪽 패널에는 `Legend Properties`가 표시되는데 범례를 선택했기 때문으로 보임. NEXT: Data Selection에서 같은 C1 dataset/plot의 `hDensity` 곡선을 열어 QW별 hole carrier 분포를 확인하고 필요 시 peak/cutline 수치 추출. No new solver, source edit or canceled hGap rerun.
+
 ## 2026-11-04 JuSubin n25 C1 centerline eDensity plot created (OBSERVED / QW1-4 NUMERICAL PROFILE UNRESOLVED)
 - Worker 주수빈 shared school SVisual screenshot with `n25_des` Trap ON. A vertical C1 cutline is now placed at approximately **Y≈5 um** across the simulated X thickness `0..4.072 um` (left plot). The right panel `Cutline_Y Plot` displays `eDensity(C1(n25_des))` on a log scale vs X, but full horizontal chart range approx X=0..4.1 um compresses narrow MQW x≈0.128..0.164 um to leftmost pixels; no QW-specific carrier comparison can be read reliably.
 - This screenshot is progress in read-only saved-TDR spatial diagnostics, not proof of QW4 electron injection mechanism. `hDensity` has NOT yet been added to this cutline plot; at present eDensity selected.

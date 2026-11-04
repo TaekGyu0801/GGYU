@@ -7940,5 +7940,31 @@
     "newRun": false,
     "sourceEdited": false,
     "next": "Read-only inspect actual Wu pp21/pp25 global Physics/Traps options and verify T-2022.03 rate definitions; do not run canceled hGap case"
+  },
+  "leeWuPp25PhysicsTrapGrep20261104": {
+    "worker": "이택규",
+    "dateKST": "2026-11-04",
+    "status": "OBSERVED_GREPPED_EFFECTIVE_CMD",
+    "file": "CMP_WU_Copy/pp25_des.cmd",
+    "globalRecombination": "SRH Radiative Auger",
+    "trapsRegionPairs": 11,
+    "trapRegionsCount": 22,
+    "allObservedTrapBlocksHavePooleFrenkel": true,
+    "headerLine7MentionsThermionicAndPooleFrenkelProxies": true,
+    "trapTypeCrossSectionAndConcentrationFullyRead": false,
+    "pooleFrenkelImpliesTrapRateNetEquality": false,
+    "hGapStatesSaved": false,
+    "trapInclusiveIQEValidated": false,
+    "exactT202203ManualChecked": false,
+    "newSimulation": false,
+    "codeChanged": false,
+    "nextReadOnlyCommand": "sed -n '1,48p;159,177p' pp25_des.cmd",
+    "remaining": [
+      "Confirm exact trap spec and run physics",
+      "Cross-check T-2022.03 electron/hole trap net rate accounting versus SRH",
+      "Choose appropriately limited QW-only IQE proxy or state unavailable",
+      "Evaluate Wu numerical proxy fidelity and QW4 radiative concentration before approving baseline"
+    ],
+    "canceledHGapRerunStillCanceled": true
   }
 }

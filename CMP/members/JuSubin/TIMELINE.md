@@ -1,3 +1,8 @@
+## 2026-11-04 — JuSubin T-2022.03 manual PDF text-tool availability 2026-11-04 (OBSERVED / READ-ONLY PREPARATION)
+- Worker 주수빈 ran `bash -lc 'for p in pdftotext pdfgrep pdfinfo; do command -v "$p" || true; done'` from school CMP_WU_Copy and reported `/usr/bin/pdftotext` and `/usr/bin/pdfinfo`; no `pdfgrep` found on PATH.
+- This enables read-only search of the previously located local T-2022.03 `sdevice_ug.pdf` using `pdftotext -layout ... - | grep -ni -C 5 -E "eGapStatesRecombination|hGapStatesRecombination|SRHRecombination" | head -n 120`. Actual manual text/results **not yet supplied**, so specific accounting rules, electron-vs-hole net trap rate, and final IQE remain UNRESOLVED.
+- No school deck edits/simulation, no source manual upload. Keep previously canceled hGap rerun canceled and n21/n25 preserved.
+
 ## 2026-11-04 — JuSubin local T-2022.03 SDevice manual path confirmed 2026-11-04 (OBSERVED / STEP 2)
 - Worker 주수빈 executed school `bash -lc 'find /user/tools/synopsys/sentaurus/T-2022.03 -type f -iname "sdevice_ug.pdf" 2>/dev/null | head -n 5'` and returned the actual installed document path: `/user/tools/synopsys/sentaurus/T-2022.03/tcad/T-2022.03/manuals/PDFManual/data/sdevice_ug.pdf`.
 - This verifies on-school-host existence of the **T-2022.03 SDevice UG** (subject to file contents/version title check), not yet the meaning of SRH/eGapStates/hGapStates or net pair rate accounting. PDF not copied to GitHub (proprietary source).

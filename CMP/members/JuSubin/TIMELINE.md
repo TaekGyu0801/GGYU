@@ -1,3 +1,8 @@
+## 2026-11-04 JuSubin n25 C1 centerline eDensity plot created (OBSERVED / QW1-4 NUMERICAL PROFILE UNRESOLVED)
+- Worker 주수빈 shared school SVisual screenshot with `n25_des` Trap ON. A vertical C1 cutline is now placed at approximately **Y≈5 um** across the simulated X thickness `0..4.072 um` (left plot). The right panel `Cutline_Y Plot` displays `eDensity(C1(n25_des))` on a log scale vs X, but full horizontal chart range approx X=0..4.1 um compresses narrow MQW x≈0.128..0.164 um to leftmost pixels; no QW-specific carrier comparison can be read reliably.
+- This screenshot is progress in read-only saved-TDR spatial diagnostics, not proof of QW4 electron injection mechanism. `hDensity` has NOT yet been added to this cutline plot; at present eDensity selected.
+- NEXT set right 1D plot X range approx 0.12..0.175 um via SVisual Plot Properties/axis controls (click right plot then open Plot Properties to inspect); compare resolved QW1..4 eDensity spikes and then hDensity on same line. Preserve n21/n25, do not rerun canceled hGap.
+
 ## 2026-11-04 JuSubin SVisual n25 center hDensity viewport confirmed (OBSERVED / NUMERIC DISTRIBUTION PENDING)
 - 작업자 주수빈 학교 Sentaurus Visual T-2022.03 스크린샷: `CMP_WU_Copy/n25_des` (Wu Trap ON) scalar `hDensity` 표시, **X 수직 적층 좌표 약 0.11–0.172 um**, **Y lateral 약 4.94–5.03 um**. 이전 Y=0–0.07 um 왼쪽 측벽 화면과 달리 중앙 Y~5 um 영역을 올바르게 보여주며 QW1–QW4 위치 범위를 포함함.
 - 컬러바 출력 `hDensity (cm^-3)` 전 범위 약 1e-30부터 1.165e20까지로 매우 넓어 화면이 오렌지색으로 거의 균일하게 보여 QW별 정공 농도 우열 **판정 불가**. 이 이미지만으로 QW4 과집중의 원인을 정공/전자 주입 불균형이라고 결론내리지 않음.

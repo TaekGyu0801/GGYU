@@ -1,3 +1,7 @@
+## 2026-11-04 — Wu QW4 left/right Trap OFF versus ON electron gap-state field now compared (OBSERVED)
+- 이택규 SVisual screenshots: n21 OFF eGapStatesRecombination DmgL_QW4 integral 1.387832e-05 over 1.500003e-05 um2; DmgR_QW4 integral 1.387717e-05 over 1.500037e-05 um2. n25 ON left integral 1.365525e13, right 1.365435e13 with matching respective domains. Integrals in s^-1 um^-1. Bilateral sum OFF 2.775549e-05 versus ON 2.730960e13 (derived); no new run/edit. OFF is near numerical zero; do not use ratio as physical trap loss or IQE metric.
+- This completes the selected QW4 electron-gap-rate field comparison only. Trap+SRH accounting, true IQE, all regions, current normalization, and physics fidelity remain unresolved. Next read-only investigate saved SRH/Radiative/Auger fields and official Sentaurus recombination definitions; do not rerun canceled hGap case.
+
 ## 2026-11-04 — Lee Wu n21 OFF DmgL_QW4 eGapStatesRecombination observed
 - Worker 이택규; screenshot SVisual n21_des (Trap OFF), DmgL_QW4 only: Integral +1.387832e-05 s^-1 um^-1, Domain 1.500003e-05 um2. Compare saved n25_des (Trap ON) same region Integral +1.365525e13 s^-1 um^-1, same Domain. ON/OFF ratio approximately 9.84e17; OFF value nonzero, and this ratio is not an IQE or full trap nonradiative-loss measure. No new run, no edits. NEXT check OFF DmgR_QW4 read-only, then independently verify trap/SRH accounting.
 

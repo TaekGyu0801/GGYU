@@ -1,3 +1,6 @@
+## 2026-11-04 — Wu n21 12-QW SRH/Auger checked (OBSERVED)
+- 이택규 saved SVisual n21_des 5V Trap OFF: srhRecombination 12 QW regional Total Integral 6.102184e14 s^-1 um^-1; AugerRecombination 4.442221e15. Earlier Radiative 9.902518e15. Derived QW4 regional contributions: SRH 80.10%, Auger 95.42%, Radiative 91.03%. Individual field/region values in Lee TIMELINE and LIVE_STATE.json. This is NOT IQE or total trap loss, and rate double-counting unresolved. No reruns or code changes. Next collect saved n25 same 12-region three-field batches.
+
 ## 2026-11-04 — Wu n21 Trap OFF QW1–4 radiative map, 12 regions (OBSERVED / DERIVED)
 - 이택규 school SVisual n21_des 5 V RadiativeRecombination: selected 12 exact Clean/DmgL/DmgR QW1–4 regions; Total Integral=9.902518e15 s^-1 um^-1; Total Domain=1.199999e-01 um2. Representative QW4: Clean 9.005734e15, DmgL 4.466154e12, DmgR 4.465761e12. Derived QW4 91.0341% of QW1–4 radiative integral total, QW3 8.9475%. All 12 numbers in Lee TIMELINE and LIVE_STATE.json. This is radiative distribution, not IQE; no new run/code edit.
 - NEXT finish read-only n21 12-region SRH and Auger integrals using same multi-select, then perform corresponding n25 measurements only once. hGap missing and rate double-counting unresolved.

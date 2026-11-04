@@ -1,3 +1,6 @@
+## 2026-11-04 — Lee n21 OFF RadiativeRecombination 12-region QW total (OBSERVED)
+- Saved SVisual n21_des 5 V Trap OFF Field Integration exact Clean, DmgL and DmgR QW1–4 (12 non-composite regions). Observed total integral 9.902518e15 s^-1 um^-1; total domain 1.199999e-01 um2. Clean_QW4 9.005734e15; DmgL_QW4 4.466154e12; DmgR_QW4 4.465761e12. Derived QW4 total 9.014665915e15, share approx 91.0341% of all 12 selected region radiative integrals. QW3 share ~8.9475%. This is radiative spatial distribution, NOT IQE. Individual region integrals stored in Lee TIMELINE. No solver run or code edit. NEXT stay on n21 to batch the same 12 regions for srhRecombination, then AugerRecombination. Afterwards n25 and physical rate accounting.
+
 ## 2026-11-04 — Lee Wu n21 OFF DmgL_QW4 radiative integral recorded
 - School SVisual screenshot: n21_des Trap OFF, RadiativeRecombination, DmgL_QW4 only, Integral 4.466154e12 [s^-1*um^-1], Domain 1.500003e-05 [um^2]. Existing n25 ON same field/region 4.297888e12. DERIVED (ON-OFF)/OFF = approx -3.77% at same 5 V, not full IQE. No new run or code edit. To reduce repetitive dataset switching, finish collecting needed n21 fields before n25. Suggested n21 exact QW region Radiative/SRH/Auger integrals (not merged '+' regions), followed by equivalent n25. Physical rate accounting/possible double counting and missing hGap remain UNRESOLVED.
 

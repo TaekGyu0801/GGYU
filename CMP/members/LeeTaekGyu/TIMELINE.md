@@ -1,3 +1,8 @@
+## 2026-11-04 — Wu ON n25 DmgL_QW4 radiative field integration (OBSERVED)
+- Worker: 이택규. School SVisual saved n25_des (Trap ON, 5 V), Field RadiativeRecombination, selected only DmgL_QW4 (InGaN): Integral +4.297888e12 s^-1 um^-1, Domain 1.500003e-05 um2 (screenshot).
+- Same saved dataset/region previously: srhRecombination +2.397133e11 and eGapStatesRecombination +1.365525e13 s^-1 um^-1. These are three separately displayed output fields; valid total recombination and double-counting rules are NOT yet established, so no IQE or trap-loss percentage should be derived from their naive sum.
+- No new simulation, code change or experimental physics interpretation. NEXT read-only measure n21 OFF RadiativeRecombination for DmgL_QW4 at saved 5 V; then verify rate term definitions and validity of any IQE accounting.
+
 ## 2026-11-04 — Lee Wu n21 OFF versus n25 ON DmgL_QW4 SRH field (OBSERVED / DERIVED)
 - Worker: 이택규. Direct school SVisual screenshot: saved n21_des (Trap OFF), Field srhRecombination, DmgL_QW4 only; Integral +2.450705e11 s^-1 um^-1, Domain 1.500003e-05 um2. Earlier screenshot of saved n25_des (Trap ON), same field/region/domain: +2.397133e11 s^-1 um^-1.
 - DERIVED ON minus OFF = -5.3572e9 s^-1 um^-1, relative to OFF about -2.186%. This is a lower displayed SRH field integral at fixed 5.0 V, not evidence that total nonradiative recombination or trap-mediated IQE loss decreased. In this same region the eGapStatesRecombination field changes from about 1.387832e-05 OFF to 1.365525e13 ON; field overlap and complete hole-trap contribution remain unresolved.

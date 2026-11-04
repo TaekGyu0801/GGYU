@@ -1,3 +1,8 @@
+## 2026-11-04 — Next after all 22 Wu n25 Trap declarations matched
+- COMPLETED (OBSERVED): all 22 damaged region blocks in school pp25_des.cmd display identical Acceptor Level FromValBand 0.75 eV, Conc=1e18, eXsection=hXsection=1e-15 and PooleFrenkel. No need to repeat region-setting grep. User duplicated terminal paste but successful grep lines were returned.
+- NEXT (READ ONLY): establish T-2022.03 exact accounting of `eGapStatesRecombination`, `hGapStatesRecombination`, SRH and potential trap pair-rate imbalance. Distinguish model-declaration consistency from trap-inclusive IQE validity; assess original Wu fidelity and 2D current normalization before locking baseline.
+- Do not overwrite n21/n25 or rerun canceled hGap case. No new run or code edit.
+
 ## 2026-11-04 — Lee Wu validation gates after pp25 Physics grep (READ ONLY)
 - COMPLETED: OFF/ON 5V solve and selected QW 12-region Radiative/SRH/Auger comparisons; n25 eGap ON integrated, representative trap concentrations, pp command/par comparison, n25 global SRH/Radiative/Auger and 22 regional Trap+PooleFrenkel blocks confirmed.
 - FIRST NEXT: one read-only command `sed -n '1,48p;159,177p' pp25_des.cmd` to see model header/global physics and exact QW4 trap type, level, concentration, cross sections, PF. Review against T-2022.03 reference (guide original not accessible through repository). No rerun/code edit.

@@ -1,3 +1,6 @@
+## 2026-11-04 n21 QW SRH/Auger batching completed
+- OBSERVED (이택규, saved n21_des): 12 exact QW regions SRH Total Integral 6.102184e14, Auger Total Integral 4.442221e15, earlier Radiative 9.902518e15 (all s^-1 um^-1). Derived QW4 share: SRH 80.10%, Auger 95.42%, Radiative 91.03%. Individual integrals in Lee TIMELINE and LIVE_STATE.json. No run/edit. NEXT switch once to n25 and repeat 12-region Radiative, SRH and Auger. These fractions are not IQE; missing hGap and rate accounting unresolved.
+
 ## 2026-11-04 — Lee n21 OFF RadiativeRecombination 12-region QW total (OBSERVED)
 - Saved SVisual n21_des 5 V Trap OFF Field Integration exact Clean, DmgL and DmgR QW1–4 (12 non-composite regions). Observed total integral 9.902518e15 s^-1 um^-1; total domain 1.199999e-01 um2. Clean_QW4 9.005734e15; DmgL_QW4 4.466154e12; DmgR_QW4 4.465761e12. Derived QW4 total 9.014665915e15, share approx 91.0341% of all 12 selected region radiative integrals. QW3 share ~8.9475%. This is radiative spatial distribution, NOT IQE. Individual region integrals stored in Lee TIMELINE. No solver run or code edit. NEXT stay on n21 to batch the same 12 regions for srhRecombination, then AugerRecombination. Afterwards n25 and physical rate accounting.
 

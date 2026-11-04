@@ -1,3 +1,6 @@
+## 2026-11-04 — Lee Wu n21 OFF DmgL_QW4 eGapStatesRecombination observed
+- Worker 이택규; screenshot SVisual n21_des (Trap OFF), DmgL_QW4 only: Integral +1.387832e-05 s^-1 um^-1, Domain 1.500003e-05 um2. Compare saved n25_des (Trap ON) same region Integral +1.365525e13 s^-1 um^-1, same Domain. ON/OFF ratio approximately 9.84e17; OFF value nonzero, and this ratio is not an IQE or full trap nonradiative-loss measure. No new run, no edits. NEXT check OFF DmgR_QW4 read-only, then independently verify trap/SRH accounting.
+
 ## 2026-11-04 Lee Wu DmgL_QW4 eGapStates region integration (OBSERVED)
 - Saved n25_des (Trap ON) SVisual screenshot: eGapStatesRecombination, DmgL_QW4 only; Integral +1.365525e13 s^-1 um^-1, Domain 1.500003e-05 um2. Earlier Clean_QW4 same rate integral=0. This proves nonzero electron gap-state recombination field integral in left damaged QW4, not full trap recombination or IQE. No rerun/edit. NEXT inspect DmgR_QW4 same field, then compare against saved OFF and establish rate accounting before IQE.
 

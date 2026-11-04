@@ -7691,5 +7691,23 @@
     "newRun": false,
     "codeModified": false,
     "next": "Review T-2022.03 official rate accounting and saved radiative/auger fields without rerunning"
+  },
+  "leeWuN25DmgLQW4Radiative20261104": {
+    "worker": "이택규",
+    "dateKST": "2026-11-04",
+    "status": "OBSERVED_SCREENSHOT",
+    "dataset": "n25_des",
+    "trap": "ON",
+    "field": "RadiativeRecombination",
+    "region": "DmgL_QW4",
+    "integralS1Um1": 4297888000000,
+    "domainUm2": 0.00001500003,
+    "priorSameRegionSrhS1Um1": 239713300000,
+    "priorSameRegionEGapStatesS1Um1": 13655250000000,
+    "trapInclusiveIQEValidated": false,
+    "rateOverlapValidated": false,
+    "newRun": false,
+    "codeModified": false,
+    "next": "Saved n21 OFF RadiativeRecombination DmgL_QW4 Field Integration and validate rate accounting"
   }
 }

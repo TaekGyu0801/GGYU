@@ -1,3 +1,7 @@
+## 2026-11-04 — JuSubin n25 central C1 CSV export verified (OBSERVED / QW NUMERICAL ANALYSIS PENDING)
+- 작업자 주수빈 학교 CMP_WU_Copy에서 SVisual Export XY Data 변수 `X,eDensity,hDensity,RadiativeRecombination`를 `WU_n25_C1_QW_carrier_rad.csv`로 저장한 뒤 직접 터미널 `head -n 12 WU_n25_C1_QW_carrier_rad.csv` 결과를 제공함. CSV header 정확히 네 변수, 두 번째 행 `none,none,none,none`(수치 아님; 분석시 제외), 첫 수치 행 X=0, 뒤 X=.0318125..0.12um etc. X~0.12 이하 시작 부분은 QW 비교 범위가 아니라 p측/Barrier0 영역에 해당함. 전체 CSV는 아직 직접 확인하지 않았으며 QW별 e/h/Rad 피크/평균값은 미측정.
+- NEXT (READ-ONLY): 저장된 CSV에서 QW1 X=[.128,.131), QW2 [.139,.142), QW3 [.150,.153), QW4 [.161,.164) 샘플 각각 n, mean(eDensity), mean(hDensity), mean(Radiative), max peak 및 n*p 비교. 1D 중앙 cutline의 평균/피크는 2D 영역 적분이나 IQE가 아님. 기존 n21/n25 저장/취소 hGap rerun 보존.
+
 ## 2026-11-04 JuSubin SVisual n25 center hDensity viewport confirmed (OBSERVED / NUMERIC DISTRIBUTION PENDING)
 - 작업자 주수빈 학교 Sentaurus Visual T-2022.03 스크린샷: `CMP_WU_Copy/n25_des` (Wu Trap ON) scalar `hDensity` 표시, **X 수직 적층 좌표 약 0.11–0.172 um**, **Y lateral 약 4.94–5.03 um**. 이전 Y=0–0.07 um 왼쪽 측벽 화면과 달리 중앙 Y~5 um 영역을 올바르게 보여주며 QW1–QW4 위치 범위를 포함함.
 - 컬러바 출력 `hDensity (cm^-3)` 전 범위 약 1e-30부터 1.165e20까지로 매우 넓어 화면이 오렌지색으로 거의 균일하게 보여 QW별 정공 농도 우열 **판정 불가**. 이 이미지만으로 QW4 과집중의 원인을 정공/전자 주입 불균형이라고 결론내리지 않음.

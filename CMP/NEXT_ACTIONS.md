@@ -1,3 +1,7 @@
+## 2026-11-04 Lee — next after bilateral QW4 eGapStates checks
+- OBSERVED: n21 OFF and n25 ON eGapStatesRecombination DmgL_QW4 and DmgR_QW4 integrals are now available; do not repeat the four checks.
+- NEXT READ ONLY: quantify saved QW4 RadiativeRecombination, SRHRecombination and AugerRecombination per region, and verify trap versus SRH rate accounting against authorized T-2022.03 manual before deriving IQE. Missing hGapStates field remains an analysis limitation. No runs or code edits; existing cancellation of optional rerun remains in effect.
+
 ## 2026-11-04 — JuSubin CANCELLED overnight simulation proposal (REJECTED / NOT RUN)
 - USER DECISION: "아니다 이건 하지 말자. 취소해줘ㅈ" — prior optional overnight `hGapStatesRecombination`-only ON rerun proposal is **CANCELLED**. Do not execute or schedule it, do not restart `n29`, and do not modify SDevice/SWB/code.
 - ChatGPT had not run or scheduled any school-server simulation. Previously completed `CMP_WU_Copy` n21 OFF and n25 ON TDR/results remain unchanged.

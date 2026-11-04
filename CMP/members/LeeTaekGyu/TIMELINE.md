@@ -1,3 +1,20 @@
+## 2026-11-04 — Lee Wu n21 12-QW SRH and Auger field integrations completed (OBSERVED / DERIVED)
+- Worker: 이택규. SVisual screenshots of saved `CMP_WU_Copy/n21_des` Trap OFF (5 V); selected 12 non-composite QW regions Clean_QW1..4, DmgL_QW1..4, DmgR_QW1..4, no "+" unions.
+- OBSERVED `srhRecombination` integrals [s^-1*um^-1], by QW1/QW2/QW3/QW4:
+  - Clean: 6.418660e11 / 6.053790e11 / 1.200834e14 / 4.882756e14
+  - DmgL: 3.211880e8 / 3.029955e8 / 6.041855e10 / 2.450705e11
+  - DmgR: 3.211945e8 / 3.028743e8 / 6.042168e10 / 2.450456e11
+  - SVisual Total Integral=6.102184e14 [s^-1*um^-1]; Total Domain approximately 1.199999e-01 um2.
+- OBSERVED `AugerRecombination` integrals [s^-1*um^-1], QW1..4:
+  - Clean: 1.544212e11 / 1.440866e11 / 2.027492e14 / 4.234775e15
+  - DmgL: 7.726844e7 / 7.095381e7 / 1.022639e11 / 2.096926e12
+  - DmgR: 7.727060e7 / 7.099971e7 / 1.022650e11 / 2.096875e12
+  - SVisual Total Integral=4.442221e15 [s^-1*um^-1]; total domain not fully visible in Auger screenshot.
+- Previously n21 12-QW `RadiativeRecombination` SVisual Total Integral=9.902518e15 [s^-1*um^-1].
+- DERIVED (using rounded region values): QW4 share SRH = 80.09684%; Auger = 95.42453%; Radiative = 91.03408%. These fractions describe spatial distribution of each saved rate field, not IQE. No valid trap-inclusive IQE yet: SRH/eGap overlap, missing hGapStates, full rate accounting and current normalization unresolved.
+- User requested efficient workflow: n21 Radiative/SRH/Auger 12-QW batches now finished; next switch to n25 ON once and repeat three fields over exact same 12 QW regions, preserving existing n25 DmgL_QW4 measurements.
+- No new SDevice run or code edit; canceled optional hGapStates rerun remains canceled.
+
 ## 2026-11-04 — Lee Wu n21 12 QW region RadiativeRecombination batch (OBSERVED, DERIVED)
 - Worker: 이택규. School SVisual n21_des Trap OFF (5 V) Field Integration RadiativeRecombination, 12 *distinct* regions (Clean/DmgL/DmgR QW1–4; no composite '+' regions).
 - OBSERVED integrals [s^-1*um^-1] by QW, in Clean / DmgL / DmgR order:

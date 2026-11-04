@@ -1,3 +1,6 @@
+## 2026-11-04 — Lee n21 done; switch to n25 for matching 12-QW rates
+- OBSERVED: Saved n21 Trap OFF 12-region Radiative, SRH, Auger Field Integration completed; no more n21 repetition needed for these three fields. NEXT user action: open saved n25_des (Trap ON), select exact Clean_QW1..4, DmgL_QW1..4, DmgR_QW1..4 (no '+' composite regions), then Field Integration once for each RadiativeRecombination, srhRecombination, AugerRecombination. Record all 12 integrals and totals; compare only matching fields/regions and identical bias. Rate-term overlap, hGap missing and physical IQE still unresolved. Do not rerun canceled hGap case.
+
 ## 2026-11-04 — Lee Wu n21 Radiative 12 QW regions completed; next batch SRH (OBSERVED / NEXT)
 - OBSERVED SVisual n21_des saved 12-region RadiativeRecombination total integral 9.902518e15 s^-1 um^-1; no repeats necessary. NEXT keep n21_des selected, retain the same 12 exact Clean/DmgL/DmgR QW1–4 region multi-selection, switch Field to srhRecombination, run Field Integration once and record all regions plus total (then AugerRecombination once). Only switch to n25 after n21 batches completed. Avoid '+' composite selections; no solver rerun/source edit. The cancellation of the overnight hGap rerun remains in force. Double counting/physical IQE remains unresolved.
 

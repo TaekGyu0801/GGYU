@@ -1,3 +1,9 @@
+## 2026-11-04 — Wu OFF/ON QW4 left/right eGapStates comparison complete (OBSERVED / DERIVED)
+- Worker: 이택규. School SVisual saved n21_des screenshot: eGapStatesRecombination, DmgR_QW4 (InGaN) exclusively selected; integral +1.387717e-05 s^-1 um^-1, domain 1.500037e-05 um2. This is the OFF/right measurement, not a rerun.
+- Prior saved n21 OFF/left DmgL_QW4: +1.387832e-05, domain 1.500003e-05. Prior n25 ON/left: +1.365525e13, same left domain; ON/right: +1.365435e13, same right domain. All integrals in s^-1 um^-1.
+- DERIVED left+right OFF sum 2.775549e-05, ON sum 2.730960e13 s^-1 um^-1. ON values much larger, both left/right similar. ON/OFF ratios are unstable physical metrics because OFF is extremely close to zero. This eGapStates field alone is NOT total net trap recombination or trap-inclusive IQE; do not infer IQE drop or add to SRH without validating definitions and double counting.
+- QW4 bilateral sampled comparison finished; no new solver run or code edits. NEXT read-only examine actual saved SRH/Radiative/Auger rate integrals, bias and the physical model definitions. Respect cancellation of overnight hGap rerun. Keep n21/n25 intact.
+
 ## 2026-11-04 — Wu OFF n21 left QW4 eGapStates integral (OBSERVED / DERIVED)
 - Worker 이택규. School SVisual screenshot saved n21_des Trap OFF, eGapStatesRecombination, exclusively DmgL_QW4 (InGaN): Integral +1.387832e-05 s^-1 um^-1 and Domain 1.500003e-05 um2.
 - Prior ON n25 same selected DmgL_QW4: +1.365525e13 s^-1 um^-1 and identical Domain. DERIVED ON/OFF about 9.84e17 times, but OFF is a tiny nonzero value and multiplier does NOT represent measured IQE deterioration or full trap nonradiative recombination.

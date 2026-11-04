@@ -1,3 +1,7 @@
+## 2026-11-04 — Wu pp25 22-region trap settings verified (OBSERVED)
+- 이택규 actual school `CMP_WU_Copy/pp25_des.cmd` grep: all 22 DmgL/DmgR sidewall region trap blocks (pGaN, Barrier0–4, QW1–4, nGaN) share `Acceptor Level FromValBand EnergyMid=0.75`, `Conc=1e18`, `eXsection=1e-15`, `hXsection=1e-15`, `PooleFrenkel`. This verifies declared settings, not every output value or paper fidelity. No new simulation/code edit. Duplicate pasted grep command caused a harmless missing file error, but subsequent correct matches listed all 22.
+- NEXT: review actual T-2022.03 e/h trap versus SRH accounting; 12-QW 5V proxy is not validated IQE. Preserve n21/n25 and do not restart canceled hGap rerun. Issue #7 comment 6625502078.
+
 ## 2026-11-04 — Lee Wu actual pp25 Physics/Trap grep and remaining validation gates (OBSERVED / UNRESOLVED)
 - Worker 이택규; direct school CMP_WU_Copy command: `grep -nEi '^[[:space:]]*Physics|Recombination[[:space:]]*\(|Traps[[:space:]]*\(|PooleFrenkel|Tunneling|TrapFilling|AreaFactor' pp25_des.cmd | head -n 90`.
 - OBSERVED: `Physics {` line22, global `Recombination( SRH Radiative Auger )` line27; 22 separate regional `Physics (Region="DmgL/R_*") { Traps( ... PooleFrenkel)` groups for pGaN, Barrier0..4, QW1..4, nGaN (11 left/right pairs). Representative lines DmgL_QW4 163–167; DmgR_QW4 171–175. Header line7 itself states Thermionic and PooleFrenkel are motivated numerical proxies, not evidence of exact paper fidelity; full header not yet read.

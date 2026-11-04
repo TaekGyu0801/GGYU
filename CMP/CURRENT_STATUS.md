@@ -1,3 +1,7 @@
+## 2026-11-04 — Wu OFF/ON QW 12-region rates comparison (OBSERVED / DERIVED)
+- 이택규 school saved n21 OFF and n25 ON at 5.0 V. 12 exact Clean/DmgL/DmgR QW1–4 regional SVisual Field Integration totals [s^-1 um^-1]: Rad OFF 9.902518e15, ON 9.869850e15 (-0.3299%); SRH OFF 6.102184e14, ON 6.086824e14 (-0.2517%); Auger OFF 4.442221e15, ON 4.424524e15 (-0.3984%). ON eGapStatesRecombination QW-only total 4.148388e13 (Clean QWs each zero), 65.8318% from QW4 and 27.5257% QW3. Full OFF 12-QW eGap total not measured. Detailed region-level values in TIMELINE and LIVE_STATE.json.
+- These are same-V selected QW rate fields, not whole-device, matched-current exact comparison or IQE. SRH/eGap double-count rules, missing hGapStates and current normalization are UNRESOLVED. No new solver run or code change. NEXT only read-only official T-2022.03 output-model accounting and available saved fields, then decide valid provisional IQE metric. No canceled hGap rerun.
+
 ## 2026-11-04 — Wu n21 12-QW SRH/Auger checked (OBSERVED)
 - 이택규 saved SVisual n21_des 5V Trap OFF: srhRecombination 12 QW regional Total Integral 6.102184e14 s^-1 um^-1; AugerRecombination 4.442221e15. Earlier Radiative 9.902518e15. Derived QW4 regional contributions: SRH 80.10%, Auger 95.42%, Radiative 91.03%. Individual field/region values in Lee TIMELINE and LIVE_STATE.json. This is NOT IQE or total trap loss, and rate double-counting unresolved. No reruns or code changes. Next collect saved n25 same 12-region three-field batches.
 

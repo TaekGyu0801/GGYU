@@ -7815,5 +7815,107 @@
     "newRun": false,
     "codeModified": false,
     "next": "Switch to n25 once for 12-region Radiative, SRH, Auger batched saved-data integration; preserve existing samples"
+  },
+  "leeWuN25AllQwRateIntegrals20261104": {
+    "worker": "이택규",
+    "dateKST": "2026-11-04",
+    "status": "OBSERVED_SVISUAL_AND_DERIVED",
+    "dataset": "n25_des",
+    "trap": "ON",
+    "biasV": 5,
+    "integralUnit": "s^-1*um^-1",
+    "regionCount": 12,
+    "observedDomainUm2": 0.1199999,
+    "radiative": {
+      "byRegion": {
+        "Clean_QW1": 737887600000,
+        "DmgL_QW1": 336123800,
+        "DmgR_QW1": 336369700,
+        "Clean_QW2": 1065895000000,
+        "DmgL_QW2": 519989200,
+        "DmgR_QW2": 519713500,
+        "Clean_QW3": 875745200000000,
+        "DmgL_QW3": 422207200000,
+        "DmgR_QW3": 422221800000,
+        "Clean_QW4": 8982859000000000,
+        "DmgL_QW4": 4297888000000,
+        "DmgR_QW4": 4297459000000
+      },
+      "totalObserved": 9869850000000000,
+      "offObserved": 9902518000000000,
+      "derivedChangePercent": -0.32989589112587536
+    },
+    "srh": {
+      "byRegion": {
+        "Clean_QW1": 638736600000,
+        "DmgL_QW1": 319559500,
+        "DmgR_QW1": 319569000,
+        "Clean_QW2": 597281700000,
+        "DmgL_QW2": 294585000,
+        "DmgR_QW2": 294430100,
+        "Clean_QW3": 119314500000000,
+        "DmgL_QW3": 58460740000,
+        "DmgR_QW3": 58462830000,
+        "Clean_QW4": 487534300000000,
+        "DmgL_QW4": 239713300000,
+        "DmgR_QW4": 239684900000
+      },
+      "totalObserved": 608682400000000,
+      "offObserved": 610218400000000,
+      "derivedChangePercent": -0.25171315712538833
+    },
+    "auger": {
+      "byRegion": {
+        "Clean_QW1": 154200500000,
+        "DmgL_QW1": 68353210,
+        "DmgR_QW1": 68429930,
+        "Clean_QW2": 142770200000,
+        "DmgL_QW2": 66745540,
+        "DmgR_QW2": 66803900,
+        "Clean_QW3": 200061200000000,
+        "DmgL_QW3": 95252210000,
+        "DmgR_QW3": 95254060000,
+        "Clean_QW4": 4219999000000000,
+        "DmgL_QW4": 1988205000000,
+        "DmgR_QW4": 1988158000000
+      },
+      "totalObserved": 4424524000000000,
+      "offObserved": 4442221000000000,
+      "derivedChangePercent": -0.39838180045522753
+    },
+    "eGapStates": {
+      "byRegion": {
+        "Clean_QW1": 0,
+        "DmgL_QW1": 680249000000,
+        "DmgR_QW1": 680495900000,
+        "Clean_QW2": 0,
+        "DmgL_QW2": 697310400000,
+        "DmgR_QW2": 697520100000,
+        "Clean_QW3": 0,
+        "DmgL_QW3": 5709345000000,
+        "DmgR_QW3": 5709368000000,
+        "Clean_QW4": 0,
+        "DmgL_QW4": 13655250000000,
+        "DmgR_QW4": 13654350000000
+      },
+      "totalObserved": 41483880000000,
+      "offFullRegionTotalObserved": false,
+      "qwSharesPercent": [
+        3.2801768408961394,
+        3.3623427161664043,
+        27.525657406792174,
+        65.83182303614528
+      ]
+    },
+    "limitations": [
+      "QW-only field integrals at 5V",
+      "Missing full OFF eGap 12-region integration",
+      "hGapStatesRecombination not plotted",
+      "Trap/SRH field accounting and double counting unverified",
+      "No validated IQE"
+    ],
+    "newSimulation": false,
+    "codeModified": false,
+    "next": "Read-only authoritative rate field definition audit, resolve trap/SRH net accounting before IQE"
   }
 }

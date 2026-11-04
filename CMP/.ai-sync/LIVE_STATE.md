@@ -1,3 +1,7 @@
+## 2026-11-04 — Lee Wu ON DmgR_QW4 trap density checked (OBSERVED / DERIVED)
+- Worker: 이택규. Actual saved `CMP_WU_Copy/n25_des` SVisual Field Integration, Field `TotalTrapConcentration`, selected region `DmgR_QW4 (InGaN)`. Screenshot shows Integral=1.500037e+01 [um^-1], Domain=1.500037e-05 [um^2]. Mean = 15.00037 / 0.00001500037 = 1e6 [um^-3] = **1e18 cm^-3**, matching ON NtSide. Earlier DmgL_QW4 region also 1e18 cm^-3; both left and right QW4 regional averages verified. This does NOT establish uniformity inside each region, all 22 damaged regions, recombination loss, or trap-inclusive IQE.
+- No rerun or school code edit. NEXT read-only `Clean_QW4` in same n25 TotalTrapConcentration to confirm clean center vs both sidewalls; then sample Barrier4 and review trap-rate accounting.
+
 ## 2026-11-04 Lee Wu left QW4 trap ON measurement (OBSERVED)
 - User SVisual n25_des TotalTrapConcentration integration region DmgL_QW4 InGaN: Integral 1.500003e+01 um^-1, Domain 1.500003e-05 um2. DERIVED regional mean 1e6 um^-3 = 1e18 cm^-3 = ON NtSide setting. This validates the sampled QW4 left region mean, not full 22-region uniformity or trap-inclusive IQE. No rerun. NEXT right DmgR_QW4 and Clean_QW4 saved TDR.
 

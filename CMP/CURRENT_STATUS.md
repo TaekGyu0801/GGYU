@@ -1,3 +1,8 @@
+## 2026-11-04 — Lee Wu n21/n25 parameter-file byte equality (OBSERVED)
+- Worker 이택규; school directory `/user/semi/semi437/tmp/myproject/CMP_WU_Copy` in Bash, read-only command `cmp -s pp21_des.par pp25_des.par; echo "PAR_CMP_EXIT=$?"` returned **PAR_CMP_EXIT=0**. Thus full preprocessed parameter files are byte-identical in the observed school directory.
+- Combined with earlier complete normalized `pp21_des.cmd`/`pp25_des.cmd` diff `CMD_DIFF_EXIT=0`, OFF/ON CMD and parameter content equivalence is supported, after excluding run-specific filenames and intentional trap Conc=0 vs 1e18 cm^-3. This is **not** yet the complete same-mesh-at-run-time or same-current validation.
+- NEXT read-only: inspect `n1_msh.tdr` timestamps and n21/n25 completed logs, plus explicit same input grid file in pp; ensure no mesh regeneration between runs before considering controlled Trap study. No solver/code edits; trap-inclusive IQE remains UNRESOLVED.
+
 ## 2026-11-04 — Lee Wu full SDevice CMD normalized OFF/ON equality PASSED (OBSERVED)
 - Worker 이택규. School shell in `/user/semi/semi437/tmp/myproject/CMP_WU_Copy` executed FULL (untruncated) diff between `pp21_des.cmd` and `pp25_des.cmd`, normalizing run-specific `n21/n25`, `pp21/pp25` output file labels and explicit trap `Conc=(0|1e18)` to `NtSide`. User output exactly `CMD_DIFF_EXIT=0`, with no diff content.
 - OBSERVED: the **normalized complete preprocessed SDevice CMD texts are identical**. Prior raw sample showed only expected file-name and trap-concentration differences; prior grep found 22 trap declarations in each (OFF 0, ON 1e18 cm^-3), same trap energy 0.75 eV, e/h cross-sections 1e-15 cm², polarization strain and Mg incomplete-ionization directives. This is a strong **CMD-equivalence gate PASS**.

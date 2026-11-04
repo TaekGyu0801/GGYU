@@ -1,3 +1,16 @@
+## 2026-11-04 — Wu n25 Trap ON 12-QW Radiative/SRH/Auger/eGap batches complete (OBSERVED / DERIVED)
+- Worker 이택규, source actual SVisual screenshots from saved `CMP_WU_Copy/n25_des` (5 V); each Field Integration selected the exact 12 Clean_QW1–4 / DmgL_QW1–4 / DmgR_QW1–4 regions without composite '+' entries. Auger screenshot duplicated, counted once. Integral units for all fields: s^-1*um^-1; total domain 1.199999e-01 um2.
+- n25 OBSERVED RadiativeRecombination, [QW1,QW2,QW3,QW4]:
+  Clean [7.378876e11,1.065895e12,8.757452e14,8.982859e15]; DmgL [3.361238e8,5.199892e8,4.222072e11,4.297888e12]; DmgR [3.363697e8,5.197135e8,4.222218e11,4.297459e12]. SVisual Total=9.869850e15.
+- n25 OBSERVED srhRecombination:
+  Clean [6.387366e11,5.972817e11,1.193145e14,4.875343e14]; DmgL [3.195595e8,2.945850e8,5.846074e10,2.397133e11]; DmgR [3.195690e8,2.944301e8,5.846283e10,2.396849e11]. Total=6.086824e14.
+- n25 OBSERVED AugerRecombination:
+  Clean [1.542005e11,1.427702e11,2.000612e14,4.219999e15]; DmgL [6.835321e7,6.674554e7,9.525221e10,1.988205e12]; DmgR [6.842993e7,6.680390e7,9.525406e10,1.988158e12]. Total=4.424524e15.
+- n25 OBSERVED eGapStatesRecombination:
+  Clean [0,0,0,0]; DmgL [6.802490e11,6.973104e11,5.709345e12,1.365525e13]; DmgR [6.804959e11,6.975201e11,5.709368e12,1.365435e13]. Total=4.148388e13.
+- Prior n21 OBSERVED totals: Radiative 9.902518e15; SRH 6.102184e14; Auger 4.442221e15. n21 eGapStates total over all 12 QW regions has NOT been sampled (only DmgL/R_QW4 individually). DERIVED displayed-total change percentages n25 ON vs n21 OFF: Radiative -0.329896%, SRH -0.251713%, Auger -0.398382%. n25 eGapStates QW distribution shares: QW1 3.2802%, QW2 3.3623%, QW3 27.5257%, QW4 65.8318%.
+- These are 5-V comparisons of 12-QW saved field integrals, not whole-device recombination sums, calibrated current density, measured IQE or full trap-mediated loss. `SRHRecombination` vs `eGapStatesRecombination` overlap/definitions, `hGapStatesRecombination` absence, and other non-QW recombination remain unresolved. No new solver execution or code modifications. NEXT prioritize authoritative T-2022.03 rate-field definitions and non-double-counting audit; then decide supported conditional IQE proxy, with no previously canceled overnight hGap rerun.
+
 ## 2026-11-04 — Lee Wu n21 12-QW SRH and Auger field integrations completed (OBSERVED / DERIVED)
 - Worker: 이택규. SVisual screenshots of saved `CMP_WU_Copy/n21_des` Trap OFF (5 V); selected 12 non-composite QW regions Clean_QW1..4, DmgL_QW1..4, DmgR_QW1..4, no "+" unions.
 - OBSERVED `srhRecombination` integrals [s^-1*um^-1], by QW1/QW2/QW3/QW4:

@@ -1,3 +1,8 @@
+## 2026-11-04 — Lee Wu Trap ON DmgL_QW4 average Nt verified in saved SVisual (OBSERVED / DERIVED)
+- Worker 이택규, school saved `CMP_WU_Copy/n25_des` Trap ON. User screenshot of Sentaurus Field Integration: Field `TotalTrapConcentration`, only Region `DmgL_QW4 (InGaN)` selected. OBSERVED Integral = 1.500003e+01 [um^-1]; Domain = 1.500003e-05 [um^2].
+- DERIVED mean = 15.00003 / 1.500003e-5 = 1.000000e6 um^-3 = **1.000000e18 cm^-3**, consistent with target `NtSide=1e18`. This extends earlier direct ON QW1 left/right region checks to ON QW4 LEFT. It is an area-average; no proof of region-wise uniformity beyond this average. QW4 right / clean and Barrier4 remain unmeasured in this turn. This is trap CONCENTRATION evidence, not proof of trap-caused net recombination or complete IQE.
+- No SDevice rerun, input edit or output modification. NEXT read-only SVisual saved n25 `DmgR_QW4` `TotalTrapConcentration` Integral/Domain; optionally `Clean_QW4` and `DmgL/R_Barrier4` before moving to rate accounting.
+
 ## 2026-11-04 — Lee Wu runtime grid/doping input check
 - OBSERVED: School `CMP_WU_Copy` n21/n25 logs both show `Grid file: n1_msh.tdr` (241), `Reading grid` (697), `Reading doping` (805), same path. This confirms runtime path matching, not byte-for-byte identity at each execution. Earlier normalized CMD and full PAR comparison both passed, and both solvers finished. No rerun or code change. NEXT saved n25 QW4/Barrier4 TotalTrapConcentration integration; full IQE unresolved.
 

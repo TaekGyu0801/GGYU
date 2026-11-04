@@ -1,4 +1,26 @@
 {
+  "leeWuPp21Pp25PartialDiff20261104": {
+    "worker": "이택규",
+    "eventDateKST": "2026-11-04",
+    "status": "OBSERVED_PARTIAL_DIFF_READ_ONLY",
+    "command": "diff -u pp21_des.cmd pp25_des.cmd | head -n 120",
+    "scope": "first 120 lines only, remaining differences unexamined",
+    "sameGridPath": "n1_msh.tdr",
+    "differentRunOutputNames": true,
+    "trapDifference": "Conc=0 to Conc=1e18 for shown blocks",
+    "sameShownTrapEnergyMidEv": 0.75,
+    "sameShownTrapXsectionsCm2": {
+      "electron": 1e-15,
+      "hole": 1e-15
+    },
+    "notValidated": [
+      "entire CMD diff",
+      "effective .par equivalence",
+      "all-run one-variable equivalence",
+      "full physical trap-inclusive IQE"
+    ],
+    "next": "Normalize only run-specific filenames and trap Conc values, compare complete pp21/pp25 CMD; independently inspect pp21_des.par and pp25_des.par; no simulation rerun."
+  },
   "leeWuPp21Pp25ReadOnly20261104": {
     "worker": "이택규",
     "eventDateKST": "2026-11-04",

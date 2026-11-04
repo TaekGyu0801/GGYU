@@ -7917,5 +7917,28 @@
     "newSimulation": false,
     "codeModified": false,
     "next": "Read-only authoritative rate field definition audit, resolve trap/SRH net accounting before IQE"
+  },
+  "leeWuRateAccountingReview20261104": {
+    "worker": "이택규",
+    "dateKST": "2026-11-04",
+    "status": "DOCUMENTED_OLDER_SYNOPSYS_GUIDES_CONDITIONAL_NUMERIC_PROXY",
+    "references": [
+      "https://ghzphy.github.io/Sentaurus_Training/sd/sd_13.html",
+      "https://studylib.net/doc/27467177/sdevice-ug---%E5%89%AF%E6%9C%AC",
+      "https://studylib.net/doc/27205378/synopsis-sentaurus-user-manual"
+    ],
+    "separateSrhAndExplicitTrapTermsSupportedByOlderGuides": true,
+    "exactT202203GuideChecked": false,
+    "existingWuHGapFieldSaved": false,
+    "fullOffEGapQWIntegrationVerified": false,
+    "netTrapPairRecombinationValidated": false,
+    "threeChannelOffProxyPercent": 66.21562158378332,
+    "threeChannelOnProxyPercent": 66.22701904288573,
+    "onPlusElectronTrapIllustrativePercent": 66.04318242702077,
+    "illustrativeOnMinusOffPercentagePoints": -0.1724391567625494,
+    "note": "All proxies are QW-only same-5V algebra, not verified physical IQE. Need exact installed version and e/h trap rate accounting.",
+    "newRun": false,
+    "sourceEdited": false,
+    "next": "Read-only inspect actual Wu pp21/pp25 global Physics/Traps options and verify T-2022.03 rate definitions; do not run canceled hGap case"
   }
 }

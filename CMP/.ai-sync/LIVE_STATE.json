@@ -1,4 +1,23 @@
 {
+  "leeWuN25DmgRQW4Trap20261104": {
+    "worker": "이택규",
+    "dateKST": "2026-11-04",
+    "project": "CMP_WU_Copy",
+    "dataset": "n25_des",
+    "condition": "NtSide=1e18 Trap ON",
+    "field": "TotalTrapConcentration",
+    "region": "DmgR_QW4",
+    "status": "OBSERVED_INTEGRAL_AND_DERIVED_MEAN",
+    "integralUmInverse": 15.00037,
+    "domainUmSquared": 0.00001500037,
+    "derivedMeanUmMinus3": 1000000,
+    "derivedMeanCmMinus3": 1000000000000000000,
+    "otherRegionVerified": "DmgL_QW4 mean 1e18 cm^-3",
+    "cleanQW4NotYetSampled": true,
+    "trapInclusiveIQEValidated": false,
+    "newSimulation": false,
+    "next": "Measure Clean_QW4 TotalTrapConcentration Integral and Domain in saved n25, then Barrier4"
+  },
   "leeWuN25DmgLQW4Trap20261104": {
     "worker": "이택규",
     "dateKST": "2026-11-04",

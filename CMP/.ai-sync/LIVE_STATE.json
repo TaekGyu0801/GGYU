@@ -1,4 +1,24 @@
 {
+  "leeWuN25DmgRBarrier4Trap20261104": {
+    "worker": "이택규",
+    "dateKST": "2026-11-04",
+    "node": 25,
+    "region": "DmgR_Barrier4",
+    "field": "TotalTrapConcentration",
+    "integralUmInverse": 39.96092,
+    "domainUmSquared": 0.00004000092,
+    "derivedMeanCm3": 999000000000000000,
+    "nominalCm3": 1000000000000000000,
+    "deviationPercentApprox": -0.1,
+    "status": "OBSERVED_INTEGRAL_DERIVED_REGION_MEAN",
+    "differenceCauseVerified": false,
+    "leftBarrier4AverageCm3": 999000000000000000,
+    "spotCheckRepresentativeCompleted": true,
+    "all22Verified": false,
+    "trapInclusiveIQEValidated": false,
+    "newSimulation": false,
+    "next": "Stop redundant concentration checks; inspect official Sentaurus definitions of eGapStates/SRH and total rate accounting using saved outputs without rerun"
+  },
   "leeWuN25DmgLBarrier4Trap20261104": {
     "worker": "이택규",
     "dateKST": "2026-11-04",

@@ -1,3 +1,6 @@
+## 2026-11-04 Lee Wu right Barrier4 observation
+- User SVisual n25 ON TotalTrapConcentration, DmgR_Barrier4: Integral 3.996092e+01 um^-1, Domain 4.000092e-05 um2. Mean 9.990e17 cm^-3 (about 0.1 percent below ON nominal 1e18). Left Barrier4 had similar average. Representative QW1/QW4 left and right traps and clean QW centers had already been checked. This is not a complete IQE or full 22-region uniformity proof. No new runs or source edits. Next investigate recombination accounting and trap-inclusive IQE with saved data only.
+
 ## 2026-11-04 — Lee Wu n25 DmgL_Barrier4 trap regional mean (OBSERVED / DERIVED)
 - Worker: 이택규. Saved `CMP_WU_Copy/n25_des` Field Integration screenshot, `TotalTrapConcentration` selected only `DmgL_Barrier4 (GaN)`. OBSERVED Integral = `3.996001e+01 [um^-1]`, Domain = `4.000001e-05 [um^2]`. DERIVED regional mean = (39.96001 / 4.000001e-5) * 1e12 = approx `9.990e17 cm^-3`, 0.1% below nominal ON NtSide=1e18 cm^-3. Reason for difference NOT confirmed; avoid exact-equality claims.
 - The ON left Barrier4 has near-target local average trap concentration, extending prior QW1/QW4 trap spot checks. This does NOT prove within-region uniformity, all 22 regions, or trap-inclusive IQE. No solver rerun or school code edit.

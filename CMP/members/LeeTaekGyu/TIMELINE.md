@@ -1,3 +1,6 @@
+## 2026-11-04 — Wu n21 OFF DmgL_QW4 RadiativeRecombination (OBSERVED / DERIVED)
+- Worker 이택규; saved school SVisual n21_des (Trap OFF), RadiativeRecombination for DmgL_QW4 only: Integral +4.466154e12 [s^-1*um^-1], Domain 1.500003e-05 [um^2]. Earlier n25_des Trap ON identical region/field: +4.297888e12, same Domain. DERIVED ON-OFF=-1.68266e11, relative ON change -3.77% versus OFF at 5 V. This is a single-region radiative-field change, not IQE. No simulation or code modifications. User requested efficient data collection: finish remaining n21 saved-file fields before switching back to n25. Next collect per-region n21 radiative integrals for exact QW regions using multi-select, not combined region names containing '+'.
+
 ## 2026-11-04 — Wu ON n25 DmgL_QW4 radiative field integration (OBSERVED)
 - Worker: 이택규. School SVisual saved n25_des (Trap ON, 5 V), Field RadiativeRecombination, selected only DmgL_QW4 (InGaN): Integral +4.297888e12 s^-1 um^-1, Domain 1.500003e-05 um2 (screenshot).
 - Same saved dataset/region previously: srhRecombination +2.397133e11 and eGapStatesRecombination +1.365525e13 s^-1 um^-1. These are three separately displayed output fields; valid total recombination and double-counting rules are NOT yet established, so no IQE or trap-loss percentage should be derived from their naive sum.

@@ -1,3 +1,9 @@
+## 2026-11-04 — Wu OFF n21 left QW4 eGapStates integral (OBSERVED / DERIVED)
+- Worker 이택규. School SVisual screenshot saved n21_des Trap OFF, eGapStatesRecombination, exclusively DmgL_QW4 (InGaN): Integral +1.387832e-05 s^-1 um^-1 and Domain 1.500003e-05 um2.
+- Prior ON n25 same selected DmgL_QW4: +1.365525e13 s^-1 um^-1 and identical Domain. DERIVED ON/OFF about 9.84e17 times, but OFF is a tiny nonzero value and multiplier does NOT represent measured IQE deterioration or full trap nonradiative recombination.
+- Prior screenshot ON right QW4: DmgR_QW4 Integral +1.365435e13 s^-1 um^-1, Domain 1.500037e-05 um2. QW4 sides ON sum 2.730960e13 s^-1 um^-1, with 0.00659 percent left-right difference in integrals.
+- No SDevice rerun or code edits. Next n21 OFF DmgR_QW4 read-only, then total rate accounting and double-counting verification before IQE.
+
 ## 2026-11-04 — Lee Wu n25 DmgL_QW4 eGapStates integration (OBSERVED)
 - Worker 이택규. Screenshot SVisual n25_des, Field eGapStatesRecombination, only DmgL_QW4 selected: Integral +1.365525e13 s^-1 um^-1; Domain 1.500003e-05 um2. Prior Clean_QW4 same field integral 0. Positive left-side damaged-region electron gap-state recombination integral observed, but not proof of whole trap nonradiative loss or IQE. No new simulations or code changes. Next read-only measure DmgR_QW4 in same saved n25 TDR.
 

@@ -7709,5 +7709,23 @@
     "newRun": false,
     "codeModified": false,
     "next": "Saved n21 OFF RadiativeRecombination DmgL_QW4 Field Integration and validate rate accounting"
+  },
+  "leeWuQW4LeftRadiativeOffOn20261104": {
+    "worker": "이택규",
+    "dateKST": "2026-11-04",
+    "status": "OBSERVED_SVISUAL_PLUS_DERIVED_COMPARISON",
+    "field": "RadiativeRecombination",
+    "region": "DmgL_QW4",
+    "domainUm2": 0.00001500003,
+    "offNode": 21,
+    "offIntegralPerUmS": 4466154000000,
+    "onNode": 25,
+    "onIntegralPerUmS": 4297888000000,
+    "derivedOnMinusOffPerUmS": -168266000000,
+    "derivedRelativeChangePercent": -3.7675816821363526,
+    "fullIqEConfirmed": false,
+    "newRun": false,
+    "codeEdit": false,
+    "next": "Complete saved n21 QW Radiative/SRH/Auger region integrals before revisiting n25; no merged region names"
   }
 }

@@ -1,3 +1,7 @@
+## 2026-11-04 — Lee n25 ON 12-QW rate fields completed; 5V OFF/ON summary (OBSERVED/DERIVED)
+- SVisual saved n25_des Trap ON, all 12 exact QW Clean/DmgL/DmgR regions for RadiativeRecombination (Total 9.869850e15), srhRecombination (6.086824e14), AugerRecombination (4.424524e15), eGapStatesRecombination (4.148388e13), all s^-1 um^-1, domain 1.199999e-01 um2. Earlier n21 OFF matched totals Radiative 9.902518e15, SRH 6.102184e14, Auger 4.442221e15. ON vs OFF changes: -0.329896%, -0.251713%, -0.398382% respectively. eGapStates n25 clean QW1..4 zero; QW1..4 respective shares 3.2802%, 3.3623%, 27.5257%, 65.8318%.
+- Source: user SVisual screenshot measurements. All per-region numeric values in Lee TIMELINE and LIVE_STATE.json. No n21 full QW eGap rate integration; no validated trap-inclusive IQE, rate double count check, or whole-device rate accounting. No new run/source edits. NEXT verify eGap/SRH accounting from version-matched reference before any IQE claim. Canceled extra hGap run remains canceled.
+
 ## 2026-11-04 n21 QW SRH/Auger batching completed
 - OBSERVED (이택규, saved n21_des): 12 exact QW regions SRH Total Integral 6.102184e14, Auger Total Integral 4.442221e15, earlier Radiative 9.902518e15 (all s^-1 um^-1). Derived QW4 share: SRH 80.10%, Auger 95.42%, Radiative 91.03%. Individual integrals in Lee TIMELINE and LIVE_STATE.json. No run/edit. NEXT switch once to n25 and repeat 12-region Radiative, SRH and Auger. These fractions are not IQE; missing hGap and rate accounting unresolved.
 

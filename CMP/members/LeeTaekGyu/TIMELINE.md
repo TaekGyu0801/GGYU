@@ -1,3 +1,8 @@
+## 2026-11-04 — Wu n25 ON DmgL_QW4 srhRecombination integral (OBSERVED / DERIVED)
+- 이택규 SVisual Field Integration screenshot of existing CMP_WU_Copy/n25_des: field `srhRecombination`, only region `DmgL_QW4 (InGaN)` selected. Integral +2.397133e11 s^-1 um^-1, Domain 1.500003e-05 um2 (OBSERVED).
+- In the same saved dataset/region, prior `eGapStatesRecombination` Integral was +1.365525e13 s^-1 um^-1. Their numerical ratio is approximately 56.96 (DERIVED), but field definitions and overlap are unverified. Do NOT assert trap physical loss exceeds SRH by 57x or sum them into IQE without accounting verification. No new solver run or code change.
+- NEXT read-only compare n21_des (Trap OFF) `srhRecombination` in DmgL_QW4 using same Field Integration, then consult T-2022.03 references for field meanings and double-counting before computing IQE.
+
 ## 2026-11-04 — Wu OFF/ON QW4 left/right eGapStates comparison complete (OBSERVED / DERIVED)
 - Worker: 이택규. School SVisual saved n21_des screenshot: eGapStatesRecombination, DmgR_QW4 (InGaN) exclusively selected; integral +1.387717e-05 s^-1 um^-1, domain 1.500037e-05 um2. This is the OFF/right measurement, not a rerun.
 - Prior saved n21 OFF/left DmgL_QW4: +1.387832e-05, domain 1.500003e-05. Prior n25 ON/left: +1.365525e13, same left domain; ON/right: +1.365435e13, same right domain. All integrals in s^-1 um^-1.

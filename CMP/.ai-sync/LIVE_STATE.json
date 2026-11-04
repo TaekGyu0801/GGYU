@@ -26,7 +26,7 @@
     "codeEdited": false,
     "next": "Verify e/h gap-state net rate accounting from local T-2022.03 guide, preserve previous n21/n25 and canceled hGap rerun"
   },
-"leeWuN25DmgRBarrier4Trap20261104": {
+  "leeWuN25DmgRBarrier4Trap20261104": {
     "worker": "이택규",
     "dateKST": "2026-11-04",
     "node": 25,
@@ -8019,5 +8019,22 @@
     "versionMatchedRateAccountingValidated": false,
     "canceledHGapRerunStillCanceled": true,
     "next": "Review exact T-2022.03 electron/hole trap versus SRH rate accounting; assess Wu physical fidelity and 2D current normalization, preserve n21/n25"
+  },
+  "juSubin20261104OfficialDeviceTrapOutputDefinitions": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-04",
+    "status": "OBSERVED_MANUAL_SNIPPET_REMAINDER_UNRESOLVED",
+    "manualInstallationPath": "/user/tools/synopsys/sentaurus/T-2022.03/tcad/T-2022.03/manuals/PDFManual/data/sdevice_ug.pdf",
+    "source": "School user's pdftotext grep excerpt T-2022.03",
+    "SRHRecombination": "SRH net rate R_net, user excerpt lines 83190–83195, SRH activation lines 24512–24518",
+    "eGapStatesRecombination": "trap due conduction-band recombination rate; text lines 30517–30523",
+    "hGapStatesRecombination": "trap due valence-band recombination rate; text lines 30517–30523",
+    "eSRH_hSRH_tSRHFields": "related to dynamic nonlocal path trap assisted tunneling, not automatically synonymous with ordinary SRH",
+    "electronHoleTrapNetPairRateValidated": false,
+    "doubleCountingResolved": false,
+    "trapInclusiveIQEValidated": false,
+    "newSimulation": false,
+    "codeEdited": false,
+    "next": "Read contiguous manual context around 24505–24521 and 30496–30545 to verify trap bookkeeping and caveats; preserve canceled hGap rerun."
   }
 }

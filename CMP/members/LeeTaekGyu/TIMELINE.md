@@ -1,3 +1,14 @@
+## 2026-11-04 — Lee Wu n21 12 QW region RadiativeRecombination batch (OBSERVED, DERIVED)
+- Worker: 이택규. School SVisual n21_des Trap OFF (5 V) Field Integration RadiativeRecombination, 12 *distinct* regions (Clean/DmgL/DmgR QW1–4; no composite '+' regions).
+- OBSERVED integrals [s^-1*um^-1] by QW, in Clean / DmgL / DmgR order:
+  - QW1: 7.388587e11 / 3.697408e8 / 3.697496e8
+  - QW2: 1.079961e12 / 5.392654e8 / 5.390042e8
+  - QW3: 8.851380e14 / 4.465055e11 / 4.465253e11
+  - QW4: 9.005734e15 / 4.466154e12 / 4.465761e12
+- OBSERVED Total Integral 9.902518e15 [s^-1*um^-1], Total Domain 1.199999e-01 um2. Displayed clean domain areas near 2.997e-02 um2 each and each damaged area near 1.5e-05 um2.
+- DERIVED using displayed rounded regional values: summed 9.90251758326e15 s^-1 um^-1; QW4 sum 9.014665915e15; QW4 share 91.03408% and QW3 share 8.94753%. These are fractions of integrated *radiative field over all twelve QWs*, NOT IQE. Wu model is distinct from prior V2.1 baseline with its own QW4 concentration observation.
+- No rerun/source edit. User asked to complete saved n21 before switching to n25; next batch n21 srhRecombination in same 12 distinct regions, then AugerRecombination, followed by corresponding n25. Before any IQE interpret rate overlap/term definitions and missing hGapStates.
+
 ## 2026-11-04 — Wu n21 OFF DmgL_QW4 RadiativeRecombination (OBSERVED / DERIVED)
 - Worker 이택규; saved school SVisual n21_des (Trap OFF), RadiativeRecombination for DmgL_QW4 only: Integral +4.466154e12 [s^-1*um^-1], Domain 1.500003e-05 [um^2]. Earlier n25_des Trap ON identical region/field: +4.297888e12, same Domain. DERIVED ON-OFF=-1.68266e11, relative ON change -3.77% versus OFF at 5 V. This is a single-region radiative-field change, not IQE. No simulation or code modifications. User requested efficient data collection: finish remaining n21 saved-file fields before switching back to n25. Next collect per-region n21 radiative integrals for exact QW regions using multi-select, not combined region names containing '+'.
 

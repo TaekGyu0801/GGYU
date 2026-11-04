@@ -1,3 +1,10 @@
+## 2026-11-04 — Lee Wu n21/n25 5.0 V PLT final-row current comparison (OBSERVED / DERIVED)
+- Worker: 이택규. Direct school CMP_WU_Copy terminal evidence: `tail -n 12 n21_des.plt`, `tail -n 12 n25_des.plt`. Both files end at `time=1` and `anode OuterVoltage=5.00000000000000 V` with 17-column DF-ISE datasets including time and anode/cathode terminal values.
+- OBSERVED OFF n21 (5 V): anode TotalCurrent=2.56859586549120e-03, eCurrent=1.69539310159551e-04, hCurrent=2.39905655533165e-03; corresponding cathode TotalCurrent=-2.56859586549119e-03.
+- OBSERVED ON n25 (5 V): anode TotalCurrent=2.56639709344131e-03, eCurrent=1.68952709999954e-04, hCurrent=2.39744438344136e-03; corresponding cathode TotalCurrent=-2.56639709344130e-03.
+- DERIVED: 5V fixed-voltage absolute TotalCurrent reduction OFF-ON=2.19877204989e-6, relative reduction 100*(OFF-ON)/OFF=0.085602%. Data are raw 2D PLT terminal-current numbers; physical current-density scaling/units not validated. 5 V near-equal current is not an exact matched-current extraction, and low total-current change does not validate IQE or trap-mediated recombination.
+- PLT dataset list lacks recombination integrals (IntegrRad, IntegrSRH, IntegrTrap). Further rate accounting needs saved TDR and authoritative definitions. No new runs, no source edits. Respect JuSubin's cancellation of an overnight hGap rerun; next is read-only review of existing fields and recombination definitions.
+
 ## 2026-11-04 — Lee Wu n21/n25 PLT headers verified (OBSERVED; read-only)
 - Worker: 이택규. Actual school shell in CMP_WU_Copy: `ls -lh n21_des.plt n25_des.plt; head -n 15 n21_des.plt; head -n 15 n25_des.plt`.
 - OBSERVED: n21_des.plt exists (41K, Nov 3 23:58); n25_des.plt exists (70K, Nov 4 01:00). Both are DF-ISE text xyplot with the visible complete `datasets` list of time, cathode/anode voltage, potentials, displacement/electron/hole/total currents, and charge. Neither listed recombination integration columns such as IntegrRad/IntegrSRH/IntegrTrap in its displayed dataset header.

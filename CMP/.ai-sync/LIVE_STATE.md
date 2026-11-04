@@ -1,3 +1,10 @@
+## 2026-11-04 — Lee Wu n21/n25 5.0 V PLT final-row current comparison (OBSERVED / DERIVED)
+- Worker: 이택규. Direct school CMP_WU_Copy terminal evidence: `tail -n 12 n21_des.plt`, `tail -n 12 n25_des.plt`. Both files end at `time=1` and `anode OuterVoltage=5.00000000000000 V` with 17-column DF-ISE datasets including time and anode/cathode terminal values.
+- OBSERVED OFF n21 (5 V): anode TotalCurrent=2.56859586549120e-03, eCurrent=1.69539310159551e-04, hCurrent=2.39905655533165e-03; corresponding cathode TotalCurrent=-2.56859586549119e-03.
+- OBSERVED ON n25 (5 V): anode TotalCurrent=2.56639709344131e-03, eCurrent=1.68952709999954e-04, hCurrent=2.39744438344136e-03; corresponding cathode TotalCurrent=-2.56639709344130e-03.
+- DERIVED: 5V fixed-voltage absolute TotalCurrent reduction OFF-ON=2.19877204989e-6, relative reduction 100*(OFF-ON)/OFF=0.085602%. Data are raw 2D PLT terminal-current numbers; physical current-density scaling/units not validated. 5 V near-equal current is not an exact matched-current extraction, and low total-current change does not validate IQE or trap-mediated recombination.
+- PLT dataset list lacks recombination integrals (IntegrRad, IntegrSRH, IntegrTrap). Further rate accounting needs saved TDR and authoritative definitions. No new runs, no source edits. Respect JuSubin's cancellation of an overnight hGap rerun; next is read-only review of existing fields and recombination definitions.
+
 ## 2026-11-04 Lee Wu right Barrier4 observation
 - User SVisual n25 ON TotalTrapConcentration, DmgR_Barrier4: Integral 3.996092e+01 um^-1, Domain 4.000092e-05 um2. Mean 9.990e17 cm^-3 (about 0.1 percent below ON nominal 1e18). Left Barrier4 had similar average. Representative QW1/QW4 left and right traps and clean QW centers had already been checked. This is not a complete IQE or full 22-region uniformity proof. No new runs or source edits. Next investigate recombination accounting and trap-inclusive IQE with saved data only.
 

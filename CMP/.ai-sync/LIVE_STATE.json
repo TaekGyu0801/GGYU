@@ -7727,5 +7727,40 @@
     "newRun": false,
     "codeEdit": false,
     "next": "Complete saved n21 QW Radiative/SRH/Auger region integrals before revisiting n25; no merged region names"
+  },
+  "leeWuN21RadQw12Regions20261104": {
+    "worker": "이택규",
+    "dateKST": "2026-11-04",
+    "status": "OBSERVED_SVISUAL_PLUS_DERIVED_FRACTIONS",
+    "dataset": "n21_des",
+    "trap": "OFF",
+    "biasV": 5,
+    "field": "RadiativeRecombination",
+    "integralUnits": "s^-1*um^-1",
+    "areaUnits": "um^2",
+    "regions": {
+      "Clean_QW1": 738858700000,
+      "Clean_QW2": 1079961000000,
+      "Clean_QW3": 885138000000000,
+      "Clean_QW4": 9005734000000000,
+      "DmgL_QW1": 369740800,
+      "DmgL_QW2": 539265400,
+      "DmgL_QW3": 446505500000,
+      "DmgL_QW4": 4466154000000,
+      "DmgR_QW1": 369749600,
+      "DmgR_QW2": 539004200,
+      "DmgR_QW3": 446525300000,
+      "DmgR_QW4": 4465761000000
+    },
+    "observedTotalIntegral": 9902518000000000,
+    "observedTotalDomainUm2": 0.1199999,
+    "derivedSumRoundedIntegrals": 9902517583260000,
+    "derivedQW4FractionPercent": 91.0340813758221,
+    "derivedQW3FractionPercent": 8.947533022287352,
+    "iqeValidated": false,
+    "fullTrapRateAccountingVerified": false,
+    "newRun": false,
+    "codeChanged": false,
+    "next": "Collect same 12 exact regions in n21 saved SRH, then Auger, then n25"
   }
 }

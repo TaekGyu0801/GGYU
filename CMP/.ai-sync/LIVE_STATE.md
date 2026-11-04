@@ -1,3 +1,6 @@
+## 2026-11-04 — Lee Wu n25 left-QW4 RadiativeRecombination (OBSERVED)
+- SVisual screenshot of saved Trap ON n25_des at 5 V: DmgL_QW4 Field RadiativeRecombination integral +4.297888e12 s^-1 um^-1; Domain 1.500003e-05 um2. Previously same n25 region SRH +2.397133e11, eGapStates +1.365525e13 (integral units identical). Do not naively sum to IQE; rate field definition/overlap and hGap component remain UNRESOLVED. No rerun/code change. NEXT saved n21 OFF DmgL_QW4 RadiativeRecombination read-only, then official field accounting.
+
 ## 2026-11-04 — Lee Wu DmgL_QW4 SRH OFF/ON saved-field comparison
 - OBSERVED (이택규 SVisual): n21 OFF srhRecombination DmgL_QW4 integral +2.450705e11 s^-1 um^-1, domain 1.500003e-05 um2; previously n25 ON same field/region +2.397133e11 s^-1 um^-1, same domain. DERIVED ON-OFF -5.3572e9 s^-1 um^-1 (~-2.19% versus OFF). The eGapStatesRecombination field rises strongly with Trap ON in the same region, but SRH/eGap double-count rules and missing hGap field prevent trap-inclusive IQE inference. No new simulation or code modifications. NEXT read-only official recombination rate accounting and existing saved radiative/auger fields; respect canceled hGap rerun.
 

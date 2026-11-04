@@ -1,3 +1,8 @@
+## 2026-11-04 — Lee Wu n21/n25 parameter-file byte equality (OBSERVED)
+- Worker 이택규; school directory `/user/semi/semi437/tmp/myproject/CMP_WU_Copy` in Bash, read-only command `cmp -s pp21_des.par pp25_des.par; echo "PAR_CMP_EXIT=$?"` returned **PAR_CMP_EXIT=0**. Thus full preprocessed parameter files are byte-identical in the observed school directory.
+- Combined with earlier complete normalized `pp21_des.cmd`/`pp25_des.cmd` diff `CMD_DIFF_EXIT=0`, OFF/ON CMD and parameter content equivalence is supported, after excluding run-specific filenames and intentional trap Conc=0 vs 1e18 cm^-3. This is **not** yet the complete same-mesh-at-run-time or same-current validation.
+- NEXT read-only: inspect `n1_msh.tdr` timestamps and n21/n25 completed logs, plus explicit same input grid file in pp; ensure no mesh regeneration between runs before considering controlled Trap study. No solver/code edits; trap-inclusive IQE remains UNRESOLVED.
+
 ## 2026-11-04 — Lee Wu OFF/ON pp21 vs pp25 partial diff (OBSERVED / PARTIAL ONLY)
 - Worker: 이택규. User read-only command in school's `/user/semi/semi437/tmp/myproject/CMP_WU_Copy`: `diff -u pp21_des.cmd pp25_des.cmd | head -n 120`. Because `head` truncated at 120 lines, this is ONLY a partial diff, NOT proof all differences are known.
 - OBSERVED in shown diff: `Grid="n1_msh.tdr"` remains same in context; File output/current/log/parameter filenames differ as expected (n21 vs n25). Sampled trap-region blocks include same Acceptor Level FromValBand EnergyMid=0.75, eXsection=hXsection=1e-15, PooleFrenkel, with OFF `Conc=0` vs ON `Conc=1e18`. Previous full matching grep separately counted 22 identical-form concentration declarations in each preprocessed CMD.

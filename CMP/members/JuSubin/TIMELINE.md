@@ -1,3 +1,8 @@
+## 2026-11-04 JuSubin SVisual n25 center hDensity viewport confirmed (OBSERVED / NUMERIC DISTRIBUTION PENDING)
+- 작업자 주수빈 학교 Sentaurus Visual T-2022.03 스크린샷: `CMP_WU_Copy/n25_des` (Wu Trap ON) scalar `hDensity` 표시, **X 수직 적층 좌표 약 0.11–0.172 um**, **Y lateral 약 4.94–5.03 um**. 이전 Y=0–0.07 um 왼쪽 측벽 화면과 달리 중앙 Y~5 um 영역을 올바르게 보여주며 QW1–QW4 위치 범위를 포함함.
+- 컬러바 출력 `hDensity (cm^-3)` 전 범위 약 1e-30부터 1.165e20까지로 매우 넓어 화면이 오렌지색으로 거의 균일하게 보여 QW별 정공 농도 우열 **판정 불가**. 이 이미지만으로 QW4 과집중의 원인을 정공/전자 주입 불균형이라고 결론내리지 않음.
+- NEXT (READ ONLY) SVisual의 `Tools` 메뉴 실제 옵션 확인 → Y=5 um에서 X 축 방향 cutline(또는 해당 릴리스의 동등한 수치 추출)으로 hDensity의 QW별 분포 측정 → 같은 cutline에서 eDensity 비교. 학교 코드·솔버/저장된 TDR 수정 없음.
+
 ## 2026-11-04 JuSubin n25 hDensity SVisual screenshot left sidewall not center (OBSERVED / LOCATION CORRECTION)
 - 작업자 주수빈 provided school Sentaurus Visual screenshot of preserved Wu `CMP_WU_Copy/n25_des`. Active scalar `hDensity (cm^-3)` selected; viewport axes **vertical X** approximately 0.12–0.17 um (MQW stack), **horizontal Y** approximately 0–0.07 um. The plot is therefore at the **left-sidewall edge** (DmgL from Y=0..0.005 um), NOT the intended central cut at Y=5 um.
 - SVisual plot screenshot colorbar spans ~1e-30 to ~1.165e20 cm^-3; extreme log range and screenshot alone do not establish which QW has more hDensity, whether QW4 is carrier-rich or why QW4 accounts for ~91% of the previously integrated radiative field. The screenshot shows Elements=44842, Points=20434; mesh identity from title n25_des is displayed.

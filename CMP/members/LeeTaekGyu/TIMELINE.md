@@ -1,3 +1,9 @@
+## 2026-11-04 — Lee Wu n21/n25 PLT headers verified (OBSERVED; read-only)
+- Worker: 이택규. Actual school shell in CMP_WU_Copy: `ls -lh n21_des.plt n25_des.plt; head -n 15 n21_des.plt; head -n 15 n25_des.plt`.
+- OBSERVED: n21_des.plt exists (41K, Nov 3 23:58); n25_des.plt exists (70K, Nov 4 01:00). Both are DF-ISE text xyplot with the visible complete `datasets` list of time, cathode/anode voltage, potentials, displacement/electron/hole/total currents, and charge. Neither listed recombination integration columns such as IntegrRad/IntegrSRH/IntegrTrap in its displayed dataset header.
+- INTERPRETATION: these PLTs can support inspection of bias and terminal currents, but alone cannot provide trap-inclusive IQE or recombination-rate decomposition. No simulation rerun, source edit, current values, or current-overlap proof in this step.
+- NEXT: inspect saved PLT ending/data syntax and terminal current-vs-voltage overlap read-only, then source recombination integrals from saved TDR/other verified datasets. Keep original files unchanged.
+
 ## 2026-11-04 Lee Wu right Barrier4 observation
 - User SVisual n25 ON TotalTrapConcentration, DmgR_Barrier4: Integral 3.996092e+01 um^-1, Domain 4.000092e-05 um2. Mean 9.990e17 cm^-3 (about 0.1 percent below ON nominal 1e18). Left Barrier4 had similar average. Representative QW1/QW4 left and right traps and clean QW centers had already been checked. This is not a complete IQE or full 22-region uniformity proof. No new runs or source edits. Next investigate recombination accounting and trap-inclusive IQE with saved data only.
 

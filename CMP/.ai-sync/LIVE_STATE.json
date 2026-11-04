@@ -1,5 +1,6 @@
 {
-  "juSubinWuPp25PhysicsExcerpt20261104": {
+  "juSubin20261104TrapEquation529": {"worker":"주수빈","dateKST":"2026-11-04","status":"OBSERVED_OFFICIAL_T202203_NET_TRAP_FORMULA","manual":"T-2022.03 SDevice User Guide Chapter 17 p554 Eq 529 and Eq 530","stationaryVModelOnly":true,"trapNetRateDependsOn":"N0,n,p,thermal velocities,sigma_n,sigma_p,trap energy","electronPlusHoleRateSumNotValidated":true,"pooleFrenkelModifierNotChecked":true,"validatedTrapIQE":false,"schoolRun":false,"schoolCodeEdit":false,"next":"read-only current normalization and QW4 injection; no canceled hGap rerun"},
+"juSubinWuPp25PhysicsExcerpt20261104": {
     "worker": "주수빈",
     "dateKST": "2026-11-04",
     "source": "school CMP_WU_Copy pp25_des.cmd lines 1-48,159-177",

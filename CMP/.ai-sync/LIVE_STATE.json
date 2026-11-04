@@ -1,4 +1,18 @@
 {
+  "leeWuParEquality20261104": {
+    "worker": "이택규",
+    "dateKST": "2026-11-04",
+    "status": "OBSERVED_PAR_BYTE_IDENTICAL",
+    "command": "cmp -s pp21_des.par pp25_des.par; echo PAR_CMP_EXIT=$?",
+    "observedExit": 0,
+    "pp21Pp25ParIdentical": true,
+    "normalizedFullCmdDiffExit": 0,
+    "meshRuntimeEquivalenceValidated": false,
+    "matchedCurrentComparisonValidated": false,
+    "trapInclusiveIQEValidated": false,
+    "simulationRerun": false,
+    "next": "Check n1_msh.tdr timestamp and n21/n25 final logs read-only"
+  },
   "leeWuPp21Pp25PartialDiff20261104": {
     "worker": "이택규",
     "eventDateKST": "2026-11-04",

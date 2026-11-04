@@ -7762,5 +7762,58 @@
     "newRun": false,
     "codeChanged": false,
     "next": "Collect same 12 exact regions in n21 saved SRH, then Auger, then n25"
+  },
+  "leeWuN21SrhAug12Regions20261104": {
+    "worker": "이택규",
+    "dateKST": "2026-11-04",
+    "status": "OBSERVED_SVISUAL_PLUS_DERIVED",
+    "dataset": "n21_des",
+    "trap": "OFF",
+    "biasV": 5,
+    "integralUnits": "s^-1*um^-1",
+    "regions": 12,
+    "srhRecombination": {
+      "integrals": {
+        "Clean_QW1": 641866000000,
+        "Clean_QW2": 605379000000,
+        "Clean_QW3": 120083400000000,
+        "Clean_QW4": 488275600000000,
+        "DmgL_QW1": 321188000,
+        "DmgL_QW2": 302995500,
+        "DmgL_QW3": 60418550000,
+        "DmgL_QW4": 245070500000,
+        "DmgR_QW1": 321194500,
+        "DmgR_QW2": 302874300,
+        "DmgR_QW3": 60421680000,
+        "DmgR_QW4": 245045600000
+      },
+      "observedTotal": 610218400000000,
+      "observedDomainUm2": 0.1199999,
+      "derivedQW4SharePercent": 80.09684342296836
+    },
+    "AugerRecombination": {
+      "integrals": {
+        "Clean_QW1": 154421200000,
+        "Clean_QW2": 144086600000,
+        "Clean_QW3": 202749200000000,
+        "Clean_QW4": 4234775000000000,
+        "DmgL_QW1": 77268440,
+        "DmgL_QW2": 70953810,
+        "DmgL_QW3": 102263900000,
+        "DmgL_QW4": 2096926000000,
+        "DmgR_QW1": 77270600,
+        "DmgR_QW2": 70999710,
+        "DmgR_QW3": 102265000000,
+        "DmgR_QW4": 2096875000000
+      },
+      "observedTotal": 4442221000000000,
+      "derivedQW4SharePercent": 95.42452935363464
+    },
+    "priorRadiativeTotal": 9902518000000000,
+    "iqeValidated": false,
+    "rateOverlapValidated": false,
+    "newRun": false,
+    "codeModified": false,
+    "next": "Switch to n25 once for 12-region Radiative, SRH, Auger batched saved-data integration; preserve existing samples"
   }
 }

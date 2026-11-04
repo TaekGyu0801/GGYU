@@ -1,4 +1,20 @@
 {
+  "leeWuN25DmgLQW4Trap20261104": {
+    "worker": "이택규",
+    "dateKST": "2026-11-04",
+    "project": "CMP_WU_Copy",
+    "node": 25,
+    "condition": "NtSide=1e18 Trap ON",
+    "field": "TotalTrapConcentration",
+    "region": "DmgL_QW4",
+    "integralUmInverse": 15.00003,
+    "domainUmSquared": 0.00001500003,
+    "derivedMeanCm3": 1000000000000000000,
+    "status": "OBSERVED_REGION_INTEGRAL_DERIVED_AVERAGE",
+    "newRun": false,
+    "completeIqEValidated": false,
+    "next": "Saved n25 DmgR_QW4 and Clean_QW4 TotalTrapConcentration region integration"
+  },
   "leeWuRuntimeGridDopingReads20261104": {
     "worker": "이택규",
     "dateKST": "2026-11-04",

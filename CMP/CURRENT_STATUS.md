@@ -1,3 +1,7 @@
+## 2026-11-04 — Wu QW4 left/right Trap OFF versus ON electron gap-state field now compared (OBSERVED)
+- 이택규 SVisual screenshots: n21 OFF eGapStatesRecombination DmgL_QW4 integral 1.387832e-05 over 1.500003e-05 um2; DmgR_QW4 integral 1.387717e-05 over 1.500037e-05 um2. n25 ON left integral 1.365525e13, right 1.365435e13 with matching respective domains. Integrals in s^-1 um^-1. Bilateral sum OFF 2.775549e-05 versus ON 2.730960e13 (derived); no new run/edit. OFF is near numerical zero; do not use ratio as physical trap loss or IQE metric.
+- This completes the selected QW4 electron-gap-rate field comparison only. Trap+SRH accounting, true IQE, all regions, current normalization, and physics fidelity remain unresolved. Next read-only investigate saved SRH/Radiative/Auger fields and official Sentaurus recombination definitions; do not rerun canceled hGap case.
+
 ## 2026-11-04 — Lee Wu n21/n25 5.0 V PLT final-row current comparison (OBSERVED / DERIVED)
 - Worker: 이택규. Direct school CMP_WU_Copy terminal evidence: `tail -n 12 n21_des.plt`, `tail -n 12 n25_des.plt`. Both files end at `time=1` and `anode OuterVoltage=5.00000000000000 V` with 17-column DF-ISE datasets including time and anode/cathode terminal values.
 - OBSERVED OFF n21 (5 V): anode TotalCurrent=2.56859586549120e-03, eCurrent=1.69539310159551e-04, hCurrent=2.39905655533165e-03; corresponding cathode TotalCurrent=-2.56859586549119e-03.

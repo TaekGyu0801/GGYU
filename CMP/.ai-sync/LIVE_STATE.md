@@ -1,3 +1,6 @@
+## 2026-11-04 Lee Wu left QW4 trap ON measurement (OBSERVED)
+- User SVisual n25_des TotalTrapConcentration integration region DmgL_QW4 InGaN: Integral 1.500003e+01 um^-1, Domain 1.500003e-05 um2. DERIVED regional mean 1e6 um^-3 = 1e18 cm^-3 = ON NtSide setting. This validates the sampled QW4 left region mean, not full 22-region uniformity or trap-inclusive IQE. No rerun. NEXT right DmgR_QW4 and Clean_QW4 saved TDR.
+
 ## 2026-11-04 — Lee Wu n21/n25 runtime grid and doping reads confirmed (OBSERVED)
 - Worker: 이택규, school `/user/semi/semi437/tmp/myproject/CMP_WU_Copy`. Direct read-only `grep -niE 'n1_msh.tdr|reading grid|grid file|reading mesh' n21_des.log n25_des.log | head -n 30` supplied.
 - Both `n21_des.log` and `n25_des.log` show at line 241 `Grid file: n1_msh.tdr`, line 697 `Reading grid 'n1_msh.tdr' ...`, and line 805 `Reading doping 'n1_msh.tdr' (TDR format) ...`. Thus BOTH solver logs confirm loading mesh and doping from the same *file pathname*. Prior `stat` showed mesh mtime 2026-11-03 23:17:11 before OFF/ON solver completions (23:58:02 / 2026-11-04 01:00:20); both log runs finished normally.

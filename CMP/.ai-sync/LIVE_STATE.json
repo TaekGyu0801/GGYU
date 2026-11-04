@@ -7672,5 +7672,24 @@
     "newSimulation": false,
     "codeChanged": false,
     "next": "n21_des OFF DmgL_QW4 srhRecombination saved Field Integration; confirm official rate definitions before IQE"
+  },
+  "leeWuQW4LeftSRHOffOn20261104": {
+    "worker": "이택규",
+    "dateKST": "2026-11-04",
+    "status": "OBSERVED_FIELD_VALUES_DERIVED_COMPARISON",
+    "field": "srhRecombination",
+    "region": "DmgL_QW4",
+    "offDataset": "n21_des",
+    "onDataset": "n25_des",
+    "offIntegralPerUmS": 245070500000,
+    "onIntegralPerUmS": 239713300000,
+    "domainUm2": 0.00001500003,
+    "deltaOnMinusOffPerUmS": -5357200000,
+    "relativeChangePercent": -2.1859832170742703,
+    "iqeValidated": false,
+    "trapInclusiveRateAccountingValidated": false,
+    "newRun": false,
+    "codeModified": false,
+    "next": "Review T-2022.03 official rate accounting and saved radiative/auger fields without rerunning"
   }
 }

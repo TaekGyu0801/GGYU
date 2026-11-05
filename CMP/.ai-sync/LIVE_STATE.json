@@ -1,19 +1,34 @@
 {
   "leeOffOnTerminal5VNov05_2026": {
-    "worker": "이택규",
-    "dateKST": "2026-11-05",
-    "status": "OBSERVED_N21_OFF_5V_VS_PRIOR_OBSERVED_N25_ON_5V",
-    "schoolProject": "CMP_WU_Copy",
-    "off": {"node": 21, "trap": false, "voltageV": 5, "electronRaw": 0.0001695, "holeRaw": 0.002399, "totalRaw": 0.002569},
-    "onPrevious": {"node": 25, "trap": true, "voltageV": 5, "electronRaw": 0.0001690, "holeRaw": 0.002397, "totalRaw": 0.002566},
-    "onRecheckedThisTurn": false,
-    "offCommandRepeatedTwice": true,
-    "percentOnVsOffTotal": -0.116776956014,
-    "interpretation": "Difference of rounded raw 2D anode terminal currents; NOT trap loss percentage or IQE; physical current normalization and J still unresolved",
-    "next": "Read n25_des.log last anode at 5V once in same school directory; then investigate area-integrated rad/SRH/net-trap recombination",
-    "schoolCodeEdited": false,
-    "newSimulation": false
+  "worker": "이택규",
+  "dateKST": "2026-11-05",
+  "status": "OBSERVED_N21_OFF_AND_N25_ON_SAME_SESSION_5V",
+  "schoolProject": "CMP_WU_Copy",
+  "off": {
+    "node": 21,
+    "trap": false,
+    "voltageV": 5,
+    "electronRaw": 0.0001695,
+    "holeRaw": 0.002399,
+    "totalRaw": 0.002569
   },
+  "onPrevious": {
+    "node": 25,
+    "trap": true,
+    "voltageV": 5,
+    "electronRaw": 0.000169,
+    "holeRaw": 0.002397,
+    "totalRaw": 0.002566
+  },
+  "onRecheckedThisTurn": true,
+  "offCommandRepeatedTwice": true,
+  "percentOnVsOffTotal": -0.116776956014,
+  "interpretation": "Difference of rounded raw 2D anode terminal currents; NOT trap loss percentage or IQE; physical current normalization and J still unresolved",
+  "next": "Stop repeating current grep; inspect saved 5V QW region-integrated Radiative/SRH/Auger and establish correct net trap pair recombination before IQE; separately resolve 2D J normalization",
+  "schoolCodeEdited": false,
+  "newSimulation": false,
+  "onPreviousLabel": "Directly rechecked from school n25_des.log at 5V on 2026-11-05"
+},
 
   "leeWuProvisionalFullWidthContact20261105": {"worker":"이택규","dateKST":"2026-11-05","status":"OBSERVED_SCHOOL_SDE_PROVISIONAL_CONTACT_FIDELITY_UNRESOLVED","schoolFile":"CMP_WU_Copy/pp1_dvs.cmd","header":"PROPOSED/UNRUN stale vs observed n21 n25 successful run","model":"10um Cartesian stripe Wu pilot","anode":"for each lateral segment set-contact at x=0, ymid","cathode":"for each lateral segment set-contact at x=Xend, ymid","contactType":"provisional full-width planar Ohmic","contactSetDrawWidth4PointZero":"not mesa width or AreaFactor","pGaNThicknessUm":0.12,"pGaNSource":"PILOT Wu unverified","EBLThicknessUm":0,"EBLPaperPresence":"UNVERIFIED","nGaNDopingCm3":5000000000000000000,"pMgActiveCm3":20000000000000000000,"nominalMgToActive":"assumed","barrierBackgroundCm3":1000000000000000,"barrierBackgroundSource":"PILOT","publicationFigure1Electrodes":"UNVERIFIED","modelFidelity":"NOT full Wu original and NOT protected Kou-based 4um common baseline","next":"Read-only pp25 SDevice current units AreaFactor, electrode log and final current; no rerun","newSimulation":false,"codeEdit":false},
 "leeWuPp1EffectiveSdeStructureConfirmed20261105": {"worker":"이택규","dateKST":"2026-11-05","status":"OBSERVED_EFFECTIVE_SCHOOL_SOURCE_PARTIAL_PAPER_MATCH","file":"school CMP_WU_Copy/pp1_dvs.cmd","lateralWidthUm":10,"damageWidthEachSideUm":0.005,"pGaNThicknessUm":0.12,"pGaNThicknessFidelity":"UNVERIFIED pilot","EBLThicknessUm":0,"EBLFidelity":"UNVERIFIED no EBL claimed","QWCount":4,"QWThicknessUm":0.003,"GaNBarrierCount":5,"GaNBarrierThicknessUm":0.008,"nGaNThicknessUm":3.9,"xIn":0.08,"contacts":"anode at x=0 cathode x=Xend assigned at ymid edge; exact spans and Wu figure fidelity unverified","publication":"Wu 2023 DOI 10.1016/j.micrna.2023.207542 visible methods confirms 10um, 3.9um nGaN, 4x 3nm In0.08 QW, 8nm GaN barrier, Mg pGaN 2e19, 5nm sidewall traps","notProtectedCommonBaseline":true,"sourceChanged":false,"newSimulation":false,"next":"read only pp1 header/contact exact definitions, obtain original paper Fig1 if possible, then evaluate J normalization and trap-inclusive IQE; canceled hGap remains canceled"},

@@ -1,3 +1,12 @@
+## 2026-11-05 Lee n21 OFF QW3 QW4 interface band steps from saved C1 — OBSERVED / DERIVED; band-step amplitudes not equal transport barriers
+- Worker 이택규 read school `CMP_WU_Copy/WU_n21_C1_QW_band.csv` from n21_des Trap OFF at 5V, central Y=5um, and pasted actual X-resolved Ec/Ev/EFn/EFp rows in interval X=0.150..0.165um. At duplicated coordinates (values on two sides of modeled material interfaces), numerical steps:
+  - X=.15000001 Barrier2 -> QW3: Ec -0.0808 -> -0.2726, DeltaEc=-0.1918 eV; Ev -3.5177 -> -3.3738, DeltaEv=+0.1439 eV.
+  - X=.15300000 QW3 -> Barrier3: Ec -0.1440 -> +0.0478, DeltaEc=+0.1918; Ev -3.2453 -> -3.3891, DeltaEv=-0.1438.
+  - X=.16100000 Barrier3 -> QW4: Ec +0.0017 -> -0.1900, DeltaEc=-0.1917; Ev -3.4351 -> -3.2913, DeltaEv=+0.1438.
+  - X=.16400000 QW4 -> Barrier4: Ec -0.1040 -> +0.0878, DeltaEc=+0.1918; Ev -3.2052 -> -3.3490, DeltaEv=-0.1438.
+- DERIVED interface discontinuity magnitudes are nearly the same for QW3 and QW4: |DeltaEc|≈0.192 eV, |DeltaEv|≈0.144 eV. Thus present data do not show a special QW4-only *material interface band offset*; these individual jumps are not full injection barriers or proof of the root cause of high QW4 n,p. EFn at X=.153 changes -0.2140 -> -0.1340 (0.0800 eV) while EFp -3.2840 -> -3.2830 (0.0010 eV), which must not be assigned to an exact transport mechanism without model validation.
+- NEXT READ ONLY: examine X-resolved band bending and carrier/charge profiles across barriers, or matched n25 ON at same central coordinates. Assess polarization, thermionic boundary conditions, geometry fidelity cautiously. No rerun, no changes to saved n21/n25, canceled hGap remains canceled.
+
 ## 2026-11-05 Lee n21 OFF Barrier0-4 C1 Ec Ev extrema — OBSERVED / DERIVED; transport barriers and physical cause UNRESOLVED
 - 작업자 이택규; direct school csh terminal executed READ-ONLY one-line `awk` on saved `CMP_WU_Copy/WU_n21_C1_QW_band.csv` (n21_des Trap OFF, 5V, central Y=5µm, X cutline .12-.18µm). Five region windows: Barrier0 [.120,.128), B1 [.131,.139), B2 [.142,.150), B3 [.153,.161), B4 [.164,.172), each N=6 samples. Numeric reported extrema in eV:
   B0 Ec min=-0.5787 max=-0.5690; Ev min=-4.0156 max=-4.0039.

@@ -1,3 +1,12 @@
+## 2026-11-05 Lee n21 OFF central QW1-4 ElectricField-X numerical statistics — OBSERVED; polarization/transport root cause UNRESOLVED
+- 작업자 이택규 actually executed one-line read-only AWK on school saved `CMP_WU_Copy/WU_n21_C1_QW_Efield.csv` (n21_des Trap OFF, 5 V, Y=5um central cutline C1, QW1 x=[.128,.131), QW2 [.139,.142), QW3 [.150,.153), QW4 [.161,.164)). Output:
+  - QW1 N=3, signed Emean +6.881e5 V/cm, abs mean 6.943e5, min -9.345e3, max +1.041e6.
+  - QW2 N=4, signed Emean +8.292e5, abs mean 8.495e5, min -4.064e4, max +1.473e6.
+  - QW3 N=3, signed Emean +3.108e5, abs mean 3.590e5, min -7.223e4, max +5.762e5.
+  - QW4 N=4, signed Emean +4.901e5, abs mean 5.118e5, min -4.338e4, max +1.524e6.
+- DERIVED QW4/QW3 abs-mean ≈1.426x; QW2 abs-mean 8.495e5 > QW4 abs-mean 5.118e5; hence field magnitude does NOT monotonically track QW4's highest carrier/radiative sample means. QW4 peak 1.524e6 V/cm may be boundary-sensitive due to small sample counts and duplicated interface points, so inspect raw per-coordinate entries before attributing physical origin. These are **1D sample arithmetic means and extrema**, not region-weighted field integrals, QW internal fields under independent mesh convergence, or causal evidence of polarization/transport. Previous QW4 relative QW3 high carriers and nearly same OFF/ON central values remain established.
+- NEXT (PROPOSED READ-ONLY): print raw `X,ElectricField-X` rows over X=0.150..0.164µm and inspect maxima locations/interface duplicates; consider mesh/physics assumptions only after this. No new SDevice simulation, no source changes, canceled hGap rerun remains canceled.
+
 ## 2026-11-05 Lee n21 OFF central ElectricField-X CSV exported — OBSERVED export; QW field comparison pending
 - Worker 이택규 provided school terminal `head -n 8 WU_n21_C1_QW_Efield.csv` in `CMP_WU_Copy`: CSV header `X,ElectricField-X`, second row `none,SELECTED` (nonnumeric), first numeric rows X=0.12 -> 9029.3958, X=0.12 -> -17558.221, X=.12128516 -> -15943.13, X=.12327344 -> -13623.278, X=.12526172 -> -11355.53, X=.12725 -> -10085.009. Field units displayed in prior school SVisual screenshot as V/cm; raw CSV header omits unit.
 - Context: saved `n21_des` Trap OFF, 5 V, Y=5um central C1 X=.12-.18um. This confirms file export and some non-QW interval points, **not** per-QW ElectricField-X stats, polarization cause, or validated injection barrier. The two X=.12 entries may represent coincident boundary samples; preserve both when comparing and avoid mistaken averaging with duplicate interface points.

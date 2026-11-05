@@ -1,3 +1,8 @@
+## 2026-11-05 Lee n21 OFF central ElectricField-X CSV exported — OBSERVED export; QW field comparison pending
+- Worker 이택규 provided school terminal `head -n 8 WU_n21_C1_QW_Efield.csv` in `CMP_WU_Copy`: CSV header `X,ElectricField-X`, second row `none,SELECTED` (nonnumeric), first numeric rows X=0.12 -> 9029.3958, X=0.12 -> -17558.221, X=.12128516 -> -15943.13, X=.12327344 -> -13623.278, X=.12526172 -> -11355.53, X=.12725 -> -10085.009. Field units displayed in prior school SVisual screenshot as V/cm; raw CSV header omits unit.
+- Context: saved `n21_des` Trap OFF, 5 V, Y=5um central C1 X=.12-.18um. This confirms file export and some non-QW interval points, **not** per-QW ElectricField-X stats, polarization cause, or validated injection barrier. The two X=.12 entries may represent coincident boundary samples; preserve both when comparing and avoid mistaken averaging with duplicate interface points.
+- NEXT PROPOSED READ-ONLY: one-line awk samples QW1 [.128,.131), QW2 [.139,.142), QW3 [.150,.153), QW4 [.161,.164), reporting count, signed mean, absolute mean, min/max in V/cm. Compare QW3/QW4 with prior local carrier/band data. No new solver run, physics/code edits, or canceled hGap rerun.
+
 ## 2026-11-05 Lee n21 OFF QW3 QW4 interface band steps from saved C1 — OBSERVED / DERIVED; band-step amplitudes not equal transport barriers
 - Worker 이택규 read school `CMP_WU_Copy/WU_n21_C1_QW_band.csv` from n21_des Trap OFF at 5V, central Y=5um, and pasted actual X-resolved Ec/Ev/EFn/EFp rows in interval X=0.150..0.165um. At duplicated coordinates (values on two sides of modeled material interfaces), numerical steps:
   - X=.15000001 Barrier2 -> QW3: Ec -0.0808 -> -0.2726, DeltaEc=-0.1918 eV; Ev -3.5177 -> -3.3738, DeltaEv=+0.1439 eV.

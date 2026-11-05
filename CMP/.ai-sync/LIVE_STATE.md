@@ -1,3 +1,7 @@
+## 2026-11-05 Lee n25 Trap ON 5V terminal freshly reconfirmed alongside n21 OFF — OBSERVED both actual current logs; model loss still UNRESOLVED
+- 이택규 school `CMP_WU_Copy` directly checked 5V anode OFF n21 (Ie=1.695e-4 Ih=2.399e-3 total=2.569e-3) and ON n25 (Ie=1.690e-4 Ih=2.397e-3 total=2.566e-3). ON fresh grep now obtained, exactly corroborating prior log. ON/OFF raw total -0.11678% based on rounded output; not IQE, J, or sidewall trap-loss fraction.
+- NEXT prioritize read-only existing 5V region-integrated Radiative/SRH/Auger and correctly defined net trap pair rate; original Wu Fig1 EBL/contact fidelity and physical 2D J still unresolved. Preserve n21/n25 and canceled hGap. No solver rerun/source changes.
+
 ## 2026-11-05 Lee n21 OFF 5V terminal current reread and prior n25 ON comparison — OBSERVED OFF / historical ON comparison; IQE UNRESOLVED
 - 이택규 school `CMP_WU_Copy/n21_des.log` final 5V anode raw currents: electron1.695e-4, hole2.399e-3, total2.569e-3. Same n21 grep was run twice; it does not independently validate Trap ON. Prior observed n25 ON 5V: electron1.690e-4, hole2.397e-3, total2.566e-3. Calculated ON/OFF total -0.1168%; **terminal-current change is not IQE or trap loss fraction**. Raw 2D unit/z width and J still UNRESOLVED.
 - NEXT one read-only `grep -E '^[[:space:]]*anode[[:space:]]+[0-9.E+-]+' n25_des.log | tail -n 1`. After confirmation evaluate integrated net trap recombination and IQE; no new simulation, school source edits or canceled hGap restart.

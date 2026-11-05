@@ -1,3 +1,7 @@
+## 2026-11-05 Lee n25 Trap ON 5V terminal freshly reconfirmed alongside n21 OFF — OBSERVED matched bias current; physical IQE blocker still open
+- n21 OFF and n25 ON now both school 5V last anode entries directly checked in session: OFF Ie=1.695e-4 Ih=2.399e-3 total=2.569e-3; ON Ie=1.690e-4 Ih=2.397e-3 total=2.566e-3. Total ON/OFF difference -3e-6, ratio -0.11678%, from displayed rounded raw SDevice values.
+- This only validates a **small raw terminal-current change at fixed voltage**. Does not validate physical J, sidewall SRH/trap pair-loss fraction, or QW IQE. Full-structure fidelity (Wu Fig1 EBL/pGaN/contact) and protected 4um Kou Common Baseline status remain UNRESOLVED. Existing n21/n25 preserved; no rerun/source edit.
+
 ## 2026-11-05 Lee n21 OFF 5V terminal current reread and prior n25 ON comparison — OBSERVED OFF current / prior ON; physical sidewall loss UNRESOLVED
 - School n21 Trap OFF 5V terminal: Ie=1.695e-4, Ih=2.399e-3, Itot=2.569e-3 (same user command twice, identical). Previously OBSERVED n25 Trap ON 5V: Ie=1.690e-4, Ih=2.397e-3, Itot=2.566e-3. Rounded total ON/OFF difference -3.0e-6, relative -0.1168%. Values use raw SDevice terminal-current output units; current physical J conversion and effective z-width remain UNRESOLVED.
 - **Do not equate -0.1168% electrode current change with IQE decrease or measured trap recombination.** Trap ON output not newly re-read in this turn, and independent recombination validation missing. No school code edit or solver run. Protected 4um Kou Common Baseline unchanged.

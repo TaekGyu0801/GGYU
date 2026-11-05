@@ -1,3 +1,8 @@
+## 2026-11-05 Lee n21 OFF 5V terminal current reread and prior n25 ON comparison — NEXT READ ONLY
+- 이택규 n21 OFF terminal at 5 V directly rechecked (Ie 1.695e-4, Ih 2.399e-3, total 2.569e-3). Earlier n25 ON at 5V was Ie1.690e-4, Ih2.397e-3, total2.566e-3, implying nominal -0.1168% raw total electrode current difference. No proof of IQE loss magnitude.
+- **One next school command, from CMP_WU_Copy:** `grep -E '^[[:space:]]*anode[[:space:]]+[0-9.E+-]+' n25_des.log | tail -n 1`. Verify 5.000E+00 and log label n25. The two commands in latest terminal both targeted n21.
+- Once ON is freshly verified, evaluate regionwise integrated Rad/SRH and net gap-state-trap pair-rate accounting at equal bias, including assumptions about injected current, leakage and IQE; keep raw 2D current unit/J normalization as independent blocker. Do NOT rerun canceled hGap or modify existing completed sources.
+
 ## 2026-11-05 Lee Wu n25 source AreaFactor grep verified — OBSERVED, 2D J still UNRESOLVED
 - Worker 이택규 pasted actual school `CMP_WU_Copy` terminal read-only grep: `grep -nEi 'AreaFactor|Physics|Electrode' pp25_des.cmd | head -n 35` lists `Electrode {` at line 18 and global `Physics {` at line 22, with region Physics blocks through line 203; **no explicit AreaFactor occurrence in this effective source grep**. Earlier `n25_des.log` showed anode/cathode electrode area factor=1. This establishes no explicit AreaFactor in this inspected pp25 source, not complete validation of units or geometry.
 - Repeated user n25 terminal rows: 4.804V Ie=1.364e-4 Ih=2.100e-3 total=2.236e-3; 4.904V Ie=1.525e-4 Ih=2.251e-3 total=2.403e-3; 5.000V Ie=1.690e-4 Ih=2.397e-3 total=2.566e-3. 5V hole share=(2.397e-3/2.566e-3)*100=93.41% of electrode conduction current, NOT IQE.

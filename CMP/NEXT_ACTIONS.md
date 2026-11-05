@@ -1,3 +1,7 @@
+## 2026-11-05 Lee both n21 OFF and n25 ON current reconfirmed at 5V
+- OBSERVED: School 5V anode current n21 OFF Ie 1.695e-4 Ih 2.399e-3 total 2.569e-3; n25 ON Ie 1.690e-4 Ih 2.397e-3 total 2.566e-3. Current change -0.1168% from rounded totals, NOT IQE or trap loss percentage.
+- NEXT READ ONLY: compare existing saved 5V region-integrated Radiative, SRH and Auger fields; establish T-2022.03 correct net trap pair rate before any IQE calculation. Physical 2D J/z-width normalization remains unresolved. No more terminal-current grep; no rerun, no model edit, canceled hGap remains canceled.
+
 ## 2026-11-05 Lee n21 OFF 5V terminal current reread and prior n25 ON comparison — NEXT READ ONLY
 - 이택규 n21 OFF terminal at 5 V directly rechecked (Ie 1.695e-4, Ih 2.399e-3, total 2.569e-3). Earlier n25 ON at 5V was Ie1.690e-4, Ih2.397e-3, total2.566e-3, implying nominal -0.1168% raw total electrode current difference. No proof of IQE loss magnitude.
 - **One next school command, from CMP_WU_Copy:** `grep -E '^[[:space:]]*anode[[:space:]]+[0-9.E+-]+' n25_des.log | tail -n 1`. Verify 5.000E+00 and log label n25. The two commands in latest terminal both targeted n21.

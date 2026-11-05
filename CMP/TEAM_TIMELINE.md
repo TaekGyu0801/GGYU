@@ -1,3 +1,7 @@
+## 2026-11-05 Lee 5V n21 OFF and n25 ON raw terminal pair verified — OBSERVED; physical loss still unresolved
+- 이택규 directly read same-school 5 V logs in CMP_WU_Copy: n21 OFF total 2.569e-3, n25 ON total 2.566e-3; electrons 1.695e-4 vs 1.690e-4 and holes 2.399e-3 vs 2.397e-3. ON/OFF change -0.1168% using rounded SDevice terminal totals; not an IQE or sidewall pair recombination result. Both solver logs preserved; no new run/code changes.
+- Next use existing 5V 2D integrated Radiative/SRH/Auger and verified net trap pair rate to quantify losses; normalize 2D current/J independently. Canceled hGap stays canceled, protected Kou 4um Baseline unchanged.
+
 ## 2026-11-05 Lee n21 OFF 5V current vs previously logged n25 ON — OBSERVED raw 5V comparison / loss UNRESOLVED
 - 이택규 supplied n21 Trap OFF school log: 5V anode electron 1.695e-4, hole 2.399e-3, total 2.569e-3, twice identically (same file, not independent run). Previously seen n25 ON at 5V total 2.566e-3. ON/OFF total current ratio gives -0.1168% nominal change in raw electrode output; this is **NOT IQE** and does not quantify sidewall recombination loss. Current units/J and integrated trap pair-rate remain unresolved.
 - NEXT re-read n25 ON once and quantify full-area recombination with verified net rate accounting; no simulation edits/reruns.

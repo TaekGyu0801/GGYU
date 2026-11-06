@@ -1,3 +1,8 @@
+## 2026-11-06 Lee Project A selected A-u direction (planning only)
+- USER DECISION forwarded with timestamp 20:12 KST: A-u GaN:C edge with local Si removed is primary Project A path; A-n retaining Si limited to 1–2 sensitivity points. School/Wu baseline NOT changed; this is not a final calibrated design or confirmed process.
+- PROPOSED Wu Copy 10um n-side Cedge geometry inside intact 5nm Dmg; controls A0m(Si on,C0) and A0u(Si off,C0), then carbon effect versus A0u at matched J. G3 matched-J baseline optical spatial data not confirmed; baseline final physical freeze remains unresolved.
+- Cao 2023 source https://doi.org/10.1038/s41598-023-41678-1 uses CN <=6e18 cm^-3 in its actual trap sweep, distinct from nominal total C 1e19; Claude proposed CN=1e19 and 2e19 are extrapolations/stress cases. Thresholds (20% gain, 5mV/2% null, p-side fallback) NOT approved. No new school simulation or code edit.
+
 ## 2026-11-06 Lee Wu low-J spatial TDR availability scoped — n21/n25 pair only in project root
 - School read-only `find . -maxdepth 1 -type f ( -name 'n21*.tdr' -o -name 'n25*.tdr' )` listed only `n21_des.tdr`, `n25_des.tdr` from active Wu Copy root. This is a filename/filter finding, not complete recursively audited snapshot coverage or TDR time-step introspection.
 - Existing 5V OFF/ON 2D QW integration and C1 low-J electrical IV difference remain valid, but low-J spatial radiative/trap net recombination and low-J IQE loss are **not established**. No new school run/source edit.

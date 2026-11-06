@@ -1,3 +1,14 @@
+## 2026-11-06 — 4차 발표 최종 PPT 수정: 교수 요구사항 반영, 실제 Raw Data 우선 (PRESENTATION ONLY)
+- 작업자: 주수빈; AI: ChatGPT; 상태: OBSERVED 기존 학교 실행 데이터 재사용 + PRESENTATION EDIT. **신규 학교 코드/실행/결과 없음**.
+- 사용자 제공 교수 요구사항: 첫 번째 또는 두 번째 장에 Baseline 구조·층별 두께·도핑·Trap·전기적 값의 표, 실제 SDE/SVisual/Mesh/Raw Plot만 사용, AI 모식도/임의 가공 그래프 사용 금지, 실제 TCAD 캡처 없으면 해당 자리 안내문, Project A/B는 향후 원본 결과 입력용 공백 유지.
+- 최종 17장 채팅 산출물 `CMP_4차발표_교수님요구사항_최종수정_주수빈.pptx` 제작. 3차 발표 디자인(미색 배경, 남색/청록 글꼴·강조) 유지. 슬라이드2에 현재 학교 `CMP_WU_Copy` **Wu-inspired 10µm PILOT** 구조/파라미터 표 및 5V 원본 terminal(raw 2D) 수치(n21 OFF Ie1.695e-4, Ih2.399e-3, Itot2.569e-3; n25 ON Ie1.690e-4, Ih2.397e-3, Itot2.566e-3). 2D raw 값을 실제 pixel 전류 또는 J로 단정하지 않음. EBL0 nm/pGaN120nm, trap Et/sigma는 pilot, 최종 정량 Baseline 아직 미확정으로 명시.
+- 슬라이드3~5 Kou 4µm representative epi + Wu 5nm localized damage 혼합 모델에서 Wu 10µm 별도 PILOT으로 재설계한 역사적 출처 및 차이 유지. 논문 혼합이 과거 수치 오류의 검증된 원인이라는 오해 방지.
+- 슬라이드6~8 실제 n1_msh.tdr, n21_des.tdr, n25_des.tdr의 Geometry/Doping/Recombination/Trap 콘투어 캡처 위치·파일명·변수 안내로 구성. 슬라이드9 인공 막대그래프 제거 → 실제 n21/n25 .plt SVisual I–V 캡처 자리 및 실제 5V 로그 원시 전류 2개로 대체.
+- 슬라이드10은 실제 저장된 5V 12개 QW 분할 영역 Field Integration 적분값을 표기: OFF Radiative9.902518e15/SRH6.102184e14/Auger4.442221e15, ON Radiative9.869850e15/SRH6.086824e14/Auger4.424524e15 [s^-1 um^-1]. 동일 V이나 I 차이 있고 explicit eGap trap term이 포함되지 않은 전체 IQE는 미확정임을 표시. OFF/ON 실제 SVisual Field Integration 이미지 삽입 자리 확보.
+- Project A/B 12/13/15/16장은 페이지명 외 **내용 없음**. 최종 파일 내 사진 객체 및 embedded image **0개**; 실물 학교 TCAD 사진은 제공되지 않아 의도적으로 미삽입. 총 17장, 16:9, PowerPoint/한쇼 편집 가능. 자체 슬라이드 렌더/오버플로 검사를 통과함.
+- 저장 위치: 채팅 downloadable PPTX와 미리보기 PNG; GitHub에는 PPTX 바이너리를 업로드하지 않음. 발표 수정을 넘는 공통 Baseline/학교 코드 변경 없음.
+- NEXT: 학교 SVisual에서 실제 원본 캡처를 가져와 자리 교체; 후속 Project A/B 파라미터 확정 후 연구자가 빈 페이지 작성.
+
 ## 2026-11-06 — 주수빈 EBL=0nm의 최종 Baseline 여부·EBL-free 물리적 타당성 검토 (READ-ONLY)
 - 사용자 질문: '지금 우리 최종 baseline 구조가 EBL=0nm야?? Micro-LED에서 EBL 층이 없어도돼?'.
 - GitHub 최신 확인: 활성 학교 `CMP_WU_Copy`의 이전 실제 `pp1_dvs.cmd` 관측값 `tEBL=0.000µm`은 **Wu 기반 10µm 작업용 pilot의 임시 설정**으로 확인됨. 원본 Wu 2023 출판사 공개 설명에서 EBL 유무·두께가 확인되지 않았으므로 'Wu 논문 EBL=0'으로 표현 불가. **최종 scientific baseline 미확정**.

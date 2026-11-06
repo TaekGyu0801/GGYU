@@ -1,3 +1,8 @@
+## 2026-11-06 Lee Wu low-J spatial TDR availability scoped — n21/n25 pair only in project root
+- School read-only `find . -maxdepth 1 -type f ( -name 'n21*.tdr' -o -name 'n25*.tdr' )` listed only `n21_des.tdr`, `n25_des.tdr` from active Wu Copy root. This is a filename/filter finding, not complete recursively audited snapshot coverage or TDR time-step introspection.
+- Existing 5V OFF/ON 2D QW integration and C1 low-J electrical IV difference remain valid, but low-J spatial radiative/trap net recombination and low-J IQE loss are **not established**. No new school run/source edit.
+- Working Wu-inspired PILOT use for Project A is **recommended conditionally** based on no gross physical source inconsistency and clear low-J electrical sensitivity; do not equate recommendation with user-approved final Baseline, validated Wu clone, or quantitatively proven optical decrease.
+
 ## 2026-11-06 Lee Wu Copy gross physical source screen — no obvious p/n/contact reversal; optical low-J pending
 - OBSERVED school `CMP_WU_Copy` source grep: `pp1_dvs.cmd` defines pGaN 0.120um first, EBL0 (pilot); places anode at x=0 and cathode at x=Xend; `pp25_des.cmd` declares `Piezoelectric_Polarization(strain)` and 5V anode goal; earlier inspected `pp25_des.par` sets `LatticeParameters X=(0,0,-1),Y=(1,0,0)`. No school edits/simulations.
 - Sentaurus Training sdevice §16.3 (https://ghzphy.github.io/Sentaurus_Training/sd/sd_16.html) gives the exact LatticeParameters as standard **UCS** x antiparallel to c-axis; plausibly consistent with p-side x=0 and n-side at +x, conditional on actual school UCS/TDR convention. Not a direct measured polarization-sign validation and not exact Wu Fig1 fidelity.

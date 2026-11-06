@@ -1,3 +1,12 @@
+## 2026-11-06 — 4차 발표 PPT Baseline 변경 전후 2장 추가 (주수빈, PRESENTATION ONLY)
+- 작업자: 주수빈; AI: ChatGPT; 상태: OBSERVED source data used in draft / PPT revised; 새로운 TCAD 실행·코드 변경 없음.
+- 사용자 요청에 따라 3차 발표 PPT와 동일한 미색/남색/청록색, 편집 가능한 소자 개념도, 간결한 수치 카드 형식을 유지하고 기존 15장 → 17장으로 수정.
+- 신규 슬라이드 4: 3차 당시 4µm mesa/2µm half/AlGaN EBL/4QW와 현재 학교 Wu-inspired 10µm full 2D stripe/EBL0nm(pilot)/4×3nm QW를 별도 모델로 구분. 3차 발표 출처의 5V OFF raw 전류1.448e-11 및 QW 3항 방사비율0.1095% 기재. **서로 다른 모델이므로 직접 인과 비교 금지** 안내.
+- 신규 슬라이드 5: 동일 Wu model의 Mg 도핑 인식 문제 전후를 비교. 입력 MgActive=2e19 cm^-3 유지, 원래 pGaN net Doping≈0 → project-local datexcodes GaN Mg acceptor mapping/SDE rerun 후≈-2e19 cm^-3(메시 표시). 기존 pre-fix OFF n21 5V raw Total=2.884e-5, Hole=3.696e-27 → post-fix OFF n21 5V Total=2.569e-3, Hole=2.399e-3. 두 런 모두 로그/메시 관측 근거 존재. raw 2D 출력, 절대 전류밀도 미검증.
+- 유지: Project A/B의 적용 위치·설계 수치 페이지는 제목 외 본문 없음. 현재 Wu 모델은 working pilot이며 저J 광학 IQE 및 final common baseline 검증은 미완료.
+- 산출물: 채팅 다운로드용 PPTX `CMP_4차발표_3차디자인통일_Baseline변경과정추가_주수빈.pptx` / 전체 17장 렌더링 확인. GitHub repository에 PPTX 바이너리 저장하지 않음.
+- 다음: A/B 위치와 수치 실제 합의 후 발표 슬라이드를 사용자가 직접 채움.
+
 ## 2026-11-06 — 4차 CMP 발표 PPT 초안 제작 (주수빈, PRESENTATION ONLY)
 - 작업자: 주수빈; AI: ChatGPT; 상태: PROPOSED / 발표 문서 생성, 신규 TCAD 실행 없음.
 - 사용자 제공 3차 발표 PPTX 형식(미색 배경·남색 타이틀·청록색 강조·중앙 구분 슬라이드)을 참고하여 수정 가능한 15장 4차 발표 PPTX를 채팅 산출물로 제작함.

@@ -1,4 +1,21 @@
 {
+  "leeWuRootTdrInventory20261106": {
+    "worker": "이택규",
+    "dateKST": "2026-11-06",
+    "status": "OBSERVED_ROOT_N21_N25_TDR_NAMES_ONLY_LOW_J_OPTICAL_UNVERIFIED",
+    "schoolProject": "/user/semi/semi437/tmp/myproject/CMP_WU_Copy",
+    "readOnlyShellCommand": "find . -maxdepth 1 -type f ( -name 'n21*.tdr' -o -name 'n25*.tdr' ) -printf '%f\\n' | sort",
+    "found": [
+      "n21_des.tdr",
+      "n25_des.tdr"
+    ],
+    "findingScope": "root directory, n21/n25 filename patterns only; no recursive search and no TDR internal-state check",
+    "currentEvidence": "5V OFF/ON spatial integration already conducted, low-J IV electrical suppression established from PLT, low-J optical effect/IQE NOT verified",
+    "recommendation": "conditionally proceed with Wu-inspired pilot as working Project A development model but NOT final or publication-grade baseline",
+    "pending": "Low-J matched-current QW Radiative/SRH/Auger/net trap pair-loss at stripe J~10 A/cm2; OFF V~3.206047 ON V~3.249371 from earlier interpolation. Any added SDevice paired output run requires explicit user approval.",
+    "schoolCodeEdited": false,
+    "newSimulation": false
+  },
   "leeWuGrossPhysicalSourceScreen20261106": {
     "worker": "이택규",
     "dateKST": "2026-11-06",

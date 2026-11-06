@@ -1,3 +1,13 @@
+## 2026-11-06 — 주수빈 4차 발표 PPT 수정: 기존 Kou+Wu 혼합 출처 문제로 서술 교체 (PRESENTATION EDIT ONLY)
+- 작업자 주수빈 / AI ChatGPT / 상태: OBSERVED 문헌·기록 기반 서술, PRESENTATION REVISION. 신규 연구 판단 확정 또는 TCAD 실행 아님.
+- 사용자 요청: 앞선 발표용 17장 PPT의 '수정 전 문제=Mg 도핑 인식 오류' 서술을 삭제하고, 실제로 이전 4µm CMP Baseline이 **Kou 2019 수직 에피(4×In0.15 QW3nm, GaN QB22nm, AlGaN EBL26nm, nGaN4µm) + Wu 2023 양측 측벽 5nm acceptor-like damage**를 결합한 대표 가정 모델이었다는 내용을 명확히 넣음. 기존 4µm Mesa는 대표 모델 선택이지 Kou 논문 내 4µm Mesa가 아니며 Kou 실제 chip 20/60/100µm.
+- 수정된 slide4: 3차 Kou+Wu 혼합 4µm 구조 vs 4차 Wu-inspired 10µm 별도 모델(In0.08 QW3nm×4, QB8nm×5, EBL 0nm pilot)의 수치를 대칭 비교함. 실제 SVisual 이미지 삽입 상자 유지.
+- 수정된 slide5: Kou vs Wu 원문에서 가져온 설계 조건과 기존 4µm hybrid 구성, 새 Wu source-grounded pilot 전환을 두 카드와 하단 요약으로 표현. 기존 MgFix 5V 전/후 전류 서술 및 수치 모두 이 슬라이드에서 제거.
+- **과학적 한계:** 두 논문의 수치 혼용은 문헌 혼합/정량 검증 부족에 따른 독립 Baseline 재설계 동기이지만, 그 혼합이 과거 solver/전류/QW4 문제의 **확정된 원인이라고 실험적으로 입증되지는 않음**. 새 Wu 모형도 pGaN/EBL/전극 등 Wu Fig1 완전 재현 미검증이며 working PILOT 상태.
+- Project A/B의 위치·파라미터 페이지는 제목 외 비워둠, TCAD SVisual 그림 삽입 안내 유지. 3차 발표의 미색·남색·청록 디자인 유지. 수정 결과 17장 PPTX 파일 `CMP_4차발표_Wu_Kou_혼합문제_반영_주수빈.pptx`를 이 채팅에서 제작했고 렌더링 및 overflow 검사 통과. GitHub에는 PPT 바이너리 저장하지 않음.
+- 근거: `CMP/COMMON_BASELINE.md`, `CMP/members/JuSubin/BASELINE_REBUILD_PROPOSAL_20261103.md`, 2026-11-03 JuSubin 프로젝트 내 대화/TEAM_TIMELINE, 현재 Wu school 모델 기존 관측 기록.
+- 코드/시뮬레이션/검증 상태 변경 없음.
+
 ## 2026-11-06 — 4차 발표 PPT 내 인공 소자 그림 제거 및 실제 TCAD 캡처 위치 안내
 - 작업자: 주수빈; AI: ChatGPT; 상태: PRESENTATION UPDATE (PROPOSED layout, not new TCAD observation).
 - 직전 17장 `CMP_4차발표_3차디자인통일_Baseline변경과정추가_주수빈.pptx`의 4·6·8장에 코드로 그렸던 **설명용 소자 단면도·측벽 그림을 모두 삭제**하고 편집 가능한 실제 TCAD 이미지 삽입 안내 텍스트 상자로 교체함. 전체 슬라이드 17장과 3차 발표 기반 미색/남색/청록 디자인, 측정 수치, Project A/B 빈 슬라이드는 유지.

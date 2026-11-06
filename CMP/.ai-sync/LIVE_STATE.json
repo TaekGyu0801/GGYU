@@ -8713,5 +8713,26 @@
     "noSourceEdit": true,
     "pilotStatus": "CONDITIONAL_GO",
     "baselineStatus": "FINAL_NO_GO"
+  },
+  "leeWuCopyLatticeAxesReadOnly20261106": {
+    "worker": "이택규",
+    "dateKST": "2026-11-06",
+    "project": "CMP_WU_Copy",
+    "source": "school pp25_des.par",
+    "line": 4,
+    "X": [
+      0,
+      0,
+      -1
+    ],
+    "Y": [
+      1,
+      0,
+      0
+    ],
+    "status": "OBSERVED_DECLARATION_ONLY",
+    "physicalPolarity": "UNRESOLVED_REQUIRES_DEVICE_AXIS_AND_POLARIZATION_CONVENTION",
+    "newSimulation": false,
+    "sourceEdited": false
   }
 }

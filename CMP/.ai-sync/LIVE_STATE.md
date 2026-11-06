@@ -1,3 +1,8 @@
+## 2026-11-06 Lee Wu Copy root TDR survey — matched low-J optical spatial state not yet available by n21/n25 filename
+- User actual school `find . -maxdepth 1 -type f ( -name 'n21*.tdr' -o -name 'n25*.tdr' )` output `n21_des.tdr`, `n25_des.tdr` ONLY. Other names/subfolders/internal TDR time states not inspected. No new solver/source edits.
+- Last observed 5V Wu n21 Trap OFF/n25 Trap ON successful; C1 low-J IV difference established but NOT IQE effect. Minimal gross orientation/contact screen found no explicit contradiction, not full polarization sign proof.
+- **Workflow PROPOSED:** recommend Wu-inspired working PILOT Project A preparation without more repeated checks, not final baseline freeze. A matched-J low-current radiative/nonradiative recombination snapshot comparison requires existing suitable saved spatial data or separate explicitly authorized future minimal OFF/ON output experiment. No approved run yet.
+
 ## 2026-11-06 Lee Wu Copy source gross screen passed provisionally; crystal-axis command matches UCS example
 - **OBSERVED school user grep**, `CMP_WU_Copy`: `pp25_des.cmd` polarization `Piezoelectric_Polarization(strain)`, anode goal5V, contacts defined; `pp1_dvs.cmd` pGaN tP0.120um (pilot), tEBL0 (Wu exact EBL unknown), `add-layer` pGaN at stack start, anode x=0 and cathode x=Xend. Earlier school `pp25_des.par`: `LatticeParameters X=(0,0,-1),Y=(1,0,0)`.
 - **REFERENCE:** Sentaurus Training sdevice 16.3 https://ghzphy.github.io/Sentaurus_Training/sd/sd_16.html documents exact lattice vectors as UCS x opposite GaN c-axis; physically plausible for x from p-top to n-bottom. School mesh-coordinate/TDR sign not directly proved; no exact Wu paper Fig1 claims.

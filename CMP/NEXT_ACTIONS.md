@@ -1,3 +1,11 @@
+## 2026-11-06 Lee Project A next actions — A-u user selected, implementation NOT RUN
+1. **School read-only first:** check saved G3 data via ls/find of g3off*/g3on* and spatial TDR near stripe J=1,10,100 A/cm2; current GitHub has NO verified G3 completion. Preserve existing n21/n25.
+2. **Retrieve actual active school source:** full CMP_WU_Copy/sde_dvs.cmd, preprocessed pp1_dvs.cmd and required corresponding SDevice/par configuration for eventual Project A copy; don't generate final paste-ready SDE from GitHub candidate alone.
+3. **After separate user approval:** build versioned isolated Project A working copy and run ONLY A0 SDE/mesh check. wC0 reference parity with unchanged original artifacts; do not require identical MD5 for independently generated meshes.
+4. **After matched-J baseline optical gate and consent:** prepare A0m(Si retained,C0) vs A0u(Si removed,C0) null controls, then low-point carbon pilot. Main **USER DECISION** A-u (Si removed), A-n sensitivity 1–2 points.
+5. **Before A2/A3/DOE:** revise proposed CN1e19/2e19 stress concentrations vs Cao actual CN max6e18; keep ranges, 20% metric, 5mV/2% tolerances and p-side fallback explicitly PROPOSED/undecided. Evaluate QW radiative, all pair-loss paths and voltage at same J, not solely local damaged-region recombination.
+- Handoff source: user-provided Claude summary dated 2026-11-06; no server execution/source mutation by Claude or GPT in this planning update.
+
 ## 2026-11-06 Lee Wu Copy n21/n25 root TDR check complete — advance pilot, defer optional low-J solve until approval
 - Completed single read-only filename inventory: only `n21_des.tdr`, `n25_des.tdr` matched n21/n25*.tdr in root. No evidence yet of *separately named* low-J spatial TDR for matched stripe J10A/cm2 (V_OFF~3.206047, V_ON~3.249371 from saved PLT); other node filenames/nested files not searched. Do NOT repeat 5V SVisual integrations.
 - **NOW:** Stop redundant verification. Recommend start preparatory Project A design on Wu-inspired 10um working PILOT while documenting that low-J IV suppression is electrical only, not an IQE loss. No final common-baseline freeze or optical performance claim until evidence.

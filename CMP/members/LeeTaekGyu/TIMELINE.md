@@ -1,3 +1,7 @@
+## 2026-11-06 Lee Wu Copy lattice orientation read-only check
+- User ran school `grep -n -i -A3 LatticeParameters pp25_des.par` in `CMP_WU_Copy` and observed `X = (0, 0, -1)`, `Y = (1, 0, 0)` on lines 4-7.
+- This confirms declaration, not whether polarity agrees with the physical device axis and polarization convention. No school run or edits. Active Wu Copy, C1 electrical low-current response already observed. Next analyze existing code/UG without repeated simulations.
+
 ## 2026-11-06 Lee Wu Copy C1 low-J I-V first successful read-only comparison — OBSERVED INTERPOLATED
 - Worker 이택규 executed corrected AWK token-stream parser directly on school `/user/semi/semi437/tmp/myproject/CMP_WU_Copy/n21_des.plt` Trap OFF and `n25_des.plt` Trap ON. **Actual school output**, no new SDevice run/code edits: `POINTS OFF=100 ON=172`; conditional 2D stripe J range OFF6.43e-14..2.57e4 A/cm2, ON5.94e-14..2.57e4 A/cm2. Last values OFF V5.0000 J2.569e4; ON V5.0000 J2.566e4, agree with archived 5V terminal rows.
 - At target J in A/cm2, interpolated `(V_OFF,V_ON,deltaV_ON-OFF,deltaI_ON_at_V_OFF/I_OFF)`: 0.1:(3.030022,3.073078,+0.043056V,-35.9422%); 1:(3.140705,3.204527,+0.063822V,-77.7924%); 10:(3.206047,3.249371,+0.043324V,-89.3471%); 100:(3.280607,3.301718,+0.021111V,-54.0779%); 1000:(3.412496,3.419819,+0.007323V,-8.6693%).

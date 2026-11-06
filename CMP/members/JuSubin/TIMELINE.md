@@ -1,3 +1,12 @@
+## 2026-11-06 — 4차 발표 PPT 내 인공 소자 그림 제거 및 실제 TCAD 캡처 위치 안내
+- 작업자: 주수빈; AI: ChatGPT; 상태: PRESENTATION UPDATE (PROPOSED layout, not new TCAD observation).
+- 직전 17장 `CMP_4차발표_3차디자인통일_Baseline변경과정추가_주수빈.pptx`의 4·6·8장에 코드로 그렸던 **설명용 소자 단면도·측벽 그림을 모두 삭제**하고 편집 가능한 실제 TCAD 이미지 삽입 안내 텍스트 상자로 교체함. 전체 슬라이드 17장과 3차 발표 기반 미색/남색/청록 디자인, 측정 수치, Project A/B 빈 슬라이드는 유지.
+- 4장: 3차 실제 4µm Full/Half-Mesa SVisual Geometry/Mesh 캡처와 Wu `CMP_WU_Copy/n1_msh.tdr` 10µm Geometry/DopingConcentration 전체 화면.
+- 6장: 같은 Wu `n1_msh.tdr`에서 전체 구조(X 적층 전체, Y=0..10µm)와 QW1–4·좌측 5nm 측벽 확대(Y≈0..0.02µm) 두 컷 삽입 권장.
+- 8장: 실제 `n21_des.tdr`(Trap OFF), `n25_des.tdr`(Trap ON) `TotalTrapConcentration` 좌측 DmgL_QW1–4를 동일한 배율·영역·색상 범례로 나란히 캡처하여 교체하도록 안내함.
+- 제공 파일: `CMP_4차발표_TCAD실제이미지_삽입안내_주수빈.pptx`; PowerPoint 17장, 삽입된 사진 오브젝트 0개, 슬라이드 렌더링으로 가독성 확인. 아직 실제 학교 TCAD 이미지가 PPT에 삽입된 것은 아님. 기존 계산/코드 또는 Baseline 상태 변화 없음.
+- 다음: 사용자가 실제 학교 화면에서 캡처해 안내 위치에 붙여넣고 설명 안내문 삭제.
+
 ## 2026-11-06 — 4차 발표 PPT Baseline 변경 전후 2장 추가 (주수빈, PRESENTATION ONLY)
 - 작업자: 주수빈; AI: ChatGPT; 상태: OBSERVED source data used in draft / PPT revised; 새로운 TCAD 실행·코드 변경 없음.
 - 사용자 요청에 따라 3차 발표 PPT와 동일한 미색/남색/청록색, 편집 가능한 소자 개념도, 간결한 수치 카드 형식을 유지하고 기존 15장 → 17장으로 수정.

@@ -1,3 +1,11 @@
+## 2026-11-06 — 4차 CMP 발표 PPT 초안 제작 (주수빈, PRESENTATION ONLY)
+- 작업자: 주수빈; AI: ChatGPT; 상태: PROPOSED / 발표 문서 생성, 신규 TCAD 실행 없음.
+- 사용자 제공 3차 발표 PPTX 형식(미색 배경·남색 타이틀·청록색 강조·중앙 구분 슬라이드)을 참고하여 수정 가능한 15장 4차 발표 PPTX를 채팅 산출물로 제작함.
+- Baseline 파트: 현재 활성 Wu-inspired 10µm CMP_WU_Copy 작업용 pilot 구조/주요 치수, Trap OFF/ON 조건, 2026-11-06 기존 C1 동일 J IV 보간 ΔV 수치를 시각화. 저J 광학 IQE와 최종 검증은 미완료임을 명시.
+- Project A/B 파트: 목차, 섹션 구분 및 적용 위치/방식·설계 파라미터 제목의 **빈 슬라이드만** 준비함. 위치·수치·기구를 **확정하거나 기입하지 않음**. 향후 연구원이 직접 채울 예정.
+- 초안은 사용자가 제공한 기존 PPTX 기반의 별도 채팅 다운로드 파일이며 GitHub에 바이너리 PPTX는 올리지 않음. 학교 SDevice/메시/코드 및 물리적 Baseline 결정 변경 없음.
+- 다음: A/B 설계 위치 및 수치 합의 후 비어 있는 PPT 슬라이드에 사용자가 직접 내용을 추가하거나 요청 시 반영.
+
 ## 2026-11-04 JuSubin measured n25 central QW carrier radiative CSV — OBSERVED / DERIVED (physical root cause still UNRESOLVED)
 - Worker **주수빈** executed a single-line awk read-only analysis of saved `CMP_WU_Copy/WU_n25_C1_QW_carrier_rad.csv` from the `n25_des` Trap ON, 5 V, central Y≈5um C1 cutline. Reported samples `QW1 N=3 eMean=1.572e19 hMean=2.857e16 RadMean=3.611e25 npMean=1.806e35`; `QW2 N=4 e=2.053e19 h=1.089e18 Rad=8.874e25 np=4.437e35`; `QW3 N=3 e=3.644e19 h=3.712e18 Rad=1.812e28 np=9.062e37`; `QW4 N=4 e=5.493e19 h=1.874e19 Rad=2.150e29 np=1.075e39`. e/h units cm^-3, Radiative cm^-3 s^-1, np cm^-6; averages are simple **sample means on one line** not 2D integrals/area-averaged rates or IQE.
 - Derived `QW4 / QW3`: e=1.507x, h=5.048x, np=11.863x, radiative=11.865x. Derived per-QW `RadMean/npMean` ≈2.00e-10 cm^3/s for all four wells (empirical effective B in these four local samples, **not yet independently verified against pp25_des.par**). The local radiative hierarchy follows local electron–hole product; do NOT multiply separately averaged e and h to reproduce npMean (covariance).

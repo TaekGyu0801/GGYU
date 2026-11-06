@@ -8784,5 +8784,28 @@
     "noSimulation": true,
     "noCodeEdits": true,
     "provenance": "user requested only essential validations; no new observation"
+  },
+  "leeWuCopyPragmaticGrossErrorScreen20261106": {
+    "worker": "이택규",
+    "dateKST": "2026-11-06",
+    "decision": "USER_PREFERS_ACCEPT_IF_NO_GROSS_ERROR_MOVE_ON",
+    "active": "CMP_WU_Copy",
+    "screenNow": "read_only_source_pn_polarization_contacts_screen_once",
+    "nextAfter": "one_equal_J10_Acm2_low_J_optical_recombination_proxy_only_if_needed_for_sidewall_IQE_claim",
+    "existingC1": {
+      "voltageOff": 3.206047,
+      "voltageOn": 3.249371,
+      "J_Acm2": 10
+    },
+    "deferred": [
+      "QW4_91pct_only_investigation",
+      "n29_repeat",
+      "hGap_rerun",
+      "full_Nt_sweep",
+      "broad_mesh_refinement_until_publication"
+    ],
+    "decisionStatus": "WORKING_BASELINE_RECOMMENDED_IF_GROSS_SCREEN_PASSES_AND_SINGLE_LOWJ_OPTICAL_EVIDENCE_ACQUIRED",
+    "noSchoolExecution": true,
+    "noCodeEdits": true
   }
 }

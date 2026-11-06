@@ -8557,5 +8557,18 @@
     "noNewSimulation": true,
     "noSourceEdit": true,
     "next": "Read-only n2/n6 log tail and pp2/pp6 effective Solve target to distinguish configured 3.6V stop vs incomplete 5V; then minimal recombination readout if valid."
+  },
+  "leeActiveWorkflowCorrection20261106": {
+    "worker": "이택규",
+    "dateKST": "2026-11-06",
+    "status": "USER_CORRECTED_ACTIVE_MODEL_WU_COPY",
+    "activeProject": "/user/semi/semi437/tmp/myproject/CMP_WU_Copy",
+    "activeOffNode": 21,
+    "activeOnNode": 25,
+    "biasV": 5,
+    "previousKouV2Audit": "ARCHIVAL_ONLY_NOT_ACTIVE_NOT_BASELINE_GO",
+    "next": "Open saved n21_des.tdr and n25_des.tdr to compare QW RadiativeRecombination field and integrals plus sidewall SRH/gap states at 5V; do not rerun; no Kou analysis unless user requests",
+    "noNewSimulation": true,
+    "noSchoolSourceChange": true
   }
 }

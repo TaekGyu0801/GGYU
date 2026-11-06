@@ -1,3 +1,7 @@
+## 2026-11-06 Lee Project A GaN:C edge planning — user chose A-u, no execution
+- USER DECISION 20:12 KST (user-forwarded): A-u local Si-removed regrowth-like GaN:C n-edge is main, A-n Si-retained only 1–2 sensitivity points; preserve active school CMP_WU_Copy Wu 10um pilot and existing 5nm damage. A0 SDE-only independent preparation proposed; A1+ require matched-J optical evidence (Claude G3 = earlier essential Gate 2) and approval. School G3 execution not confirmed.
+- Cao 2023 actual CN traps up to 6e18 (nominal bulk C1e19), so proposed CN1e19/2e19 pilots extrapolate beyond source. A0m/A0u null comparison essential, performance gates 20%/5mV/2% unapproved. No code/simulation execution or scientific baseline freeze; next: read-only G3 saved files, exact school SDE source, then approval for isolated A0.
+
 ## 2026-11-06 Lee Wu Copy root TDR survey — matched low-J optical spatial state not yet available by n21/n25 filename
 - User actual school `find . -maxdepth 1 -type f ( -name 'n21*.tdr' -o -name 'n25*.tdr' )` output `n21_des.tdr`, `n25_des.tdr` ONLY. Other names/subfolders/internal TDR time states not inspected. No new solver/source edits.
 - Last observed 5V Wu n21 Trap OFF/n25 Trap ON successful; C1 low-J IV difference established but NOT IQE effect. Minimal gross orientation/contact screen found no explicit contradiction, not full polarization sign proof.

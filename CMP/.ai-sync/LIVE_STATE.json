@@ -1,4 +1,33 @@
 {
+  "leeWuGrossPhysicalSourceScreen20261106": {
+    "worker": "이택규",
+    "dateKST": "2026-11-06",
+    "status": "OBSERVED_SOURCE_GREP_NO_OBVIOUS_GROSS_ERROR_POLARIZATION_SIGN_NOT_FULLY_VERIFIED",
+    "schoolProject": "/user/semi/semi437/tmp/myproject/CMP_WU_Copy",
+    "observed": {
+      "polarizationModel": "Piezoelectric_Polarization(strain) pp25_des.cmd:28",
+      "latticeX": [
+        0,
+        0,
+        -1
+      ],
+      "latticeY": [
+        1,
+        0,
+        0
+      ],
+      "latticeRef": "prior school pp25_des.par lines 4-7",
+      "anode": "x=0 first pGaN side",
+      "cathode": "x=Xend nGaN side",
+      "tPum": 0.12,
+      "tEBLum": 0,
+      "reference": "https://ghzphy.github.io/Sentaurus_Training/sd/sd_16.html (UCS example exact matching LatticeParameters)"
+    },
+    "limitations": "School mesh coordinate system and actual interface polarization charge sign not directly proved; Wu Fig1 fidelity unverified; gross screen is not full physics gate or final baseline approval",
+    "next": "Read-only list of saved low-J spatial TDR around stripe J10 A/cm2 OFF V3.206047 ON V3.249371; if none, seek authorization for minimal preserved OFF/ON optical output-only rerun; no hGap/n29/Kou switch",
+    "schoolSimulationRun": false,
+    "schoolCodeEdited": false
+  },
   "leeOffOnTerminal5VNov05_2026": {
     "worker": "이택규",
     "dateKST": "2026-11-05",

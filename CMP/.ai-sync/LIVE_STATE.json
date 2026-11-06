@@ -1,4 +1,33 @@
 {
+  "leeProjectACedgeAuDecision20261106": {
+    "worker": "이택규",
+    "dateKST": "2026-11-06 20:12",
+    "status": "USER_DECISION_AU_MAIN_PROJECTA_PLAN_PROPOSED_NO_RUN",
+    "main": "A-u local Si removal in proposed upper n-GaN Cedge inside existing 5nm Dmg, GaN:C regrowth analogue",
+    "sensitivity": "A-n Si-retained 1-2 points only",
+    "baseline": "CMP_WU_Copy Wu 10um pilot preserved, not final scientific freeze",
+    "control": [
+      "A0m Si retained C0",
+      "A0u Si removed C0",
+      "A-u C>0 vs A0u and original matched J"
+    ],
+    "literature": {
+      "CaoDOI": "10.1038/s41598-023-41678-1",
+      "maxActualCNTrapCm3": 6000000000000000000,
+      "nominalTotalCCm3": 10000000000000000000,
+      "otherHighPilotCN": "1e19 and 2e19 only PROPOSED stress points, outside Cao actual sweep"
+    },
+    "blockers": [
+      "school G3 output run not verified",
+      "full live school SDE source not verified",
+      "matched low-J radiative and net losses unverified",
+      "thresholds 20%,5mV,2% unapproved",
+      "p-side fallback undecided"
+    ],
+    "next": "school G3 ls read-only; obtain full school SDE; seek user approval for isolated A0 SDE-only",
+    "newSimulation": false,
+    "schoolSourceEdited": false
+  },
   "leeWuRootTdrInventory20261106": {
     "worker": "이택규",
     "dateKST": "2026-11-06",

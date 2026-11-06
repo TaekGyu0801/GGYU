@@ -8641,5 +8641,77 @@
       "n29"
     ],
     "assistantVerification": "Claude claims recorded with provenance; GPT independently calculated approximate numerical sanity check only, not verified UG original or full PLT"
+  },
+  "leeWuCopyLowJIVC1_20261106": {
+    "worker": "이택규",
+    "dateKST": "2026-11-06",
+    "status": "OBSERVED_READ_ONLY_C1_COMPLETE_INTERPOLATED_LOW_J_VOLTAGE_CURRENT_COMPARISON",
+    "project": "/user/semi/semi437/tmp/myproject/CMP_WU_Copy",
+    "files": [
+      "n21_des.plt",
+      "n25_des.plt"
+    ],
+    "offPoints": 100,
+    "onPoints": 172,
+    "conditionalStripeJ_Acm2": {
+      "offRange": [
+        6.43e-14,
+        25700
+      ],
+      "onRange": [
+        5.94e-14,
+        25700
+      ]
+    },
+    "results": [
+      {
+        "jAcm2": 0.1,
+        "Voff": 3.030022,
+        "Von": 3.073078,
+        "deltaV": 0.043056,
+        "deltaCurrentAtOffV_percent": -35.9422
+      },
+      {
+        "jAcm2": 1,
+        "Voff": 3.140705,
+        "Von": 3.204527,
+        "deltaV": 0.063822,
+        "deltaCurrentAtOffV_percent": -77.7924
+      },
+      {
+        "jAcm2": 10,
+        "Voff": 3.206047,
+        "Von": 3.249371,
+        "deltaV": 0.043324,
+        "deltaCurrentAtOffV_percent": -89.3471
+      },
+      {
+        "jAcm2": 100,
+        "Voff": 3.280607,
+        "Von": 3.301718,
+        "deltaV": 0.021111,
+        "deltaCurrentAtOffV_percent": -54.0779
+      },
+      {
+        "jAcm2": 1000,
+        "Voff": 3.412496,
+        "Von": 3.419819,
+        "deltaV": 0.007323,
+        "deltaCurrentAtOffV_percent": -8.6693
+      }
+    ],
+    "method": "AWK records grouped by 17 numeric tokens, uses dataset col10 anode OuterVoltage and col16 anode TotalCurrent; abs(I)*1e7 for W=10um, A/um unit; first crossing and log-linear interpolation",
+    "evidence": "user pasted school AWK console output; no code/run/outputs modified",
+    "conclusion": "STRONG_ELECTRICAL_TRAP_CURRENT_SUPPRESSION_AT_LOW_J; DOES_NOT_ESTABLISH_LOW_J_IQE_OR_TRAP_PAIR_LOSS",
+    "existingFinal5VRaw": {
+      "V": 5,
+      "JoffApprox": 25690,
+      "JonApprox": 25660
+    },
+    "next": "Read-only school pp25_des.par LatticeParameters polarization orientation if requested; final low-J optical efficiency needs spatial saved states or permitted separate run; no rerun now",
+    "noNewSimulation": true,
+    "noSourceEdit": true,
+    "pilotStatus": "CONDITIONAL_GO",
+    "baselineStatus": "FINAL_NO_GO"
   }
 }

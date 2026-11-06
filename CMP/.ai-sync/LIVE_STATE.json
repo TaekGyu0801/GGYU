@@ -8570,5 +8570,76 @@
     "next": "Open saved n21_des.tdr and n25_des.tdr to compare QW RadiativeRecombination field and integrals plus sidewall SRH/gap states at 5V; do not rerun; no Kou analysis unless user requests",
     "noNewSimulation": true,
     "noSchoolSourceChange": true
+  },
+  "leeWuCopyClaudeIndependentReview20261106": {
+    "worker": "이택규",
+    "reviewer": "Claude",
+    "dateKST": "2026-11-06",
+    "provenance": "USER_PASTED_INDEPENDENT_CLAUDE_ANALYSIS_NO_SCHOOL_OR_NEW_MODEL_EXECUTION",
+    "activeProject": "/user/semi/semi437/tmp/myproject/CMP_WU_Copy",
+    "offNode": 21,
+    "onNode": 25,
+    "voltageV": 5,
+    "observedExisting": {
+      "offTerminalRawRounded": 0.002569,
+      "onTerminalRawRounded": 0.002566,
+      "offRad12QW": 9902518000000000,
+      "onRad12QW": 9869850000000000,
+      "offEGap22": 0.0000426866644,
+      "onEGap22": 41878943900000,
+      "offThreeTermIQEPercent": 66.215622,
+      "onThreeTermIQEPercent": 66.227019,
+      "QW4RadSharePercentOff": 91.03,
+      "QW4RadSharePercentOn": 91.1
+    },
+    "claudeClaim": {
+      "trapAccountingStatus": "RESOLVED_BY_CLAUDE_UNDER_STATIONARY_LOCAL_TRAP_ASSUMPTIONS",
+      "trapPairRate": "Count eGapStatesRecombination ONCE; do not add eGap+hGap; conventional lifetime SRH considered separate",
+      "guideReference": "Sentaurus Device T-2022.03 Ch17 Eq525-529 pp553-554, Eq395 p473 (CLAUDE_CITED_UNVERIFIED_BY_GPT)",
+      "closureResidualsPerSecondPerUm": {
+        "off": 18776000000000,
+        "onOmitTrap": 60614000000000,
+        "onCountTrapOnce": 18736000000000,
+        "onCountTwice": -23143000000000
+      },
+      "efficiencyPercent": {
+        "qRadOverI_OFF": 61.7675,
+        "qRadOverI_ON": 61.6165,
+        "rateFourTerm_OFF": 66.2156,
+        "rateFourTerm_ON": 66.0432
+      },
+      "stripeJ5V_Acm2_Conditional": 25700,
+      "sameBiasRadDecreasePercent": 0.3299,
+      "pilotDecision": "CONDITIONAL_GO_FOR_WORKFLOW_ONLY",
+      "finalBaselineDecision": "NO_GO",
+      "dominantProblems": [
+        "no_low_mid_J_sidewall_recombination_evidence",
+        "QW4_dominance_physical_cause_unresolved",
+        "Wu_Fig1_EBL_pGaN_contacts_unverified",
+        "Nt_and_mesh_sensitivity_unverified",
+        "n29_Nt1e17_failed_near_2p42V"
+      ]
+    },
+    "independentGPTNumericalCheck": {
+      "usingRounded4SigCurrentAndExisting3TermProxy_residualOff": 21543718170000,
+      "usingRounded4SigCurrentAndExisting3TermProxy_residualOnCountTrapOnce": 15961897930000,
+      "status": "ROUNDING_LIMITED_NOT_THE_SAME_INPUT_PRECISION_AS_CLAUDE",
+      "note": "Claude -0.086% current change and ΔI/q≈-1.3724e13 imply more precise PLT current than rounded logs; PLT not yet read by GPT. Do not treat these numerical differences as physics contradictions."
+    },
+    "nextSingleStep": {
+      "status": "PROPOSED_NOT_RUN",
+      "description": "Read-only low J I-V comparison using existing n21/n25 PLTs",
+      "claudeSuggestedCommand": "python3 wu_iv_compare.py n21_des.plt n25_des.plt 10.0",
+      "scriptLocation": "cmp/WU_REVIEW_20261106/wu_iv_compare.py",
+      "caveat": "School availability of helper script NOT VERIFIED, do not request blind run; no new SDevice rerun",
+      "after": "Read-only pp25_des.par LatticeParameters if useful"
+    },
+    "noSchoolRun": true,
+    "noSchoolCodeEdit": true,
+    "doNotRerun": [
+      "hGapStatesRecombination",
+      "n29"
+    ],
+    "assistantVerification": "Claude claims recorded with provenance; GPT independently calculated approximate numerical sanity check only, not verified UG original or full PLT"
   }
 }

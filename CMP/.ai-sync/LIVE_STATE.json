@@ -8734,5 +8734,55 @@
     "physicalPolarity": "UNRESOLVED_REQUIRES_DEVICE_AXIS_AND_POLARIZATION_CONVENTION",
     "newSimulation": false,
     "sourceEdited": false
+  },
+  "leeWuCopyMinimumFinalBaselinePlan20261106": {
+    "worker": "이택규",
+    "dateKST": "2026-11-06",
+    "status": "USER_DIRECTIVE_MINIMUM_VALIDATION_ONLY_NO_ACTION",
+    "active": "CMP_WU_Copy",
+    "pilotDecision": "CONDITIONAL_GO",
+    "finalDecision": "AWAITING_ESSENTIAL_VALIDATION",
+    "completed": [
+      "n21_n25_5V_runs",
+      "trap_region_examples",
+      "5V_QW_field_integrations",
+      "22_region_eGapStates",
+      "low_J_I_V_C1_comparison",
+      "observed_lattice_axes"
+    ],
+    "mustDo": [
+      {
+        "order": 1,
+        "task": "read_only_confirm_physical_polarization_orientation",
+        "basis": "school pp25_des.par X=(0,0,-1),Y=(1,0,0); p-to-n structure; school effective physics",
+        "newRun": false
+      },
+      {
+        "order": 2,
+        "task": "at_one_equal_low_J_compare_2D_Rad_SRH_Auger_and_single_net_trap_loss",
+        "targetJ_Acm2": 10,
+        "offVFromC1": 3.206047,
+        "onVFromC1": 3.249371,
+        "first": "check_saved_spatial_states_exist",
+        "ifAbsent": "ask_fresh_user_approval_before_two_output_only_runs"
+      },
+      {
+        "order": 3,
+        "task": "one_minimal_mesh_sensitivity",
+        "when": "before_final_quantitative_baseline_freeze"
+      }
+    ],
+    "defer": [
+      "unneeded_hGap_rerun",
+      "n29_repeat",
+      "full_Nt_sweep",
+      "QW4_only_rerun",
+      "historical_Kou_detour",
+      "5V_region_reintegration",
+      "blind_exact_Wu_fidelity_remodel"
+    ],
+    "noSimulation": true,
+    "noCodeEdits": true,
+    "provenance": "user requested only essential validations; no new observation"
   }
 }

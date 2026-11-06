@@ -1,3 +1,10 @@
+## 2026-11-06 — 주수빈 EBL=0nm의 최종 Baseline 여부·EBL-free 물리적 타당성 검토 (READ-ONLY)
+- 사용자 질문: '지금 우리 최종 baseline 구조가 EBL=0nm야?? Micro-LED에서 EBL 층이 없어도돼?'.
+- GitHub 최신 확인: 활성 학교 `CMP_WU_Copy`의 이전 실제 `pp1_dvs.cmd` 관측값 `tEBL=0.000µm`은 **Wu 기반 10µm 작업용 pilot의 임시 설정**으로 확인됨. 원본 Wu 2023 출판사 공개 설명에서 EBL 유무·두께가 확인되지 않았으므로 'Wu 논문 EBL=0'으로 표현 불가. **최종 scientific baseline 미확정**.
+- 별도 보호된 `CMP/COMMON_BASELINE.md`는 Kou vertical epitaxy 기반 4µm representative hybrid 구조로 **p-Al0.15Ga0.85N EBL=26nm**를 규정. 현재 학교 Wu 10µm pilot이 이 protected baseline을 자동 대체하지 않음.
+- 문헌 확인(2026-11-06): `Wu et al. 2023` DOI 10.1016/j.micrna.2023.207542 공개 본문에서 Fig1 EBL 불명. EBL-free microLED 자체는 문헌에서 가능; blue low-current microLED without EBL experimental Zheng et al. Opt Express 2025 DOI 10.1364/OE.549908에서 peak EQE 32.8→34.6% at 0.4 A/cm2 보고(다른 소자); IEEE TED 2024 DOI 10.1109/TED.2024.3478197 also low-J EBL-free efficiency/hole injection improvement in a modeled device. 다른 연구의 효과를 현재 CMP 성능으로 전이하지 않음. EBL removal은 구조에 따라 hole injection 개선 또는 electron overflow 증가를 야기할 수 있으므로 범용 최적값 아님.
+- 제안: 발표에는 'EBL 0nm (Wu 모델 임시 설정, 원문 Fig1 미확인)' 표기, Wu 논문 그림 확인 전 Kou의 26nm EBL을 기계적으로 이식하지 않고 기존 Wu pilot 수치·결과 보존. 충분한 근거 없이 EBL 미포함 구조를 final 확정이라고 표현하지 않음. 실험·코드·baseline status 변경 없음.
+
 ## 2026-11-06 — 주수빈 4차 발표 PPT 수정: 기존 Kou+Wu 혼합 출처 문제로 서술 교체 (PRESENTATION EDIT ONLY)
 - 작업자 주수빈 / AI ChatGPT / 상태: OBSERVED 문헌·기록 기반 서술, PRESENTATION REVISION. 신규 연구 판단 확정 또는 TCAD 실행 아님.
 - 사용자 요청: 앞선 발표용 17장 PPT의 '수정 전 문제=Mg 도핑 인식 오류' 서술을 삭제하고, 실제로 이전 4µm CMP Baseline이 **Kou 2019 수직 에피(4×In0.15 QW3nm, GaN QB22nm, AlGaN EBL26nm, nGaN4µm) + Wu 2023 양측 측벽 5nm acceptor-like damage**를 결합한 대표 가정 모델이었다는 내용을 명확히 넣음. 기존 4µm Mesa는 대표 모델 선택이지 Kou 논문 내 4µm Mesa가 아니며 Kou 실제 chip 20/60/100µm.

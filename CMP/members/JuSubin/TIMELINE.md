@@ -2124,3 +2124,14 @@ Neither is the actual 2D lateral barrier under bias. Do not claim physically val
 - 출처/한계 표시: Wu 그림과 표는 저자 **Silvaco** TCAD의 결과이며 현재 CMP 학교 **Sentaurus** 시뮬레이션 결과 아님. Table 1 포획-확산 cross section과 현재 Sentaurus trap sigma를 동일시하지 않음. 원문 Fig.1(b) AlGaN 등장하나 EBL 두께/정확 역할 미확정; Wu-inspired 학교 pilot의 EBL0nm은 별도 임시 가정.
 - 실제 파일: `Wu_2023_논문리뷰_주수빈_원본PPT디자인.pptx`(현재 채팅 sandbox 배포), 미리보기 PDF도 배포. **GitHub 저장소에 바이너리 PPT를 업로드하지 않음**. 연구 공통 baseline/Project A/B 코드 및 연구상태 변경 없음.
 - NEXT: 주수빈이 발표 전 원문 figure 크기·핵심 메시지와 발표자 노트를 점검하고, 필요한 슬라이드만 편집. 발표 내용의 수치와 current school data를 혼용하지 말 것.
+
+---
+
+## 2026-11-08 — Wu 논문 리뷰 21장 PPT의 슬라이드별 핵심 설명 한 줄 보강 (주수빈, PRESENTATION REVISION)
+- 작업자: 주수빈; AI: ChatGPT; 상태: PRESENTATION EDIT ONLY, 새 TCAD 실행·결과·코드 변경 없음.
+- 사용자 요청: 직전 `Wu_2023_논문리뷰_주수빈_원본PPT디자인.pptx`의 레이아웃과 원문 Figure를 유지하면서 **각 슬라이드에 한 줄짜리 짧은 핵심 해석을 추가**하여 PPT만으로도 이해 가능하도록 수정.
+- 21장 모두 별도 텍스트 객체 `추가_핵심설명_한줄` 한 개씩 추가. 슬라이드 3은 5nm trap 지정 폭과 그로 인한 공핍/발광손실 폭의 차이, 6~9는 크기/농도/재결합 효과, 10~14는 횡방향 전류/수직주입 변화, 15~17은 Fs/ηi/IQE 및 문헌 검증, 18~19는 C-anode 전계 보상, 20~21은 설계 시사점/원문 Silvaco 대 CMP Sentaurus 구분을 간결히 설명.
+- 잘못 남은 이전 템플릿의 slide9 `<전류 밀도 분포>` 라벨만 삭제함(원문 Fig4는 radiative recombination rate). 그 외 원문 이미지/그림 크롭·하단 출처·슬라이드 제목·발표자 노트(21개)는 유지.
+- 결과물: `Wu_2023_논문리뷰_주수빈_핵심설명추가_최종.pptx`(21장, 이 채팅 downloadable PPTX); PDF 렌더 21장 시각 검사, 표지 설명 위치 조정. GitHub에 PPT 바이너리 업로드 없음.
+- NOTE: 슬라이드8의 약 8%는 Wu Table2의 5um 대 50um 크기 정규화 적분값(1.78 대 1.94)으로 산술 산출한 근사. Wu Silvaco 논문 결과를 현재 CMP Sentaurus 성능으로 표현하지 않음.
+- NEXT: 사용자가 발표 전 내용·글자 크기 최종 확인. 학교 TCAD/Project A/B 연구 상태 변화 없음.

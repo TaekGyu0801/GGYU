@@ -9113,5 +9113,18 @@
     "next": "source-derived independent versioned SDE/SDevice candidates, no baseline overwrite; school read-only byte diff and SDE-only mesh verification when access available",
     "newSimulation": false,
     "codeEdited": false
+  },
+  "juSubinBReplacementMethodologyReview20261108": {
+    "dateKST": "2026-11-08",
+    "worker": "주수빈",
+    "status": "METHODOLOGY_REVIEW_NO_ARCHITECTURE_CHANGE_NO_CODE_RUN",
+    "reference": "CMP/PROJECT_B_REPLACEMENT_VS_ADDITIVE_COMPARISON_REVIEW_20261108.md",
+    "question": "Whether internal MQW edge material replacement unfairly compares to nGaN Si-off/C defect Project A and whether addition-only is required",
+    "conclusion": "additive-only is not required, but B1 includes QW active width reduction 40nm/10um and changes interface physics. Bnull same GaN replacement is imperfect but important control",
+    "alternative": "external AlGaN shell preserves QW but lies outside 5nm damaged semiconductor, cannot assume it blocks internal trap access; other modes different physical hypothesis",
+    "designFreezeV1RemainsUnmodified": true,
+    "projectBArchitectureSelectionPendingExplicitUserChange": true,
+    "sourceModified": false,
+    "newSimulation": false
   }
 }

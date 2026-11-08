@@ -2184,3 +2184,12 @@ Neither is the actual 2D lateral barrier under bias. Do not claim physically val
 - 사용자 요청의 서울대 선배 발표 PPT는 이 채팅에서 실제 첨부 파일이 확인되지 않아 **디자인 동일 복제 불가**. 임시 학술 양식 사용. 실제 TCAD 원본 스크린샷은 미제공이므로 각각 명시적 placeholder만 사용하고 가짜 결과/구조도 생성 없음.
 - 결과물: `CMP_4차발표_Wu_Baseline_ProjectAB_초안.pptx` (ChatGPT 채팅에서 파일 제공; GitHub 바이너리 미업로드).
 - NEXT: 선배 PPT 원본을 실제 수신하면 시각적 구성 복제. 학교 SDE/SVisual 원본 그래프 삽입 및 논문·모델 가정 표시 유지.
+
+
+## 2026-11-08 — 선배 H조 발표 PPT 디자인 직접 계승한 4차 발표본 제작 (주수빈 / ChatGPT)
+- 상태: PRESENTATION CREATED / RENDER VERIFIED; 새 학교 TCAD 실행·코드수정·Project A/B 성능 결과 없음.
+- 사용자 첨부 `H조_은지우_이강록.pptx` 실제 25장 분석(16:9; 원본 마스터의 상단 blue gradient, orange title, footer, 표·2-column blue chart frame). 업로드 원본을 PPT 테마/마스터로 **직접 재사용**하여 20장 새 `.pptx` 제작. 20장 LibreOffice PDF 렌더와 대표 슬라이드 시각 검사 완료.
+- 문서 구성: 첫 실질 슬라이드에 Wu10um working Baseline 전체 조건표; 기존 다중 문헌 Kou-lineage vs Wu2023-main으로의 전환; Wu 직접값과 school pilot pGaN120nm/EBL0 구분; 기존 n21 OFF/n25 ON 5V 및 조건부 2D low-J PLT 비교; 5V 12QW Radiative/SRH/Auger 및 damaged eGap 적분; Project A GaN:C(Cao) 200x200nm/Si-off/controls; Project B Al0.15Ga0.85N 20nm internal replacement with Bnull/0.4% QW loss; matched-J 후속 검증 및 문헌 DOI.
+- **교수님 요구 준수:** 실제 Sentaurus 원본 그림 파일이 이 채팅에 없으므로 I-V 및 SVisual 2-column 패널은 명시적인 교체 표시만 사용. TCAD 그래프나 Project A/B 성능을 임의 생성하지 않음. 발표 표에 실측된 수치와 미실행 설계 수치를 구별.
+- 생성 결과: `CMP_4차발표_선배PPT동일디자인_Wu_Baseline_ProjectAB.pptx` (대화 파일 제공, GitHub 바이너리 업로드 없음). 이전 임시 디자인 초안 대신 이 파일 사용.
+- 다음: 학교 실제 PLT/SVisual screenshot (n21/n25 I-V, 5V QW Radiative, eGap sidewall) 확보 후 지정된 그림 패널 교체; 수치/문헌 꼼꼼한 발표자 최종 검토.

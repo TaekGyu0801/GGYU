@@ -1,3 +1,9 @@
+## 2026-11-08 — JuSubin primary Wu PDF source handoff: AlGaN in Fig1(b), exact EBL unsettled
+- Worker 주수빈; AI ChatGPT; PDF supplied directly in current chat: Wu et al. 2023 DOI 10.1016/j.micrna.2023.207542, 10 pages. This is **source review**, not a new TCAD run.
+- Page2 Fig.1(b) capture-diffusion schematic explicitly **shows AlGaN between pGaN and MQWs**; Fig1(a) core device illustration uses ITO/SiO2 and different contact detail; Sec1.1 does NOT report AlGaN layer thickness, composition or explicitly call it EBL. No definitive basis for “Wu EBL=0nm” or “Wu EBL=26nm.” In Sec2.2 paper uses Silvaco, current school pilot Sentaurus.
+- School active source setting from earlier user output: CMP_WU_Copy pGaN120nm tEBL=0; preserve working Wu 10um PILOT and n21/n25 data; do NOT insert EBL or alter protected Kou common baseline without approval. Main blockers: original structural fidelity and matched-current low-J optical evidence. Paper Table1 sigma belongs to separate capture-diffusion fit; do not transplant blindly to simulator traps.
+- Next: explicitly label paper-supported vs pilot parameters in presentation, only if strict replication sought retrieve authors' detailed AlGaN parameters or do approved isolated test, and perform previously agreed low-J matched-J optical gate when approved. No code changes, no runs, no new blocker unrelated to paper.
+
 ## 2026-11-06 — Claude→GPT Project A planning handoff, Lee A-u user decision
 - Worker: 이택규; active school `/user/semi/semi437/tmp/myproject/CMP_WU_Copy`; current n21 OFF/n25 ON 5V saved. Claude user-forwarded planning note, not actual TCAD execution and no full attached original PROJECT_A_PLAN_20261106.md. GPT checked GitHub and Cao publisher data, but school server source/G3 state remains inaccessible.
 - **DECIDED BY USER (20:12 KST):** A-u local Si removal within newly tagged GaN:C n-GaN Cedge = main. Si-retained A-n only 1–2 sensitivity points. Not permission for code mutation or run.

@@ -9126,5 +9126,28 @@
     "projectBArchitectureSelectionPendingExplicitUserChange": true,
     "sourceModified": false,
     "newSimulation": false
+  },
+  "juSubinB1BnullConfirmedAndPptReferencePending20261108": {
+    "dateKST": "2026-11-08",
+    "worker": "주수빈",
+    "status": "USER_CONFIRMED_B1_AND_BNULL_PPT_TEMPLATE_PENDING",
+    "decision": "B1 internal AlGaN 20nm per side remains; Bnull matched geometry GaN replacement mandatory",
+    "baseline": "Wu-inspired school CMP_WU_Copy n25 Trap ON kept untouched",
+    "comparatorCaveat": "Bnull same 40nm QW projected width loss0.4%, not perfect placebo",
+    "codeModified": false,
+    "simulationRun": false,
+    "presentation": {
+      "status": "REFERENCE_PPT_NOT_YET_UPLOADED",
+      "requirements": [
+        "former multiple-paper hybrid vs Wu2023 single primary literature anchored working baseline",
+        "early one-page baseline dimensions and actual/pilot assumptions table",
+        "n21 OFF vs n25 ON actual I-V, low-current deltaV, 5V QW radiative and eGap but no unmeasured optical low-J IQE claims",
+        "Project A numeric carbon trap parameters and exact nGaN coordinates with Cao/Richter sources",
+        "Project B xAl0.15 20nm MQW inner guard+Bnull exact coordinates with WuY2022/Furtmayr/Baek sources",
+        "source-ground TCAD-only visuals, no AI-drawn device figures",
+        "imitate layout after reviewing senior's uploaded SNU lab deck"
+      ]
+    },
+    "next": "receive sample senior PPT then inspect and produce editable 4th presentation using actual raw data and source attribution"
   }
 }

@@ -8908,5 +8908,50 @@
     "next": "qualify Wu source vs school pilot in PPT; preserve n21/n25; optional author details for Wu-exact reproduction, approved matched-low-J optical gate",
     "newSchoolSimulation": false,
     "codeEdited": false
+  },
+  "juSubinUserSelectedWu10ABParent20261108": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-08",
+    "status": "USER_APPROVED_WU10_SHARED_AB_WORKING_COMPARISON_PARENT_NO_NEW_RUN",
+    "userDecision": "알았어. 일단 지금확정한 baseline으로 projectA와 B를 이어나가자.",
+    "activeSchoolParent": "/user/semi/semi437/tmp/myproject/CMP_WU_Copy",
+    "workingSpec": "CMP/WORKING_BASELINE_WU2023.md",
+    "legacyProtectedBaseline": "CMP/COMMON_BASELINE.md (Kou4um historical; preserved)",
+    "reference": "n25 Trap ON damaged",
+    "cleanDiagnostic": "n21 Trap OFF",
+    "geometry": {
+      "mesaUm": 10,
+      "nGaNUm": 3.9,
+      "SiCm3": "5e18",
+      "qwCount": 4,
+      "InQw": 0.08,
+      "qwNm": 3,
+      "barrierNm": 8,
+      "pGaNNm": 120,
+      "nominalMgCm3": "2e19",
+      "EBLNm": 0,
+      "sidewallDamageNmPerSide": 5
+    },
+    "provenanceWarning": "EBL0/pGaN120 are pilot assumptions; original Wu Fig1b AlGaN unspecified",
+    "projectA": {
+      "worker": "이택규",
+      "main": "A-u local Si-removed n-GaN GaN:C edge",
+      "secondary": "A-n Si-retained sensitivity; carbon-null controls before claims"
+    },
+    "projectB": {
+      "worker": "주수빈",
+      "main": "lateral AlGaN sidewall barrier",
+      "warning": "Kou 4um Bspan3 cannot be directly transplanted; Wu 10um target region not yet mapped"
+    },
+    "blockers": [
+      "full school SDE/effective source provenance not available in current chat",
+      "low-J same-current optical/integrated net defect loss unverified",
+      "Project B Wu-specific AlGaN exact geometry unapproved",
+      "Wu Fig1b AlGaN EBL thickness unknown"
+    ],
+    "next": "read-only Wu-school full SDE/pp/mesh/G3 then independent A/B SWB SDE-only proof; later permitted minimal simulations and same-J optical assessment",
+    "noNewSimulation": true,
+    "sourceEdited": false,
+    "scientificFinalFreeze": false
   }
 }

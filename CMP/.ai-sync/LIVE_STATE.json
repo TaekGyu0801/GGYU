@@ -8882,5 +8882,31 @@
     "decisionStatus": "WORKING_BASELINE_RECOMMENDED_IF_GROSS_SCREEN_PASSES_AND_SINGLE_LOWJ_OPTICAL_EVIDENCE_ACQUIRED",
     "noSchoolExecution": true,
     "noCodeEdits": true
+  },
+  "juSubinWuOriginalFig1Check20261108": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-08",
+    "status": "OBSERVED_PRIMARY_SOURCE_FIG1B_ALGAN_EBL_THICKNESS_UNRESOLVED",
+    "originalPaper": "Wu et al. 2023 DOI 10.1016/j.micrna.2023.207542",
+    "fig1b": "AlGaN layer explicitly labeled between p-GaN and MQWs in capture-diffusion schematic",
+    "fig1a": "ITO, SiO2, pGaN, MQWs, nGaN, bilateral edge traps, electrode schematic; EBL details not labeled",
+    "section11": "10um mesa; nGaN3.9um Si5e18; 4 In0.08 wells3nm; GaN barrier8nm; pGaN Mg2e19; 5nm bilateral acceptor-like sidewalls",
+    "unspecified": [
+      "AlGaN thickness",
+      "Al fraction",
+      "AlGaN doping",
+      "explicit EBL designation",
+      "pGaN thickness"
+    ],
+    "paperTool": "Silvaco TCAD reported in Sec2.2",
+    "schoolBaseline": "CMP_WU_Copy Sentaurus Wu-inspired 10um PILOT, tEBL0nm pGaN120nm PROVISIONAL, no edit",
+    "blockers": [
+      "paper exact AlGaN/EBL implementation unknown",
+      "matched-J low-current optical QW pair recombination data absent",
+      "scientific final baseline unconfirmed"
+    ],
+    "next": "qualify Wu source vs school pilot in PPT; preserve n21/n25; optional author details for Wu-exact reproduction, approved matched-low-J optical gate",
+    "newSchoolSimulation": false,
+    "codeEdited": false
   }
 }

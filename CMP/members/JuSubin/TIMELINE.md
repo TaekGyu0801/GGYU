@@ -2193,3 +2193,12 @@ Neither is the actual 2D lateral barrier under bias. Do not claim physically val
 - **교수님 요구 준수:** 실제 Sentaurus 원본 그림 파일이 이 채팅에 없으므로 I-V 및 SVisual 2-column 패널은 명시적인 교체 표시만 사용. TCAD 그래프나 Project A/B 성능을 임의 생성하지 않음. 발표 표에 실측된 수치와 미실행 설계 수치를 구별.
 - 생성 결과: `CMP_4차발표_선배PPT동일디자인_Wu_Baseline_ProjectAB.pptx` (대화 파일 제공, GitHub 바이너리 업로드 없음). 이전 임시 디자인 초안 대신 이 파일 사용.
 - 다음: 학교 실제 PLT/SVisual screenshot (n21/n25 I-V, 5V QW Radiative, eGap sidewall) 확보 후 지정된 그림 패널 교체; 수치/문헌 꼼꼼한 발표자 최종 검토.
+
+
+## 2026-11-08 — 4차 발표 PPT 시각 중심 전면 재편집 (주수빈 / ChatGPT)
+- 상태: PPT PRESENTATION REBUILD / RENDER VERIFIED. 학교 TCAD 실행, 코드 수정, Project A/B 실측 추가 없음.
+- 사용자 제공 `1주차_meeting_박상현.pptx` 20장 중 **후반 과제 부분 12~20장**의 마스터 테마 및 발표 형태 직접 확인. 기존 과한 Result Table 위주 디자인을 대신해 `상단 1~2줄 물리해석 → 넓은 실측 figure/숫자 → 간단한 비교` 방식으로 변경. 논문 리뷰 1~11장 형식은 사용하지 않음.
+- **실제 새 발표 PPTX 총 18장**, PDF 18장 렌더 확인. 원본의 상단 gradient, orange heading, blue outlined panels, gray backgrounds 재사용. 숫자 강조/적은 표/저전류 PLT 보간 ΔV 라인 그래프/5V QW Radiative 적분·측벽 eGap 채널 숫자 패널 제작.
+- 그림/근거: 기존 학교 n21/n25 로그와 보관된 PLT 보간/5V SVisual region integration 수치만 재표시, 원본 SDE/SVisual 화면 미제공 부분은 교체 자리 표시. 새로운 I–V 곡선이나 실제 소자 렌더 그림은 임의 생성하지 않음. Project A/B 숫자·controls는 FIRST-RUN DESIGN, NOT EXECUTED/VALIDATED로 표기. 기존 pGaN120nm/EBL0는 Wu 원문 확정값이 아닌 pilot 설정으로 표기.
+- 결과물: `CMP_4차발표_박상현과제형식_시각중심_개정.pptx` (채팅 제공, GitHub 바이너리 업로드 아님); 이전 `H조` 템플릿 20장 발표본을 대체할 새 디자인.
+- 다음: 학교 실제 SDE Material/Doping, n21/n25 I–V 및 5V SVisual Trap/Radiative 원본 그래픽으로 빈 Figure 영역 교체. 정확한 2D J normalization/동일 J optical IQE 미검증 사실 유지.

@@ -1,3 +1,8 @@
+## 2026-11-08 JuSubin Wu original Figure 1 source clarification — no forced EBL change
+1. For presentation and baseline attribution, label current school EBL0nm as **pilot-only model assumption**. Cite Wu 2023 **Fig.1(b) AlGaN between p-GaN and MQWs** and state Wu original does **not specify AlGaN/EBL thickness or alloy fraction** in Sec.1.1; do not assert paper “has no EBL.”
+2. Preserve actual 10um Wu-inspired CMP_WU_Copy pilot n21/n25, pGaN120nm/EBL0 until separate decision; do not import unrelated protected Kou 26nm AlGaN or alter source on schematic interpretation alone. If exact Wu structural replication is necessary, seek paper author supplementary parameters or plan isolated EBL sensitivity after permission.
+3. Existing high-priority gate unchanged: matched-low-stripe-J OFF/ON spatial QW radiative + net trap-pair losses to support optical IQE conclusions; existing PLTs alone are electrical. No new simulation has run from PDF review.
+
 ## 2026-11-06 Lee Project A next actions — A-u user selected, implementation NOT RUN
 1. **School read-only first:** check saved G3 data via ls/find of g3off*/g3on* and spatial TDR near stripe J=1,10,100 A/cm2; current GitHub has NO verified G3 completion. Preserve existing n21/n25.
 2. **Retrieve actual active school source:** full CMP_WU_Copy/sde_dvs.cmd, preprocessed pp1_dvs.cmd and required corresponding SDevice/par configuration for eventual Project A copy; don't generate final paste-ready SDE from GitHub candidate alone.

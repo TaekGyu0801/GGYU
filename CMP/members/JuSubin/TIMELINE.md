@@ -2176,3 +2176,11 @@ Neither is the actual 2D lateral barrier under bias. Do not claim physically val
 - 원본 Wu Fig1–13와 Tables1–4 이미지, 발표자 노트 21개, 출처와 템플릿/색상 유지. 총 21장. PDF로 렌더 21장 확인; 별도 하단 요약 배지/상자는 없어짐.
 - 결과물 `Wu_2023_논문리뷰_주수빈_본문설명보강_최종.pptx`를 채팅에서 다운로드 제공. GitHub PPTX 바이너리 업로드 없음.
 - NEXT: 주수빈 발표 전 문장과 Figure 읽기 흐름 최종 확인. 학교 TCAD 값과 원문 Silvaco 데이터를 동일 결과로 묶지 말 것.
+
+
+## 2026-11-08 — 4차 발표 PPT 편집 가능 초안 작성 (주수빈 / ChatGPT)
+- 상태: PRESENTATION DRAFT ONLY. 새 TCAD 실행/코드 수정/성능 검증 없음.
+- Wu10um n21/n25 Baseline, 실제 저장된 5V QW 적분과 저전류 PLT 보간, Project A GaN:C Si-off 및 Project B B1+Bnull 채택 설계를 이용한 14장 .pptx 초안 제작.
+- 사용자 요청의 서울대 선배 발표 PPT는 이 채팅에서 실제 첨부 파일이 확인되지 않아 **디자인 동일 복제 불가**. 임시 학술 양식 사용. 실제 TCAD 원본 스크린샷은 미제공이므로 각각 명시적 placeholder만 사용하고 가짜 결과/구조도 생성 없음.
+- 결과물: `CMP_4차발표_Wu_Baseline_ProjectAB_초안.pptx` (ChatGPT 채팅에서 파일 제공; GitHub 바이너리 미업로드).
+- NEXT: 선배 PPT 원본을 실제 수신하면 시각적 구성 복제. 학교 SDE/SVisual 원본 그래프 삽입 및 논문·모델 가정 표시 유지.

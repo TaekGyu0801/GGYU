@@ -1,3 +1,8 @@
+## 2026-11-08 — 4차 발표 새 박상현 과제형식 PPT 제작 완료; 원본 TCAD Figure만 교체 필요
+- 주수빈이 제공한 `1주차_meeting_박상현.pptx`의 12–20장 **과제 파트**만 참고해 18장 시각 중심 발표로 재작성. 파란 그라데이션/주황 제목, 위 2줄 요약+큰 그래프+소형 숫자패널. 실제 학교 n21/n25 값으로 만든 재도표를 명확히 식별했으며 새로운 A/B 실측 없음.
+- 채팅 산출물: `CMP_4차발표_박상현과제형식_시각중심_개정.pptx`. 사용자의 이전 H조 템플릿 20장 버전보다 이번 파일이 최신.
+- NEXT: (1) SDE Material/Doping 원본 이미지, (2) n21/n25 I-V 원본, (3) n25 eGapStates/Trap SVisual 확대 캡처 삽입, (4) 발표 전에 Wu EBL0 pilot/2D J conditional/IQE 미검증 등 수치 출처 최종 점검. 연구 실행/코드 상태 변경 없음.
+
 ## 2026-11-08 JuSubin fourth presentation PPT pending senior reference template; B1+Bnull now user CONFIRMED
 1. **Architecture choice resolved:** B1 internal AlGaN xAl0.15 20nm per side across 52nm MQW/QB stack; Bnull same QW loss via GaN replacement required. Preserve original n25 damaged 5nm, compare matched absolute current, QW Rad, net trap-pair loss, ΔV, 0.4% projected QW width change; do not call Bnull perfectly inert.
 2. **NEXT USER INPUT:** senior SNU undergraduate-research slide deck uploaded in chat, not available yet. Inspect *actual slides* for design, font, title/body/figure sizes, visual grid, figure captions and citations, style before drafting new PPT.

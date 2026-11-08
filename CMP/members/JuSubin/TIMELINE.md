@@ -2211,3 +2211,10 @@ Neither is the actual 2D lateral barrier under bias. Do not claim physically val
 - 전체 물리적 페이지 1~24 재번호; Fig1~Fig12 통일(서브패널 (a)/(b)); 슬라이드 넘침 검사 통과 및 파일/렌더 확인. 논문 리뷰/선배 다른 학생의 문구가 남아 있던 표지·Project A/B 구분 페이지의 speaker notes도 현재 발표 내용으로 교체.
 - 파일: `CMP_4차발표_최종디자인통일_SDE영역표시.pptx` (ChatGPT 응답에 편집 가능 파일 제공, GitHub에 바이너리 자체는 업로드하지 않음). 기존 24장 원본은 보존.
 - NEXT: 교수님용 최종 발표 시 실제 **A/B 신규 SDE 생성 후** 주석 이미지를 실측 구조 map으로 교체할 수 있음. 아직 A/B 성능은 미측정, Wu EBL0 pilot·2D J 조건부 정규화·IQE 미검증 주의 문구 유지.
+
+
+## 2026-11-08 — Project A GaN:C 예상 영역 이미지 위치 오류 수정 (주수빈/ChatGPT)
+- **오류 식별**: 이전 생성 예상 그림은 GaN:C를 MQW(QW/Barrier, x=.120–.172um) 안쪽에 겹쳐 그려 Project A 설계값과 불일치. 이미지 생성 도식의 위치 오류이며 **실제 TCAD 소자/설계 좌표가 변경된 것은 아님**.
+- **정확한 A 설계**: n-GaN 최상부 `x=.172–.372um`, 좌측 `y=.005–.205um`, 우측 `y=9.795–9.995um`, 200×200nm 두 곳, 손상 5nm 영역 보존, 이 영역만 Si off 및 CN/CGa 적용 예정. Project B 내부 MQW AlGaN guard와 혼동 금지.
+- **교정 근거와 파일**: 사용자가 올린 실제 Wu Baseline `n1_msh_2` Full Doping 스크린샷의 x=0/.172/4.072, y=0..10 축에 설계 좌표를 직접 대응시켜 주황 반투명 200×200nm rectangles 표시; 동일 원본 화면 좌/우 확대 캡처 추가. `ProjectA_정확한위치_실제Baseline_사진기반.png` 채팅 제공. B의 zoom 원본은 x≈0.22um까지만 보여 A 200nm 수직 범위 전체를 담지 못하므로 이전처럼 QW에 억지 표시하지 않음.
+- **상태**: 그림 위치 정정 OBSERVED. 실제 A SDE 구현/mesh/SDevice 결과 없음. 발표용 기존 PPT에 이전 잘못된 그림이 남아 있으면 **이 교정본으로 교체**해야 함; 현재 요청은 이미지 정정만이고 PPT 자체는 아직 교체하지 않음.

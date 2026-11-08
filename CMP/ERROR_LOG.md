@@ -805,3 +805,10 @@ Do not change baseline physics parameters while diagnosing this.
 - Hotspots: hole max C-norm at (0.161~0.1615,9.995117) um; poisson/electron at (0.1650273,10.0) um. GitHub candidate SDE maps to QW4 start/Barrier4 at right 5nm damaged stripe but exact school PP geometry remains to be verified.
 - Hypotheses not proven: carrier/trap/stiff nonlinear transport near QW4-sidewall, junction mesh/interface. Explicitly no claim that trap strength itself alone causes nonconvergence. `n29_des.err` not supplied. No code edits/rerun.
 - NEXT: inspect school `pp29_des.cmd` `pp1_dvs.cmd` and `n29_des.err`, then if desired isolated numerical-only solver test; preserve n21/n25 outputs.
+
+
+## 2026-11-08 — Project A 예상 그림의 GaN:C 영역 위치 오류 (ILLUSTRATION ONLY / CORRECTED)
+- **발견**: 채팅용 Project A / B 스타일 도식 이미지에서 A의 주황 표시가 MQW 노란색/녹색 영역 `x=.120–.172um`을 덮음. 승인된 A 설계는 **MQW 바로 아래 clean n-GaN `x=.172–.372um`**이므로 오류.
+- **원인**: 기존 B 측벽 확대 이미지를 기반으로 A의 200nm×200nm 영역을 표시하면서 화면에 보이는 MQW를 잘못 사용함. B 확대 화면은 x≈0.22um까지만 보여 A의 200nm 전체 수직 범위를 표시하기에 부족함.
+- **정정**: 실제 Baseline 전체 구조 10um SDE 캡처의 축과 `CMP/PROJECT_AB_WU10_DESIGN_FREEZE_20261108.md`의 좌표를 대응한 정확한 2개 사각형 overlay PNG 제작. 좌측 x=.172-.372,y=.005-.205um / 우측 x=.172-.372,y=9.795-9.995um, original Dmg5nm 보존. 이미지파일: `ProjectA_정확한위치_실제Baseline_사진기반.png` (채팅 제공).
+- **연구 영향**: 학교 TCAD 파일/공식 프로젝트 설계 수치 변경 없음. 이전 생성 이미지 및 이전 그림이 삽입된 PPT는 이 교정본으로 대체해야 함. **제안 영역 표시이지 실제 Project A 실행 결과 아님**.

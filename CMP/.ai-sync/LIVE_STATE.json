@@ -9004,5 +9004,114 @@
     "next": "Verify school live source and receive approval for proposed starting physical A/B parameter sets/regions, then separate versioned source-derived SDE-only clones",
     "newSimulation": false,
     "sourceModified": false
+  },
+  "juSubinWu10ABDesignFreeze20261108": {
+    "dateKST": "2026-11-08",
+    "worker": "주수빈",
+    "status": "USER_DIRECTED_FIRST_RUN_DESIGN_FREEZE_CODE_NOT_WRITTEN_NO_RUN",
+    "specification": "CMP/PROJECT_AB_WU10_DESIGN_FREEZE_20261108.md",
+    "reference": "school CMP_WU_Copy n25 NtSide1e18 damaged 5nm both sides, unchanged; n21 clean diagnostic",
+    "numericChoiceIsScientificOptimum": false,
+    "schoolExactSourceVerified": false,
+    "projectA": {
+      "owner": "이택규",
+      "conceptPriorOwnerDecision": "A-u Si removed n-side GaN:C main; numeric freeze directed by JuSubin, not independent Lee approval",
+      "geometryUm": {
+        "verticalX": [
+          0.172,
+          0.372
+        ],
+        "leftY": [
+          0.005,
+          0.205
+        ],
+        "rightY": [
+          9.795,
+          9.995
+        ]
+      },
+      "names": [
+        "CEdgeL_nGaN",
+        "CEdgeR_nGaN"
+      ],
+      "siActiveCm3": "0 in C-edge only",
+      "totalCarbonCm3": "1e19 nominal compositional note NOT additional active dopant",
+      "CN": {
+        "role": "acceptor",
+        "concCm3": "6e17",
+        "level": "Ev+0.90eV"
+      },
+      "CGa": {
+        "role": "donor",
+        "concCm3": "3e17",
+        "level": "Ec-0.11eV"
+      },
+      "sigmaElectronAndHoleCm2": "1e-15 each trap",
+      "controls": [
+        "A0m same geometry Si kept C0",
+        "A0u Si off C0",
+        "A1u Si off two active carbon traps"
+      ],
+      "expectedRegionCount": 36,
+      "meshTargetMaxUm": {
+        "x": 0.01,
+        "y": 0.01
+      }
+    },
+    "projectB": {
+      "owner": "주수빈",
+      "composition": "Al0.15Ga0.85N",
+      "kind": "internal QW+QB side edge substitution, NOT external sidewall coating",
+      "geometryUm": {
+        "verticalX": [
+          0.12,
+          0.172
+        ],
+        "leftY": [
+          0.005,
+          0.025
+        ],
+        "rightY": [
+          9.975,
+          9.995
+        ]
+      },
+      "layers": [
+        "Barrier0",
+        "QW1",
+        "Barrier1",
+        "QW2",
+        "Barrier2",
+        "QW3",
+        "Barrier3",
+        "QW4",
+        "Barrier4"
+      ],
+      "noIntentionalMg": true,
+      "barrierPreservedNBgCm3": "1e15",
+      "QWPreservedIntentionalDopantCm3": "0",
+      "projectedInGaNWidthReplacedPercent": 0.4,
+      "controls": [
+        "B0 unchanged n25",
+        "Bnull same edge geometry GaN(xAl0) replacing InGaN QW edges",
+        "B1 Al0.15Ga0.85N"
+      ],
+      "expectedRegionCount": 51,
+      "meshTargetMaxUm": {
+        "x": 0.001,
+        "y": 0.002
+      }
+    },
+    "sameCurrentPilot": "J10 A/cm2 conditional 2D stripe normalization after confirming AreaFactor, compare absolute QW Radiative, correct net sidewall trap loss once, voltage penalty, active QW volume and lateral currents",
+    "uncertainties": [
+      "200nm C-edge and 20nm AlGaN width are CMP model parameters not literature optimal",
+      "school exact current SDE/pp1/mesh not archived in GitHub",
+      "local carbon defects could add optical loss, and AlGaN could impede hole injection",
+      "numeric values not independently signed off by Lee",
+      "no direct low-J optical IQE baseline proof"
+    ],
+    "next": "source-derived independent versioned SDE/SDevice candidates, no baseline overwrite; school read-only byte diff and SDE-only mesh verification when access available",
+    "newSimulation": false,
+    "codeEdited": false
   }
 }

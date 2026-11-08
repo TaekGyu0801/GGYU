@@ -2202,3 +2202,12 @@ Neither is the actual 2D lateral barrier under bias. Do not claim physically val
 - 그림/근거: 기존 학교 n21/n25 로그와 보관된 PLT 보간/5V SVisual region integration 수치만 재표시, 원본 SDE/SVisual 화면 미제공 부분은 교체 자리 표시. 새로운 I–V 곡선이나 실제 소자 렌더 그림은 임의 생성하지 않음. Project A/B 숫자·controls는 FIRST-RUN DESIGN, NOT EXECUTED/VALIDATED로 표기. 기존 pGaN120nm/EBL0는 Wu 원문 확정값이 아닌 pilot 설정으로 표기.
 - 결과물: `CMP_4차발표_박상현과제형식_시각중심_개정.pptx` (채팅 제공, GitHub 바이너리 업로드 아님); 이전 `H조` 템플릿 20장 발표본을 대체할 새 디자인.
 - 다음: 학교 실제 SDE Material/Doping, n21/n25 I–V 및 5V SVisual Trap/Radiative 원본 그래픽으로 빈 Figure 영역 교체. 정확한 2D J normalization/동일 J optical IQE 미검증 사실 유지.
+
+
+## 2026-11-08 — 사용자 편집 24장 4차 발표본 리디자인 + 실제 Baseline SDE 기반 A/B 위치 주석 (주수빈/ChatGPT)
+- 구분: PRESENTATION REVISION / OBSERVED FILE OUTPUT. **새 TCAD 실행·A/B SDE 코드 생성·성능 검증·학교 Baseline 수정 없음**.
+- 사용자 최신 업로드 `CMP_4차발표_박상현과제형식_시각중심_개정.pptx`(직접 추가 슬라이드 포함 24장) 실제 열람. 별도 양식이던 6장 Baseline 변경 및 8장 실제 I–V 결과를 기존 박상현 과제 형식(상단 그라데이션/주황 제목/파란 결과 테두리)에 맞춰 리디자인. 중복된 2·3장에는 Full/Sidewall 확대 역할을 부여; 12·13장은 TotalTrap SVisual 공간 맵과 eGapStates 영역 적분의 역할을 구분. 기존 실측 수치 유지; 불확실성·단위 주석 명시.
+- User-provided actual Baseline source screenshots **embedded in PPT**: `n1_msh_2` Full 10µm & left MQW edge zoom. 해당 **그림을 그대로 재사용**하고 PPT 편집 가능한 주황색 위치 오버레이를 추가. **A Fig11 (16장)**: 양측 clean nGaN x=.172..372µm, yLeft=.005..205/right9.795..9.995µm, 각 200×200 nm Si-off GaN:C (구조 아직 미실행). **B Fig12 (19장)**: 좌측 실제 MQW 확대 x=.120..172, y=.005..025 µm Al0.15Ga0.85N 내부 치환 예정 구간 주황 테두리, 기존 y=0..005 µm Damage 구간 파란 테두리, 우측 대칭 적용. 원본 물성/결과를 바꾼 이미지가 아닌 **Baseline SDE 기반 편집 주석 / PROPOSED DESIGN ONLY**.
+- 전체 물리적 페이지 1~24 재번호; Fig1~Fig12 통일(서브패널 (a)/(b)); 슬라이드 넘침 검사 통과 및 파일/렌더 확인. 논문 리뷰/선배 다른 학생의 문구가 남아 있던 표지·Project A/B 구분 페이지의 speaker notes도 현재 발표 내용으로 교체.
+- 파일: `CMP_4차발표_최종디자인통일_SDE영역표시.pptx` (ChatGPT 응답에 편집 가능 파일 제공, GitHub에 바이너리 자체는 업로드하지 않음). 기존 24장 원본은 보존.
+- NEXT: 교수님용 최종 발표 시 실제 **A/B 신규 SDE 생성 후** 주석 이미지를 실측 구조 map으로 교체할 수 있음. 아직 A/B 성능은 미측정, Wu EBL0 pilot·2D J 조건부 정규화·IQE 미검증 주의 문구 유지.

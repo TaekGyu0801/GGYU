@@ -8953,5 +8953,56 @@
     "noNewSimulation": true,
     "sourceEdited": false,
     "scientificFinalFreeze": false
+  },
+  "juSubinABLitratureReviewProposed20261108": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-08",
+    "status": "LITERATURE_REVIEW_PROPOSED_ONLY_NO_CODE_NO_RUN",
+    "paperResearchDocument": "CMP/PROJECT_AB_LITERATURE_PARAMETERS_REVIEW_20261108.md",
+    "baseline": "CMP_WU_Copy Wu10um n25 damaged as comparison parent",
+    "A": {
+      "lead": "이택규",
+      "literature": {
+        "Cao2023": "C_total1e19, CN tested 6e16,4e17,6e17,6e18, CGa=.5CN, CN=Ev+.9eV, CGa=Ec-.11eV, sigma_e=p=1e-15cm2",
+        "Richter2020": "C_total8.8e18 peak resistivity bulk thick GaN, not directly thin LED"
+      },
+      "proposal": {
+        "geometry": "n-GaN x=.172..372um, left y=.005..205um, right y=9.795..9.995um; width .2um depth .2um (model extrapolation)",
+        "C_total_cm3": "1e19",
+        "C_N_cm3": "6e17",
+        "C_Ga_cm3": "3e17",
+        "Si": "locally off in A-u",
+        "controls": [
+          "A0m",
+          "A0u",
+          "A1u"
+        ]
+      }
+    },
+    "B": {
+      "lead": "주수빈",
+      "literature": {
+        "WuY2022": "nanowire AlGaN barrier/shell xAl≈.15, not planar guard",
+        "Furtmayr2011": "nanowire lateral AlGaN shell with possible adverse lateral field",
+        "Baek2023": "vertical EBL 17nm/45nm and carrier-balance effect only",
+        "Gong2026": "vertical 1nm Al0.1GaN QW-QD interlayer, not lateral width"
+      },
+      "proposal": {
+        "material": "nominal undoped Al0.15Ga0.85N",
+        "geometry": "internal QW+QB side guard x=.120..172um, left y=.005..025um, right y=9.975..9.995um",
+        "perSideWidthNm": 20,
+        "activeQWProjectedWidthLostPercentApprox": 0.4,
+        "control": "Bx0 GaN identical QW-edge removed volume null"
+      }
+    },
+    "limits": [
+      "No directly published lateral 20nm optimum or n-GaN C-edge 200nm optimum",
+      "actual school full SDE effective source absent in current chat",
+      "proposed geometry and parameters NOT yet user approved",
+      "current optical low-J same-current loss unverified"
+    ],
+    "next": "Verify school live source and receive approval for proposed starting physical A/B parameter sets/regions, then separate versioned source-derived SDE-only clones",
+    "newSimulation": false,
+    "sourceModified": false
   }
 }

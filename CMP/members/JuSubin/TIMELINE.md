@@ -2099,3 +2099,14 @@ Neither is the actual 2D lateral barrier under bias. Do not claim physically val
 - Newton 반복 마지막 21~35에서 global error 약 3.77~6.00으로 진동. max C-norm hole 좌표 (x≈0.1610~0.1615,y=9.995117)um, Poisson/electron error 좌표 (0.1650273,10.0)um. QW4/Barrier4의 우측 손상 측벽에 해당할 가능성 큼: GitHub Wu3.2 candidate SDE상 QW4 x=.161-.164, Barrier4 x=.164-.172, right damage y=9.995-10.0; 학교 pp1 geometry 동일 여부는 미확인.
 - 직접 원인은 정공 방정식을 포함한 coupled Newton 비수렴, 근본 물리/수치 원인은 UNRESOLVED. NtSide=1e17이 반드시 비물리적이거나 잘못된 값이라고 판단하지 않음. 제출된 n29_des.err tail 결과 없음.
 - 변경: 학교 코드·GitHub deck·n21/n25 5V 저장 자료 변경 없음. 다음: 학교 pp29_des.cmd/pp1_dvs.cmd의 실제 geometry/solver/trap parameter, n29_des.err, 마지막 accepted 상태의 sidewall QW4/Barrier4 근처 정공/전위/트랩 분포를 가능한 한 비실행 방식으로 확인.
+
+---
+
+## 2026-11-08 — Wu et al. (2023) 원문 논문리뷰 PPT 제작 (주수빈, PRESENTATION ONLY)
+- 작업자: 주수빈; AI: ChatGPT; 상태: OBSERVED uploaded paper/source; PROPOSED interpretation / presentation production. 신규 학교 TCAD 실행·코드 변경 없음.
+- 사용자 업로드: `Wu 논문 원본.pdf`(Wu et al., Micro and Nanostructures 177, 207542, DOI 10.1016/j.micrna.2023.207542)와 별도 학연생 발표 형식인 `2주차_논문리뷰.pptx`(21장). 예시 PPT 디자인 및 figure/해석 배치를 보존한 **편집 가능한 Wu 논문 리뷰 21장 PPTX**를 이 채팅에 제작/전달.
+- 원문 Fig. 1–13 및 Tables 1–4를 원 PDF에서 직접 추출해 삽입. 핵심 내용: 10um 소자/양측 5nm sidewall traps, capture-diffusion 공핍폭, trap density/energy/LED size에 따른 QW1 radiative rate 및 transverse/vertical current, normalized IQE/Fs, 문헌 EQE 비교, C-shaped anode 개선 제안.
+- 21장 전체에 한국어 발표자 노트 작성, 예시의 주황색 타이틀/그라데이션 상단 띠/푸터/페이지 번호/figure 중앙 배치 재현. LibreOffice PDF 렌더로 시각 확인; 이미지 19개(원문 figure/table 크롭), 발표자 노트 21개; 기존 Park/SSDM 소자 및 이미지 텍스트 제거 확인.
+- 출처/한계 표시: Wu 그림과 표는 저자 **Silvaco** TCAD의 결과이며 현재 CMP 학교 **Sentaurus** 시뮬레이션 결과 아님. Table 1 포획-확산 cross section과 현재 Sentaurus trap sigma를 동일시하지 않음. 원문 Fig.1(b) AlGaN 등장하나 EBL 두께/정확 역할 미확정; Wu-inspired 학교 pilot의 EBL0nm은 별도 임시 가정.
+- 실제 파일: `Wu_2023_논문리뷰_주수빈_원본PPT디자인.pptx`(현재 채팅 sandbox 배포), 미리보기 PDF도 배포. **GitHub 저장소에 바이너리 PPT를 업로드하지 않음**. 연구 공통 baseline/Project A/B 코드 및 연구상태 변경 없음.
+- NEXT: 주수빈이 발표 전 원문 figure 크기·핵심 메시지와 발표자 노트를 점검하고, 필요한 슬라이드만 편집. 발표 내용의 수치와 current school data를 혼용하지 말 것.

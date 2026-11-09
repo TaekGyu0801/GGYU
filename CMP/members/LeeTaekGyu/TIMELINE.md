@@ -1,3 +1,8 @@
+## 2026-11-09 Lee school shell redirection syntax error in SDE path discovery — OBSERVED COMMAND ERROR, NO TCAD FAILURE
+- 이택규 ran `find /user/semi/semi437 -type f -name sde_dvs.cmd 2>/dev/null | head -n 30` from school interactive `[semi437@ssudisu3 ~]$`, received `Ambiguous output redirect.`. This is consistent with active csh/tcsh parsing Bash-style separate stderr redirection; NO filesystem finding, source edit, mesh or SDevice run.
+- Corrected one-line **PROPOSED, not yet user executed**: `bash -lc 'find /user/semi/semi437 -type f -name sde_dvs.cmd 2>/dev/null | head -n 30'`. Bash interprets the redirected stderr inside single quoted command. Previous narrow `grep project.?a|cedge` empty was only a filtered search result; do not infer missing Workbench project.
+- Next read-only: inspect returned exact path and distinguish copied Project A Workbench experiment from original `CMP_WU_Copy`, before any SDE changes.
+
 ## 2026-11-09 Lee Project A source-location search returned empty — COMMAND FILTER LIMITATION, NO MODEL FAILURE
 - 이택규 ran `find /user/semi/semi437/tmp/myproject -maxdepth 3 -type f -name sde_dvs.cmd | grep -Ei 'project.?a|cedge'`; output empty. This does **NOT** establish that the Project A Workbench project, copied experiment, or SDE input file is missing. Original screenshot showed SWB tree `CMP_A` with child `CMP_WU_Copy`; neither directory path nor input file path was independently verified.
 - Previous command combined shallow search and restrictive path-name grep. Corrective next action READ-ONLY: `find /user/semi/semi437 -type f -name sde_dvs.cmd 2>/dev/null | head -n 30`; if ambiguous, inspect Workbench SDE node Input Editor/project path directly. Never modify original `CMP_WU_Copy`; no project code or solver changes.

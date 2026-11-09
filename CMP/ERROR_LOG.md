@@ -812,3 +812,9 @@ Do not change baseline physics parameters while diagnosing this.
 - **원인**: 기존 B 측벽 확대 이미지를 기반으로 A의 200nm×200nm 영역을 표시하면서 화면에 보이는 MQW를 잘못 사용함. B 확대 화면은 x≈0.22um까지만 보여 A의 200nm 전체 수직 범위를 표시하기에 부족함.
 - **정정**: 실제 Baseline 전체 구조 10um SDE 캡처의 축과 `CMP/PROJECT_AB_WU10_DESIGN_FREEZE_20261108.md`의 좌표를 대응한 정확한 2개 사각형 overlay PNG 제작. 좌측 x=.172-.372,y=.005-.205um / 우측 x=.172-.372,y=9.795-9.995um, original Dmg5nm 보존. 이미지파일: `ProjectA_정확한위치_실제Baseline_사진기반.png` (채팅 제공).
 - **연구 영향**: 학교 TCAD 파일/공식 프로젝트 설계 수치 변경 없음. 이전 생성 이미지 및 이전 그림이 삽입된 PPT는 이 교정본으로 대체해야 함. **제안 영역 표시이지 실제 Project A 실행 결과 아님**.
+
+
+## 2026-11-09 — Final 4th-report PPT slide 18 Project B parameter row/value mismatch (PRESENTATION ERROR, UNRESOLVED)
+- OBSERVED from user-uploaded 24-slide final PPT: slide 18 table has 'Guard Height = 4 QWs + 5 QBs', 'Existing Damage Width = 52 nm', 'QW Active Width Reduction = 5 nm/side'. The latter two are incorrect semantic mappings. Correct design (from approved CMP/PROJECT_AB_WU10_DESIGN_FREEZE_20261108.md): Guard Height = 52 nm (=4QW3nm+5QB8nm); existing Damage Width = 5 nm/side preserved; QW projected InGaN active-width reduction = 0.4% (total 40nm/10um).
+- Additional caution: slide 15 Project A illustrative orange GaN:C region can look overlapping MQW instead of x=.172-.372 um clean nGaN; slide 19 B illustrative AlGaN appears vertically beyond x=.120-.172um MQW. Illustration only, not actual school A/B TCAD SDE results. Original speaker notes from unrelated CT-DRAM remain in slide 1/13/17 and visual slide/Fig numbering differs from actual 24 slide order.
+- Error found while creating a user-requested 24-slide Word speaking script on 2026-11-09. Document flags corrections; PPT not changed in this turn. No project design or TCAD outcome change.

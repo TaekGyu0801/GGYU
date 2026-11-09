@@ -1,4 +1,27 @@
 {
+  "juB1PreprocessStaleTimestampConfirmed20261109": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-09",
+    "status": "OBSERVED_SOURCE_NEWER_THAN_PREPROCESSED_GRID_STALE_PREPROCESS_NEXT",
+    "schoolProject": "CMP_WU_ALBARRIER",
+    "sourceFile": {
+      "name": "sdevice_des.cmd",
+      "mtimeKST": "18:16:28",
+      "bytes": 6348,
+      "FileGridPresent": true
+    },
+    "preprocessedFile": {
+      "name": "pp25_des.cmd",
+      "mtimeKST": "18:15:41",
+      "bytes": 2425,
+      "FileGridPresent": false
+    },
+    "oldFatal": "Couldn't find name for geometry file !",
+    "diagnosis": "pp25 generated ~47 sec BEFORE full source repair, so previous failure does not test repaired source; update via SWB preprocess first",
+    "next": "SWB Project > Operations > Preprocess Ctrl+P or Run dialog Preprocess then run, check new pp25 Grid n1_msh.tdr and mtime before n25 solver",
+    "simulationSucceeded": false,
+    "newSchoolRunThisTurn": false
+  },
   "juB1GridStillMissingAfterRestore20261109": {
     "worker": "주수빈",
     "dateKST": "2026-11-09",

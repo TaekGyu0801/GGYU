@@ -1,3 +1,9 @@
+## 2026-11-09 Project Bnull Newton plateau captured; guarded Quasistationary damping trial PROPOSED/NOT RUN
+- **OBSERVED USER-SUPPLIED SCHOOL LOG** `CMP_WU_ProjectB/n25_des.out` (Nov9 17:34 KST): Newton iterations26-35 C-norm electron max_error ~3.8e-3 at x=.139um,y=0, global error3.47-3.49 and RHS~4.8e-3 do not converge, #iterations larger than35; QS step less than MinStep at 5.7456e-11. Previously known anode~1.892V; 5V has NOT been demonstrated.
+- **OBSERVED SOURCE SETTINGS** Math Digits5, ErrRef e/h1e8, Iterations35, NotDamped100; QS InitialStep1e-4, MinStep1e-10, MaxStep.02, Increment1.25, Decrement2, Coupled without local options.
+- **PROPOSED Bnull-only first-pass numeric patch (not applied to school)** within QS inner Coupled only: `Coupled(Iterations=50 LineSearchDamping=0.01) { Poisson Electron Hole }`, leaving all other code/physics intact. Requires backup, actual school file guard, SWB preprocess, SDevice run, last anode and log check. If unsuccessful investigate local interface/mesh near 0.139um/edge; do not fabricate convergence results.
+- B1 ALBARRIER separately: preprocessed pp25 Grid=`n1_msh.tdr` observed; rerun pending. Wu original baseline unmodified.
+
 ## 2026-11-09 Project B B1 pp25 Grid binding now OBSERVED; Bnull terminal shell issue ONLY
 - School B1 `CMP_WU_ALBARRIER/pp25_des.cmd`: `grep` shows line12 `Grid="n1_msh.tdr"`, unlike earlier stale no-Grid deck. **Grid binding OBSERVED**, but file mtime and n25 new execution/5V remain UNVERIFIED.
 - Bnull diagnostic attempts produced shell `Unmatched '` and `p=... Command not found` from a multiline quoted command in csh/tcsh; `$p` was not target path. No new Bnull SDevice failure/result from this attempt. Existing Bnull 1.892V Newton MinStep failure remains **UNRESOLVED**.

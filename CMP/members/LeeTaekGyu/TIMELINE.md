@@ -1,3 +1,8 @@
+## 2026-11-09 Lee Project A FULL/HALF optimization comparability question — PROPOSED, NO RUN
+- 이택규: FULL vs HALF에서 최적 가로/세로 Carbon 위치가 달라질 수 있다는 우려 제기. **실제 차이 측정 없음**, 지오메트리/경계조건/전류정규화/mesh 동등성 검증 전 유불리 판단 금지.
+- Proposal: exact Wu10 FULL n25 parent에서 중앙 y=5um 대칭 HALF를 신규 파생(외측 Damage 한 개 보존, 중앙에 물리적 Damage 넣지 않음), FULL/HALF n25, A0u, A1u 200x200nm를 같은 J 및 정규화 ROI 비교. 일치 시 HALF로 50nm coarse→10nm fine 탐색, shortlist FULL 재검증. 기존 Kou/과거 HALF 모델 혼용 금지.
+- Detailed protocol: CMP/PROJECT_A_WU10_SWEEP_PLAN_20261109.md. Source/mesh/solver 미변경.
+
 ## 2026-11-09 Lee Project A coarse/fine geometry optimization planning — PROPOSED, NO TCAD RUN
 - 이택규 제안: 기존 Wu10um GaN:C A-u 설계를 가로/세로 3단계로 탐색할 때 50nm coarse sweep 후 성능 좋은 구간에서 10nm fine sweep 진행. 각 축 독립 탐색 뒤 우수 후보 결합도 실험; 독립 최적을 합쳐도 결합 최적임은 보장되지 않음.
 - Assistant illustrative scan: w,d=50..400nm 50nm step, other dimension 200nm fixed; 8+8-1=15 unique coarse A1u geometries. Fine example ±40nm step10 around each coarse best, up to 16 new axial structures; 2x2 combos max4 new; conditional cap 35 unique A1u geometries. **Exact bounds and max cases remain PROPOSED**, user only specified resolution strategy.

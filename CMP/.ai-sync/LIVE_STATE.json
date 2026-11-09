@@ -9259,5 +9259,26 @@
     "sourceModified": false,
     "simulationRun": false,
     "caveat": "50..400 bounds, ±40 fine window and 2x2 combinations assistant suggestions, not user-confirmed optimum or hard freeze; school SDE not yet verified"
+  },
+  "leeProjectAFullHalfEquivalence20261109": {
+    "worker": "이택규",
+    "dateKST": "2026-11-09",
+    "status": "PROPOSED_CHECK_NOT_RUN",
+    "concern": "May FULL Wu10 and HALF prefer different GaN:C lateral/depth geometry",
+    "assessment": "If physical and electrical mirror symmetry and normalization apply, normalized results and optimal geometry should agree within numerical tolerance, else need investigate modeling or actual asymmetry.",
+    "proposedHalf": "from actual same-school Wu10 full source, cut at y=5um with left Dmg at y=0..0.005um and only one physical Cedge; center cut is symmetry boundary not damaged sidewall.",
+    "proposedPreflight": [
+      "full vs half n25 baseline comparison",
+      "full vs half A0u at width=depth=200nm",
+      "full vs half A1u at width=depth=200nm",
+      "match J or normalized injected current, area scaling, QW radiative, sidewall net trap loss and terminal V, local meshes"
+    ],
+    "proposedStrategy": "Only after equivalent: HALF 50nm coarse and 10nm fine for screening; FULL confirm top 2-3 and final combined geometry. If non-equivalent, debug or use FULL throughout.",
+    "caveats": [
+      "No HALF new run and no observed optimum shift",
+      "Historical different-lineage HALF cannot validate Wu10 symmetry",
+      "Original school effective source and area normalization not verified"
+    ],
+    "source": "CMP/PROJECT_A_WU10_SWEEP_PLAN_20261109.md"
   }
 }

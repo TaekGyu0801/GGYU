@@ -9561,5 +9561,18 @@
     "newSchoolRun": false,
     "schoolFileModifiedByAI": false,
     "next": "backup school Bnull source; apply guarded local single-statement patch; SWB preprocess, run n25, verify last anode=5V and successful sweep; inspect local boundary if failure"
+  },
+  "leeProjectACopySdeHashConfirmation20261109": {
+    "worker": "이택규",
+    "status": "OBSERVED_READONLY_SCHOOL_COPY_SDE_IDENTICAL",
+    "sourceCommand": "bash -lc 'cd /user/semi/semi437/CMP_A || exit 1; ls -l CMP_WU_Copy/sde_dvs.cmd CMP_WU_Copy_Copy/sde_dvs.cmd; sha256sum CMP_WU_Copy/sde_dvs.cmd CMP_WU_Copy_Copy/sde_dvs.cmd'",
+    "templateSde": "/user/semi/semi437/CMP_A/CMP_WU_Copy/sde_dvs.cmd",
+    "editableSde": "/user/semi/semi437/CMP_A/CMP_WU_Copy_Copy/sde_dvs.cmd",
+    "sha256Both": "ecbfc2ed80480c7f20ab9cd0992f553910023d8161c6f3552b130ec53571fa6f",
+    "sizeBytesBoth": 5125,
+    "mtimeBoth": "2026-11-03 21:38 (school ls)",
+    "carbonSdeApplied": false,
+    "schoolRun": false,
+    "next": "Backup only CMP_WU_Copy_Copy source; choose SHA for CEdge candidate explicitly; replace second only; hash check then SDE-only run; preserve CMP_WU_Copy template"
   }
 }

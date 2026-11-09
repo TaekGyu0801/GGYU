@@ -1,4 +1,38 @@
 {
+  "juProjectBMeshBothExistBnull1892V20261109": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-09",
+    "status": "OBSERVED_SCHOOL_READONLY_LOG_B1_GRID_UNRESOLVED_BNULL_NEWTON_1P892V",
+    "B1": {
+      "project": "CMP_WU_ALBARRIER",
+      "n1_mesh_file": "EXISTS 1.4MB",
+      "sdeCode": {
+        "WguardUm": 0.02,
+        "xAlB": 0.15,
+        "guardMaterial": "AlGaN"
+      },
+      "pp25GridGrep": "NO_MATCH_cannot_distinguish_missing_file_from_missing_property",
+      "lastAnode": "NONE",
+      "lastFatal": "Couldn't find name for geometry file !"
+    },
+    "Bnull": {
+      "project": "CMP_WU_ProjectB",
+      "n1_mesh_file": "EXISTS 1.4MB",
+      "sdeCode": {
+        "WguardUm": 0.02,
+        "xAlB": 0,
+        "guardMaterial": "GaN"
+      },
+      "preprocessedGrid": "n1_msh.tdr",
+      "preprocessedParameter": "pp25_des.par",
+      "lastVoltageV": 1.892,
+      "lastTotalCurrentRaw": "3.680e-17",
+      "solverFailure": "Newton 35 iterations; Step-size less than MinStep",
+      "reached5V": false
+    },
+    "next": "Read-only determine existence/content pp25_des.cmd in B1 and verify SWB @tdr@ input/dependency; inspect last failing Bnull logs before changing solver. Avoid physical model changes.",
+    "newCodeThisTurn": false
+  },
   "juProjectBSeparateRootCausesLogs20261109": {
     "worker": "주수빈",
     "dateKST": "2026-11-09",

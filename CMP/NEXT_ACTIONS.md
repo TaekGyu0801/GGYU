@@ -1,3 +1,9 @@
+## NEXT — 2026-11-09 Lee Project A coarse/fine geometry optimization planning — PROPOSED, NO TCAD RUN
+- 이택규 제안: 기존 Wu10um GaN:C A-u 설계를 가로/세로 3단계로 탐색할 때 50nm coarse sweep 후 성능 좋은 구간에서 10nm fine sweep 진행. 각 축 독립 탐색 뒤 우수 후보 결합도 실험; 독립 최적을 합쳐도 결합 최적임은 보장되지 않음.
+- Assistant illustrative scan: w,d=50..400nm 50nm step, other dimension 200nm fixed; 8+8-1=15 unique coarse A1u geometries. Fine example ±40nm step10 around each coarse best, up to 16 new axial structures; 2x2 combos max4 new; conditional cap 35 unique A1u geometries. **Exact bounds and max cases remain PROPOSED**, user only specified resolution strategy.
+- Preserve unchanged n25 Trap ON 5nm Damage / no carbon-parameter change; A0u Si-off carbon-zero controls required on shortlisted/final geometry and n25 reference; matched-current absolute QW Radiative, net sidewall trap loss, Vf evaluate. **No code/mesh/simulation/claimed performance**.
+- Plan: `CMP/PROJECT_A_WU10_SWEEP_PLAN_20261109.md`; before run source preflight `CMP_WU_Copy` actual SDE and independent copy, geometry/mesh proof.
+
 ## 2026-11-08 JuSubin — 사용자 삽입 슬라이드 반영된 4차 발표 24장 최신본 확보
 - **LATEST PPT**: `CMP_4차발표_최종디자인통일_SDE영역표시.pptx` (채팅 파일 제공, GitHub 바이너리 미업로드). 직접 추가된 6/8장 리디자인과 1~24 페이지, Fig1~12 통일; 컴퓨터 렌더/슬라이드 overflow 검사 완료. 이전 18장 및 24장 초안은 참고용으로 유지.
 - **A/B 그림은 미실행 구조를 그림으로 속이지 않는 주석**: 실제 Baseline SDE/SVisual 업로드 이미지 위 A(16장) GaN:C 양측 200×200nm 예정 영역, B(19장) MQW 측면 AlGaN 내부20nm 예정 영역 + 기존 Dmg5nm 보존을 PPT 편집 가능 박스로 표시. A/B 코드/mesh/run 여전히 없음.

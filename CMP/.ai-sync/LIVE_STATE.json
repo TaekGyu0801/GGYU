@@ -1,4 +1,23 @@
 {
+  "juB1TruncatedSDeviceGeometryCause20261109": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-09",
+    "status": "OBSERVED_TRUNCATED_SDEVICE_SOURCE_CAUSING_MISSING_GRID_FIX_PREPARED_SCHOOL_UNRUN",
+    "schoolProject": "CMP_WU_ALBARRIER",
+    "observedSdeviceSourceFirstLine": "Physics (Region=\"DmgL_QW3\") {",
+    "observedPreprocessedFirstLine": "Physics (Region=\"DmgL_QW3\") {",
+    "observedGridLookup": "NO_MATCH",
+    "observedMesh": "n1_msh.tdr exists 1.4MB",
+    "observedFatal": "Couldn't find name for geometry file !",
+    "diagnosis": "Missing File Grid block due truncated school sdevice_des.cmd, not missing mesh",
+    "repairArtifact": "CMP_WU_ALBARRIER_SDEVICE_FULL_RESTORE_20261109.cmd, chat download only",
+    "sha256": "5453e103767cdd4568537684701973add43956f0a2b06bd49eb95c25d98c4625",
+    "localStaticChecks": "PASS; File/Grid/Electrode/Physics, 22 Trap blocks, 3 pGaN-only IncompleteIonization, Solve",
+    "schoolCodeChanged": false,
+    "schoolRerun": false,
+    "otherBranch": "Bnull CMP_WU_ProjectB Newton MinStep at 1.892V remains unresolved",
+    "next": "In SWB SDevice editor select all, paste entire repaired code, save. Verify sdevice_des.cmd header and generated pp25_des.cmd Grid n1_msh.tdr, then rerun only node 25."
+  },
   "juProjectBMeshBothExistBnull1892V20261109": {
     "worker": "주수빈",
     "dateKST": "2026-11-09",

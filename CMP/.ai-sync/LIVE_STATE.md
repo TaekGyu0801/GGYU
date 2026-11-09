@@ -1,3 +1,8 @@
+## 2026-11-09 JuSubin clarifies actual Project B school SWB folder naming (USER CONFIRMED)
+- `CMP_WU_ALBARRIER` = Project B1 AlGaN experimental branch.
+- `CMP_WU_ProjectB` = Project Bnull GaN replacement control, although folder name lacks `GANNULL`. Do NOT infer Project Bnull is missing because glob `*GANNULL*` finds nothing; use actual folder `CMP_WU_ProjectB` in subsequent terminal commands. No need to rename active SWB project; compare live SDE material to confirm actual configuration.
+- Existing error diagnosis remains distinct: B1 latest fatal `Couldn't find name for geometry file !`; Bnull latest fatal `Step-size less than MinStep` and no proven 5V completion. User naming clarification is metadata only; no new code/run.
+
 ## 2026-11-09 Lee school Wu10 SDE source inventory verified — OBSERVED READ-ONLY, NO SOURCE CHANGE
 - 이택규 provided literal `bash -lc` output from active school `/user/semi/semi437/tmp/myproject/CMP_WU_Copy`: existing `sde_dvs.cmd` (5125 bytes; Nov 3 21:38), `pp1_dvs.cmd` (5121 bytes; Nov 3 23:16), `n1_msh.tdr` (984164 bytes; Nov 3 23:17), `pp25_des.cmd` (5714 bytes), `pp25_des.par` (767 bytes; both Nov 3 23:58). File existence verified only; current run success/reuse or byte equality NOT newly verified.
 - From school `grep -nE`: Wm10.0µm, Wdmg.005µm, tP.120µm pilot, tEBL0µm pilot, tQW.003µm, tQB.008µm, tN3.900µm, 4 QWs; `DmgL`/Clean/`DmgR` lateral partition, nSi placed via `nSiliconActiveConcentration` in source. Derived 5QB×.008+4QW×.003=.052µm; nominal nGaN begins x=.172µm, consistent with Project A x target. No evidence for exact Wu EBL.

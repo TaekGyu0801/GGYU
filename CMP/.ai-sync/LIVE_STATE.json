@@ -9532,5 +9532,21 @@
     "bnullNewLogObserved": false,
     "bnullBlocker": "Newton/MinStep ~1.892V remains unresolved",
     "next": "Rerun B1 n25; obtain Bnull Math/Solve and solver out/err with single-line full-path commands; no new code changes"
+  },
+  "leeProjectASelectedWorkbenchExperiment20261109": {
+    "worker": "이택규",
+    "dateKST": "2026-11-09",
+    "status": "USER_DECIDED_EXPERIMENT_SELECTION_NO_TCAD_RUN",
+    "swbRoot": "/user/semi/semi437/CMP_A",
+    "templateExperiment": "CMP_WU_Copy",
+    "activeEditableExperiment": "CMP_WU_Copy_Copy",
+    "rule": "Preserve first experiment as unchanged reusable copy template; modify only second",
+    "bothSameSource": "USER_REPORTED_NOT_YET_HASH_CONFIRMED",
+    "secondDiskPath": "/user/semi/semi437/CMP_A/CMP_WU_Copy_Copy/sde_dvs.cmd",
+    "secondDiskPathVerification": "PENDING",
+    "priorFirstCopyEditInstructions": "SUPERSEDED",
+    "next": "Read-only check existence and hashes/diff for both copied SDEs, then backup and change only second; SDE-only smoke test",
+    "newSchoolRun": false,
+    "newCodeEdit": false
   }
 }

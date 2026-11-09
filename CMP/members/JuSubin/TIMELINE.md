@@ -1,3 +1,9 @@
+## 2026-11-09 JuSubin — Both Project B branches have SDevice failures (GANNULL first run; ALBARRIER retry)
+- OBSERVED/USER-REPORTED: copied school B1 ALBARRIER SDevice n25 failed again after previously proposed pGaN-only Mg IncompleteIonization modification. SWB project log only says failed/exit(), not fatal solver reason. User additionally reports GANNULL initial unmodified SDevice run failed; its first fatal message/node details are not yet available.
+- Important: do NOT assume GANNULL failure shares ALBARRIER AlGaN Mg ionization cause. Bnull guard material is GaN; source/log needed for separate diagnosis. Prior project screenshot proves B1 failure but not pGaN-only fix correctness.
+- No new source modifications or successful simulations in this update.
+- NEXT read-only inspect the latest n25_des.out, n25_des.err and n25_des.log (or actual failing SDevice node) for BOTH independent SWB project directories, compare first fatal lines; do not change device physics until actual causes identified.
+
 ## 2026-11-09 JuSubin Project B1 first school SDevice Mg ionization failure and proposed source fix — NO SUCCESSFUL RERUN
 - OBSERVED screenshot: school CMP_WU_ALBARRIER SDevice n25_des.out fails material initialization: The doping species MagnesiumActiveConcentration has no incomplete ionization parameters in the parameter file (region BGuardL_Barrier1, material AlGaN). Visible datexcodes.txt variable redefined lines in n25_des.err and license expiry warnings are separately noted, not yet proven fatal.
 - Diagnosis: original B1 code globally enabled IncompleteIonization for MagnesiumActiveConcentration, while sdevice.par defines Mg Ionization Species only within GaN. Adding undoped AlGaN BGuard regions reveals mismatch. Root cause based on screenshot and supplied source, NOT yet confirmed via new preprocessed school deck.

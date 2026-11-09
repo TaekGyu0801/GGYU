@@ -1,4 +1,60 @@
 {
+  "juProjectBB1BnullCodeDraft20261109": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-09",
+    "status": "SOURCE_DRAFT_STATIC_PASS_SCHOOL_UNRUN",
+    "source": "user pasted school CMP_WU_Copy 4 input scripts; latest school pp/source hashes pending",
+    "artifact": "CMP_ProjectB_B1_Bnull_Wu10_FirstRun_20261109.zip (chat only, no public code commit)",
+    "zipSha256": "b17067924e586a97e31705f3f97f763f94e01297a2dda2920027a9776be9d2e7",
+    "cases": {
+      "B1": {
+        "name": "CMP_PROJECTB_1.0.0_ALBARRIER",
+        "guardMaterial": "AlGaN",
+        "alFraction": 0.15
+      },
+      "Bnull": {
+        "name": "CMP_PROJECTB_1.0.0_GANNULL",
+        "guardMaterial": "GaN",
+        "alFraction": 0
+      }
+    },
+    "geometry": {
+      "guardSidesYum": [
+        [
+          0.005,
+          0.025
+        ],
+        [
+          9.975,
+          9.995
+        ]
+      ],
+      "guardXum": [
+        0.12,
+        0.172
+      ],
+      "oldDamageWidthUm": 0.005,
+      "expectedRegionsPerCase": 51,
+      "damageTrapRegions": 22
+    },
+    "models": {
+      "sdeviceTrapPhysics": "same as baseline",
+      "thermal": "300K",
+      "polarization": "original ON",
+      "localMeshMaxXum": 0.001,
+      "localMeshMaxYum": 0.002,
+      "TrapOnConcentrationCm3": 1000000000000000000,
+      "Vstop": 5
+    },
+    "validation": {
+      "staticSourceChecks": "PASS",
+      "mockedTclSVisual": "PASS",
+      "actualSchoolSDE": "NOT_RUN",
+      "actualSchoolSDevice": "NOT_RUN",
+      "efficiencyGain": "NOT_MEASURED"
+    },
+    "next": "copy original school SWB twice; validate Bnull then B1 SDE/Mesh/regions first, then 5V SDevice only after source checks; matched-J QW absolute radiative/net trap loss."
+  },
   "leeProjectACedgeAuDecision20261106": {
     "worker": "이택규",
     "dateKST": "2026-11-06 20:12",

@@ -2225,3 +2225,10 @@ Neither is the actual 2D lateral barrier under bias. Do not claim physically val
 - Scripts preserve source distinction: Wu 10um working pilot, EBL0 is model pilot; n21/n25 low-J conditional normalized J and 5V 0.3299% QW Radiative is NOT IQE; eGap 99.06% is damage-QW share within eGap channel, not total recombination; Project A/B are approved design/controls, NOT simulated performance.
 - PPT QC finds slide 18 B parameter table semantic mismatch (see ERROR_LOG below), slide 15 A/slide 19 B illustration may imply placement beyond approved coordinates; original 24 slide number vs visual numbered footer/figure inconsistent; irrelevant CT-DRAM speaker notes remain on slide 1/13/17. PPT itself not edited; docx contains final warnings.
 - No new TCAD run, no code/geometry change. NEXT: correct user PPT table/illustrations/numbering if requested before actual delivery.
+
+
+## 2026-11-09 — 4차 발표 대본 14분/발표자 7:7 재편집 (주수빈 / ChatGPT)
+- OBSERVED / DOCUMENT ONLY: 사용자 최종 24장 PPT에 맞춘 이전 Word 발표대본을 총 14분 계획으로 개정. **주수빈 슬라이드 1–12 Baseline(00:00–07:00), 이택규 슬라이드 13–24 Project A/B와 결론(07:00–14:00)**. 각 슬라이드 별 권장 시간/누적 시간 표시, 12→13 발표자 인계 멘트 및 자연스러운 구어체 작성.
+- 결과물 `CMP_4차발표_14분_수빈Baseline_택규ProjectAB_발표대본.docx` (채팅 제공, GitHub 바이너리 업로드 없음). 24장 대본 + QC 메모로 6쪽 문서 렌더 확인. 약 3,075자(Baseline) + 2,883자(Project AB)이며 실제 시연 속도에 따라 14분은 리허설 조정 필요.
+- 기존 자료 해석 유지: Wu10um working baseline은 Wu exact clone 아님/EBL0 pilot; 2D normalized J conditional; 5V QW Rad delta는 IQE 아님; eGap 99.06%는 eGap 채널 내부 비중; A/B 신규 SDE 시뮬레이션 아직 없음. 기존 최종 PPT 18장 B 파라미터 표/15장·19장 예상 그림 오류 및 숫자/CT-DRAM 노트는 Word 뒤쪽 점검 메모에 명시 (PPT 파일 자체 미수정).
+- 학교 TCAD 코드/데이터/실행 상태 변경 없음. 후속 작업: 필요 시 실제 리허설 시간에 맞춰 발표 문장을 축약/늘리거나 최종 PPT 오류 정정.

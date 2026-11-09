@@ -2218,3 +2218,10 @@ Neither is the actual 2D lateral barrier under bias. Do not claim physically val
 - **정확한 A 설계**: n-GaN 최상부 `x=.172–.372um`, 좌측 `y=.005–.205um`, 우측 `y=9.795–9.995um`, 200×200nm 두 곳, 손상 5nm 영역 보존, 이 영역만 Si off 및 CN/CGa 적용 예정. Project B 내부 MQW AlGaN guard와 혼동 금지.
 - **교정 근거와 파일**: 사용자가 올린 실제 Wu Baseline `n1_msh_2` Full Doping 스크린샷의 x=0/.172/4.072, y=0..10 축에 설계 좌표를 직접 대응시켜 주황 반투명 200×200nm rectangles 표시; 동일 원본 화면 좌/우 확대 캡처 추가. `ProjectA_정확한위치_실제Baseline_사진기반.png` 채팅 제공. B의 zoom 원본은 x≈0.22um까지만 보여 A 200nm 수직 범위 전체를 담지 못하므로 이전처럼 QW에 억지 표시하지 않음.
 - **상태**: 그림 위치 정정 OBSERVED. 실제 A SDE 구현/mesh/SDevice 결과 없음. 발표용 기존 PPT에 이전 잘못된 그림이 남아 있으면 **이 교정본으로 교체**해야 함; 현재 요청은 이미지 정정만이고 PPT 자체는 아직 교체하지 않음.
+
+
+## 2026-11-09 — 4차 발표 최종 PPT 24장 구어체 Word 대본 (주수빈 / ChatGPT)
+- OBSERVED: user-uploaded final 24-slide `4주차_폭주수빈(이택규 주수빈)_MicroLED_Sidewall_TCAD.pptx` inspected slide by slide; 24 distinct Korean spoken scripts plus presentation QC notes produced as `CMP_4차발표_최종PPT_슬라이드별_발표대본.docx` (6-page DOCX, all pages rendered visually verified; provided in chat, NOT uploaded to GitHub as binary).
+- Scripts preserve source distinction: Wu 10um working pilot, EBL0 is model pilot; n21/n25 low-J conditional normalized J and 5V 0.3299% QW Radiative is NOT IQE; eGap 99.06% is damage-QW share within eGap channel, not total recombination; Project A/B are approved design/controls, NOT simulated performance.
+- PPT QC finds slide 18 B parameter table semantic mismatch (see ERROR_LOG below), slide 15 A/slide 19 B illustration may imply placement beyond approved coordinates; original 24 slide number vs visual numbered footer/figure inconsistent; irrelevant CT-DRAM speaker notes remain on slide 1/13/17. PPT itself not edited; docx contains final warnings.
+- No new TCAD run, no code/geometry change. NEXT: correct user PPT table/illustrations/numbering if requested before actual delivery.

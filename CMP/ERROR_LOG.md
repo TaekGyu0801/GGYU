@@ -1,3 +1,8 @@
+## 2026-11-09 JuSubin Project B SVisual draft Tcl mock error FIXED LOCALLY (no school run)
+- During local *synthetic Tcl* smoke of new B1/Bnull SVisual source, draft print string `puts "J assumption: I[A/um]..."` produced `invalid command name "A/um"` because Tcl treats square brackets in double quotes as command substitution. This was an assistant draft-only issue, NOT an observed error in the user's original SVisual or school Sentaurus.
+- FIXED draft by replacing text with `I in A/um` (no brackets). Re-ran Tcl mock for both B1/Bnull: CSV export from synthetic 0/1/5V data succeeded. Regenerated and ZIP-CRC checked final chat artifact; no solver/mesh test performed.
+- Baseline source/data unaffected. No public raw Sentaurus scripts committed. Next real error gate: school SDE-only build with copied SWB projects.
+
 ## 2026-11-06 Lee Wu PLT actual Data block wraps 17-value records across physical lines — OBSERVED; token-stream parser TESTED SYNTHETIC, school C1 PENDING
 - Worker 이택규 pasted read-only school `sed -n '21,35p' n21_des.plt` from actual `CMP_WU_Copy`. First data record has 17 numeric fields **wrapped across five lines**: time scalar alone, then 5+5+5+1 scalars, repeated for the following record. This proves assistant's prior AWK `NF==17` physical-line assumption was wrong. No conclusion about low-J data absence can be drawn from zero parsed points.
 - Header already inspected: 17 data fields, 1-indexed `time` #1, `anode OuterVoltage` #10, `anode TotalCurrent` #16. The sample values show initial negative anode terminal current; read-only I-V analysis will take its absolute magnitude for J.

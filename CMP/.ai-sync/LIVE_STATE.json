@@ -1,4 +1,27 @@
 {
+  "juBothProjectBBranchesFailedAwaitLogs20261109": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-09",
+    "status": "OBSERVED_ALBARRIER_RETRY_FAILED_GANNULL_FIRST_RUN_FAILED_USER_REPORTED_DIAGNOSIS_PENDING",
+    "projects": {
+      "ALBARRIER": {
+        "schoolProject": "CMP_WU_ALBARRIER",
+        "node": 25,
+        "retryFailed": true,
+        "reportedFixApplied": "pGaN-only IncompleteIonization",
+        "newFatalError": "unknown; job log only exit failure"
+      },
+      "GANNULL": {
+        "firstSDeviceRunFailed": true,
+        "reportedByUser": true,
+        "firstFatalError": "unavailable",
+        "schoolProjectName": "not yet verified"
+      }
+    },
+    "next": "Read failing SDevice node .out/.err/.log for both projects, diagnose first fatal error per branch before further physical changes.",
+    "codeChangeThisTurn": false,
+    "newSimulationThisTurn": false
+  },
   "juProjectBAlBarrierMgIonizationErrorFix20261109": {
     "worker": "주수빈",
     "AI": "ChatGPT",

@@ -1,3 +1,10 @@
+## 2026-11-09 JuSubin Project B — NEXT EXECUTION (source ZIP ready; school not run)
+- Chat-provided `CMP_ProjectB_B1_Bnull_Wu10_FirstRun_20261109.zip`: 2 versioned input source bundles for Bnull GaN and B1 Al0.15Ga0.85N 20nm guard, 51 expected regions, local guard refinement max x1nm/y2nm, 22 Dmg traps preserved. Static source & Tcl mock passed, NOT a SWB importable project or school-tested model.
+- P0: copy (never overwrite) school `CMP_WU_Copy` into separate `CMP_PROJECTB_1.0.0_GANNULL` and `CMP_PROJECTB_1.0.0_ALBARRIER` after checking collisions. Use SWB-native input filenames and case contents. Keep root source/pp generated files/mesh of original untouched.
+- P1: Bnull SDE-only → SVisual mesh 51 regions, 22 Dmg, x[.120,.172]um, y[.005,.025]/[9.975,9.995], guard=GaN, 4 intact InGaN centers; then B1 SDE-only, guard=AlGaN x=0.15, both contacts and 5nm damage correct. Examine actual log for mesh/region errors before invoking SDevice.
+- P2: if both SDE verified, each 5V NtSide=1e18 Trap ON SDevice; obtain end log errors and spatial TDR/PLT; then same-current n25/Bnull/B1 I-V, absolute QW Rad/SRH/Auger and correctly defined net damage trap pair loss. Raw 2D J formula requires AreaFactor/unit confirmation. No result invented.
+- Remaining blocker: no school generated pp/mesh read-only diff; new school TCAD execution not yet performed. ZIP in chat only; avoid pushing proprietary sources to public GitHub.
+
 ## NEXT — 2026-11-09 Lee Project A coarse/fine geometry optimization planning — PROPOSED, NO TCAD RUN
 - 이택규 제안: 기존 Wu10um GaN:C A-u 설계를 가로/세로 3단계로 탐색할 때 50nm coarse sweep 후 성능 좋은 구간에서 10nm fine sweep 진행. 각 축 독립 탐색 뒤 우수 후보 결합도 실험; 독립 최적을 합쳐도 결합 최적임은 보장되지 않음.
 - Assistant illustrative scan: w,d=50..400nm 50nm step, other dimension 200nm fixed; 8+8-1=15 unique coarse A1u geometries. Fine example ±40nm step10 around each coarse best, up to 16 new axial structures; 2x2 combos max4 new; conditional cap 35 unique A1u geometries. **Exact bounds and max cases remain PROPOSED**, user only specified resolution strategy.

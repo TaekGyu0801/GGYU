@@ -9574,5 +9574,23 @@
     "carbonSdeApplied": false,
     "schoolRun": false,
     "next": "Backup only CMP_WU_Copy_Copy source; choose SHA for CEdge candidate explicitly; replace second only; hash check then SDE-only run; preserve CMP_WU_Copy template"
+  },
+  "leeProjectAUnmatchedSdeSha20261109": {
+    "worker": "이택규",
+    "status": "OBSERVED_SECOND_COPY_SDE_MODIFIED_BUT_CONTENTS_UNVERIFIED",
+    "path": "/user/semi/semi437/CMP_A/CMP_WU_Copy_Copy/sde_dvs.cmd",
+    "latestSha256": "b7734db6d65fab94e3bd138ca8e3baa5281a23ecea329509f8f148cde3e9ae64",
+    "originalSecondCopySha256": "ecbfc2ed80480c7f20ab9cd0992f553910023d8161c6f3552b130ec53571fa6f",
+    "pasteReadyExpectedSha256": "8b303e8701930f1eb55e36bcb583d18dd2ad0c744f9b1513aa1e067316b9aa97",
+    "claudeReviewedSha256": "18e59e5e62e7ae0fdec94197cc2cbabf13fceb115dae57e2b35b5e527b0b6c56",
+    "backupObserved": "sde_dvs.cmd.before_CEDGE 5125 bytes, old mtime preserved",
+    "unknownCause": "Different source content, unknown whether line endings, pasted changes, or unintentional truncation",
+    "next": "READ-ONLY wc bytes + tr -d CR normalized SHA + CEdge region marker grep in second project; if still mismatch inspect full source; do not run SDE yet",
+    "schoolSdeRunObserved": false,
+    "carbonAppliedValidated": false,
+    "preserve": [
+      "/user/semi/semi437/CMP_A/CMP_WU_Copy",
+      "/user/semi/semi437/tmp/myproject/CMP_WU_Copy"
+    ]
   }
 }

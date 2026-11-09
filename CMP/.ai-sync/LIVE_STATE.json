@@ -1,4 +1,21 @@
 {
+  "juProjectBAlBarrierMgIonizationErrorFix20261109": {
+    "worker": "주수빈",
+    "AI": "ChatGPT",
+    "dateKST": "2026-11-09",
+    "status": "OBSERVED_SCHOOL_ERROR_PROPOSED_STATIC_FIX_SCHOOL_RETRY_PENDING",
+    "schoolProject": "CMP_WU_ALBARRIER",
+    "node": 25,
+    "error": "The doping species MagnesiumActiveConcentration has no incomplete ionization parameters in the parameter file (region BGuardL_Barrier1, material AlGaN)",
+    "cause": "global IncompleteIonization Mg model applied to undoped AlGaN new guards; sdevice.par Mg ionization only defined under Material GaN",
+    "proposedFix": "remove global Mg IncompleteIonization and add to Physics for Clean_pGaN, DmgL_pGaN, DmgR_pGaN exclusively; keep 22 original damage Trap blocks and sdevice.par unchanged",
+    "artifact": "ProjectB_MgIonization_Fix_20261109.zip (chat-only)",
+    "artifactSha256": "cafbd5b78b6177fd771fba99718882047705bddeccab063d430ca6d85a3ad859",
+    "localStaticCheck": "PASS, 3 pGaN scoped ionization declarations, 22 original traps",
+    "schoolRetry": false,
+    "school5VComplete": false,
+    "next": "Use corrected ALBARRIER SDevice text in school copied SWB then rerun n25, inspect fresh out/err/log; maintain original baseline unchanged"
+  },
   "juProjectBB1BnullCodeDraft20261109": {
     "worker": "주수빈",
     "dateKST": "2026-11-09",

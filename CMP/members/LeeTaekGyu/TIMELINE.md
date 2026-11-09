@@ -1,3 +1,9 @@
+## 2026-11-09 Lee school Wu10 SDE source inventory verified — OBSERVED READ-ONLY, NO SOURCE CHANGE
+- 이택규 provided literal `bash -lc` output from active school `/user/semi/semi437/tmp/myproject/CMP_WU_Copy`: existing `sde_dvs.cmd` (5125 bytes; Nov 3 21:38), `pp1_dvs.cmd` (5121 bytes; Nov 3 23:16), `n1_msh.tdr` (984164 bytes; Nov 3 23:17), `pp25_des.cmd` (5714 bytes), `pp25_des.par` (767 bytes; both Nov 3 23:58). File existence verified only; current run success/reuse or byte equality NOT newly verified.
+- From school `grep -nE`: Wm10.0µm, Wdmg.005µm, tP.120µm pilot, tEBL0µm pilot, tQW.003µm, tQB.008µm, tN3.900µm, 4 QWs; `DmgL`/Clean/`DmgR` lateral partition, nSi placed via `nSiliconActiveConcentration` in source. Derived 5QB×.008+4QW×.003=.052µm; nominal nGaN begins x=.172µm, consistent with Project A x target. No evidence for exact Wu EBL.
+- School source file sizes differ between original `sde_dvs.cmd` and preprocessed `pp1_dvs.cmd`, and from GitHub candidate; do NOT assert byte-identical source based on grep. NEXT read full original SDE text and check new Project A naming collision; then isolated named SWB copy with mesh-generation dependency, first 200×200nm A0m/A0u/A1u SDE pilot. Preserve all original n21/n25/mesh.
+- No code copied/edited, no new run, no FULL/HALF equivalence test.
+
 ## 2026-11-09 Lee Project A FULL/HALF optimization comparability question — PROPOSED, NO RUN
 - 이택규: FULL vs HALF에서 최적 가로/세로 Carbon 위치가 달라질 수 있다는 우려 제기. **실제 차이 측정 없음**, 지오메트리/경계조건/전류정규화/mesh 동등성 검증 전 유불리 판단 금지.
 - Proposal: exact Wu10 FULL n25 parent에서 중앙 y=5um 대칭 HALF를 신규 파생(외측 Damage 한 개 보존, 중앙에 물리적 Damage 넣지 않음), FULL/HALF n25, A0u, A1u 200x200nm를 같은 J 및 정규화 ROI 비교. 일치 시 HALF로 50nm coarse→10nm fine 탐색, shortlist FULL 재검증. 기존 Kou/과거 HALF 모델 혼용 금지.

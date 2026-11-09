@@ -9487,5 +9487,37 @@
     "sourceEditedOnSchool": false,
     "schoolSdeRun": false,
     "source": "CMP/members/LeeTaekGyu/TIMELINE.md"
+  },
+  "leeProjectAClaudeReviewAndDmgSensitivity20261109": {
+    "worker": "이택규",
+    "reportedDecisionTimeKST": "2026-11-09 19:08",
+    "status": "USER_DECIDED_MAIN_UNCHANGED_PLUS_A1U_D_FUTURE_SENSITIVITY",
+    "provenance": "User-forwarded Claude 2026-11-09 static read-only review; no school TCAD executed by Claude or GPT in this exchange",
+    "primaryModel": "A1u: Wu10 10um full 2D, 5nm original DmgL/R and nGaN ND5e18 retained; CEdgeL/R 200x200nm Si0; carbon traps only after future SDevice update",
+    "sensitivity": "A1u-D single representative 200x200nm branch after SDE smoke: upper x=.172..372 of both Dmg_nGaN strips Si0 and carbon traps added; original damage trap physical parameters retained; code not created/run",
+    "warning": "A1u-D splits 2 damaged region geometries, requiring Region Physics mapping to all pieces; nominal 38 total regions vs base36 if 2 replaced by 4; this is combined Si-off+carbon sensitivity not Si-only",
+    "claudeReviewedSourceSha256": "18e59e5e62e7ae0fdec94197cc2cbabf13fceb115dae57e2b35b5e527b0b6c56",
+    "laterPasteReadySourceSha256": "8b303e8701930f1eb55e36bcb583d18dd2ad0c744f9b1513aa1e067316b9aa97",
+    "versionMismatchVerified": true,
+    "claudeReview": "THIRD_PARTY_STATIC_ONLY: SDE-only GO for reviewed18e; 36 expected regions, unchanged 22 Dmg/main, nGaN area39um2, contacts plausible. SDevice conditional. 35-point sweep redesign proposed NOT user adopted.",
+    "corrections": [
+      "5nm n+ bypass/2e12cm-2 charge estimate depends on unmeasured trap occupancy",
+      "FromConBand vs fromCondBand conflicting public training examples; school T-2022.03 decisive",
+      "q QW-radiative/I is external-current-normalized QW radiative yield proxy not true IQE",
+      "n21−n25 matched-J radiative difference useful headroom not strict upper bound",
+      "10nm geometry fine scan needs mesh noise validation; 4x4 2D alternative only proposed"
+    ],
+    "stillPending": [
+      "School Project A source SHA and SDE-only node run",
+      "SVisual region count/mapping/doping/contacts/mesh",
+      "School source SDevice/PAR full review",
+      "Matched-J10 radiative and sidewall trap loss",
+      "A1u-D actual code/run",
+      "Sweep alternative approval"
+    ],
+    "next": "Backup copied Project A sde_dvs.cmd, select reviewed file hash explicitly, run SDE n1 only and verify CEdge regions/Dmg/doping/mesh; do not edit baseline",
+    "summaryDoc": "CMP/PROJECT_A_CEDGE_CLAUDE_REVIEW_HANDOFF_20261109.md",
+    "newSchoolRun": false,
+    "newSchoolCodeEdit": false
   }
 }

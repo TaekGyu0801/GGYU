@@ -1,3 +1,8 @@
+## 2026-11-09 Lee Project A FULL/HALF optimization comparability question — PROPOSED, NO RUN
+- 이택규: FULL vs HALF에서 최적 가로/세로 Carbon 위치가 달라질 수 있다는 우려 제기. **실제 차이 측정 없음**, 지오메트리/경계조건/전류정규화/mesh 동등성 검증 전 유불리 판단 금지.
+- Proposal: exact Wu10 FULL n25 parent에서 중앙 y=5um 대칭 HALF를 신규 파생(외측 Damage 한 개 보존, 중앙에 물리적 Damage 넣지 않음), FULL/HALF n25, A0u, A1u 200x200nm를 같은 J 및 정규화 ROI 비교. 일치 시 HALF로 50nm coarse→10nm fine 탐색, shortlist FULL 재검증. 기존 Kou/과거 HALF 모델 혼용 금지.
+- Detailed protocol: CMP/PROJECT_A_WU10_SWEEP_PLAN_20261109.md. Source/mesh/solver 미변경.
+
 ## 2026-11-09 JuSubin Project B — NEXT EXECUTION (source ZIP ready; school not run)
 - Chat-provided `CMP_ProjectB_B1_Bnull_Wu10_FirstRun_20261109.zip`: 2 versioned input source bundles for Bnull GaN and B1 Al0.15Ga0.85N 20nm guard, 51 expected regions, local guard refinement max x1nm/y2nm, 22 Dmg traps preserved. Static source & Tcl mock passed, NOT a SWB importable project or school-tested model.
 - P0: copy (never overwrite) school `CMP_WU_Copy` into separate `CMP_PROJECTB_1.0.0_GANNULL` and `CMP_PROJECTB_1.0.0_ALBARRIER` after checking collisions. Use SWB-native input filenames and case contents. Keep root source/pp generated files/mesh of original untouched.

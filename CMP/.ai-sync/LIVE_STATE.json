@@ -9397,5 +9397,39 @@
       "Original school effective source and area normalization not verified"
     ],
     "source": "CMP/PROJECT_A_WU10_SWEEP_PLAN_20261109.md"
+  },
+  "leeProjectASdeDraft20261109": {
+    "worker": "이택규",
+    "dateKST": "2026-11-09",
+    "actualSchoolSource": "/user/semi/semi437/CMP_A/CMP_WU_Copy/sde_dvs.cmd",
+    "comparison": "diff -q versus /user/semi/semi437/tmp/myproject/CMP_WU_Copy/sde_dvs.cmd reported identical",
+    "status": "PROPOSED_OFFLINE_A0U_SDE_DRAFT_NOT_RUN",
+    "chatArtifact": "CMP_PROJECTA_1.0.0_CEDGE_sde_dvs.cmd",
+    "sha256": "18e59e5e62e7ae0fdec94197cc2cbabf13fceb115dae57e2b35b5e527b0b6c56",
+    "geometry": {
+      "xUm": [
+        0.172,
+        0.372
+      ],
+      "leftYUm": [
+        0.005,
+        0.205
+      ],
+      "rightYUm": [
+        9.795,
+        9.995
+      ],
+      "sidewallDamageNm": 5,
+      "SiDopingInCEdgeCm3": 0,
+      "SiOutsideCm3": 5000000000000000000,
+      "expectedRegions": 36,
+      "expectedOriginalDamageRegions": 22
+    },
+    "offlineChecks": "paren balanced, 6 disjoint nGaN rectangles cover 39um2, nGaN geometry exact",
+    "carbonNotYetAdded": true,
+    "next": "Replace only Project A Workbench SDE input with privately provided draft, run SDE-only, inspect mesh geometry/region/doping; later SDevice carbon trap models and A0m/A1u controls",
+    "sourceEditedOnSchool": false,
+    "schoolSdeRun": false,
+    "source": "CMP/members/LeeTaekGyu/TIMELINE.md"
   }
 }

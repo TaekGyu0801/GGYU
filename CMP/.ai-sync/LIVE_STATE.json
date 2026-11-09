@@ -9592,5 +9592,60 @@
       "/user/semi/semi437/CMP_A/CMP_WU_Copy",
       "/user/semi/semi437/tmp/myproject/CMP_WU_Copy"
     ]
+  },
+  "leeProjectAOfflineSdeviceParPackage20261109": {
+    "worker": "이택규",
+    "status": "PROPOSED_OFFLINE_FULL_SDEVICE_AND_PAR_CREATED_NOT_RUN",
+    "editableSchoolExperiment": "/user/semi/semi437/CMP_A/CMP_WU_Copy_Copy",
+    "sourceProvenance": "GitHub candidate CMP/tcad/candidates/CMP_BASELINE_3.2.0_WU2023PHY/sdevice_des.cmd / sdevice.par, not byte checked against actual school copied source",
+    "sdeviceFile": {
+      "name": "CMP_PROJECTA_A1u_sdevice_des.cmd",
+      "sha256": "a41221fb1da81414cd0659410a2985ce72f9ba06600e4aa30060bfd52803515b",
+      "lines": 259,
+      "bytes": 6790,
+      "baseDamagedTraps": 22,
+      "newRegionTraps": 2
+    },
+    "parameterFile": {
+      "name": "CMP_PROJECTA_A1u_sdevice.par",
+      "sha256": "2ba2d70db3d38b98cb25530a77f1a8a4ef9986d9b46d6050f47d9a360d70b27d",
+      "bytes": 727
+    },
+    "swbParameterFile": {
+      "name": "CMP_PROJECTA_SWB_PARAMETERS.txt",
+      "sha256": "52bb45734e17fcfcda66b0ddb79ee6f736f62dc9028856c4bc2d393f04fdaaf6"
+    },
+    "newSdeviceMacros": {
+      "NCN": {
+        "A0u": 0,
+        "A1u": 600000000000000000
+      },
+      "NCGa": {
+        "A0u": 0,
+        "A1u": 300000000000000000
+      }
+    },
+    "retainedPilotMacros": {
+      "NtSide": 1000000000000000000,
+      "Vstop": 5,
+      "TrapEt": 0.75,
+      "TrapSigmaN": 1e-15,
+      "TrapSigmaP": 1e-15
+    },
+    "sdeHardcoded": {
+      "wC": 0.2,
+      "dC": 0.2,
+      "NCEdge": 0
+    },
+    "actualSchoolSdeLastHash": "b7734db6d65fab94e3bd138ca8e3baa5281a23ecea329509f8f148cde3e9ae64",
+    "warnings": [
+      "Full school sdevice_des.cmd and sdevice.par not yet read; no exact replacement guarantee",
+      "Actual second-copy SDE region content and fresh mesh not verified",
+      "Do not overwrite copied school .par if changed; preserve historical parent physical models",
+      "After SDE-only success, SWB preprocess Grid=@tdr@ and NCN/NCGa values before SDevice solver",
+      "A1u-D sensitivity not implemented"
+    ],
+    "actualSchoolRun": false,
+    "actualSchoolFileChangeByAssistant": false
   }
 }

@@ -9519,5 +9519,18 @@
     "summaryDoc": "CMP/PROJECT_A_CEDGE_CLAUDE_REVIEW_HANDOFF_20261109.md",
     "newSchoolRun": false,
     "newSchoolCodeEdit": false
+  },
+  "juB1GridResolvedBnullShell20261109": {
+    "workerThread": "주수빈 Project B research (current user identity unconfirmed)",
+    "dateKST": "2026-11-09",
+    "status": "OBSERVED_B1_PP25_GRID_RESOLVED_BNULL_SHELL_ONLY_ERRORS",
+    "schoolProjectB1": "CMP_WU_ALBARRIER",
+    "preprocessedGrid": "Grid=\"n1_msh.tdr\" (line 12 of pp25_des.cmd)",
+    "b1RerunObserved": false,
+    "b1Reached5V": false,
+    "schoolProjectBnull": "CMP_WU_ProjectB",
+    "bnullNewLogObserved": false,
+    "bnullBlocker": "Newton/MinStep ~1.892V remains unresolved",
+    "next": "Rerun B1 n25; obtain Bnull Math/Solve and solver out/err with single-line full-path commands; no new code changes"
   }
 }

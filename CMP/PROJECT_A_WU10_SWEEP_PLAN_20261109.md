@@ -30,3 +30,9 @@ Source: user conversation 2026-11-09, CMP/PROJECT_AB_WU10_DESIGN_FREEZE_20261108
 - If these checks agree, efficient possible plan: HALF 50nm coarse → HALF 10nm fine → FULL for top 2-3 shortlist + combined design; if ranking changes, investigate mesh, symmetry boundary, contacts and area scaling before treating the difference as a real optimum shift. If actual device has asymmetry, use FULL as the governing final answer.
 - Historical `JUSUBIN_FAST_HALF_5V_TEST` belonged to a different earlier geometry/lineage; never compare it naively against the Wu10 FULL as a symmetry test. Make new **Wu10-derived** HALF from the exact verified school source, not existing old Kou4 µm artifact.
 - No half device constructed or solver executed in this planning exchange. Need original school full SDE effective source and a matched half boundary audit.
+
+
+## 2026-11-09 Claude independent review caveat — SWEEP NOT APPROVED TO RUN
+- Report delivered by user; Claude did NOT execute TCAD. Review of candidate SHA18e59... produced SDE-only GO, conditional SDevice, and NO-GO for currently proposed 35 geometry sweep pending stronger comparability/mesh checks. Latest paste-ready full-SDE SHA8b303e... is a different source file.
+- Claude suggests replacing independent axis-only 50nm sweep with an optional 4×4 2D coarse grid (50,100,200,400nm w×d), optionally 800nm scope if boundary trends merit, and deferring 10nm refinement until mesh-noise quantified. This is **CLAUDE PROPOSAL**, not replacement of 이택규's 50nm coarse /10nm fine intent. Define matched-current external-normalized QW Rad / net Dmg+CEdge loss / ΔVf criteria before any optimization. Same-current n21 vs n25 QW Rad screening not yet measured; not a strict recovery upper bound.
+- **USER_DECIDED** separately: keep original Dmg5nm/n+ in the A1u main; add one 200×200nm A1u-D combined Si-off+carbon-in-upper-Dmg sensitivity AFTER SDE smoke. No code/run. See `CMP/PROJECT_A_CEDGE_CLAUDE_REVIEW_HANDOFF_20261109.md`.

@@ -9149,5 +9149,59 @@
       ]
     },
     "next": "receive sample senior PPT then inspect and produce editable 4th presentation using actual raw data and source attribution"
+  },
+  "leeProjectACoarseFine20261109": {
+    "worker": "이택규",
+    "dateKST": "2026-11-09",
+    "state": "PROPOSED_SCAN_PLAN_NOT_RUN",
+    "userAsked": "50nm coarse sweep; 10nm finer scan around high-performance geometry",
+    "parent": "Wu10um CMP_WU_Copy n25 Trap ON; retain 5nm damaged sides",
+    "branch": "A1u local Si OFF in GaN:C regions below MQW",
+    "centerWidthNm": 200,
+    "centerDepthNm": 200,
+    "assistantProposed": {
+      "coarseWidthNm": [
+        50,
+        100,
+        150,
+        200,
+        250,
+        300,
+        350,
+        400
+      ],
+      "coarseDepthNm": [
+        50,
+        100,
+        150,
+        200,
+        250,
+        300,
+        350,
+        400
+      ],
+      "fineStepNm": 10,
+      "fineExampleAround200Nm": [
+        160,
+        170,
+        180,
+        190,
+        200,
+        210,
+        220,
+        230,
+        240
+      ],
+      "combinedPromisingWidthCount": 2,
+      "combinedPromisingDepthCount": 2,
+      "coarseUniqueGeometryCount": 15,
+      "estimatedMaxUniqueA1uGeometries": 35
+    },
+    "controls": "n25 reference, A0m regression, A0u carbon-zero Si-off at least shortlisted/final",
+    "evaluation": "same absolute I, conditional J10 A/cm2; QW absolute Rad, net sidewall trap pair loss once, Vf, SRH/Auger, current distribution and local mesh",
+    "source": "CMP/PROJECT_A_WU10_SWEEP_PLAN_20261109.md",
+    "sourceModified": false,
+    "simulationRun": false,
+    "caveat": "50..400 bounds, ±40 fine window and 2x2 combinations assistant suggestions, not user-confirmed optimum or hard freeze; school SDE not yet verified"
   }
 }

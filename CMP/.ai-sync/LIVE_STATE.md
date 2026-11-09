@@ -1,3 +1,8 @@
+## 2026-11-09 JuSubin Project B sources B1+Bnull drafted in chat — STATIC_PASS, SCHOOL UNRUN
+- Independent user-pasted Wu10 baseline-derived input decks (not SWB graph) created: `CMP_PROJECTB_1.0.0_ALBARRIER` (B1 Al0.15Ga0.85N) and `CMP_PROJECTB_1.0.0_GANNULL` (Bnull GaN), each y[.005,.025]/[9.975,9.995] x[.120,.172]um; identical 20nm internal QW/QB 9-layer guard; original 5nm Dmg and 22 traps unchanged. Expected 51 regions, mesh local target max x1nm/y2nm.
+- Chat-only ZIP `CMP_ProjectB_B1_Bnull_Wu10_FirstRun_20261109.zip`, SHA256 b17067924e586a97e31705f3f97f763f94e01297a2dda2920027a9776be9d2e7. Static code checks and mocked SVisual Tcl/CSV passed, NOT Sentaurus school run/physical result; no raw proprietary code uploaded to public GitHub.
+- NEXT copy actual school `CMP_WU_Copy` as two independent SWB projects, SDE-only Bnull then B1 51-region/material/damage/mesh/contact checks, then 5V NtSide1e18 SDevice if structure verified. School `pp1_dvs.cmd`/`pp25_des.cmd` and actual effective mesh provenance remain pending.
+
 ## 2026-11-09 Lee Project A coarse/fine geometry optimization planning — PROPOSED, NO TCAD RUN
 - 이택규 제안: 기존 Wu10um GaN:C A-u 설계를 가로/세로 3단계로 탐색할 때 50nm coarse sweep 후 성능 좋은 구간에서 10nm fine sweep 진행. 각 축 독립 탐색 뒤 우수 후보 결합도 실험; 독립 최적을 합쳐도 결합 최적임은 보장되지 않음.
 - Assistant illustrative scan: w,d=50..400nm 50nm step, other dimension 200nm fixed; 8+8-1=15 unique coarse A1u geometries. Fine example ±40nm step10 around each coarse best, up to 16 new axial structures; 2x2 combos max4 new; conditional cap 35 unique A1u geometries. **Exact bounds and max cases remain PROPOSED**, user only specified resolution strategy.

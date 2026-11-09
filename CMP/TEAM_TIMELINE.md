@@ -1,3 +1,6 @@
+## 2026-11-09 — 주수빈 Project B Bnull/B1 source packages drafted; STATIC CHECKS ONLY (NO SCHOOL TCAD RUN)
+- JuSubin drafted separate Wu10 Project B Bnull (GaN) and B1 (Al0.15Ga0.85N) SWB input source packages in chat, ZIP SHA256 b17067924e586a97e31705f3f97f763f94e01297a2dda2920027a9776be9d2e7. Original n25 baseline, 5nm damage, 22 traps protected. Expected 51 regions per case (original 33+18). Static source validation and synthetic Tcl SVisual smoke passed; school SDE/SDevice have **not** run, no measured improvement. No raw Sentaurus decks uploaded to public GitHub. NEXT independent copied SWB Bnull/B1 SDE-only geometry/mesh verify, then approved 5V SDevice and matched-current metrics.
+
 ## 2026-11-09 Lee Project A coarse/fine geometry optimization planning — PROPOSED, NO TCAD RUN
 - 이택규 제안: 기존 Wu10um GaN:C A-u 설계를 가로/세로 3단계로 탐색할 때 50nm coarse sweep 후 성능 좋은 구간에서 10nm fine sweep 진행. 각 축 독립 탐색 뒤 우수 후보 결합도 실험; 독립 최적을 합쳐도 결합 최적임은 보장되지 않음.
 - Assistant illustrative scan: w,d=50..400nm 50nm step, other dimension 200nm fixed; 8+8-1=15 unique coarse A1u geometries. Fine example ±40nm step10 around each coarse best, up to 16 new axial structures; 2x2 combos max4 new; conditional cap 35 unique A1u geometries. **Exact bounds and max cases remain PROPOSED**, user only specified resolution strategy.

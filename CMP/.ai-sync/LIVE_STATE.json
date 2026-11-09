@@ -1,4 +1,28 @@
 {
+  "juProjectBSeparateRootCausesLogs20261109": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-09",
+    "status": "OBSERVED_TWO_DISTINCT_SDEVICE_FAILURES_NO_CODE_CHANGE",
+    "ALBARRIER": {
+      "schoolPath": "CMP_WU_ALBARRIER",
+      "node": 25,
+      "latestFatal": "Couldn't find name for geometry file !",
+      "likelyArea": "SWB Grid=@tdr@ preprocessor/mesh file name or dependency, precise cause pending pp25 and mesh listing",
+      "sdeviceSucceeded": false
+    },
+    "Bnull": {
+      "schoolPath": "CMP_WU_ProjectB",
+      "node": 25,
+      "latestFatal": "Step-size less than MinStep (5.7456e-11)",
+      "prior": "Newton #iterations larger than 35",
+      "tdrWritten": true,
+      "sdeviceProcessFinished": true,
+      "sweepReached5V": "UNVERIFIED",
+      "lastVoltage": "UNKNOWN",
+      "guardRegionEvidence": "UNVERIFIED"
+    },
+    "next": "Read pp25_des.cmd File Grid and *_msh.tdr for ALBARRIER, n25_des.log final anode voltage and actual BGuard region listing for Bnull; don't alter physics yet."
+  },
   "juBothProjectBBranchesFailedAwaitLogs20261109": {
     "worker": "주수빈",
     "dateKST": "2026-11-09",

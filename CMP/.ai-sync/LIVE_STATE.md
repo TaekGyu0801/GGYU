@@ -1,3 +1,9 @@
+## 2026-11-09 Lee confirms CMP_A template and editable copy have byte-identical ORIGINAL SDE input — OBSERVED school SHA, NO TCAD RUN
+- Actual school user terminal: `bash -lc 'cd /user/semi/semi437/CMP_A || exit 1; ls -l CMP_WU_Copy/sde_dvs.cmd CMP_WU_Copy_Copy/sde_dvs.cmd; sha256sum CMP_WU_Copy/sde_dvs.cmd CMP_WU_Copy_Copy/sde_dvs.cmd'`.
+- BOTH `CMP_A/CMP_WU_Copy/sde_dvs.cmd` (preserved template) and `CMP_A/CMP_WU_Copy_Copy/sde_dvs.cmd` (designated editable A run) existed, 5125 bytes each, mtime Nov 3 21:38, identical SHA-256 **`ecbfc2ed80480c7f20ab9cd0992f553910023d8161c6f3552b130ec53571fa6f`**.
+- Therefore second copy is **still original Wu-copy SDE**, no Carbon CEdge SDE applied as of this shell output; prior version designation (Claude-reviewed 18e vs later paste-ready 8b) must be chosen explicitly. SDE source identity only; other files/meshes/SDevice node and source equality NOT established. **No school TCAD or code edit observed.**
+- **NEXT:** backup **ONLY second** SDE in `CMP_A/CMP_WU_Copy_Copy`, paste a single versioned CEdge A0u SDE into same second SWB input, verify sha, then SDE-only run and TDR region/doping/contacts/mesh. Never edit first `CMP_A/CMP_WU_Copy` nor preserved `tmp/myproject/CMP_WU_Copy`. Carbon traps absent until SDevice phase; A1u-D still future representative sensitivity.
+
 ## 2026-11-09 Project Bnull Newton plateau captured; guarded Quasistationary damping trial PROPOSED/NOT RUN
 - **OBSERVED USER-SUPPLIED SCHOOL LOG** `CMP_WU_ProjectB/n25_des.out` (Nov9 17:34 KST): Newton iterations26-35 C-norm electron max_error ~3.8e-3 at x=.139um,y=0, global error3.47-3.49 and RHS~4.8e-3 do not converge, #iterations larger than35; QS step less than MinStep at 5.7456e-11. Previously known anode~1.892V; 5V has NOT been demonstrated.
 - **OBSERVED SOURCE SETTINGS** Math Digits5, ErrRef e/h1e8, Iterations35, NotDamped100; QS InitialStep1e-4, MinStep1e-10, MaxStep.02, Increment1.25, Decrement2, Coupled without local options.

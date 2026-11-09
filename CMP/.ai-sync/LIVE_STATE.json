@@ -1,4 +1,21 @@
 {
+  "juB1FullSDeviceSourceRestoredObservedSchool20261109": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-09",
+    "status": "OBSERVED_SCHOOL_FULL_SOURCE_RESTORE_SUCCESS_SOLVER_RERUN_PENDING",
+    "project": "CMP_WU_ALBARRIER",
+    "sourceFile": "sdevice_des.cmd",
+    "actualTerminalOutput": "RESTORE COMPLETE",
+    "headerContainsFileGrid": "Grid=\"@tdr@\"",
+    "ionizationDeclarations": 3,
+    "damageTrapDeclarations": 22,
+    "baselineOriginalEdited": false,
+    "backupOfB1TruncatedSource": true,
+    "preprocessedGridVerified": false,
+    "solverRerunYet": false,
+    "reached5V": false,
+    "next": "Reopen copied school CMP_WU_ALBARRIER SWB without overwriting restored source from stale editor buffer, preprocess/run n25 NtSide1e18 Vstop5, check generated pp25_des.cmd Grid n1_msh.tdr and actual 5V/solver output; Bnull Newton failure separate."
+  },
   "juB1TruncatedSDeviceGeometryCause20261109": {
     "worker": "주수빈",
     "dateKST": "2026-11-09",

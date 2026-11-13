@@ -1,4 +1,5 @@
 {
+  "leeProjectASDEtPUnboundSchool20261113": {"worker":"이택규","dateKST":"2026-11-13","status":"OBSERVED_ACTUAL_SCHOOL_SDE_FATAL_PROPOSED_HEADER_REPAIR_UNRUN","schoolProject":"/user/semi/semi437/CMP_A/CMP_WU_Copy_Copy","sdeError":"SCHEME COMMAND 4 *** Error sde:eval: unbound variable: tP","sourceHead":"(define (seg-list) — no baseline initialization header before first use tP","proposedFix":"Prepend sde:clear, ABA boolean setting, Wu pilot base geometry/doping/material variables, xNow/xActiveStart/xActiveEnd and Project A wC=dC=0.200um NCEdge=0 in editable copy only","warningsNotShownFatal":"datexcodes.txt species redefined lines; license feature sde_all expiry 18 days","schoolPatchApplied":false,"schoolSdeRerun":false,"schoolSdeMeshSuccess":false,"next":"After backup, apply header; run SDE node only; review new n1_dvs.out/err, region/mesh; preserve protected baseline and template"},
   "juB1PreprocessStaleTimestampConfirmed20261109": {
     "worker": "주수빈",
     "dateKST": "2026-11-09",

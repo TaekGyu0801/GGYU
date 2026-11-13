@@ -9647,5 +9647,22 @@
     ],
     "actualSchoolRun": false,
     "actualSchoolFileChangeByAssistant": false
+  },
+  "projectBRebuildFromFinalBaselineUserPlan20261113": {
+    "dateKST": "2026-11-13",
+    "actor": "Project B chat (current speaker identity not explicitly confirmed)",
+    "status": "USER_DECISION_WORKFLOW_CHANGE_NO_BASELINE_FILES_UPLOADED_NO_CODE_OR_SCHOOL_RUN",
+    "inputRequired": "actual successful final school Baseline sde_dvs.cmd, sdevice_des.cmd, sdevice.par, SWB macros and if available pp/log",
+    "sequence": [
+      "audit full original geometry/doping/physics/solver/mesh against school preprocessed deck",
+      "document minimum Bnull and B1 differences from same baseline",
+      "write independent full copied SDE/SDevice/par decks with preflight static checks",
+      "user runs school SDE mesh then SWB preprocess then SDevice 5V",
+      "verify convergence & fair baseline/Bnull/B1 matched current comparison"
+    ],
+    "preserve": "original baseline school SWB and outputs, 5nm original bilateral damage, all existing traps and common physics unless new material models require scoped differences",
+    "previousBnullDampingProposal": "not independently proven to resolve prior Newton failure; do not make default before baseline audit",
+    "schoolCodeWritten": false,
+    "simulated": false
   }
 }

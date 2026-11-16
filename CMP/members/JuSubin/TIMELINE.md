@@ -1,3 +1,8 @@
+## 2026-11-16 JuSubin GPT Project B Bnull SWB n25 failed (OBSERVED screenshot; fatal pending)
+- Screenshot of school SWB /user/semi/semi437/tmp/myproject/CMP_PROJECTB_1.0.1_GPT_BNULL shows red failed n25 at NtSide=1e18, Vstop=5, TrapSigmaN=1e-15 experimental branch. SDE common node n1 yellow/done visible. Screenshot confirms job failure, NOT detailed fatal or exact final voltage.
+- Previous same-school Bnull n25 read-only log last anode ~0.3265V, QS t~0.065291, Newton iterations>50 and step reductions. Current red status is consistent with eventual numerical failure, but final n25_des.out/.err/.log must be read before classifying its exact fatal/MinStep. No evidence of 5V success.
+- NEXT: one read-only school terminal check tail n25_des.out/err, final n25_des.log anode, exact first fatal. Then inspect actual parent-vs-Bnull SDE/.par material/mesh diff; do not increase solver iterations blindly, preserve Wu parent and independent B1/Claude experiments. No school code edited by AI during this update.
+
 ## 2026-11-16 JuSubin Project B literature provenance / first-run numerical lock (PROPOSED, SCHOOL UNRUN)
 - 사용자 요청: Project B 참고 논문 3편에서 직접 확인된 물리 효과와 우리 planar Wu10 소자에 이전 가능한 모델/불가능한 모델을 구분, 문헌 혼합에 따른 비통제된 파라미터 변경 방지.
 - 새 기준 문서 `CMP/PROJECT_B_PARAMETER_PROVENANCE_20261116.md` 생성. 기존 2026-11-08 B0/Bnull/B1 설계 freeze(5nm Damage 유지, 20nm/측면 MQW 내부 guard, Bnull GaN, B1 Al0.15Ga0.85N)를 유지하며 원래 Wu2023 Baseline 값을 단일 기준으로 규정.

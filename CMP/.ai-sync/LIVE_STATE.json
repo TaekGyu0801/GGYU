@@ -1,4 +1,5 @@
 {
+  "leeProjectAn21FiveVoltRowRemainingNodes20261116": {"worker":"이택규","dateKST":"2026-11-16","status":"OBSERVED_N21_LOG_LAST_ROW_5V_OTHER_NODES_USER_REPORTED_RUNNING","node":"n21","anodeVoltageV":5,"electronCurrentRaw":0.0001695,"holeCurrentRaw":0.002399,"conductionCurrentRaw":0.002568,"experimentalSdeDonorEarlierObserved":"NCEdge=5e18","freshMeshAndPpDopingVerified":false,"solverNormalExitVerified":false,"otherNodesRunning":"USER_REPORTED","distinction":"Under Si donor NCEdge5e18, Carbon ON cases are A1n not A1u; A0u/A1u require separate Si0 rebuilt mesh","next":"Do not edit active project; finish runs; separate project clone for A0u Si0 C0 5V first; A1u Si0 Carbon ON only if A0u succeeds"},
   "leeRejectsSolverEscalationClaudeHandoff20261116": {
     "worker": "이택규",
     "dateKST": "2026-11-16",

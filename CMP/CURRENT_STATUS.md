@@ -1,3 +1,7 @@
+## 2026-11-16 Project A n21 effective Grid and numerical controls read; solver cause still unresolved
+- Actual editable school `pp21_des.cmd` confirms `Grid="n1_msh.tdr"`, `Digits=5`, `ErrRef(Electron/Hole)=1e8`, `Iterations=35`, `NotDamped=100`, initial two `Coupled(Iterations=150)`, and QS `InitialStep=1e-4 MinStep=1e-10 MaxStep=.02`. Prior last anode 2.336V / 5V target, Newton>35, MinStep 5.4037e-11. No confirmation updated mesh vs source, local numerical error position, or Baseline physics equivalence.
+- The SDevice preprocessed deck has a resolved grid path; this n21 failure is nonlinear convergence, not a displayed missing-Grid syntax fatal. Pending next baseline comparison, keep geometry sweep/coarsening unrun.
+
 ## 2026-11-16 Lee Project A SDevice failure voltage narrowed to 2.336 V (OBSERVED)
 - Actual copied-school Project A n21 final three `anode` rows at 2.336V / raw current 2.624e-12; `t=0.467166` out of 5V goal; Newton >35 iterations and MinStep5.4037e-11. **Not a valid 5 V A0u/control result.** Remaining seven red SWB nodes haven't had their own fatal logs inspected.
 - The attempt to print solver settings failed only because pasted bash command was duplicated without a separator (`tail: 12bash: invalid number of lines`). `pp21_des.cmd` effective solver/Grid not yet verified. Actual cause of numerical stiffness still unconfirmed; do not conflate SDE mesh generation with physical result validation.

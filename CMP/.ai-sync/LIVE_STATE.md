@@ -1,3 +1,7 @@
+## 2026-11-16 Lee Project A effective Grid and solver settings confirmed; next original Wu comparison
+- Observed directly school copied `pp21_des.cmd` Grid=`n1_msh.tdr`, Digits5, ErrRef e/h1e8, Iterations35, NotDamped100, initial Poisson/coupled Iterations150, Quasistationary InitialStep1e-4 MinStep1e-10 MaxStep.02. n21 fails after Newton35 and MinStep (5.4037e-11), last anode 2.336V vs target5V. Thus missing Grid reference is not current fatal; physical convergence root cause, mesh freshness and error location not yet verified.
+- Next single read-only comparison of last failed Newton max_error, parent successful Wu deck settings and mesh provenance; then controlled minimal repair. Coarse-to-Fine mesh planned only, not a tested cure.
+
 ## 2026-11-16 Lee Project A n21 2.336V stall CONFIRMED by school log; effective solver details pending
 - **OBSERVED** in `/user/semi/semi437/CMP_A/CMP_WU_Copy_Copy/n21_des.log`: last three anode rows `2.336E+00` V and raw `2.624E-12` terminal conduction current; latest `n21_des.out` Newton #iterations>35 and MinStep `5.4037e-11` at t=.467166 (Vstop5 =>2.33583 V). NO n21 5V convergence. Other red SDevice nodes remain not individually diagnosed.
 - Terminal `tail: 12bash: invalid number of lines` is caused by two joined pasted bash commands, so effective `pp21_des.cmd` Grid/Math/Solve not yet returned. No evidence to identify physical root cause or conclude mesh coarsening is sufficient. Previous SDE tP failure was an earlier log; current solver read is distinct.

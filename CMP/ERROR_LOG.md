@@ -1,3 +1,9 @@
+## 2026-11-16 Lee Project A n21 SDevice Newton/MinStep failure — ACTUAL SCHOOL LOG
+- **OBSERVED** `CMP_A/CMP_WU_Copy_Copy/n21_des.out` ended 2026-11-13 15:52:25 KST: `#iterations larger than 35` then `Step-size less than MinStep (step-size = 5.4037e-11)`. `Sentaurus Device simulation finished` is termination, NOT successful target 5V. 38m19s wallclock. n21 screenshot parameter assignment NtSide=0, NCN=0, NCGa=0.
+- **Observed stderr tail only**: isotropic-vs-anisotropic note and InGaN eDOSMass/hDOSMass computed from GaN/InN side materials. Not shown as fatal.
+- **UNRESOLVED:** last converged voltage, failing spatial location, exact effective solver input, grid/mesh quality, whether other seven SDevice nodes share same fatal. Earlier observed SDE `tP` error is separate historical log; fresh SDE source/mesh status not proven by this snippet. Do not modify Newton/MinStep or carbon physics merely because n21 failed.
+- **NEXT:** read final `n21_des.log` anode row, latest step in `n21_des.out`, and preprocessed `pp21_des.cmd` Grid/Math/Solve. Then choose minimal fix and test n21 only.
+
 ## 2026-11-13 Project A Lee SDE actual school fatal: unbound variable tP — DIAGNOSED, PATCH UNRUN
 - **OBSERVED:** editable `/user/semi/semi437/CMP_A/CMP_WU_Copy_Copy` school `n1_dvs.out`: Sentaurus Structure Editor T-2022.03 `SCHEME COMMAND 4` followed by `*** Error sde:eval: unbound variable: tP`. Active `sde_dvs.cmd` starts at `(define (seg-list)`; old baseline definition header `(sde:clear)`, tP and other geometry/physics constants is absent. Project A SDE cannot build geometry/mesh yet; no evidence of solver/numerical convergence problem.
 - **Incidental output:** `n1_dvs.err` datexcodes.txt magnesium/silicon species redefinition messages, `.out` license expiry in 18 days. Neither is the shown immediate fatal. Do not fix these instead of tP.

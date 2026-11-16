@@ -1,3 +1,7 @@
+## 2026-11-16 Lee next: retrieve actual n21 C-norm max_error coordinates, no mesh modification yet
+- Read-only baseline/A comparison succeeded as `semi437`; displayed SDevice effective solver settings identical, but mesh files differ 984164 vs 1114636 bytes (size diff 130472 bytes; not proof of mesh granularity).
+- First C-norm grep inadvertently selected headers only; retrieve the **actual error rows following** the last C-norm header using awk or grep -A. Determine if error is near CEdge nGaN, QW junction or mesh interface. Only then choose minimal code/mesh fix on experimental copy. Previous n21 stalled at 2.336V and broad 8-case sweep must wait for base-case 5V. Preserve Wu baseline and first CMP_A template.
+
 ## 2026-11-16 Lee Project A n21: compare to working Wu parent and inspect error position before modifying mesh
 - Confirmed actual `CMP_A/CMP_WU_Copy_Copy/pp21_des.cmd`: Grid n1_msh.tdr, Digits5, ErrRef electron/hole1e8, Iterations35, NotDamped100, coupled-init Iterations150, QS InitialStep1e-4 MinStep1e-10 MaxStep.02. n21 ends 2.336V on Newton/MinStep, not 5V. Root cause unconfirmed.
 - Next READ-ONLY command: show last failing `max_error` locations in `n21_des.out`, original working `CMP_WU_Copy/pp21_des.cmd` solver/Grid settings, copied vs reference mesh files presence and dates. Then decide minimum controlled solver/mesh/physics change. Retain pristine baseline; coarsened bulk-only mesh for broad geometry screen only after n21 5V converges.

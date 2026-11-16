@@ -10113,5 +10113,18 @@
     "newSchoolRun": false,
     "schoolFileModified": false,
     "next": "Current 8 nodes finish/read-only 5V end plus normal exit; preserve original; independent copies and local CEdge mesh refinement for thin width/depth."
+  },
+  "juSubinBnullBaselineSdeviceCmdParCopyUserReported20261116": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-16",
+    "status": "USER_REPORTED_CMD_PAR_COPY_NOT_BYTE_VERIFIED_OR_SCHOOL_SOLVER_VERIFIED",
+    "branch": "CMP_PROJECTB_1.0.1_GPT_BNULL",
+    "action": "User reports copying working Wu baseline sdevice_des.cmd and sdevice.par verbatim to Bnull",
+    "assessment": "Appropriate Bnull controlled numerical/physical baseline test if SDE region/mesh/trap compatibility and fresh PP are verified",
+    "alGaNB1Exception": "Do not directly copy global Mg incomplete ionization into B1; previously caused AlGaN Mg ionization parameter error",
+    "lastObservedBlocker": "License checkout unavailable at 2026-11-16 13:19 KST",
+    "postCopyParPreprocessingVerified": false,
+    "new5VSuccessVerified": false,
+    "next": "Confirm fresh pp25_des.cmd/par after latest copy and license/job status, then assess Bnull 5V"
   }
 }

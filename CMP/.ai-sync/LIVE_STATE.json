@@ -9916,17 +9916,35 @@
   },
   "juProjectBGPTBnullFailedSWB20261116": {
     "worker": "주수빈",
-    "status": "OBSERVED_RED_FAILED_N25_SCREENSHOT_FINAL_FATAL_UNRESOLVED",
     "dateKST": "2026-11-16",
-    "project": "CMP_PROJECTB_1.0.1_GPT_BNULL",
+    "status": "OBSERVED_FINAL_NUMERICAL_FAILURE",
+    "project": "/user/semi/semi437/tmp/myproject/CMP_PROJECTB_1.0.1_GPT_BNULL",
     "node": "n25",
-    "conditions": {
-      "NtSide": "1e18",
-      "Vstop": 5,
-      "TrapSigmaN": "1e-15"
+    "targetV": 5,
+    "lastAnodeV": 0.3265,
+    "finalErrors": [
+      "|RHS| increased by more than factor 1e10",
+      "Supernodal had problems (zero pivot)!",
+      "Step-size less than MinStep (8.3174e-11)"
+    ],
+    "peakMemoryMB": 954,
+    "wallclockSeconds": 1705.73,
+    "lastCNormCoordinatesUm": {
+      "poisson": [
+        0.1242676,
+        0.006103516
+      ],
+      "electron": [
+        0.161,
+        9.21875
+      ],
+      "hole": [
+        0.164,
+        9.453125
+      ]
     },
-    "evidence": "SWB n25 failed red, SDE n1 done; earlier same run last anode0.3265V and Newton repeated; terminal fatal not yet supplied",
-    "next": "Read last n25_des.out, n25_des.err, n25_des.log final anode; after exact failure inspect parent vs branch SDE and par, avoid blind solver changes",
-    "schoolCodeModifiedByAI": false
+    "interpretation": "Confirmed Bnull GPT FIX1 5V solve FAILED; physical/mesh/root cause unproven. Poisson max in left BGuard Barrier0, electron/hole far from guard near QW4/Barrier4.",
+    "next": "Compare real successful school Wu parent vs GPT Bnull sde_dvs.cmd and sdevice.par (and pp25/mesh) read-only, verify numerical B0 regression under modified solver/physics, repair one cause, preserve master.",
+    "schoolCodeEditedByAI": false
   }
 }

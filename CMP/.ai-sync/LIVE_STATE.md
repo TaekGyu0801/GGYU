@@ -1,3 +1,7 @@
+## 2026-11-16 Lee Project A comparison: Wu parent solver controls match; A mesh file larger, error position still unknown
+- From school `semi437` read-only output, source baseline `CMP_WU_Copy/pp21_des.cmd` solver Grid, Digits, ErrRef, Iterations, NotDamped and QS InitialStep/MinStep/MaxStep match Project A `CMP_A/CMP_WU_Copy_Copy/pp21_des.cmd` displayed values. Experimental n1_msh.tdr 1,114,636B/Nov13 vs Wu original 984,164B/Nov3. Additional 130,472B (~13.26%) is only a file-size comparison.
+- n21 2.336V Newton/MinStep blocker remains. `grep -Ei "max_error|c-norm" | tail` returned only C-norm table headers (no numeric location), so physical cause unresolved. Next inspect data rows after header. No school edits/run performed; coarse-to-fine Mesh design strategy still proposed.
+
 ## 2026-11-16 Lee Project A effective Grid and solver settings confirmed; next original Wu comparison
 - Observed directly school copied `pp21_des.cmd` Grid=`n1_msh.tdr`, Digits5, ErrRef e/h1e8, Iterations35, NotDamped100, initial Poisson/coupled Iterations150, Quasistationary InitialStep1e-4 MinStep1e-10 MaxStep.02. n21 fails after Newton35 and MinStep (5.4037e-11), last anode 2.336V vs target5V. Thus missing Grid reference is not current fatal; physical convergence root cause, mesh freshness and error location not yet verified.
 - Next single read-only comparison of last failed Newton max_error, parent successful Wu deck settings and mesh provenance; then controlled minimal repair. Coarse-to-Fine mesh planned only, not a tested cure.

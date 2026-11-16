@@ -1,3 +1,8 @@
+## 2026-11-16 13:24 JuSubin GPT FIX1 Bnull n25: repeated Newton failure at early bias (SCHOOL SCREEN OBSERVED, FINAL JOB STATUS UNKNOWN)
+- Screenshot of school `CMP_PROJECTB_1.0.1_GPT_BNULL/n25_des.out`: `#iterations larger than 50.`, `Newton didn't converge, trying again with smaller step...`; `t=0.065284`, stepsize2.3903e-06; new coupled Newton trial displays very large residual/error. Assuming zero-to-five-volt QS t is normalized, this is ~0.326 V only.
+- Prior old Bnull reached ~1.892V then MinStep; current GPT FIX1 may be stalling earlier but screenshots at different run stages are NOT proof of final outcome or relative performance. SDevice `.err` visible `datexcodes.txt ... redefined` warnings not the pictured fatal. Root cause and completed status UNRESOLVED.
+- NEXT collect final last-anode in `n25_des.log`, final `n25_des.out` tail and failure-coordinate data, then reconcile live source/pp and original Wu baseline. Do not blindly increase iterations/reduce MinStep; no new patch yet.
+
 ## 2026-11-16 Lee Project A SDevice n21 stops at anode 2.336 V — Newton / MinStep (OBSERVED)
 - Copied school `CMP_A/CMP_WU_Copy_Copy/n21_des.log` last three anode rows all `2.336E+00 V`, `2.624E-12` raw conduction current. `n21_des.out`: `#iterations larger than 35` repeated at `t=0.467166`, steps 8.6459e-10 down to 1.0807e-10, final `Step-size less than MinStep (5.4037e-11)`. With Vstop5 target, 0.467166×5=2.33583V. 5V **not** completed.
 - `tail: 12bash: invalid number of lines` in latest terminal is accidental duplication/joining of two `bash -lc` commands; separate shell quoting issue, not SDevice fatal. `pp21_des.cmd` solver settings not yet returned.

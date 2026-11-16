@@ -9987,5 +9987,27 @@
     "unknown": "prior FIX2 overwrite or whitespace/real source different",
     "next": "read-only show Math and Solve blocks, IncompleteIonization lines and backups",
     "schoolSolverRerun": false
+  },
+  "leeProjectAThreeLabelsSweepPreparation20261116": {
+    "worker": "이택규",
+    "dateKST": "2026-11-16",
+    "status": "USER_DECISION_NAMING_AND_PROPOSED_PLAN_NO_SCHOOL_EDIT",
+    "primaryModels": {
+      "Si_O_C_X": "Si donor retained, carbon off, historical A0m",
+      "Si_O_C_O": "Si donor retained, both carbon traps on, historical A1m",
+      "Si_X_C_O": "Si donor removed, both carbon traps on, historical A1u"
+    },
+    "notAdoptedFourthModel": "Si_X_C_X",
+    "optionalLabelSuffixes": [
+      "D_ON",
+      "D_OFF",
+      "W200_H150 (nm)"
+    ],
+    "runningProject": "CMP_A/CMP_WU_Copy_Copy",
+    "runningBranches": "NCN 0/6e17; NCGa 0/3e17; NtSide 0/1e18; Vstop5: eight fixed geometry comparisons",
+    "latestLogVerified": "n21 last anode5V only, mesh/donor provenance and normal exit unknown",
+    "next": "Preserve active running project; read-only 5V/exit review; prepare independent Si-removed copy and width/depth coarse-to-fine mesh sweep after current 8 complete",
+    "schoolCodeChanged": false,
+    "schoolNewRunByGPT": false
   }
 }

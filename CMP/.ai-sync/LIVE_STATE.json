@@ -1,7 +1,58 @@
 {
-  "leeRejectsSolverEscalationClaudeHandoff20261116": {"worker":"이택규","dateKST":"2026-11-16","status":"USER_REJECTED_UNJUSTIFIED_NUMERICAL_PATCH_CLAUDE_HANDOFF","rejectedProposal":"Unverified QS inner Coupled Iterations=60 LineSearchDamping=0.1","schoolSolverPatchVerified":false,"schoolSdeDonorChangeObserved":"line32 (define NCEdge 5.0e18)","schoolSdeMeshRerunVerified":false,"schoolSdeviceRerunVerified":false,"latestVerifiedFailure":"A0u n21 stops at anode 2.336V, Newton>35 then MinStep5.4037e-11, target5V","claudeRequested":"Independent code-based root cause, compare actual school Wu baseline with Project A SDE/SDevice, minimal 1-2 checks, full paste-ready corrected code if necessary, no blind numerics escalation","next":"Claude handoff and actual current school source evidence, protect baseline"},
-  "leeProjectASdeviceNumericalPatchProposed20261116": {"worker":"이택규","dateKST":"2026-11-16","status":"PROPOSED_SDEVICE_QS_NUMERICAL_PATCH_NOT_SCHOOL_RUN","reason":"User rejected unchanged rerun of 8 failed SDevice nodes","schoolExperiment":"/user/semi/semi437/CMP_A/CMP_WU_Copy_Copy","sourceFile":"sdevice_des.cmd","sourcePatch":"Unique QS inner Coupled { Poisson Electron Hole } -> Coupled(Iterations=60 LineSearchDamping=0.1) { Poisson Electron Hole }","guard":"Require exactly one regex target; backup before replacement","notExecutedInSchool":true,"previousSdeEditObserved":"NCEdge=5e18","physicsUnchanged":true,"plannedRun":"Rebuild SDE mesh, SWB preprocess, n21 NtSide0 NCN0 NCGa0 Vstop5 only","caveat":"Donor and numeric solver both changed from failed A0u so cannot attribute convergence improvement to donor alone"},
-  "leeProjectAA0mSchoolSdeEditObserved20261116": {"worker":"이택규","dateKST":"2026-11-16","status":"OBSERVED_SCHOOL_SDE_SOURCE_EDIT_SDE_MESH_AND_SDEVICE_RERUN_PENDING","project":"/user/semi/semi437/CMP_A/CMP_WU_Copy_Copy","file":"sde_dvs.cmd","schoolCommandSucceeded":true,"output":"32:(define NCEdge 5.0e18)","previousValue":"0","newValue":"5.0e18","backupCommandExecuted":true,"backupPathNotListed":true,"sourceOnly":true,"requestedCase":"A0m","conditions":{"NtSide":0,"NCN":0,"NCGa":0,"Vstop":5},"sdeRerunVerified":false,"sdeviceRerunVerified":false,"n21Reached5V":null,"next":"SDE node rebuild mesh then n21 only at NtSide0 NCN0 NCGa0 Vstop5, inspect final n21_des.log and n21_des.out","baselineTargeted":false},
+  "leeRejectsSolverEscalationClaudeHandoff20261116": {
+    "worker": "이택규",
+    "dateKST": "2026-11-16",
+    "status": "USER_REJECTED_UNJUSTIFIED_NUMERICAL_PATCH_CLAUDE_HANDOFF",
+    "rejectedProposal": "Unverified QS inner Coupled Iterations=60 LineSearchDamping=0.1",
+    "schoolSolverPatchVerified": false,
+    "schoolSdeDonorChangeObserved": "line32 (define NCEdge 5.0e18)",
+    "schoolSdeMeshRerunVerified": false,
+    "schoolSdeviceRerunVerified": false,
+    "latestVerifiedFailure": "A0u n21 stops at anode 2.336V, Newton>35 then MinStep5.4037e-11, target5V",
+    "claudeRequested": "Independent code-based root cause, compare actual school Wu baseline with Project A SDE/SDevice, minimal 1-2 checks, full paste-ready corrected code if necessary, no blind numerics escalation",
+    "next": "Claude handoff and actual current school source evidence, protect baseline"
+  },
+  "leeProjectASdeviceNumericalPatchProposed20261116": {
+    "worker": "이택규",
+    "dateKST": "2026-11-16",
+    "status": "PROPOSED_SDEVICE_QS_NUMERICAL_PATCH_NOT_SCHOOL_RUN",
+    "reason": "User rejected unchanged rerun of 8 failed SDevice nodes",
+    "schoolExperiment": "/user/semi/semi437/CMP_A/CMP_WU_Copy_Copy",
+    "sourceFile": "sdevice_des.cmd",
+    "sourcePatch": "Unique QS inner Coupled { Poisson Electron Hole } -> Coupled(Iterations=60 LineSearchDamping=0.1) { Poisson Electron Hole }",
+    "guard": "Require exactly one regex target; backup before replacement",
+    "notExecutedInSchool": true,
+    "previousSdeEditObserved": "NCEdge=5e18",
+    "physicsUnchanged": true,
+    "plannedRun": "Rebuild SDE mesh, SWB preprocess, n21 NtSide0 NCN0 NCGa0 Vstop5 only",
+    "caveat": "Donor and numeric solver both changed from failed A0u so cannot attribute convergence improvement to donor alone"
+  },
+  "leeProjectAA0mSchoolSdeEditObserved20261116": {
+    "worker": "이택규",
+    "dateKST": "2026-11-16",
+    "status": "OBSERVED_SCHOOL_SDE_SOURCE_EDIT_SDE_MESH_AND_SDEVICE_RERUN_PENDING",
+    "project": "/user/semi/semi437/CMP_A/CMP_WU_Copy_Copy",
+    "file": "sde_dvs.cmd",
+    "schoolCommandSucceeded": true,
+    "output": "32:(define NCEdge 5.0e18)",
+    "previousValue": "0",
+    "newValue": "5.0e18",
+    "backupCommandExecuted": true,
+    "backupPathNotListed": true,
+    "sourceOnly": true,
+    "requestedCase": "A0m",
+    "conditions": {
+      "NtSide": 0,
+      "NCN": 0,
+      "NCGa": 0,
+      "Vstop": 5
+    },
+    "sdeRerunVerified": false,
+    "sdeviceRerunVerified": false,
+    "n21Reached5V": null,
+    "next": "SDE node rebuild mesh then n21 only at NtSide0 NCN0 NCGa0 Vstop5, inspect final n21_des.log and n21_des.out",
+    "baselineTargeted": false
+  },
   "leeProjectAMinimumCheckA0mDecision20261116": {
     "worker": "이택규",
     "dateKST": "2026-11-16",
@@ -9778,5 +9829,37 @@
     "next": "Claude source-level audit before code, independent Bnull/B1 full source and SDE→mesh→preprocess→n25 5V evidence; later ChatGPT matched-current physical analysis",
     "schoolRunThisTurn": false,
     "schoolCodeModifiedThisTurn": false
+  },
+  "juProjectBGPTFix1Candidate20261116": {
+    "worker": "주수빈",
+    "ai": "ChatGPT",
+    "dateKST": "2026-11-16",
+    "status": "PROPOSED_STATIC_PASS_SCHOOL_UNRUN",
+    "artifact": "CMP_ProjectB_GPT_FIX1_Bnull_B1_20261116.zip (private chat download only)",
+    "sha256": "af0822931741cd87a99144b6133d3ccc483faf2fd5d7e87eea276ff8ffa6b552",
+    "codeFolders": [
+      "CMP_PROJECTB_1.0.1_GPT_BNULL",
+      "CMP_PROJECTB_1.0.1_GPT_B1"
+    ],
+    "source": "CMP/tcad/candidates/CMP_BASELINE_3.2.0_WU2023PHY GitHub PROPOSED; actual successful school input NOT verified identical",
+    "changes": [
+      "Guard-to-Clean/Dmg interface mesh collars, lateral10nm vertical3nm",
+      "QS local Coupled Iterations50 LineSearchDamping0.1 controlled convergence test",
+      "full File Grid and region-only Mg IncompleteIonization in three pGaN"
+    ],
+    "staticChecks": [
+      "balanced SDE Scheme, SDevice braces",
+      "expected 51 regions",
+      "22 trap sections",
+      "3 scoped Mg regions",
+      "matched Bnull/B1 except guard GaN vs AlGaN"
+    ],
+    "previouslyObservedFailure": {
+      "Bnull": "Newton/MinStep ~1.892 V, root cause unknown",
+      "B1": "AlGaN Mg ionization mismatch and prior truncated File/Grid, later Grid bound but 5V unconfirmed"
+    },
+    "schoolRun": false,
+    "finalValidated": false,
+    "next": "compare true school baseline then isolated SWB SDE→mesh→preprocess→n25 to 5V; inspect out err log; continue Claude comparator"
   }
 }

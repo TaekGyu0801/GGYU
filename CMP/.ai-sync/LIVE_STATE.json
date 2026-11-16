@@ -10333,5 +10333,35 @@
     "matched5VCarbonOnSiOnDamageOn": false,
     "independentSiOffCOnDOnN72Finished5V": true,
     "next": "cat n72_des.sta and SWB status; do not infer 5V. Then run Si_O_C_X D ON or create matched copy; create Si_O_C_O from Si_X_C_O clone changing ONLY donor, remesh/PP/5V."
+  },
+  "leeProjectASiOnPairPrepared20261116": {
+    "worker": "이택규",
+    "status": "PROPOSED_OFFLINE_STATIC_PASS_SCHOOL_UNRUN",
+    "dateKST": "2026-11-16",
+    "models": {
+      "Si_O_C_X": {
+        "NCEdge_cm3": 5000000000000000000,
+        "NCN_cm3": 0,
+        "NCGa_cm3": 0,
+        "NtSide_cm3": 1000000000000000000,
+        "Vstop_V": 5
+      },
+      "Si_O_C_O": {
+        "NCEdge_cm3": 5000000000000000000,
+        "NCN_cm3": 600000000000000000,
+        "NCGa_cm3": 300000000000000000,
+        "NtSide_cm3": 1000000000000000000,
+        "Vstop_V": 5
+      }
+    },
+    "cEdgeLateral_nm": 200,
+    "cEdgeDepth_nm": 200,
+    "damageWidth_nm": 5,
+    "schoolWorkingParent": "/user/semi/semi437/CMP_A/Si_X_C_O",
+    "safeImplementation": "Two independent clones, only source NCEdge 0->5e18 in each, different NCN/NCGa SWB macros, preserve exact SDevice/PAR, rebuild SDE mesh and run one 5V node each",
+    "candidateArtifact": "CMP_PROJECTA_Si_ON_C_OFF_C_ON_PROPOSED_20261116.zip (conversation-local only, from GitHub Wu3.2 PROPOSED template)",
+    "fullDeckProvenSchoolIdentical": false,
+    "codeEditedOnSchool": false,
+    "school5VNewRuns": false
   }
 }

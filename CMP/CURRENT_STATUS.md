@@ -1,3 +1,8 @@
+## 2026-11-16 Project A A0m SDE parameter changed on school; no solver result yet
+- **School shell OBSERVED** from Lee: guarded edit of experimental `CMP_A/CMP_WU_Copy_Copy/sde_dvs.cmd` succeeded with output `32:(define NCEdge 5.0e18)`; formerly `NCEdge=0`, now original nominal n-GaN Si level restored within CEdge. Original Baseline and reusable template are outside command target.
+- Prior A0u n21 NtSide0 NCN0 NCGa0 SDevice 2.336V Newton/MinStep failed; A0m test must first regenerate SDE mesh and run n21 only to 5V. **SDE rerun/mesh success and 5V solver result unverified.** No claim of carbon performance improvement.
+- Control interpretation: A0m = same CEdge segmentation + donor retained + carbon OFF; A0u = donor OFF + carbon OFF; A1u = donor OFF + C_N/C_Ga traps ON. Compare same damage trap conditions and targets. Root cause of failure still under investigation with minimal-check priority.
+
 ## 2026-11-16 Project A n21 Wu parent solver comparison, mesh metadata OBSERVED
 - Under authorized `semi437`, school Wu baseline effective n21 SDevice solver options (Grid n1_msh.tdr; Digits5; ErrRef e/h1e8; Iterations35; NotDamped100; initial Coupled150; QS InitialStep1e-4 MinStep1e-10 MaxStep.02) equal to the Project A pp21 settings in displayed grep. Original parent mesh is 984164 bytes (Nov3), copied A mesh 1114636 bytes (Nov13), difference 130472 bytes ~13.26%. File size alone not mesh resolution or physical validity.
 - Last failed n21 voltage remains 2.336V; root cause not established. Failed-location `grep` only printed C-norm table headers, not the adjacent data rows. Need extract lines following last table header before any mesh/solver changes. No new school TCAD run or edit confirmed.

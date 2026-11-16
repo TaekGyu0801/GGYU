@@ -9959,5 +9959,22 @@
     "proposedIsolation": "Clone Bnull separately as BSPLIT; change both BGuard region material nval pval composition from guardMaterial ... guardXAl to material ... alloy; retain identical SDevice/Mg-scope/solver, SDE geometry and mesh; run only BSPLIT n25; compare with original B0 and Bnull",
     "schoolSourceEditedThisTurn": false,
     "schoolSimulationNewThisTurn": false
+  },
+  "juProjectBBnullGPTFix2DirectRollback20261116": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-16",
+    "status": "PROPOSED_NOT_APPLIED_SCHOOL",
+    "summary": "User rejects Bsplit controls and requests direct Bnull fix. Revert GPT Bnull SDevice to exact existing successful-school Wu parent SDevice, guard/backup/verify. Keep experimental SDE 20nm GaN guard and mesh, par, NtSide/Vstop; run n25 after SWB preprocess.",
+    "source": "/user/semi/semi437/tmp/myproject/CMP_WU_Copy/sdevice_des.cmd",
+    "target": "/user/semi/semi437/tmp/myproject/CMP_PROJECTB_1.0.1_GPT_BNULL/sdevice_des.cmd",
+    "changes": [
+      "Restore original global Mg IncompleteIonization",
+      "Restore original bare QS Coupled, dropping Iterations50 LineSearchDamping0.1"
+    ],
+    "otherPhysicalFilesChanged": false,
+    "why": "FIX1 0.3265V failure with zero pivot and MinStep; two experimental SDevice changes were introduced vs successful school Wu; exact causal root unresolved",
+    "preserve": "B1 separate requires scoped Mg due AlGaN; Wu parent and existing Bnull SDE/mesh untouched",
+    "next": "User runs guarded copy script; regenerate n25 preprocess; run only n25 at Vstop5 NtSide1e18 and send last anode and final logs",
+    "schoolRun": false
   }
 }

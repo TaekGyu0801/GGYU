@@ -1,3 +1,8 @@
+## 2026-11-16 Lee Project A SDevice n21 stops at anode 2.336 V — Newton / MinStep (OBSERVED)
+- Copied school `CMP_A/CMP_WU_Copy_Copy/n21_des.log` last three anode rows all `2.336E+00 V`, `2.624E-12` raw conduction current. `n21_des.out`: `#iterations larger than 35` repeated at `t=0.467166`, steps 8.6459e-10 down to 1.0807e-10, final `Step-size less than MinStep (5.4037e-11)`. With Vstop5 target, 0.467166×5=2.33583V. 5V **not** completed.
+- `tail: 12bash: invalid number of lines` in latest terminal is accidental duplication/joining of two `bash -lc` commands; separate shell quoting issue, not SDevice fatal. `pp21_des.cmd` solver settings not yet returned.
+- **UNRESOLVED:** mesh quality vs model physics/doping vs SDevice numerical settings; last error spatial location and effective Math/Solve/mesh unknown. Do not assert coarse mesh alone resolves failure. NEXT inspect exact `pp21_des.cmd`, failed max_error location and compare known working Wu baseline before solver modifications.
+
 ## 2026-11-16 Lee Project A n21 SDevice Newton/MinStep failure — ACTUAL SCHOOL LOG
 - **OBSERVED** `CMP_A/CMP_WU_Copy_Copy/n21_des.out` ended 2026-11-13 15:52:25 KST: `#iterations larger than 35` then `Step-size less than MinStep (step-size = 5.4037e-11)`. `Sentaurus Device simulation finished` is termination, NOT successful target 5V. 38m19s wallclock. n21 screenshot parameter assignment NtSide=0, NCN=0, NCGa=0.
 - **Observed stderr tail only**: isotropic-vs-anisotropic note and InGaN eDOSMass/hDOSMass computed from GaN/InN side materials. Not shown as fatal.

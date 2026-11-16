@@ -10126,5 +10126,16 @@
     "postCopyParPreprocessingVerified": false,
     "new5VSuccessVerified": false,
     "next": "Confirm fresh pp25_des.cmd/par after latest copy and license/job status, then assess Bnull 5V"
+  },
+  "juSubinProjectBB1CmdParFromSchoolBaselinePatchProposed20261116": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-16",
+    "status": "PROPOSED_PATCH_GENERATOR_MOCK_TEST_PASS_SCHOOL_NOT_RUN",
+    "sourceOfTruth": "school CMP_WU_Copy/sdevice_des.cmd + sdevice.par",
+    "target": "school CMP_PROJECTB_1.0.1_GPT_B1/sdevice_des.cmd + sdevice.par",
+    "codeOperation": "Copy both entire actual working Wu parent CMD/PAR. CMD only: remove global MagnesiumActiveConcentration incomplete ionization and add it to Clean_pGaN, DmgL_pGaN, DmgR_pGaN Region Physics. Keep all 22 original trap declarations and complete Solver. PAR byte-identical to school Wu parent. Check B1 SDE contains AlGaN. Back up B1 existing files before writing.",
+    "validation": "bash syntax and synthetic fixture passed; full actual school raw files/PP and real solver not available; school B1 source unchanged by ChatGPT",
+    "caution": "B1 requires matched Bnull/B0 region-scoped Mg control before alloy-only conclusions; current n25 license wait blocker observed; xAl=.15 SDE and default AlGaN materials still need PP/run verification",
+    "next": "User executes generated single-block bash command on school; verify B1 sdevice.par baseline byte cmp, pp25_des.cmd scoped Mg 3 and traps 22, pp25_des.par and 5V solver after license availability"
   }
 }

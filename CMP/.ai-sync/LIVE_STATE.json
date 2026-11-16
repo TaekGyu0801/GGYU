@@ -10280,5 +10280,39 @@
     },
     "last5VLogVerified": false,
     "next": "Inspect copy SDevice normal terminal + 5V log; matched A1u vs A1m side by side after confirming physics/mesh match."
+  },
+  "leeProjectAEffectivePhysicsAudit20261116": {
+    "worker": "이택규",
+    "status": "OBSERVED_SOURCE_PP_AND_PREVIOUS_5V_LOGS_THREE_MODEL_GATE_INCOMPLETE",
+    "dateKST": "2026-11-16",
+    "Si_O_C_X": {
+      "sourceNCEdge": "5e18 Copy_Copy",
+      "observedDamageOff5VNodes": [
+        "n21",
+        "n53",
+        "n63",
+        "n69"
+      ],
+      "damageOnPP": "pp72 Conc1e18",
+      "damageOn5VVerified": false,
+      "carbonPP": "No CEdgeL_nGaN block printed by exact AWK matcher"
+    },
+    "Si_O_C_O": {
+      "carbonOnWithSiOnAndDamageOn5VVerified": false
+    },
+    "Si_X_C_O": {
+      "sourceNCEdge": "0",
+      "sourcewC_dC_um": [
+        0.2,
+        0.2
+      ],
+      "pp72DamageN": "1e18",
+      "pp72CarbonN": "6e17",
+      "pp72CarbonGa": "3e17",
+      "n72Anode5V": true,
+      "n72DeviceFinished": true,
+      "meshDopingVerified": false
+    },
+    "next": "verify Copy_Copy n72 status; build independent Si_O_C_O clone with only NCEdge5e18 and fresh SDE mesh, 5V; do not start wC/dC split yet"
   }
 }

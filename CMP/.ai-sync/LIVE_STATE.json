@@ -10198,5 +10198,25 @@
     "statusSchoolCodeEdited": false,
     "status5VSuccess": false,
     "next": "User backs up live school B1 CMD, reconciles new TXT versus actual school Wu source and region names before replacing; SWB preprocess verify pp25 and material, then run when SDevice license available"
+  },
+  "juSubinProjectBB1FromFullBaselineText20261116": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-16",
+    "status": "PROPOSED_COMPLETE_B1_CMD_FROM_USER_SUPPLIED_BASELINE_TEXT_STATIC_VALIDATION_PASS_SCHOOL_NOT_RUN",
+    "provenance": "User pasted complete final-named Wu Baseline SDevice source in current chat, header still says GitHub 3.2.0 PROPOSED/NOT RUN",
+    "sourceBytes": 6183,
+    "sourceLines": 239,
+    "artifactTXT": "CMP_PROJECTB_B1_sdevice_des_FROM_FINAL_BASELINE.txt",
+    "artifactCMD": "CMP_PROJECTB_B1_sdevice_des.cmd",
+    "artifactBytes": 6348,
+    "artifactLines": 244,
+    "artifactSHA256": "e89012705b0715476a899927d6fc3ebd6f477d4113381353004e849db5565e48",
+    "change": "Remove global Mg incomplete ionization and add same Mg ionization in Clean_pGaN, DmgL_pGaN, DmgR_pGaN; preserve 22 traps and original Math/Solve, Plot, other Physics and file macros",
+    "par": "Existing B1 par active values match school baseline; comments/whitespace differ; no change",
+    "userDownloadProvided": true,
+    "schoolSourceEditedByAI": false,
+    "schoolPreprocessVerified": false,
+    "school5VVerified": false,
+    "next": "User copy B1 CMD with school backup, SWB preprocess and inspect pp25, verify material mapping and license, then n25 5V; B0/Bnull same Mg scope control for alloy-only comparison"
   }
 }

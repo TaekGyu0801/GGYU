@@ -1,3 +1,8 @@
+## 2026-11-16 Lee experimental Project A A0m SDE Si-donor edit OBSERVED; execution pending
+- On school as `semi437`, user's guarded Bash edit of ONLY `/user/semi/semi437/CMP_A/CMP_WU_Copy_Copy/sde_dvs.cmd` returned `32:(define NCEdge 5.0e18)`. Earlier A0u `NCEdge=0` was changed to nominal n-GaN Si5e18 as A0m (donor-maintained, carbon OFF) control. Command included timestamped backup before edit; backup listing and whole file digest not separately provided. No evidence of school SDE rerun, new mesh, n21 5V success; original Wu parent and first template not targeted.
+- NEXT: rerun SDE to rebuild mesh, then only n21 SDevice NtSide0 NCN0 NCGa0 Vstop5 and inspect final anode/out. Prior A0u stops at 2.336V; donor-off root-cause hypothesis remains unverified. Three A cases: A0m donor-on C-off; A0u donor-off C-off; A1u donor-off C_N/C_Ga-on; keep Damage ON/OFF matched in actual comparisons.
+- User prioritizes minimum checks; only after single control passes, consider coarse bulk mesh screening and fine candidate verification.
+
 ## 2026-11-16 JuSubin Project B: implementation handed to Claude, post-run physical validation reserved for ChatGPT (USER DECISION)
 - New workflow only, not a new TCAD result: Claude will audit actual school final Wu10 baseline and develop/debug standalone Bnull (GaN) and B1 (Al0.15Ga0.85N) 20nm inner lateral MQW replacement source. User returns to this ChatGPT conversation once 5V runs succeed, for physical validation/results. Preserve B0 n25 original 5nm damage+22 channels and real school source; 2026-11-13 RESET still applies. Known Bnull 1.892V MinStep failure and B1 resolved Grid but unproven 5V remain open. No school run/code change occurred in handoff.
 

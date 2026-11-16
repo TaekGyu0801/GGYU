@@ -1,3 +1,6 @@
+## 2026-11-16 JuSubin B1 unpatched source handoff (OBSERVED)
+- Actual school CMD diff against working Wu Baseline empty, global MagnesiumActiveConcentration ionization at line29, 22 Traps intact. B1 PAR `cmp -s` differs; significance unknown until diff. Earlier generator was PROPOSED, not applied on school. Next: read-only PAR diff; preserve Bnull/Wu, backup B1 and patch only after inspecting material-specific parameter differences. No school code edit by AI.
+
 ## 2026-11-16 JuSubin Bnull repeat license wait at 13:40:06 (OBSERVED)
 - Bnull n25 school log PID64105 shows SDevice checkout unavailable, waiting for license; no anode rows when read. Earlier PID55438 (13:19) status unknown. This is resource blocker, not verified solver/physics error. Don't submit duplicate jobs; read-only inspect both processes and latest out/log. Wu parent/B1 unchanged by AI. 5V unknown.
 

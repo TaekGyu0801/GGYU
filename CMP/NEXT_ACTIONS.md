@@ -1,3 +1,8 @@
+## 2026-11-16 Lee Project A next: inspect pp21 effective solver after 2.336 V stall
+- n21 actual school `n21_des.log` final anode 2.336V, raw current 2.624e-12. `n21_des.out` Newton iterations>35 and MinStep 5.4037e-11 at t=0.467166 of Vstop5. Do NOT treat last TDR / process exit as 5V success. NCN0 NCGa0 NtSide0 is simplest case.
+- Previous combined terminal command was inadvertently pasted twice and `tail -n 12bash` failed; effective solver settings still missing. NEXT one read-only command showing `pp21_des.cmd` Grid/Math/Solve (and ideally max_error location), then compare protected original school Wu baseline geometry+mesh+physics without modifying it. Do not rerun all 8 cases yet.
+- Only after fixing n21 5V proceed with coarse-mesh geometric screening outside 3nm QW /5nm damaged lateral strips; fine-mesh convergence verification on shortlisted designs. No new code/mesh/TCAD execution in current turn.
+
 ## 2026-11-16 Lee Project A immediate n21 numerical triage — READ ONLY FIRST
 - Actual school n21 SDevice log shows Newton iterations >35 then `Step-size less than MinStep (5.4037e-11)` on Nov 13 15:52. n21 screenshot NtSide=0,NCN=0,NCGa=0; program end/TDR does not prove 5V reached. Do NOT rerun all 8 or tune traps before diagnosing common base case.
 - NEXT **one terminal check**: from copied `CMP_A/CMP_WU_Copy_Copy` read last `anode` rows in `n21_des.log`, last `Computing step from`/`max_error` in `n21_des.out`, and `pp21_des.cmd` Grid/Math/Solve effective options. Diagnose failing V/region and minimal mitigation. Preserve master `tmp/myproject/CMP_WU_Copy` and reusable template.

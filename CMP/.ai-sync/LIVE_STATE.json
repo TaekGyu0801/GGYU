@@ -10182,5 +10182,21 @@
     "sourceModifiedOnSchoolByAI": false,
     "postPatchVerification": false,
     "next": "User runs B1 CMD-only patch in school shell, returns B1 CMD grep Mg diff and pp25 after SWB Preprocess; future 5V pending license"
+  },
+  "juSubinB1CompleteSdeviceCmdTxtGenerated20261116": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-16",
+    "status": "PROPOSED_COMPLETE_TXT_STATIC_PASS_SCHOOL_NOT_VERIFIED",
+    "artifactName": "CMP_PROJECTB_B1_sdevice_des_FINAL.txt",
+    "artifactBytes": 6189,
+    "artifactLines": 242,
+    "artifactSHA256": "16d3c7ab459adae1a99ee725f1c44e47613db758b2b322f3e9f0c2644c68e8d2",
+    "provenance": "GitHub proposed/unrun Wu baseline 3.2.0 SDevice candidate not exact verified school Wu source",
+    "changes": "Global IncompleteIonization Mg removed and Mg Region Physics inserted in Clean_pGaN/DmgL_pGaN/DmgR_pGaN; 22 original Damage Trap blocks, Solver, Plot, File macros otherwise preserved",
+    "staticCheck": "PASS 22 Traps, 3 scoped Mg, 23 Region Physics blocks, balanced braces and baseline solver",
+    "par": "Existing school B1 sdevice.par active values match baseline, only comments whitespace differ; do not overwrite",
+    "statusSchoolCodeEdited": false,
+    "status5VSuccess": false,
+    "next": "User backs up live school B1 CMD, reconciles new TXT versus actual school Wu source and region names before replacing; SWB preprocess verify pp25 and material, then run when SDevice license available"
   }
 }

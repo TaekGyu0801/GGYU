@@ -1,3 +1,7 @@
+## 2026-11-16 Lee Project A n21: compare to working Wu parent and inspect error position before modifying mesh
+- Confirmed actual `CMP_A/CMP_WU_Copy_Copy/pp21_des.cmd`: Grid n1_msh.tdr, Digits5, ErrRef electron/hole1e8, Iterations35, NotDamped100, coupled-init Iterations150, QS InitialStep1e-4 MinStep1e-10 MaxStep.02. n21 ends 2.336V on Newton/MinStep, not 5V. Root cause unconfirmed.
+- Next READ-ONLY command: show last failing `max_error` locations in `n21_des.out`, original working `CMP_WU_Copy/pp21_des.cmd` solver/Grid settings, copied vs reference mesh files presence and dates. Then decide minimum controlled solver/mesh/physics change. Retain pristine baseline; coarsened bulk-only mesh for broad geometry screen only after n21 5V converges.
+
 ## 2026-11-16 Lee Project A next: inspect pp21 effective solver after 2.336 V stall
 - n21 actual school `n21_des.log` final anode 2.336V, raw current 2.624e-12. `n21_des.out` Newton iterations>35 and MinStep 5.4037e-11 at t=0.467166 of Vstop5. Do NOT treat last TDR / process exit as 5V success. NCN0 NCGa0 NtSide0 is simplest case.
 - Previous combined terminal command was inadvertently pasted twice and `tail -n 12bash` failed; effective solver settings still missing. NEXT one read-only command showing `pp21_des.cmd` Grid/Math/Solve (and ideally max_error location), then compare protected original school Wu baseline geometry+mesh+physics without modifying it. Do not rerun all 8 cases yet.

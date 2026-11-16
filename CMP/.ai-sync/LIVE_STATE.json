@@ -10049,5 +10049,53 @@
     "note": "Line29 old Si-OFF comment; actual define line32 Si5e18. Fresh mesh/provenance and node normal exit not confirmed. Preserve running nodes.",
     "next": "Read-only sed lines 165-183 for mesh refinement numeric parameters, then independent project geometry sweep after ongoing nodes finish",
     "schoolEditedByAI": false
+  },
+  "leeProjectACedgeMeshRefinementObserved20261116": {
+    "worker": "이택규",
+    "status": "OBSERVED_SCHOOL_SDE_SOURCE__NEXT_SWEEP_PROPOSED_NOT_RUN",
+    "source": "/user/semi/semi437/CMP_A/CMP_WU_Copy_Copy/sde_dvs.cmd",
+    "windowNames": [
+      "Win.CEdgeL",
+      "Win.CEdgeR"
+    ],
+    "definition": "(sdedr:define-refinement-size \"Ref.CEdge\" 0.010 0.010 0.002 0.002)",
+    "unit": "um",
+    "maxSpacingNm": {
+      "x": 10,
+      "y": 10
+    },
+    "minSpacingNm": {
+      "x": 2,
+      "y": 2
+    },
+    "nominalGeometryNm": {
+      "wC": 200,
+      "dC": 200
+    },
+    "siSourceCm3": 5000000000000000000,
+    "generatedMeshProvenanceVerified": false,
+    "thin10nmAdequatelyResolved": false,
+    "proposedRepresentativesNm": [
+      [
+        10,
+        10
+      ],
+      [
+        50,
+        50
+      ],
+      [
+        200,
+        200
+      ]
+    ],
+    "proposedFullExplorationNm": [
+      10,
+      50,
+      200
+    ],
+    "newSchoolRun": false,
+    "schoolFileModified": false,
+    "next": "Current 8 nodes finish/read-only 5V end plus normal exit; preserve original; independent copies and local CEdge mesh refinement for thin width/depth."
   }
 }

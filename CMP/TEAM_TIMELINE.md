@@ -1,3 +1,8 @@
+## 2026-11-16 Project B paper-to-TCAD parameter provenance locked for controlled comparisons (PROPOSED)
+- 주수빈 Project B: 기존 Wu2023 10um working Baseline 전 물리·numerical configuration를 비교 공통 기준으로 고정, Yuanpeng Wu2022 및 Furtmayr2011은 Al0.15 후보/나노와이어 lateral confinement 관련 정성 메커니즘과 한계 인용만 허용. 추가 설명은 `CMP/PROJECT_B_PARAMETER_PROVENANCE_20261116.md`.
+- Bnull 20nm GaN vs B1 20nm Al0.15Ga0.85N all-nine-MQW/QB guard, 5nm original Damage/traps unchanged. 논문에 20nm lateral planar guard 검증 없음. 적절한 전류 밀도·MQW 절대 Radiative·trap net loss와 밴드/전기장 평가 전 성능 주장을 금지.
+- 이전 GPT FIX1의 numerical solver/mesh 및 Mg Region scope 변경이 기존 B0와 confound 가능: 실제 학교 Baseline 비교 → 필요 시 공통 설정 B0-regression → matched-source Bnull/B1. 학교 run/code 변경 없음.
+
 ## 2026-11-16 JuSubin GPT Project B FIX1 complete offline candidate (STATIC PASS, SCHOOL UNRUN)
 - **USER DIRECTED:** both Claude and ChatGPT versions will be developed/run independently, choose after successful 5V and physical validation. New ChatGPT **FIX1** full candidate `CMP_ProjectB_GPT_FIX1_Bnull_B1_20261116.zip`, two independent dirs `CMP_PROJECTB_1.0.1_GPT_BNULL`, `CMP_PROJECTB_1.0.1_GPT_B1`, complete `sde_dvs.cmd`, `sdevice_des.cmd`, `sdevice.par`, README, check guide, SHA manifest. Artifact **in ChatGPT conversation's private sandbox only**, NOT deployed to school or published as proprietary raw file to public GitHub.
 - **Observed historical failure:** Bnull old school n25 stall ~1.892V, Newton35/MinStep5.7456e-11 and electron max_error near x0.139um,y0; nonlinear convergence FAIL, underlying physical cause unresolved. B1 old undoped AlGaN Mg IncompleteIonization species parameter absent due global Mg, plus previously truncated File/Grid/stale preprocessing; later Grid n1_msh.tdr observed, 5V unverified.

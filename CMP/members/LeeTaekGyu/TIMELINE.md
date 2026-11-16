@@ -1,3 +1,9 @@
+## 2026-11-16 Project A SWB eight red SDevice nodes screenshot — OBSERVED UI / ROOT CAUSE UNRESOLVED
+- 이택규 제공 SWB 스크린샷: NtSide=0/1e18, NCN=0/6e17, NCGa=0/3e17 총 8개 SDevice 조합의 노드가 모두 빨간색으로 표시됨. 가장 단순한 n21은 NtSide=0, NCN=0, NCGa=0. SVisual 출력은 -- 로 표시됨. 사용자는 SDE에 오류가 없다고 보고했으나, 이 화면만으로 SDE mesh 정상 생성이나 SDevice 실패 원인/마지막 fatal을 검증할 수 없음.
+- 이전 11/13 SDE tP unbound 문제의 해결 여부는 새로운 n1 log 및 mesh 증거 없이는 확정하지 않음. 새로운 school 소스/결과/로그 변경은 이 채팅에서 제공되지 않음.
+- 사용자 제안(PROPOSED, 아직 채택·실행 검증 안 됨): 다수 후보에 Coarse Mesh 1차 screening 후 우수 후보에 Fine Mesh 검증. 5nm Damage와 3nm QW 등 미세 물리 영역은 local refinement 유지, coarse/fine mesh 독립성 검증 필수.
+- NEXT: 실패군 n21_des.err/out/log의 첫 fatal 및 SWB preprocess/grid binding 확인. 공통 기초 케이스 한 개를 먼저 SDevice 5V까지 통과시킨 뒤 parameter sweep 시작. 학교 baseline/template 보호.
+
 ## 2026-11-13 Lee Project A A0u SDE FULL REPLACEMENT delivered as CHAT ARTIFACT — OFFLINE STATIC PASS, SCHOOL UNRUN
 - **USER DIRECTIVE:** All future code corrections should be supplied as fully assembled, copy-paste-ready **entire replacement file**, not code snippets or prepend-only instructions.
 - GPT prepared complete file `CMP_PROJECTA_A0u_sde_dvs_FULL_20261113.cmd` (chat artifact only; 6,166 bytes /159 lines, SHA256 `f5b05e20840734cdf55dd655777ef20254b938ae97eac7a80318662f7eeeb30e`); merges missing initialization preamble with user-pasted CEdge A0u SDE from `(define (seg-list)` through `(sde:build-mesh "n@node@")`. Includes initial `(sde:clear)` and `(sdegeo:set-default-boolean "ABA")`, Wm10/Wdmg.005/tP.120/tEBL0/tQW.003/tQB.008/tN3.9/ND5e18/PMg2e19/NBg1e15/xIn.08, xNow/xActiveStart/xActiveEnd, and CEdge `wC=dC=.200um,NCEdge=0`. Original damage strips and 22 prospective damage trap region names remain unaffected in SDE, CEdgeL/R interior regions, extra refinement; `NCEdge=0` means no Si donors in CEdge. Carbon C_N/C_Ga traps are NOT placed by SDE; A1u requires a separately prepared SDevice file.

@@ -1,4 +1,5 @@
 {
+  "leeProjectAA0mSchoolSdeEditObserved20261116": {"worker":"이택규","dateKST":"2026-11-16","status":"OBSERVED_SCHOOL_SDE_SOURCE_EDIT_SDE_MESH_AND_SDEVICE_RERUN_PENDING","project":"/user/semi/semi437/CMP_A/CMP_WU_Copy_Copy","file":"sde_dvs.cmd","schoolCommandSucceeded":true,"output":"32:(define NCEdge 5.0e18)","previousValue":"0","newValue":"5.0e18","backupCommandExecuted":true,"backupPathNotListed":true,"sourceOnly":true,"requestedCase":"A0m","conditions":{"NtSide":0,"NCN":0,"NCGa":0,"Vstop":5},"sdeRerunVerified":false,"sdeviceRerunVerified":false,"n21Reached5V":null,"next":"SDE node rebuild mesh then n21 only at NtSide0 NCN0 NCGa0 Vstop5, inspect final n21_des.log and n21_des.out","baselineTargeted":false},
   "leeProjectAMinimumCheckA0mDecision20261116": {
     "worker": "이택규",
     "dateKST": "2026-11-16",

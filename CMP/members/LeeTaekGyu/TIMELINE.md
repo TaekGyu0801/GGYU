@@ -1,3 +1,7 @@
+## 2026-11-16 Lee reports Project A n21 ran after A0m source edit — result unverified (USER REPORT)
+- User says `n21돌아갔고` while asking whether currently running is A0m. Earlier actual school SDE source `(define NCEdge 5.0e18)` on experimental copy confirmed; with SDE mesh rebuilt after that edit and n21 SWB parameters `NtSide=0 NCN=0 NCGa=0`, this is A0m (CEdge geometry only, retained Si donor, carbon OFF, damage OFF).
+- **UNVERIFIED:** fresh SDE regeneration after NCEdge edit, effective pp1 mesh doping, n21 5V terminal state and solver completed status. User's `돌아갔고` not enough to independently establish 5V convergence. Next minimal check is one terminal query final n21 log anode voltage and SDevice termination.
+
 ## 2026-11-16 Lee rejects unverified Iterations 35→60 / LineSearchDamping 0.1 proposal; requests Claude independent review (USER DECISION)
 - 이택규가 ChatGPT의 **원인 확인 전 Newton 반복 35→60 증가** 및 LineSearchDamping0.1 제안을 명시적으로 거부하고, Claude에게 현재 상황/문제/잘못된 접근을 전달하는 인수인계 프롬프트를 요청. 더 이상 근거 없이 solver 반복 횟수 또는 MinStep을 증대하지 않는다.
 - ChatGPT proposed SDevice patch command in prior chat; **사용자가 실행했다고 보고한 기록은 없음**. 따라서 학교 `sdevice_des.cmd` 실제 반영 여부는 UNKNOWN, NOT ASSUME PATCHED. 별도 확인된 학교 변경은 실험용 SDE `(define NCEdge 5.0e18)` 출력뿐이며 이후 새 SDE/mesh/n21 run도 미확인.

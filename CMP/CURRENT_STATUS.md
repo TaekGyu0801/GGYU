@@ -1,3 +1,7 @@
+## 2026-11-16 13:24 JuSubin GPT FIX1 Bnull n25 school solver screenshot — repeat nonconvergence, 5V NOT SHOWN
+- Under school copy `CMP_PROJECTB_1.0.1_GPT_BNULL` View Output, `n25_des.out` includes `#iterations larger than 50` and Newton retry with smaller step at t0.065284 (~0.326V if Vstop5); large iteration errors, not good convergence. No final MinStep/job exit supplied, so NOT claim terminal failure yet. `datexcodes.txt` species-redefined warnings visible but not identified as fatal. Fresh run of GPT FIX1 code is now user-school OBSERVED, whereas completed 5V result remains UNRESOLVED.
+- Next read-only terminal `n25_des.log` last anode and `n25_des.out` final step/status. Then compare actual preprocessed school Wu parent/branch structure and choose targeted fix, not iteration escalation.
+
 ## 2026-11-16 Project A A0m SDE parameter changed on school; no solver result yet
 - **School shell OBSERVED** from Lee: guarded edit of experimental `CMP_A/CMP_WU_Copy_Copy/sde_dvs.cmd` succeeded with output `32:(define NCEdge 5.0e18)`; formerly `NCEdge=0`, now original nominal n-GaN Si level restored within CEdge. Original Baseline and reusable template are outside command target.
 - Prior A0u n21 NtSide0 NCN0 NCGa0 SDevice 2.336V Newton/MinStep failed; A0m test must first regenerate SDE mesh and run n21 only to 5V. **SDE rerun/mesh success and 5V solver result unverified.** No claim of carbon performance improvement.

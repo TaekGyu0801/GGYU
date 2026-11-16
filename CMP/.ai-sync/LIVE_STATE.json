@@ -1,5 +1,20 @@
 {
-  "leeProjectAn21FiveVoltRowRemainingNodes20261116": {
+  "juSubinProjectBLiteratureParameterGate20261116": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-16",
+    "status": "DESIGN_PROVENANCE_LOCK_PROPOSED_NO_SCHOOL_RUN",
+    "sourceOfTruth": "Actual working school /user/semi/semi437/tmp/myproject/CMP_WU_Copy full SDE/SDevice/par/PP/mesh",
+    "designDocument": "CMP/PROJECT_B_PARAMETER_PROVENANCE_20261116.md",
+    "designFrozenExisting": "Wu10um B0 NtSide1e18 Damage5nm; Bnull 20nm-per-side inner MQW GaN; B1 same 20nm guard Al0.15Ga0.85N; original 22 traps untouched",
+    "sourced": "Wu2023 baseline structural params; Yuanpeng Wu2022 nanowire barrier Al~0.15 as INITIAL candidate; Furtmayr2011 qualitative lateral electric field caveat",
+    "unsupportedTransfer": "nanowire N-polar gradient polarization doping/QCSE strain and QW thickness/indium composition NOT portable; 20nm Wu2022 strain penetration is VERTICAL not lateral guard width",
+    "numericalRisk": "GPT FIX1 changed mesh QS numeric and Mg ionization scope compared to historical B0; B0-regression needed before isolating Al effects",
+    "newCodeOnSchool": false,
+    "newSimulation": false,
+    "school5VProven": false,
+    "next": "Actual school Wu10 successful source audit, all-common numerics/mg before B0-regression/Bnull/B1 and matched-current band/sidewall trap/QW absolute radiative comparison"
+  },
+"leeProjectAn21FiveVoltRowRemainingNodes20261116": {
     "worker": "이택규",
     "dateKST": "2026-11-16",
     "status": "OBSERVED_N21_LOG_LAST_ROW_5V_OTHER_NODES_USER_REPORTED_RUNNING",

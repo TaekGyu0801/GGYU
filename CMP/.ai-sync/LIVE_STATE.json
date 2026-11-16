@@ -10137,5 +10137,20 @@
     "validation": "bash syntax and synthetic fixture passed; full actual school raw files/PP and real solver not available; school B1 source unchanged by ChatGPT",
     "caution": "B1 requires matched Bnull/B0 region-scoped Mg control before alloy-only conclusions; current n25 license wait blocker observed; xAl=.15 SDE and default AlGaN materials still need PP/run verification",
     "next": "User executes generated single-block bash command on school; verify B1 sdevice.par baseline byte cmp, pp25_des.cmd scoped Mg 3 and traps 22, pp25_des.par and 5V solver after license availability"
+  },
+  "juSubinBnullSdeviceSecondLicenseWait20261116": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-16",
+    "status": "OBSERVED_SECOND_LICENSE_CHECKOUT_BLOCKER_CURRENT_STATE_UNRESOLVED",
+    "project": "CMP_PROJECTB_1.0.1_GPT_BNULL",
+    "startAtKST": "2026-11-16 13:40:06",
+    "pid": 64105,
+    "previousAttemptPid": 55438,
+    "observedMessage": "unable to check out 1 sdevice license(s); Waiting for license feature sdevice to become available",
+    "lastAnodeRowsAtObservation": 0,
+    "solverStartedVerified": false,
+    "reached5VVerified": false,
+    "priorPidStatusVerified": false,
+    "next": "read-only ps on 55438 and 64105, latest n25 output/log; do not create duplicate jobs"
   }
 }

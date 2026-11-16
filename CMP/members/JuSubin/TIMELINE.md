@@ -1,3 +1,9 @@
+## 2026-11-16 JuSubin Bnull pp25 Grid/Mg and timestamps verified; Solver extraction pending (OBSERVED)
+- Actual school terminal read-only `pp25_des.cmd` output: line12 `Grid="n1_msh.tdr"`, line16 `Parameter="pp25_des.par"`, line29 a **single global** `IncompleteIonization( Dopants="MagnesiumActiveConcentration" )`.
+- School timestamps KST: `sdevice_des.cmd` 13:06:18, `pp25_des.cmd` 13:19:01, `n1_msh.tdr` 12:13:20. PP newer than source and mesh, but timestamps alone do not certify all current solver options or successful 5V run.
+- Assistant-issued sed command for Math/Solve failed with `sed: unexpected ','`; **diagnostic command syntax error only**, not an SDevice parsing/run error. Subsequent `grep` extraction requested; no solver output provided yet. Prior FIX1 n25 0.3265V failure must not be applied to restored source.
+- NEXT: read-only `grep -n -A 40 -E '^[[:space:]]*(Math|Solve)[[:space:]]*[{]' pp25_des.cmd` for effective current solver; if consistent with baseline, rerun **only copied Bnull n25** at NtSide1e18/Vstop5; collect final anode voltage and solver exit. Preserve Wu parent/B1, no AI school edits/runs.
+
 ## 2026-11-16 JuSubin GPT Bnull school live SDevice revealed Wu baseline settings already restored (OBSERVED)
 - User re-ran guarded patch, output `STOP: Solver 설정 확인 필요`, then ran read-only `sed` of actual school `/user/semi/semi437/tmp/myproject/CMP_PROJECTB_1.0.1_GPT_BNULL/sdevice_des.cmd`.
 - **OBSERVED live source** `Math { Extrapolate Derivatives RelErrControl Digits=5 ErrRef(Electron)=1e8 ErrRef(Hole)=1e8 Iterations=35 NotDamped=100 }`; `Solve`: Poisson Coupled150, Poisson/Electron/Hole Coupled150, QS `InitialStep=1e-4 MinStep=1e-10 MaxStep=.02 Increment1.25 Decrement2 Vstop`, inner **bare `Coupled { Poisson Electron Hole }`**. `grep IncompleteIonization` shows only line29 **one global Mg incomplete ionization**. `ls "$f".bak*` shows no backups under that glob.

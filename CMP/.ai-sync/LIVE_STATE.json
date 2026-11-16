@@ -9861,5 +9861,23 @@
     "schoolRun": false,
     "finalValidated": false,
     "next": "compare true school baseline then isolated SWB SDE→mesh→preprocess→n25 to 5V; inspect out err log; continue Claude comparator"
+  },
+  "juProjectBGPTFix1BnullSolverScreen20261116": {
+    "worker": "주수빈",
+    "whenKST": "2026-11-16 13:24",
+    "status": "OBSERVED_SCHOOL_RUNNING_NEWTON_RETRY_FINAL_JOB_UNRESOLVED",
+    "project": "/user/semi/semi437/tmp/myproject/CMP_PROJECTB_1.0.1_GPT_BNULL",
+    "node": "n25",
+    "screenshot": [
+      "#iterations larger than 50",
+      "Newton didn't converge, trying again with smaller step",
+      "t=0.065284, step=2.3903e-06",
+      "large Newton iteration errors"
+    ],
+    "inferredVoltageIfVstop5": 0.32642,
+    "confirmedFiveVoltCompletion": false,
+    "datexcodesWarningsNotProvenFatal": true,
+    "next": "Read last anode from n25_des.log and final out steps/tail; check solver progress before any targeted source change; never infer root cause or fix by increasing iterations only",
+    "schoolCodeModifiedByChatGPT": false
   }
 }

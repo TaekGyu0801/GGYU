@@ -1,3 +1,6 @@
+## 2026-11-16 Lee school CMP_A 5V log audit (OBSERVED TERMINAL / NODE-TO-MODEL UNVERIFIED)
+- Five 5V-finished runs observed: Copy_Copy n21/n53/n63/n69, Si_X_C_O n72. Copy_Copy n25 no terminal row. Map each to model via actual node macros and SDE NCEdge before confirming three-case success. Avoid rerunning or editing completed runs. Then CEdge geometry split (first 10/50/200nm diagonal, proposed, not run).
+
 ## 2026-11-16 Lee Copy_Copy_Copy terminal-current inspection returned zero lines (OBSERVED; filename/path unresolved)
 - User actually ran read-only `bash -c 'd=/user/semi/semi437/CMP_A/CMP_WU_Copy_Copy_Copy; for f in "$d"/n*_des.log; do [ -f "$f" ] || continue; ...; done'` and received only the new shell prompt, **no node lines**. The loop silently skips if no regular files match `$d/n*_des.log` at top level. This does **NOT** prove solver failure, 5V completion, missing results, or model wrong. User earlier said SDevice ran and SVisual was resolved; these are still user-reported, and actual output path/name unknown.
 - Next read-only, csh-safe one-line command supplied to `ls -ld` copied folder and `find -maxdepth 2 -type f` for `*des*`, `*.plt`, `*.tdr`; after actual names found, inspect relevant terminal-current / normal-exit logs. Do not assume path or write files; preserve all school SWB source/results.

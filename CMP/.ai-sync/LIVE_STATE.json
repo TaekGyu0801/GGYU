@@ -10237,15 +10237,30 @@
     "next": "Read-only display license variables and explicit lmstat -c for each listed host. Do not alter running jobs."
   },
   "leeProjectASVisualN73Observed20261116": {
-    "status": "BLOCKER_OBSERVED_X_DISPLAY_MISSING",
+    "status": "USER_REPORTED_RESOLVED",
     "worker": "이택규",
     "school": "/user/semi/semi437/CMP_A/CMP_WU_Copy_Copy_Copy",
-    "errorFile": "n73_vis.err",
-    "errorText": "ERROR : No Display available.",
-    "wrapperError": "n73_local.err: Job failed, child process exited abnormally, gjob exits with status 1",
-    "deviceCompletion": "USER_REPORTED_ONLY",
-    "x11OrLaunchModeVerified": false,
-    "schoolCodeEditedByAI": false,
-    "next": "Check actual SWB job invocation and DISPLAY. Use appropriate X11 forwarding for GUI or svisual -b/-bx for batch based on output needs; re-run only SVisual."
+    "previousError": "ERROR : No Display available.",
+    "resolutionLogVerified": false
+  },
+  "leeProjectACopy3ModelNaming20261116": {
+    "status": "CONDITIONAL_ON_ACTUAL_SDE_SDEVICE",
+    "worker": "이택규",
+    "school": "/user/semi/semi437/CMP_A/CMP_WU_Copy_Copy_Copy",
+    "intendedModel": "A1u = Si_X_C_O",
+    "alternateA1m": "Si_O_C_O",
+    "sdeTarget": {
+      "NCEdge": 0,
+      "wC_nm": 200,
+      "dC_nm": 200
+    },
+    "sdeviceTarget": {
+      "NCN": 600000000000000000,
+      "NCGa": 300000000000000000,
+      "NtSide": 1000000000000000000,
+      "Vstop_V": 5
+    },
+    "last5VLogVerified": false,
+    "next": "Inspect copy SDevice normal terminal + 5V log; matched A1u vs A1m side by side after confirming physics/mesh match."
   }
 }

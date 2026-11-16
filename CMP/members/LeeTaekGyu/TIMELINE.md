@@ -1,3 +1,9 @@
+## 2026-11-16 Lee reports SVisual issue fixed; Copy_Copy_Copy is intended A1u, not A1m (USER REPORT / IDENTITY CONDITIONAL)
+- User reports `SVisual 해결됨` for copied Project A. Prior `n73_vis.err` `ERROR : No Display available.` is **user-reported resolved**; no new run logs/screenshot supplied and no proof of exported plots.
+- Naming based on code that GPT supplied: **`A1u = Si_X_C_O`** (NCEdge0, NCN6e17, NCGa3e17, wC=dC200nm, NtSide1e18); `A1m = Si_O_C_O` (NCEdge5e18, C traps ON); `A0m = Si_O_C_X` (NCEdge5e18, C traps OFF). This is conditional on actual SDE/SDevice being pasted/saved; no school source proof yet. Do not mislabel Copy_Copy_Copy A1m.
+- Next: verify `Si_X_C_O/A1u` last 5V terminal values and normal solver exit; then compare fixed-geometry, fixed Damage ON `A1m` against `A1u` using 5V/at matched current, MQW RadiativeRecombination and sidewall trap/SRH rates, with same physics/mesh. The newly reconstructed full deck was a GitHub Wu 3.2.0 PROPOSED source, potentially differs from running A1m's actual school deck; cannot attribute outcome solely to Si until code differences inspected.
+- No new school execution or editing by assistant.
+
 ## 2026-11-16 Lee SVisual n73 failure root cause confirmed as missing X display (OBSERVED)
 - User on `ssudisu3` read `/user/semi/semi437/CMP_A/CMP_WU_Copy_Copy_Copy/n73_vis.err`: exact `ERROR : No Display available.`; `n73_local.err`: `Job failed / Error: Unknown error: child process exited abnormally / gjob exits with status 1`; `n73_vis.out` empty. The preceding generated `n73_vis.tcl`, `pp73_vis.cmd`, `n73_vis.job` exist.
 - Root cause of this SVisual **process** failure is failure to obtain graphical X11 DISPLAY; the abnormal exit is downstream wrapper. SDE/SDevice results are not invalidated by this message (user earlier reported completed). This log does not establish whether the SVisual Tcl script itself is valid after a display is available.

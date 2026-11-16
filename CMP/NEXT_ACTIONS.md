@@ -1,3 +1,7 @@
+## 2026-11-16 JuSubin GPT Bnull FIX1 final numerical FAIL — source/mesh isolation first
+- School n25 final: anode 0.3265V vs5V; Newton RHS >1e10 growth, Supernodal zero pivot, Step-size below MinStep8.3174e-11. Max error Poisson at (x.12427,y.00610) in GuardL_Barrier0; electron at (x.161,y9.21875), hole at (x.164,y9.453125). Direct numerical failure confirmed, no single root cause established.
+- NEXT one read-only audit: school successfully solved `CMP_WU_Copy/sde_dvs.cmd` vs experimental GPT Bnull `sde_dvs.cmd` diff (include guard geometry, profile and mesh), compare `sdevice.par` and effective preprocessed `pp25_des.cmd` to isolate intentional/unintentional changes. Check B0 regression with matched numerical settings before interpreting Bnull if solver/physics differs; baseline remains protected. Correct one root input issue at a time, rerun copied Bnull only. No further blind Newton/MinStep escalation.
+
 ## 2026-11-16 Project B paper-to-TCAD parameter provenance gate (JuSubin; PROPOSED)
 - 먼저 `CMP/PROJECT_B_PARAMETER_PROVENANCE_20261116.md` 참조. 2026-11-08 approved B shape 유지; Wu2023 학교 성공 Baseline의 실제 SDE/SDevice/.par/pp/physics/solver가 공통 source. GitHub Wu3.2 PROPOSED나 nanowire Wu2022의 whole param set을 실제 성공 baseline으로 대체하지 말 것.
 - 기존 B0/Bnull/B1을 동일 numerical/physical decks로 비교. pGaN Mg ionization scope, QS damping/Iterations 등 수정이 필요하면 동일 변경을 적용한 B0-regression이 기존 B0와 같은 결과인지 우선 검증. Bnull↔B1은 20nm guard 재료 및 xAl0.15만 의도된 차이로 남기기.

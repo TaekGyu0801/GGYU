@@ -1,3 +1,6 @@
+## 2026-11-16 13:24 JuSubin GPT FIX1 Bnull school SDevice visibly stalling early in Newton (OBSERVED SCREEN, FINAL RESULT UNKNOWN)
+- User screenshot school `CMP_PROJECTB_1.0.1_GPT_BNULL/n25_des.out`: QS `#iterations larger than 50`, `Newton didn't converge, trying again with smaller step`, t0.065284 with step2.3903e-06 and huge solver errors. If Vstop5, this is ~0.326V, NOT 5V. `datexcodes.txt` redefinition messages are not proven fatal. Need final log last anode & latest out, root cause unresolved. No school edit performed by GPT, no 5V proof. GPT FIX1 mesh+50/damping trial has not demonstrated cure.
+
 ## 2026-11-16 Lee reports n21 '돌아갔고' following A0m code edit; 5V convergence unverified
 - User-reported n21 executed/ran; no fresh n21 log/out supplied. With observed experimental SDE NCEdge5e18 and **if** SDE was rerun to rebuild mesh and n21 params NtSide0 NCN0 NCGa0, its case is A0m (donor retained, carbon OFF, damage OFF). Actual mesh provenance and 5V success remain unknown, so do not record successful 5V.
 - Next: minimal read-only last anode voltage and final solver status; then proceed based on confirmed result.

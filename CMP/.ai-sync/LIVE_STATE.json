@@ -10218,5 +10218,15 @@
     "schoolPreprocessVerified": false,
     "school5VVerified": false,
     "next": "User copy B1 CMD with school backup, SWB preprocess and inspect pp25, verify material mapping and license, then n25 5V; B0/Bnull same Mg scope control for alloy-only comparison"
+  },
+  "leeProjectALicenseWaitObserved20261116": {
+    "worker": "이택규",
+    "status": "BLOCKER_OBSERVED",
+    "schoolLog": "Waiting for license feature sdevice to become available ...",
+    "displayLimitMessage": "Reached limit of 5 users/licenses to be displayed",
+    "displayLimitIsLicenseCount": false,
+    "solverStartedVerified": false,
+    "sourceCodeErrorObserved": false,
+    "next": "Leave queued run unchanged; check lmstat -a -f sdevice; verify eventual run logs."
   }
 }

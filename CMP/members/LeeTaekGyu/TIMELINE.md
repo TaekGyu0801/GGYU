@@ -1,3 +1,9 @@
+## 2026-11-16 Lee Project A n21 school SDevice nonconvergence confirmed from actual log (OBSERVED)
+- **Actual user terminal log** `/user/semi/semi437/CMP_A/CMP_WU_Copy_Copy/n21_des.out`, run ended Fri Nov 13 15:52:25 KST: Newton `#iterations larger than 35`; then Quasistationary `Step-size less than MinStep (step-size = 5.4037e-11)`; solver still writes n21_des.tdr and prints `simulation finished` (process exit, NOT 5V convergence). Wallclock 2299.64 seconds, memory 864MB. User `n21_des.err` tail shows InGaN eDOSMass/hDOSMass side-material interpolation and anisotropic/isotropic notice, no direct fatal in shown tail.
+- SWB screenshot previously identifies n21 as NtSide=0, NCN=0, NCGa=0. Therefore even zero-parameterized-trap test has nonconvergence; do NOT blame carbon C_N/C_Ga as confirmed root cause. No last anode voltage or complete math/grid deck read yet.
+- This n21 runtime proves SDevice progressed to coupled solving using some geometry; previous 11/13 SDE `tP` error could be from an earlier attempt, but fresh SDE mesh provenance and corrected school source remain to verify. Do not call SDE header fix confirmed just from n21 runtime.
+- NEXT READ ONLY: check `n21_des.log` final anode V and `n21_des.out` last step+max_error, `pp21_des.cmd` effective Grid and Math/Solve; then decide physics/mesh/convergence edit. Coarse mesh screening user-proposed only, preserve resolution of 3nm QW/5nm Dmg, validate finalists using fine mesh; no rerun or code edit in this turn.
+
 ## 2026-11-16 Project A SWB eight red SDevice nodes screenshot — OBSERVED UI / ROOT CAUSE UNRESOLVED
 - 이택규 제공 SWB 스크린샷: NtSide=0/1e18, NCN=0/6e17, NCGa=0/3e17 총 8개 SDevice 조합의 노드가 모두 빨간색으로 표시됨. 가장 단순한 n21은 NtSide=0, NCN=0, NCGa=0. SVisual 출력은 -- 로 표시됨. 사용자는 SDE에 오류가 없다고 보고했으나, 이 화면만으로 SDE mesh 정상 생성이나 SDevice 실패 원인/마지막 fatal을 검증할 수 없음.
 - 이전 11/13 SDE tP unbound 문제의 해결 여부는 새로운 n1 log 및 mesh 증거 없이는 확정하지 않음. 새로운 school 소스/결과/로그 변경은 이 채팅에서 제공되지 않음.

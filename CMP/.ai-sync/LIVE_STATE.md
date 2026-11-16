@@ -1,3 +1,8 @@
+## 2026-11-16 Lee n21 observed anode5V; other A0m-family nodes running, A0u/A1u deferred
+- User-provided school last n21 anode: 5.000E+00 V, electron1.695e-4/hole2.399e-3/total2.568e-3. This is A0m-intended based on earlier experimental `NCEdge=5e18` edit but **latest new mesh/doping provenance and solver normal exit not yet evidenced**. User says remaining SWB nodes running; no fresh per-node results.
+- Critical nomenclature: with experimental Si5e18, Carbon ON SWB branches represent **A1n** (Si retained), not A1u (Si removed). A0m=Si retained/C OFF; A0u=Si removed/C OFF; A1u=Si removed/C ON. NtSide is orthogonal sidewall Damage ON/OFF condition.
+- Recommended preserve running copy, finish current jobs; for A0u clone separate project and change NCEdge0/rebuild mesh, run 1 case first (prior2.336V failed), then A1u on another clone only if A0u 5V succeeds. No school actions performed by AI.
+
 ## 2026-11-16 13:24 JuSubin GPT FIX1 Bnull school SDevice visibly stalling early in Newton (OBSERVED SCREEN, FINAL RESULT UNKNOWN)
 - User screenshot school `CMP_PROJECTB_1.0.1_GPT_BNULL/n25_des.out`: QS `#iterations larger than 50`, `Newton didn't converge, trying again with smaller step`, t0.065284 with step2.3903e-06 and huge solver errors. If Vstop5, this is ~0.326V, NOT 5V. `datexcodes.txt` redefinition messages are not proven fatal. Need final log last anode & latest out, root cause unresolved. No school edit performed by GPT, no 5V proof. GPT FIX1 mesh+50/damping trial has not demonstrated cure.
 

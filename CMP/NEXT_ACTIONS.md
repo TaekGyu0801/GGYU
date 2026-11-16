@@ -1,3 +1,6 @@
+## 2026-11-16 Lee Project A two Si-ON models full SWB offline reference package (PROPOSED, UNRUN)
+- Two model SWB clones from actual 5V-finished `CMP_A/Si_X_C_O`: both change only `NCEdge=0.0`→`5.0e18`; keep SDevice/.par exact, wC=dC.200um, NtSide1e18, Vstop5; `Si_O_C_X` NCN=NCGa=0; `Si_O_C_O` NCN6e17/NCGa3e17. Rebuild SDE/mesh, preprocess, run one 5V SDevice branch each, preserve parent. Offline full-file ZIP candidate delivered but reconstructed GitHub Wu3.2 PROPOSED; do NOT overwrite working school source blindly. No new school execution yet.
+
 ## 2026-11-16 Lee Copy_Copy n72 has status file only; CEdge Physics missing (OBSERVED SCHOOL)
 - User read-only `CMP_A/CMP_WU_Copy_Copy`: `grep -nE 'CEdge[LR]_nGaN' sdevice_des.cmd pp72_des.cmd` returned **no matches**. This source/PP contains no named CEdgeL/R-specific Physics blocks, so it does **not establish** carbon-active `Si_O_C_O`. Prior source `NCEdge=5e18`, wC=dC=.200um, pp72 DmgL_nGaN trap1e18 are known.
 - `ls -l n72_des.*` showed **only** `n72_des.sta` size52 bytes, modified Nov16 12:25; no n72_des.log or .out matched. 5V SDevice solve of `Copy_Copy/n72` **not observed**. Cannot distinguish never submitted/skipped/error from `.sta` metadata alone; must read state file / SWB status. Existing n21/n53/n63/n69 5V finish logs have Dmg trap Conc0, thus not fixed Damage ON comparison.

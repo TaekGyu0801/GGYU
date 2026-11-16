@@ -1,3 +1,7 @@
+## 2026-11-16 Lee reports n21 '돌아갔고' following A0m code edit; 5V convergence unverified
+- User-reported n21 executed/ran; no fresh n21 log/out supplied. With observed experimental SDE NCEdge5e18 and **if** SDE was rerun to rebuild mesh and n21 params NtSide0 NCN0 NCGa0, its case is A0m (donor retained, carbon OFF, damage OFF). Actual mesh provenance and 5V success remain unknown, so do not record successful 5V.
+- Next: minimal read-only last anode voltage and final solver status; then proceed based on confirmed result.
+
 ## 2026-11-16 JuSubin GPT Project B FIX1 code generated, static checks PASS, SCHOOL UNRUN
 - User chooses parallel independent Claude vs ChatGPT Project B runs. GPT FIX1 chat-only ZIP `CMP_ProjectB_GPT_FIX1_Bnull_B1_20261116.zip` includes two complete Bnull/B1 code candidates generated from GitHub Wu3.2 PROPOSED (not verified actual successful school Wu10). Both preserve original 5nm Dmg/22 trap declarations, Bnull GaN vs B1 AlGaN x.15, expected 51 regions. Differences vs GPT initial candidate: 10nm lateral +3nm vertical meshing collar crossing Guard boundaries, and QS local Coupled Newton iterations50, LineSearchDamping0.1 as unrun stabilization experiment; global physical models/Math remain candidate baseline. Static SDE/SDevice sanity passed, NOT yet school compiled/run/validated. Bnull historical ~1.892V Newton/MinStep and B1 historical Mg/File/Grid errors remain unsolved until fresh run. Need true school Baseline source compare.
 

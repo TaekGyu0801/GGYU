@@ -1,3 +1,9 @@
+## 2026-11-16 Lee school CMP_A 5V log audit (OBSERVED TERMINAL / NODE-TO-MODEL UNVERIFIED)
+- Read-only shell `find` output confirms `CMP_WU_Copy_Copy` n21/n53/n63/n69 each last anode at 5.000E+00 V with `Sentaurus Device simulation finished` (Nov 16 12:25,13:46,12:53,15:40 KST respectively), and `Si_X_C_O` n72 last anode 5.000E+00 V / electron1.687E-04, hole2.396E-03, conduction2.565E-03 / finish Nov 16 15:49 KST. Four Copy_Copy branches all have identical printed electron1.695E-04/hole2.399E-03/conduction2.568E-03; this is a check point, not proof carbon traps inactive.
+- Copy_Copy n25 log showed no matching final anode or termination line. Parent `CMP_WU_Copy` historical n21/n25 have 5V finish Nov3/4; preMgFix_SDevice_backup logs are archived, not current model evidence.
+- Verified **SDevice 5V endpoint and process-finished on five named nodes only**; cannot yet assign all three adopted labels (`Si_O_C_X`,`Si_O_C_O`,`Si_X_C_O`) without node effective macro NtSide/NCN/NCGa and live SDE NCEdge/CEdge trap physics/mesh validation. Name `Si_X_C_O` alone not Si-off source proof. Do not assert three models validated or radiation/trap improvement.
+- NEXT minimum read-only node-to-parameter mapping and source values: inspect SWB node-specific pp*_des.cmd and source/mesh provenance for five relevant nodes; only if 3 conditions matched can proceed to wC/dC split. No school TCAD code/mesh/run modified.
+
 ## 2026-11-16 Lee SWB Copy_Copy_Copy project renamed Si_X_C_O (USER-REPORTED / SCREENSHOT)
 - User explicitly reports renaming the third copied Project A SWB project; supplied screenshot displays `Si_X_C_O`.
 - This label corresponds to intended A1u (Si OFF, C ON) per established A-model matrix. **Renaming alone does not verify school source NCEdge=0, active carbon traps, mesh rebuild, or 5V terminal convergence.** No school code or simulation modified by this assistant.

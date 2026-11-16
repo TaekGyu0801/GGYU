@@ -1,3 +1,8 @@
+## 2026-11-16 Lee approves single A0m donor-restoration test; guarded school edit command provided (PROPOSED / NOT RUN)
+- User explicitly agreed to test A0m and asked if code must change. **Yes: experimental SDE only**. ChatGPT supplied one full copy-paste bash command targeting only `/user/semi/semi437/CMP_A/CMP_WU_Copy_Copy/sde_dvs.cmd`: require exactly one existing Scheme `(define NCEdge 0)` or `0.0`, backup with timestamp, replace that line with `(define NCEdge 5.0e18)`, print resulting definition; abort without modification if guard fails.
+- This is the **A0m (Si retained, carbon off)** control, with n21 `NtSide=0, NCN=0, NCGa=0`; user to rerun SDE/mesh and **one n21 SDevice up to 5V**. Original Wu parent `tmp/myproject/CMP_WU_Copy` and first CMP_A template protected.
+- Actual latest school SDE complete bytes are not available to GPT; no school file edit or solver run confirmed yet. This guard is designed to fail closed rather than assume source. Comparison outcome pending; no proof Si donor removal caused the earlier 2.336V convergence failure.
+
 ## 2026-11-16 Lee directs minimum-check Project A strategy — restore CEdge Si before expensive sweep (USER DECISION / PROPOSED TEST)
 - Worker 이택규 explicitly requested **only essential checks**; avoid prolonged per-iteration/mesh/error-location audits and move to testing promptly.
 - Current Project A first-run A0u source (previously documented/constructed) removes n-GaN donor in newly segmented CEdgeL/R with `NCEdge=0`, while original inner n-GaN nominal Si donor is `ND=5e18 cm^-3`. Therefore Project A is not only an added sidewall geometry; changed local donor profile may affect transport. This is a **plausible hypothesis**, not proven cause of observed n21 2.336V nonconvergence.

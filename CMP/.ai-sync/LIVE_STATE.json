@@ -14,7 +14,7 @@
     "school5VProven": false,
     "next": "Actual school Wu10 successful source audit, all-common numerics/mg before B0-regression/Bnull/B1 and matched-current band/sidewall trap/QW absolute radiative comparison"
   },
-"leeProjectAn21FiveVoltRowRemainingNodes20261116": {
+  "leeProjectAn21FiveVoltRowRemainingNodes20261116": {
     "worker": "이택규",
     "dateKST": "2026-11-16",
     "status": "OBSERVED_N21_LOG_LAST_ROW_5V_OTHER_NODES_USER_REPORTED_RUNNING",
@@ -9913,5 +9913,20 @@
     "rootCause": "UNRESOLVED; source from Wu3.2 PROPOSED candidate not matched to actual school baseline",
     "next": "If still unchanged at 0.3265V stop ONLY experimental n25; compare real school working Wu baseline SDE/SDevice/.par and effective pp25; inspect one failure-location excerpt before minimal isolated repair",
     "schoolSourceEditByGPTThisTurn": false
+  },
+  "juProjectBGPTBnullFailedSWB20261116": {
+    "worker": "주수빈",
+    "status": "OBSERVED_RED_FAILED_N25_SCREENSHOT_FINAL_FATAL_UNRESOLVED",
+    "dateKST": "2026-11-16",
+    "project": "CMP_PROJECTB_1.0.1_GPT_BNULL",
+    "node": "n25",
+    "conditions": {
+      "NtSide": "1e18",
+      "Vstop": 5,
+      "TrapSigmaN": "1e-15"
+    },
+    "evidence": "SWB n25 failed red, SDE n1 done; earlier same run last anode0.3265V and Newton repeated; terminal fatal not yet supplied",
+    "next": "Read last n25_des.out, n25_des.err, n25_des.log final anode; after exact failure inspect parent vs branch SDE and par, avoid blind solver changes",
+    "schoolCodeModifiedByAI": false
   }
 }

@@ -10221,12 +10221,19 @@
   },
   "leeProjectALicenseWaitObserved20261116": {
     "worker": "이택규",
-    "status": "BLOCKER_OBSERVED",
-    "schoolLog": "Waiting for license feature sdevice to become available ...",
-    "displayLimitMessage": "Reached limit of 5 users/licenses to be displayed",
-    "displayLimitIsLicenseCount": false,
-    "solverStartedVerified": false,
-    "sourceCodeErrorObserved": false,
-    "next": "Leave queued run unchanged; check lmstat -a -f sdevice; verify eventual run logs."
+    "status": "BLOCKER_OBSERVED_ROOT_CAUSE_UNRESOLVED",
+    "schoolHost": "ssudisu3",
+    "lmstatDate": "2026-11-16T14:23:00+09:00",
+    "lmstatStatus": "lmgrd is not running: License server machine is down or not responding. (-96,7:2 No such file or directory)",
+    "queriedDefaultServer": "27020@snu.polaris.09",
+    "listedLicenseHosts": [
+      "27020@ryu_synop",
+      "27020@ssudisu3",
+      "27009@ssudisu3"
+    ],
+    "fiveUsersLimitProven": false,
+    "sourceCodeErrorProven": false,
+    "schoolCodeModifiedByAI": false,
+    "next": "Read-only display license variables and explicit lmstat -c for each listed host. Do not alter running jobs."
   }
 }

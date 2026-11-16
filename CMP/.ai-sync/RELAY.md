@@ -1,3 +1,6 @@
+## 2026-11-16 JuSubin Bnull repeat license wait at 13:40:06 (OBSERVED)
+- Bnull n25 school log PID64105 shows SDevice checkout unavailable, waiting for license; no anode rows when read. Earlier PID55438 (13:19) status unknown. This is resource blocker, not verified solver/physics error. Don't submit duplicate jobs; read-only inspect both processes and latest out/log. Wu parent/B1 unchanged by AI. 5V unknown.
+
 ## 2026-11-16 JuSubin Bnull n25 license unavailable at 13:19 KST (OBSERVED; later state UNRESOLVED)
 - School n25_des.out: SDevice process PID 55438, start 13:19:02 KST, `unable to check out 1 sdevice license(s)` / `Currently no/not enough license(s)` / `Waiting for license feature sdevice to become available ...`. At collection, no `anode` rows in `n25_des.log`; physical solve and 5V status NOT demonstrated. `.err` only last reported datexcodes variable-redefined warnings, not proved fatal.
 - Effective pp25 already verified baseline-like Math/Solve, Grid/Parameter and global Mg. This attempt has observed licensing resource contention, NOT a new Newton/MinStep failure; licensing may later clear, check current process and fresh logs before rerun.

@@ -10152,5 +10152,22 @@
     "reached5VVerified": false,
     "priorPidStatusVerified": false,
     "next": "read-only ps on 55438 and 64105, latest n25 output/log; do not create duplicate jobs"
+  },
+  "juSubinB1SchoolCmdParAudit20261116": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-16",
+    "status": "OBSERVED_B1_CMD_UNPATCHED_PAR_DIFFERENT",
+    "schoolBaseline": "/user/semi/semi437/tmp/myproject/CMP_WU_Copy",
+    "schoolB1": "/user/semi/semi437/tmp/myproject/CMP_PROJECTB_1.0.1_GPT_B1",
+    "cmdDiffNoOutput": true,
+    "effectiveMgScope": "Global MagnesiumActiveConcentration IncompleteIonization at source line 29",
+    "damageTrapBlockCount": 22,
+    "parByteEqualToBaseline": false,
+    "parFunctionalDifferenceUnknown": true,
+    "modifiedCmdAtKST": "2026-11-16 13:09:38",
+    "modifiedParAtKST": "2026-11-16 12:15:48",
+    "proposedB1ThreeRegionMgApplied": false,
+    "schoolCodeEditedByAI": false,
+    "next": "Inspect read-only diff -u baseline/B1 sdevice.par to determine physical vs comment differences, then guard-and-backup minimal B1-only CMD Mg-scoping patch and baseline-based PAR where appropriate. Preserve Wu and Bnull; preprocess verify before any run."
   }
 }

@@ -9946,5 +9946,18 @@
     "interpretation": "Confirmed Bnull GPT FIX1 5V solve FAILED; physical/mesh/root cause unproven. Poisson max in left BGuard Barrier0, electron/hole far from guard near QW4/Barrier4.",
     "next": "Compare real successful school Wu parent vs GPT Bnull sde_dvs.cmd and sdevice.par (and pp25/mesh) read-only, verify numerical B0 regression under modified solver/physics, repair one cause, preserve master.",
     "schoolCodeEditedByAI": false
+  },
+  "juProjectBBnullSchoolSDEParDiff20261116": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-16",
+    "status": "OBSERVED_SDE_PAR_DIFF_ANALYZED_BSPLIT_TEST_PROPOSED_SCHOOL_UNRUN",
+    "source": "Actual user terminal diff CMP_WU_Copy vs CMP_PROJECTB_1.0.1_GPT_BNULL",
+    "par": "Numerical parameter blocks unchanged; only comments/whitespace",
+    "sde": "Parent layer widths, contact, doping, original mesh unchanged; intentional nine-layer 20nm/side GaN QW-edge replacement and new mesh collars; expected 51 region not verified on school mesh",
+    "gptBnullLastOutcome": "5V FAILED: final 0.3265V, zero pivot, RHS blowup, MinStep",
+    "hypothesis": "new InGaN/GaN lateral heterointerfaces versus region splitting/mesh/shared altered SDevice; root cause unknown",
+    "proposedIsolation": "Clone Bnull separately as BSPLIT; change both BGuard region material nval pval composition from guardMaterial ... guardXAl to material ... alloy; retain identical SDevice/Mg-scope/solver, SDE geometry and mesh; run only BSPLIT n25; compare with original B0 and Bnull",
+    "schoolSourceEditedThisTurn": false,
+    "schoolSimulationNewThisTurn": false
   }
 }

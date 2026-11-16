@@ -1,5 +1,20 @@
 {
-  "leeProjectAn21FiveVoltRowRemainingNodes20261116": {"worker":"이택규","dateKST":"2026-11-16","status":"OBSERVED_N21_LOG_LAST_ROW_5V_OTHER_NODES_USER_REPORTED_RUNNING","node":"n21","anodeVoltageV":5,"electronCurrentRaw":0.0001695,"holeCurrentRaw":0.002399,"conductionCurrentRaw":0.002568,"experimentalSdeDonorEarlierObserved":"NCEdge=5e18","freshMeshAndPpDopingVerified":false,"solverNormalExitVerified":false,"otherNodesRunning":"USER_REPORTED","distinction":"Under Si donor NCEdge5e18, Carbon ON cases are A1n not A1u; A0u/A1u require separate Si0 rebuilt mesh","next":"Do not edit active project; finish runs; separate project clone for A0u Si0 C0 5V first; A1u Si0 Carbon ON only if A0u succeeds"},
+  "leeProjectAn21FiveVoltRowRemainingNodes20261116": {
+    "worker": "이택규",
+    "dateKST": "2026-11-16",
+    "status": "OBSERVED_N21_LOG_LAST_ROW_5V_OTHER_NODES_USER_REPORTED_RUNNING",
+    "node": "n21",
+    "anodeVoltageV": 5,
+    "electronCurrentRaw": 0.0001695,
+    "holeCurrentRaw": 0.002399,
+    "conductionCurrentRaw": 0.002568,
+    "experimentalSdeDonorEarlierObserved": "NCEdge=5e18",
+    "freshMeshAndPpDopingVerified": false,
+    "solverNormalExitVerified": false,
+    "otherNodesRunning": "USER_REPORTED",
+    "distinction": "Under Si donor NCEdge5e18, Carbon ON cases are A1n not A1u; A0u/A1u require separate Si0 rebuilt mesh",
+    "next": "Do not edit active project; finish runs; separate project clone for A0u Si0 C0 5V first; A1u Si0 Carbon ON only if A0u succeeds"
+  },
   "leeRejectsSolverEscalationClaudeHandoff20261116": {
     "worker": "이택규",
     "dateKST": "2026-11-16",
@@ -9865,20 +9880,23 @@
   },
   "juProjectBGPTFix1BnullSolverScreen20261116": {
     "worker": "주수빈",
-    "whenKST": "2026-11-16 13:24",
-    "status": "OBSERVED_SCHOOL_RUNNING_NEWTON_RETRY_FINAL_JOB_UNRESOLVED",
+    "whenKST": "2026-11-16 13:24 onward",
+    "status": "OBSERVED_SCHOOL_LOG_EARLY_QS_STALL_FINAL_JOB_UNRESOLVED",
     "project": "/user/semi/semi437/tmp/myproject/CMP_PROJECTB_1.0.1_GPT_BNULL",
     "node": "n25",
-    "screenshot": [
-      "#iterations larger than 50",
+    "actualLogLastAnodeV": 0.3265,
+    "lastQt": 0.065291,
+    "observations": [
+      "last 3 anode lines voltage 3.265E-01",
       "Newton didn't converge, trying again with smaller step",
-      "t=0.065284, step=2.3903e-06",
-      "large Newton iteration errors"
+      "iterations larger than 50",
+      "step sizes 6.9459e-07 down to 5.3107e-08",
+      "no final MinStep or process exit observed"
     ],
-    "inferredVoltageIfVstop5": 0.32642,
-    "confirmedFiveVoltCompletion": false,
-    "datexcodesWarningsNotProvenFatal": true,
-    "next": "Read last anode from n25_des.log and final out steps/tail; check solver progress before any targeted source change; never infer root cause or fix by increasing iterations only",
-    "schoolCodeModifiedByChatGPT": false
+    "targetVoltageV": 5,
+    "confirmedReachedTarget": false,
+    "rootCause": "UNRESOLVED; source from Wu3.2 PROPOSED candidate not matched to actual school baseline",
+    "next": "If still unchanged at 0.3265V stop ONLY experimental n25; compare real school working Wu baseline SDE/SDevice/.par and effective pp25; inspect one failure-location excerpt before minimal isolated repair",
+    "schoolSourceEditByGPTThisTurn": false
   }
 }

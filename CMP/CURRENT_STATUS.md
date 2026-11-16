@@ -1,3 +1,7 @@
+## 2026-11-16 Project A n21 Wu parent solver comparison, mesh metadata OBSERVED
+- Under authorized `semi437`, school Wu baseline effective n21 SDevice solver options (Grid n1_msh.tdr; Digits5; ErrRef e/h1e8; Iterations35; NotDamped100; initial Coupled150; QS InitialStep1e-4 MinStep1e-10 MaxStep.02) equal to the Project A pp21 settings in displayed grep. Original parent mesh is 984164 bytes (Nov3), copied A mesh 1114636 bytes (Nov13), difference 130472 bytes ~13.26%. File size alone not mesh resolution or physical validity.
+- Last failed n21 voltage remains 2.336V; root cause not established. Failed-location `grep` only printed C-norm table headers, not the adjacent data rows. Need extract lines following last table header before any mesh/solver changes. No new school TCAD run or edit confirmed.
+
 ## 2026-11-16 Project A n21 effective Grid and numerical controls read; solver cause still unresolved
 - Actual editable school `pp21_des.cmd` confirms `Grid="n1_msh.tdr"`, `Digits=5`, `ErrRef(Electron/Hole)=1e8`, `Iterations=35`, `NotDamped=100`, initial two `Coupled(Iterations=150)`, and QS `InitialStep=1e-4 MinStep=1e-10 MaxStep=.02`. Prior last anode 2.336V / 5V target, Newton>35, MinStep 5.4037e-11. No confirmation updated mesh vs source, local numerical error position, or Baseline physics equivalence.
 - The SDevice preprocessed deck has a resolved grid path; this n21 failure is nonlinear convergence, not a displayed missing-Grid syntax fatal. Pending next baseline comparison, keep geometry sweep/coarsening unrun.

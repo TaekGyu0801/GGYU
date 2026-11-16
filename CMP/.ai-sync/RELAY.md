@@ -1,3 +1,8 @@
+## 2026-11-16 JuSubin B1 PAR comment-only confirmed; CMD-only safeguarded patch prepared (PROPOSED / MOCK PASS)
+- Actual school B1 vs Wu parent `sdevice.par` unified diff shows **comment and whitespace changes only**; active X/Y LatticeParameters, GaN Mg ionization E0=.15 alpha0 g4 Xsec1e-12, Thermionic Formula1, PooleFrenkel epsPF9.5,9.5 all identical. Therefore **do not overwrite B1 PAR** merely to force a byte match.
+- Actual B1 `sdevice_des.cmd` remains identical to Wu baseline, global Mg ionization at line29 (previous read-only diff), 22 Trap blocks. Prepared direct tcsh-compatible one-line Python command for user to run on school B1 **only**: read parent+target, require initial byte-identical CMD, one global Mg declaration, 22 traps, exact pGaN regions; backup B1 CMD; remove global Mg, add same Mg to Clean_pGaN/DmgL_pGaN/DmgR_pGaN, preserve entire remainder including solver, verify 3 Mg/22 traps. **Mock fixture PASS**; school CMD edit NOT YET OBSERVED; no 5V claimed.
+- Bnull/Wu parent and current B1 PAR protected. Need B1 preprocess and verify pp25 CMD + params; material interpolation and any new school error remain unverified. Matched scoped-Mg Bnull/B0 regression required for clean B1-Bnull material-effect attribution.
+
 ## 2026-11-16 JuSubin B1 unpatched source handoff (OBSERVED)
 - Actual school CMD diff against working Wu Baseline empty, global MagnesiumActiveConcentration ionization at line29, 22 Traps intact. B1 PAR `cmp -s` differs; significance unknown until diff. Earlier generator was PROPOSED, not applied on school. Next: read-only PAR diff; preserve Bnull/Wu, backup B1 and patch only after inspecting material-specific parameter differences. No school code edit by AI.
 

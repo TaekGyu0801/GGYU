@@ -10169,5 +10169,18 @@
     "proposedB1ThreeRegionMgApplied": false,
     "schoolCodeEditedByAI": false,
     "next": "Inspect read-only diff -u baseline/B1 sdevice.par to determine physical vs comment differences, then guard-and-backup minimal B1-only CMD Mg-scoping patch and baseline-based PAR where appropriate. Preserve Wu and Bnull; preprocess verify before any run."
+  },
+  "juSubinB1ParCommentOnlyAndCmdPatchProposed20261116": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-16",
+    "status": "OBSERVED_PAR_COMMENT_ONLY_AND_UNMODIFIED_B1_CMD_PROPOSED_GUARDED_PATCH_MOCK_TEST_PASS",
+    "schoolParDiff": "B1 sdevice.par differs from Wu baseline in comments/whitespace only; active LatticeParameters, GaN Mg ionization, Thermionic, PooleFrenkel unchanged",
+    "parOverwriteNeeded": false,
+    "cmdObserved": "B1 sdevice_des.cmd still baseline-identical, global Mg incomplete ionization, 22 traps",
+    "proposedPatch": "Back up B1 CMD, global Mg -> region-specific Mg for Clean_pGaN,DmgL_pGaN,DmgR_pGaN only; verify original Wu baseline bytes and 22 trap blocks; untouched original solver and B1 PAR",
+    "check": "Python one-liner syntax/representative fixture PASS only, not school execution",
+    "sourceModifiedOnSchoolByAI": false,
+    "postPatchVerification": false,
+    "next": "User runs B1 CMD-only patch in school shell, returns B1 CMD grep Mg diff and pp25 after SWB Preprocess; future 5V pending license"
   }
 }

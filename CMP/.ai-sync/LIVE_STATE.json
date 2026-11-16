@@ -10025,5 +10025,29 @@
     "next": "SWB preprocess n25, verify pp25 correct Grid, global Mg, bare Coupled and rerun n25 Vstop5 NtSide1e18 only",
     "B1": "No global Mg rollback for AlGaN",
     "schoolModifiedByAI": false
+  },
+  "leeProjectACedgeSourceObserved20261116": {
+    "worker": "이택규",
+    "status": "OBSERVED_READ_ONLY_SDE_SOURCE__RUNNING_MESH_NOT_PROVEN",
+    "schoolSource": "/user/semi/semi437/CMP_A/CMP_WU_Copy_Copy/sde_dvs.cmd",
+    "wC_um": 0.2,
+    "dC_um": 0.2,
+    "lateralWidth_nm": 200,
+    "verticalDepth_nm": 200,
+    "NCEdge_cm3": 5000000000000000000,
+    "geometryExpressions": [
+      "xc=xa+dC",
+      "y1=Wdmg+wC",
+      "y2=Wm-Wdmg-wC"
+    ],
+    "edgeRegions": [
+      "CEdgeL_nGaN",
+      "CEdgeR_nGaN"
+    ],
+    "meshRefinementName": "Ref.CEdge",
+    "meshNumericalSettingsVerified": false,
+    "note": "Line29 old Si-OFF comment; actual define line32 Si5e18. Fresh mesh/provenance and node normal exit not confirmed. Preserve running nodes.",
+    "next": "Read-only sed lines 165-183 for mesh refinement numeric parameters, then independent project geometry sweep after ongoing nodes finish",
+    "schoolEditedByAI": false
   }
 }

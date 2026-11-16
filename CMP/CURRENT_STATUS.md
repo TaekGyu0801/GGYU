@@ -1,3 +1,8 @@
+## 2026-11-16 Lee Project A SDevice failure voltage narrowed to 2.336 V (OBSERVED)
+- Actual copied-school Project A n21 final three `anode` rows at 2.336V / raw current 2.624e-12; `t=0.467166` out of 5V goal; Newton >35 iterations and MinStep5.4037e-11. **Not a valid 5 V A0u/control result.** Remaining seven red SWB nodes haven't had their own fatal logs inspected.
+- The attempt to print solver settings failed only because pasted bash command was duplicated without a separator (`tail: 12bash: invalid number of lines`). `pp21_des.cmd` effective solver/Grid not yet verified. Actual cause of numerical stiffness still unconfirmed; do not conflate SDE mesh generation with physical result validation.
+- Next get preprocessed effective Grid/Math/Solve and failure location, compare with working Wu baseline, fix one n21 case before pursuing coarse-mesh parameter screening.
+
 ## 2026-11-16 Lee Project A latest evidence — n21 SDevice nonlinear solve fails (OBSERVED, 5V NOT CONFIRMED)
 - User supplied actual experiment `CMP_A/CMP_WU_Copy_Copy/n21_des.out` from Nov 13 15:52:25: Newton exceeded 35 iterations; Quasistationary MinStep 5.4037e-11; TDR written and program exited. This does not mean 5V was attained. Same school screenshot marks eight SDevice nodes red, but per-node fatal of other seven remains unverified.
 - Screenshot n21 variables NtSide0/NCN0/NCGa0: failure also occurs without activated parameterized damaged/carbon traps. It is a numerical failure in this case, with physical or discretization source as yet unknown. n21_des.err tail side-material DOS interpolation is not proven fatal. Previous tP unbound SDE log appears to predate/stand apart from n21 SDevice run; actual SDE fix/source and mesh provenance must still be read.

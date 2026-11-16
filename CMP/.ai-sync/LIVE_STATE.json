@@ -10009,5 +10009,21 @@
     "next": "Preserve active running project; read-only 5V/exit review; prepare independent Si-removed copy and width/depth coarse-to-fine mesh sweep after current 8 complete",
     "schoolCodeChanged": false,
     "schoolNewRunByGPT": false
+  },
+  "juProjectBBnullCurrentSourceRestoredSchool20261116": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-16",
+    "status": "OBSERVED_LIVE_SOURCE_BASELINE_SOLVER_AND_GLOBAL_MG_RESTORED_REPROCESS_UNRUN",
+    "project": "CMP_PROJECTB_1.0.1_GPT_BNULL",
+    "actualSource": "sdevice_des.cmd",
+    "solver": "Math Iterations35 NotDamped100 QS bare Coupled { Poisson Electron Hole }",
+    "MgIncompleteIonization": "one global declaration at line29",
+    "backupFiles": "none matched sdevice_des.cmd.bak*",
+    "guardPatch": "STOP no modification",
+    "whoWhenAppliedOriginalBaseline": "UNKNOWN",
+    "previousRun": "0.3265V failed under former modified solver; no current-source run evidence",
+    "next": "SWB preprocess n25, verify pp25 correct Grid, global Mg, bare Coupled and rerun n25 Vstop5 NtSide1e18 only",
+    "B1": "No global Mg rollback for AlGaN",
+    "schoolModifiedByAI": false
   }
 }

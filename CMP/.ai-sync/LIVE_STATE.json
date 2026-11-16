@@ -1,4 +1,20 @@
 {
+  "juSubinBnullSdeviceLicenseWait20261116": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-16",
+    "status": "OBSERVED_LICENSE_CHECKOUT_UNAVAILABLE_AS_OF_13_19_KST_CURRENT_STATE_UNRESOLVED",
+    "schoolProject": "/user/semi/semi437/tmp/myproject/CMP_PROJECTB_1.0.1_GPT_BNULL",
+    "node": "n25",
+    "startedAtKST": "2026-11-16 13:19:02",
+    "pid": 55438,
+    "log": "unable to check out 1 sdevice license(s); Waiting for license feature sdevice to become available",
+    "anodeRowsAtObservation": 0,
+    "solverNumericalFailureObserved": false,
+    "reached5VVerified": false,
+    "sourceAndPp": "Wu baseline-like preprocessed QS bare Coupled/global Mg/Grid n1_msh.tdr, earlier confirmed",
+    "schoolCodeEditedByAI": false,
+    "next": "Read-only ps PID55438 and latest n25_des.out/n25_des.log/.err; avoid duplicate run while license waiting; if license acquired then assess last anode5V and exit"
+  },
   "juSubinProjectBLiteratureParameterGate20261116": {
     "worker": "주수빈",
     "dateKST": "2026-11-16",

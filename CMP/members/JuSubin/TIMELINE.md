@@ -1,3 +1,8 @@
+## 2026-11-16 JuSubin Bnull effective preprocessed Math/Solve verified (OBSERVED SCHOOL pp25)
+- Actual school read-only output `CMP_PROJECTB_1.0.1_GPT_BNULL/pp25_des.cmd` lines221-239: `Math { Extrapolate Derivatives RelErrControl Digits=5 ErrRef(Electron)=1e8 ErrRef(Hole)=1e8 Iterations=35 NotDamped=100 }`; `Solve`: Poisson Coupled150, P/E/H Coupled150, QS `InitialStep=1e-4 MinStep=1e-10 MaxStep=0.02 Increment=1.25 Decrement=2.0 Goal(anode)=5`, inner bare `Coupled { Poisson Electron Hole }`.
+- Earlier actual school pp25 lines12,16,29 verified Grid=`n1_msh.tdr`, Parameter=`pp25_des.par`, global Mg IncompleteIonization single declaration. Thus original Wu-style solver appears in **effective preprocessed** deck, not just source. This is a PP configuration check, NOT a Sentaurus 5V success or verified active NtSide macro.
+- NEXT (USER TO EXECUTE ON SCHOOL): run only copied GPT Bnull `n25` with intended NtSide=1e18 / Vstop5; preserve existing SDE/mesh, parent Wu, B1. Check actual SWB node parameter values first, and afterward obtain n25 final log anode voltage, `n25_des.out` final convergence, n25_des.err; 5V success UNRESOLVED. No school AI code edits or runs.
+
 ## 2026-11-16 JuSubin Bnull pp25 Grid/Mg and timestamps verified; Solver extraction pending (OBSERVED)
 - Actual school terminal read-only `pp25_des.cmd` output: line12 `Grid="n1_msh.tdr"`, line16 `Parameter="pp25_des.par"`, line29 a **single global** `IncompleteIonization( Dopants="MagnesiumActiveConcentration" )`.
 - School timestamps KST: `sdevice_des.cmd` 13:06:18, `pp25_des.cmd` 13:19:01, `n1_msh.tdr` 12:13:20. PP newer than source and mesh, but timestamps alone do not certify all current solver options or successful 5V run.

@@ -1,3 +1,8 @@
+## 2026-11-16 Project B paper-to-TCAD parameter provenance gate (JuSubin; PROPOSED)
+- 먼저 `CMP/PROJECT_B_PARAMETER_PROVENANCE_20261116.md` 참조. 2026-11-08 approved B shape 유지; Wu2023 학교 성공 Baseline의 실제 SDE/SDevice/.par/pp/physics/solver가 공통 source. GitHub Wu3.2 PROPOSED나 nanowire Wu2022의 whole param set을 실제 성공 baseline으로 대체하지 말 것.
+- 기존 B0/Bnull/B1을 동일 numerical/physical decks로 비교. pGaN Mg ionization scope, QS damping/Iterations 등 수정이 필요하면 동일 변경을 적용한 B0-regression이 기존 B0와 같은 결과인지 우선 검증. Bnull↔B1은 20nm guard 재료 및 xAl0.15만 의도된 차이로 남기기.
+- 학교 source audit/SDE/mesh/pp25/n25 5V 뒤 동일 terminal current에서 absolute InGaN QW radiative, original 5nm Dmg net trap loss, lateral Jn/Jp, EC/EV, field, Vf 평가. xAl15%와 lateral20nm는 문헌에서 검증된 planar 최적값 아님. 이 항목은 기존 Claude/GPT 병렬 작업 지시를 대체하지 않고 검증 gate를 명확히 함.
+
 ## 2026-11-16 JuSubin GPT Bnull FIX1: verify actual school Baseline before another solver change
 - Direct school `n25_des.log`: last 3 anode voltages 0.3265V; `n25_des.out`: Newton50 failures at t~0.065291 with reduced QS step 5.3107e-08, no 5V and no final MinStep yet shown. If output still locked around 0.3265V, stop only copied Bnull SDevice to save runtime. **No further blind Iterations/MinStep escalation**.
 - Highest priority: read-only compare actually successful Wu school `CMP_WU_Copy` with GPT Bnull copied `sde_dvs.cmd`, `sdevice_des.cmd`, `sdevice.par` plus effective pp25 (physics/doping/contact/mesh); get last C-norm/spatial Newton location. Determine single physical/input mismatch, then isolate one corrected code change and rerun n25. Maintain B1/Claude versions separate. This is observed continuing numerical stall, no confirmed final solver exit.

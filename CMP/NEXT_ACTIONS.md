@@ -1,3 +1,8 @@
+## 2026-11-16 Lee: execute guarded A0m SDE one-line donor change; run n21 only (APPROVED TEST, SCHOOL UNRUN)
+- User agreed to minimal control run. Guarded terminal command **provided but not executed by GPT** for only editable `CMP_A/CMP_WU_Copy_Copy/sde_dvs.cmd`: if unique `(define NCEdge 0[.0])`, preserve timestamped backup and replace with `(define NCEdge 5.0e18)`. No changes to SDevice, carbon trap or solver. If guard says STOP request exact live `grep` result before any edits.
+- User to rerun SDE to regenerate mesh, then only n21 SDevice with NtSide0/NCN0/NCGa0, Vstop5. Verify final anode at 5V and actual successful termination; compare against A0u stalled2.336V. Do not rerun all eight nodes yet.
+- Actual school edit, new SDE output and n21 success NOT VERIFIED. Broad mesh coarse→fine screening remains next phase after control behavior clarified.
+
 ## 2026-11-16 Lee Project A priority changed by user: essential tests only, no extended C-norm forensics
 - User requested rapid, minimal checks. Instead of continuing C-norm/mesh microdiagnostics, test a controlled A0m reference on copied experimental model. Previously recorded A0u `NCEdge=0` differs from original Si-doped Clean_nGaN `ND=5e18`; CEdge donor removal, not just lateral geometry, is a plausible reason n21 (NtSide=NCN=NCGa=0) stalls at 2.336V. **Not proven.**
 - NEXT TEST **PROPOSED/UNRUN**: back up experimental SDE and restore `NCEdge=5e18` only in inner CEdge segments (Carbon OFF; NtSide=0 n21), SDE→mesh then one n21 to 5V. Compare to previous A0u failure and parent Wu 5V reference. Do not overwrite original Wu parent or reusable CMP_A template. Verify run target/last voltage and numerical success only; no broad 8-case rerun.

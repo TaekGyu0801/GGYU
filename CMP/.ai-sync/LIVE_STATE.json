@@ -10235,5 +10235,17 @@
     "sourceCodeErrorProven": false,
     "schoolCodeModifiedByAI": false,
     "next": "Read-only display license variables and explicit lmstat -c for each listed host. Do not alter running jobs."
+  },
+  "leeProjectASVisualN73Observed20261116": {
+    "status": "BLOCKER_OBSERVED_X_DISPLAY_MISSING",
+    "worker": "이택규",
+    "school": "/user/semi/semi437/CMP_A/CMP_WU_Copy_Copy_Copy",
+    "errorFile": "n73_vis.err",
+    "errorText": "ERROR : No Display available.",
+    "wrapperError": "n73_local.err: Job failed, child process exited abnormally, gjob exits with status 1",
+    "deviceCompletion": "USER_REPORTED_ONLY",
+    "x11OrLaunchModeVerified": false,
+    "schoolCodeEditedByAI": false,
+    "next": "Check actual SWB job invocation and DISPLAY. Use appropriate X11 forwarding for GUI or svisual -b/-bx for batch based on output needs; re-run only SVisual."
   }
 }

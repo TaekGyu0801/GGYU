@@ -10490,5 +10490,70 @@
     "schoolCodeModified": false,
     "schoolRunPerformed": false,
     "uncertainty": "Actual successful school SDE/SDevice deck not available in GitHub; T-2022.03 official manuals privately uploaded elsewhere, not read here"
+  },
+  "leeA1uSDECurrentUserCode20261117": {
+    "worker": "이택규",
+    "dateKST": "2026-11-17",
+    "status": "USER_SUPPLIED_SDE_SOURCE_PROPOSED_CHANGE_NOT_RUN",
+    "file": "Si_X_C_O_WC/sde_dvs.cmd",
+    "header": "Si_X_C_O | 200x200nm | PROPOSED, UNRUN; reconstructed from GitHub candidate; not byte identical to successful school deck",
+    "actualDefinitions": {
+      "wC_um": 0.2,
+      "dC_um": 0.2,
+      "NCEdge_cm3": 0,
+      "Wdmg_um": 0.005,
+      "Ref_CEdge_max_xy_um": 0.01,
+      "Ref_CEdge_min_xy_um": 0.002
+    },
+    "codeObservation": "wC and dC already control both CEdge geometry and Win.CEdge mesh windows. No @wC@/@dC@ macro in actual pasted SDE source.",
+    "proposedMinimalModification": [
+      "(define wC @wC@)",
+      "(define dC @dC@)"
+    ],
+    "proposedSWBValuesUm": {
+      "wC": [
+        0.05,
+        0.1,
+        0.2,
+        0.4
+      ],
+      "dC": [
+        0.1,
+        0.2,
+        0.4
+      ]
+    },
+    "scopedPilotNm": [
+      [
+        200,
+        200
+      ],
+      [
+        50,
+        200
+      ],
+      [
+        100,
+        200
+      ],
+      [
+        400,
+        200
+      ],
+      [
+        200,
+        100
+      ],
+      [
+        200,
+        400
+      ]
+    ],
+    "caveats": [
+      "12 crossing not automatically approved",
+      "verify pp effective substitutions and school CEdge trap SDevice separately",
+      "SiOFF and carbon trap area both change with wC/dC",
+      "no new school run or edit by ChatGPT"
+    ]
   }
 }

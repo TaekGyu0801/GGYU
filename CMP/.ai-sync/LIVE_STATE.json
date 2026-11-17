@@ -10592,5 +10592,16 @@
     "blocker": "Newton convergence fails in two different nodes; effective PP, last voltage and max-error location unknown",
     "next": "Read node-specific log/out/err, preprocessed pp21_des.cmd and pp25_des.cmd, SWB NtSide/Vstop; no blind solver/physics edits",
     "schoolEditPerformed": false
+  },
+  "latest_observation_20261117_lee_wcdc_parser": {
+    "status": "OBSERVED_ERROR_ROOT_CAUSE_UNRESOLVED",
+    "worker": "이택규",
+    "timestamp_kst": "2026-11-17 15:10",
+    "project": "/user/semi/semi437/CMP_A/Si_X_C_O_WC",
+    "node": "n72_des.out",
+    "evidence": "Error in pp72_des.cmd at line 1, offending input: eDensity; syntax error !",
+    "interpretation": "SDevice parser error before solver. Missing Plot wrapper or truncated input suspected only; not confirmed. Other split nodes user-reported failures not diagnosed.",
+    "next": "Compare school sdevice_des.cmd vs pp72_des.cmd first 45 lines, minimal fix if confirmed, one-node retest; no mass rerun.",
+    "school_edits": false
   }
 }

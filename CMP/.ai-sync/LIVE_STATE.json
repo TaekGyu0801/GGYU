@@ -10436,5 +10436,59 @@
       "no new school edits or runs"
     ],
     "next": "Inspect live deck + results and confirm revised sweep before any new run; only then configure independent SWB split clone, fix outputs and matched C OFF numerical control"
+  },
+  "leeCorrectiveTwoAxisAudit20261117": {
+    "worker": "이택규",
+    "dateKST": "2026-11-17",
+    "status": "GPT_CORRECTIVE_AUDIT_PROPOSED_NO_SCHOOL_RUN",
+    "conclusion": "Prior GPT immediate 12-case wCxdC split run instruction withdrawn. Need inspect actual school source and output before new run.",
+    "officialSources": [
+      "CMP/PROJECT_AB_WU10_DESIGN_FREEZE_20261108.md",
+      "CMP/PROJECT_NAMING_CONVENTION.md",
+      "CMP/references/TCAD_REFERENCE_INDEX.md"
+    ],
+    "externalSources": [
+      "https://www.sciencedirect.com/science/article/pii/S2773012323000390",
+      "https://www.nature.com/articles/s41598-023-41678-1",
+      "https://web.stanford.edu/class/ee212/SWB/swb_d.html"
+    ],
+    "criticalConfound": "A1u has SiOFF C ON. wC and dC sweep changes Si removal volume and carbon trap volume together, so cannot claim carbon-only width/depth effect without matched SiOFF C OFF A0u",
+    "knownSchool": "Si_X_C_O n72 historically reached 5V with NtSide1e18 and carbon traps in preprocessed settings; 3 current named projects logs not audited",
+    "proposedPilotNm": [
+      [
+        200,
+        200
+      ],
+      [
+        50,
+        200
+      ],
+      [
+        100,
+        200
+      ],
+      [
+        400,
+        200
+      ],
+      [
+        200,
+        100
+      ],
+      [
+        200,
+        400
+      ]
+    ],
+    "fullFactorial": "w=[50,100,200,400], d=[100,200,400] is OPTIONAL UNCONFIRMED, not automatically authorized 12 jobs",
+    "holdReason": [
+      "real school wC dC macro/mesh not inspected",
+      "low J TDR/current plot outputs not inspected",
+      "A0m and A1m Dmg ON 5V unverified"
+    ],
+    "next": "Read-only school source/preprocessed/log inspection; verify output for same J and correct AreaFactor; only then independent copy SWB split pilot",
+    "schoolCodeModified": false,
+    "schoolRunPerformed": false,
+    "uncertainty": "Actual successful school SDE/SDevice deck not available in GitHub; T-2022.03 official manuals privately uploaded elsewhere, not read here"
   }
 }

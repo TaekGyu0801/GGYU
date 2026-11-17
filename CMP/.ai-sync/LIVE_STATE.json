@@ -10594,18 +10594,21 @@
     "schoolEditPerformed": false
   },
   "latest_observation_20261117_lee_wcdc_parser": {
-    "status": "OBSERVED_RESTORATION_CANDIDATE_CREATED_SCHOOL_UNRUN",
+    "status": "COMPLETE_328_LINE_RECONSTRUCTION_PROPOSED_SCHOOL_UNRUN",
     "worker": "이택규",
     "timestamp_kst": "2026-11-17 15:10",
     "project": "/user/semi/semi437/CMP_A/Si_X_C_O_WC",
     "node": "n72_des.out",
     "evidence": "pp72_des.cmd first line offending eDensity; user's pasted SDevice source begins eDensity and contains CurrentPlot Math Solve but omits File Electrode Physics and Plot opener",
     "interpretation": "SDevice parser error before solver. Missing Plot wrapper or truncated input suspected only; not confirmed. Other split nodes user-reported failures not diagnosed.",
-    "next": "Guarded backup/deploy to active sdevice_des.cmd; single-node pilot; inspect pp parse and other potential errors. Do not run all variants.",
+    "next": "SWB source backup, check seven macros + region names; one split node parse/simulation then expand",
     "school_edits": "Only new candidate file; active original not replaced",
     "root_cause": "Input preprocessing missing front section is established for n72; original school full-file/version cause still to be verified; other split node log details not supplied",
     "candidate_path": "/user/semi/semi437/CMP_A/Si_X_C_O_WC/sdevice_des_RESTORE_CANDIDATE.cmd",
     "candidate_lines": 335,
-    "blocks": "CEdgeL/R Physics 204/214, Plot 223, CurrentPlot 238, Math 309, Solve 319, intermediate Plot 332"
+    "blocks": "CEdgeL/R Physics 204/214, Plot 223, CurrentPlot 238, Math 309, Solve 319, intermediate Plot 332",
+    "output_candidate": "Si_X_C_O_WC_sdevice_des_FULL_PROPOSED.cmd",
+    "source_fidelity": "Reconstructed from GitHub proposed Wu 3.2.0 + archival Project A Carbon physics + pasted output tail; not exact school 335-line candidate",
+    "static_check": "22 Damage region physics, 2 CEdge physics, 60 integrals, braces 38/38, parens 149/149"
   }
 }

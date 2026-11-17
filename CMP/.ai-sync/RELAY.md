@@ -1,3 +1,8 @@
+## 2026-11-17 15:10 KST — Lee A wC/dC SDevice n72 error handoff (OBSERVED/UNRESOLVED)
+- Worker 이택규, ChatGPT. School project `/user/semi/semi437/CMP_A/Si_X_C_O_WC` (not locally accessible from GitHub). Screenshot `n72_des.out` Sentaurus T-2022.03: `pp72_des.cmd` line 1 `eDensity` syntax error. No Newton iteration; parser fails at start.
+- Hypothesis only: SDevice input begins in middle of Plot variable list or `Plot {` missing; cannot confirm without actual `pp72_des.cmd` and `sdevice_des.cmd` first ~45 lines. Earlier SDE coarse + current-plot code proposals were school UNRUN; preserve working Wu baseline, don't patch physics/mesh to fix this syntax error.
+- First check via one-line `bash -c` read-only first 45 lines of both files. Compare other failed nodes if this one differs; after fixing only one pilot run. None of school's sources changed by GPT.
+
 ## 2026-11-17 JuSubin Project B confirmed terminal Newton failures — B1 n21 vs Bnull n25 (HANDOFF)
 - Worker: 주수빈 / AI: ChatGPT / status: OBSERVED screenshot, causal diagnosis UNRESOLVED.
 - School paths: `/user/semi/semi437/tmp/myproject/CMP_PROJECTB_1.0.1_GPT_B1/n21_des.out` and `.../CMP_PROJECTB_1.0.1_GPT_BNULL/n25_des.out`; school SWB T-2022.03 screenshots, not complete files.

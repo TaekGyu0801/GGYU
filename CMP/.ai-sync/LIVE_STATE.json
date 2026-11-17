@@ -10363,5 +10363,29 @@
     "fullDeckProvenSchoolIdentical": false,
     "codeEditedOnSchool": false,
     "school5VNewRuns": false
+  },
+  "leeProjectAWidthSplitClaudeReview20261117": {
+    "worker": "이택규",
+    "dateKST": "2026-11-17",
+    "status": "USER_SELECTED_PROPOSED_SPLIT_NOT_RUN",
+    "screenshotProjects": [
+      "CMP_WU_Copy",
+      "Si_O_C_X",
+      "Si_X_C_O",
+      "Si_O_C_O_Copy"
+    ],
+    "userReported": "Previously running jobs now finished; exact current 5V logs and effective per-model conditions not rechecked",
+    "verifiedPreviousSchool": "Si_X_C_O/n72 5V SDevice finished; NCEdge=0 SOURCE, pp Damage NtSide=1e18, Carbon C_N6e17 C_Ga3e17",
+    "unverified": [
+      "Current A0m/A1m damaged 5V node logs",
+      "Si_O_C_O_Copy actual donor and Carbon source",
+      "SWB wC macro link and node pp",
+      "Mesh resolved at 10nm"
+    ],
+    "next": "Clone successful Si_X_C_O into independent SWB project; after confirming current SDE wC parameter linkage, SWB Split wC [0.010,0.020,0.050,0.100,0.200] um; keep dC0.200um NCEdge0 NCN6e17 NCGa3e17 NtSide1e18 Vstop5; mesh and 5V each new point; extract PLT/TDR",
+    "controlNote": "Current 3 cases do not isolate Carbon-only effect at Si OFF; A0u could be needed",
+    "schoolCodeChanged": false,
+    "schoolSimulationRun": false,
+    "independentReview": "Full Claude verification prompt prepared in chat, not Claude-verified"
   }
 }

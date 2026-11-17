@@ -10567,5 +10567,30 @@
     "unchanged": "physics,22Damage traps,2CEdge C traps, original Plot, Math/Solve numerics",
     "note": "Local balance checks only; T-2022.03 school preprocessing/run unavailable; same-V TDR != same-J TDR; all results PROPOSED",
     "next": "Paste into separate Si_X_C_O_WC clone only, first PP and 200nm regression; check currentplot variables/output file before sweep"
+  },
+  "juSubinB1BnullMinStepScreenshot20261117": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-17",
+    "status": "OBSERVED_TERMINAL_NEWTON_MINSTEP_BOTH_CAUSE_UNRESOLVED",
+    "evidence": "User-provided screenshots of school SWB T-2022.03 Output windows",
+    "B1": {
+      "project": "CMP_PROJECTB_1.0.1_GPT_B1",
+      "node": "n21",
+      "message": "Newton didn't converge; Step-size less than MinStep",
+      "lastStepSize": 6.4428e-11,
+      "finishedAtKST": "2026-11-16 22:26:02"
+    },
+    "Bnull": {
+      "project": "CMP_PROJECTB_1.0.1_GPT_BNULL",
+      "node": "n25",
+      "message": "Newton didn't converge; Step-size less than MinStep",
+      "lastStepSize": 7.235e-11,
+      "finishedAtKST": "2026-11-16 19:39:51"
+    },
+    "reached5V": false,
+    "reached5VQualification": "No screenshot evidence of 5V; failure before completing requested solve; effective Vstop for nodes still unverified",
+    "blocker": "Newton convergence fails in two different nodes; effective PP, last voltage and max-error location unknown",
+    "next": "Read node-specific log/out/err, preprocessed pp21_des.cmd and pp25_des.cmd, SWB NtSide/Vstop; no blind solver/physics edits",
+    "schoolEditPerformed": false
   }
 }

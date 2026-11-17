@@ -1,3 +1,6 @@
+## 2026-11-17 Lee immediate Project A SDevice n72 syntax preflight (OBSERVED BLOCKER / NEXT READ ONLY)
+- n72 `pp72_des.cmd` line 1 rejects `eDensity`; inspect first 45 lines of **both** school `sdevice_des.cmd` and `pp72_des.cmd` in `CMP_A/Si_X_C_O_WC`. If first line is `eDensity`, establish missing wrapper / truncation from actual source first, preserve backup, then minimal repair. Do not rerun full wC/dC sweep until a one-node parser check passes. No school modifications by ChatGPT.
+
 ## 2026-11-17 Project B B1/Bnull terminal failure diagnostic (NEXT / NOT YET EXECUTED)
 - Both B1 n21 and Bnull n25 SWB output screenshots confirm Newton `Step-size less than MinStep`. Inspect node-specific latest log/out/err and ppN commands, SWB NtSide/Vstop mapping and last anode V (not yet observed); compare effective initial and QS Solve blocks, B1 region-local Mg, Bnull parent physics, and material/mesh. Only after locating failure make reversible one-factor fix in copied project; no multiple reruns or wholesale solver edits. See JuSubin TIMELINE.
 

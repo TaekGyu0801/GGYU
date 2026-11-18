@@ -10612,5 +10612,111 @@
     "static_check": "22 Damage region physics, 2 CEdge physics, 60 integrals, braces 38/38, parens 149/149",
     "active_source": "/user/semi/semi437/CMP_A/Si_X_C_O_WC/sdevice_des.cmd",
     "school_observation": "User terminal APPLIED SUCCESS from cp/cmp and head shows File block. Original timestamp backup created."
+  },
+  "leeProjectAWcDcSweepResult20261118": {
+    "worker": "이택규",
+    "dateKST": "2026-11-18",
+    "status": "OBSERVED_8_5V_CURVE_TRACE_FINISHED_4_MINSTEP",
+    "schoolProject": "/user/semi/semi437/CMP_A/Si_X_C_O_WC",
+    "fixedScreenshotParameters": {
+      "NtSide": "1e18",
+      "Vstop": "5",
+      "TrapEt": "0.75",
+      "TrapSigmaN": "1e-15",
+      "TrapSigmaP": "1e-15",
+      "NCN": "6e17",
+      "NCGa": "3e17"
+    },
+    "nodes": [
+      [
+        72,
+        0.05,
+        0.1,
+        "5V finished",
+        "2.566E-03"
+      ],
+      [
+        121,
+        0.05,
+        0.2,
+        "5V finished",
+        "2.566E-03"
+      ],
+      [
+        165,
+        0.05,
+        0.4,
+        "5V finished",
+        "2.566E-03"
+      ],
+      [
+        84,
+        0.1,
+        0.1,
+        "5V finished",
+        "2.566E-03"
+      ],
+      [
+        132,
+        0.1,
+        0.2,
+        "5V finished",
+        "2.566E-03"
+      ],
+      [
+        176,
+        0.1,
+        0.4,
+        "5V finished",
+        "2.565E-03"
+      ],
+      [
+        95,
+        0.2,
+        0.1,
+        "5V finished",
+        "2.565E-03"
+      ],
+      [
+        143,
+        0.2,
+        0.2,
+        "MinStep last anode 2.545V",
+        null
+      ],
+      [
+        187,
+        0.2,
+        0.4,
+        "MinStep last anode 2.499V",
+        null
+      ],
+      [
+        106,
+        0.4,
+        0.1,
+        "MinStep last anode 2.319V",
+        null
+      ],
+      [
+        154,
+        0.4,
+        0.2,
+        "MinStep last anode 2.584V",
+        null
+      ],
+      [
+        198,
+        0.4,
+        0.4,
+        "5V finished",
+        "2.562E-03"
+      ]
+    ],
+    "rawLastColumnUnits": "not verified; do not interpret as calibrated current",
+    "physicalOutcomeVerified": false,
+    "meshConvergenceVerified": false,
+    "confound": "A1u geometry wC/dC changes both local Si OFF and carbon traps ON; control A0u required to isolate C",
+    "next": "User to inspect further in Claude; Claude must supply exact one-step copy-paste shell read-only command, and verify failing PP/SDE/mesh/Newton log against successful nodes before proposing minimal guarded patch"
   }
 }

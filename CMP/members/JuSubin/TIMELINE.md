@@ -1,3 +1,10 @@
+## 2026-11-19 JuSubin sidewall defect mitigation papers triaged for easiest deadline route (PROPOSED REVIEW ONLY)
+- Literature comparison completed and preserved in CMP/SIDEWALL_LITERATURE_FEASIBILITY_20261119.md; cross-checked Zhu 2023 wet+SiO2, 2024 KOH/ALD-Al2O3, Chen 2024 N2 treatment, 2022 TMAH sidewall nonradiative (factor 4), Park 2025 ALD sidewall conditions, original Wu 2023 NtSide sweep, 2026 sidewall damage review.
+- Absolute easiest pilot: no source edits, change only existing SWB NtSide 1e18 to 1e17cm^-3, but low scientific novelty/possible tiny 5V impact due Wu baseline already swept sidewall trap density.
+- Easiest distinct research question: MQW-edge selective trap reduction; clone verified school baseline SDevice and reduce Conc only in 8 DmgL/R_QW1..4 traps to heuristic 1e17 vs 1e18cm^-3; preserve remaining 14 Dmg traps, 5nm damage geometry, mesh, contacts, Mg and all other physics. One 5V numerical smoke and matched-current recombination comparison. **Hypothetical selective passivation, NOT calibrated experimental ALD/N2/TMAH process**.
+- Previously observed Wu baseline Trap ON vs OFF 5V raw current difference around 0.12% (under provisional equal conditions), so no 5V IQE improvement guaranteed. Low-current regime may give stronger defect signature; evaluate optical absolute radiative not current alone.
+- User has not selected a replacement direction in this message; current F-inspired project priority and files remain unchanged. No school edits/runs.
+
 ## 2026-11-19 JuSubin feasibility assessment: selective p-GaN high-resistivity without F attribution (REVIEW ONLY / USER DECISION PENDING)
 - User proposed further simplifying the recently selected F-inspired project to p-GaN high-resistivity/current-path steering only. This is a question about value, not an explicit replacement decision yet.
 - Assessment: **selective edge p-GaN** high resistance, not *entire p-GaN*, is physically plausible for shifting hole injection away from sidewall and testable with preserved 10um Wu baseline. Treat as current-confinement mechanism numerical design; do not claim F implantation fabrication or unique first demonstration.

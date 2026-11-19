@@ -10869,5 +10869,43 @@
     "schoolCodeModified": false,
     "simulationRun": false,
     "decisionReplacesImmediate": "old Carbon Project A, old AlGaN Project B and F-ring pilot are deferred, data preserved"
+  },
+  "juSubinD50ImplementationReference20261119": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-19",
+    "status": "USER_REQUESTED_D50_GITHUB_REFERENCE_CREATED_SCHOOL_UNRUN",
+    "newCandidateSde": "CMP/tcad/candidates/CMP_BASELINE_3.3.0_D50STRESS/sde_dvs.cmd",
+    "readme": "CMP/tcad/candidates/CMP_BASELINE_3.3.0_D50STRESS/README.md",
+    "parent": "CMP/tcad/candidates/CMP_BASELINE_3.2.0_WU2023PHY/sde_dvs.cmd",
+    "parentGitHubBlobSha": "965ed9f29fa4f6db4166a9707ce02d34f2422f74",
+    "difference": "Only executable physical code modified is (define Wdmg 0.005)->(define Wdmg 0.050)um, comments updated",
+    "leftDamage_y_um": [
+      0,
+      0.05
+    ],
+    "clean_y_um": [
+      0.05,
+      9.95
+    ],
+    "rightDamage_y_um": [
+      9.95,
+      10
+    ],
+    "originalModelPreserved": true,
+    "schoolOriginalBytesVerified": false,
+    "newD50SchoolRun": false,
+    "trapNtSide_cm3": 1000000000000000000,
+    "trapEt_eV": 0.75,
+    "trapSigma_cm2": 1e-15,
+    "nominalSheetInventoryOld_cm2": 500000000000,
+    "nominalSheetInventoryNew_cm2": 5000000000000,
+    "initialEdgeMesh_um": {
+      "maxX": 0.02,
+      "maxY": 0.001,
+      "minX": 0.002,
+      "minY": 0.0005
+    },
+    "assessment": "Strong damaged-region trap-volume stress: 10x sheet inventory, not measured 10um physical damaged thickness",
+    "next": "Read actual successful school Wu10um SDE/CMD/PAR/PP, check dynamic Wdmg and hardcoded coords/contact/mesh; independent clone D50; SDE mesh audit; one TrapON 5V run, then A-D50/B-D50 compared to D50"
   }
 }

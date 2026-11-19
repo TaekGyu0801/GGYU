@@ -1,3 +1,9 @@
+## 2026-11-19 A/B D50 pilot codes ready (PROPOSED / NO SCHOOL RUN)
+1. First verify real *Claude* D50 baseline SDE/SDevice/par/PP/mesh, physical region contacts, terminal current AreaFactor and one completed TrapON 5V node. **Do not launch a separate GPTD50** per user request.
+2. Compare school Claude D50 actual source vs GitHub candidate `CMP_BASELINE_3.3.1_GPTD50`; do not blindly overwrite. Transplant only Project A pGaN edge Mg split/contact/local mesh from `CMP_PROJECTA_2.0.0_HEDGE` and Project B all five QB 8->6nm from `CMP_PROJECTB_2.0.0_QB6` into two separate clones. Keep all 22 Dmg regions/Traps.
+3. For A verify pGaN five-region Mg mapping including DmgL/R and all anode contact fragments; if comparative mesh effect is significant, run A0 same geometry/split with Mg uniformly2e19. B check exact 6nm barrier/3nm QW and new x positions.
+4. Run one 5V TrapON per A/B only after mesh and macros audit. Verify pp+log finish and SVisual IV, integrated Rrad, Rtrap, current paths, I matching; IQE definition avoid double-counted recombination. Compare A and B individually vs same D50 at matched current. Numerical pilots are not validated physical optima.
+
 ## 2026-11-19 GPT independent D50 candidate complete in GitHub, next on school (PROPOSED/UNRUN)
 1. User now has five separate paste-ready GPT candidate files (SDE/SDevice/par/SVisual1/SVisual2) at CMP/tcad/candidates/CMP_BASELINE_3.3.1_GPTD50/; README explains source provenance and SWB branching. Other Claude implementation path remains independent.
 2. Clone actual verified school Wu10um D5 baseline into new independent project, never overwrite. Before substituting GPT candidate full stack, verify source differences and pGaN active doping species, 22 regions, solver version and parameter link. GitHub Wu3.2 candidate is UNRUN and different from final school source.

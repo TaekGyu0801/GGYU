@@ -1,3 +1,12 @@
+## 2026-11-19 further literature verification: damage region thickness vs optical influenced width (REVIEW, NOT NEW BASELINE)
+- Wu2023 DOI 10.1016/j.micrna.2023.207542: traps within 5nm each side are a TCAD idealization, not direct measurement for the school 10um device.
+- LSA2025 review DOI 10.1038/s41377-025-01751-y: atomic disorder ~2nm by HRTEM (Yang); pGaN damage ~40nm at 750W source/150W RF (Cao); less than50nm at bias30W and ~60nm on nGaN at bias60W (Yamada). J Phys D 2026 review DOI 10.1088/1361-6463/ae553e synthesizes STEM structural damage about 40-100nm. Process-driven not prescribed by mesa width.
+- Effective electrical/optical influence is NOT equal to homogeneous trap-rich damaged semiconductor: fitted nonemitting dead zone ~180nm blue and ~150nm green for 1-20um LED (Ultra-small size blue/green microLEDs fabricated by laser direct writing lithography, 2022), while spatial CL/FLIM optical effects may extend ~0.8 to >5um and sometimes nearly all a 10um mesa. These measure influence including carrier diffusion, not actual damaged lattice thickness.
+- Geometry fraction nuance: 50nm each side of 10um **2D stripe** is 2*0.05/10=1% lateral; in a true 10x10um square, border area fraction is 1-(9.9/10)^2=1.99%. Actual project is a 2D stripe, not physically verified 10x10um square.
+- Critical inventory confounding: original 5nm=5e-7cm and NtSide1e18cm^-3 imply nominal integrated trap sheet inventory Nt*w=5e11cm^-2 per side. At 50nm=5e-6cm while keeping NtSide1e18, sheet inventory becomes 5e12cm^-2, **10x greater**. If keeping same integrated inventory, NtSide must be reduced to 1e17cm^-3 in the 50nm model (bookkeeping only, not measured). Previous 50nm/1e18 proposal is a higher-total-defect-stress test, NOT merely more realistic thickness; either choice requires matching D50 control for A/B.
+- Recommendation: preserve Wu D5 completed reference unchanged, consider separate D50 model **only as hypothesis**, compare optical current/perimeter effects with honest caveat; user has not approved w50 or dose normalization yet, no school source edits / runs.
+- Sources: https://www.nature.com/articles/s41377-025-01751-y ; https://doi.org/10.1088/1361-6463/ae553e ; https://cir.nii.ac.jp/crid/1360865819384133760?lang=en ; https://www.sciencedirect.com/science/article/pii/S2773012323000390
+
 # CMP damaged region width stress-test feasibility — 2026-11-19
 Worker: 주수빈; coordinating Lee Project A and Ju Project B. STATUS: PROPOSED REVIEW ONLY; user has not explicitly approved a new damage width, no school source edited or solver run.
 

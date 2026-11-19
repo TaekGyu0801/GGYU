@@ -10778,5 +10778,42 @@
     "nodeTrapMappingVerified": false,
     "comparison": "B1/Bnull n6 raw last column ratio ~0.5184 (conditional, units/matched physics not checked)",
     "next": "Read B1 n5 .out tail/process and effective pp5/pp6 trap mapping; verify new code and mesh; matched J optical analysis"
+  },
+  "juSubinProjectFFringDecision20261119": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-19",
+    "status": "USER_SELECTED_F_INSPIRED_RING_NUMERICAL_INPUTS_PROPOSED_NOT_RUN",
+    "priority": "Project F ring pilot replaces immediate Project A/B optimization and 4-case p-contact prescreen",
+    "spec": "CMP/PROJECT_F_FRING_DESIGN_20261119.md",
+    "sourcePaper": "Pan et al 2026 DOI 10.1021/acsphotonics.5c02363",
+    "baseline": "Preserve successful Wu 10um existing original; school effective deck unverified in this new project",
+    "model": "effective Mg suppression proxy, NOT fluorin implant profile/calibration",
+    "pGaN_um": [
+      0,
+      0.12
+    ],
+    "ringL_y_um": [
+      0,
+      0.2
+    ],
+    "ringR_y_um": [
+      9.8,
+      10
+    ],
+    "ringEffectiveMg_cm3": 20000000000000000,
+    "centerNominalMg_cm3": 20000000000000000000,
+    "existingDamage_nm": 5,
+    "existingDamageTraps": "preserve",
+    "ringMeshMax_um": 0.02,
+    "ringMeshMin_um": 0.005,
+    "trapNtSide_cm3": 1000000000000000000,
+    "trapEt_eV": 0.75,
+    "trapSigmaN_cm2": 1e-15,
+    "trapSigmaP_cm2": 1e-15,
+    "Vstop_V": 5,
+    "performedSchoolEdits": false,
+    "simulationRun": false,
+    "sourceCalibrationVerified": false,
+    "next": "read exact school baseline, independent candidate clone, PP and mesh audit, one F1 5V pilot, matched total injection analysis"
   }
 }

@@ -1,3 +1,7 @@
+## 2026-11-19 JuSubin CMP_A_GPT pp6_des.cmd screenshot 38-97 (PARTIAL OBSERVED)
+- User supplied editor screenshot showing pp6_des.cmd lines ~38-97 only; DmgR_Barrier1 Physics lines 92-96 appear syntactically normal, macros substituted NtSide=1e18, TrapEt=.75, SigmaN/P=1e-15. **Faulty line98 is NOT visible**, so no definitive offending-byte diagnosis. Editor indicates DOS line endings, which alone do not prove error.
+- Still need pp6 line98 onward text and raw bytes via read-only command; avoid full SDevice or physics rewrites based on unshown line.
+
 ## 2026-11-19 JuSubin CMP_A_GPT SDevice pp6_des.cmd syntax error line98 (USER SCREENSHOT / UNRESOLVED)
 - User screenshots `CMP_A_GPT` school SWB at `/users/student/team3/JSB/CMP_A_GPT` with node n6 output `n6_des.out`: **Error in "pp6_des.cmd" at line 98, offending input: [garbled/possibly non-ASCII sequence], syntax error !**. `n6_des.err` repeats the same error. `datexcodes.txt` variable redefined lines are also shown but not established as root cause. This is SDEVICE syntax preprocessing/parser failure, not evidence of SDE mesh failure or nonlinear solve nonconvergence.
 - Corresponding GitHub unrun Project A SDevice full source line98 is `}` terminating DmgR_Barrier1 Physics block, no corruption observed in *GitHub* candidate at that line. Actual school `pp6_des.cmd` contents may differ and must be inspected before any repair.

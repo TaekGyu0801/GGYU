@@ -10907,5 +10907,38 @@
     },
     "assessment": "Strong damaged-region trap-volume stress: 10x sheet inventory, not measured 10um physical damaged thickness",
     "next": "Read actual successful school Wu10um SDE/CMD/PAR/PP, check dynamic Wdmg and hardcoded coords/contact/mesh; independent clone D50; SDE mesh audit; one TrapON 5V run, then A-D50/B-D50 compared to D50"
+  },
+  "juSubinABpilots20261119": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-19",
+    "status": "PROPOSED_GITHUB_STATIC_CHECKED_SCHOOL_UNRUN",
+    "parentReference": "CMP/tcad/candidates/CMP_BASELINE_3.3.1_GPTD50 (unrun, not school Claude D50)",
+    "schoolClaudeD50Validated": false,
+    "projectA": {
+      "owner": "이택규",
+      "path": "CMP/tcad/candidates/CMP_PROJECTA_2.0.0_HEDGE",
+      "effect": "bilateral pGaN Mg active depletion",
+      "lateralEdgeUm": 0.2,
+      "verticalDepthUm": 0.12,
+      "edgeMgCm3": 20000000000000000,
+      "centerMgCm3": 20000000000000000000,
+      "damageWidthUm": 0.05,
+      "trapRegionCount": 22,
+      "filesGitHubVerified": 6
+    },
+    "projectB": {
+      "owner": "주수빈",
+      "path": "CMP/tcad/candidates/CMP_PROJECTB_2.0.0_QB6",
+      "effect": "five GaN QB thinning",
+      "qbBeforeUm": 0.008,
+      "qbAfterUm": 0.006,
+      "qwThicknessUm": 0.003,
+      "qwCount": 4,
+      "damageWidthUm": 0.05,
+      "trapRegionCount": 22,
+      "filesGitHubVerified": 6
+    },
+    "next": "Verify Claude D50 school baseline, transfer only modifications into independent A/B clones, mesh/contacts/audit before one 5V node each; matched-current comparisons",
+    "physicalParameterCalibration": false
   }
 }

@@ -10739,5 +10739,44 @@
     },
     "caution": "SWB table does not show SDevice final status; old /user/semi/semi437/...n21/n25 cannot represent these paths",
     "next": "Collect new node log final anode and Curve trace finished for 4 trap cases; verify applied code, PP, physics and mesh comparability"
+  },
+  "juSubinProjectBNewNodeLogs20261119": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-19",
+    "evidence": "USER_PASTED_SCHOOL_TERMINAL_LOG_EXCERPTS",
+    "projects": {
+      "B1": "/users/student/team3/JSB/CMP_B_B1",
+      "Bnull": "/users/student/team3/JSB/CMP_B_BNULL"
+    },
+    "nodes": {
+      "B1n5": {
+        "lastV": 1.884,
+        "rawCurrentLast": 1.037e-8,
+        "lastFinished": "Error smaller than 1 (9.2220E-01)",
+        "fullSweep5V": false,
+        "finalStatus": "UNRESOLVED"
+      },
+      "B1n6": {
+        "lastV": 5,
+        "rawCurrentLast": 0.00002824,
+        "lastFinished": "Curve trace finished",
+        "numerical5V": "OBSERVED"
+      },
+      "Bnulln5": {
+        "lastV": 5,
+        "rawCurrentLast": 0.00007899,
+        "lastFinished": "Curve trace finished",
+        "numerical5V": "OBSERVED"
+      },
+      "Bnulln6": {
+        "lastV": 5,
+        "rawCurrentLast": 0.00005447,
+        "lastFinished": "Curve trace finished",
+        "numerical5V": "OBSERVED"
+      }
+    },
+    "nodeTrapMappingVerified": false,
+    "comparison": "B1/Bnull n6 raw last column ratio ~0.5184 (conditional, units/matched physics not checked)",
+    "next": "Read B1 n5 .out tail/process and effective pp5/pp6 trap mapping; verify new code and mesh; matched J optical analysis"
   }
 }

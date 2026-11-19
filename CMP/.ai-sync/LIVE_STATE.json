@@ -10815,5 +10815,59 @@
     "simulationRun": false,
     "sourceCalibrationVerified": false,
     "next": "read exact school baseline, independent candidate clone, PP and mesh audit, one F1 5V pilot, matched total injection analysis"
+  },
+  "juSubinABReplacementsApproved20261119": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-19",
+    "status": "DIRECTIONS_USER_APPROVED_NUMERIC_PILOTS_PROPOSED_NOT_EXECUTED",
+    "assignments": {
+      "A": "이택규 — selective pGaN H-inspired Mg deactivation/current confinement",
+      "B": "주수빈 — five GaN quantum barriers 8nm to 6nm"
+    },
+    "design": "CMP/PROJECT_AB_REPLACEMENT_DESIGN_FREEZE_20261119.md",
+    "existingBaseline": "school actual Wu 10um working source authoritative, GitHub 3.2 proposed source NOT actual",
+    "A": {
+      "projectNameCandidate": "CMP_PROJECTA_2.0.0_HEDGE",
+      "x_um": [
+        0,
+        0.12
+      ],
+      "leftY_um": [
+        0,
+        0.2
+      ],
+      "rightY_um": [
+        9.8,
+        10
+      ],
+      "edgeEffectiveMg_cm3": 20000000000000000,
+      "centerMg_cm3": 20000000000000000000,
+      "unitNote": "strong uncalibrated surrogate, not actual H profile or sheet resistance"
+    },
+    "B": {
+      "projectNameCandidate": "CMP_PROJECTB_2.0.0_QB6",
+      "originalQb_nm": 8,
+      "proposalQb_nm": 6,
+      "numberQBs": 5,
+      "numberQWs": 4,
+      "QW_nm": 3,
+      "QW_In": 0.08,
+      "oldActiveEnd_um": 0.172,
+      "newActiveEnd_um": 0.162,
+      "newBottomContact_um": 4.062,
+      "modelNote": "literature APSYS Schrödinger and 0.5um damage do not transfer to Wu 5nm damage"
+    },
+    "fixed": {
+      "NtSide_cm3": 1000000000000000000,
+      "TrapEt_Ev_eV": 0.75,
+      "TrapSigmaN_cm2": 1e-15,
+      "TrapSigmaP_cm2": 1e-15,
+      "Vstop_V": 5,
+      "temp_K": 300
+    },
+    "next": "verify school actual Wu baseline source / PP / mesh / normalization then one A and one B 5V smoke; compare matched total current absolute QW radiative and sidewall nonradiative",
+    "schoolCodeModified": false,
+    "simulationRun": false,
+    "decisionReplacesImmediate": "old Carbon Project A, old AlGaN Project B and F-ring pilot are deferred, data preserved"
   }
 }

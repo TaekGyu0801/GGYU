@@ -1,3 +1,10 @@
+## 2026-11-19 Handoff — JuSubin confirmed independent replacement tracks for Lee and Ju (direction approved; school unrun)
+- AUTHORITATIVE: `CMP/PROJECT_AB_REPLACEMENT_DESIGN_FREEZE_20261119.md`; read it before editing. A Lee localized H-inspired pGaN Mg deactivation, B Ju thin 6nm GaN QBs. Old Carbon/AlGaN/F pilot archived, not today's implementation priority.
+- **A** school clone pGaN split x0..0.12, lateral y0..0.2 / 9.8..10, including original Dmg 5nm; edge effective Mg input2e16, center2e19 cm^-3. All Dmg traps unchanged, no explicit H, no truncated anode. Paper Kirilenko2022 lateral diffusion ~1.7um and Mg sheet-R reported up to10x in previous works, so 0.2um & Mg1/1000 are artificial one-shot parameters, not literature calibration.
+- **B** school clone all GaN Barrier0..4 tQB 0.008->0.006um; x new active .120.. .162, nGaN .162..4.062 with pGaN .120, EBL0, tN3.9; preserve original 4QW3nm In0.08, damage5nm, 22 traps, contact, physics. Paper Chang2020 uses In0.18, 26nm EBL, 0.5um damage and Schrödinger APSYS; result not directly transferable.
+- Before edits read actual school **successful** Wu source and plot files, compare PP and contact. GitHub Wu3.2 candidate expressly UNRUN. Keep independent backup source, only one node 5V each then matched-current recombination/voltage/field maps. School tcsh requires single physically one-line Bash paste or complete full CMD/SDE when actually requested; never provide multi-line `bash -lc '` open quotations.
+- At handoff: no code edits, no simulations, no fresh performance outcomes, blocker = actual school baseline source and parameter/model equivalence unverified.
+
 ## 2026-11-19 JuSubin to next Claude/ChatGPT: immediate F-inspired ring pilot, no 4-case contact screening (PROPOSED/UNRUN)
 - Source-of-truth design: CMP/PROJECT_F_FRING_DESIGN_20261119.md. User explicitly changed research direction to F-inspired pGaN high-resistance perimeter Ring as deadline priority; no code exists for it yet.
 - Baseline school exact source/PP/mesh must be collected read-only; don't substitute GitHub 3.2 PROPOSED candidate or overwrite school successful Wu/Bnull/B1/A copies.

@@ -10718,5 +10718,26 @@
     "meshConvergenceVerified": false,
     "confound": "A1u geometry wC/dC changes both local Si OFF and carbon traps ON; control A0u required to isolate C",
     "next": "User to inspect further in Claude; Claude must supply exact one-step copy-paste shell read-only command, and verify failing PP/SDE/mesh/Newton log against successful nodes before proposing minimal guarded patch"
+  },
+  "juSubinProjectBNewJSBRerunReport20261119": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-19",
+    "status": "USER_REPORTED_NEW_CLAUDE_CODES_RAN_5V_UNVERIFIED",
+    "projects": [
+      "/users/student/team3/JSB/CMP_B_B1",
+      "/users/student/team3/JSB/CMP_B_BNULL"
+    ],
+    "screenshotObserved": {
+      "NtSide": [
+        "0",
+        "1e18"
+      ],
+      "Vstop": "5",
+      "TrapEt": "0.75",
+      "TrapSigmaN": "1e-15",
+      "TrapSigmaP": "1e-15"
+    },
+    "caution": "SWB table does not show SDevice final status; old /user/semi/semi437/...n21/n25 cannot represent these paths",
+    "next": "Collect new node log final anode and Curve trace finished for 4 trap cases; verify applied code, PP, physics and mesh comparability"
   }
 }

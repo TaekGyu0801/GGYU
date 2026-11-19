@@ -1,3 +1,10 @@
+## 2026-11-19 GPT independent D50 candidate complete in GitHub, next on school (PROPOSED/UNRUN)
+1. User now has five separate paste-ready GPT candidate files (SDE/SDevice/par/SVisual1/SVisual2) at CMP/tcad/candidates/CMP_BASELINE_3.3.1_GPTD50/; README explains source provenance and SWB branching. Other Claude implementation path remains independent.
+2. Clone actual verified school Wu10um D5 baseline into new independent project, never overwrite. Before substituting GPT candidate full stack, verify source differences and pGaN active doping species, 22 regions, solver version and parameter link. GitHub Wu3.2 candidate is UNRUN and different from final school source.
+3. For GPT candidate SWB create required parameter columns NtSide1e18, Vstop5, TrapEt0.75, TrapSigmaN/P1e-15. Set SDE→SDevice→sibling SVisual1 and SVisual2 (both directly dependent on SDevice); map sdevice.par in parameter editor. First SDE preprocess mesh (50nm edge strips, 3nm MQWs, doping/contacts), then one5V Trap ON solver with `Curve trace finished`, then Visual validation. Do NOT promise it works before school log.
+4. If errors arise, retain generated pp*_dvs/des cmd, .par, .log and first actual error evidence and minimal fix. Do not alter all physics/solver or overwrite Wu D5. Claude can run its own independent D50 and compare.
+5. After verified common D50, A-D50 and B-D50 independent clones (H-inspired pGaN edge Mg depletion; QB8->6nm). Compare each against common D50 at matched total current.
+
 ## 2026-11-19 Claude implementation handoff — FIRST ACTION
 1. Claude reads GitHub protocol, LIVE_STATE, RELAY, current status/errors/next actions, latest Issue7, A/B design and D50 proposed README.
 2. Claude locates actual school successful Wu10um D5 SDE/SDevice/parameter/final SVisual and PP/Mesh/logs. Do not substitute old 4um GitHub CURRENT SVisual or unrun Wu3.2 candidate for verified final. If no school shell, give JuSubin precise one-line read-only bash commands, inspect outputs before patch.

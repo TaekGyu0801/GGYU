@@ -1,0 +1,31 @@
+# CMP Project F — F-inspired p-GaN High-Resistance Perimeter Ring, first-run specification
+Date: 2026-11-19 KST
+Worker: 주수빈
+Decision status: USER-SELECTED RESEARCH DIRECTION (F-inspired ring directly; omit p-contact 4-case screening)
+Numerical specification status: PROPOSED/FROZEN FOR FIRST PILOT ONLY, UNRUN, NOT MEASURED/NOT CALIBRATED AS ACTUAL F IMPLANT
+Project name candidate: CMP_PROJECTF_1.0.0_FRING (verify school name collision before creation).
+
+## Paper provenance
+PRIMARY: Yuzhu Pan et al., "Enhancing the Performance of InGaN-Based Micro-LED Arrays via Fluorine Ion Implantation Passivation Ring Design," ACS Photonics 13(2), 501–509 (2026), https://doi.org/10.1021/acsphotonics.5c02363 . F implantation creates high-resistivity insulating zones in p-GaN around active emission to deter sidewall defect injection; studied 6/8/10um pixels. Main full body/Supporting Information numerical width/dose/depth not independently accessible in current web review; DO NOT attribute arbitrary numbers to Pan.
+SUPPORT: "Pixelation of GaN based Micro-LED arrays by tailoring injection energy and dose of fluorine ion implantation", J. Luminescence 261 (2023) 119903, https://doi.org/10.1016/j.jlumin.2023.119903 . Dose/energy affects depth & lateral profile, not a ready effective-dopant TCAD calibration.
+TRANSPORT-EVIDENCE ONLY: "High-Performance Micro-LED Displays via Etching-Damage-Free Pixelation Strategy for Multifunctional Integrated Applications", Advanced Science 12 (2025), https://doi.org/10.1002/advs.202511520 . Different F ion pixel-isolation process: reported 30keV, 5e14cm^-2, observed sheet resistance 68 -> 37406 ohm/sq (~550x). Not directly portable to periphery p-GaN, layer thickness, implant-charge density or local mobility.
+CONTRAST: Xu et al., Optics Letters 44 (2019), high-resistance n-GaN implant isolation in vertical μLED; NOT p-GaN planar ring model.
+Baseline reference: CMP/PROJECT_AB_WU10_DESIGN_FREEZE_20261108.md; source candidate CMP/tcad/candidates/CMP_BASELINE_3.2.0_WU2023PHY/* is explicitly PROPOSED/UNRUN and MUST NOT be assumed exact school-executed source.
+
+## Protected baseline and geometry
+- User states completed working Wu baseline. School exact full SDE/SDevice/PP/mesh and area factor are authoritative; preserve unchanged.
+- All existing 10um 2D stripe, QWs (4x In0.08GaN x=3nm, GaN barriers 8nm), nGaN Si=5e18cm^-3, pGaN nominal Mg=2e19cm^-3, EBL pilot0, region-specific 5nm sidewall damage & all 22 sidewall trap definitions, contacts, polarization, mobility, incomplete ionization, bias solver, and fixed 300K remain unchanged EXCEPT proposed edge pGaN *effective* Mg doping on independent F branch.
+- Coordinate system: x depth from p contact (0) to nGaN (4.072um), y lateral (0 to 10um); baseline pGaN x=[0,0.120]um subject to SCHOOL ACTUAL confirmation. Damage y=[0,0.005] and [9.995,10]um stays physically present with original traps.
+- Ring occupies pGaN x=[0,0.120]um and lateral LEFT y=[0,0.200]um, RIGHT y=[9.800,10]um. Each 200nm wide INCLUDING original outer 5nm Dmg. Original Dmg pGaN stays named and maintains full traps but takes lowered effective Mg in F branch (otherwise full-width p contact would inject directly into unchanged conducting edge, bypassing ring). Original Clean_pGaN splits into FEdgeL_pGaN y=[.005,.200], Clean_pGaN y=[.200,9.800], FEdgeR_pGaN y=[9.800,9.995]. This yields 35 regions vs 33 baseline, if unchanged other layers and actual school same segmentation.
+- All nGaN and MQW region/doping/Trap keep original; do not add Al, C, fluorine species, dielectric, fixed charges, implant-induced traps or new recombination models.
+- pGaN central nominal Mg species unchanged: MagnesiumActiveConcentration=2e19cm^-3.
+- pGaN Ring effective-Mg *proxy input*: MagnesiumActiveConcentration=2e16cm^-3 in both added FEdgeL/R_pGaN and existing DmgL/R_pGaN ONLY (factor 1000 nominal reduction vs central pGaN). This is a deliberate UNCALIBRATED effective-acceptor-availability proxy, not fluorine dose, Mg atom depletion, nor a demonstrated 1000x conductivity change. Its electrical effect must be verified using simulated local hole density/current/conductivity.
+- pGaN full-width top anode contact UNCHANGED; note ideal-Ohmic boundary approximation at compensated edge is a confound to report, and actual school contact orientation must be checked. Do NOT silently truncate contact (that would become a separate p-contact-setback intervention).
+- New Ring-local coarse mesh initial maxX=0.020um maxY=0.020um minX=0.005um minY=0.005um in x=0..0.12, relevant y=0..0.20 & 9.8..10, while retaining finer baseline 5nm Dmg and MQW mesh. Mesh parameters are a STARTING NUMERICAL PROPOSAL, not a convergence test.
+- Initial run condition: 5V, T=300K, NtSide=1e18cm^-3, TrapEt=.75eV, TrapSigmaN=TrapSigmaP=1e-15cm^2, copied effective baseline settings, AreaFactor unchanged. Compare baseline TrapON reference at same settings. Existing TrapOFF reference may be used for diagnostics only; DO NOT create four contact cases.
+- Minimal pilot 1 F1 at 5V plus existing F0 baseline n25; no broad splits. Confirm new pp SDE/SDevice/region mesh/ Mg / trap macros, and 5.0V Curve trace finished.
+- Efficacy gate: demonstrate sidewall p current diverted vs baseline; same-total-current/normalization compare absolute all-QW radiative integration, net trap/SRH loss, forward voltage penalty, QW hole distributions. A reduction of 5V current alone is NOT evidence of IQE or output improvement. Check bypass through Dmg or contact, 2D AreaFactor, identical ROI and temperature. If F ring does not demonstrate stronger local resistance, revise proxy with clear new version, never fake physical parameter provenance.
+
+## Explicit limits
+Pan 2026 SI numeric implantation energy, dose, actual lateral ring width and SIMS depth were not fully verified. Values 0.2um and 2e16cm^-3 are CMP-owned first-pilot assumptions, NOT published values, physical optimum, actual F density or verified conductivity. 30keV and 5e14cm^-2 from different 2025 device are literature context ONLY. The model is an F-inspired numerical equivalent, not a TCAD implantation-process reproduction.
+No school files, solver runs, source or output checked/modified in this chat. Code authoring to derive only from actual school working deck and official Sentaurus T-2022.03 manual after re-reading before changes.

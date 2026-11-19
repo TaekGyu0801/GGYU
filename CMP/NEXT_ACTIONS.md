@@ -1,3 +1,10 @@
+## 2026-11-19 Claude implementation handoff — FIRST ACTION
+1. Claude reads GitHub protocol, LIVE_STATE, RELAY, current status/errors/next actions, latest Issue7, A/B design and D50 proposed README.
+2. Claude locates actual school successful Wu10um D5 SDE/SDevice/parameter/final SVisual and PP/Mesh/logs. Do not substitute old 4um GitHub CURRENT SVisual or unrun Wu3.2 candidate for verified final. If no school shell, give JuSubin precise one-line read-only bash commands, inspect outputs before patch.
+3. Claude produces separate cloned D50 common control (wDamage5->50nm, NtSide1e18 unchanged, 22 trap region names unchanged), audits mesh and completes one TrapON 5V. Then independently A-D50 (pGaN effective Mg at edge) and B-D50 (five QB8->6nm) one run each, matched current vs D50.
+4. Provide full paste-ready edited files and mark untouched files UNCHANGED. Protect original D5 and existing Carbon/AlGaN data, no additional p-contact sweep. School path and source hashes required before edits. No school edit yet.
+Reference: CMP/PROJECT_AB_REPLACEMENT_DESIGN_FREEZE_20261119.md and CMP/tcad/candidates/CMP_BASELINE_3.3.0_D50STRESS/README.md.
+
 ## 2026-11-19 FIRST — implement independent D50 reference before A/B (USER DECISION / SCHOOL UNRUN)
 1. School read-only: locate actual working Wu 10um *completed* baseline `sde_dvs.cmd`, `sdevice_des.cmd`, `sdevice.par`, n*_msh.tdr, preprocessed cmd, node setup and per-device AreaFactor; audit `Wdmg`, hardcoded `0.005/9.995`, `Win.Edge`, `Ref.Edge`, `set-contact`. Parent in GitHub candidates is PROPOSED/UNRUN and not byte-verified school successful source.
 2. Make **separate** new SWB D50 common-control clone; see proposed `CMP/tcad/candidates/CMP_BASELINE_3.3.0_D50STRESS/sde_dvs.cmd` and README. In actual cloned school source change only bilat Damage width y0..0.005/9.995..10 -> y0..0.050/9.950..10 with dynamically linked region/edge mesh/contacts; if macros differ, inspect full school SDE before any patch. Preserve D5 baseline unchanged.

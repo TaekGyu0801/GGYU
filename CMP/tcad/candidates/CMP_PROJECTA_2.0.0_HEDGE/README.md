@@ -1,0 +1,14 @@
+# CMP_PROJECTA_2.0.0_HEDGE — D50 pilot (PROPOSED / SCHOOL UNRUN)
+
+- Worker/design responsibility: 이택규.
+- Parent source: GitHub candidate `CMP/tcad/candidates/CMP_BASELINE_3.3.1_GPTD50`. This candidate is **not byte-verified with the school Claude D50 or original successfully run Wu D5**. Not an actual school working source.
+- Local user nickname for the other GPT D50 control was `CMP_BASELINE_GPT`; user will prefer Claude D50 when verified. Do NOT overwrite or treat this candidate as a verified Claude derivative.
+- Scope: pGaN edge active Mg deactivation.
+- Invariants: Wm=10um, bilateral Dmg width 50nm, NtSide=1e18cm^-3, TrapEt=0.75eV from valence band, electron/hole cross sections=1e-15cm2, 300K, target Vstop=5V, 22 Dmg Trap regions, inherited full-width Ohmic contacts/physics/Solve, pGaN tP=.120um, nGaN tN=3.900um, xIn=.08, 4 InGaN wells of 3nm.
+- A DIFFERENCE: pGaN ONLY split from 3 to 5 lateral segments: DmgL 0-.05um, HEdgeL .05-.20um, Clean .20-9.80um, HEdgeR 9.80-9.95um, DmgR 9.95-10um. Effective active Mg=2e16cm^-3 in both 200nm-per-side pGaN edge strips including Dmg; center 2e19cm^-3. 5 top anode segments all explicitly contacted; bottom 3 nGaN cathode segments. New refinement maxX/Y .020um minX/Y .005um for non-damage pGaN rings only, retaining D50 finer edge and MQW mesh. Non-pGaN layers unchanged, QB 8nm. H atoms, H diffusion and trap healing NOT modeled. Mg reduction 1000x is a strong screening parameter, not literature-calibrated or 1000x conductivity change. pGaN split/mesh changes can confound control, consider same-segmentation no-Mg-change A0 if needed.
+- SDevice/par: **Executable physics and solver unchanged** from GPT D50 candidate; only descriptive/identity labels changed.
+- SVisual1/SVisual2: same math/extraction logic as GPT D50 candidate, descriptive/plot/CSV prefixes changed to avoid mixing results. J conversion assumes raw A/um and AreaFactor=1; UNVERIFIED.
+- SWB variables: NtSide=1e18, Vstop=5, TrapEt=0.75, TrapSigmaN=1e-15, TrapSigmaP=1e-15.
+- Flow: SDE -> SDevice -> SVisual1 and SVisual2 as separate sibling children of SDevice (not SVisual1 -> SVisual2). Actual `@plot@`, `@tdr@`, `@parameter@` and `@previous@` preprocess mappings must be checked at school.
+- Next gate: wait until *Claude D50* baseline completes; diff these candidates against the actual successful D50 SDE/SDevice/par/SVisual; transplant **only intended A or B SDE change** onto successful school clone. Do not blindly overwrite school files. First mesh/contacts/dopant/regions check, then 5V single TrapON run; check `n*_des.out` success + final `anode 5.000E+00` row. Compare to matched-current D50 not just 5V, report IQE proxy and integrated radiative, SRH/trap, edge-vs-center recombination, lateral carrier/current.
+- Source references: `CMP/PROJECT_AB_REPLACEMENT_DESIGN_FREEZE_20261119.md` and 2022 Kirilenko (A)/2020 Chang (B) paper. Neither pilot parameter set is claimed optimal.

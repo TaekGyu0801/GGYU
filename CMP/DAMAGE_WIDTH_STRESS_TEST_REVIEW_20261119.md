@@ -1,0 +1,25 @@
+# CMP damaged region width stress-test feasibility — 2026-11-19
+Worker: 주수빈; coordinating Lee Project A and Ju Project B. STATUS: PROPOSED REVIEW ONLY; user has not explicitly approved a new damage width, no school source edited or solver run.
+
+## Problem / literature
+- User asks whether widening existing Wu-based Baseline's sidewall Dmg (5nm each side) will amplify signals for the newly adopted H-inspired edge pGaN current-confinement Project A and 8->6nm GaN QB Project B.
+- Wu2023 DOI 10.1016/j.micrna.2023.207542 explicitly models acceptor-like traps within **5nm** of both sidewall edges.
+- Chang2020 DOI 10.1186/s11671-020-03372-3 models **0.5um** defective regions for its QB6/9/12nm study; cannot assume that the same electrical defect density, field profile, quantum model, In composition and EBL transfer to our 10um Wu baseline.
+- Review 2026 DOI 10.1088/1361-6463/ae553e reports structurally damaged GaN zone about **40–100nm** but larger electrically affected region **0.5–1um**; the latter is NOT an evenly volumetrically trapped zone.
+- First defensible compromise width **wDmg=0.050um** per side for an independent stress-case, not a replacement Wu baseline or measured optimum. 50nm is in cited structural damaged range but uniform volumetric traps throughout 50nm remain a numerical assumption.
+
+## Geometry arithmetic
+- Mesa lateral width Wm=10um. Both-side damaged projected fraction: w=0.005um each -> 2*0.005/10=0.1%; 0.05um -> 1%; 0.10um ->2%; 0.50um ->10%.
+- Fixed nominal NtSide=1e18cm^-3, unchanged existing 22 sidewall traps, unchanged trap Et Ev+0.75eV and sigma=1e-15cm²; increasing 5->50nm multiplies integrated *nominal trap inventory per layer* ~10x at fixed thickness, but NOT actual recombination by 10x (carrier occupation, depletion, local potential, mesh matter).
+- Baseline 5nm untouched, including original SDE/SDevice/PP/TDR/current graph. Create a **separate** stress baseline D50, then independent H-edge-A-D50 and QB6-B-D50 clones, all with same D50, NtSide/traps/contacts/physics and AreaFactor. Existing 5nm Wu results are secondary provenance/reference not same-Damage control.
+- D50 proposed path: original 11 layer DmgL_* y=[0,0.050], DmgR_* y=[9.950,10], central y=.050..9.950; keep nominal pGaN/Mg nGaN/QWs and original trap species; if SDE uses a shared Wdmg parameter verify all region/mesh/contact relationships update in effective PP.
+- A-D50: pGaN H edge overall unchanged width200nm each, i.e. edge y0..0.20 and 9.8..10, including Dmg 50nm. Newly partitioned clean pGaN left y0.05..0.20 and right 9.8..9.95; edge Mg=2e16cm^-3, central Mg=2e19 (both uncalibrated surrogate values), original Dmg traps retained.
+- B-D50: all five GaN barriers8->6nm, four 3nm In0.08GaN wells retained, total active span52->42nm, 50nm left/right Dmg throughout all epi layers; original same D50 baseline must be control.
+- Doing both projects with D50 requires at least **3 new effective SDevice sweeps** (D50, A-D50, B-D50) instead of only 2 new runs based on existing 5nm Baseline. A scientific claim of 'effects under original 5nm damage' needs separate original-width runs and matched reference; avoid changing damage and intervention simultaneously without D50 control.
+- Existing original Ref.Edge covers full current Dmg strip at max lateral size0.001um min0.0005um. Expanding this exact super-fine grid 10x may explode element count and Newton cost; use coarse-first interior Dmg refinement carefully while preserving near-surface/3nm QW resolution and verify effective mesh and convergence, don't indiscriminately copy 5nm mesh over 50nm region. Changing mesh introduces numerical confounding; need consistency across all D50 controls/candidates.
+- Risk: all-layer Damage includes pGaN and 3.9um nGaN, so not all extra recombination is directly adjacent to QWs; separately integrate QW damage vs non-QW damage. Uniform trap density 50nm-wide is worst-case approximation, not an observed chemical profile.
+- A true improvement requires comparing A-D50 vs D50 and B-D50 vs D50 at matched total injected current, identical AreaFactor/2D conventions and region ROI, absolute all-QW Rad, net sidewall nonrad, hole current field, Vf penalty; a 5V-current drop alone does not prove optical efficiency enhancement. Also compare D50 vs original D5 to confirm the heavier defect stress changes physics (not just nominal trap count). Record any absent effect, don't promise a gain.
+
+## Recommendation status
+**Recommended if deadline allows 1 extra baseline run:** keep Wu5nm as immutable scientific reference and add one 50nm independent D50 stress platform to increase sensitivity; 3 total new SDevice runs minimum. If deadline cannot accommodate 3, stay with Wu5nm baseline and run only 2 original A/B candidates rather than contaminate baseline without a control.
+Research source of truth: school actual finished Wu10um source; GitHub 3.2 proposed candidate not a validated substitute.

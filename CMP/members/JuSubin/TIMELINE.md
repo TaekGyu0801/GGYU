@@ -1,3 +1,7 @@
+## 2026-11-19 CMP_A_GPT SDE stops due to incomplete copied source (USER-CONFIRMED / REPAIR PENDING)
+- JuSubin pasted actual local `CMP_A_GPT` SDE source; ends inside unfinished pGaN function after first `sdegeo:create-rectangle`. No later layer construction or mesh invocation. Previously observed blank SDE GUI now explained by truncated source; cause is incomplete paste, not yet a demonstrated mesh or solver failure.
+- Verified existing complete GitHub candidate `CMP/tcad/candidates/CMP_PROJECTA_2.0.0_HEDGE/sde_dvs.cmd` balanced and complete. Action: replace school SDE with FULL candidate (not partial append); rerun SDE only and confirm mesh/contacts. Neither school execution nor results verified yet.
+
 ## 2026-11-19 JuSubin local SWB project names for GPT A/B (USER DECISION, NO CODE CHANGE)
 - User renamed separate working SWB Project A to `CMP_A_GPT` and Project B to `CMP_B_GPT`. These are user-facing local SWB project names/aliases for versioned GitHub reference bundles `CMP/tcad/candidates/CMP_PROJECTA_2.0.0_HEDGE/` and `CMP/tcad/candidates/CMP_PROJECTB_2.0.0_QB6/`. Existing repo versioned source names and links remain unchanged; do not rename native internal Sentaurus filenames such as `sde_dvs.cmd`, `sdevice_des.cmd`, `sdevice.par`. User reports renaming, not execution/validation. The D50 baseline local alias is `CMP_BASELINE_GPT`, and user previously opted to use Claude D50 run instead of duplicating GPT D50. No model, code or mesh changes reported.
 

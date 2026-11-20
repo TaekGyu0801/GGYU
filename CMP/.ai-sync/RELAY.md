@@ -1,3 +1,9 @@
+## 2026-11-20 JuSubin urgent switch from failed D50 to D5 (USER DECISION / PROPOSED HANDOFF)
+- Worker 주수빈, ChatGPT; user says recent D50 A/B projects all errored and time is short. 50nm work suspended for near-term; preserve files/logs, do not conflate school PP/SDE copy truncation with actual numerical divergence.
+- Use **actual successful school Wu10um bilateral 5nm Damaged Region D5 n21 OFF/n25 ON baseline**, not GitHub unrun 3.2 candidate or new D50 scripts. Get school exact SDE/SDevice/par/PP/mesh/5V completion and SWB macro values read-only first. No school files modified by this AI.
+- New low-risk plan is PROPOSED, not run/confirmed: A Lee NtSide [1e18 control,3e17,1e17] cm-3; B Ju sigmaN=sigmaP [1e-15 control,3e-16,1e-16] cm2 with NtSide fixed1e18. Et0.75 from valence band, Vstop5, 5nm width, contacts/mesh/QW unchanged. Only SWB macros vary. One A, one B 5V run first; then same injected-current Rrad/trap/IV analysis; not true EQE/IQE and not specific passivation chemistry.
+- Previous D50 A code school SDE and SDevice pp6 source truncated; check actual source completeness if any reused source. Do not overwrite successful Wu D5 source or re-paste unrun A/B full decks. Next verify actual school D5 project path and SWB macros, create separate clones and smoke-run.
+
 ## 2026-11-19 JuSubin handoff: two A/B D50 code candidates ready; Claude school baseline validation remains BLOCKER (PROPOSED)
 - Worker: 주수빈; AI: ChatGPT; task: H-inspired pGaN edge Mg deactivation (Project A, Lee) and five GaN QB8->6nm (Project B, JuSubin), 5V on 50nm D50 stress control.
 - GITHUB files exist, each 6 files: `CMP/tcad/candidates/CMP_PROJECTA_2.0.0_HEDGE/` and `CMP/tcad/candidates/CMP_PROJECTB_2.0.0_QB6/`. Parent is GitHub unrun `CMP_BASELINE_3.3.1_GPTD50`; NOT school real Claude D50 or working Wu D5 source. Static SDE parentheses/22 traps verified; no mesh or solver execution.

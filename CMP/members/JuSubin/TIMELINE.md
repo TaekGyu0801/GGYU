@@ -1,3 +1,7 @@
+## 2026-11-21 JuSubin QB6.5nm n128 final log directly inspected (OBSERVED SCREENSHOT)
+- Source n128_des.log image: #iterations larger than 35, Newton didn't converge, tried smaller step, then Step-size less than MinStep (9.1004e-11). Writing n128_des.tdr done, but not end-to-end 5V finish. Exact last accepted anode bias not shown.
+- Root failure class: SDevice nonlinear Newton/convergence step floor; deeper trigger unverified. 6.5nm case may be omitted from deadline-critical QB6/7/8 study. No need to tweak solver without evidence; preserve existing runs.
+
 ## 2026-11-21 JuSubin clarifies QB6.5nm (not QB6nm) SDevice run issue (OBSERVED SCREENSHOT)
 - Screenshot: tQB0.0065um NtSide1e18 SDevice node n128 RED, NtSide0 n122 YELLOW. User says only 0.0065 case did not run; earlier 0.006 and 0.007 are successful per user report.
 - Actual n128_des log/err/out and last 5V status absent; underlying cause UNRESOLVED. Avoid claiming intrinsic thickness-induced failure. Fast study still compares 0.006,0.007,0.008um; don't waste deadline on 0.0065 unless necessary.

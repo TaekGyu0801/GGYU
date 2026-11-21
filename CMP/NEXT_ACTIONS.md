@@ -1,3 +1,8 @@
+## 2026-11-21 Immediate blocker triage: QB6 SVisual red (SCREENSHOT)
+1. In SWB select tQB=.006 NtSide=1e18 red SVisual cell, open job output/error for actual SVisual node; copy FIRST meaningful Tcl error and the node number. Also inspect QB=.006 NtSide=0 if needed.
+2. Confirm corresponding SDevice node successfully produced .tdr/.plt and finished at 5V (Curve trace finished); don't rerun physics because SVisual status red.
+3. Compare preprocessed SVisual input and file paths with QB7; distinguish missing input / @previous@ or @plot@ mapping / stale fixed QW coordinate; make minimal evidence-based SVisual-only correction when diagnosed.
+
 ## 2026-11-21 FIRST — JuSubin Project B QB6/QB7/QB8nm fast results (USER SELECTED, LOGS PENDING)
 1. Do NOT initiate more parameter sweeps yet. Identify actual Claude D5 QB6 and QB7 node IDs, original Wu D5 QB8 baseline node; read-only verify each ends at 5.000V with Curve trace finished and correct Trap ON macro mapping (NtSide vs 0), plus process termination. If only successful sweeps at other bias, do not label 5V completed.
 2. Source/PP minimum consistency: QB=.006/.007/.008um (five barriers expected), four QWs 3nm expected, damage=.005um both sides; check all doping, trap Nt/Et/sigmas and 22 blocks, contacts, temperature, solver, AreaFactor, remaining geometry and same refinement policy. School sources not available; GitHub GPT D50 candidate must not be assumed to match real Claude D5.

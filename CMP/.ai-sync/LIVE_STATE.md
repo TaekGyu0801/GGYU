@@ -1,3 +1,7 @@
+## 2026-11-21 JuSubin QB6 SVisual error after user-reported Claude D5 QB6/7 success (SWB SCREENSHOT OBSERVED / UNRESOLVED)
+- SWB parameter screenshot shows tQB=.006um two rows NtSide0 and1e18 both RED in SVisual; tQB=.007um/NtSide1e18 SVisual yellow. Other columns Vstop5/TrapEt.75/sigma1e-15. SWB row labels are not SWB node IDs. SDevice completed 5V and source/PP not yet verified; red SVisual status alone does not establish physics failure.
+- First next: obtain red QB6 SVisual job .err/.out first Tcl exception and corresponding node ID, check upstream SDevice TDR/PLT and completed 5V then minimal SVisual-only fix if needed. Possible missing file/path/macro/changed-QW boundary remains hypothesis; preserve all runs.
+
 ## 2026-11-21 JuSubin Project B D5 GaN quantum-barrier 6/7/8nm selected (USER DECISION; 6/7 SUCCESS USER-REPORTED)
 - NEW PRIORITY supersedes 2026-11-20 proposed but unrun B trap-sigma sweep: compare Wu D5 (5nm sidewall damage) GaN QB widths 0.008um existing baseline versus Claude-authored 0.007 and 0.006um school nodes. User reports 6nm and 7nm cases succeeded; actual node IDs, final logs, exact school source/PP and 5V terminal evidence NOT supplied to ChatGPT. No code/solver or school run executed by ChatGPT.
 - Previous model had 5 GaN QB and 4 InGaN QWs of 3nm each (52/47/42nm total MQW if all QB varied). MUST check school effective SDE, not assume past GitHub candidate matches Claude D5.

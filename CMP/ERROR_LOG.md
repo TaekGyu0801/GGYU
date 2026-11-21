@@ -1,3 +1,8 @@
+## 2026-11-21 JuSubin Claude D5 Project B QB6 SVisual red cells (OBSERVED SCREENSHOT / ROOT CAUSE UNRESOLVED)
+- User SWB screenshot of parameter grid: tQB=0.006um (6nm), NtSide=0 row1 SVisual red; tQB=0.006um, NtSide=1e18 row2 SVisual red. Other rows include tQB=0.007um, NtSide=1e18 row14 SVisual yellow (not evidence of final success). Columns Vstop5, TrapEt0.75, TrapSigmaN/P1e-15 shown. SWB grid row indices are NOT tool node IDs.
+- This screenshot supports SVisual failure/status indication, NOT SDevice numerical failure or specific cause. Need actual corresponding n*_vis.err/.out/pp script or SVisual Job Output first error and upstream SDevice n*_des.tdr/.plt existence. Possible Tcl stale dataset path/node macros/changed QW coordinates are hypotheses only.
+- NO school code edited. Do not rerun SDE/SDevice before finding first SVisual error; first retrieve red SVisual node's log and effective Tcl.
+
 ## 2026-11-20 D50 revised A/B failed according to JuSubin; D5 rollback for deadlines (USER-REPORTED / ERROR DETAILS UNVERIFIED)
 - User reports all newly changed A/B cases with 50nm sidewall Damage failed. No new full n*.err/out/log or ending bias shown for each project in this turn. Do not claim D50 geometry is inherently non-convergent or 50nm structurally unphysical. Earlier observed errors include incomplete pasted SDE and pp6_des.cmd truncated at EOF, i.e. source/preprocess defects.
 - Decision: pause D50 runs; retain artifacts unchanged. Prior Wu10um 5nm TrapON/OFF school baseline had 5V results and will be near-term starting point. Proposed A/B minimal SWB-macro trap parameter sensitivity, not executed. Verify control completion again before comparisons.

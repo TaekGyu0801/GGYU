@@ -1,3 +1,7 @@
+## 2026-11-21 JuSubin Project B QB6 SVisual error reported (SCREENSHOT OBSERVED; CAUSE UNKNOWN)
+- School SWB parameter grid screenshot shows both tQB=0.006um NtSide0 and NtSide1e18 rows have red SVisual cells. tQB=0.007um NtSide1e18 SVisual is yellow; no verified normal completion from color alone. Existing user report 'QB6/7 succeeded' likely refers to upstream SDE/SDevice but 5V status still needs logs.
+- The screenshot shows Vstop5, TrapEt0.75, TrapSigmaN/P1e-15 and SWB rows only; do not assume row number equals node ID. Need open red SVisual node's Job Output .err/.out and first Tcl exception, then verify n*_des.tdr/.plt input path and relevant PP script. No source patch or simulation run yet.
+
 ## 2026-11-21 JuSubin Project B D5 GaN-QB thickness comparison selected (USER-REPORTED SCHOOL RESULTS / LOG UNVERIFIED)
 - User reports Claude-built Project B with bilateral 5nm Damage was run; QB tQB=0.006um (6nm) and 0.007um (7nm) nodes succeeded. Exact node IDs, terminal output and source have NOT been supplied to GPT; record as USER-REPORTED, NOT assistant-verified.
 - User SELECTS Project B final three conditions: legacy working Wu D5 baseline QB0.008um (8nm) versus Claude D5 QB0.007 and 0.006um. Supersedes near-term B cross-section-only sensitivity proposal of 2026-11-20; preserves old B1/BNULL and D50 attempts.

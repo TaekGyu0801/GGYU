@@ -1,3 +1,8 @@
+## 2026-11-21 JuSubin SVisual1 source inspected for QB6 failure (USER-SUPPLIED SOURCE / ROOT CAUSE UNRESOLVED)
+- User supplied full 10um WU2023PHY SVisual1 Tcl; it only reads @plot@ SDevice PLT and terminal InnerVoltage/TotalCurrent, builds IV/JV and CSV with Wmesa10. It has NO explicit QB thickness or QW coordinate selection, so earlier spatial-location hypothesis does not fit this SVisual1.
+- GitHub candidate SVisual1 matches presented content in behavior, but school preprocessed input and actual failing SVisual job outputs not seen. User reports QB7 SVisual succeeded; screenshot status alone was not sufficient. Suspect dataset/macro/path/variable/export only as hypotheses pending red QB6 SVisual first error.
+- No changes to school solver, SVisual or baseline by assistant; next read failing SVisual .err/.out, PP input path, existing SDevice PLT and endpoint 5V.
+
 ## 2026-11-21 JuSubin Project B QB6 SVisual error reported (SCREENSHOT OBSERVED; CAUSE UNKNOWN)
 - School SWB parameter grid screenshot shows both tQB=0.006um NtSide0 and NtSide1e18 rows have red SVisual cells. tQB=0.007um NtSide1e18 SVisual is yellow; no verified normal completion from color alone. Existing user report 'QB6/7 succeeded' likely refers to upstream SDE/SDevice but 5V status still needs logs.
 - The screenshot shows Vstop5, TrapEt0.75, TrapSigmaN/P1e-15 and SWB rows only; do not assume row number equals node ID. Need open red SVisual node's Job Output .err/.out and first Tcl exception, then verify n*_des.tdr/.plt input path and relevant PP script. No source patch or simulation run yet.

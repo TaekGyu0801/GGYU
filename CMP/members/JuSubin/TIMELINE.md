@@ -1,3 +1,10 @@
+## 2026-11-21 JuSubin Project B D5 GaN-QB thickness comparison selected (USER-REPORTED SCHOOL RESULTS / LOG UNVERIFIED)
+- User reports Claude-built Project B with bilateral 5nm Damage was run; QB tQB=0.006um (6nm) and 0.007um (7nm) nodes succeeded. Exact node IDs, terminal output and source have NOT been supplied to GPT; record as USER-REPORTED, NOT assistant-verified.
+- User SELECTS Project B final three conditions: legacy working Wu D5 baseline QB0.008um (8nm) versus Claude D5 QB0.007 and 0.006um. Supersedes near-term B cross-section-only sensitivity proposal of 2026-11-20; preserves old B1/BNULL and D50 attempts.
+- Research goal: minimal verification, no further optimization first. Check B6/B7/B8 effective parameter mapping and 5V terminal Curve trace finished; compare actual SDE/PP/SDevice/macro mesh, ensure only QB changes and 5nm Damage, NtSide, Et, sigmas, solver, contacts, QWs held; five QB and four QWs expected from previous design must be verified in school source.
+- Next compare I-V curves and same-injected-current absolute integrated 4QW RadiativeRecombination and damaged-zone trap-related losses using moving region names (not fixed coordinates), check AreaFactor/normalization. Do not equate absolute Radiative changes or eGap-only with IQE.
+- No school files, raw logs or Claude full source supplied; no code edited or additional school simulation launched by ChatGPT.
+
 ## 2026-11-20 JuSubin returns to working Wu 10um D5; minimum-change A/B pilot proposed (USER DECISION / PROPOSED)
 - User reports all new 50nm damaged-region A/B runs failed and deadline is near. Explicit decision: stop D50 execution and return to Wu 10um damaged-region width **5nm** for near-term work. Do not imply all D50 failures are physical or convergence failures: existing observed A SDE and SDevice commands were truncated; full school statuses not newly supplied.
 - Prior 2026-11-19 D50/H-edge/QB6 candidates remain archived and unverified on school. Protect existing completed D5 n21 TrapOFF / n25 TrapON results and actual school source; do not overwrite in place. GH candidate != school final source.

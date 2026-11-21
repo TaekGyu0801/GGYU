@@ -1,3 +1,7 @@
+## 2026-11-21 JuSubin reports blank QB6 SVisual .err/.out viewer (USER-REPORTED, UNRESOLVED)
+- User says SVisual red node .err and .out views are blank. Actual filesystem existence/size not checked; do not infer proof of empty files or a parser-specific root cause.
+- First check n*_vis.* and pp*_vis.* presence/sizes/times in actual school project, and upstream n*_des.plt. If no actual logs check scheduler/preprocessing/job state; no SDevice rerun, no blind source rewrite.
+
 ## 2026-11-21 JuSubin SVisual1 source inspected for QB6 failure (USER-SUPPLIED SOURCE / ROOT CAUSE UNRESOLVED)
 - User supplied full 10um WU2023PHY SVisual1 Tcl; it only reads @plot@ SDevice PLT and terminal InnerVoltage/TotalCurrent, builds IV/JV and CSV with Wmesa10. It has NO explicit QB thickness or QW coordinate selection, so earlier spatial-location hypothesis does not fit this SVisual1.
 - GitHub candidate SVisual1 matches presented content in behavior, but school preprocessed input and actual failing SVisual job outputs not seen. User reports QB7 SVisual succeeded; screenshot status alone was not sufficient. Suspect dataset/macro/path/variable/export only as hypotheses pending red QB6 SVisual first error.

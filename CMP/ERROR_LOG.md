@@ -1,3 +1,8 @@
+## 2026-11-21 JuSubin QB6 SVisual .err/.out reported blank (USER-REPORTED GUI / FILE EXISTENCE UNVERIFIED)
+- User states SWB error and output views for red QB6 SVisual node display nothing (empty). This is NOT yet proof that actual files exist and are zero bytes, nor that Tcl never started.
+- Red SVisual status earlier seen for both QB=.006um NtSide=0/1e18, QB=.007um NtSide1e18 was yellow. SVisual1 code has no QW coordinates and reads PLT through @plot@.
+- Root cause remains UNRESOLVED. First read-only inspect actual school Project B directory for n*_vis.* / pp*_vis.* file existence, sizes, recent timestamps, and n*_des.plt; then inspect SWB scheduler/job/preprocessing if no files or empty files. Keep SDE/SDevice unchanged. No new school run or code edit.
+
 ## 2026-11-21 JuSubin supplied actual SVisual1 Tcl text for QB6 red status (SOURCE OBSERVED / DIAGNOSIS UNRESOLVED)
 - User pasted SVisual1 script headed CMP_BASELINE_3.2.0_WU2023PHY (10um 2D); text is consistent with GitHub candidate CMP/tcad/candidates/CMP_BASELINE_3.2.0_WU2023PHY/svisual1_iv.tcl. Actual PP and target node's runtime Tcl are not yet checked.
 - Script does not contain tQB or any QW spatial coordinates. Therefore tQB-dependent hard-coded QW-coordinate failure is NOT supported for THIS SVisual1. Script uses #setdep @previous@, load_file "@plot@", get_variable_data "anode InnerVoltage" and "anode TotalCurrent", then J calculation and plots/CSV file exports.

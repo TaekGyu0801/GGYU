@@ -1,3 +1,10 @@
+## 2026-11-21 JuSubin → next AI: Claude D5 QB6/7 succeeded per user; results triage (USER-REPORTED, PP/LOG UNRESOLVED)
+- Worker: 주수빈; AI: ChatGPT. User now chooses Project B quantum barrier (QB) widths 6nm, 7nm and existing 8nm Wu baseline. Claude created school D5 Project B, user reports QB6 and QB7 nodes succeeded; exact node IDs and logs not provided. This REPLACES Nov20 proposed B cross-section sweep, not an executed result of it. Existing D50 and B1/BNULL preserved.
+- Blocker: Claude-authored actual 5nm School SDE/SDevice/PAR, preprocessed mapping and finished 5V n*.out/log not available; historical 8nm baseline equivalence unresolved. Do not assume GitHub D50 candidate is school source.
+- Already known: GitHub historic Wu D5 baseline displayed 5V rows; before QB6/7 user had D50 school source truncation errors, not directly relevant to new school D5 successes.
+- Next FIRST: read-only identify 6/7/8nm nodes and their 5V Curve trace finished, effective tQB and TrapON values; confirm 5 QB, 4 QW, Damage 5nm, physics/contacts/mesh policies/AreaFactor match. Then existing-data IV and same-current 4QW Rrad, damaged trap-integral comparison. Re-select QW region after thickness shift.
+- Preserve: original Wu D5 baseline source, 5nm damage and common trap physics/contact; no source edits or new runs unless failure evidence demands. No school files accessed by this GPT.
+
 ## 2026-11-20 JuSubin urgent switch from failed D50 to D5 (USER DECISION / PROPOSED HANDOFF)
 - Worker 주수빈, ChatGPT; user says recent D50 A/B projects all errored and time is short. 50nm work suspended for near-term; preserve files/logs, do not conflate school PP/SDE copy truncation with actual numerical divergence.
 - Use **actual successful school Wu10um bilateral 5nm Damaged Region D5 n21 OFF/n25 ON baseline**, not GitHub unrun 3.2 candidate or new D50 scripts. Get school exact SDE/SDevice/par/PP/mesh/5V completion and SWB macro values read-only first. No school files modified by this AI.

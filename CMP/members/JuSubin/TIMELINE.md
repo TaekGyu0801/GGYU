@@ -1,3 +1,8 @@
+## 2026-11-21 JuSubin clarifies QB6.5nm (not QB6nm) SDevice run issue (OBSERVED SCREENSHOT)
+- Screenshot: tQB0.0065um NtSide1e18 SDevice node n128 RED, NtSide0 n122 YELLOW. User says only 0.0065 case did not run; earlier 0.006 and 0.007 are successful per user report.
+- Actual n128_des log/err/out and last 5V status absent; underlying cause UNRESOLVED. Avoid claiming intrinsic thickness-induced failure. Fast study still compares 0.006,0.007,0.008um; don't waste deadline on 0.0065 unless necessary.
+- No school source edit or simulation by ChatGPT; read n128 first if diagnosing.
+
 ## 2026-11-21 JuSubin reports blank QB6 SVisual .err/.out viewer (USER-REPORTED, UNRESOLVED)
 - User says SVisual red node .err and .out views are blank. Actual filesystem existence/size not checked; do not infer proof of empty files or a parser-specific root cause.
 - First check n*_vis.* and pp*_vis.* presence/sizes/times in actual school project, and upstream n*_des.plt. If no actual logs check scheduler/preprocessing/job state; no SDevice rerun, no blind source rewrite.

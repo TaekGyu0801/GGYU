@@ -1,3 +1,8 @@
+## 2026-11-21 JuSubin Project B 0.0065um SDevice red node n128 (SCREENSHOT OBSERVED / ROOT CAUSE UNRESOLVED)
+- User corrected earlier mention 0.006um to **0.0065um (6.5nm)**. SWB screenshot shows tQB=.0065, NtSide=0 associated SDevice node n122 YELLOW, NtSide=1e18 associated node n128 RED (under last parameter column TrapSigmaP). Vstop5, TrapEt=.75, TrapSigmaN/P1e-15 shown. Display colors do not establish Newton/MinStep vs preprocessing/run failure; actual n128_des.{out,err,log} not yet supplied.
+- User previously reports tQB=.006 and .007 cases successful and SVisual rerun success. Non-monotonic numerical convergence is a hypothesis, not root cause or intrinsic physical impossibility at 6.5nm.
+- Next FIRST: read-only inspect n128_des.out/err/log tail and last anode voltage, n122 if needed; do not change solver/mesh or rerun valid 6/7/8nm cases. Current three-condition Project B remains 6/7/8nm. No school files changed by GPT.
+
 ## 2026-11-21 JuSubin QB6 SVisual .err/.out reported blank (USER-REPORTED GUI / FILE EXISTENCE UNVERIFIED)
 - User states SWB error and output views for red QB6 SVisual node display nothing (empty). This is NOT yet proof that actual files exist and are zero bytes, nor that Tcl never started.
 - Red SVisual status earlier seen for both QB=.006um NtSide=0/1e18, QB=.007um NtSide1e18 was yellow. SVisual1 code has no QW coordinates and reads PLT through @plot@.

@@ -1,3 +1,6 @@
+## 2026-11-21 JuSubin Project B QB6 postprocessing blocker (OBSERVED SCREENSHOT; UNRESOLVED)
+- SWB screenshot: QB .006um cases NtSide=0 and 1e18 BOTH red at SVisual; QB .007um NtSide=1e18 yellow at SVisual. This does NOT alone prove SDevice failed or Tcl root cause. Source/error output not supplied. Check exact SVisual job node .err/.out and PP input references, verify upstream completed 5V and files exist before any rerun. Three-condition QB6/7/8 study remains selected.
+
 ## 2026-11-21 Project B PRIMARY JuSubin D5 QB thickness 6/7/8nm (USER DECISION / USER-REPORTED SUCCESSES)
 - User reports Claude-authored 5nm Damage Project B worked for tQB=.006 and .007um nodes. Exact node IDs, original source and final 5V Curve trace finished logs not supplied; do NOT claim assistant-verified 5V completion. Compare with historical Wu D5 .008um baseline; same-macro/physics/mesh/source equivalence to Claude runs UNRESOLVED.
 - User selects three-condition QB thickness comparison (6,7,8nm) as Project B and prioritizes immediate results. Replaces 2026-11-20 B trap cross-section-only proposal for active work (no evidence that proposal ran). Project A unchanged; preserve B1/BNULL, D50 and older analyses.

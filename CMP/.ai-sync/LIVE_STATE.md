@@ -1,3 +1,10 @@
+## 2026-11-21 JuSubin Project B D5 GaN quantum-barrier 6/7/8nm selected (USER DECISION; 6/7 SUCCESS USER-REPORTED)
+- NEW PRIORITY supersedes 2026-11-20 proposed but unrun B trap-sigma sweep: compare Wu D5 (5nm sidewall damage) GaN QB widths 0.008um existing baseline versus Claude-authored 0.007 and 0.006um school nodes. User reports 6nm and 7nm cases succeeded; actual node IDs, final logs, exact school source/PP and 5V terminal evidence NOT supplied to ChatGPT. No code/solver or school run executed by ChatGPT.
+- Previous model had 5 GaN QB and 4 InGaN QWs of 3nm each (52/47/42nm total MQW if all QB varied). MUST check school effective SDE, not assume past GitHub candidate matches Claude D5.
+- Critical 2 gates: (1) confirm exact tQB node mapping and 5V Curve trace finished for each, matched Trap ON settings; (2) confirm identical 5nm damaged zone, trap Nt/Et/sigmas, QWs, physics, doping, contact, solver, normalization/AreaFactor and comparable mesh policies except QB geometry. Historic baseline 8nm source equivalence to Claude nodes UNRESOLVED.
+- Then reuse run data: overlay I-V, obtain currents at 5V and same-current voltage, 4-QW integrated RadiativeRecombination and damage-region recombination on current geometry using region names, validate area/current normalization. Do NOT call 5V absolute Rrad alone IQE improvement.
+- D50 remains deferred, old B AlGaN tests preserved; Project A previous plan unchanged. User under time pressure: no new sweep unless these gates fail.
+
 ## 2026-11-20 JuSubin high-priority change: stop D50 and resume 5nm working Wu Baseline (USER DECISION)
 - User reports all 50nm Damage redesigned A/B projects failed; time running short. 50nm D50 is suspended for immediate deliverables. This is a scheduling decision and user-reported run failure, not confirmed intrinsic 50nm physics failure; previously observed A source and SDevice PP were truncated.
 - Near-term common baseline: preserve and clone historically successful **Wu10um D5** sidewall 5nm TrapON/TrapOFF, 5V; confirm actual school final source/PP/normal exit. Do not overwrite old source, D50 candidates, or prior A/B data.

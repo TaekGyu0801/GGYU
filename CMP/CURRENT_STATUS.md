@@ -1,3 +1,7 @@
+## 2026-11-21 JuSubin QB6.5nm n128 convergence failure confirmed from school log screenshot (OBSERVED)
+- SDevice n128 (tQB=0.0065um NtSide1e18) school log: 35 Newton iterations exceeded, cutback attempted, Step-size less than MinStep 9.1004e-11; final plot TDR written but 5V completion not shown. Last successful bias unknown from screenshot. No conclusion about intrinsic physical impossibility.
+- Three-condition B research priority still user-reported successful QB6/7 and historical QB8 with 5nm damage; validate their 5V termination and model comparability, then I-V / matched-current 4QW Radiative and sidewall trap metrics. No change to school source/solver.
+
 ## 2026-11-21 JuSubin Project B QB6 postprocessing blocker (OBSERVED SCREENSHOT; UNRESOLVED)
 - SWB screenshot: QB .006um cases NtSide=0 and 1e18 BOTH red at SVisual; QB .007um NtSide=1e18 yellow at SVisual. This does NOT alone prove SDevice failed or Tcl root cause. Source/error output not supplied. Check exact SVisual job node .err/.out and PP input references, verify upstream completed 5V and files exist before any rerun. Three-condition QB6/7/8 study remains selected.
 

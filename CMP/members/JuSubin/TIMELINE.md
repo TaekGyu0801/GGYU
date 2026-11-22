@@ -1,3 +1,8 @@
+## 2026-11-22 JuSubin explicitly confirms 9.869850e15 is historical QB8nm Baseline TrapON (USER SOURCE LABEL CONFIRMED)
+- User confirms the latest pasted SVisual `Dataset n6_des`, `Field RadiativeRecombination`, Total Integral `9.869850e15 s^-1 um^-1` is the **QB0.008um (8nm) historical Baseline Trap ON** result, NOT Project B QB6 despite identical dataset basename.
+- Therefore record source condition **USER-CONFIRMED**, not merely inferred. Actual project full path, TDR bias=5V and effective cross-project solver/mesh/AreaFactor still not independently audited; leave those flags UNRESOLVED.
+- Remaining task: obtain RadiativeRecombination instead of DopingConcentration for QB7 `n100_des` and QB7.5 `n114_des` with all 12 QW regions.
+
 ## 2026-11-22 JuSubin historical QB8nm TrapON 4QW RadiativeRecombination data received (USER SVisual RAW OBSERVED / SOURCE & 5V TDR UNVERIFIED)
 - User labels newly pasted SVisual `Dataset: n6_des` as *historical Wu QB0.008um Trap ON baseline*, **NOT** the earlier Claude Project B QB0.006um `n6_des`. Same dataset basename in two different projects may be valid; FULL SOURCE PROJECT PATH NOT YET SUPPLIED. Do not conflate.
 - Field `RadiativeRecombination`, 12 InGaN regions (Clean/DmgL/DmgR × QW1–QW4), printed Total Integral **9.869850e15 [s^-1*um^-1]**, Total Domain **0.1199999um²**, consistent with 4 × 3nm × 10um. User-provided values, no direct original TDR inspection and bias=5V NOT independently confirmed.

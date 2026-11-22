@@ -1,3 +1,8 @@
+## 2026-11-22 JuSubin Project B QB6nm TrapON 4QW RadiativeRecombination integral (OBSERVED USER-PASTED SVISUAL)
+- `n6_des`: 12 InGaN Region Field Integration values (Clean/DmgL/DmgR × QW1-4) received, all included. Reported total 9.770910e15 s^-1 um^-1; domain .1199999um² agrees 4×3nm×10um. QW1 8.711726910e11 (0.008916%); QW2 6.909082395e12 (0.070711%); QW3 3.781344620e14 (3.870002%); QW4 9.384995625e15 (96.050371%). QW4 dominates apparent field-integrated radiative output. Small summed-vs-total residual due to printed precision.
+- NOTE: SVisual output does not contain explicit 5V bias indicator; whether this TDR is 5.000V is not independently verified. Physics/AreaFactor & historical QB8 cross-project comparison remain unresolved; radiative integral is NOT direct IQE.
+- NEXT: QB7, QB7.5 and QB8 TrapON 12-region 5V integrals, equal-region and normalization check, 8nm-referenced numerical comparisons, then damaged-region eGapStates integration. No school source change.
+
 ## 2026-11-22 JuSubin Project B Trap ON four-condition IV raw CSV analysis (OBSERVED USER-UPLOADED DATA)
 - Four CSVs parsed: QB6nm_TrapON.csv Project B n16 (109 points), QB7nm_TrapON.csv Project B n101 (122 points), QB7p5nm_TrapON.csv Project B n115 (110 points), QB8nm_Baseline_TrapON.csv historical baseline separate project n16 (172 points). All include 5.000 V rows. Data file unit labels are explicitly ASSUMED A/um and J(10um), not independently verified.
 - 5V raw Current: QB6 2.552630921170e-03, QB7 2.486686590460e-03, QB7.5 2.798941669710e-03, QB8 baseline 2.566397093440e-03.

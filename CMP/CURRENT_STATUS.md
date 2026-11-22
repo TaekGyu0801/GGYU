@@ -1,3 +1,8 @@
+## 2026-11-22 JuSubin Project B fast results plan; n142 QB8 Trap ON user reports active calculation (USER-REPORTED / NOT FINISHED)
+- User states n142 (QB .008um, NtSide1e18) IS currently calculating. Earlier shell showed last anode0V/no exit, consistent with uncompleted snapshot, NOT evidence of stalled/failed run. Verified QB8 Trap OFF n136 at 5V in 1454.46s; do not substitute its current for TrapON.
+- Deadline research decision: only QB6/7/8 TrapON primary, optional QB7.5 if already full5V; minimum three metrics: IV & 5V anode TotalCurrent; 4QW summed RadiativeRecombination integrals; combined left/right damaged-region eGapStatesRecombination integrals. Must verify SDevice full 5V finish, matching physics/trap/damage/macro/units, region mappings after QB shifts.
+- No numerical efficiency improvement proven. At 5V differences may reflect injection level; matched-current comparison desirable if existing results permit, no new runs first. n142 final output pending.
+
 ## 2026-11-22 JuSubin Project B QB8 OFF finished; ON not yet confirmed (OBSERVED school terminal)
 - Actual school /users/student/team3/JSB/CMP_3V/CMP_B_5nm_3V n136=QB8 NtSide0 TrapOFF: Curve trace finished, final anode5V, wallclock1454.46s (24m14s), raw conduction last column2.569E-03 (unit unverified). This is a confirmed numerical 5V sweep, not an optical/efficiency result.
 - n142=QB8 NtSide1e18 TrapON: no finished message nor terminal wallclock in supplied grep output; final logged anode0V. Process status and actual latest out/err unresolved. Need read-only tail of n142_des.out/err/log and scheduler status before deciding whether active, license waiting or early failure.

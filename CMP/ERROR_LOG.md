@@ -1,3 +1,8 @@
+## 2026-11-22 JuSubin ProjectB QB7 n100 SVisual extraction field mismatch (OBSERVED, RE-EXTRACT REQUIRED)
+- User pasted actual SVisual output for dataset `n100_des` (user-labeled QB0.007um, Trap ON) but field is `DopingConcentration`, NOT requested `RadiativeRecombination`.
+- All 12 QW regions present: Clean_QW1..4, DmgL_QW1..4, DmgR_QW1..4. Printed total domain 0.1199999um² matches 4×3nm×10um. DopingConcentration total integral=0um^-1; **this is not radiative recombination zero**, and no QB7 optical/recombination number is available yet.
+- NEXT: user switches SVisual Field to RadiativeRecombination on same n100_des, keeps exact 12 selections, reruns Field Integration and sends integral values [s^-1*um^-1]. Verify 5V TDR bias; no code/simulation changes.
+
 ## 2026-11-22 JuSubin CSV packaging command fails due to tcsh multiline single-quote input (OBSERVED USER TERMINAL)
 - User ran previously suggested multi-line python3 -c single-quoted script at school C-shell-like prompt. First line failed "Unmatched '."; subsequent Python lines were interpreted as shell commands, generating "Command not found", "Badly placed ()'s.", and "if: Expression Syntax."
 - This is SHELL QUOTING/PRESENTATION issue, not a Sentaurus or CSV content failure. Four CSVs previously verified by shell find: Project B QB6 Node16, QB7 Node101, QB7.5 Node115, historical 8nm baseline Node16; paths distinct despite repeated node index.

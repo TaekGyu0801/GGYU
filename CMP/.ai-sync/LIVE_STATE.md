@@ -1,3 +1,6 @@
+## 2026-11-22 JuSubin ProjectB QB6 TrapON sidewall QW eGapStates integral observed (USER SVISUAL)
+- `n6_des` field `eGapStatesRecombination` 8 damaged QW regions, reported Total Integral **3.685298e13 s^-1um^-1**, Total Domain **1.200013e-4 um²** (matches eight 5nm×3nm strips). QW1 2.180919e12 (5.92%), QW2 1.0473137e12 (2.84%), QW3 9.837791e12 (26.69%), QW4 2.378695e13 (64.55%). Raw 8 rows saved `CMP/results/PROJECTB_QB6_TRAPON_EGAP_DMGQW_20261122.csv`.
+- 5V TDR stored bias not directly visible; effective school physics/AreaFactor and cross-project equivalence UNRESOLVED. Selected eight damaged QW regions are NOT entire sidewall and trap-channel total is not total net nonradiative recombination or IQE. NEXT identical eight-region 7/7.5/8nm TrapON extraction; 8nm is historical Wu independent project.
 ## 2026-11-22 JuSubin ProjectB 4QW Radiative integrals four conditions (OBSERVED USER SVISUAL / COMPARABILITY UNRESOLVED)
 - QB6/QB7/QB7.5/QB8(historical Wu) TrapON 12-QW-region integrals now collected: 9.770910e15, 9.830196e15, 1.050204e16, 9.869850e15 [s^-1 um^-1]. Relative to historical QB8: -1.0024%, -0.4018%, +6.4053%, 0%. QB7.5 highest reported integral.
 - QW4 shares: QB6 96.0504%, QB7 93.6707%, QB7.5 97.9335%, QB8 91.1002%. Area each ~0.120um² (Clean+DmgL+DmgR × 4×3nm QWs). Data stored `CMP/results/PROJECTB_QB_RADIATIVE_TRAPON_20261122.csv`.

@@ -1,3 +1,9 @@
+## 2026-11-22 JuSubin Project B QB7.5 n114 wrong SVisual field: doping rather than radiative (OBSERVED)
+- User-pasted `n114_des` Field Integration uses `DopingConcentration`, **NOT** `RadiativeRecombination`.
+- All 12 QW regions Clean_QW1..4, DmgL_QW1..4, DmgR_QW1..4 selected; total domain `1.200002e-01 um^2` consistent with 4 × 3nm QWs × 10um lateral device. Total doping integral `0.000000e+00 um^-1`, NOT evidence of zero radiative recombination.
+- Status: QB7.5 radiative integral pending correct field choice. QB7 n100 previously has same field mistake, QB6 n6 radiative total 9.770910e15 s^-1 um^-1 observed, QB8 historical Wu baseline radiative pending. Target TDR 5V must be checked. No school code or run changed.
+- NEXT: Switch n114 (and n100) SVisual field to RadiativeRecombination, re-integrate same 12 regions and capture full 2D output [s^-1 um^-1].
+
 ## 2026-11-22 JuSubin ProjectB QB7 n100 SVisual extraction field mismatch (OBSERVED, RE-EXTRACT REQUIRED)
 - User pasted actual SVisual output for dataset `n100_des` (user-labeled QB0.007um, Trap ON) but field is `DopingConcentration`, NOT requested `RadiativeRecombination`.
 - All 12 QW regions present: Clean_QW1..4, DmgL_QW1..4, DmgR_QW1..4. Printed total domain 0.1199999um² matches 4×3nm×10um. DopingConcentration total integral=0um^-1; **this is not radiative recombination zero**, and no QB7 optical/recombination number is available yet.

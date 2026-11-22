@@ -1,0 +1,13 @@
+# Provenance: user-pasted SVisual Field Integration, QB6nm Trap ON, n6_des, date 2026-11-22 KST
+# Field: eGapStatesRecombination; unit: s^-1*um^-1; area: um^2. Only 8 damaged QW regions, not all device sidewall regions.
+# Total Integral reported 3.685298e13 s^-1*um^-1; Total Domain reported 1.200013e-04 um^2; bias 5V TDR not independently proven by output.
+# Actual school original mesh, pp/solver and full project paths unverified; do not claim IQE or net nonradiative flux.
+qb_nm,trap,dataset,region,integral_s_inv_um_inv,domain_um2
+6,ON,n6_des,DmgL_QW1,1.089869e12,1.499996e-05
+6,ON,n6_des,DmgL_QW2,5.238724e11,1.499996e-05
+6,ON,n6_des,DmgL_QW3,4.918743e12,1.500003e-05
+6,ON,n6_des,DmgL_QW4,1.189348e13,1.500003e-05
+6,ON,n6_des,DmgR_QW1,1.091050e12,1.500030e-05
+6,ON,n6_des,DmgR_QW2,5.234413e11,1.500030e-05
+6,ON,n6_des,DmgR_QW3,4.919048e12,1.500037e-05
+6,ON,n6_des,DmgR_QW4,1.189347e13,1.500037e-05

@@ -1,3 +1,9 @@
+## 2026-11-22 JuSubin 4-condition RadiativeRecombination data now collected, sidewall trap channel NEXT
+1. Four QB TrapON `RadiativeRecombination` 12-QW-region integrals COMPLETE (user-provided data), CSV saved `CMP/results/PROJECTB_QB_RADIATIVE_TRAPON_20261122.csv`: 6nm9.770910e15, 7nm9.830196e15, 7.5nm1.050204e16, historical8nm9.869850e15 [s^-1um^-1]. Provisional 8nm-relative: -1.0024% / -0.4018% / +6.4053%.
+2. Verify each dataset's actual TDR saved bias=5V, matching NtSide TrapON and 2D AreaFactor; verify historical Wu baseline path/project vs current Claude ProjectB sources/mesh/solver. IV CSV 5V endpoints alone do not prove 5V TDR.
+3. Extract `eGapStatesRecombination` from **damaged QW regions only** DmgL_QW1–4 and DmgR_QW1–4, or predefine other damage regions only if explicitly explaining alternate scope, for all 4 conditions. Keep region definitions and normalization identical, report sum and historical reference change. Distinguish eGapStates trap-mediated term from net nonradiative recombination and IQE; no double counting.
+4. Add presentation-ready 5V current vs 4QW radiative data with cross-project caveat; do not claim QB7.5 produces higher IQE solely from fixed-bias integrals. No more TCAD runs proposed unless required for evidence.
+
 ## 2026-11-22 JuSubin ProjectB radiative data triage — QB6 + historical QB8 RAW observed
 1. Received true RadiativeRecombination 12-region totals: ProjectB QB6 `n6_des` 9.770910e15; historical Wu QB8 baseline `n6_des` 9.869850e15 [s^-1 um^-1], both user-pasted. **Same filename but purportedly DISTINCT projects**; verify absolute source paths / file hashes, 5V TDR bias and effective trap and solver/mesh/normalization before treating as comparable.
 2. Preliminary QB6 vs historical QB8 at as-yet-unverified bias: -1.002446846% reported total integrated radiative signal; NOT proof of thickness-caused optical or IQE improvement/loss.

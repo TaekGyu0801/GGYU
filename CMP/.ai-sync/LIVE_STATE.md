@@ -1,3 +1,8 @@
+## 2026-11-22 JuSubin n142 QB8 Trap ON is running per user; deadline Project B metric freeze (USER UPDATE / PROPOSED EXTRACTIONS)
+- Correction to prior unresolved status: user says n142 currently calculating. No final 5V evidence yet. n136 QB8 Trap OFF already completed 5V in 1454.46s; not comparable to TrapON QB6/7. No rerun, no school code edit.
+- Project B primary comparison QB thickness6,7,8nm (all 5nm Damage, Trap ON NtSide1e18); optional 7.5nm only if 5V completed under identical settings. Do not use non-converged 6.5nm as performance sample.
+- Essential metrics: SVisual1 IV and I5V; 4QW absolute RadiativeRecombination field-integral sum; both bilateral damaged regions' eGapStatesRecombination integral sum. Extract by region names/actual shifted QW geometry, consistent 2D AreaFactor/current units. Verify Curve trace finished, common physics/traps. Presentation: IV overlay, two bar comparisons, baseline-referenced table. Same-current interpretation if possible, no ungrounded IQE claim. Await user's n142 results; no background monitoring.
+
 ## 2026-11-22 JuSubin QB8 same-ProjectB control: n136 OFF completed 5V in 1454.46s; n142 ON unknown (SCHOOL LOG OBSERVED)
 - User shell in /users/student/team3/JSB/CMP_3V/CMP_B_5nm_3V: n136 (tQB=.008um, NtSide0) output Curve trace finished, final anode5.000E+00, wallclock1454.46s (24m14s), raw total conduction current column2.569E-03; current normalization not verified.
 - n142 (tQB=.008um, NtSide1e18) shows last anode0V, no finished or wallclock terminal message; could be active / queued / waiting for license / interrupted. No reliable runtime estimate or failure diagnosis. Next inspect n142 out/err tail and scheduler status.

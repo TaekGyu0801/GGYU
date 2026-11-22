@@ -1,3 +1,8 @@
+## 2026-11-22 JuSubin Project B 4QW radiative postprocessing follow-up (QB6 USER SVISUAL OUTPUT RECEIVED)
+1. QB6 TrapON `n6_des` has user-observed 12-region RadiativeRecombination integral total 9.770910e15 s^-1 um^-1, correct 4-QW .1199999um² selected area; QW4 share 96.050%.
+2. Verify that `n6_des` TDR corresponds to target **5V** (this is not explicit in Field Integration paste), then collect matching 5V TrapON 12-region Integrals for QB7 (n100), QB7.5 (n114), and historical Wu QB8 (actual baseline node). Keep full sidewall Clean + DmgL + DmgR on all four QWs.
+3. Make per-QW and four-QW total comparisons vs historical 8nm reference with strict cross-project caveat; check 2D units. Follow with separate eGapStatesRecombination damaged-region integrations. Avoid IQE and causal claims absent matched conditions.
+
 ## 2026-11-22 JuSubin final Project B reference decision: historical Wu D5 QB8 TrapON instead of failed same-project n142 (USER DECISION / CROSS-PROJECT COMPARABILITY UNVERIFIED)
 - User explicitly chooses existing final Wu baseline QB8nm (0.008um) Trap ON results as reference due to deadline; will NOT rerun current Project B QB8 TrapON n142, which was screenshot-observed RED (root cause still unconfirmed). Do NOT replace reference with current Project B QB8 TrapOFF n136.
 - Final exploratory series: historical Wu baseline QB8nm (TrapON), Claude D5 Project B QB7.5nm (n114), QB7nm (n100), QB6nm (n6), all intended NtSide1e18, Vstop5V. New Project B nodes' final 5V Curve trace and source/physics equivalence require evidence, and historical Wu D5 QB8 source/effective pp/mesh/solver/contacts/AreaFactor equivalence with Claude cases remains UNRESOLVED. QB6.5nm n128 MinStep failure excluded but retained.

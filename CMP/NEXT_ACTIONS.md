@@ -1,3 +1,9 @@
+## 2026-11-22 JuSubin step 3 damaged-QW eGapStatesRecombination ongoing
+1. QB6 TrapON `n6_des` 8-region damaged-QW eGapStates total **3.685298e13 s^-1 um^-1**, domain `1.200013e-04 um²` (user SVisual observed). Raw saved `CMP/results/PROJECTB_QB6_EGAP_TRAPON_20261122.csv`.
+2. Next send QB7 n100, QB7.5 n114, historical Wu QB8 baseline n6 (different project): `Field=eGapStatesRecombination`, region **DmgL_QW1..4 + DmgR_QW1..4 ONLY**, 8 regions, area ≈1.2e-4 um²; do not select `DopingConcentration` or Clean.
+3. Verify effective TDR bias 5V and identical AreaFactor/physics/trap conditions; historical QB8 is separate project. Sum both sides QW-wise and total, calculate QB8-relative changes; avoid interpreting eGapStates alone as actual net nonradiative recombination/IQE.
+4. Present alongside previously completed 4QW radiative and IV comparisons, with scientific limitations.
+
 ## 2026-11-22 JuSubin third metric (eGapStatesRecombination) QB6 DONE, remaining conditions
 1. `QB6 TrapON n6_des` eight damaged-QW eGapStatesRecombination regions observed, Total **3.685298e13 s^-1um^-1**, Area **1.200013e-4um²**. Raw source `CMP/results/PROJECTB_QB6_TRAPON_EGAP_DMGQW_20261122.csv`.
 2. Extract **exact same 8 regions**, DmgL_QW1–4 and DmgR_QW1–4, for QB7 `n100_des`, QB7.5 `n114_des`, historical Wu QB8 TrapON `n6_des` in separate baseline project. Field must be `eGapStatesRecombination`, 2D area ~1.2e-4um², units s^-1um^-1. Do not include Clean QW or whole damage sidewall in this QW-only metric.

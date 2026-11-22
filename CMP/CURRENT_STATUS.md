@@ -1,3 +1,8 @@
+## 2026-11-22 JuSubin Project B QB8 OFF finished; ON not yet confirmed (OBSERVED school terminal)
+- Actual school /users/student/team3/JSB/CMP_3V/CMP_B_5nm_3V n136=QB8 NtSide0 TrapOFF: Curve trace finished, final anode5V, wallclock1454.46s (24m14s), raw conduction last column2.569E-03 (unit unverified). This is a confirmed numerical 5V sweep, not an optical/efficiency result.
+- n142=QB8 NtSide1e18 TrapON: no finished message nor terminal wallclock in supplied grep output; final logged anode0V. Process status and actual latest out/err unresolved. Need read-only tail of n142_des.out/err/log and scheduler status before deciding whether active, license waiting or early failure.
+- Full QB8 Trap ON comparator NOT verified; earlier QB6 and QB7 are user-reported successes. No code edits, new run or measured IQE.
+
 ## 2026-11-21 JuSubin QB6.5nm n128 convergence failure confirmed from school log screenshot (OBSERVED)
 - SDevice n128 (tQB=0.0065um NtSide1e18) school log: 35 Newton iterations exceeded, cutback attempted, Step-size less than MinStep 9.1004e-11; final plot TDR written but 5V completion not shown. Last successful bias unknown from screenshot. No conclusion about intrinsic physical impossibility.
 - Three-condition B research priority still user-reported successful QB6/7 and historical QB8 with 5nm damage; validate their 5V termination and model comparability, then I-V / matched-current 4QW Radiative and sidewall trap metrics. No change to school source/solver.

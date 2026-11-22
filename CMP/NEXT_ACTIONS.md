@@ -1,3 +1,9 @@
+## 2026-11-22 JuSubin ProjectB radiative data triage — QB6 + historical QB8 RAW observed
+1. Received true RadiativeRecombination 12-region totals: ProjectB QB6 `n6_des` 9.770910e15; historical Wu QB8 baseline `n6_des` 9.869850e15 [s^-1 um^-1], both user-pasted. **Same filename but purportedly DISTINCT projects**; verify absolute source paths / file hashes, 5V TDR bias and effective trap and solver/mesh/normalization before treating as comparable.
+2. Preliminary QB6 vs historical QB8 at as-yet-unverified bias: -1.002446846% reported total integrated radiative signal; NOT proof of thickness-caused optical or IQE improvement/loss.
+3. Obtain QB7 `n100_des` and QB7.5 `n114_des` TRUE `RadiativeRecombination` values over all 12 Clean/DmgL/DmgR×QW1..4 regions (their previous submitted field was DopingConcentration=0).
+4. Four-condition integration summary, 5V and 2D AreaFactor checks, later bilateral eGapStatesRecombination. Preserve school code/runs.
+
 ## 2026-11-22 JuSubin Project B 4QW radiative postprocessing follow-up (QB6 USER SVISUAL OUTPUT RECEIVED)
 1. QB6 TrapON `n6_des` has user-observed 12-region RadiativeRecombination integral total 9.770910e15 s^-1 um^-1, correct 4-QW .1199999um² selected area; QW4 share 96.050%.
 2. Verify that `n6_des` TDR corresponds to target **5V** (this is not explicit in Field Integration paste), then collect matching 5V TrapON 12-region Integrals for QB7 (n100), QB7.5 (n114), and historical Wu QB8 (actual baseline node). Keep full sidewall Clean + DmgL + DmgR on all four QWs.

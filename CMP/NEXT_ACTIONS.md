@@ -1,3 +1,8 @@
+## 2026-11-22 JuSubin final step-3 eGapStates extraction: 8nm historical reference pending
+1. User SVisual outputs now have 8-region damaged-QW eGapStates TrapON totals: QB6 `n6_des` **3.685298e13**, QB7 `n100_des` **3.342200e13**, QB7.5 `n114_des` **3.769752e13** [s^-1um^-1]; 7.5 vs 6 +2.29165%, vs 7 +12.79253%. Full raw available `CMP/results/PROJECTB_QB{6,7,7p5}_EGAP_TRAPON_20261122.csv`.
+2. NEXT PRIORITY: historical Wu QB8nm TrapON baseline (separate SWB project, basename `n6_des`) collect 8 region `eGapStatesRecombination` 2D integrations DmgL_QW1..4 and DmgR_QW1..4 only, domain around 1.2e-4 um². Do NOT confuse same basename with QB6 ProjectB n6; verify source folder and saved TDR target 5V.
+3. Build 4-condition QW-by-QW eGap sum/change vs historical QB8 plus two main existing datasets (5V IV CSV, 4QW radiative); keep cross-project solver/mesh/trap/AreaFactor non-equivalence caveat. Do NOT claim net nonradiative/IQE or causation from eGap alone.
+
 ## 2026-11-22 JuSubin damaged QW eGapStatesRecombination comparison underway (QB6 and QB7 observed)
 1. QB6 TrapON `n6_des`: 3.685298e13 s^-1um^-1; QB7 TrapON `n100_des`: 3.342200e13 s^-1um^-1, QB7 minus QB6 -9.30991198%. Each is 8 regions DmgL_QW1..4 + DmgR_QW1..4 and domain ~1.2e-4 um². Raw data now `CMP/results/PROJECTB_QB6_EGAP_TRAPON_20261122.csv`, `CMP/results/PROJECTB_QB7_EGAP_TRAPON_20261122.csv`.
 2. Next request QB7.5 `n114_des` Trap ON and historical Wu QB8 Trap ON `n6_des` (distinct separate project), using **Field eGapStatesRecombination** and **8 damaged QW regions only**; verify TDR 5V and consistent AreaFactor/trap/physics/mesh source before claiming fixed-bias comparisons.

@@ -1,0 +1,13 @@
+# OBSERVED from user-pasted Sentaurus Visual Field Integration, 2026-11-22 KST
+# Dataset n6_des in user-declared QB6nm TrapON ProjectB (NOT identically named historical Wu QB8 baseline n6_des).
+# Field eGapStatesRecombination; selected only DmgL_QW1-4 and DmgR_QW1-4; 2D integral s^-1*um^-1, domain um^2.
+# 5V saved TDR bias not directly verified. This is not net nonradiative recombination or IQE.
+Region,Integral_s-1_um-1,Domain_um2
+DmgL_QW1,1.089869e12,1.499996e-05
+DmgL_QW2,5.238724e11,1.499996e-05
+DmgL_QW3,4.918743e12,1.500003e-05
+DmgL_QW4,1.189348e13,1.500003e-05
+DmgR_QW1,1.091050e12,1.500030e-05
+DmgR_QW2,5.234413e11,1.500030e-05
+DmgR_QW3,4.919048e12,1.500037e-05
+DmgR_QW4,1.189347e13,1.500037e-05

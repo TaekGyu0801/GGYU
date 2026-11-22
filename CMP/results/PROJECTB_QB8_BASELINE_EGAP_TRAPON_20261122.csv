@@ -1,0 +1,13 @@
+# User-pasted 2026-11-22 KST SVisual output, user-confirmed historical Wu baseline QB8nm Trap ON.
+# Dataset n6_des in historical Wu project, distinct from ProjectB QB6 n6_des; total eGapStatesRecombination Integral 4.148388e13 s^-1*um^-1; Total Domain 1.200013e-04 um^2.
+# Only 8 damaged QW regions DmgL_QW1..4 + DmgR_QW1..4, not whole sidewall, not net nonradiative recombination or IQE.
+# 5V TDR bias and cross-project equivalent physics/solver/mesh/AreaFactor not independently verified.
+Region,Integral_s-1_um-1,Domain_um2
+DmgL_QW1,6.802490e11,1.499996e-05
+DmgL_QW2,6.973104e11,1.500003e-05
+DmgL_QW3,5.709345e12,1.499996e-05
+DmgL_QW4,1.365525e13,1.500003e-05
+DmgR_QW1,6.804959e11,1.500030e-05
+DmgR_QW2,6.975201e11,1.500037e-05
+DmgR_QW3,5.709368e12,1.500030e-05
+DmgR_QW4,1.365435e13,1.500037e-05

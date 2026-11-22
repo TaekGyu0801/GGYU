@@ -1,3 +1,8 @@
+## 2026-11-22 JuSubin QB8 same-ProjectB control: n136 OFF completed 5V in 1454.46s; n142 ON unknown (SCHOOL LOG OBSERVED)
+- User shell in /users/student/team3/JSB/CMP_3V/CMP_B_5nm_3V: n136 (tQB=.008um, NtSide0) output Curve trace finished, final anode5.000E+00, wallclock1454.46s (24m14s), raw total conduction current column2.569E-03; current normalization not verified.
+- n142 (tQB=.008um, NtSide1e18) shows last anode0V, no finished or wallclock terminal message; could be active / queued / waiting for license / interrupted. No reliable runtime estimate or failure diagnosis. Next inspect n142 out/err tail and scheduler status.
+- Three-/four-condition QB study remains pending TrapON QB8 5V comparator; do not compare existing OFF against ON. No school code modified.
+
 ## 2026-11-21 JuSubin QB6 SVisual error after user-reported Claude D5 QB6/7 success (SWB SCREENSHOT OBSERVED / UNRESOLVED)
 - SWB parameter screenshot shows tQB=.006um two rows NtSide0 and1e18 both RED in SVisual; tQB=.007um/NtSide1e18 SVisual yellow. Other columns Vstop5/TrapEt.75/sigma1e-15. SWB row labels are not SWB node IDs. SDevice completed 5V and source/PP not yet verified; red SVisual status alone does not establish physics failure.
 - First next: obtain red QB6 SVisual job .err/.out first Tcl exception and corresponding node ID, check upstream SDevice TDR/PLT and completed 5V then minimal SVisual-only fix if needed. Possible missing file/path/macro/changed-QW boundary remains hypothesis; preserve all runs.

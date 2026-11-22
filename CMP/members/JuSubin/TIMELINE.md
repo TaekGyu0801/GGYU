@@ -1,3 +1,8 @@
+## 2026-11-22 JuSubin QB8nm same-project 5V control launched, 3.2V seen in n136 screenshot (OBSERVED PARTIAL RUN / NOT COMPLETE)
+- New SWB screenshot Project B tQB0.008um row9 NtSide0 maps to SDevice n136 and row10 NtSide1e18 to SDevice n142. n136_des.out screenshot shows anode 3.200E+00V and solver attempting t=.64 -> .644205; not 5V completion or fatal error. n142 actual exit not displayed.
+- datexcodes.txt variable redefined warnings visible but NOT proven fatal; solver iteration text indicates work was performed, but current process state needs recent log/status check. Do not claim 8nm run completed or continuously running beyond snapshot.
+- Next read-only check n136/n142 last anode rows, out-file last termination markers and process state; require tQB8 TrapON n142 Curve trace finished and 5.0V before final QB6/7/7.5/8 comparison. No school code edited by ChatGPT.
+
 ## 2026-11-21 JuSubin QB6.5nm n128 final log directly inspected (OBSERVED SCREENSHOT)
 - Source n128_des.log image: #iterations larger than 35, Newton didn't converge, tried smaller step, then Step-size less than MinStep (9.1004e-11). Writing n128_des.tdr done, but not end-to-end 5V finish. Exact last accepted anode bias not shown.
 - Root failure class: SDevice nonlinear Newton/convergence step floor; deeper trigger unverified. 6.5nm case may be omitted from deadline-critical QB6/7/8 study. No need to tweak solver without evidence; preserve existing runs.

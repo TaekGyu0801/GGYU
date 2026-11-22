@@ -1,3 +1,8 @@
+## 2026-11-22 JuSubin ProjectB QB7 n100 SVisual extraction field mismatch (OBSERVED, RE-EXTRACT REQUIRED)
+- User pasted actual SVisual output for dataset `n100_des` (user-labeled QB0.007um, Trap ON) but field is `DopingConcentration`, NOT requested `RadiativeRecombination`.
+- All 12 QW regions present: Clean_QW1..4, DmgL_QW1..4, DmgR_QW1..4. Printed total domain 0.1199999um² matches 4×3nm×10um. DopingConcentration total integral=0um^-1; **this is not radiative recombination zero**, and no QB7 optical/recombination number is available yet.
+- NEXT: user switches SVisual Field to RadiativeRecombination on same n100_des, keeps exact 12 selections, reruns Field Integration and sends integral values [s^-1*um^-1]. Verify 5V TDR bias; no code/simulation changes.
+
 ## 2026-11-22 JuSubin Project B QB6nm TrapON 4QW RadiativeRecombination Field Integration (USER SVisual RAW OBSERVED; 5V TDR BIAS NOT VERIFIED)
 - User pasted SVisual raw output: Dataset `n6_des`, Field `RadiativeRecombination`, 12 two-dimensional InGaN regions (DmgL_QW1..4 + Clean_QW1..4 + DmgR_QW1..4), reported Total Integral **9.770910e+15 [s^-1*um^-1]**, Total Domain **1.199999e-01 um²**. Area matches 4 wells × .003um thickness ×10um device width = .1200um²; all both-sided 5nm damage areas included, barriers excluded.
 - Raw [s^-1*um^-1] by QW, order [Clean,DmgL,DmgR]: QW1 [8.704715e11,3.503331e8,3.508579e8]; QW2 [6.902129e12,3.476778e9,3.476617e9]; QW3 [3.777749e14,1.797803e11,1.797817e11]; QW4 [9.375905e15,4.545312e12,4.545313e12].

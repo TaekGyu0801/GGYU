@@ -1,3 +1,16 @@
+## 2026-11-22 JuSubin historical QB8nm TrapON 4QW RadiativeRecombination data received (USER SVisual RAW OBSERVED / SOURCE & 5V TDR UNVERIFIED)
+- User labels newly pasted SVisual `Dataset: n6_des` as *historical Wu QB0.008um Trap ON baseline*, **NOT** the earlier Claude Project B QB0.006um `n6_des`. Same dataset basename in two different projects may be valid; FULL SOURCE PROJECT PATH NOT YET SUPPLIED. Do not conflate.
+- Field `RadiativeRecombination`, 12 InGaN regions (Clean/DmgL/DmgR × QW1–QW4), printed Total Integral **9.869850e15 [s^-1*um^-1]**, Total Domain **0.1199999um²**, consistent with 4 × 3nm × 10um. User-provided values, no direct original TDR inspection and bias=5V NOT independently confirmed.
+- Raw 12 region Integral in order [Clean,DmgL,DmgR], units s^-1 um^-1:
+  QW1 [7.378876e11,3.361238e8,3.363697e8] -> subtotal **7.385600935e11** (0.00748299% reported-total approximate).
+  QW2 [1.065895e12,5.199892e8,5.197135e8] -> subtotal **1.0669347027e12** (0.01081004%).
+  QW3 [8.757452e14,4.222072e11,4.222218e11] -> subtotal **8.76589629e14** (8.88148934%).
+  QW4 [8.982859e15,4.297888e12,4.297459e12] -> subtotal **8.991454347e15** (91.10021762%).
+- Sum of displayed region rows 9.8698494707962e15, vs SVisual total 9.869850e15, difference within 6-digit field print precision. Clean total9.8604079826e15; both edge damage sums9.4414881962e12.
+- Earlier distinct *Project B QB6nm TrapON* (`n6_des` in **other project**) total 9.770910e15. Observed displayed total comparison (QB6 - QB8)/QB8 = **-1.0024468457%**, but this is **PROVISIONAL**, not yet confirmed comparable at same bias/source/physics/mesh/AreaFactor/contact/trap values; cannot call IQE/efficiency causation. Each dataset printed `n6_des` means MUST check project path to avoid misidentifying outputs.
+- QB7 n100 and QB7.5 n114 SVisual field was `DopingConcentration`, not RadiativeRecombination; both need re-extraction. NEXT: verify BOTH 5V TDR/effective source and baseline filepath, collect QB7/7.5 true 12-region RadiativeRecombination field integrals, then four-condition comparison.
+- SVisual output belongs to user, no school run/code changed.
+
 ## 2026-11-22 JuSubin Project B QB7.5 n114 wrong SVisual field: doping rather than radiative (OBSERVED)
 - User-pasted `n114_des` Field Integration uses `DopingConcentration`, **NOT** `RadiativeRecombination`.
 - All 12 QW regions Clean_QW1..4, DmgL_QW1..4, DmgR_QW1..4 selected; total domain `1.200002e-01 um^2` consistent with 4 × 3nm QWs × 10um lateral device. Total doping integral `0.000000e+00 um^-1`, NOT evidence of zero radiative recombination.

@@ -1,3 +1,8 @@
+## 2026-11-22 JuSubin CSV packaging command fails due to tcsh multiline single-quote input (OBSERVED USER TERMINAL)
+- User ran previously suggested multi-line python3 -c single-quoted script at school C-shell-like prompt. First line failed "Unmatched '."; subsequent Python lines were interpreted as shell commands, generating "Command not found", "Badly placed ()'s.", and "if: Expression Syntax."
+- This is SHELL QUOTING/PRESENTATION issue, not a Sentaurus or CSV content failure. Four CSVs previously verified by shell find: Project B QB6 Node16, QB7 Node101, QB7.5 Node115, historical 8nm baseline Node16; paths distinct despite repeated node index.
+- Revised plan delivered: one complete bash -lc line, cp original four distinct .csv into /users/student/team3/JSB/CMP_IV_4COND with unique names, python3 -m zipfile -c archive from that folder. Original CSV untouched. ZIP creation NOT yet observed; user to execute then upload.
+
 ## 2026-11-22 JuSubin QB8 TrapON n142 RED / 8nm control still missing (USER SWB SCREENSHOT OBSERVED)
 - User says n142 (QB0.008um, NtSide1e18 Trap ON) ended in ERROR; SWB screenshot explicitly shows n142 RED. Earlier running state is superseded. Exact terminal n142_des.out/.err/.log cause and last accepted anode are not supplied yet. Do NOT assume MinStep, syntax, license, or intrinsic physical failure without log.
 - Same grid maps TrapON QB0.006 to n6, QB0.007 to n100, QB0.0075 to n114; 0.008 TrapOFF n136 already verified 5V in 1454.46s, n128 QB0.0065 TrapON previously had MinStep failure. The non-red indicators of n6/n100/n114 are NOT independent verification of 5V Curve trace finished.

@@ -1,0 +1,13 @@
+# OBSERVED user-pasted SVisual Field Integration at 2026-11-22 KST
+# User-declared ProjectB QB7nm TrapON, dataset n100_des, field eGapStatesRecombination
+# DmgL_QW1..4 and DmgR_QW1..4 only, not complete sidewall, not IQE
+# Original SVisual output does not specify saved TDR bias (5V UNVERIFIED)
+Region,Integral_s-1_um-1,Domain_um2
+DmgL_QW1,9.929931e11,1.499996e-05
+DmgL_QW2,3.884228e11,1.500003e-05
+DmgL_QW3,3.774574e12,1.500003e-05
+DmgL_QW4,1.155698e13,1.499996e-05
+DmgR_QW1,9.931482e11,1.500030e-05
+DmgR_QW2,3.847957e11,1.500037e-05
+DmgR_QW3,3.774176e12,1.500037e-05
+DmgR_QW4,1.155691e13,1.500030e-05

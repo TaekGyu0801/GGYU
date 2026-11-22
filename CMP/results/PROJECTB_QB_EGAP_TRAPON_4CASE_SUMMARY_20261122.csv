@@ -1,0 +1,8 @@
+# OBSERVED USER-SUPPLIED SVisual eGapStatesRecombination Field Integration, 2026-11-22 KST. Source QB8 separate historical Wu baseline; actual saved TDR 5V unverified all.
+# Each QW value is DmgL_QWk + DmgR_QWk, all 8 QW damage regions; 2D integrals s^-1*um^-1, NOT full sidewall or net nonradiative recombination/IQE.
+# Change calculated from SVisual reported Total Integral vs QB8 historical baseline. AreaFactor/source/physics/mesh/solver equivalence unverified.
+QB_nm,origin,dataset,trap,qw1_integral,qw2_integral,qw3_integral,qw4_integral,total_integral_reported,total_domain_um2,delta_vs_qb8_pct,qw1_share_pct,qw2_share_pct,qw3_share_pct,qw4_share_pct,5V_TDR_verified
+6,Claude_ProjectB,n6_des,ON,2.180919e12,1.0473137e12,9.837791e12,2.378695e13,3.685298e13,1.200013e-04,-11.163131318,5.917890494,2.841869776,26.694696060,64.545526576,false
+7,Claude_ProjectB,n100_des,ON,1.9861413e12,7.732185e11,7.548750e12,2.311389e13,3.342200e13,1.200013e-04,-19.433765598,5.942616540,2.313501586,22.586170786,69.157710490,false
+7.5,Claude_ProjectB,n114_des,ON,4.526328e11,5.002054e12,8.300413e12,2.394242e13,3.769752e13,1.200016e-04,-9.127304389,1.200696491,13.268920608,22.018459039,63.511923331,false
+8,Historical_Wu_Baseline,n6_des,ON,1.3607449e12,1.3948305e12,1.1418713e13,2.7309600e13,4.148388e13,1.200013e-04,0.0,3.280177505,3.362343397,27.525662980,65.831836366,false

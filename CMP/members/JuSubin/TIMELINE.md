@@ -1,3 +1,8 @@
+## 2026-11-22 JuSubin QB8nm control OFF n136 verified 5V 24m14s; ON n142 unresolved (OBSERVED school terminal)
+- School path /users/student/team3/JSB/CMP_3V/CMP_B_5nm_3V. User read-only command output: n136_des.out has Curve trace finished and Sentaurus Device simulation times wallclock=1454.46s (0h24m14s), n136_des.log last anode=5.000E+00, electron=1.695E-04, hole=2.399E-03, conduction=2.569E-03 (raw column, current unit/AreaFactor not verified).
+- n142 (QB .008um, NtSide1e18 Trap ON) showed NO Curve trace finished, NO end wallclock marker, n142_des.log last anode=0.000E+00, electron=2.270E-68, hole=5.936E-21, conduction=5.936E-21. Could still be in initialization, awaiting license, stalled, or exited early; not proven still running or failed.
+- Next FIRST: inspect n142_des.out/.err/.log tail, file mtime, process/scheduler status. Do not claim 5V ON comparison ready; preserve successful n136 and other QB 6/7 cases. No school changes by GPT.
+
 ## 2026-11-22 JuSubin QB8nm same-project 5V control launched, 3.2V seen in n136 screenshot (OBSERVED PARTIAL RUN / NOT COMPLETE)
 - New SWB screenshot Project B tQB0.008um row9 NtSide0 maps to SDevice n136 and row10 NtSide1e18 to SDevice n142. n136_des.out screenshot shows anode 3.200E+00V and solver attempting t=.64 -> .644205; not 5V completion or fatal error. n142 actual exit not displayed.
 - datexcodes.txt variable redefined warnings visible but NOT proven fatal; solver iteration text indicates work was performed, but current process state needs recent log/status check. Do not claim 8nm run completed or continuously running beyond snapshot.

@@ -1,13 +1,434 @@
 {
-  "juSubinProjectB4CaseEGapDamageQW20261122": {"worker":"주수빈","dateKST":"2026-11-22","status":"ALL_4_DAMAGE_QW_EGAP_INTEGRALS_OBSERVED_USER_SVISUAL_5V_TDR_UNVERIFIED","field":"eGapStatesRecombination","spatialScope":"8 regions DmgL_QW1..4 and DmgR_QW1..4, total damage QW only","unit":"s^-1*um^-1","summaryCSV":"CMP/results/PROJECTB_QB_EGAP_TRAPON_4CASE_SUMMARY_20261122.csv","historicalQB8RawCSV":"CMP/results/PROJECTB_QB8_BASELINE_EGAP_TRAPON_20261122.csv","referenceBaseline":"historical Wu QB8nm TrapON; user-confirmed separate project (also dataset basename n6_des)","conditions":[{"QB_nm":6,"reportedTotal":36852980000000,"deltaVsQB8Pct":-11.1631313175,"radTotal":9770910000000000},{"QB_nm":7,"reportedTotal":33422000000000,"deltaVsQB8Pct":-19.433765598,"radTotal":9830196000000000},{"QB_nm":7.5,"reportedTotal":37697520000000,"deltaVsQB8Pct":-9.127304389,"radTotal":10502040000000000},{"QB_nm":8,"reportedTotal":41483880000000,"deltaVsQB8Pct":0,"radTotal":9869850000000000}],"QB8RegionSums":[{"QW":1,"total":1360744900000,"sharePct":3.280177505},{"QW":2,"total":1394830500000,"sharePct":3.362343397},{"QW":3,"total":11418713000000,"sharePct":27.52566298},{"QW":4,"total":27309600000000,"sharePct":65.831836366}],"historicalVsClaudeModelEquivalent":false,"saved5VTdrBiasVerified":false,"netNonradiativeOrIQEVerified":false,"next":"Check TDR actual voltage and source/solver/AreaFactor equivalence if possible; report exploratory three-metric comparison with clear caveats"},
-  "juSubinQB7p5TrapOnEGap8DamageQW20261122": {"worker":"주수빈","dateKST":"2026-11-22","source":"USER_PASTED_SVISUAL","condition":"ProjectB QB7.5nm TrapON","dataset":"n114_des","field":"eGapStatesRecombination","reportedTotal":37697520000000,"reportedDomain_um2":0.0001200016,"unit":"s^-1*um^-1","regions":["DmgL_QW1","DmgL_QW2","DmgL_QW3","DmgL_QW4","DmgR_QW1","DmgR_QW2","DmgR_QW3","DmgR_QW4"],"perQW":[{"name":"QW1","left":226369200000,"right":226263600000,"sum":452632800000,"sharePct":1.200696},{"name":"QW2","left":2501118000000,"right":2500936000000,"sum":5002054000000,"sharePct":13.268921},{"name":"QW3","left":4149824000000,"right":4150589000000,"sum":8300413000000,"sharePct":22.018459},{"name":"QW4","left":11971280000000,"right":11971140000000,"sum":23942420000000,"sharePct":63.511923}],"deltaVersusQB6Pct":2.291646428592742,"deltaVersusQB7Pct":12.792531865238477,"savedTdr5VBiasVerified":false,"fullSidewallTrapIntegral":false,"netNonradiativeOrIQEVerified":false,"rawCSV":"CMP/results/PROJECTB_QB7p5_EGAP_TRAPON_20261122.csv","next":"Collect historical Wu QB8 TrapON eight damaged QW eGap values; verify bias/AreaFactor/model equivalence"},
-  "juSubinQB7TrapOnEGap8DamageQW20261122": {"worker":"주수빈","dateKST":"2026-11-22","source":"USER_PASTED_SVISUAL_FIELD_INTEGRATION","condition":"ProjectB QB7nm TrapON","dataset":"n100_des","field":"eGapStatesRecombination","integralUnits":"s^-1*um^-1","reportedTotal":33422000000000,"reportedDomain_um2":0.0001200013,"QWs":[{"name":"QW1","left":992993100000,"right":993148200000,"total":1986141300000,"sharePct":5.94261654},{"name":"QW2","left":388422800000,"right":384795700000,"total":773218500000,"sharePct":2.313501586},{"name":"QW3","left":3774574000000,"right":3774176000000,"total":7548750000000,"sharePct":22.586170786},{"name":"QW4","left":11556980000000,"right":11556910000000,"total":23113890000000,"sharePct":69.15771049}],"sourceRawCSV":"CMP/results/PROJECTB_QB7_EGAP_TRAPON_20261122.csv","priorQB6ReportedTotal":36852980000000,"deltaVersusQB6Pct":-9.309911979980988,"actualSavedTdrFiveVBiasVerified":false,"notEquivalentToIQE":true,"next":"QB7.5 and historical QB8 8-region eGap integrals and 5V bias/source equivalence checks"},
-  "juSubinQB6TrapOnEGap8DamageQW20261122": {"worker":"주수빈","dateKST":"2026-11-22","source":"USER_PASTED_SVISUAL_FIELD_INTEGRATION","dataset":"n6_des","condition":"ProjectB QB6nm TrapON","field":"eGapStatesRecombination","regions":["DmgL_QW1","DmgL_QW2","DmgL_QW3","DmgL_QW4","DmgR_QW1","DmgR_QW2","DmgR_QW3","DmgR_QW4"],"integralUnits":"s^-1*um^-1","reportedTotal":36852980000000,"totalDomain_um2":0.0001200013,"perQW":[{"qw":1,"dmgL":1089869000000,"dmgR":1091050000000,"total":2180919000000,"sharePct":5.91789},{"qw":2,"dmgL":523872400000,"dmgR":523441300000,"total":1047313700000,"sharePct":2.84187},{"qw":3,"dmgL":4918743000000,"dmgR":4919048000000,"total":9837791000000,"sharePct":26.694696},{"qw":4,"dmgL":11893480000000,"dmgR":11893470000000,"total":23786950000000,"sharePct":64.545527}],"rawCSV":"CMP/results/PROJECTB_QB6_EGAP_TRAPON_20261122.csv","actual5VBiasTdrVerified":false,"note":"Only damaged QW regions, not whole sidewall; eGapStatesRecombination is not identical to net nonradiative pair loss or IQE","next":"Get QB7/QB7.5/QB8 8-region eGapStates integrals; check 5V bias and historical baseline comparability"},
-  "juSubinProjectBQBRadiativeFourCase20261122": {"worker":"주수빈","dateKST":"2026-11-22","status":"USER_SVISUAL_INTEGRALS_OBSERVED_TDR_BIAS_UNVERIFIED","dataCSV":"CMP/results/PROJECTB_QB_RADIATIVE_TRAPON_20261122.csv","field":"RadiativeRecombination","unit":"s^-1*um^-1","referenceQB_nm":8,"referenceOrigin":"historical Wu separate school project","conditions":[{"qb_nm":6,"dataset":"n6_des","reportedTotal":9770910000000000,"qwSharePct":[0.008916,0.070711,3.870003,96.050374],"deltaVs8Pct":-1.002446846},{"qb_nm":7,"dataset":"n100_des","reportedTotal":9830196000000000,"qwSharePct":[0.003708,0.019112,6.306432,93.67074],"deltaVs8Pct":-0.401769024},{"qb_nm":7.5,"dataset":"n114_des","reportedTotal":10502040000000000,"qwSharePct":[0.008438,0.868659,1.189478,97.933472],"deltaVs8Pct":6.405264518},{"qb_nm":8,"dataset":"n6_des","reportedTotal":9869850000000000,"qwSharePct":[0.007483,0.01081,8.881489,91.100213],"deltaVs8Pct":0}],"regionCountPerCondition":12,"nominalTotalDomain_um2":0.12,"allSvisualTdr5VBiasVerified":false,"historicalVsClaudeSourceMeshSolverAreaFactorEquivalent":false,"IQEValidation":false,"next":"Validate exact 5V bias and provenance; extract bilateral eGapStatesRecombination damaged QW integrals"},
-  "juSubinProjectBHistoricalQB8Radiative20261122": {"worker":"주수빈","dateKST":"2026-11-22","status":"OBSERVED_USER_PASTED_SVISUAL_VALUES_BIAS_AND_FILEPATH_UNVERIFIED","userDeclaredCondition":"historical Wu QB8nm TrapON baseline","datasetBasename":"n6_des","sameFilenameAsProjectBQB6":true,"bothAbsoluteProjectPathsVerified":false,"actual5VBiasVerified":false,"field":"RadiativeRecombination","integralUnits":"s^-1*um^-1","reportedTotal":9869850000000000,"reportedDomain_um2":0.1199999,"regionCount":12,"perQW":[{"name":"QW1","clean":737887600000,"dmgL":336123800,"dmgR":336369700,"sum":738560093500},{"name":"QW2","clean":1065895000000,"dmgL":519989200,"dmgR":519713500,"sum":1066934702700},{"name":"QW3","clean":875745200000000,"dmgL":422207200000,"dmgR":422221800000,"sum":876589629000000},{"name":"QW4","clean":8982859000000000,"dmgL":4297888000000,"dmgR":4297459000000,"sum":8991454347000000}],"reportedProjectBQB6Total":9770910000000000,"QB6VsHistoricalQB8ReportedTotalPct":-1.0024468457,"crossProjectEquivalenceVerified":false,"otherNeeded":"QB7 n100 + QB7.5 n114 correct RadiativeRecombination integration, cross-project 5V bias, source path and normalization comparison"},
-  "juSubinProjectBQB6Radiative20261122": {"worker":"주수빈","dateKST":"2026-11-22","dataProvenance":"USER_PASTED_SVISUAL_FIELD_INTEGRATION","dataset":"n6_des","QB_nm":6,"trapOn":"USER_LABEL","fiveVoltTdrVerified":false,"field":"RadiativeRecombination","integralUnits":"s^-1*um^-1","reportedTotal":9770910000000000,"reportedDomain_um2":0.1199999,"regionCount":12,"QWs":[{"name":"QW1","clean":870471500000,"dmgL":350333100,"dmgR":350857900,"sum":871172691000,"sharePct":0.008916},{"name":"QW2","clean":6902129000000,"dmgL":3476778000,"dmgR":3476617000,"sum":6909082395000,"sharePct":0.070711},{"name":"QW3","clean":377774900000000,"dmgL":179780300000,"dmgR":179781700000,"sum":378134462000000,"sharePct":3.870002},{"name":"QW4","clean":9375905000000000,"dmgL":4545312000000,"dmgR":4545313000000,"sum":9384995625000000,"sharePct":96.050371}],"schoolSourceVerified":false,"next":"Confirm n6 TDR 5V, acquire QB7/QB7.5/QB8 consistent Region-integrals and 2D normalization; avoid IQE attribution"},
-  "juSubinQBComparison20261121": {"worker":"주수빈","dateKST":"2026-11-21","decision":"Project B D5 GaN QB width 6nm 7nm 8nm comparison; supersedes B sigma-sweep proposal","userReportedSuccesses":["QB .006um Claude D5 node","QB .007um Claude D5 node"],"baseline":"historical Wu D5 QB .008um","actualNodeIDs":null,"schoolFinishLogVerifiedByGPT":false,"actualClaudeSchoolCodeVerifiedByGPT":false,"controlsToVerify":"5V completed, PP tQB+NtSide, sidewall Damage5nm, 5xQB+4QW, trap Et sigma, doping, physics, contacts, mesh policy, AreaFactor","next":"Read-only school 5V gate then I-V and same-current 4QW Radiative and damaged recombination integrals","status":"USER_DECISION_QB_COMPARE_SUCCESS_USER_REPORTED"},
-  "juSubinD5Return20261120": {"worker":"주수빈","dateKST":"2026-11-20","status":"D5_RETURN_USER_DECIDED_AB_TRAP_SWEEPS_PROPOSED_UNRUN","userReport":"All revised D50 A/B tests failed; error-specific logs not supplied in this turn","confirmedControl":"historical Wu10um D5 n21 OFF n25 ON 5V rows; school current exit/source requires recheck","designA":{"worker":"이택규","proposedNtSide_cm3":[1000000000000000000,300000000000000000,100000000000000000]},"designB":{"worker":"주수빈","proposedSigmaNandP_cm2":[1e-15,3e-16,1e-16],"NtSide_cm3":1000000000000000000},"fixed":"D5 geometry, mesh, Et 0.75 Ev, QWs, physics, all 22 region traps, contacts, 5V","next":"School exact D5 control inspection and one A and B smoke node; matched-current recombination; no school execution by AI"},
+  "juSubinProjectB4CaseEGapDamageQW20261122": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-22",
+    "status": "ALL_4_DAMAGE_QW_EGAP_INTEGRALS_OBSERVED_USER_SVISUAL_5V_TDR_UNVERIFIED",
+    "field": "eGapStatesRecombination",
+    "spatialScope": "8 regions DmgL_QW1..4 and DmgR_QW1..4, total damage QW only",
+    "unit": "s^-1*um^-1",
+    "summaryCSV": "CMP/results/PROJECTB_QB_EGAP_TRAPON_4CASE_SUMMARY_20261122.csv",
+    "historicalQB8RawCSV": "CMP/results/PROJECTB_QB8_BASELINE_EGAP_TRAPON_20261122.csv",
+    "referenceBaseline": "historical Wu QB8nm TrapON; user-confirmed separate project (also dataset basename n6_des)",
+    "conditions": [
+      {
+        "QB_nm": 6,
+        "reportedTotal": 36852980000000,
+        "deltaVsQB8Pct": -11.1631313175,
+        "radTotal": 9770910000000000
+      },
+      {
+        "QB_nm": 7,
+        "reportedTotal": 33422000000000,
+        "deltaVsQB8Pct": -19.433765598,
+        "radTotal": 9830196000000000
+      },
+      {
+        "QB_nm": 7.5,
+        "reportedTotal": 37697520000000,
+        "deltaVsQB8Pct": -9.127304389,
+        "radTotal": 10502040000000000
+      },
+      {
+        "QB_nm": 8,
+        "reportedTotal": 41483880000000,
+        "deltaVsQB8Pct": 0,
+        "radTotal": 9869850000000000
+      }
+    ],
+    "QB8RegionSums": [
+      {
+        "QW": 1,
+        "total": 1360744900000,
+        "sharePct": 3.280177505
+      },
+      {
+        "QW": 2,
+        "total": 1394830500000,
+        "sharePct": 3.362343397
+      },
+      {
+        "QW": 3,
+        "total": 11418713000000,
+        "sharePct": 27.52566298
+      },
+      {
+        "QW": 4,
+        "total": 27309600000000,
+        "sharePct": 65.831836366
+      }
+    ],
+    "historicalVsClaudeModelEquivalent": false,
+    "saved5VTdrBiasVerified": false,
+    "netNonradiativeOrIQEVerified": false,
+    "next": "Check TDR actual voltage and source/solver/AreaFactor equivalence if possible; report exploratory three-metric comparison with clear caveats"
+  },
+  "juSubinQB7p5TrapOnEGap8DamageQW20261122": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-22",
+    "source": "USER_PASTED_SVISUAL",
+    "condition": "ProjectB QB7.5nm TrapON",
+    "dataset": "n114_des",
+    "field": "eGapStatesRecombination",
+    "reportedTotal": 37697520000000,
+    "reportedDomain_um2": 0.0001200016,
+    "unit": "s^-1*um^-1",
+    "regions": [
+      "DmgL_QW1",
+      "DmgL_QW2",
+      "DmgL_QW3",
+      "DmgL_QW4",
+      "DmgR_QW1",
+      "DmgR_QW2",
+      "DmgR_QW3",
+      "DmgR_QW4"
+    ],
+    "perQW": [
+      {
+        "name": "QW1",
+        "left": 226369200000,
+        "right": 226263600000,
+        "sum": 452632800000,
+        "sharePct": 1.200696
+      },
+      {
+        "name": "QW2",
+        "left": 2501118000000,
+        "right": 2500936000000,
+        "sum": 5002054000000,
+        "sharePct": 13.268921
+      },
+      {
+        "name": "QW3",
+        "left": 4149824000000,
+        "right": 4150589000000,
+        "sum": 8300413000000,
+        "sharePct": 22.018459
+      },
+      {
+        "name": "QW4",
+        "left": 11971280000000,
+        "right": 11971140000000,
+        "sum": 23942420000000,
+        "sharePct": 63.511923
+      }
+    ],
+    "deltaVersusQB6Pct": 2.291646428592742,
+    "deltaVersusQB7Pct": 12.792531865238477,
+    "savedTdr5VBiasVerified": false,
+    "fullSidewallTrapIntegral": false,
+    "netNonradiativeOrIQEVerified": false,
+    "rawCSV": "CMP/results/PROJECTB_QB7p5_EGAP_TRAPON_20261122.csv",
+    "next": "Collect historical Wu QB8 TrapON eight damaged QW eGap values; verify bias/AreaFactor/model equivalence"
+  },
+  "juSubinQB7TrapOnEGap8DamageQW20261122": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-22",
+    "source": "USER_PASTED_SVISUAL_FIELD_INTEGRATION",
+    "condition": "ProjectB QB7nm TrapON",
+    "dataset": "n100_des",
+    "field": "eGapStatesRecombination",
+    "integralUnits": "s^-1*um^-1",
+    "reportedTotal": 33422000000000,
+    "reportedDomain_um2": 0.0001200013,
+    "QWs": [
+      {
+        "name": "QW1",
+        "left": 992993100000,
+        "right": 993148200000,
+        "total": 1986141300000,
+        "sharePct": 5.94261654
+      },
+      {
+        "name": "QW2",
+        "left": 388422800000,
+        "right": 384795700000,
+        "total": 773218500000,
+        "sharePct": 2.313501586
+      },
+      {
+        "name": "QW3",
+        "left": 3774574000000,
+        "right": 3774176000000,
+        "total": 7548750000000,
+        "sharePct": 22.586170786
+      },
+      {
+        "name": "QW4",
+        "left": 11556980000000,
+        "right": 11556910000000,
+        "total": 23113890000000,
+        "sharePct": 69.15771049
+      }
+    ],
+    "sourceRawCSV": "CMP/results/PROJECTB_QB7_EGAP_TRAPON_20261122.csv",
+    "priorQB6ReportedTotal": 36852980000000,
+    "deltaVersusQB6Pct": -9.309911979980988,
+    "actualSavedTdrFiveVBiasVerified": false,
+    "notEquivalentToIQE": true,
+    "next": "QB7.5 and historical QB8 8-region eGap integrals and 5V bias/source equivalence checks"
+  },
+  "juSubinQB6TrapOnEGap8DamageQW20261122": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-22",
+    "source": "USER_PASTED_SVISUAL_FIELD_INTEGRATION",
+    "dataset": "n6_des",
+    "condition": "ProjectB QB6nm TrapON",
+    "field": "eGapStatesRecombination",
+    "regions": [
+      "DmgL_QW1",
+      "DmgL_QW2",
+      "DmgL_QW3",
+      "DmgL_QW4",
+      "DmgR_QW1",
+      "DmgR_QW2",
+      "DmgR_QW3",
+      "DmgR_QW4"
+    ],
+    "integralUnits": "s^-1*um^-1",
+    "reportedTotal": 36852980000000,
+    "totalDomain_um2": 0.0001200013,
+    "perQW": [
+      {
+        "qw": 1,
+        "dmgL": 1089869000000,
+        "dmgR": 1091050000000,
+        "total": 2180919000000,
+        "sharePct": 5.91789
+      },
+      {
+        "qw": 2,
+        "dmgL": 523872400000,
+        "dmgR": 523441300000,
+        "total": 1047313700000,
+        "sharePct": 2.84187
+      },
+      {
+        "qw": 3,
+        "dmgL": 4918743000000,
+        "dmgR": 4919048000000,
+        "total": 9837791000000,
+        "sharePct": 26.694696
+      },
+      {
+        "qw": 4,
+        "dmgL": 11893480000000,
+        "dmgR": 11893470000000,
+        "total": 23786950000000,
+        "sharePct": 64.545527
+      }
+    ],
+    "rawCSV": "CMP/results/PROJECTB_QB6_EGAP_TRAPON_20261122.csv",
+    "actual5VBiasTdrVerified": false,
+    "note": "Only damaged QW regions, not whole sidewall; eGapStatesRecombination is not identical to net nonradiative pair loss or IQE",
+    "next": "Get QB7/QB7.5/QB8 8-region eGapStates integrals; check 5V bias and historical baseline comparability"
+  },
+  "juSubinProjectBQBRadiativeFourCase20261122": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-22",
+    "status": "USER_SVISUAL_INTEGRALS_OBSERVED_TDR_BIAS_UNVERIFIED",
+    "dataCSV": "CMP/results/PROJECTB_QB_RADIATIVE_TRAPON_20261122.csv",
+    "field": "RadiativeRecombination",
+    "unit": "s^-1*um^-1",
+    "referenceQB_nm": 8,
+    "referenceOrigin": "historical Wu separate school project",
+    "conditions": [
+      {
+        "qb_nm": 6,
+        "dataset": "n6_des",
+        "reportedTotal": 9770910000000000,
+        "qwSharePct": [
+          0.008916,
+          0.070711,
+          3.870003,
+          96.050374
+        ],
+        "deltaVs8Pct": -1.002446846
+      },
+      {
+        "qb_nm": 7,
+        "dataset": "n100_des",
+        "reportedTotal": 9830196000000000,
+        "qwSharePct": [
+          0.003708,
+          0.019112,
+          6.306432,
+          93.67074
+        ],
+        "deltaVs8Pct": -0.401769024
+      },
+      {
+        "qb_nm": 7.5,
+        "dataset": "n114_des",
+        "reportedTotal": 10502040000000000,
+        "qwSharePct": [
+          0.008438,
+          0.868659,
+          1.189478,
+          97.933472
+        ],
+        "deltaVs8Pct": 6.405264518
+      },
+      {
+        "qb_nm": 8,
+        "dataset": "n6_des",
+        "reportedTotal": 9869850000000000,
+        "qwSharePct": [
+          0.007483,
+          0.01081,
+          8.881489,
+          91.100213
+        ],
+        "deltaVs8Pct": 0
+      }
+    ],
+    "regionCountPerCondition": 12,
+    "nominalTotalDomain_um2": 0.12,
+    "allSvisualTdr5VBiasVerified": false,
+    "historicalVsClaudeSourceMeshSolverAreaFactorEquivalent": false,
+    "IQEValidation": false,
+    "next": "Validate exact 5V bias and provenance; extract bilateral eGapStatesRecombination damaged QW integrals"
+  },
+  "juSubinProjectBHistoricalQB8Radiative20261122": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-22",
+    "status": "OBSERVED_USER_PASTED_SVISUAL_VALUES_BIAS_AND_FILEPATH_UNVERIFIED",
+    "userDeclaredCondition": "historical Wu QB8nm TrapON baseline",
+    "datasetBasename": "n6_des",
+    "sameFilenameAsProjectBQB6": true,
+    "bothAbsoluteProjectPathsVerified": false,
+    "actual5VBiasVerified": false,
+    "field": "RadiativeRecombination",
+    "integralUnits": "s^-1*um^-1",
+    "reportedTotal": 9869850000000000,
+    "reportedDomain_um2": 0.1199999,
+    "regionCount": 12,
+    "perQW": [
+      {
+        "name": "QW1",
+        "clean": 737887600000,
+        "dmgL": 336123800,
+        "dmgR": 336369700,
+        "sum": 738560093500
+      },
+      {
+        "name": "QW2",
+        "clean": 1065895000000,
+        "dmgL": 519989200,
+        "dmgR": 519713500,
+        "sum": 1066934702700
+      },
+      {
+        "name": "QW3",
+        "clean": 875745200000000,
+        "dmgL": 422207200000,
+        "dmgR": 422221800000,
+        "sum": 876589629000000
+      },
+      {
+        "name": "QW4",
+        "clean": 8982859000000000,
+        "dmgL": 4297888000000,
+        "dmgR": 4297459000000,
+        "sum": 8991454347000000
+      }
+    ],
+    "reportedProjectBQB6Total": 9770910000000000,
+    "QB6VsHistoricalQB8ReportedTotalPct": -1.0024468457,
+    "crossProjectEquivalenceVerified": false,
+    "otherNeeded": "QB7 n100 + QB7.5 n114 correct RadiativeRecombination integration, cross-project 5V bias, source path and normalization comparison"
+  },
+  "juSubinProjectBQB6Radiative20261122": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-22",
+    "dataProvenance": "USER_PASTED_SVISUAL_FIELD_INTEGRATION",
+    "dataset": "n6_des",
+    "QB_nm": 6,
+    "trapOn": "USER_LABEL",
+    "fiveVoltTdrVerified": false,
+    "field": "RadiativeRecombination",
+    "integralUnits": "s^-1*um^-1",
+    "reportedTotal": 9770910000000000,
+    "reportedDomain_um2": 0.1199999,
+    "regionCount": 12,
+    "QWs": [
+      {
+        "name": "QW1",
+        "clean": 870471500000,
+        "dmgL": 350333100,
+        "dmgR": 350857900,
+        "sum": 871172691000,
+        "sharePct": 0.008916
+      },
+      {
+        "name": "QW2",
+        "clean": 6902129000000,
+        "dmgL": 3476778000,
+        "dmgR": 3476617000,
+        "sum": 6909082395000,
+        "sharePct": 0.070711
+      },
+      {
+        "name": "QW3",
+        "clean": 377774900000000,
+        "dmgL": 179780300000,
+        "dmgR": 179781700000,
+        "sum": 378134462000000,
+        "sharePct": 3.870002
+      },
+      {
+        "name": "QW4",
+        "clean": 9375905000000000,
+        "dmgL": 4545312000000,
+        "dmgR": 4545313000000,
+        "sum": 9384995625000000,
+        "sharePct": 96.050371
+      }
+    ],
+    "schoolSourceVerified": false,
+    "next": "Confirm n6 TDR 5V, acquire QB7/QB7.5/QB8 consistent Region-integrals and 2D normalization; avoid IQE attribution"
+  },
+  "juSubinQBComparison20261121": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-21",
+    "decision": "Project B D5 GaN QB width 6nm 7nm 8nm comparison; supersedes B sigma-sweep proposal",
+    "userReportedSuccesses": [
+      "QB .006um Claude D5 node",
+      "QB .007um Claude D5 node"
+    ],
+    "baseline": "historical Wu D5 QB .008um",
+    "actualNodeIDs": null,
+    "schoolFinishLogVerifiedByGPT": false,
+    "actualClaudeSchoolCodeVerifiedByGPT": false,
+    "controlsToVerify": "5V completed, PP tQB+NtSide, sidewall Damage5nm, 5xQB+4QW, trap Et sigma, doping, physics, contacts, mesh policy, AreaFactor",
+    "next": "Read-only school 5V gate then I-V and same-current 4QW Radiative and damaged recombination integrals",
+    "status": "USER_DECISION_QB_COMPARE_SUCCESS_USER_REPORTED"
+  },
+  "juSubinD5Return20261120": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-20",
+    "status": "D5_RETURN_USER_DECIDED_AB_TRAP_SWEEPS_PROPOSED_UNRUN",
+    "userReport": "All revised D50 A/B tests failed; error-specific logs not supplied in this turn",
+    "confirmedControl": "historical Wu10um D5 n21 OFF n25 ON 5V rows; school current exit/source requires recheck",
+    "designA": {
+      "worker": "이택규",
+      "proposedNtSide_cm3": [
+        1000000000000000000,
+        300000000000000000,
+        100000000000000000
+      ]
+    },
+    "designB": {
+      "worker": "주수빈",
+      "proposedSigmaNandP_cm2": [
+        1e-15,
+        3e-16,
+        1e-16
+      ],
+      "NtSide_cm3": 1000000000000000000
+    },
+    "fixed": "D5 geometry, mesh, Et 0.75 Ev, QWs, physics, all 22 region traps, contacts, 5V",
+    "next": "School exact D5 control inspection and one A and B smoke node; matched-current recombination; no school execution by AI"
+  },
   "leeProjectA5VGroupedLogs20261116": {
     "worker": "이택규",
     "dateKST": "2026-11-16",
@@ -10949,5 +11370,78 @@
     },
     "next": "Verify Claude D50 school baseline, transfer only modifications into independent A/B clones, mesh/contacts/audit before one 5V node each; matched-current comparisons",
     "physicalParameterCalibration": false
+  },
+  "juSubinProjectBCombinedThreeMetricInterpretation20261122": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-22",
+    "status": "DERIVED_FROM_OBSERVED_I_V_AND_SVISUAL_NO_NEW_SCHOOL_SIMULATION",
+    "qb_nm": [
+      6,
+      7,
+      7.5,
+      8
+    ],
+    "historicalQB8SeparateProject": true,
+    "current5VRaw": [
+      0.00255263092117,
+      0.00248668659046,
+      0.00279894166971,
+      0.00256639709344
+    ],
+    "currentPctVsQB8": [
+      -0.53640071,
+      -3.10593022,
+      9.06112997,
+      0
+    ],
+    "radiative4QWIntegral": [
+      9770910000000000,
+      9830196000000000,
+      10502040000000000,
+      9869850000000000
+    ],
+    "radiativePctVsQB8": [
+      -1.00244685,
+      -0.40176902,
+      6.40526452,
+      0
+    ],
+    "eGapDamaged8QWIntegral": [
+      36852980000000,
+      33422000000000,
+      37697520000000,
+      41483880000000
+    ],
+    "eGapPctVsQB8": [
+      -11.16313132,
+      -19.4337656,
+      -9.12730439,
+      0
+    ],
+    "QB7vsQB6Pct": {
+      "I": -2.58338682,
+      "Radiative": 0.60676027,
+      "eGap": -9.30991198
+    },
+    "QB7p5vsQB7Pct": {
+      "I": 12.55707416,
+      "Radiative": 6.83449242,
+      "eGap": 12.79253187
+    },
+    "conditionalRadiativePerRawCurrentIndexPctVsQB8": [
+      -0.46855949,
+      2.79084283,
+      -2.43520809,
+      0
+    ],
+    "interpretation": "QB7 candidate multi-metric tradeoff, QB7.5 maximum absolute radiative signal; no established best IQE or causality",
+    "caveats": [
+      "5V field TDR snapshot unverified",
+      "different projects for QB8 historical and other cases",
+      "2D current units, AreaFactor and effective model/mesh/solver/contact comparability unverified",
+      "Radiative full QW and eGap damaged QW spatial regions differ",
+      "eGap electron trap-related field not net full nonradiative"
+    ],
+    "next": "Verify TDR bias and model equivalence; matched-current followup where available; transparent preliminary comparison"
   }
 }

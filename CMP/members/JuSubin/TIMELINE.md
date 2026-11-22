@@ -1,3 +1,11 @@
+## 2026-11-22 JuSubin Project B Trap ON four-condition IV raw CSV analysis (OBSERVED USER-UPLOADED DATA)
+- Four CSVs parsed: QB6nm_TrapON.csv Project B n16 (109 points), QB7nm_TrapON.csv Project B n101 (122 points), QB7p5nm_TrapON.csv Project B n115 (110 points), QB8nm_Baseline_TrapON.csv historical baseline separate project n16 (172 points). All include 5.000 V rows. Data file unit labels are explicitly ASSUMED A/um and J(10um), not independently verified.
+- 5V raw Current: QB6 2.552630921170e-03, QB7 2.486686590460e-03, QB7.5 2.798941669710e-03, QB8 baseline 2.566397093440e-03.
+- Percent vs QB8 5V raw current: QB6 -0.536400711534%, QB7 -3.105930223493%, QB7.5 +9.061129973394%, QB8 0%. Observed 5V ranking QB7.5 > QB8 > QB6 > QB7.
+- These observed numbers are electrical current only, not IQE, light output, optical improvement or isolated QB thickness causation. Baseline is historical separate project; common source/mesh/solver/trap/AreaFactor not fully verified; duplicate V=0 and very small negative low-bias points retained from raw CSV.
+- Session generated local download-only (not GitHub) raw-source based plot CMP_ProjectB_IV_4conditions.png, zoom CMP_ProjectB_IV_high_voltage_zoom.png, and workbook CMP_ProjectB_IV_Comparison.xlsx (Summary formulas + native scatter chart + four raw sheets).
+- NEXT: integrated 4QW RadiativeRecombination and combined left-right damaged-region eGapStatesRecombination, maintaining region/normalization clarity; present cross-project caveat.
+
 ## 2026-11-22 JuSubin four-condition Trap ON I–V ZIP generated on school server (USER OBSERVED TERMINAL OUTPUT)
 - User executed single-line bash -lc to copy four existing school I–V/J–V CSVs into /users/student/team3/JSB/CMP_IV_4COND/ with collision-safe QB6nm_TrapON.csv, QB7nm_TrapON.csv, QB7p5nm_TrapON.csv, QB8nm_Baseline_TrapON.csv labels.
 - Confirmed output: -rw-rw-r-- 1 team3 team3 8.9K 11월 22 22:41 ../CMP_IV_4COND.zip, located /users/student/team3/JSB/CMP_IV_4COND.zip. This validates the ZIP path/file listing only, NOT content CRC, numeric CSV values or plotting.

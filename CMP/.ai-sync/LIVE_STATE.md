@@ -1,3 +1,9 @@
+## 2026-11-22 JuSubin ProjectB 4QW Radiative integrals four conditions (OBSERVED USER SVISUAL / COMPARABILITY UNRESOLVED)
+- QB6/QB7/QB7.5/QB8(historical Wu) TrapON 12-QW-region integrals now collected: 9.770910e15, 9.830196e15, 1.050204e16, 9.869850e15 [s^-1 um^-1]. Relative to historical QB8: -1.0024%, -0.4018%, +6.4053%, 0%. QB7.5 highest reported integral.
+- QW4 shares: QB6 96.0504%, QB7 93.6707%, QB7.5 97.9335%, QB8 91.1002%. Area each ~0.120um² (Clean+DmgL+DmgR × 4×3nm QWs). Data stored `CMP/results/PROJECTB_QB_RADIATIVE_TRAPON_20261122.csv`.
+- User corrected QB7 n100 and QB7.5 n114 to `RadiativeRecombination`; previous zero `DopingConcentration` was unrelated. School TDR actual saved bias=5V still unconfirmed, historical QB8 from different SWB, effective physics/mesh/solver/AreaFactor unknown. Treat numerical comparisons as provisional; no measured IQE/causality.
+- NEXT: TDR bias validation and ProjectB 6/7/7.5 vs historical QB8 provenance check, then damaged-sidewall eGapStatesRecombination 4-condition Field Integration. No school code/simulation changes.
+
 ## 2026-11-22 JuSubin QB8 historical baseline 4QW RadiativeRecombination integral captured (USER RAW, COMPARABILITY UNRESOLVED)
 - Baseline named QB0.008um TrapON by user, Field RadiativeRecombination, Dataset `n6_des` (SAME BASENAME as ProjectB QB6 `n6_des`; must distinguish by **full project path**). 12 QW regions, Total Domain .1199999 um², user-reported Total Integral **9.869850e15 [s^-1*um^-1]**.
 - Per QW sums: QW1 7.385600935e11 (0.007483%); QW2 1.0669347027e12 (0.010810%); QW3 8.765896290e14 (8.881489%); QW4 8.991454347e15 (91.100218%). 12 displayed rows sum9.8698494707962e15, normal rounding vs Total.

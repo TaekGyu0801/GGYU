@@ -1,3 +1,8 @@
+## 2026-11-22 JuSubin damaged QW eGapStatesRecombination comparison underway (QB6 and QB7 observed)
+1. QB6 TrapON `n6_des`: 3.685298e13 s^-1um^-1; QB7 TrapON `n100_des`: 3.342200e13 s^-1um^-1, QB7 minus QB6 -9.30991198%. Each is 8 regions DmgL_QW1..4 + DmgR_QW1..4 and domain ~1.2e-4 um². Raw data now `CMP/results/PROJECTB_QB6_EGAP_TRAPON_20261122.csv`, `CMP/results/PROJECTB_QB7_EGAP_TRAPON_20261122.csv`.
+2. Next request QB7.5 `n114_des` Trap ON and historical Wu QB8 Trap ON `n6_des` (distinct separate project), using **Field eGapStatesRecombination** and **8 damaged QW regions only**; verify TDR 5V and consistent AreaFactor/trap/physics/mesh source before claiming fixed-bias comparisons.
+3. Aggregate QW-level and total sidewall-QW trap-field results, compare to historical QB8 with caveats. `eGapStatesRecombination` is NOT whole sidewall/net nonradiative/IQE. School TCAD code unchanged.
+
 ## 2026-11-22 JuSubin step 3 damaged-QW eGapStatesRecombination ongoing
 1. QB6 TrapON `n6_des` 8-region damaged-QW eGapStates total **3.685298e13 s^-1 um^-1**, domain `1.200013e-04 um²` (user SVisual observed). Raw saved `CMP/results/PROJECTB_QB6_EGAP_TRAPON_20261122.csv`.
 2. Next send QB7 n100, QB7.5 n114, historical Wu QB8 baseline n6 (different project): `Field=eGapStatesRecombination`, region **DmgL_QW1..4 + DmgR_QW1..4 ONLY**, 8 regions, area ≈1.2e-4 um²; do not select `DopingConcentration` or Clean.

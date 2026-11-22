@@ -1,3 +1,8 @@
+## 2026-11-22 JuSubin four-condition Trap ON I–V ZIP generated on school server (USER OBSERVED TERMINAL OUTPUT)
+- User executed single-line bash -lc to copy four existing school I–V/J–V CSVs into /users/student/team3/JSB/CMP_IV_4COND/ with collision-safe QB6nm_TrapON.csv, QB7nm_TrapON.csv, QB7p5nm_TrapON.csv, QB8nm_Baseline_TrapON.csv labels.
+- Confirmed output: -rw-rw-r-- 1 team3 team3 8.9K 11월 22 22:41 ../CMP_IV_4COND.zip, located /users/student/team3/JSB/CMP_IV_4COND.zip. This validates the ZIP path/file listing only, NOT content CRC, numeric CSV values or plotting.
+- Next: user downloads ZIP from remote SFTP and uploads to chat. ChatGPT then inspect actual CSV and compare I–V and 5V currents from Project B vs historical 8nm baseline. Cross-project normalization/physics caveat remains.
+
 ## 2026-11-22 JuSubin 4 TrapON IVJV CSV files found on school server (USER TERMINAL OBSERVED)
 - User read-only find output confirms three Project B D5 CSVs at /users/student/team3/JSB/CMP_3V/CMP_B_5nm_3V: CMP_WU2023PHY_NtSide_1e18_Node16_IVJV.csv (QB6nm), ...Node101_IVJV.csv (QB7nm), ...Node115_IVJV.csv (QB7.5nm).
 - Historical QB8nm Baseline D5 CSV found at /users/student/team3/JSB/CMP_3V/CMP_Baseline_5nm_3V/CMP_WU2023PHY_NtSide_1e18_Node16_IVJV.csv. IMPORTANT: baseline Node16 and B Node16 same filename yet distinct project paths; do NOT use flat zip without renaming to avoid collision.

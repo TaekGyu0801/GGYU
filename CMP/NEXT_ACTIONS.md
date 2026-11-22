@@ -1,3 +1,9 @@
+## 2026-11-22 JuSubin all three Project B data categories available (QC / presentation next)
+1. All four QB TrapON damaged QW `eGapStatesRecombination` integrals complete [s^-1 um^-1]: QB6 3.685298e13; QB7 3.342200e13; QB7.5 3.769752e13; Wu historical QB8 4.148388e13. Relative to QB8: -11.16313%, -19.43377%, -9.12730%. Full 8-region totals in `CMP/results/PROJECTB_QB_EGAP_TRAPON_4CASE_SUMMARY_20261122.csv`.
+2. Existing four-condition IV 5V data and 4QW full-area RadiativeRecombination totals also stored; prepare comparison charts and presentation with precise labels, caveat that QB7 lowest eGapStates does NOT mean lowest net nonradiative/IQE, QB7.5 highest radiative at fixed bias does NOT mean best efficiency.
+3. Main unresolved gate: verify `n6_des`, `n100_des`, `n114_des` SVisual TDR snapshots actually 5V, historical Wu 8nm `n6_des` belongs separate project, and contacts/AreaFactor/physics/traps/mesh/solver normalization. 5V I-V CSV rows do not prove TDR snapshot voltage. No new school runs necessarily needed.
+4. If only exploratory presentation is possible, explicitly label cross-project historical baseline and unverified physics/normalization and do not infer causality/efficiency, avoid ratio eGap over Rad because spatial scopes differ.
+
 ## 2026-11-22 JuSubin final step-3 eGapStates extraction: 8nm historical reference pending
 1. User SVisual outputs now have 8-region damaged-QW eGapStates TrapON totals: QB6 `n6_des` **3.685298e13**, QB7 `n100_des` **3.342200e13**, QB7.5 `n114_des` **3.769752e13** [s^-1um^-1]; 7.5 vs 6 +2.29165%, vs 7 +12.79253%. Full raw available `CMP/results/PROJECTB_QB{6,7,7p5}_EGAP_TRAPON_20261122.csv`.
 2. NEXT PRIORITY: historical Wu QB8nm TrapON baseline (separate SWB project, basename `n6_des`) collect 8 region `eGapStatesRecombination` 2D integrations DmgL_QW1..4 and DmgR_QW1..4 only, domain around 1.2e-4 um². Do NOT confuse same basename with QB6 ProjectB n6; verify source folder and saved TDR target 5V.

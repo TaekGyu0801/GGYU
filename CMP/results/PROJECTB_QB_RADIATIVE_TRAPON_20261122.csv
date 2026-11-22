@@ -1,0 +1,8 @@
+# Source: user-pasted SVisual 12-region Field Integration, 2026-11-22 KST. All numbers s^-1*um^-1 unless indicated.
+# Each QW integral sums its Clean+DmgL+DmgR. Original output shows only dataset basename, so TDR 5V bias still UNVERIFIED. QB8 sourced from a separate historical Wu baseline, not same Claude Project B SWB project.
+# Differing QB settings with historical baseline must not be interpreted as a controlled causal study or IQE directly.
+qb_nm,source,dataset,trap,qw1_integral,qw2_integral,qw3_integral,qw4_integral,total_integral_reported,domain_um2,qw1_share_pct,qw2_share_pct,qw3_share_pct,qw4_share_pct,delta_vs_qb8_pct,region_count,bias_5v_tdr_verified
+6,Claude_ProjectB,n6_des,ON,8.711726910e11,6.909082395e12,3.781344620e14,9.384995625e15,9.770910e15,0.1199999,0.008916,0.070711,3.870003,96.050374,-1.002446846,12,false
+7,Claude_ProjectB,n100_des,ON,3.645251842e11,1.878710102e12,6.199346702e14,9.208017330e15,9.830196e15,0.1199999,0.003708,0.019112,6.306432,93.670740,-0.401769024,12,false
+7.5,Claude_ProjectB,n114_des,ON,8.861470799e11,9.122691186e13,1.249194457e14,1.0285012435e16,1.050204e16,0.1200002,0.008438,0.868659,1.189478,97.933472,6.405264518,12,false
+8,Historical_Wu_Baseline,n6_des,ON,7.385600935e11,1.0669347027e12,8.765896290e14,8.991454347e15,9.869850e15,0.1199999,0.007483,0.010810,8.881489,91.100213,0.0,12,false

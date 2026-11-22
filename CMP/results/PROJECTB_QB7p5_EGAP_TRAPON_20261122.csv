@@ -1,0 +1,13 @@
+# 2026-11-22 KST user-pasted SVisual Field Integration, dataset n114_des, QB7.5nm TrapON
+# Field=eGapStatesRecombination, selected eight QW damaged regions only, not Clean or barrier regions
+# Units integrals s^-1*um^-1, domains um^2. Printed Total Integral=3.769752e13; Total Domain=1.200016e-04.
+# Actual saved TDR bias 5V NOT verified from this printout; eGapStates does not itself establish net nonradiative loss or IQE.
+Region,Integral_s-1_um-1,Domain_um2
+DmgL_QW1,2.263692e11,1.500003e-05
+DmgL_QW2,2.501118e12,1.500003e-05
+DmgL_QW3,4.149824e12,1.500003e-05
+DmgL_QW4,1.197128e13,1.500003e-05
+DmgR_QW1,2.262636e11,1.500037e-05
+DmgR_QW2,2.500936e12,1.500037e-05
+DmgR_QW3,4.150589e12,1.500037e-05
+DmgR_QW4,1.197114e13,1.500037e-05

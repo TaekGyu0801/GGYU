@@ -1,3 +1,8 @@
+## 2026-11-22 JuSubin QB6nm TrapON damaged-QW eGapStates integral received (OBSERVED USER SVisual)
+- ProjectB `n6_des` 8 damaged-QW regions (DmgL_QW1..4 + DmgR_QW1..4), `eGapStatesRecombination` **3.685298e13 s^-1 um^-1**, domain **1.200013e-04 um²**. QW1 2.180919e12 (5.918%); QW2 1.0473137e12 (2.842%); QW3 9.837791e12 (26.695%); QW4 2.378695e13 (64.546%). Archived raw eight values `CMP/results/PROJECTB_QB6_EGAP_TRAPON_20261122.csv`.
+- Both sidewalls ~1.8426e13 and ~1.8427e13, closely symmetric. Dataset printout not independently tagged 5V bias; trap-mediated eGap does NOT equal net nonradiative or IQE; only damaged QWs, not every sidewall region. New ProjectB QB6 `n6_des` distinct from historical QB8 baseline same basename.
+- NEXT: identical 8-region eGapStatesRecombination extraction for QB7, QB7.5 and historical QB8; verify 5V TDR and AreaFactor/source comparability before final graphs and inference. No school code or run changed.
+
 ## 2026-11-22 JuSubin ProjectB QB6 TrapON sidewall QW eGapStates integral observed (USER SVISUAL)
 - `n6_des` field `eGapStatesRecombination` 8 damaged QW regions, reported Total Integral **3.685298e13 s^-1um^-1**, Total Domain **1.200013e-4 um²** (matches eight 5nm×3nm strips). QW1 2.180919e12 (5.92%), QW2 1.0473137e12 (2.84%), QW3 9.837791e12 (26.69%), QW4 2.378695e13 (64.55%). Raw 8 rows saved `CMP/results/PROJECTB_QB6_TRAPON_EGAP_DMGQW_20261122.csv`.
 - 5V TDR stored bias not directly visible; effective school physics/AreaFactor and cross-project equivalence UNRESOLVED. Selected eight damaged QW regions are NOT entire sidewall and trap-channel total is not total net nonradiative recombination or IQE. NEXT identical eight-region 7/7.5/8nm TrapON extraction; 8nm is historical Wu independent project.

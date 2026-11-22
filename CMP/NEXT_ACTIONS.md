@@ -1,3 +1,9 @@
+## 2026-11-22 FIRST JuSubin Project B deliverable only (n142 QB8 TrapON USER-REPORTED RUNNING)
+1. Let QB8 NtSide1e18 n142 continue; do not rerun/edit solver or mistake earlier 0V snapshot for failure. On user completion verify final anode5.000V and Curve trace finished in n142_des.out/log.
+2. Reuse existing QB6/QB7 TrapON results, and QB7.5 only if already confirmed completed; for QB8 n142 verify matching same-school Wu5nm damage, 5 QB/4x3nm QW, NtSide1e18/Et.75/sigmas1e-15, contacts/physics/solver, current AreaFactor/2D geometry. Do NOT mix QB8 OFF n136 current with ON.
+3. Extract exactly three first-pass metrics: SVisual1 I-V and I at5V (anode TotalCurrent); 4QW total integrated RadiativeRecombination; left+right damaged region integrated eGapStatesRecombination. Use region labels/updated QW boundaries; consistent units and spatial selection, no double counting. Compare percent changes vs QB8.
+4. Produce one I–V overlay + two integration comparison plots + 5V summary table. If injected current differs at 5V, qualify any radiative changes as fixed-bias response and compare same-current when existing available bias-resolved maps permit. Do not call eGap-only total nonradiative or IQE; avoid new runs/extra figures under deadline.
+
 ## 2026-11-21 Immediate blocker triage: QB6 SVisual red (SCREENSHOT)
 1. In SWB select tQB=.006 NtSide=1e18 red SVisual cell, open job output/error for actual SVisual node; copy FIRST meaningful Tcl error and the node number. Also inspect QB=.006 NtSide=0 if needed.
 2. Confirm corresponding SDevice node successfully produced .tdr/.plt and finished at 5V (Curve trace finished); don't rerun physics because SVisual status red.

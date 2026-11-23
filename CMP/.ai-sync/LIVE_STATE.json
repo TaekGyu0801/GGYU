@@ -11443,5 +11443,17 @@
       "eGap electron trap-related field not net full nonradiative"
     ],
     "next": "Verify TDR bias and model equivalence; matched-current followup where available; transparent preliminary comparison"
+  },
+  "juSubinProgressPresentationFreeze20261123": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-23",
+    "state": "USER_APPROVED_FINAL_PRESENTATION_VERSION_EDITING_PAUSED",
+    "filename": "CMP_AB_통합_중간발표_가독성개선.pptx",
+    "slideCount": 14,
+    "sha256": "bb38e82e35b670dd89a8eda5f4d964d85efc4419f780ef9d45c2ff887f1de6cb",
+    "scope": "Project A and B midterm research-progress presentation, no integrated final A+B result",
+    "binaryInGitHub": false,
+    "resourceAvailability": "User must supply actual PPTX in a future different chat; sandbox file may not persist",
+    "futureRule": "Do not revise without an explicit new user request."
   }
 }

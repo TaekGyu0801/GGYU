@@ -11538,5 +11538,22 @@
     "historicalQB8SeparateSource": true,
     "binaryInGithub": false,
     "tcadModified": false
+  },
+  "juSubinProjectBProgressDeckIQEPlan20261123": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-23",
+    "status": "PPTX_EDITED_RENDER_VERIFIED_NO_NEW_TCAD_RESULT",
+    "file": "CMP_AB_통합_중간발표_ProjectB_IQE연구계획추가_18장.pptx",
+    "sha256": "473dce3e1c1960525ce19f3e8faa0b322e21c5a706c3968c54539d2ec45db8cd",
+    "slideCount": 18,
+    "modifiedSlide": 18,
+    "plan": [
+      "validate same-bias TDR/AreaFactor/net trap-inclusive IQE terms",
+      "QB6/7/7.5/8 IQE vs Current Density, J=1/10/100 A/cm2 after verified current normalization",
+      "same-J Radiative/SRH/Auger/Trap and QW carrier transport to interpret IQE differences"
+    ],
+    "scientificLimitation": "existing Radiative and damaged-QW eGap alone not sufficient for IQE; historical QB8 unverified cross-project equivalence",
+    "next": "Inspect existing PLT/TDR and Project A IQE definition before any rerun",
+    "pptxBinaryInGitHub": false
   }
 }

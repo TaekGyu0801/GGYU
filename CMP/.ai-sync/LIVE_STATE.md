@@ -1,3 +1,11 @@
+## 2026-11-23 JuSubin 15-minute week-5 presentation reduced from 25 to 20 slides (USER REQUEST / PPTX OBSERVED)
+- User uploaded actual final 25-slide `5주차_폭주수빈(이택규 주수빈)_MicroLED_Sidewall_TCAD.pptx` and requested judgement/edit for **15 minutes total, 7:30 per presenter**.
+- Original page numbers **6 (Project A section divider), 7 (A progress status, duplicated by setup/results/summary), 12 (A detailed solver failure-node table, best reserved in unchanged source for Q&A), 14 (Project B section divider), 16 (B QB-sweep standalone comparison, duplicated by actual TCAD sidewall zoom and sweep data on original page17)** were removed. Main A IQE/same-mesh/trap-loss and B I-V/5V current/whole-QW Radiative/damaged-QW eGap/three-metric interpretation/nonmonotonicity/next-IQE plan all preserved.
+- Produced independently downloadable local **20-slide** `CMP_5주차_15분발표_20장_축약본.pptx`, SHA256 `51933d5387d14f1e9a77dadb18a19ebaa9d94325b15708de90dafc6310824d65`, PPTX binary **not uploaded to GitHub**. Original user-uploaded 25-slide file unchanged.
+- Updated retained footer page numbers to 1–20 and Project B chapter numbering to B1–B9 (skip-free); no edited scientific values, graph image changes or TCAD source. Programmatically verified 20 slides and all retained picture content SHA256 identical; PDF rendered all 20 pages; page 11–20 montage visually checked.
+- Suggested rehearsal plan: slides1–10 (cover+common baseline+ProjectA) 7:30; slides11–19 (ProjectB) 7:30; slide20 Q&A display only. Exact duration requires rehearsal; under-15-minute margin recommended.
+- This event is a presentation-edit decision, **not scientific validation**. The A failed-node table remains in original 25-slide deck for questions; QB8 historic-source comparability and B IQE caveats remain on slides.
+
 ## 2026-11-23 JuSubin week-5 final deck slide 19 Korean readability edit (PPTX OBSERVED; NO RESEARCH CHANGE)
 - User requested only right-side Key Points on physical slide 19 be rewritten in concise Korean with higher readability, based on user-approved 25-slide `5주차_폭주수빈(이택규 주수빈)_MicroLED_Sidewall_TCAD_19페이지디자인수정.pptx`.
 - Created local PPTX `5주차_폭주수빈(이택규 주수빈)_MicroLED_Sidewall_TCAD_19페이지요약가독성수정.pptx`, SHA256 `e5d3cc9ef06b0c8e27bba985ded9485581342e1237dae773100bd7803694c204`. **Binary not uploaded to GitHub**.

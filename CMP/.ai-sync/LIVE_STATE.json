@@ -11555,5 +11555,18 @@
     "scientificLimitation": "existing Radiative and damaged-QW eGap alone not sufficient for IQE; historical QB8 unverified cross-project equivalence",
     "next": "Inspect existing PLT/TDR and Project A IQE definition before any rerun",
     "pptxBinaryInGitHub": false
+  },
+  "juSubinWeek5PresentationSlide19KoreanReadability20261123": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-23",
+    "status": "PPTX_SLIDE19_ONLY_EDIT_RENDER_VERIFIED",
+    "filename": "5주차_폭주수빈(이택규 주수빈)_MicroLED_Sidewall_TCAD_19페이지요약가독성수정.pptx",
+    "sha256": "e5d3cc9ef06b0c8e27bba985ded9485581342e1237dae773100bd7803694c204",
+    "slideCount": 25,
+    "changedSlide": 19,
+    "summary": "Translated slide19 right-side Key Points into visual Korean 3-card summary: QB7.5 +9.06%, QB7 -3.11%, QB6 -0.54% relative historical QB8 5V; no IQE inference.",
+    "othersSlideXmlUnchanged": true,
+    "schoolTCADChanged": false,
+    "pptxBinaryStoredInGitHub": false
   }
 }

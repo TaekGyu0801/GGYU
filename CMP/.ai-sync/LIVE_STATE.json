@@ -11455,5 +11455,57 @@
     "binaryInGitHub": false,
     "resourceAvailability": "User must supply actual PPTX in a future different chat; sandbox file may not persist",
     "futureRule": "Do not revise without an explicit new user request."
+  },
+  "juSubinQBNonmonotonicityAnalysis20261123": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-23",
+    "status": "DERIVED_OBSERVED_DATA_ROOT_CAUSE_UNRESOLVED",
+    "thickness_nm": [
+      6,
+      7,
+      7.5
+    ],
+    "currentRaw5V": [
+      0.00255263092117,
+      0.00248668659046,
+      0.00279894166971
+    ],
+    "full4QWRadiativeIntegral": [
+      9770910000000000,
+      9830196000000000,
+      10502040000000000
+    ],
+    "damaged8QWeGapIntegral": [
+      36852980000000,
+      33422000000000,
+      37697520000000
+    ],
+    "compare7vs7p5Pct": {
+      "current": -11.1561838758,
+      "eGap": -11.3416479386,
+      "eGapOverCurrent": -0.2087529227
+    },
+    "compare6vs7Pct": {
+      "current": 2.6518955369,
+      "eGap": 10.2656334151,
+      "eGapOverCurrent": 7.4170455775,
+      "radiative": -0.6031008944,
+      "qw3Radiative": -39.0041434724,
+      "qw4Radiative": 1.9220021928
+    },
+    "conclusion": "Current rebounds QB7->QB6 but all-QW radiative does not; QB7 raw eGap lowest partly tracks lower current. Mechanistic carrier redistribution plausible but not demonstrated.",
+    "hypotheses": [
+      "hole injection vertical resistance/current spreading",
+      "well capture versus overflow/carrier imbalance",
+      "polarization/band-profile response",
+      "mesh/solver/provenance artifacts"
+    ],
+    "caution": [
+      "Radiative SVisual 5V TDR unverified",
+      "normalized eGap/current is not IQE or defect loss probability",
+      "school quantum models unconfirmed",
+      "historical QB8 source equivalence unverified"
+    ],
+    "next": "verify PP/mesh and actual TDR 5V, compare QW-resolved e/h densities/bands/current vectors at matched current"
   }
 }

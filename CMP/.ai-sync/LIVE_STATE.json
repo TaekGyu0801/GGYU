@@ -11507,5 +11507,20 @@
       "historical QB8 source equivalence unverified"
     ],
     "next": "verify PP/mesh and actual TDR 5V, compare QW-resolved e/h densities/bands/current vectors at matched current"
+  },
+  "juSubinProgressPresentationAddProjectBPhysicsSlides20261123": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-23",
+    "status": "USER_REQUEST_PPTX_CREATED_AND_RENDER_VERIFIED",
+    "priorApproved14Slide": "CMP_AB_통합_중간발표_가독성개선.pptx",
+    "newCurrentPPTX": "CMP_AB_통합_중간발표_결과해석_추가연구_16장.pptx",
+    "sha256": "556a878b5620818703ab26d6c5ecc24f89df92bb5c16124a3ee19bc126a42aff",
+    "slideCount": 16,
+    "appendedSlide15": "Project B QB6/7/7.5 nonmonotonic current/radiative/damaged QW eGap interpretation. eGap/current ratio is conditional—not IQE or net nonradiative loss.",
+    "appendedSlide16": "Verify TDR 5V/model/AreaFactor, compare at same injected current and analyze QW-resolved carrier densities, current vectors, bands, quasi-Fermi levels.",
+    "original14SlidesVisuallyUnchanged": true,
+    "binarySavedInGitHub": false,
+    "schoolTCADChanged": false,
+    "next": "No further PPT revisions unless user asks; scientific root cause remains unverified."
   }
 }

@@ -11593,5 +11593,25 @@
     "originalFileUnchanged": true,
     "pptxBinaryInGithub": false,
     "noSchoolTCADOrScientificResultChanges": true
+  },
+  "juSubinWeek5Full25SlidePresentationScript20261123": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-23",
+    "status": "USER_APPROVED_25_SLIDE_SOURCE_SCRIPT_PDF_OBSERVED",
+    "selectedFullDeck": "5주차_폭주수빈(이택규 주수빈)_MicroLED_Sidewall_TCAD.pptx",
+    "previous20SlideCutDeclined": true,
+    "localPDF": "CMP_5주차_25장_15분_최종발표대본_이택규_주수빈.pdf",
+    "sha256": "d2428e11d4f7ba943f362d9396bfb61d4d1c7803b0a13ca023694b6c8a71bb81",
+    "pdfPageCount": 7,
+    "slidePagesCovered": [
+      1,
+      25
+    ],
+    "speaker1": "이택규 / original slide1-13 / allocated 7m30s",
+    "speaker2": "주수빈 / original slide14-24 / allocated 7m30s / slide25 Q&A only",
+    "timings": "planned rehearsal targets, not timed recording",
+    "actualPPTChanged": false,
+    "TCADCodeChanged": false,
+    "pdfBinaryStoredInGitHub": false
   }
 }

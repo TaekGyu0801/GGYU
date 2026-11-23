@@ -1,3 +1,10 @@
+## 2026-11-23 JuSubin week-5 final deck slide 19 Korean readability edit (PPTX OBSERVED; NO RESEARCH CHANGE)
+- User requested only right-side Key Points on physical slide 19 be rewritten in concise Korean with higher readability, based on user-approved 25-slide `5주차_폭주수빈(이택규 주수빈)_MicroLED_Sidewall_TCAD_19페이지디자인수정.pptx`.
+- Created local PPTX `5주차_폭주수빈(이택규 주수빈)_MicroLED_Sidewall_TCAD_19페이지요약가독성수정.pptx`, SHA256 `e5d3cc9ef06b0c8e27bba985ded9485581342e1237dae773100bd7803694c204`. **Binary not uploaded to GitHub**.
+- Right panel Korean title: `5 V 전류 변화 요약`; three large separate lines/cards for QB7.5 +9.06% (전류 최대), QB7 −3.11% (전류 최소), QB6 −0.54% (기준과 유사), all relative to historical QB8 5V current. Closing caveat: 전류 증가만으로 발광 효율(IQE) 향상은 판단 불가. Existing historical QB8 separate-source disclaimer and left bar graph unchanged.
+- Verified 25-slide PPT count, LibreOffice/PDF rendered slide 19, no Korean text clipping, and ZIP PPT slide XML comparison: **only slide19.xml changed; slides 1–18,20–25 XML byte-identical**. Numerical input values and TCAD source unchanged.
+- Latest presentation artifact is this user-requested 25-slide Korean readability version (not a new scientific result). Further revisions require new user request.
+
 ## 2026-11-23 JuSubin 5th weekly research presentation page 19 layout-only repair (USER FILE / PPTX MODIFIED)
 - User uploaded final 25-slide PPTX `5주차_폭주수빈(이택규 주수빈)_MicroLED_Sidewall_TCAD.pptx` and requested repairing **slide 19 only**. The 19th slide, `Project B 5) 5 V Current vs Baseline`, inadvertently had a full-slide dark gradient image overlay on the intended white-body presentation template.
 - Removed this errant full-slide decorative image, reused the thin top gradient banner from neighboring slide 20; kept the exact slide 19 graph, numbers, headline, text boxes and their positions. Output local PPTX: `5주차_폭주수빈(이택규 주수빈)_MicroLED_Sidewall_TCAD_19페이지디자인수정.pptx`, SHA256 `634925dd822a9e2c2125a54b5de513d68d2eee6fe1f3fd32d6d04b2bf8318c25`.

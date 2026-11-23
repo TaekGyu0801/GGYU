@@ -11568,5 +11568,30 @@
     "othersSlideXmlUnchanged": true,
     "schoolTCADChanged": false,
     "pptxBinaryStoredInGitHub": false
+  },
+  "juSubinWeek5Presentation15MinuteTrim20261123": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-23",
+    "status": "OBSERVED_PPTX_CREATED_AND_PDF_RENDER_VERIFIED",
+    "originalUploadedFile": "5주차_폭주수빈(이택규 주수빈)_MicroLED_Sidewall_TCAD.pptx",
+    "resultingFile": "CMP_5주차_15분발표_20장_축약본.pptx",
+    "sha256": "51933d5387d14f1e9a77dadb18a19ebaa9d94325b15708de90dafc6310824d65",
+    "previousSlideCount": 25,
+    "newSlideCount": 20,
+    "removedOriginalPages": [
+      6,
+      7,
+      12,
+      14,
+      16
+    ],
+    "allRetainedPicturesSameHash": true,
+    "slideOrderPreserved": true,
+    "numberingFixed": true,
+    "allocatedPresentation": "slides 1–10 Project A + common baseline 7:30, slides 11–19 Project B 7:30, slide 20 Q&A after",
+    "why": "Cut redundant divider/process/conditions slides; retain all main experimental result charts, current B IQE plan and caveats",
+    "originalFileUnchanged": true,
+    "pptxBinaryInGithub": false,
+    "noSchoolTCADOrScientificResultChanges": true
   }
 }

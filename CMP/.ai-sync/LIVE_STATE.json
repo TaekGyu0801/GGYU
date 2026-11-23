@@ -11522,5 +11522,21 @@
     "binarySavedInGitHub": false,
     "schoolTCADChanged": false,
     "next": "No further PPT revisions unless user asks; scientific root cause remains unverified."
+  },
+  "juSubinProgressPresentationAddProjectBDirectionSlide20261123": {
+    "worker": "주수빈",
+    "dateKST": "2026-11-23",
+    "status": "PRESENTATION_UPDATED_RENDER_VERIFIED",
+    "filename": "CMP_AB_통합_중간발표_ProjectB_방향변경추가_18장.pptx",
+    "sha256": "b2b78c02e383a015af34bf331facb4b182502525f872885af4fdac31e34f9f5f",
+    "slideCount": 18,
+    "insertedSlide": 9,
+    "title": "Project B 1) 연구 방향 변경",
+    "before": "20 nm Al0.15Ga0.85N internal MQW-sidewall guard (B1 vs Bnull)",
+    "after": "Five GaN QB thickness sweep: 6/7/7.5/8 nm; four 3nm QWs and D5 sidewall damage maintained",
+    "reason": "AlGaN and D50 attempted variants had convergence/control-comparability issues; switch to D5 with simpler single-variable thickness study",
+    "historicalQB8SeparateSource": true,
+    "binaryInGithub": false,
+    "tcadModified": false
   }
 }
